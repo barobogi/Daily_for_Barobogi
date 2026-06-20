@@ -91,6 +91,11 @@
       background-color: var(--bg-secondary);
     }
 
+    /* PAT indicator */
+    .pat-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .pat-dot.set { background-color: #10B981; }
+    .pat-dot.unset { background-color: var(--text-tertiary); }
+
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
@@ -193,11 +198,20 @@
 
     <!-- LOG LIST -->
     <section class="py-12">
-      <div class="flex justify-between items-center mb-6">
+      <div class="flex justify-between items-center mb-3">
         <h2 class="text-sm font-semibold" style="color: var(--text-secondary);">전체 로그</h2>
-        <button onclick="openLogModal()" class="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-colors duration-200" style="background-color: var(--accent); color: white;">
-          + 새 로그
-        </button>
+        <div class="flex items-center gap-2">
+          <span id="logPatDot" class="pat-dot unset" title="GitHub 미연동"></span>
+          <button onclick="toggleLogPatRow()" class="text-base px-2 py-1 rounded transition-colors" style="background:none; border:none; cursor:pointer; color: var(--text-tertiary);" title="GitHub PAT 설정">⚙️</button>
+          <button onclick="openLogModal()" class="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-colors duration-200" style="background-color: var(--accent); color: white;">
+            + 새 로그
+          </button>
+        </div>
+      </div>
+      <div id="logPatRow" style="display:none;" class="mb-5 flex gap-2 items-center">
+        <input type="password" id="logPatInput" class="modal-input flex-1" placeholder="GitHub PAT (ghp_xxx...)">
+        <button onclick="saveLogPat()" class="px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap" style="background-color: var(--accent); color: white;">저장</button>
+        <button onclick="clearLogPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div class="space-y-4" id="logList">
 
@@ -254,24 +268,24 @@
           <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">태그 (쉼표로 구분)</label>
           <input type="text" id="logTags" class="modal-input" placeholder="daily, routine, running">
         </div>
-        <button onclick="generateLogSnippet()" class="w-full py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
-          HTML 스니펫 생성
+        <button onclick="generateLogSnippet()" id="logSubmitBtn" class="w-full py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
+          저장하기
         </button>
       </div>
 
+      <!-- GitHub 업로드 결과 -->
+      <div id="logUploadResult" style="display:none;" class="mt-4 space-y-3">
+        <div id="logUploadMsg" class="text-sm text-center p-4 rounded-lg"></div>
+        <button onclick="closeLogModal()" class="w-full py-2 rounded-lg text-sm font-semibold" style="background-color: var(--accent); color: white;">닫기</button>
+      </div>
+
+      <!-- 폴백: PAT 없을 때 스니펫 복사 -->
       <div id="logSnippetArea" style="display:none;" class="mt-4 space-y-3">
-        <p class="text-xs font-semibold" style="color: var(--text-secondary);">생성된 HTML — 아래 복사 후 Cowork/CLI에 전달하세요</p>
+        <p class="text-xs font-semibold" style="color: var(--text-secondary);">GitHub PAT 미설정 — 아래 HTML을 CLI에 전달하세요</p>
         <div class="snippet-box" id="logSnippetBox"></div>
-        <p class="text-[11px] leading-relaxed p-3 rounded-lg" style="background-color: var(--accent-light); color: var(--accent);">
-          💡 logs.html의 <code>&lt;div class="space-y-4" id="logList"&gt;</code> 안 맨 위에 붙여넣기
-        </p>
         <div class="flex gap-2">
-          <button onclick="copyLogSnippet()" id="copyLogBtn" class="flex-1 py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
-            클립보드 복사
-          </button>
-          <button onclick="resetLogModal()" class="py-2 px-4 rounded-lg text-sm font-semibold" style="background-color: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border);">
-            다시 작성
-          </button>
+          <button onclick="copyLogSnippet()" id="copyLogBtn" class="flex-1 py-2 rounded-lg text-sm font-semibold" style="background-color: var(--accent); color: white;">클립보드 복사</button>
+          <button onclick="resetLogModal()" class="py-2 px-4 rounded-lg text-sm font-semibold" style="background-color: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border);">다시 작성</button>
         </div>
       </div>
     </div>
@@ -411,14 +425,74 @@
     // Initialize on page load
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
-        initDarkMode();
-        initSearchAndFilter();
-        setDefaultDate();
+        initDarkMode(); initSearchAndFilter(); setDefaultDate(); updateLogPatDot();
       });
     } else {
-      initDarkMode();
-      initSearchAndFilter();
-      setDefaultDate();
+      initDarkMode(); initSearchAndFilter(); setDefaultDate(); updateLogPatDot();
+    }
+
+    // ── GitHub API ──────────────────────────────────────
+    const REPO = 'barobogi/Daily_for_Barobogi';
+
+    function encodeUtf8Base64(str) {
+      return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+        (_, p1) => String.fromCharCode(parseInt(p1, 16))));
+    }
+    function decodeBase64Utf8(b64) {
+      return decodeURIComponent(
+        atob(b64.replace(/\n/g, '')).split('').map(c =>
+          '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+    }
+
+    async function githubGetFile(pat, path) {
+      const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+        headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github.v3+json' }
+      });
+      if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.json()).message}`);
+      return res.json();
+    }
+
+    async function githubPutFile(pat, path, content, sha, message) {
+      const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${pat}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message, content: encodeUtf8Base64(content), sha, branch: 'main' })
+      });
+      if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.json()).message}`);
+      return res.json();
+    }
+
+    // PAT 관리
+    function updateLogPatDot() {
+      const dot = document.getElementById('logPatDot');
+      const set = !!localStorage.getItem('github_pat');
+      dot.className = 'pat-dot ' + (set ? 'set' : 'unset');
+      dot.title = set ? 'GitHub 연동됨' : 'GitHub 미연동 (⚙️ 클릭)';
+    }
+    function toggleLogPatRow() {
+      const row = document.getElementById('logPatRow');
+      row.style.display = row.style.display === 'none' ? 'flex' : 'none';
+      if (row.style.display === 'flex') {
+        const saved = localStorage.getItem('github_pat');
+        if (saved) document.getElementById('logPatInput').value = saved;
+      }
+    }
+    function saveLogPat() {
+      const val = document.getElementById('logPatInput').value.trim();
+      if (!val) return;
+      localStorage.setItem('github_pat', val);
+      document.getElementById('logPatRow').style.display = 'none';
+      updateLogPatDot();
+    }
+    function clearLogPat() {
+      localStorage.removeItem('github_pat');
+      document.getElementById('logPatInput').value = '';
+      document.getElementById('logPatRow').style.display = 'none';
+      updateLogPatDot();
     }
 
     // Modal
@@ -442,46 +516,77 @@
     function resetLogModal() {
       document.getElementById('logForm').style.display = 'block';
       document.getElementById('logSnippetArea').style.display = 'none';
+      document.getElementById('logUploadResult').style.display = 'none';
       document.getElementById('logTitle').value = '';
       document.getElementById('logContent').value = '';
       document.getElementById('logTags').value = '';
+      document.getElementById('logSubmitBtn').textContent = '저장하기';
+      document.getElementById('logSubmitBtn').disabled = false;
       setDefaultDate();
     }
 
-    function generateLogSnippet() {
+    function buildLogSnippet() {
       const date = document.getElementById('logDate').value.trim();
       const title = document.getElementById('logTitle').value.trim();
       const content = document.getElementById('logContent').value.trim();
       const rawTags = document.getElementById('logTags').value.trim();
-
-      if (!title || !content) {
-        alert('제목과 내용을 입력해주세요.');
-        return;
-      }
-
       const tagList = rawTags ? rawTags.split(',').map(t => t.trim()).filter(Boolean) : [];
-      const dataTagsAttr = tagList.join(',');
       const tagSpans = tagList.map(t =>
         `            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#${t}</span>`
       ).join('\n');
-
-      const snippet =
-`        <div class="card-hover border rounded-lg p-4 log-card" data-tags="${dataTagsAttr}" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+      return { title,
+        snippet: `        <div class="card-hover border rounded-lg p-4 log-card" data-tags="${tagList.join(',')}" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
           <span class="text-xs" style="color: var(--text-tertiary);">${date}</span>
           <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">${title}</h3>
           <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
             ${content}
           </p>${tagList.length ? `\n          <div class="mt-3 flex gap-2 flex-wrap">\n${tagSpans}\n          </div>` : ''}
-        </div>`;
+        </div>`
+      };
+    }
 
-      document.getElementById('logSnippetBox').textContent = snippet;
-      document.getElementById('logForm').style.display = 'none';
-      document.getElementById('logSnippetArea').style.display = 'block';
+    async function generateLogSnippet() {
+      const title = document.getElementById('logTitle').value.trim();
+      const content = document.getElementById('logContent').value.trim();
+      if (!title || !content) { alert('제목과 내용을 입력해주세요.'); return; }
+
+      const pat = localStorage.getItem('github_pat');
+      const { snippet } = buildLogSnippet();
+
+      if (pat) {
+        // GitHub API 업로드
+        const btn = document.getElementById('logSubmitBtn');
+        btn.textContent = '업로드 중...'; btn.disabled = true;
+        document.getElementById('logForm').style.display = 'none';
+        document.getElementById('logUploadResult').style.display = 'block';
+        const msg = document.getElementById('logUploadMsg');
+        msg.style.cssText = 'color: var(--text-secondary); background-color: var(--bg-secondary);';
+        msg.textContent = 'GitHub에 저장 중...';
+        try {
+          const file = await githubGetFile(pat, 'logs.html');
+          const html = decodeBase64Utf8(file.content);
+          const marker = '<div class="space-y-4" id="logList">';
+          if (!html.includes(marker)) throw new Error('삽입 위치를 찾을 수 없습니다.');
+          const updated = html.replace(marker, marker + '\n' + snippet);
+          await githubPutFile(pat, 'logs.html', updated, file.sha, `content: 새 로그 추가 - ${title}`);
+          msg.style.cssText = 'color: #10B981; background-color: #D1FAE5;';
+          msg.innerHTML = '✅ GitHub에 저장됐습니다!<br><span style="font-size:11px;color:#6B7280;">2~3분 후 사이트에 반영됩니다.</span>';
+        } catch (e) {
+          msg.style.cssText = 'color: #EF4444; background-color: #FEE2E2;';
+          msg.innerHTML = `❌ 오류: ${e.message}<br><span style="font-size:11px;">PAT를 확인하거나 아래에서 직접 복사하세요.</span>`;
+          document.getElementById('logSnippetBox').textContent = snippet;
+          document.getElementById('logSnippetArea').style.display = 'block';
+        }
+      } else {
+        // PAT 없음 → 폴백 스니펫
+        document.getElementById('logSnippetBox').textContent = snippet;
+        document.getElementById('logForm').style.display = 'none';
+        document.getElementById('logSnippetArea').style.display = 'block';
+      }
     }
 
     function copyLogSnippet() {
-      const text = document.getElementById('logSnippetBox').textContent;
-      navigator.clipboard.writeText(text).then(() => {
+      navigator.clipboard.writeText(document.getElementById('logSnippetBox').textContent).then(() => {
         const btn = document.getElementById('copyLogBtn');
         btn.textContent = '✓ 복사됨!';
         setTimeout(() => { btn.textContent = '클립보드 복사'; }, 2000);

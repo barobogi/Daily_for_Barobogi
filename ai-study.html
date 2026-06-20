@@ -89,6 +89,11 @@
       background-color: var(--bg-secondary);
     }
 
+    /* PAT indicator */
+    .pat-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .pat-dot.set { background-color: #10B981; }
+    .pat-dot.unset { background-color: var(--text-tertiary); }
+
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
@@ -187,11 +192,20 @@
 
     <!-- STUDY LIST -->
     <section class="py-12">
-      <div class="flex justify-between items-center mb-6">
+      <div class="flex justify-between items-center mb-3">
         <h2 class="text-sm font-semibold" style="color: var(--text-secondary);">전체 학습</h2>
-        <button onclick="openStudyModal()" class="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-colors duration-200" style="background-color: var(--accent); color: white;">
-          + 새 학습
-        </button>
+        <div class="flex items-center gap-2">
+          <span id="studyPatDot" class="pat-dot unset" title="GitHub 미연동"></span>
+          <button onclick="toggleStudyPatRow()" class="text-base px-2 py-1 rounded transition-colors" style="background:none; border:none; cursor:pointer; color: var(--text-tertiary);" title="GitHub PAT 설정">⚙️</button>
+          <button onclick="openStudyModal()" class="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-colors duration-200" style="background-color: var(--accent); color: white;">
+            + 새 학습
+          </button>
+        </div>
+      </div>
+      <div id="studyPatRow" style="display:none;" class="mb-5 flex gap-2 items-center">
+        <input type="password" id="studyPatInput" class="modal-input flex-1" placeholder="GitHub PAT (ghp_xxx...)">
+        <button onclick="saveStudyPat()" class="px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap" style="background-color: var(--accent); color: white;">저장</button>
+        <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
 
@@ -269,24 +283,24 @@
           <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">태그 (쉼표로 구분)</label>
           <input type="text" id="studyTags" class="modal-input" placeholder="LLM, 임베딩, RAG">
         </div>
-        <button onclick="generateStudySnippet()" class="w-full py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
-          HTML 스니펫 생성
+        <button onclick="generateStudySnippet()" id="studySubmitBtn" class="w-full py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
+          저장하기
         </button>
       </div>
 
+      <!-- GitHub 업로드 결과 -->
+      <div id="studyUploadResult" style="display:none;" class="mt-4 space-y-3">
+        <div id="studyUploadMsg" class="text-sm text-center p-4 rounded-lg"></div>
+        <button onclick="closeStudyModal()" class="w-full py-2 rounded-lg text-sm font-semibold" style="background-color: var(--accent); color: white;">닫기</button>
+      </div>
+
+      <!-- 폴백: PAT 없을 때 스니펫 복사 -->
       <div id="studySnippetArea" style="display:none;" class="mt-4 space-y-3">
-        <p class="text-xs font-semibold" style="color: var(--text-secondary);">생성된 HTML — 아래 복사 후 Cowork/CLI에 전달하세요</p>
+        <p class="text-xs font-semibold" style="color: var(--text-secondary);">GitHub PAT 미설정 — 아래 HTML을 CLI에 전달하세요</p>
         <div class="snippet-box" id="studySnippetBox"></div>
-        <p class="text-[11px] leading-relaxed p-3 rounded-lg" style="background-color: var(--accent-light); color: var(--accent);">
-          💡 ai-study.html의 <code>&lt;div id="studyList"&gt;</code> 안 맨 위에 붙여넣기
-        </p>
         <div class="flex gap-2">
-          <button onclick="copyStudySnippet()" id="copyStudyBtn" class="flex-1 py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
-            클립보드 복사
-          </button>
-          <button onclick="resetStudyModal()" class="py-2 px-4 rounded-lg text-sm font-semibold" style="background-color: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border);">
-            다시 작성
-          </button>
+          <button onclick="copyStudySnippet()" id="copyStudyBtn" class="flex-1 py-2 rounded-lg text-sm font-semibold" style="background-color: var(--accent); color: white;">클립보드 복사</button>
+          <button onclick="resetStudyModal()" class="py-2 px-4 rounded-lg text-sm font-semibold" style="background-color: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border);">다시 작성</button>
         </div>
       </div>
     </div>
@@ -426,14 +440,74 @@
     // Initialize on page load
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
-        initDarkMode();
-        initSearchAndFilter();
-        setDefaultStudyDate();
+        initDarkMode(); initSearchAndFilter(); setDefaultStudyDate(); updateStudyPatDot();
       });
     } else {
-      initDarkMode();
-      initSearchAndFilter();
-      setDefaultStudyDate();
+      initDarkMode(); initSearchAndFilter(); setDefaultStudyDate(); updateStudyPatDot();
+    }
+
+    // ── GitHub API ──────────────────────────────────────
+    const REPO = 'barobogi/Daily_for_Barobogi';
+
+    function encodeUtf8Base64(str) {
+      return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+        (_, p1) => String.fromCharCode(parseInt(p1, 16))));
+    }
+    function decodeBase64Utf8(b64) {
+      return decodeURIComponent(
+        atob(b64.replace(/\n/g, '')).split('').map(c =>
+          '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+    }
+
+    async function githubGetFile(pat, path) {
+      const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+        headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github.v3+json' }
+      });
+      if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.json()).message}`);
+      return res.json();
+    }
+
+    async function githubPutFile(pat, path, content, sha, message) {
+      const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${pat}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message, content: encodeUtf8Base64(content), sha, branch: 'main' })
+      });
+      if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.json()).message}`);
+      return res.json();
+    }
+
+    // PAT 관리
+    function updateStudyPatDot() {
+      const dot = document.getElementById('studyPatDot');
+      const set = !!localStorage.getItem('github_pat');
+      dot.className = 'pat-dot ' + (set ? 'set' : 'unset');
+      dot.title = set ? 'GitHub 연동됨' : 'GitHub 미연동 (⚙️ 클릭)';
+    }
+    function toggleStudyPatRow() {
+      const row = document.getElementById('studyPatRow');
+      row.style.display = row.style.display === 'none' ? 'flex' : 'none';
+      if (row.style.display === 'flex') {
+        const saved = localStorage.getItem('github_pat');
+        if (saved) document.getElementById('studyPatInput').value = saved;
+      }
+    }
+    function saveStudyPat() {
+      const val = document.getElementById('studyPatInput').value.trim();
+      if (!val) return;
+      localStorage.setItem('github_pat', val);
+      document.getElementById('studyPatRow').style.display = 'none';
+      updateStudyPatDot();
+    }
+    function clearStudyPat() {
+      localStorage.removeItem('github_pat');
+      document.getElementById('studyPatInput').value = '';
+      document.getElementById('studyPatRow').style.display = 'none';
+      updateStudyPatDot();
     }
 
     // Modal
@@ -457,28 +531,24 @@
     function resetStudyModal() {
       document.getElementById('studyForm').style.display = 'block';
       document.getElementById('studySnippetArea').style.display = 'none';
+      document.getElementById('studyUploadResult').style.display = 'none';
       document.getElementById('studyTitle').value = '';
       document.getElementById('studyContent').value = '';
       document.getElementById('studyTags').value = '';
+      document.getElementById('studySubmitBtn').textContent = '저장하기';
+      document.getElementById('studySubmitBtn').disabled = false;
       setDefaultStudyDate();
     }
 
-    function generateStudySnippet() {
+    function buildStudySnippet() {
       const date = document.getElementById('studyDate').value.trim();
       const category = document.getElementById('studyCategory').value;
       const title = document.getElementById('studyTitle').value.trim();
       const content = document.getElementById('studyContent').value.trim();
       const rawTags = document.getElementById('studyTags').value.trim();
-
-      if (!title || !content) {
-        alert('제목과 내용을 입력해주세요.');
-        return;
-      }
-
       const tagLabel = rawTags ? ` · ${rawTags}` : '';
-
-      const snippet =
-`        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="${category}" style="border-top: 1px solid var(--border);">
+      return { title,
+        snippet: `        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="${category}" style="border-top: 1px solid var(--border);">
           <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
           <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
             ${title}
@@ -487,16 +557,51 @@
             ${content}
           </p>
           <p class="text-xs" style="color: var(--text-tertiary);">${date}${tagLabel}</p>
-        </div>`;
+        </div>`
+      };
+    }
 
-      document.getElementById('studySnippetBox').textContent = snippet;
-      document.getElementById('studyForm').style.display = 'none';
-      document.getElementById('studySnippetArea').style.display = 'block';
+    async function generateStudySnippet() {
+      const title = document.getElementById('studyTitle').value.trim();
+      const content = document.getElementById('studyContent').value.trim();
+      if (!title || !content) { alert('제목과 내용을 입력해주세요.'); return; }
+
+      const pat = localStorage.getItem('github_pat');
+      const { snippet } = buildStudySnippet();
+
+      if (pat) {
+        const btn = document.getElementById('studySubmitBtn');
+        btn.textContent = '업로드 중...'; btn.disabled = true;
+        document.getElementById('studyForm').style.display = 'none';
+        document.getElementById('studyUploadResult').style.display = 'block';
+        const msg = document.getElementById('studyUploadMsg');
+        msg.style.cssText = 'color: var(--text-secondary); background-color: var(--bg-secondary);';
+        msg.textContent = 'GitHub에 저장 중...';
+        try {
+          const file = await githubGetFile(pat, 'ai-study.html');
+          const html = decodeBase64Utf8(file.content);
+          const marker = '<div id="studyList"';
+          const markerClose = marker + html.slice(html.indexOf(marker) + marker.length).match(/^[^>]*>/)[0];
+          if (!html.includes(marker)) throw new Error('삽입 위치를 찾을 수 없습니다.');
+          const updated = html.replace(markerClose, markerClose + '\n' + snippet);
+          await githubPutFile(pat, 'ai-study.html', updated, file.sha, `content: 새 AI 학습 추가 - ${title}`);
+          msg.style.cssText = 'color: #10B981; background-color: #D1FAE5;';
+          msg.innerHTML = '✅ GitHub에 저장됐습니다!<br><span style="font-size:11px;color:#6B7280;">2~3분 후 사이트에 반영됩니다.</span>';
+        } catch (e) {
+          msg.style.cssText = 'color: #EF4444; background-color: #FEE2E2;';
+          msg.innerHTML = `❌ 오류: ${e.message}<br><span style="font-size:11px;">PAT를 확인하거나 아래에서 직접 복사하세요.</span>`;
+          document.getElementById('studySnippetBox').textContent = snippet;
+          document.getElementById('studySnippetArea').style.display = 'block';
+        }
+      } else {
+        document.getElementById('studySnippetBox').textContent = snippet;
+        document.getElementById('studyForm').style.display = 'none';
+        document.getElementById('studySnippetArea').style.display = 'block';
+      }
     }
 
     function copyStudySnippet() {
-      const text = document.getElementById('studySnippetBox').textContent;
-      navigator.clipboard.writeText(text).then(() => {
+      navigator.clipboard.writeText(document.getElementById('studySnippetBox').textContent).then(() => {
         const btn = document.getElementById('copyStudyBtn');
         btn.textContent = '✓ 복사됨!';
         setTimeout(() => { btn.textContent = '클립보드 복사'; }, 2000);
