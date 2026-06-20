@@ -94,14 +94,21 @@
     .pat-dot.set { background-color: #10B981; }
     .pat-dot.unset { background-color: var(--text-tertiary); }
 
-    /* Content preview truncation (3 lines) */
+    /* Content preview: max-height + fade mask (preserves pre-wrap formatting) */
     .study-card { cursor: pointer; }
     .content-preview {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+      max-height: 4.8em;
       overflow: hidden;
-      white-space: normal !important; /* override pre-wrap for clamp */
+      white-space: pre-wrap;
+      -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+    }
+
+    /* Detail modal: full height with scroll */
+    #studyDetailModal .modal-box {
+      max-width: 680px;
+      max-height: 88vh;
+      overflow-y: auto;
     }
 
     /* Edit button per card */
