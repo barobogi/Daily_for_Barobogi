@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistics — Today for Barobogi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <style>
+    :root {
+      /* Light Mode */
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --text-tertiary: #9CA3AF;
+      --border: #E5E7EB;
+      --accent: #5B8DEE;
+      --accent-light: #EBF0FF;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    html[data-theme="dark"] {
+      --bg-primary: #0F1117;
+      --bg-secondary: #161B22;
+      --text-primary: #E6EDF3;
+      --text-secondary: #8B949E;
+      --text-tertiary: #6E7681;
+      --border: #30363D;
+      --accent: #79C0FF;
+      --accent-light: #1F6FEB;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-active {
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+    }
+
+    .stat-card {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .chart-container {
+      position: relative;
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      color: var(--text-primary);
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: var(--bg-secondary);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <!-- HEADER -->
+  <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
+    <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
+      <a href="index.html" class="text-base font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);">
+        Today for <span style="color: var(--accent);">Barobogi</span>
+      </a>
+      <div class="flex gap-4 items-center">
+        <nav class="flex gap-8 text-sm" style="color: var(--text-secondary);">
+          <a href="index.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Home</a>
+          <a href="logs.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
+          <a href="ai-study.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">AI Study</a>
+          <a href="stock-dashboard.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
+          <a href="stats.html" class="nav-active font-medium">Stats</a>
+          <a href="goals.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Goals</a>
+        </nav>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-4xl w-full mx-auto px-6 flex-grow">
+
+    <!-- PAGE TITLE -->
+    <section class="py-12 border-b" style="border-color: var(--border);">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color: var(--accent);">Statistics</p>
+      <h1 class="text-[32px] font-bold leading-snug mb-4" style="color: var(--text-primary);">성장을 수치화합니다</h1>
+      <p class="text-sm leading-relaxed max-w-2xl" style="color: var(--text-secondary);">
+        매일의 기록이 모여 어떤 패턴을 만들까요? 통계를 통해 나의 성장을 시각화합니다.
+      </p>
+    </section>
+
+    <!-- SUMMARY CARDS -->
+    <section class="py-12 grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="stat-card border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+        <p class="text-xs uppercase font-semibold mb-2" style="color: var(--text-secondary);">Total Posts</p>
+        <p class="text-3xl font-bold" style="color: var(--accent);" id="totalPosts">0</p>
+        <p class="text-xs mt-2" style="color: var(--text-tertiary);">logs + studies</p>
+      </div>
+
+      <div class="stat-card border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+        <p class="text-xs uppercase font-semibold mb-2" style="color: var(--text-secondary);">This Week</p>
+        <p class="text-3xl font-bold" style="color: var(--accent);" id="weekPosts">0</p>
+        <p class="text-xs mt-2" style="color: var(--text-tertiary);">지난 7일</p>
+      </div>
+
+      <div class="stat-card border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+        <p class="text-xs uppercase font-semibold mb-2" style="color: var(--text-secondary);">Top Tag</p>
+        <p class="text-3xl font-bold" style="color: var(--accent);" id="topTag">#daily</p>
+        <p class="text-xs mt-2" style="color: var(--text-tertiary);">most used</p>
+      </div>
+
+      <div class="stat-card border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+        <p class="text-xs uppercase font-semibold mb-2" style="color: var(--text-secondary);">Streak</p>
+        <p class="text-3xl font-bold" style="color: var(--accent);" id="streak">5</p>
+        <p class="text-xs mt-2" style="color: var(--text-tertiary);">consecutive days</p>
+      </div>
+    </section>
+
+    <!-- CHARTS -->
+    <section class="py-12">
+      <h2 class="text-lg font-semibold mb-6" style="color: var(--text-primary);">주간 활동</h2>
+      <div class="chart-container border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border);">
+        <canvas id="weeklyChart"></canvas>
+      </div>
+
+      <h2 class="text-lg font-semibold mb-6 mt-12" style="color: var(--text-primary);">월간 누적</h2>
+      <div class="chart-container border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border);">
+        <canvas id="monthlyChart"></canvas>
+      </div>
+
+      <h2 class="text-lg font-semibold mb-6 mt-12" style="color: var(--text-primary);">태그 분포</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="chart-container border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border);">
+          <canvas id="tagChart"></canvas>
+        </div>
+
+        <div style="border-color: var(--border);">
+          <h3 class="text-base font-semibold mb-4" style="color: var(--text-primary);">Top Tags</h3>
+          <div class="space-y-3" id="tagList">
+            <!-- Generated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t" style="background-color: var(--bg-secondary); border-color: var(--border);">
+    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs" style="color: var(--text-tertiary);">
+      <div>
+        <p class="font-semibold mb-1" style="color: var(--text-secondary);">CONTACT</p>
+        <p>hello@barobogi.me</p>
+      </div>
+      <div class="text-center sm:text-right">
+        <p class="mb-1">Inspired by cher1shRXD & Lee Boa</p>
+        <p>&copy; 2026 Barobogi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Chart.js Configuration for Dark Mode
+    function getChartConfig() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      return {
+        textColor: isDark ? '#E6EDF3' : '#111827',
+        gridColor: isDark ? '#30363D' : '#E5E7EB',
+        accentColor: isDark ? '#79C0FF' : '#5B8DEE',
+      };
+    }
+
+    // Initialize Charts
+    function initCharts() {
+      const config = getChartConfig();
+
+      // Weekly Chart (Bar)
+      const weeklyCtx = document.getElementById('weeklyChart').getContext('2d');
+      new Chart(weeklyCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          datasets: [{
+            label: 'Posts',
+            data: [2, 1, 3, 2, 1, 0, 1],
+            backgroundColor: config.accentColor,
+            borderColor: config.accentColor,
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { color: config.textColor }
+            }
+          },
+          scales: {
+            y: {
+              ticks: { color: config.textColor },
+              grid: { color: config.gridColor }
+            },
+            x: {
+              ticks: { color: config.textColor },
+              grid: { color: config.gridColor }
+            }
+          }
+        }
+      });
+
+      // Monthly Chart (Line)
+      const monthlyCtx = document.getElementById('monthlyChart').getContext('2d');
+      new Chart(monthlyCtx, {
+        type: 'line',
+        data: {
+          labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+          datasets: [{
+            label: 'Cumulative Posts',
+            data: [10, 18, 25, 33],
+            borderColor: config.accentColor,
+            backgroundColor: `${config.accentColor}15`,
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: config.accentColor,
+            pointBorderColor: config.textColor,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { color: config.textColor }
+            }
+          },
+          scales: {
+            y: {
+              ticks: { color: config.textColor },
+              grid: { color: config.gridColor }
+            },
+            x: {
+              ticks: { color: config.textColor },
+              grid: { color: config.gridColor }
+            }
+          }
+        }
+      });
+
+      // Tag Distribution (Pie)
+      const tagCtx = document.getElementById('tagChart').getContext('2d');
+      new Chart(tagCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['#daily', '#routine', '#running', '#mindset', '#others'],
+          datasets: [{
+            data: [8, 6, 5, 4, 3],
+            backgroundColor: [
+              config.accentColor,
+              '#8B5CF6',
+              '#EC4899',
+              '#F59E0B',
+              config.gridColor
+            ],
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { color: config.textColor }
+            }
+          }
+        }
+      });
+
+      // Update Summary Stats
+      document.getElementById('totalPosts').textContent = '33';
+      document.getElementById('weekPosts').textContent = '10';
+      document.getElementById('topTag').textContent = '#daily';
+      document.getElementById('streak').textContent = '5';
+
+      // Tag List
+      const tagList = document.getElementById('tagList');
+      const tags = [
+        { name: '#daily', count: 8, pct: 24 },
+        { name: '#routine', count: 6, pct: 18 },
+        { name: '#running', count: 5, pct: 15 },
+        { name: '#mindset', count: 4, pct: 12 }
+      ];
+
+      tags.forEach(tag => {
+        const tagEl = document.createElement('div');
+        tagEl.className = 'flex justify-between items-center';
+        tagEl.innerHTML = `
+          <span style="color: var(--text-primary);">${tag.name}</span>
+          <div class="flex items-center gap-2">
+            <div class="w-24 bg-[var(--bg-secondary)] rounded-full h-2">
+              <div class="bg-[var(--accent)] h-2 rounded-full" style="width: ${tag.pct}%"></div>
+            </div>
+            <span style="color: var(--text-tertiary);" class="text-xs w-8 text-right">${tag.count}</span>
+          </div>
+        `;
+        tagList.appendChild(tagEl);
+      });
+    }
+
+    // Dark Mode Toggle
+    function initDarkMode() {
+      const toggle = document.getElementById('darkModeToggle');
+      const html = document.documentElement;
+
+      // Load saved preference or detect system preference
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = saved ? saved === 'dark' : prefersDark;
+
+      // Set initial theme
+      setTheme(isDark ? 'dark' : 'light');
+
+      // Toggle button click
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+
+      // Listen for system preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    }
+
+    function setTheme(theme) {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateToggleIcon(theme);
+    }
+
+    function updateToggleIcon(theme) {
+      const toggle = document.getElementById('darkModeToggle');
+      if (toggle) {
+        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initDarkMode();
+        initCharts();
+      });
+    } else {
+      initDarkMode();
+      initCharts();
+    }
+  </script>
+
+</body>
+</html>

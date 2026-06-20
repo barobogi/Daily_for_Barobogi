@@ -66,6 +66,7 @@
 |------|------|-------------|------|
 | 2026-06-20 | v0.01 | feat: Phase 1 - Add Stock Dashboard tab | 초기 4탭 구조 완성, GitHub Pages 배포 |
 | 2026-06-20 | v0.02 | fix: Phase 2 dark mode + 버그 수정 | 다크모드/검색필터/애니메이션 전체 적용, 버그 3건 수정 |
+| 2026-06-20 | v0.03 | feat: Phase 2b - Stats & Goals 추가 + 버그 수정 | stats.html/goals.html 신규, Goals 탭 누락 4개 페이지 추가, 중복 class 2건 수정 |
 
 ---
 

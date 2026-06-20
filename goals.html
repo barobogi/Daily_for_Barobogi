@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goals — Today for Barobogi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      /* Light Mode */
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --text-tertiary: #9CA3AF;
+      --border: #E5E7EB;
+      --accent: #5B8DEE;
+      --accent-light: #EBF0FF;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+      --success: #10B981;
+    }
+
+    html[data-theme="dark"] {
+      --bg-primary: #0F1117;
+      --bg-secondary: #161B22;
+      --text-primary: #E6EDF3;
+      --text-secondary: #8B949E;
+      --text-tertiary: #6E7681;
+      --border: #30363D;
+      --accent: #79C0FF;
+      --accent-light: #1F6FEB;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+      --success: #3FB950;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-active {
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+    }
+
+    @keyframes celebrate {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .goal-card {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .goal-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .goal-card.completed {
+      animation: celebrate 0.5s ease-out;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background-color: var(--bg-secondary);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: var(--accent);
+      transition: width 0.4s ease-out;
+      border-radius: 4px;
+    }
+
+    .goal-checkbox {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-primary);
+    }
+
+    .goal-checkbox:hover {
+      border-color: var(--accent);
+    }
+
+    .goal-checkbox.checked {
+      background-color: var(--success);
+      border-color: var(--success);
+      color: white;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      color: var(--text-primary);
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: var(--bg-secondary);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <!-- HEADER -->
+  <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
+    <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
+      <a href="index.html" class="text-base font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);">
+        Today for <span style="color: var(--accent);">Barobogi</span>
+      </a>
+      <div class="flex gap-4 items-center">
+        <nav class="flex gap-8 text-sm" style="color: var(--text-secondary);">
+          <a href="index.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Home</a>
+          <a href="logs.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
+          <a href="ai-study.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">AI Study</a>
+          <a href="stock-dashboard.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
+          <a href="stats.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stats</a>
+          <a href="goals.html" class="nav-active font-medium">Goals</a>
+        </nav>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-4xl w-full mx-auto px-6 flex-grow">
+
+    <!-- PAGE TITLE -->
+    <section class="py-12 border-b" style="border-color: var(--border);">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color: var(--accent);">Weekly Goals</p>
+      <h1 class="text-[32px] font-bold leading-snug mb-4" style="color: var(--text-primary);">이번 주 목표</h1>
+      <p class="text-sm leading-relaxed max-w-2xl" style="color: var(--text-secondary);">
+        성장은 작은 습관의 누적입니다. 이번 주에 달성하고 싶은 목표를 설정하고 함께 나아가세요.
+      </p>
+    </section>
+
+    <!-- WEEKLY SUMMARY -->
+    <section class="py-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="border rounded-lg p-6" style="background-color: var(--bg-primary); border-color: var(--border);">
+        <p class="text-sm font-semibold mb-3" style="color: var(--text-secondary);">This Week Progress</p>
+        <p class="text-4xl font-bold mb-2" style="color: var(--accent);" id="weekProgress">0%</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="weekProgressBar" style="width: 0%"></div>
+        </div>
+        <p class="text-xs mt-3" style="color: var(--text-tertiary);">
+          <span id="weekCompleted">0</span> / <span id="weekTotal">0</span> goals completed
+        </p>
+      </div>
+
+      <div class="border rounded-lg p-6" style="background-color: var(--bg-secondary); border-color: var(--border);">
+        <p class="text-sm font-semibold mb-4" style="color: var(--text-secondary);">Category Breakdown</p>
+        <div class="space-y-2 text-xs">
+          <div class="flex justify-between">
+            <span style="color: var(--text-secondary);">🏃 Health</span>
+            <span style="color: var(--accent);">2/3</span>
+          </div>
+          <div class="flex justify-between">
+            <span style="color: var(--text-secondary);">📚 Learning</span>
+            <span style="color: var(--accent);">1/2</span>
+          </div>
+          <div class="flex justify-between">
+            <span style="color: var(--text-secondary);">💻 Development</span>
+            <span style="color: var(--accent);">0/2</span>
+          </div>
+          <div class="flex justify-between">
+            <span style="color: var(--text-secondary);">📝 Writing</span>
+            <span style="color: var(--accent);">2/3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOALS BY CATEGORY -->
+    <section class="py-12">
+      <!-- Health Category -->
+      <div class="mb-12">
+        <h2 class="text-lg font-semibold mb-4 flex items-center gap-2" style="color: var(--text-primary);">
+          <span>🏃</span> Health
+        </h2>
+        <div class="space-y-3" id="healthGoals">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+
+      <!-- Learning Category -->
+      <div class="mb-12">
+        <h2 class="text-lg font-semibold mb-4 flex items-center gap-2" style="color: var(--text-primary);">
+          <span>📚</span> Learning
+        </h2>
+        <div class="space-y-3" id="learningGoals">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+
+      <!-- Development Category -->
+      <div class="mb-12">
+        <h2 class="text-lg font-semibold mb-4 flex items-center gap-2" style="color: var(--text-primary);">
+          <span>💻</span> Development
+        </h2>
+        <div class="space-y-3" id="developmentGoals">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+
+      <!-- Writing Category -->
+      <div class="mb-12">
+        <h2 class="text-lg font-semibold mb-4 flex items-center gap-2" style="color: var(--text-primary);">
+          <span>📝</span> Writing
+        </h2>
+        <div class="space-y-3" id="writingGoals">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t" style="background-color: var(--bg-secondary); border-color: var(--border);">
+    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs" style="color: var(--text-tertiary);">
+      <div>
+        <p class="font-semibold mb-1" style="color: var(--text-secondary);">CONTACT</p>
+        <p>hello@barobogi.me</p>
+      </div>
+      <div class="text-center sm:text-right">
+        <p class="mb-1">Inspired by cher1shRXD & Lee Boa</p>
+        <p>&copy; 2026 Barobogi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Goals Data
+    const goalsData = {
+      health: [
+        { id: 'h1', title: '매일 30분 운동', target: 7, completed: 5 },
+        { id: 'h2', title: '수면 7시간 이상', target: 7, completed: 6 },
+        { id: 'h3', title: '하루 2L 물 마시기', target: 7, completed: 5 }
+      ],
+      learning: [
+        { id: 'l1', title: 'AI Study 2회 이상', target: 2, completed: 1 },
+        { id: 'l2', title: '기술 블로그 읽기', target: 3, completed: 2 }
+      ],
+      development: [
+        { id: 'd1', title: '사이드 프로젝트 진행', target: 3, completed: 0 },
+        { id: 'd2', title: '코드 리뷰 1회', target: 1, completed: 0 }
+      ],
+      writing: [
+        { id: 'w1', title: '일일 로그 작성', target: 7, completed: 6 },
+        { id: 'w2', title: 'AI Study 포스팅', target: 2, completed: 1 },
+        { id: 'w3', title: '주간 회고', target: 1, completed: 1 }
+      ]
+    };
+
+    function renderGoals() {
+      const categories = ['health', 'learning', 'development', 'writing'];
+
+      categories.forEach(category => {
+        const container = document.getElementById(`${category}Goals`);
+        const goals = goalsData[category];
+
+        goals.forEach(goal => {
+          const percent = Math.round((goal.completed / goal.target) * 100);
+          const isCompleted = goal.completed >= goal.target;
+
+          const goalEl = document.createElement('div');
+          goalEl.className = `goal-card border rounded-lg p-4 ${isCompleted ? 'completed' : ''}`;
+          goalEl.setAttribute('data-goal-id', goal.id);
+          goalEl.style.cssText = `
+            background-color: var(--bg-primary);
+            border-color: var(--border);
+            box-shadow: var(--shadow-sm);
+          `;
+
+          goalEl.innerHTML = `
+            <div class="flex items-start gap-3">
+              <div class="goal-checkbox ${isCompleted ? 'checked' : ''}" onclick="toggleGoal('${goal.id}')">
+                ${isCompleted ? '✓' : ''}
+              </div>
+              <div class="flex-grow">
+                <p class="text-sm font-semibold" style="color: var(--text-primary); text-decoration: ${isCompleted ? 'line-through' : 'none'};">
+                  ${goal.title}
+                </p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: ${percent}%"></div>
+                </div>
+                <p class="text-xs mt-2" style="color: var(--text-tertiary);">
+                  ${goal.completed} / ${goal.target} (${percent}%)
+                </p>
+              </div>
+            </div>
+          `;
+
+          container.appendChild(goalEl);
+        });
+      });
+
+      updateProgress();
+    }
+
+    function toggleGoal(goalId) {
+      // Find goal in data
+      for (const category in goalsData) {
+        const goal = goalsData[category].find(g => g.id === goalId);
+        if (goal) {
+          // Toggle: if completed >= target, reset to 0; otherwise increment
+          if (goal.completed >= goal.target) {
+            goal.completed = Math.max(0, goal.completed - 1);
+          } else {
+            goal.completed = Math.min(goal.target, goal.completed + 1);
+          }
+          break;
+        }
+      }
+
+      // Re-render
+      document.querySelectorAll('[id$="Goals"]').forEach(el => el.innerHTML = '');
+      renderGoals();
+    }
+
+    function updateProgress() {
+      let totalCompleted = 0;
+      let totalGoals = 0;
+
+      for (const category in goalsData) {
+        goalsData[category].forEach(goal => {
+          totalGoals += goal.target;
+          totalCompleted += Math.min(goal.completed, goal.target);
+        });
+      }
+
+      const percent = Math.round((totalCompleted / totalGoals) * 100);
+      document.getElementById('weekProgress').textContent = percent + '%';
+      document.getElementById('weekProgressBar').style.width = percent + '%';
+      document.getElementById('weekCompleted').textContent = totalCompleted;
+      document.getElementById('weekTotal').textContent = totalGoals;
+    }
+
+    // Dark Mode Toggle
+    function initDarkMode() {
+      const toggle = document.getElementById('darkModeToggle');
+      const html = document.documentElement;
+
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = saved ? saved === 'dark' : prefersDark;
+
+      setTheme(isDark ? 'dark' : 'light');
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    }
+
+    function setTheme(theme) {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateToggleIcon(theme);
+    }
+
+    function updateToggleIcon(theme) {
+      const toggle = document.getElementById('darkModeToggle');
+      if (toggle) {
+        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Initialize
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initDarkMode();
+        renderGoals();
+      });
+    } else {
+      initDarkMode();
+      renderGoals();
+    }
+  </script>
+
+</body>
+</html>
