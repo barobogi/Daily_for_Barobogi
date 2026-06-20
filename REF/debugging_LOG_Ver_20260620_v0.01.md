@@ -65,6 +65,34 @@
 | 날짜 | 버전 | 커밋 메시지 | 비고 |
 |------|------|-------------|------|
 | 2026-06-20 | v0.01 | feat: Phase 1 - Add Stock Dashboard tab | 초기 4탭 구조 완성, GitHub Pages 배포 |
+| 2026-06-20 | v0.02 | fix: Phase 2 dark mode + 버그 수정 | 다크모드/검색필터/애니메이션 전체 적용, 버그 3건 수정 |
+
+---
+
+## v0.02 — 2026-06-20 | Phase 2a (Task #5~7)
+
+### Cowork 작업 내용 (Task #5, 6, 7)
+| Task | 내용 | 파일 |
+|------|------|------|
+| #5 다크모드 | CSS 변수 기반 라이트/다크 전환, localStorage 저장, 시스템 감지 | 전체 4페이지 |
+| #6 검색 & 필터 | 실시간 검색 + 태그/카테고리 필터 | logs.html, ai-study.html |
+| #7 카드 애니메이션 | slideUp (logs), fadeIn+translateX (ai-study), translateY (cards) | 전체 |
+
+### CLI 검토 후 수정한 버그 3건
+
+#### 🐛 Bug #1: index.html 카드 다크모드 미적용
+- **증상**: 헤더/푸터는 다크모드 적용되나 GRID 카드 내부가 흰색 그대로
+- **원인**: Cowork가 헤더/푸터/body는 CSS 변수로 전환했으나 카드 HTML에 Tailwind 하드코딩 색상(`bg-white`, `text-[#111827]`, `bg-[#EBF0FF]` 등) 잔존
+- **해결**: 카드 내 하드코딩 색상 전체를 CSS 변수(`var(--bg-primary)`, `var(--text-primary)`, `var(--accent-light)` 등)로 교체
+
+#### 🐛 Bug #2: logs.html:119 — HTML `class` 속성 중복
+- **증상**: 섹션 타이틀 하단 구분선(border-b)이 렌더링되지 않음
+- **원인**: `<section class="py-12" style="..." class="border-b">` — HTML은 동일 요소에 `class` 속성이 2개 있으면 첫 번째만 파싱
+- **해결**: `class="py-12 border-b"` 로 병합, `style="border-color: var(--border);"` 유지
+
+#### 🐛 Bug #3: ai-study.html:117 — 동일한 중복 class 속성
+- **증상**: 위와 동일 (border-b 미적용)
+- **해결**: Bug #2와 동일한 방식으로 수정
 
 ---
 
