@@ -222,6 +222,10 @@
             data-tag="Prompt Engineering" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
             Prompt Engineering
           </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="Web Dev" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            Web Dev
+          </button>
         </div>
       </div>
     </section>
@@ -244,6 +248,90 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Web Dev" data-id="20260620-2" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Web Dev</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Barobogi 일상 기록 웹사이트 1차 개선</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Barobogi 일상 기록 웹사이트 1차 개선 — 핵심 정리
+
+한 줄 요약
+백엔드 없이 브라우저에서 직접 GitHub에 콘텐츠를 저장하고, 정적 HTML 파일을 서로 fetch해서 Home 탭에 최신 내용을 동적으로 표시하는 순수 정적 사이트(GitHub Pages) 업데이트 시스템 구현.
+
+🗂️ 개선된 기능 구조
+
+Today for Barobogi (GitHub Pages)
+├── Logs 탭      ← 일상 로그 작성 / 편집 / GitHub 저장
+├── AI Study 탭  ← 학습 내용 작성 / 편집 / GitHub 저장 / 미리보기
+├── Home 탭      ← 위 두 탭에서 최신 내용 동적 fetch → 미리보기 표시
+└── Stock / Stats / Goals 탭 (기존)
+
+🔑 핵심 기술 1 — GitHub API 브라우저 직접 저장
+
+PAT(Personal Access Token)를 localStorage에 저장해두고
+⚙️ 버튼으로 1회 설정 → 이후 저장/편집 버튼 클릭 시 GitHub 직접 commit
+
+흐름:
+GET  /repos/{owner}/{repo}/contents/{path}  → SHA 확보
+PUT  /repos/{owner}/{repo}/contents/{path}  → base64 인코딩 후 커밋
+
+⚠️ 한국어 깨짐 주의: atob/btoa는 한국어 불가
+→ TextEncoder 기반 직접 구현 필수
+
+async function encodeUtf8Base64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  bytes.forEach(b =&gt; binary += String.fromCharCode(b));
+  return btoa(binary);
+}
+
+🃏 핵심 기술 2 — 카드 식별 및 HTML 내 교체
+
+각 카드에 data-id 부여 (기존: YYYYMMDD-N, 신규: Date.now())
+파일 전체 HTML을 문자열로 받아 해당 카드만 교체 후 다시 PUT commit
+
+replaceCardInHtml(html, id, newCardHtml):
+- div depth 추적으로 data-id="xxx"를 가진 div의 정확한 닫는 &lt;/div&gt; 위치 탐색
+- 해당 구간을 newCardHtml로 교체
+- depth tracking이 필요한 이유: 카드 내부에도 중첩 div가 있어서 단순 indexOf로는 불가
+
+👁️ 핵심 기술 3 — 미리보기 트런케이션
+
+❌ -webkit-line-clamp 방식 (한계)
+  white-space: normal 강제 → pre-wrap 무효
+  → 줄바꿈/트리 구조 텍스트가 모두 공백으로 뭉개짐
+
+✅ max-height + mask-image 방식 (채택)
+  .content-preview {
+    max-height: 4.8em;
+    overflow: hidden;
+    white-space: pre-wrap;
+    mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+  }
+
+🏠 핵심 기술 4 — Home 탭 동적 fetch
+
+다른 HTML 파일의 내용을 fetch로 파싱해서 미리보기 표시
+
+const res = await fetch('./ai-study.html');
+const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+const cards = [...doc.querySelectorAll('#studyList .study-card')].slice(0, 3);
+
+⚠️ 주의: fetch한 문서에서 요소를 찾을 때 사용하는 querySelector는
+메인 페이지의 CSS가 아닌 원본 파일 구조 기준으로 작동.
+카드 HTML 구조를 바꾸면 Home 탭 선택자도 반드시 함께 수정.
+
+💡 배운 점 / 교훈
+
+1. 정적 사이트도 GitHub API만 있으면 백엔드 없이 CMS처럼 운영 가능
+2. HTML 요소 구조가 바뀌면 그 요소를 참조하는 모든 JS 코드를 같이 확인해야 함
+   (이번에 &lt;a&gt; → &lt;p&gt; 변경 후 Home 탭 선택자가 깨진 사례)
+3. CSS 트런케이션: line-clamp는 white-space와 충돌, pre-wrap이 필요한 경우 max-height+mask 사용
+4. PAT는 절대 코드/채팅에 포함 금지 — 노출 즉시 GitHub에서 Revoke 후 재발급</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 20일 · Web Dev, GitHub API, Static Site</p>
+        </div>
+
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260620-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
