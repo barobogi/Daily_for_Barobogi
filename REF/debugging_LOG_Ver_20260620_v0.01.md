@@ -97,6 +97,50 @@
 
 ---
 
+## v0.04 — 2026-06-20 | GitHub API 편집 기능 구현 중 발생한 이슈
+
+#### 🔴 [보안] PAT 채팅창 노출
+- **증상**: 사용자가 실제 PAT를 채팅에 직접 입력
+- **조치**: 즉시 GitHub에서 Revoke 후 재발급
+- **재발 방지**: PAT는 반드시 브라우저 ⚙️ UI에서만 입력
+
+#### 🐛 [해결] git push rejected — master_watch.py 충돌
+- **증상**: `master_watch.py`가 12초 debounce로 자동 push한 사이 CLI도 push → `fetch first` 오류
+- **해결**: `git pull --rebase origin main` → `git push` 순서 표준화
+
+#### 🐛 [해결] 한국어 git commit 메시지 인코딩 오류
+- **증상**: PowerShell `@'...'@` heredoc에 한국어 포함 시 `pathspec` 오류
+- **해결**: commit 메시지를 ASCII 영어로만 작성
+
+#### 🐛 [해결] `<!-- content -->` 주석이 카드 `<p>` 안에 삽입
+- **증상**: ai-study.html 카드 Edit 중 `<!-- content -->` 텍스트가 본문에 삽입
+- **원인**: old_string이 실제 파일 내용과 미세하게 달라 잘못된 위치에 삽입
+- **해결**: Read로 정확한 내용 확인 후 재Edit
+
+---
+
+## v0.05 — 2026-06-20 | AI Study 미리보기 & Home 동적 로딩 버그
+
+#### 🐛 [해결] AI Study 카드 미리보기 서식 뭉개짐
+- **증상**: 트리 구조 텍스트(`├──`, `└──` 등)와 줄바꿈이 모두 공백으로 합쳐져 표시됨
+- **원인**: `-webkit-line-clamp` 사용 시 `white-space: normal !important` 적용 → `pre-wrap` 무효화
+- **해결**: `max-height: 4.8em` + `mask-image: linear-gradient(to bottom, black 30%, transparent 100%)` 로 교체 → `white-space: pre-wrap` 유지
+
+#### 🐛 [해결] Home 탭 — AI Study 전체 내용이 그대로 노출
+- **증상**: Home "Recent AI Study"에 제목·날짜 대신 전체 본문이 표시됨
+- **원인**: ai-study.html 카드 제목이 `<a>` → `<p>`로 변경됐으나 index.html의 `loadLatestEntries()`는 `querySelector('a')` 그대로 → `title = ''`, `querySelectorAll('p')[1]`이 날짜 대신 전체 본문 `<p>`를 가리킴 → `meta` 변수에 전체 내용 할당 → 화면에 출력
+- **해결**:
+  - title: `querySelector('p.font-semibold')`
+  - meta: `allPs[allPs.length - 1]` (마지막 p = 날짜·태그)
+  - content: `querySelector('.content-preview')`
+
+#### 🐛 [해결] AI Study 상세 모달 — 내용이 잘리고 스크롤 안 됨
+- **증상**: 긴 내용 카드 클릭 시 모달이 화면 높이를 초과하면 잘린 채로 스크롤 불가
+- **원인**: ai-study.html `.modal-box`에 `max-height` / `overflow-y: auto` 누락 (index.html에는 있었으나 ai-study.html에 미적용)
+- **해결**: `#studyDetailModal .modal-box { max-height: 88vh; overflow-y: auto; max-width: 680px; }`
+
+---
+
 ## 참고 링크
 - 배포 URL: https://barobogi.github.io/Daily_for_Barobogi/
 - Stock Dashboard (GitHub Pages): https://barobogi.github.io/stock_dashboard/stock-dashboard.html
