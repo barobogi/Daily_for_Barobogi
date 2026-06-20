@@ -315,29 +315,31 @@
           const tags = tagEls.map(s => s.textContent.trim().replace(/^#/, ''));
           clone.style.cursor = 'pointer';
           clone.addEventListener('click', () => openDetailModal(title, date, content, tags, 'logs.html'));
-          // 내용 3줄로 클램프
-          if (contentEl) { contentEl.style.cssText += '; -webkit-line-clamp:3; display:-webkit-box; -webkit-box-orient:vertical; overflow:hidden; white-space:normal;'; }
+          // 내용 3줄로 미리보기 (서식 유지 + 페이드아웃)
+          if (contentEl) { contentEl.style.cssText += '; max-height:4.5em; overflow:hidden; -webkit-mask-image:linear-gradient(to bottom, black 30%, transparent 100%); mask-image:linear-gradient(to bottom, black 30%, transparent 100%);'; }
           logContainer.appendChild(clone);
         });
       } catch(e) {
         document.getElementById('homeLogList').innerHTML = '<p class="text-xs" style="color: var(--text-tertiary);">로드 실패 — 잠시 후 새로고침</p>';
       }
 
-      // --- Study (최신 3개, 제목+카테고리+날짜 미리보기) ---
+      // --- Study (최신 3개, 제목+카테고리+날짜만 미리보기) ---
       try {
         const res = await fetch('./ai-study.html');
         const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
         const cards = [...doc.querySelectorAll('#studyList .study-card')].slice(0, 3);
         const studyContainer = document.getElementById('homeStudyList');
         studyContainer.innerHTML = '';
-        cards.forEach((card, i) => {
+        cards.forEach(card => {
           const category = card.getAttribute('data-category') || '';
-          const titleEl = card.querySelector('a');
-          const contentEl = card.querySelectorAll('p')[0];
-          const metaEl = card.querySelectorAll('p')[1];
+          // title: <p class="...font-semibold..."> (제목은 이제 <a>가 아닌 <p>)
+          const titleEl = card.querySelector('p.font-semibold') || card.querySelector('a');
+          const allPs = card.querySelectorAll('p');
+          const metaEl = allPs[allPs.length - 1]; // 마지막 p = 날짜·태그
+          const contentEl = card.querySelector('.content-preview') || (allPs.length > 2 ? allPs[allPs.length - 2] : null);
           const title = titleEl ? titleEl.textContent.trim() : '';
-          const content = contentEl ? contentEl.textContent.trim() : '';
           const meta = metaEl ? metaEl.textContent.trim() : '';
+          const content = contentEl ? contentEl.textContent.trim() : '';
           const el = document.createElement('div');
           el.className = 'study-preview py-4';
           el.style.borderTop = '1px solid var(--border)';
