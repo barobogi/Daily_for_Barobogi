@@ -94,6 +94,25 @@
     .pat-dot.set { background-color: #10B981; }
     .pat-dot.unset { background-color: var(--text-tertiary); }
 
+    /* Edit button per card */
+    .edit-btn {
+      opacity: 0; transition: opacity 0.2s ease;
+      background-color: var(--bg-secondary); color: var(--text-tertiary);
+      border: 1px solid var(--border); cursor: pointer;
+      font-size: 11px; padding: 2px 8px; border-radius: 4px;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .study-card:hover .edit-btn { opacity: 1; }
+
+    /* Toast */
+    @keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      background: #10B981; color: white; padding: 12px 20px;
+      border-radius: 8px; font-size: 13px; font-weight: 600;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2); animation: toastIn 0.3s ease-out;
+    }
+
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
@@ -208,12 +227,15 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" style="border-top: 1px solid var(--border);">
-          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260620-1" style="border-top: 1px solid var(--border);">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
           <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
-            Glaude Cowork 와 CLI 100% 자동화 적용
+            Claude Cowork와 CLI 100% 자동화 적용
           </a>
-          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary); white-space: pre-wrap;">
             Cowork ↔ CLI 100% 자동화 시스템 — 완전 정리
 
  한 줄 요약
@@ -312,8 +334,11 @@ git 충돌 방지	index.lock 최대 30초 대기
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 20일 · Cowork-CLI-Sync, master_watch, auto-deploy, watchdog</p>
         </div>
 
-        <div class="post-hover py-6 first:pt-0 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" style="border-top: 1px solid var(--border);">
-          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260615-1" style="border-top: 1px solid var(--border);">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
           <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
             RAG 패턴을 활용한 로컬 도큐먼트 챗봇 구축기
           </a>
@@ -323,8 +348,11 @@ git 충돌 방지	index.lock 최대 30초 대기
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 15일 · LLM 프롬프트 임베딩</p>
         </div>
 
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Machine Learning" style="border-top: 1px solid var(--border);">
-          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Machine Learning" data-id="20260612-1" style="border-top: 1px solid var(--border);">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
           <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
             Linear Regression의 수학적 이해와 Python 구현
           </a>
@@ -334,8 +362,11 @@ git 충돌 방지	index.lock 최대 30초 대기
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 12일 · 머신러닝 수학 기초</p>
         </div>
 
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Prompt Engineering" style="border-top: 1px solid var(--border);">
-          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Prompt Engineering" data-id="20260610-1" style="border-top: 1px solid var(--border);">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
+            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
           <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
             Few-Shot Prompting으로 원하는 JSON 출력 정확도 높이기
           </a>
@@ -348,6 +379,53 @@ git 충돌 방지	index.lock 최대 30초 대기
       </div>
     </section>
   </main>
+
+  <!-- EDIT STUDY MODAL -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal-box">
+      <div class="flex justify-between items-center mb-5">
+        <h3 class="text-base font-bold" style="color: var(--text-primary);">학습 수정</h3>
+        <button onclick="closeEditModal()" style="color: var(--text-tertiary); font-size: 20px; line-height: 1; background: none; border: none; cursor: pointer;">×</button>
+      </div>
+      <div class="space-y-4" id="editForm">
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">날짜</label>
+          <input type="text" id="editDate" class="modal-input" placeholder="2026년 6월 20일">
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">카테고리</label>
+          <select id="editCategory" class="modal-input">
+            <option value="AI & Next.js">AI & Next.js</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Prompt Engineering">Prompt Engineering</option>
+            <option value="Deep Learning">Deep Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Python">Python</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">제목</label>
+          <input type="text" id="editTitle" class="modal-input" placeholder="학습 제목">
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">내용 <span style="color: var(--text-tertiary); font-weight: normal;">(줄바꿈 Enter로 가능)</span></label>
+          <textarea id="editContent" class="modal-input" rows="8" placeholder="학습 내용을 입력하세요..." style="resize: vertical;"></textarea>
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">태그</label>
+          <input type="text" id="editTags" class="modal-input" placeholder="태그1, 태그2 (쉼표 구분)">
+        </div>
+        <button onclick="saveEditModal()" id="editSubmitBtn" class="w-full py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
+          수정 저장
+        </button>
+      </div>
+      <div id="editUploadResult" style="display:none;" class="mt-4 space-y-3">
+        <div id="editUploadMsg" class="text-sm text-center p-4 rounded-lg"></div>
+        <button onclick="closeEditModal()" class="w-full py-2 rounded-lg text-sm font-semibold" style="background-color: var(--accent); color: white;">닫기</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ADD STUDY MODAL -->
   <div class="modal-overlay" id="studyModal">
@@ -643,6 +721,20 @@ git 충돌 방지	index.lock 최대 30초 대기
       setDefaultStudyDate();
     }
 
+    function makeCardHtml(id, category, title, content, date, tagLabel) {
+      return `        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="${category}" data-id="${id}" style="border-top: 1px solid var(--border);">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
+            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
+            ${title}
+          </a>
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary); white-space: pre-wrap;">${content}</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">${date}${tagLabel}</p>
+        </div>`;
+    }
+
     function buildStudySnippet() {
       const date = document.getElementById('studyDate').value.trim();
       const category = document.getElementById('studyCategory').value;
@@ -650,18 +742,8 @@ git 충돌 방지	index.lock 최대 30초 대기
       const content = document.getElementById('studyContent').value.trim();
       const rawTags = document.getElementById('studyTags').value.trim();
       const tagLabel = rawTags ? ` · ${rawTags}` : '';
-      return { title,
-        snippet: `        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="${category}" style="border-top: 1px solid var(--border);">
-          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
-          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
-            ${title}
-          </a>
-          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
-            ${content}
-          </p>
-          <p class="text-xs" style="color: var(--text-tertiary);">${date}${tagLabel}</p>
-        </div>`
-      };
+      const id = Date.now().toString();
+      return { title, snippet: makeCardHtml(id, category, title, content, date, tagLabel) };
     }
 
     async function generateStudySnippet() {
@@ -711,8 +793,126 @@ git 충돌 방지	index.lock 최대 30초 대기
       });
     }
 
+    // ── Edit Modal ───────────────────────────────────────
+    let currentEditCardId = null;
+
+    function openEditModal(cardEl, event) {
+      event.preventDefault();
+      currentEditCardId = cardEl.getAttribute('data-id');
+
+      // Extract values from card DOM
+      const category = cardEl.getAttribute('data-category') || 'AI & Next.js';
+      const titleEl = cardEl.querySelector('a');
+      const contentEl = cardEl.querySelectorAll('p')[0];
+      const metaEl = cardEl.querySelectorAll('p')[1];
+
+      const title = titleEl ? titleEl.textContent.trim() : '';
+      const content = contentEl ? contentEl.textContent.trim() : '';
+      const meta = metaEl ? metaEl.textContent.trim() : '';
+      const dotIdx = meta.indexOf(' · ');
+      const date = dotIdx !== -1 ? meta.slice(0, dotIdx) : meta;
+      const tags = dotIdx !== -1 ? meta.slice(dotIdx + 3) : '';
+
+      const sel = document.getElementById('editCategory');
+      sel.value = [...sel.options].some(o => o.value === category) ? category : 'Other';
+      document.getElementById('editTitle').value = title;
+      document.getElementById('editContent').value = content;
+      document.getElementById('editDate').value = date;
+      document.getElementById('editTags').value = tags;
+      document.getElementById('editForm').style.display = 'block';
+      document.getElementById('editUploadResult').style.display = 'none';
+      document.getElementById('editSubmitBtn').textContent = '수정 저장';
+      document.getElementById('editSubmitBtn').disabled = false;
+
+      document.getElementById('editModal').classList.add('open');
+    }
+
+    function closeEditModal() {
+      document.getElementById('editModal').classList.remove('open');
+      currentEditCardId = null;
+    }
+
+    function replaceCardInHtml(html, id, newCardHtml) {
+      const idAttr = `data-id="${id}"`;
+      const idPos = html.indexOf(idAttr);
+      if (idPos === -1) throw new Error(`카드를 찾을 수 없습니다 (id: ${id})`);
+      const openStart = html.lastIndexOf('<div', idPos);
+      let depth = 1, pos = html.indexOf('>', idPos) + 1;
+      while (depth > 0) {
+        const nextOpen = html.indexOf('<div', pos);
+        const nextClose = html.indexOf('</div>', pos);
+        if (nextClose === -1) throw new Error('카드 구조 파싱 오류');
+        if (nextOpen !== -1 && nextOpen < nextClose) { depth++; pos = nextOpen + 4; }
+        else { depth--; pos = nextClose + 6; }
+      }
+      return html.slice(0, openStart) + newCardHtml + '\n' + html.slice(pos);
+    }
+
+    function updateCardInDom(id, category, title, content, date, tags) {
+      const card = document.querySelector(`[data-id="${id}"]`);
+      if (!card) return;
+      const tagLabel = tags ? ` · ${tags}` : '';
+      card.setAttribute('data-category', category);
+      card.innerHTML = `
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
+          <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+        </div>
+        <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">${title}</a>
+        <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary); white-space: pre-wrap;">${content}</p>
+        <p class="text-xs" style="color: var(--text-tertiary);">${date}${tagLabel}</p>`;
+    }
+
+    function showToast(msg) {
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 3000);
+    }
+
+    async function saveEditModal() {
+      const title = document.getElementById('editTitle').value.trim();
+      const content = document.getElementById('editContent').value.trim();
+      if (!title || !content || !currentEditCardId) return;
+
+      const category = document.getElementById('editCategory').value;
+      const date = document.getElementById('editDate').value.trim();
+      const rawTags = document.getElementById('editTags').value.trim();
+      const tagLabel = rawTags ? ` · ${rawTags}` : '';
+      const newCardHtml = makeCardHtml(currentEditCardId, category, title, content, date, tagLabel);
+
+      const pat = localStorage.getItem('github_pat');
+      if (pat) {
+        const btn = document.getElementById('editSubmitBtn');
+        btn.textContent = '저장 중...'; btn.disabled = true;
+        document.getElementById('editForm').style.display = 'none';
+        document.getElementById('editUploadResult').style.display = 'block';
+        const msgEl = document.getElementById('editUploadMsg');
+        msgEl.style.cssText = 'color: var(--text-secondary); background-color: var(--bg-secondary);';
+        msgEl.textContent = 'GitHub에 저장 중...';
+        try {
+          const file = await githubGetFile(pat, 'ai-study.html');
+          const html = decodeBase64Utf8(file.content);
+          const updated = replaceCardInHtml(html, currentEditCardId, newCardHtml);
+          await githubPutFile(pat, 'ai-study.html', updated, file.sha, `content: AI 학습 수정 - ${title}`);
+          updateCardInDom(currentEditCardId, category, title, content, date, rawTags);
+          closeEditModal();
+          showToast('✅ 수정됐습니다! 2~3분 후 반영됩니다.');
+        } catch (e) {
+          msgEl.style.cssText = 'color: #EF4444; background-color: #FEE2E2;';
+          msgEl.innerHTML = `❌ 오류: ${e.message}`;
+          btn.textContent = '수정 저장'; btn.disabled = false;
+        }
+      } else {
+        updateCardInDom(currentEditCardId, category, title, content, date, rawTags);
+        closeEditModal();
+        showToast('화면은 수정됐습니다. ⚙️ PAT 설정 후 저장하면 GitHub에도 반영됩니다.');
+      }
+    }
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeStudyModal();
+      if (e.key === 'Escape') { closeStudyModal(); closeEditModal(); }
     });
   </script>
 
