@@ -88,6 +88,36 @@
     .dark-mode-toggle:hover {
       background-color: var(--bg-secondary);
     }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 50; padding: 1rem;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .modal-box {
+      width: 100%; max-width: 520px; border-radius: 12px; padding: 1.5rem;
+      background-color: var(--bg-primary); border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(8px); transition: transform 0.2s ease;
+    }
+    .modal-overlay.open .modal-box { transform: translateY(0); }
+    .modal-input {
+      width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
+      background-color: var(--bg-secondary); color: var(--text-primary);
+      font-size: 13px; outline: none; transition: border-color 0.2s;
+    }
+    .modal-input:focus { border-color: var(--accent); }
+    .snippet-box {
+      font-family: monospace; font-size: 11px; padding: 10px;
+      background-color: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: 8px; white-space: pre-wrap; word-break: break-all;
+      color: var(--text-secondary); max-height: 160px; overflow-y: auto;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
@@ -157,6 +187,12 @@
 
     <!-- STUDY LIST -->
     <section class="py-12">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-sm font-semibold" style="color: var(--text-secondary);">전체 학습</h2>
+        <button onclick="openStudyModal()" class="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-colors duration-200" style="background-color: var(--accent); color: white;">
+          + 새 학습
+        </button>
+      </div>
       <div id="studyList" style="border-color: var(--border);">
 
         <div class="post-hover py-6 first:pt-0 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" style="border-top: 1px solid var(--border);">
@@ -195,6 +231,66 @@
       </div>
     </section>
   </main>
+
+  <!-- ADD STUDY MODAL -->
+  <div class="modal-overlay" id="studyModal">
+    <div class="modal-box">
+      <div class="flex justify-between items-center mb-5">
+        <h3 class="text-base font-bold" style="color: var(--text-primary);">새 학습 작성</h3>
+        <button onclick="closeStudyModal()" style="color: var(--text-tertiary); font-size: 20px; line-height: 1; background: none; border: none; cursor: pointer;">×</button>
+      </div>
+
+      <div class="space-y-4" id="studyForm">
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">날짜</label>
+          <input type="text" id="studyDate" class="modal-input" placeholder="2026년 6월 20일">
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">카테고리</label>
+          <select id="studyCategory" class="modal-input">
+            <option value="AI & Next.js">AI & Next.js</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Prompt Engineering">Prompt Engineering</option>
+            <option value="Deep Learning">Deep Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Python">Python</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">제목</label>
+          <input type="text" id="studyTitle" class="modal-input" placeholder="학습 주제 제목">
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">내용 요약</label>
+          <textarea id="studyContent" class="modal-input" rows="3" placeholder="오늘 배운 내용을 간략히 정리하세요..." style="resize: vertical;"></textarea>
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">태그 (쉼표로 구분)</label>
+          <input type="text" id="studyTags" class="modal-input" placeholder="LLM, 임베딩, RAG">
+        </div>
+        <button onclick="generateStudySnippet()" class="w-full py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
+          HTML 스니펫 생성
+        </button>
+      </div>
+
+      <div id="studySnippetArea" style="display:none;" class="mt-4 space-y-3">
+        <p class="text-xs font-semibold" style="color: var(--text-secondary);">생성된 HTML — 아래 복사 후 Cowork/CLI에 전달하세요</p>
+        <div class="snippet-box" id="studySnippetBox"></div>
+        <p class="text-[11px] leading-relaxed p-3 rounded-lg" style="background-color: var(--accent-light); color: var(--accent);">
+          💡 ai-study.html의 <code>&lt;div id="studyList"&gt;</code> 안 맨 위에 붙여넣기
+        </p>
+        <div class="flex gap-2">
+          <button onclick="copyStudySnippet()" id="copyStudyBtn" class="flex-1 py-2 rounded-lg text-sm font-semibold transition-colors" style="background-color: var(--accent); color: white;">
+            클립보드 복사
+          </button>
+          <button onclick="resetStudyModal()" class="py-2 px-4 rounded-lg text-sm font-semibold" style="background-color: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border);">
+            다시 작성
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="w-full border-t" style="background-color: var(--bg-secondary); border-color: var(--border);">
@@ -332,11 +428,84 @@
       document.addEventListener('DOMContentLoaded', () => {
         initDarkMode();
         initSearchAndFilter();
+        setDefaultStudyDate();
       });
     } else {
       initDarkMode();
       initSearchAndFilter();
+      setDefaultStudyDate();
     }
+
+    // Modal
+    function setDefaultStudyDate() {
+      const today = new Date();
+      const y = today.getFullYear();
+      const m = today.getMonth() + 1;
+      const d = today.getDate();
+      document.getElementById('studyDate').value = `${y}년 ${m}월 ${d}일`;
+    }
+
+    function openStudyModal() {
+      document.getElementById('studyModal').classList.add('open');
+    }
+
+    function closeStudyModal() {
+      document.getElementById('studyModal').classList.remove('open');
+      resetStudyModal();
+    }
+
+    function resetStudyModal() {
+      document.getElementById('studyForm').style.display = 'block';
+      document.getElementById('studySnippetArea').style.display = 'none';
+      document.getElementById('studyTitle').value = '';
+      document.getElementById('studyContent').value = '';
+      document.getElementById('studyTags').value = '';
+      setDefaultStudyDate();
+    }
+
+    function generateStudySnippet() {
+      const date = document.getElementById('studyDate').value.trim();
+      const category = document.getElementById('studyCategory').value;
+      const title = document.getElementById('studyTitle').value.trim();
+      const content = document.getElementById('studyContent').value.trim();
+      const rawTags = document.getElementById('studyTags').value.trim();
+
+      if (!title || !content) {
+        alert('제목과 내용을 입력해주세요.');
+        return;
+      }
+
+      const tagLabel = rawTags ? ` · ${rawTags}` : '';
+
+      const snippet =
+`        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="${category}" style="border-top: 1px solid var(--border);">
+          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
+          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
+            ${title}
+          </a>
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
+            ${content}
+          </p>
+          <p class="text-xs" style="color: var(--text-tertiary);">${date}${tagLabel}</p>
+        </div>`;
+
+      document.getElementById('studySnippetBox').textContent = snippet;
+      document.getElementById('studyForm').style.display = 'none';
+      document.getElementById('studySnippetArea').style.display = 'block';
+    }
+
+    function copyStudySnippet() {
+      const text = document.getElementById('studySnippetBox').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copyStudyBtn');
+        btn.textContent = '✓ 복사됨!';
+        setTimeout(() => { btn.textContent = '클립보드 복사'; }, 2000);
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeStudyModal();
+    });
   </script>
 
 </body>
