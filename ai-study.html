@@ -6,40 +6,107 @@
   <title>AI Study — Today for Barobogi</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root {
+      /* Light Mode */
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --text-tertiary: #9CA3AF;
+      --border: #E5E7EB;
+      --accent: #5B8DEE;
+      --accent-light: #EBF0FF;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    html[data-theme="dark"] {
+      --bg-primary: #0F1117;
+      --bg-secondary: #161B22;
+      --text-primary: #E6EDF3;
+      --text-secondary: #8B949E;
+      --text-tertiary: #6E7681;
+      --border: #30363D;
+      --accent: #79C0FF;
+      --accent-light: #1F6FEB;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     .nav-active {
-      color: #111827;
-      border-bottom: 2px solid #5B8DEE;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 2px;
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateX(-4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
     .post-hover {
-      transition: background-color 0.2s ease-out;
+      transition: background-color 0.3s ease-out,
+                  transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: fadeIn 0.5s ease-out backwards;
     }
+
     .post-hover:hover {
-      background-color: #F9FAFB;
+      background-color: var(--bg-secondary);
+      transform: translateX(4px);
     }
+
     a:focus-visible, button:focus-visible {
-      outline: 2px solid #5B8DEE;
+      outline: 2px solid var(--accent);
       outline-offset: 2px;
       border-radius: 4px;
     }
+
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      color: var(--text-primary);
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: var(--bg-secondary);
+    }
   </style>
 </head>
-<body class="bg-white text-[#111827] min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <!-- HEADER -->
-  <header class="w-full bg-white border-b border-[#E5E7EB]" style="height:60px;">
+  <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
     <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
-      <a href="index.html" class="text-base font-bold tracking-tight text-[#111827] hover:text-[#5B8DEE] transition-colors duration-200">
-        Today for <span class="text-[#5B8DEE]">Barobogi</span>
+      <a href="index.html" class="text-base font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);">
+        Today for <span style="color: var(--accent);">Barobogi</span>
       </a>
-      <nav class="flex gap-8 text-sm text-[#6B7280]">
-        <a href="index.html" class="hover:text-[#111827] transition-colors duration-200 pb-[2px]">Home</a>
-        <a href="logs.html" class="hover:text-[#111827] transition-colors duration-200 pb-[2px]">Logs</a>
-        <a href="ai-study.html" class="nav-active font-medium">AI Study</a>
-      </nav>
+      <div class="flex gap-4 items-center">
+        <nav class="flex gap-8 text-sm" style="color: var(--text-secondary);">
+          <a href="index.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Home</a>
+          <a href="logs.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
+          <a href="ai-study.html" class="nav-active font-medium">AI Study</a>
+          <a href="stock-dashboard.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
+        </nav>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
     </div>
   </header>
 
@@ -47,49 +114,80 @@
   <main class="max-w-4xl w-full mx-auto px-6 flex-grow">
 
     <!-- PAGE TITLE -->
-    <section class="py-12 border-b border-[#E5E7EB]">
-      <p class="text-xs font-semibold tracking-widest text-[#5B8DEE] uppercase mb-4">AI Study</p>
-      <h1 class="text-[32px] font-bold text-[#111827] leading-snug mb-4">AI를 탐구합니다</h1>
-      <p class="text-sm text-[#6B7280] leading-relaxed max-w-2xl">
+    <section class="py-12" style="border-bottom-color: var(--border);" class="border-b">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color: var(--accent);">AI Study</p>
+      <h1 class="text-[32px] font-bold leading-snug mb-4" style="color: var(--text-primary);">AI를 탐구합니다</h1>
+      <p class="text-sm leading-relaxed max-w-2xl" style="color: var(--text-secondary);">
         매일 치열하게 부딪히는 AI 지식을 정리합니다. LLM, 머신러닝, 프롬프트 엔지니어링 — 배운 것을 기록하며 더 깊이 이해합니다.
       </p>
     </section>
 
+    <!-- SEARCH & FILTER -->
+    <section class="py-8">
+      <div class="space-y-4">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="카테고리, 제목, 내용으로 검색..."
+          class="w-full px-4 py-2 rounded-lg border transition-colors"
+          style="background-color: var(--bg-secondary); border-color: var(--border); color: var(--text-primary);">
+
+        <div class="flex flex-wrap gap-2">
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="all" style="background-color: var(--accent); color: white;">
+            All
+          </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="AI & Next.js" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            AI & Next.js
+          </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="Machine Learning" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            Machine Learning
+          </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="Prompt Engineering" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            Prompt Engineering
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- STUDY LIST -->
     <section class="py-12">
-      <div class="divide-y divide-[#E5E7EB]">
+      <div id="studyList" style="border-color: var(--border);">
 
-        <div class="post-hover py-6 first:pt-0 px-2 -mx-2 rounded-lg">
-          <span class="text-[10px] text-[#5B8DEE] font-semibold tracking-wider uppercase">AI & Next.js</span>
-          <a href="#" class="block text-sm font-semibold text-[#111827] hover:text-[#5B8DEE] transition-colors duration-200 mt-1 mb-2">
+        <div class="post-hover py-6 first:pt-0 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" style="border-top: 1px solid var(--border);">
+          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
             RAG 패턴을 활용한 로컬 도큐먼트 챗봇 구축기
           </a>
-          <p class="text-xs text-[#6B7280] leading-relaxed mb-2">
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
             Retrieval-Augmented Generation 패턴을 이용해 로컬 문서를 기반으로 답변하는 챗봇을 구축한 과정을 정리합니다. 임베딩 모델 선택부터 벡터 DB 연동까지 단계별로 기록합니다.
           </p>
-          <p class="text-xs text-[#9CA3AF]">2026년 6월 15일 · LLM 프롬프트 임베딩</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 15일 · LLM 프롬프트 임베딩</p>
         </div>
 
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg">
-          <span class="text-[10px] text-[#5B8DEE] font-semibold tracking-wider uppercase">Machine Learning</span>
-          <a href="#" class="block text-sm font-semibold text-[#111827] hover:text-[#5B8DEE] transition-colors duration-200 mt-1 mb-2">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Machine Learning" style="border-top: 1px solid var(--border);">
+          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
             Linear Regression의 수학적 이해와 Python 구현
           </a>
-          <p class="text-xs text-[#6B7280] leading-relaxed mb-2">
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
             선형 회귀의 비용 함수, 경사 하강법, 정규 방정식을 수식으로 풀어보고, NumPy로 직접 구현하며 이해를 확인합니다.
           </p>
-          <p class="text-xs text-[#9CA3AF]">2026년 6월 12일 · 머신러닝 수학 기초</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 12일 · 머신러닝 수학 기초</p>
         </div>
 
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg">
-          <span class="text-[10px] text-[#5B8DEE] font-semibold tracking-wider uppercase">Prompt Engineering</span>
-          <a href="#" class="block text-sm font-semibold text-[#111827] hover:text-[#5B8DEE] transition-colors duration-200 mt-1 mb-2">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Prompt Engineering" style="border-top: 1px solid var(--border);">
+          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
+          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
             Few-Shot Prompting으로 원하는 JSON 출력 정확도 높이기
           </a>
-          <p class="text-xs text-[#6B7280] leading-relaxed mb-2">
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
             Few-Shot 예시를 전략적으로 배치하여 LLM이 원하는 JSON 스키마를 안정적으로 출력하도록 유도하는 방법을 실험합니다.
           </p>
-          <p class="text-xs text-[#9CA3AF]">2026년 6월 10일 · 프롬프트 테크닉</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 10일 · 프롬프트 테크닉</p>
         </div>
 
       </div>
@@ -97,10 +195,10 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="w-full bg-[#F9FAFB] border-t border-[#E5E7EB]">
-    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#9CA3AF]">
+  <footer class="w-full border-t" style="background-color: var(--bg-secondary); border-color: var(--border);">
+    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs" style="color: var(--text-tertiary);">
       <div>
-        <p class="font-semibold text-[#6B7280] mb-1">CONTACT</p>
+        <p class="font-semibold mb-1" style="color: var(--text-secondary);">CONTACT</p>
         <p>hello@barobogi.me</p>
       </div>
       <div class="text-center sm:text-right">
@@ -109,6 +207,135 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Search & Filter for AI Study
+    function initSearchAndFilter() {
+      const searchInput = document.getElementById('searchInput');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const studyCards = document.querySelectorAll('.study-card');
+      let selectedCategories = new Set(['all']);
+
+      // Search functionality
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        filterCards(query, selectedCategories);
+      });
+
+      // Category filter functionality
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.getAttribute('data-tag');
+
+          if (category === 'all') {
+            selectedCategories.clear();
+            selectedCategories.add('all');
+            filterBtns.forEach(b => {
+              b.style.backgroundColor = b.getAttribute('data-tag') === 'all' ? 'var(--accent)' : 'var(--bg-secondary)';
+              b.style.color = b.getAttribute('data-tag') === 'all' ? 'white' : 'var(--text-primary)';
+            });
+          } else {
+            selectedCategories.delete('all');
+            if (selectedCategories.has(category)) {
+              selectedCategories.delete(category);
+            } else {
+              selectedCategories.add(category);
+            }
+
+            // Update button styles
+            filterBtns.forEach(b => {
+              const btnCat = b.getAttribute('data-tag');
+              if (btnCat === 'all') {
+                b.style.backgroundColor = 'var(--bg-secondary)';
+                b.style.color = 'var(--text-primary)';
+              } else if (selectedCategories.has(btnCat)) {
+                b.style.backgroundColor = 'var(--accent)';
+                b.style.color = 'white';
+              } else {
+                b.style.backgroundColor = 'var(--bg-secondary)';
+                b.style.color = 'var(--text-primary)';
+              }
+            });
+
+            if (selectedCategories.size === 0) {
+              selectedCategories.add('all');
+              filterBtns[0].style.backgroundColor = 'var(--accent)';
+              filterBtns[0].style.color = 'white';
+            }
+          }
+
+          const query = searchInput.value.toLowerCase();
+          filterCards(query, selectedCategories);
+        });
+      });
+
+      function filterCards(query, categories) {
+        studyCards.forEach(card => {
+          const title = card.querySelector('a').textContent.toLowerCase();
+          const content = card.querySelector('p').textContent.toLowerCase();
+          const category = card.getAttribute('data-category');
+
+          const matchesSearch = title.includes(query) || content.includes(query);
+          const matchesCategory = categories.has('all') || categories.has(category);
+
+          card.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+        });
+      }
+    }
+
+    // Dark Mode Toggle
+    function initDarkMode() {
+      const toggle = document.getElementById('darkModeToggle');
+      const html = document.documentElement;
+
+      // Load saved preference or detect system preference
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = saved ? saved === 'dark' : prefersDark;
+
+      // Set initial theme
+      setTheme(isDark ? 'dark' : 'light');
+
+      // Toggle button click
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+
+      // Listen for system preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    }
+
+    function setTheme(theme) {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateToggleIcon(theme);
+    }
+
+    function updateToggleIcon(theme) {
+      const toggle = document.getElementById('darkModeToggle');
+      if (toggle) {
+        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initDarkMode();
+        initSearchAndFilter();
+      });
+    } else {
+      initDarkMode();
+      initSearchAndFilter();
+    }
+  </script>
 
 </body>
 </html>

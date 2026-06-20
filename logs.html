@@ -6,41 +6,109 @@
   <title>Logs — Today for Barobogi</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root {
+      /* Light Mode */
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --text-tertiary: #9CA3AF;
+      --border: #E5E7EB;
+      --accent: #5B8DEE;
+      --accent-light: #EBF0FF;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    html[data-theme="dark"] {
+      --bg-primary: #0F1117;
+      --bg-secondary: #161B22;
+      --text-primary: #E6EDF3;
+      --text-secondary: #8B949E;
+      --text-tertiary: #6E7681;
+      --border: #30363D;
+      --accent: #79C0FF;
+      --accent-light: #1F6FEB;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     .nav-active {
-      color: #111827;
-      border-bottom: 2px solid #5B8DEE;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 2px;
     }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .card-hover {
-      transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  background-color 0.2s ease-out;
+      animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) backwards;
     }
+
     .card-hover:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      background-color: #F9FAFB;
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      background-color: var(--bg-secondary);
     }
+
     a:focus-visible, button:focus-visible {
-      outline: 2px solid #5B8DEE;
+      outline: 2px solid var(--accent);
       outline-offset: 2px;
       border-radius: 4px;
     }
+
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      color: var(--text-primary);
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: var(--bg-secondary);
+    }
   </style>
 </head>
-<body class="bg-white text-[#111827] min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <!-- HEADER -->
-  <header class="w-full bg-white border-b border-[#E5E7EB]" style="height:60px;">
+  <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
     <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
-      <a href="index.html" class="text-base font-bold tracking-tight text-[#111827] hover:text-[#5B8DEE] transition-colors duration-200">
-        Today for <span class="text-[#5B8DEE]">Barobogi</span>
+      <a href="index.html" class="text-base font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);">
+        Today for <span style="color: var(--accent);">Barobogi</span>
       </a>
-      <nav class="flex gap-8 text-sm text-[#6B7280]">
-        <a href="index.html" class="hover:text-[#111827] transition-colors duration-200 pb-[2px]">Home</a>
-        <a href="logs.html" class="nav-active font-medium">Logs</a>
-        <a href="ai-study.html" class="hover:text-[#111827] transition-colors duration-200 pb-[2px]">AI Study</a>
-      </nav>
+      <div class="flex gap-4 items-center">
+        <nav class="flex gap-8 text-sm" style="color: var(--text-secondary);">
+          <a href="index.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Home</a>
+          <a href="logs.html" class="nav-active font-medium">Logs</a>
+          <a href="ai-study.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">AI Study</a>
+          <a href="stock-dashboard.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
+        </nav>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
     </div>
   </header>
 
@@ -48,39 +116,74 @@
   <main class="max-w-4xl w-full mx-auto px-6 flex-grow">
 
     <!-- PAGE TITLE -->
-    <section class="py-12 border-b border-[#E5E7EB]">
-      <p class="text-xs font-semibold tracking-widest text-[#5B8DEE] uppercase mb-4">Daily Logs</p>
-      <h1 class="text-[32px] font-bold text-[#111827] leading-snug mb-4">오늘을 기록합니다</h1>
-      <p class="text-sm text-[#6B7280] leading-relaxed max-w-2xl">
+    <section class="py-12" style="border-bottom-color: var(--border);" class="border-b">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color: var(--accent);">Daily Logs</p>
+      <h1 class="text-[32px] font-bold leading-snug mb-4" style="color: var(--text-primary);">오늘을 기록합니다</h1>
+      <p class="text-sm leading-relaxed max-w-2xl" style="color: var(--text-secondary);">
         매일의 작은 순간들을 놓치지 않고 담아두는 곳입니다. 루틴, 생각, 감정, 발견 — 모든 것이 기록의 대상입니다.
       </p>
     </section>
 
+    <!-- SEARCH & FILTER -->
+    <section class="py-8">
+      <div class="space-y-4">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="제목, 내용으로 검색..."
+          class="w-full px-4 py-2 rounded-lg border transition-colors"
+          style="background-color: var(--bg-secondary); border-color: var(--border); color: var(--text-primary);">
+
+        <div class="flex flex-wrap gap-2">
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="all" style="background-color: var(--accent); color: white;">
+            All
+          </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="routine" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            #routine
+          </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="running" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            #running
+          </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="daily" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            #daily
+          </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="mindset" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            #mindset
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- LOG LIST -->
     <section class="py-12">
-      <div class="space-y-4">
+      <div class="space-y-4" id="logList">
 
-        <div class="card-hover bg-white border border-[#E5E7EB] rounded-lg p-4" style="box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-          <span class="text-xs text-[#9CA3AF]">2026.06.17</span>
-          <h3 class="text-sm font-semibold text-[#111827] mt-1 mb-2">아침 러닝과 차분한 생각 정리</h3>
-          <p class="text-xs text-[#6B7280] leading-relaxed">
+        <div class="card-hover border rounded-lg p-4 log-card" data-tags="routine,running" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <span class="text-xs" style="color: var(--text-tertiary);">2026.06.17</span>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">아침 러닝과 차분한 생각 정리</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
             장마 전 선선한 바람을 맞으며 5km 아침 러닝을 완주했습니다. 뛰면서 복잡했던 마음이 차분히 정돈되는 기분을 느껴 일지에 남겨둡니다.
           </p>
           <div class="mt-3 flex gap-2 flex-wrap">
-            <span class="text-[10px] bg-[#EBF0FF] text-[#5B8DEE] px-2 py-0.5 rounded font-medium">#routine</span>
-            <span class="text-[10px] bg-[#EBF0FF] text-[#5B8DEE] px-2 py-0.5 rounded font-medium">#running</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#routine</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#running</span>
           </div>
         </div>
 
-        <div class="card-hover bg-white border border-[#E5E7EB] rounded-lg p-4" style="box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-          <span class="text-xs text-[#9CA3AF]">2026.06.16</span>
-          <h3 class="text-sm font-semibold text-[#111827] mt-1 mb-2">밤하늘의 위로</h3>
-          <p class="text-xs text-[#6B7280] leading-relaxed">
+        <div class="card-hover border rounded-lg p-4 log-card" data-tags="daily,mindset" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <span class="text-xs" style="color: var(--text-tertiary);">2026.06.16</span>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">밤하늘의 위로</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
             작업 도중 환기를 위해 창문을 열었는데 밤하늘의 별이 유난히도 맑았습니다. 소소한 순간에서 얻는 에너지가 꽤 큽니다.
           </p>
           <div class="mt-3 flex gap-2 flex-wrap">
-            <span class="text-[10px] bg-[#EBF0FF] text-[#5B8DEE] px-2 py-0.5 rounded font-medium">#daily</span>
-            <span class="text-[10px] bg-[#EBF0FF] text-[#5B8DEE] px-2 py-0.5 rounded font-medium">#mindset</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#daily</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#mindset</span>
           </div>
         </div>
 
@@ -89,10 +192,10 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="w-full bg-[#F9FAFB] border-t border-[#E5E7EB]">
-    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#9CA3AF]">
+  <footer class="w-full border-t" style="background-color: var(--bg-secondary); border-color: var(--border);">
+    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs" style="color: var(--text-tertiary);">
       <div>
-        <p class="font-semibold text-[#6B7280] mb-1">CONTACT</p>
+        <p class="font-semibold mb-1" style="color: var(--text-secondary);">CONTACT</p>
         <p>hello@barobogi.me</p>
       </div>
       <div class="text-center sm:text-right">
@@ -101,6 +204,135 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Search & Filter
+    function initSearchAndFilter() {
+      const searchInput = document.getElementById('searchInput');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const logCards = document.querySelectorAll('.log-card');
+      let selectedTags = new Set(['all']);
+
+      // Search functionality
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        filterCards(query, selectedTags);
+      });
+
+      // Tag filter functionality
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tag = btn.getAttribute('data-tag');
+
+          if (tag === 'all') {
+            selectedTags.clear();
+            selectedTags.add('all');
+            filterBtns.forEach(b => {
+              b.style.backgroundColor = b.getAttribute('data-tag') === 'all' ? 'var(--accent)' : 'var(--bg-secondary)';
+              b.style.color = b.getAttribute('data-tag') === 'all' ? 'white' : 'var(--text-primary)';
+            });
+          } else {
+            selectedTags.delete('all');
+            if (selectedTags.has(tag)) {
+              selectedTags.delete(tag);
+            } else {
+              selectedTags.add(tag);
+            }
+
+            // Update button styles
+            filterBtns.forEach(b => {
+              const btnTag = b.getAttribute('data-tag');
+              if (btnTag === 'all') {
+                b.style.backgroundColor = 'var(--bg-secondary)';
+                b.style.color = 'var(--text-primary)';
+              } else if (selectedTags.has(btnTag)) {
+                b.style.backgroundColor = 'var(--accent)';
+                b.style.color = 'white';
+              } else {
+                b.style.backgroundColor = 'var(--bg-secondary)';
+                b.style.color = 'var(--text-primary)';
+              }
+            });
+
+            if (selectedTags.size === 0) {
+              selectedTags.add('all');
+              filterBtns[0].style.backgroundColor = 'var(--accent)';
+              filterBtns[0].style.color = 'white';
+            }
+          }
+
+          const query = searchInput.value.toLowerCase();
+          filterCards(query, selectedTags);
+        });
+      });
+
+      function filterCards(query, tags) {
+        logCards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const content = card.querySelector('p').textContent.toLowerCase();
+          const cardTags = card.getAttribute('data-tags').split(',');
+
+          const matchesSearch = title.includes(query) || content.includes(query);
+          const matchesTags = tags.has('all') || cardTags.some(tag => tags.has(tag.trim()));
+
+          card.style.display = matchesSearch && matchesTags ? 'block' : 'none';
+        });
+      }
+    }
+
+    // Dark Mode Toggle
+    function initDarkMode() {
+      const toggle = document.getElementById('darkModeToggle');
+      const html = document.documentElement;
+
+      // Load saved preference or detect system preference
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = saved ? saved === 'dark' : prefersDark;
+
+      // Set initial theme
+      setTheme(isDark ? 'dark' : 'light');
+
+      // Toggle button click
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+
+      // Listen for system preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    }
+
+    function setTheme(theme) {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateToggleIcon(theme);
+    }
+
+    function updateToggleIcon(theme) {
+      const toggle = document.getElementById('darkModeToggle');
+      if (toggle) {
+        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initDarkMode();
+        initSearchAndFilter();
+      });
+    } else {
+      initDarkMode();
+      initSearchAndFilter();
+    }
+  </script>
 
 </body>
 </html>

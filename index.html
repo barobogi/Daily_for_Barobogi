@@ -6,49 +6,119 @@
   <title>Today for Barobogi</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root {
+      /* Light Mode */
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --text-tertiary: #9CA3AF;
+      --border: #E5E7EB;
+      --accent: #5B8DEE;
+      --accent-light: #EBF0FF;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    html[data-theme="dark"] {
+      --bg-primary: #0F1117;
+      --bg-secondary: #161B22;
+      --text-primary: #E6EDF3;
+      --text-secondary: #8B949E;
+      --text-tertiary: #6E7681;
+      --border: #30363D;
+      --accent: #79C0FF;
+      --accent-light: #1F6FEB;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     .nav-active {
-      color: #111827;
-      border-bottom: 2px solid #5B8DEE;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 2px;
     }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .card-hover {
-      transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  background-color 0.2s ease-out;
+      animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) backwards;
     }
+
     .card-hover:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      background-color: #F9FAFB;
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      background-color: var(--bg-secondary);
     }
+
     .feature-card-hover {
       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s ease-out;
     }
+
     .feature-card-hover:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
-      border-color: #5B8DEE;
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
     }
+
     a:focus-visible, button:focus-visible {
-      outline: 2px solid #5B8DEE;
+      outline: 2px solid var(--accent);
       outline-offset: 2px;
       border-radius: 4px;
     }
+
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      color: var(--text-primary);
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: var(--bg-secondary);
+    }
   </style>
 </head>
-<body class="bg-white text-[#111827] min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <!-- HEADER -->
-  <header class="w-full bg-white border-b border-[#E5E7EB]" style="height:60px;">
+  <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
     <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
-      <a href="index.html" class="text-base font-bold tracking-tight text-[#111827] hover:text-[#5B8DEE] transition-colors duration-200">
-        Today for <span class="text-[#5B8DEE]">Barobogi</span>
+      <a href="index.html" class="text-base font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);">
+        Today for <span style="color: var(--accent);">Barobogi</span>
       </a>
-      <nav class="flex gap-8 text-sm text-[#6B7280]">
-        <a href="index.html" class="nav-active font-medium">Home</a>
-        <a href="logs.html" class="hover:text-[#111827] transition-colors duration-200 pb-[2px]">Logs</a>
-        <a href="ai-study.html" class="hover:text-[#111827] transition-colors duration-200 pb-[2px]">AI Study</a>
-      </nav>
+      <div class="flex gap-4 items-center">
+        <nav class="flex gap-8 text-sm" style="color: var(--text-secondary);">
+          <a href="index.html" class="nav-active font-medium">Home</a>
+          <a href="logs.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
+          <a href="ai-study.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">AI Study</a>
+          <a href="stock-dashboard.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
+        </nav>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
     </div>
   </header>
 
@@ -56,13 +126,13 @@
   <main class="max-w-4xl w-full mx-auto px-6 flex-grow">
 
     <!-- HERO -->
-    <section class="py-12 border-b border-[#E5E7EB]">
-      <p class="text-xs font-semibold tracking-widest text-[#5B8DEE] uppercase mb-4">Overview</p>
-      <h1 class="text-[32px] font-bold text-[#111827] leading-snug mb-4">
+    <section class="py-12 border-b" style="border-color: var(--border);">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color: var(--accent);">Overview</p>
+      <h1 class="text-[32px] font-bold leading-snug mb-4" style="color: var(--text-primary);">
         안녕하세요! 오늘을 선명히 바로보고 기록하는<br>
-        개발자이자 AI 탐구자, <span class="underline decoration-[#5B8DEE] decoration-2">Barobogi</span>입니다.
+        개발자이자 AI 탐구자, <span class="underline decoration-2" style="text-decoration-color: var(--accent);">Barobogi</span>입니다.
       </h1>
-      <p class="text-sm text-[#6B7280] leading-relaxed max-w-2xl">
+      <p class="text-sm leading-relaxed max-w-2xl" style="color: var(--text-secondary);">
         이곳은 저의 소소한 하루 일상(Logs)과 매일 치열하게 부딪히는 AI 지식(AI Study)을 축적하는 가든입니다.
         완성된 답을 나열하기보다, 계속해서 더 가치 있는 매일을 찾아 나가는 과정을 오롯이 기록합니다.
       </p>
@@ -148,10 +218,10 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="w-full bg-[#F9FAFB] border-t border-[#E5E7EB]">
-    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#9CA3AF]">
+  <footer class="w-full border-t" style="background-color: var(--bg-secondary); border-color: var(--border);">
+    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs" style="color: var(--text-tertiary);">
       <div>
-        <p class="font-semibold text-[#6B7280] mb-1">CONTACT</p>
+        <p class="font-semibold mb-1" style="color: var(--text-secondary);">CONTACT</p>
         <p>hello@barobogi.me</p>
       </div>
       <div class="text-center sm:text-right">
@@ -160,6 +230,57 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Dark Mode Toggle
+    function initDarkMode() {
+      const toggle = document.getElementById('darkModeToggle');
+      const html = document.documentElement;
+
+      // Load saved preference or detect system preference
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = saved ? saved === 'dark' : prefersDark;
+
+      // Set initial theme
+      setTheme(isDark ? 'dark' : 'light');
+
+      // Toggle button click
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+
+      // Listen for system preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    }
+
+    function setTheme(theme) {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateToggleIcon(theme);
+    }
+
+    function updateToggleIcon(theme) {
+      const toggle = document.getElementById('darkModeToggle');
+      if (toggle) {
+        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDarkMode);
+    } else {
+      initDarkMode();
+    }
+  </script>
 
 </body>
 </html>
