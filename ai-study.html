@@ -94,6 +94,16 @@
     .pat-dot.set { background-color: #10B981; }
     .pat-dot.unset { background-color: var(--text-tertiary); }
 
+    /* Content preview truncation (3 lines) */
+    .study-card { cursor: pointer; }
+    .content-preview {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: normal !important; /* override pre-wrap for clamp */
+    }
+
     /* Edit button per card */
     .edit-btn {
       opacity: 0; transition: opacity 0.2s ease;
@@ -227,15 +237,14 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260620-1" style="border-top: 1px solid var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260620-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
-            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
-          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
-            Claude Cowork와 CLI 100% 자동화 적용
-          </a>
-          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary); white-space: pre-wrap;">
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Claude Cowork와 CLI 100% 자동화 적용</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">
+
             Cowork ↔ CLI 100% 자동화 시스템 — 완전 정리
 
  한 줄 요약
@@ -334,51 +343,54 @@ git 충돌 방지	index.lock 최대 30초 대기
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 20일 · Cowork-CLI-Sync, master_watch, auto-deploy, watchdog</p>
         </div>
 
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260615-1" style="border-top: 1px solid var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260615-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
-            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
-          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
-            RAG 패턴을 활용한 로컬 도큐먼트 챗봇 구축기
-          </a>
-          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
-            Retrieval-Augmented Generation 패턴을 이용해 로컬 문서를 기반으로 답변하는 챗봇을 구축한 과정을 정리합니다. 임베딩 모델 선택부터 벡터 DB 연동까지 단계별로 기록합니다.
-          </p>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">RAG 패턴을 활용한 로컬 도큐먼트 챗봇 구축기</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Retrieval-Augmented Generation 패턴을 이용해 로컬 문서를 기반으로 답변하는 챗봇을 구축한 과정을 정리합니다. 임베딩 모델 선택부터 벡터 DB 연동까지 단계별로 기록합니다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 15일 · LLM 프롬프트 임베딩</p>
         </div>
 
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Machine Learning" data-id="20260612-1" style="border-top: 1px solid var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Machine Learning" data-id="20260612-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
-            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
-          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
-            Linear Regression의 수학적 이해와 Python 구현
-          </a>
-          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
-            선형 회귀의 비용 함수, 경사 하강법, 정규 방정식을 수식으로 풀어보고, NumPy로 직접 구현하며 이해를 확인합니다.
-          </p>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Linear Regression의 수학적 이해와 Python 구현</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">선형 회귀의 비용 함수, 경사 하강법, 정규 방정식을 수식으로 풀어보고, NumPy로 직접 구현하며 이해를 확인합니다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 12일 · 머신러닝 수학 기초</p>
         </div>
 
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Prompt Engineering" data-id="20260610-1" style="border-top: 1px solid var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Prompt Engineering" data-id="20260610-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
-            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
-          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
-            Few-Shot Prompting으로 원하는 JSON 출력 정확도 높이기
-          </a>
-          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
-            Few-Shot 예시를 전략적으로 배치하여 LLM이 원하는 JSON 스키마를 안정적으로 출력하도록 유도하는 방법을 실험합니다.
-          </p>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Few-Shot Prompting으로 원하는 JSON 출력 정확도 높이기</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Few-Shot 예시를 전략적으로 배치하여 LLM이 원하는 JSON 스키마를 안정적으로 출력하도록 유도하는 방법을 실험합니다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 10일 · 프롬프트 테크닉</p>
         </div>
 
       </div>
     </section>
   </main>
+
+  <!-- STUDY DETAIL MODAL -->
+  <div class="modal-overlay" id="studyDetailModal">
+    <div class="modal-box">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span id="detailCategory" class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);"></span>
+          <h2 id="detailTitle" class="text-base font-bold mt-1" style="color: var(--text-primary);"></h2>
+          <p id="detailMeta" class="text-xs mt-1" style="color: var(--text-tertiary);"></p>
+        </div>
+        <button onclick="closeStudyDetailModal()" style="color: var(--text-tertiary); font-size: 22px; line-height: 1; background: none; border: none; cursor: pointer; flex-shrink:0; margin-left:16px;">×</button>
+      </div>
+      <p id="detailContent" class="text-sm leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;"></p>
+    </div>
+  </div>
 
   <!-- EDIT STUDY MODAL -->
   <div class="modal-overlay" id="editModal">
@@ -722,15 +734,13 @@ git 충돌 방지	index.lock 최대 30초 대기
     }
 
     function makeCardHtml(id, category, title, content, date, tagLabel) {
-      return `        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="${category}" data-id="${id}" style="border-top: 1px solid var(--border);">
+      return `        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="${category}" data-id="${id}" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
-            <button class="edit-btn" onclick="openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
-          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
-            ${title}
-          </a>
-          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary); white-space: pre-wrap;">${content}</p>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">${title}</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">${content}</p>
           <p class="text-xs" style="color: var(--text-tertiary);">${date}${tagLabel}</p>
         </div>`;
     }
@@ -802,9 +812,10 @@ git 충돌 방지	index.lock 최대 30초 대기
 
       // Extract values from card DOM
       const category = cardEl.getAttribute('data-category') || 'AI & Next.js';
-      const titleEl = cardEl.querySelector('a');
-      const contentEl = cardEl.querySelectorAll('p')[0];
-      const metaEl = cardEl.querySelectorAll('p')[1];
+      const titleEl = cardEl.querySelector('p.text-sm.font-semibold') || cardEl.querySelector('a');
+      const contentEl = cardEl.querySelector('.content-preview') || cardEl.querySelectorAll('p')[1];
+      const allPs = cardEl.querySelectorAll('p');
+      const metaEl = allPs[allPs.length - 1];
 
       const title = titleEl ? titleEl.textContent.trim() : '';
       const content = contentEl ? contentEl.textContent.trim() : '';
@@ -911,8 +922,25 @@ git 충돌 방지	index.lock 최대 30초 대기
       }
     }
 
+    // ── Study Detail Modal ───────────────────────────────
+    function openStudyDetailModal(cardEl) {
+      const category = cardEl.getAttribute('data-category') || '';
+      const titleEl = cardEl.querySelector('p.text-sm.font-semibold') || cardEl.querySelector('a');
+      const contentEl = cardEl.querySelector('.content-preview') || cardEl.querySelectorAll('p')[1];
+      const metaEl = cardEl.querySelectorAll('p')[cardEl.querySelectorAll('p').length - 1];
+      document.getElementById('detailCategory').textContent = category;
+      document.getElementById('detailTitle').textContent = titleEl ? titleEl.textContent.trim() : '';
+      document.getElementById('detailContent').textContent = contentEl ? contentEl.textContent.trim() : '';
+      document.getElementById('detailMeta').textContent = metaEl ? metaEl.textContent.trim() : '';
+      document.getElementById('studyDetailModal').classList.add('open');
+    }
+
+    function closeStudyDetailModal() {
+      document.getElementById('studyDetailModal').classList.remove('open');
+    }
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { closeStudyModal(); closeEditModal(); }
+      if (e.key === 'Escape') { closeStudyModal(); closeEditModal(); closeStudyDetailModal(); }
     });
   </script>
 
