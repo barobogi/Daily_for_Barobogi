@@ -100,6 +100,34 @@
     .dark-mode-toggle:hover {
       background-color: var(--bg-secondary);
     }
+
+    /* Home: hide edit buttons from fetched cards */
+    .edit-btn { display: none !important; }
+
+    /* Detail modal */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 50; padding: 1rem;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .modal-box {
+      width: 100%; max-width: 600px; max-height: 82vh; overflow-y: auto;
+      border-radius: 12px; padding: 1.5rem;
+      background-color: var(--bg-primary); border: 1px solid var(--border);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+      transform: translateY(8px); transition: transform 0.2s ease;
+    }
+    .modal-overlay.open .modal-box { transform: translateY(0); }
+
+    /* Study preview hover */
+    .study-preview { cursor: pointer; border-radius: 4px; transition: background-color 0.2s; }
+    .study-preview:hover { background-color: var(--bg-secondary); }
+
+    /* Skeleton loader */
+    .skeleton { background: var(--bg-secondary); border-radius: 6px; animation: pulse 1.5s infinite; height: 14px; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
   </style>
 </head>
 <body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
@@ -150,32 +178,9 @@
           <a href="logs.html" class="text-xs transition-colors duration-200" style="color: var(--text-secondary);">View All →</a>
         </div>
 
-        <div class="space-y-4">
-          <!-- 카드 1 -->
-          <div class="card-hover border rounded-lg p-4" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
-            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.17</span>
-            <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">아침 러닝과 차분한 생각 정리</h3>
-            <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
-              장마 전 선선한 바람을 맞으며 5km 아침 러닝을 완주했습니다. 뛰면서 복잡했던 마음이 차분히 정돈되는 기분을 느껴 일지에 남겨둡니다.
-            </p>
-            <div class="mt-3 flex gap-2 flex-wrap">
-              <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#routine</span>
-              <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#running</span>
-            </div>
-          </div>
-
-          <!-- 카드 2 -->
-          <div class="card-hover border rounded-lg p-4" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
-            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.16</span>
-            <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">밤하늘의 위로</h3>
-            <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
-              작업 도중 환기를 위해 창문을 열었는데 밤하늘의 별이 유난히도 맑았습니다. 소소한 순간에서 얻는 에너지가 꽤 큽니다.
-            </p>
-            <div class="mt-3 flex gap-2 flex-wrap">
-              <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#daily</span>
-              <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#mindset</span>
-            </div>
-          </div>
+        <div class="space-y-4" id="homeLogList">
+          <div class="skeleton" style="height:80px;"></div>
+          <div class="skeleton" style="height:80px;"></div>
         </div>
       </div>
 
@@ -186,33 +191,10 @@
           <a href="ai-study.html" class="text-xs transition-colors duration-200" style="color: var(--text-secondary);">View All →</a>
         </div>
 
-        <div style="border-color: var(--border);">
-          <!-- 포스트 1 -->
-          <div class="py-4 first:pt-0" style="border-top: 1px solid var(--border);">
-            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
-            <a href="#" class="block text-sm font-medium transition-colors duration-200 mt-1 mb-1" style="color: var(--text-primary);">
-              RAG 패턴을 활용한 로컬 도큐먼트 챗봇 구축기
-            </a>
-            <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 15일 · LLM 프롬프트 임베딩</p>
-          </div>
-
-          <!-- 포스트 2 -->
-          <div class="py-4" style="border-top: 1px solid var(--border);">
-            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
-            <a href="#" class="block text-sm font-medium transition-colors duration-200 mt-1 mb-1" style="color: var(--text-primary);">
-              Linear Regression의 수학적 이해와 Python 구현
-            </a>
-            <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 12일 · 머신러닝 수학 기초</p>
-          </div>
-
-          <!-- 포스트 3 -->
-          <div class="py-4" style="border-top: 1px solid var(--border);">
-            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
-            <a href="#" class="block text-sm font-medium transition-colors duration-200 mt-1 mb-1" style="color: var(--text-primary);">
-              Few-Shot Prompting으로 원하는 JSON 출력 정확도 높이기
-            </a>
-            <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 10일 · 프롬프트 테크닉</p>
-          </div>
+        <div id="homeStudyList">
+          <div class="py-3" style="border-top: 1px solid var(--border);"><div class="skeleton mb-1" style="height:10px; width:60px;"></div><div class="skeleton" style="height:14px;"></div></div>
+          <div class="py-3" style="border-top: 1px solid var(--border);"><div class="skeleton mb-1" style="height:10px; width:80px;"></div><div class="skeleton" style="height:14px;"></div></div>
+          <div class="py-3" style="border-top: 1px solid var(--border);"><div class="skeleton mb-1" style="height:10px; width:70px;"></div><div class="skeleton" style="height:14px;"></div></div>
         </div>
       </div>
 
@@ -232,6 +214,24 @@
       </div>
     </div>
   </footer>
+
+  <!-- DETAIL MODAL -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-box">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <p id="detailMeta" class="text-xs mb-1" style="color: var(--text-tertiary);"></p>
+          <h2 id="detailTitle" class="text-base font-bold" style="color: var(--text-primary);"></h2>
+        </div>
+        <button onclick="closeDetailModal()" style="color: var(--text-tertiary); font-size: 22px; line-height: 1; background: none; border: none; cursor: pointer; flex-shrink:0; margin-left:12px;">×</button>
+      </div>
+      <p id="detailContent" class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary); white-space: pre-wrap;"></p>
+      <div id="detailTags" class="flex gap-2 flex-wrap"></div>
+      <div class="mt-5 pt-4" style="border-top: 1px solid var(--border);">
+        <a id="detailLink" href="#" class="text-xs font-semibold" style="color: var(--accent);">전체 목록 보기 →</a>
+      </div>
+    </div>
+  </div>
 
   <script>
     // Dark Mode Toggle
@@ -276,11 +276,90 @@
       }
     }
 
+    // ── Detail Modal ─────────────────────────────────────
+    function openDetailModal(title, meta, content, tags, linkHref) {
+      document.getElementById('detailTitle').textContent = title;
+      document.getElementById('detailMeta').textContent = meta;
+      document.getElementById('detailContent').textContent = content;
+      document.getElementById('detailLink').href = linkHref;
+      const tagsEl = document.getElementById('detailTags');
+      tagsEl.innerHTML = tags.map(t =>
+        `<span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#${t}</span>`
+      ).join('');
+      document.getElementById('detailModal').classList.add('open');
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.remove('open');
+    }
+
+    // ── Dynamic Content Load ─────────────────────────────
+    async function loadLatestEntries() {
+      // --- Logs (최신 2개) ---
+      try {
+        const res = await fetch('./logs.html');
+        const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+        const cards = [...doc.querySelectorAll('#logList .log-card')].slice(0, 2);
+        const logContainer = document.getElementById('homeLogList');
+        logContainer.innerHTML = '';
+        cards.forEach(card => {
+          const clone = card.cloneNode(true);
+          // 클릭 시 상세 모달 오픈
+          const titleEl = clone.querySelector('h3');
+          const dateEl = clone.querySelector('span.text-xs');
+          const contentEl = clone.querySelector('p');
+          const tagEls = [...(clone.querySelectorAll('.mt-3 span') || [])];
+          const title = titleEl ? titleEl.textContent.trim() : '';
+          const date = dateEl ? dateEl.textContent.trim() : '';
+          const content = contentEl ? contentEl.textContent.trim() : '';
+          const tags = tagEls.map(s => s.textContent.trim().replace(/^#/, ''));
+          clone.style.cursor = 'pointer';
+          clone.addEventListener('click', () => openDetailModal(title, date, content, tags, 'logs.html'));
+          // 내용 3줄로 클램프
+          if (contentEl) { contentEl.style.cssText += '; -webkit-line-clamp:3; display:-webkit-box; -webkit-box-orient:vertical; overflow:hidden; white-space:normal;'; }
+          logContainer.appendChild(clone);
+        });
+      } catch(e) {
+        document.getElementById('homeLogList').innerHTML = '<p class="text-xs" style="color: var(--text-tertiary);">로드 실패 — 잠시 후 새로고침</p>';
+      }
+
+      // --- Study (최신 3개, 제목+카테고리+날짜 미리보기) ---
+      try {
+        const res = await fetch('./ai-study.html');
+        const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+        const cards = [...doc.querySelectorAll('#studyList .study-card')].slice(0, 3);
+        const studyContainer = document.getElementById('homeStudyList');
+        studyContainer.innerHTML = '';
+        cards.forEach((card, i) => {
+          const category = card.getAttribute('data-category') || '';
+          const titleEl = card.querySelector('a');
+          const contentEl = card.querySelectorAll('p')[0];
+          const metaEl = card.querySelectorAll('p')[1];
+          const title = titleEl ? titleEl.textContent.trim() : '';
+          const content = contentEl ? contentEl.textContent.trim() : '';
+          const meta = metaEl ? metaEl.textContent.trim() : '';
+          const el = document.createElement('div');
+          el.className = 'study-preview py-4';
+          el.style.borderTop = '1px solid var(--border)';
+          el.innerHTML = `
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
+            <p class="text-sm font-medium mt-1 mb-1" style="color: var(--text-primary);">${title}</p>
+            <p class="text-xs" style="color: var(--text-tertiary);">${meta}</p>`;
+          el.addEventListener('click', () => openDetailModal(title, `${category} · ${meta}`, content, [], 'ai-study.html'));
+          studyContainer.appendChild(el);
+        });
+      } catch(e) {
+        document.getElementById('homeStudyList').innerHTML = '<p class="text-xs" style="color: var(--text-tertiary);">로드 실패 — 잠시 후 새로고침</p>';
+      }
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetailModal(); });
+
     // Initialize on page load
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initDarkMode);
+      document.addEventListener('DOMContentLoaded', () => { initDarkMode(); loadLatestEntries(); });
     } else {
-      initDarkMode();
+      initDarkMode(); loadLatestEntries();
     }
   </script>
 

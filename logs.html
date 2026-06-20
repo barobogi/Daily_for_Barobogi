@@ -96,6 +96,25 @@
     .pat-dot.set { background-color: #10B981; }
     .pat-dot.unset { background-color: var(--text-tertiary); }
 
+    /* Edit button per card */
+    .edit-btn {
+      opacity: 0; transition: opacity 0.2s ease;
+      background-color: var(--bg-secondary); color: var(--text-tertiary);
+      border: 1px solid var(--border); cursor: pointer;
+      font-size: 11px; padding: 2px 8px; border-radius: 4px;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .log-card:hover .edit-btn { opacity: 1; }
+
+    /* Toast */
+    @keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      background: #10B981; color: white; padding: 12px 20px;
+      border-radius: 8px; font-size: 13px; font-weight: 600;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2); animation: toastIn 0.3s ease-out;
+    }
+
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
@@ -214,28 +233,16 @@
         <button onclick="clearLogPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div class="space-y-4" id="logList">
-        <div class="card-hover border rounded-lg p-4 log-card" data-tags="Cowork,CLl,자동화,주식" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
-          <span class="text-xs" style="color: var(--text-tertiary);">2026.06.20</span>
-          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">오늘의 학습 기능</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
-            1. Cowork ↔ CLI 100% 자동화 시스템 구현
-2. 주식 시스템 업그레이드
-3. daily webpage 업데이트
-          </p>
-          <div class="mt-3 flex gap-2 flex-wrap">
-            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#Cowork</span>
-            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#CLl</span>
-            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#자동화</span>
-            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#주식</span>
-          </div>
-        </div>
 
-        <div class="card-hover border rounded-lg p-4 log-card" data-tags="Cowork,CLI,자동화,주식" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
-          <span class="text-xs" style="color: var(--text-tertiary);">2026.06.20</span>
+        <div class="card-hover border rounded-lg p-4 log-card" data-tags="Cowork,CLI,자동화,주식" data-id="20260620-1" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.20</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
           <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">오늘의 학습 기능</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
-            1. Cowork ↔ CLI 100% 자동화 시스템 구현 2. 주식 시스템 업그레이드 3. daily webpage 업데이트
-          </p>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">1. Cowork ↔ CLI 100% 자동화 시스템 구현
+2. 주식 시스템 업그레이드
+3. daily webpage 업데이트</p>
           <div class="mt-3 flex gap-2 flex-wrap">
             <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#Cowork</span>
             <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#CLI</span>
@@ -244,25 +251,26 @@
           </div>
         </div>
 
-
-        <div class="card-hover border rounded-lg p-4 log-card" data-tags="routine,running" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
-          <span class="text-xs" style="color: var(--text-tertiary);">2026.06.17</span>
+        <div class="card-hover border rounded-lg p-4 log-card" data-tags="routine,running" data-id="20260617-1" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.17</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
           <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">아침 러닝과 차분한 생각 정리</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
-            장마 전 선선한 바람을 맞으며 5km 아침 러닝을 완주했습니다. 뛰면서 복잡했던 마음이 차분히 정돈되는 기분을 느껴 일지에 남겨둡니다.
-          </p>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">장마 전 선선한 바람을 맞으며 5km 아침 러닝을 완주했습니다. 뛰면서 복잡했던 마음이 차분히 정돈되는 기분을 느껴 일지에 남겨둡니다.</p>
           <div class="mt-3 flex gap-2 flex-wrap">
             <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#routine</span>
             <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#running</span>
           </div>
         </div>
 
-        <div class="card-hover border rounded-lg p-4 log-card" data-tags="daily,mindset" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
-          <span class="text-xs" style="color: var(--text-tertiary);">2026.06.16</span>
+        <div class="card-hover border rounded-lg p-4 log-card" data-tags="daily,mindset" data-id="20260616-1" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.16</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
           <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">밤하늘의 위로</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
-            작업 도중 환기를 위해 창문을 열었는데 밤하늘의 별이 유난히도 맑았습니다. 소소한 순간에서 얻는 에너지가 꽤 큽니다.
-          </p>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">작업 도중 환기를 위해 창문을 열었는데 밤하늘의 별이 유난히도 맑았습니다. 소소한 순간에서 얻는 에너지가 꽤 큽니다.</p>
           <div class="mt-3 flex gap-2 flex-wrap">
             <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#daily</span>
             <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#mindset</span>
@@ -272,6 +280,39 @@
       </div>
     </section>
   </main>
+
+  <!-- EDIT LOG MODAL -->
+  <div class="modal-overlay" id="editLogModal">
+    <div class="modal-box">
+      <div class="flex justify-between items-center mb-5">
+        <h3 class="text-base font-bold" style="color: var(--text-primary);">로그 수정</h3>
+        <button onclick="closeEditLogModal()" style="color: var(--text-tertiary); font-size: 20px; line-height: 1; background: none; border: none; cursor: pointer;">×</button>
+      </div>
+      <div class="space-y-4" id="editLogForm">
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">날짜</label>
+          <input type="text" id="editLogDate" class="modal-input" placeholder="2026.06.20">
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">제목</label>
+          <input type="text" id="editLogTitle" class="modal-input" placeholder="제목">
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">내용 <span style="color: var(--text-tertiary); font-weight: normal;">(Enter로 줄바꿈)</span></label>
+          <textarea id="editLogContent" class="modal-input" rows="6" style="resize: vertical;"></textarea>
+        </div>
+        <div>
+          <label class="text-xs font-semibold mb-1 block" style="color: var(--text-secondary);">태그</label>
+          <input type="text" id="editLogTags" class="modal-input" placeholder="태그1, 태그2">
+        </div>
+        <button onclick="saveEditLogModal()" id="editLogSubmitBtn" class="w-full py-2 rounded-lg text-sm font-semibold" style="background-color: var(--accent); color: white;">수정 저장</button>
+      </div>
+      <div id="editLogUploadResult" style="display:none;" class="mt-4 space-y-3">
+        <div id="editLogUploadMsg" class="text-sm text-center p-4 rounded-lg"></div>
+        <button onclick="closeEditLogModal()" class="w-full py-2 rounded-lg text-sm font-semibold" style="background-color: var(--accent); color: white;">닫기</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ADD LOG MODAL -->
   <div class="modal-overlay" id="logModal">
@@ -555,24 +596,28 @@
       setDefaultDate();
     }
 
+    function makeLogCardHtml(id, date, title, content, tagList) {
+      const tagSpans = tagList.map(t =>
+        `            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#${t}</span>`
+      ).join('\n');
+      return `        <div class="card-hover border rounded-lg p-4 log-card" data-tags="${tagList.join(',')}" data-id="${id}" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">${date}</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">${title}</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">${content}</p>${tagList.length ? `\n          <div class="mt-3 flex gap-2 flex-wrap">\n${tagSpans}\n          </div>` : ''}
+        </div>`;
+    }
+
     function buildLogSnippet() {
       const date = document.getElementById('logDate').value.trim();
       const title = document.getElementById('logTitle').value.trim();
       const content = document.getElementById('logContent').value.trim();
       const rawTags = document.getElementById('logTags').value.trim();
       const tagList = rawTags ? rawTags.split(',').map(t => t.trim()).filter(Boolean) : [];
-      const tagSpans = tagList.map(t =>
-        `            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#${t}</span>`
-      ).join('\n');
-      return { title,
-        snippet: `        <div class="card-hover border rounded-lg p-4 log-card" data-tags="${tagList.join(',')}" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
-          <span class="text-xs" style="color: var(--text-tertiary);">${date}</span>
-          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">${title}</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">
-            ${content}
-          </p>${tagList.length ? `\n          <div class="mt-3 flex gap-2 flex-wrap">\n${tagSpans}\n          </div>` : ''}
-        </div>`
-      };
+      const id = Date.now().toString();
+      return { title, snippet: makeLogCardHtml(id, date, title, content, tagList) };
     }
 
     async function generateLogSnippet() {
@@ -623,9 +668,115 @@
       });
     }
 
-    // ESC로 모달 닫기
+    // ── Edit Log Modal ───────────────────────────────────
+    let currentEditLogId = null;
+
+    function openEditLogModal(cardEl, event) {
+      event.preventDefault();
+      currentEditLogId = cardEl.getAttribute('data-id');
+      const dateEl = cardEl.querySelector('span.text-xs');
+      const titleEl = cardEl.querySelector('h3');
+      const contentEl = cardEl.querySelector('p');
+      const tagEls = cardEl.querySelectorAll('.mt-3 span');
+      const date = dateEl ? dateEl.textContent.trim() : '';
+      const title = titleEl ? titleEl.textContent.trim() : '';
+      const content = contentEl ? contentEl.textContent.trim() : '';
+      const tags = [...tagEls].map(s => s.textContent.trim().replace(/^#/, '')).join(', ');
+      document.getElementById('editLogDate').value = date;
+      document.getElementById('editLogTitle').value = title;
+      document.getElementById('editLogContent').value = content;
+      document.getElementById('editLogTags').value = tags;
+      document.getElementById('editLogForm').style.display = 'block';
+      document.getElementById('editLogUploadResult').style.display = 'none';
+      document.getElementById('editLogSubmitBtn').textContent = '수정 저장';
+      document.getElementById('editLogSubmitBtn').disabled = false;
+      document.getElementById('editLogModal').classList.add('open');
+    }
+
+    function closeEditLogModal() {
+      document.getElementById('editLogModal').classList.remove('open');
+      currentEditLogId = null;
+    }
+
+    function replaceCardInHtml(html, id, newCardHtml) {
+      const idPos = html.indexOf(`data-id="${id}"`);
+      if (idPos === -1) throw new Error(`카드를 찾을 수 없습니다 (id: ${id})`);
+      const openStart = html.lastIndexOf('<div', idPos);
+      let depth = 1, pos = html.indexOf('>', idPos) + 1;
+      while (depth > 0) {
+        const nextOpen = html.indexOf('<div', pos);
+        const nextClose = html.indexOf('</div>', pos);
+        if (nextClose === -1) throw new Error('카드 구조 파싱 오류');
+        if (nextOpen !== -1 && nextOpen < nextClose) { depth++; pos = nextOpen + 4; }
+        else { depth--; pos = nextClose + 6; }
+      }
+      return html.slice(0, openStart) + newCardHtml + '\n' + html.slice(pos);
+    }
+
+    function updateLogCardInDom(id, date, title, content, tagList) {
+      const card = document.querySelector(`[data-id="${id}"]`);
+      if (!card) return;
+      card.setAttribute('data-tags', tagList.join(','));
+      const tagSpans = tagList.map(t =>
+        `<span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#${t}</span>`
+      ).join('\n');
+      card.innerHTML = `
+        <div class="flex justify-between items-center">
+          <span class="text-xs" style="color: var(--text-tertiary);">${date}</span>
+          <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+        </div>
+        <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">${title}</h3>
+        <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">${content}</p>
+        ${tagList.length ? `<div class="mt-3 flex gap-2 flex-wrap">${tagSpans}</div>` : ''}`;
+    }
+
+    function showToast(msg) {
+      const t = document.createElement('div');
+      t.className = 'toast'; t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 3000);
+    }
+
+    async function saveEditLogModal() {
+      const title = document.getElementById('editLogTitle').value.trim();
+      const content = document.getElementById('editLogContent').value.trim();
+      if (!title || !content || !currentEditLogId) return;
+      const date = document.getElementById('editLogDate').value.trim();
+      const rawTags = document.getElementById('editLogTags').value.trim();
+      const tagList = rawTags ? rawTags.split(',').map(t => t.trim()).filter(Boolean) : [];
+      const newCardHtml = makeLogCardHtml(currentEditLogId, date, title, content, tagList);
+
+      const pat = localStorage.getItem('github_pat');
+      if (pat) {
+        const btn = document.getElementById('editLogSubmitBtn');
+        btn.textContent = '저장 중...'; btn.disabled = true;
+        document.getElementById('editLogForm').style.display = 'none';
+        document.getElementById('editLogUploadResult').style.display = 'block';
+        const msgEl = document.getElementById('editLogUploadMsg');
+        msgEl.style.cssText = 'color: var(--text-secondary); background-color: var(--bg-secondary);';
+        msgEl.textContent = 'GitHub에 저장 중...';
+        try {
+          const file = await githubGetFile(pat, 'logs.html');
+          const html = decodeBase64Utf8(file.content);
+          const updated = replaceCardInHtml(html, currentEditLogId, newCardHtml);
+          await githubPutFile(pat, 'logs.html', updated, file.sha, `content: 로그 수정 - ${title}`);
+          updateLogCardInDom(currentEditLogId, date, title, content, tagList);
+          closeEditLogModal();
+          showToast('✅ 수정됐습니다! 2~3분 후 반영됩니다.');
+        } catch (e) {
+          msgEl.style.cssText = 'color: #EF4444; background-color: #FEE2E2;';
+          msgEl.innerHTML = `❌ 오류: ${e.message}`;
+          btn.textContent = '수정 저장'; btn.disabled = false;
+        }
+      } else {
+        updateLogCardInDom(currentEditLogId, date, title, content, tagList);
+        closeEditLogModal();
+        showToast('화면 수정 완료. ⚙️ PAT 설정 시 GitHub에도 저장됩니다.');
+      }
+    }
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLogModal();
+      if (e.key === 'Escape') { closeLogModal(); closeEditLogModal(); }
     });
   </script>
 
