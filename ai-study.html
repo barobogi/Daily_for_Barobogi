@@ -208,6 +208,109 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" style="border-top: 1px solid var(--border);">
+          <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+          <a href="#" class="block text-sm font-semibold hover:opacity-70 transition-opacity duration-200 mt-1 mb-2" style="color: var(--text-primary);">
+            Glaude Cowork 와 CLI 100% 자동화 적용
+          </a>
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--text-secondary);">
+            Cowork ↔ CLI 100% 자동화 시스템 — 완전 정리
+
+ 한 줄 요약
+Cowork(Claude Desktop)와 CLI(VS Code/Claude Code)가 동일한 로컬 폴더 D:\AI\프로젝트명\을 공유하고, 어느 쪽에서 파일을 수정해도 12초 후 자동 git push → GitHub Pages 배포까지 사용자 개입 0%로 처리
+
+📁 핵심 파일 구조
+
+D:\AI\
+├── .cowork-global.json              ← 전역 설정
+├── .cowork-projects-registry.json   ← 프로젝트 등록부
+│
+├── Global_Define\
+│   ├── master_watch.py              ← 전역 워처 (항상 백그라운드 실행)
+│   ├── new_project_setup.py         ← 신규 프로젝트 1-command 초기화
+│   └── start_global_watcher.vbs     ← 부팅 시 자동 시작
+│
+├── Diary_for_Barobogi\              ← 프로젝트 1
+└── 260619_2_Daily_for_stock_TEMP\   ← 프로젝트 2 (stock_dashboard)
+🔄 동작 원리
+
+Cowork에서 파일 수정   또는   CLI에서 파일 수정
+            ↓                         ↓
+    D:\AI\프로젝트명\ 파일 변경 (같은 로컬 폴더)
+            ↓
+    master_watch.py 자동 감지 (on_modified / on_moved)
+            ↓  (12초 debounce — 연속 저장 묶음 처리)
+    git add .  →  commit  →  push (실패시 3회 재시도)
+            ↓
+    GitHub → GitHub Pages 자동 배포 (2~3분)
+핵심 포인트: Cowork ↔ CLI 사이에 네트워크 동기화 없음. 둘 다 같은 로컬 폴더를 직접 보기 때문에 파일 수정은 즉시 양쪽에 반영. master_watch.py는 오직 GitHub 동기화 역할.
+
+🚀 사용법
+신규 프로젝트 시작 (1-command)
+
+python "D:\AI\Global_Define\new_project_setup.py" "프로젝트명"
+자동 처리 내용:
+
+D:\AI\프로젝트명\ 폴더 생성
+git init + .gitignore + README.md
+.cowork-automation.json (프로젝트 설정)
+GitHub 연결 + 초기 push
+등록부 자동 등록 → 30초 내 감시 시작
+⚠️ GitHub에서 저장소 먼저 빈 상태로 만들어야 충돌 없음
+
+기존 프로젝트 등록 (수동)
+D:\AI\.cowork-projects-registry.json 편집:
+
+
+{
+  "projects": [
+    {
+      "name": "프로젝트명",
+      "path": "D:\\AI\\프로젝트명",
+      "type": "static",
+      "enabled": true
+    }
+  ]
+}
+→ 저장하면 30초 내 자동 감지 (워처 재시작 불필요)
+
+워처 관리 명령어
+
+# 상태 확인
+Get-Content "D:\AI\Global_Define\global_watcher.log" -Encoding UTF8 -Tail 20
+
+# 재시작
+Get-Process python | Where-Object {
+  (Get-WmiObject Win32_Process -Filter "ProcessId=$($_.Id)").CommandLine -like "*master_watch*"
+} | Stop-Process
+Start-Process "C:\hb\python.exe" -ArgumentList "D:\AI\Global_Define\master_watch.py" -WindowStyle Hidden
+
+# 등록 프로젝트 확인
+Get-Content "D:\AI\.cowork-projects-registry.json" -Encoding UTF8
+📋 현재 등록된 프로젝트
+프로젝트	경로	GitHub
+stock_dashboard	D:\AI\260619_2_Daily_for_stock_TEMP	barobogi/stock_dashboard
+Diary_for_Barobogi	D:\AI\Diary_for_Barobogi	barobogi/Daily_for_Barobogi
+⚙️ 기술 구현 포인트
+기능	구현 방식
+CLI Edit 툴 감지	on_moved (atomic write → rename 패턴)
+연속 저장 묶음	threading.Timer 12초 debounce
+git 충돌 방지	index.lock 최대 30초 대기
+신규 파일 포함	git add . (기존 git add -u 에서 수정)
+초기 오감지 방지	8초 STARTUP_GRACE
+신규 프로젝트 자동 감지	30초마다 D:\AI\ 스캔
+자동 재시작	observer 오류 시 10초 후 재시작
+부팅 시 자동 실행	start_global_watcher.vbs (35초 지연 후 시작)
+⚡ 빠른 참조 카드
+
+새 프로젝트 → python "D:\AI\Global_Define\new_project_setup.py" "이름"
+로그 확인   → D:\AI\Global_Define\global_watcher.log
+등록부      → D:\AI\.cowork-projects-registry.json
+전역 설정   → D:\AI\.cowork-global.json
+워처 스크립트 → D:\AI\Global_Define\master_watch.py
+          </p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 20일 · Cowork-CLI-Sync, master_watch, auto-deploy, watchdog</p>
+        </div>
 
         <div class="post-hover py-6 first:pt-0 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" style="border-top: 1px solid var(--border);">
           <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
