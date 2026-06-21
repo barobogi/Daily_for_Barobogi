@@ -250,6 +250,54 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
+             data-id="20260621-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">동영상 요약 자동 게시 앱 개발 — 1차 완성</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">동영상 요약 자동 게시 앱 개발 — 1차 완성
+
+한 줄 요약
+YouTube URL 하나로 AI 요약 → 이메일 발송 → GitHub Pages 자동 게시까지 완전 자동화
+
+🗂️ 최종 아키텍처
+Flutter 앱 (YouTube URL 입력)
+    ↓ POST /api/summarize
+Render 서버 (FastAPI)
+    ↓ Gemini 2.5 Flash — YouTube 영상 직접 분석
+    ↓ Claude Sonnet — 구조화 요약
+    ↓ 백그라운드 배포
+Daum 이메일 자동 발송 + GitHub Pages 카드 게시
+
+🔑 핵심 기술 1 — Gemini로 YouTube IP 차단 우회
+클라우드 서버는 YouTube IP 차단 → 자막 추출 5가지 방법 전부 실패.
+해결: Gemini API(Google 계열)는 YouTube 직접 접근 가능.
+file_data + file_uri 포맷으로 영상 URL 그대로 전달.
+
+🔑 핵심 기술 2 — Pydantic camelCase 직렬화
+FastAPI는 snake_case, Flutter는 camelCase → JSON 파싱 에러.
+CamelModel 베이스 클래스 추가 + response_model_by_alias=True 로 해결.
+
+🔑 핵심 기술 3 — Render 콜드스타트 방지
+무료 플랜 15분 비활성 시 슬립 → 응답 지연 30~60초.
+GitHub Actions로 14분마다 자동 ping, 상시 웜업 유지.
+
+⚠️ 함정
+· 구버전 APK(180s 타임아웃)가 설치된 채로 테스트 → 재빌드 없이는 코드 수정 무의미
+· release APK는 INTERNET 권한이 AndroidManifest에 별도 필요
+· Gemini 영상 처리 시간 = 영상 길이에 비례 → 짧은 영상으로 먼저 테스트
+
+💡 배운 점
+1. 같은 생태계 API(Gemini→YouTube)로 IP 차단 우회 가능
+2. FastAPI + Flutter 연동 시 camelCase/snake_case 불일치 반드시 확인
+3. 타임아웃은 클라이언트(Dio)와 서버(Gemini) 양쪽 모두 설정해야 함</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.21 · Flutter · Gemini · Claude · FastAPI · Render</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Web Dev"
              data-id="20260621-1"
              style="border-top: 1px solid var(--border);"
