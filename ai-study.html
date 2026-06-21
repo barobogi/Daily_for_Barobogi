@@ -250,6 +250,63 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Web Dev"
+             data-id="20260621-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Web Dev</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Barobogi 데스크탑 최적화 도전 #1</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Windows 11 개발 PC(RAM 8GB / C:SSD 256GB / D:HDD 1TB) 버벅거림을 Claude와 함께 단계적으로 진단·최적화한 기록.
+
+한 줄 요약
+RAM 여유 1.1GB → 시작 프로그램 정리 + C→D 드라이브 이전 + 가상 메모리 재설정으로 개발 환경 개선.
+
+🗂️ 최적화 전체 흐름
+진단 (메모리/디스크/시작프로그램)
+→ 1차: 시작 프로그램 5개 제거
+→ 2차: C드라이브 → D드라이브 이전 (Python/Android SDK/캐시)
+→ 3차: 가상 메모리 D(HDD) → C(SSD) 12GB 재설정
+→ 4차: JAVA_HOME 영구 등록 + D드라이브 환경변수 전역 선언
+
+🔑 핵심 1 — 시작 프로그램 정리 (5개 제거)
+제거 항목: Edge 자동실행, Copilot 자동실행, uTorrent, Teams, ClaudeMonitor
+방법: 레지스트리 HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 에서 삭제
+Remove-ItemProperty -Path "HKCU:\...\Run" -Name "항목명" -Confirm:$false
+앱 자체는 삭제 안 됨 — 자동 실행만 끄는 것
+
+🔑 핵심 2 — C→D 드라이브 이전 + 심볼릭 링크 (+10GB 확보)
+Python C:\hb (5.77GB), Android SDK (6.21GB) → D드라이브로 복사 후 심볼릭 링크
+심볼릭 링크(Junction): C:\hb가 가짜 폴더처럼 D:\hb를 투명하게 연결
+기존 경로 설정 변경 없이 그대로 동작
+New-Item -ItemType Junction -Path "C:\hb" -Target "D:\hb"
+캐시 환경변수(PUB_CACHE, GRADLE_USER_HOME, PIP_CACHE_DIR 등)도 D:\Dev\ 로 리디렉션
+
+🔑 핵심 3 — 가상 메모리 D(HDD) → C(SSD) 이전
+기존: D:\pagefile.sys 18GB (HDD) → 개선: C:\pagefile.sys 12GB (SSD) 고정
+이유: HDD는 SSD보다 10배 느려서 스왑 발생 시 더 버벅거림
+설정: sysdm.cpl → 고급 → 성능 → 가상 메모리 변경
+
+🔑 핵심 4 — 환경변수 영구 등록
+JAVA_HOME = C:\Program Files\Android\Android Studio\jbr (재부팅 후도 유지)
+[System.Environment]::SetEnvironmentVariable("JAVA_HOME", "경로", "User")
+향후 Claude/Cowork가 새 도구 설치 시 D드라이브 우선 적용되도록 CLAUDE.md에도 전역 규칙 추가
+
+⚠️ 주의사항
+C(SSD)가 D(HDD)보다 빠름 → 가상 메모리는 반드시 SSD에
+빌드 중 캐시 폴더 삭제 금지 → 빌드 강제 종료됨 (실제로 겪은 사고)
+드라이브 종류 먼저 확인: Get-PhysicalDisk | Select-Object FriendlyName, MediaType
+
+💡 배운 점
+1. RAM 부족이 근본 원인 — 소프트웨어 최적화는 보조 수단, 근본은 RAM 증설(8→16GB)
+2. 심볼릭 링크로 경로 투명 이전 — 재설치 없이 드라이브 간 이동 가능
+3. 진단 먼저, 조치 나중 — 드라이브 타입(SSD/HDD) 확인 없이 가상 메모리 이전했으면 역효과
+4. 환경변수 = 개발 환경 설계 — 한 번 설정해두면 모든 도구가 자동으로 D 사용</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.21 · Windows 최적화 · 개발환경 · 심볼릭링크 · 가상메모리</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
              data-id="20260620-3"
              style="border-top: 1px solid var(--border);"
