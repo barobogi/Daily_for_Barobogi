@@ -251,6 +251,70 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260622-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Flutter 모바일 앱 ↔ 데스크탑 Claude 연결 — Firebase 릴레이 아키텍처</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Flutter 모바일 앱 ↔ 데스크탑 Claude 연결 — Firebase 릴레이 아키텍처
+
+한 줄 요약
+폰에서 데스크탑 AI와 실시간 대화 — 서버 없이 Firebase를 브릿지로 활용
+
+📋 버전 히스토리
+v1.0 (2026-06-22) — 기본 채팅 앱
+  • Anthropic API 직접 스트리밍 채팅
+  • Firebase heartbeat로 데스크탑/만복 온라인 상태 표시
+  • 할일 메모장, API 키 보안 저장
+
+v1.1 (2026-06-22) — Firebase 릴레이 연결
+  • 폰 → Firebase → 데스크탑 데몬 → Anthropic API → 폰
+  • 만복 온라인/오프라인 자동 분기 (폴백 포함)
+  • AppBar &quot;진짜 만복이 / 가짜 만복이&quot; 표시
+
+v1.2 (2026-06-22) — 컨텍스트 주입
+  • CLAUDE.md(전역 지시사항) 시스템 프롬프트에 포함
+  • REF_continue.md + D:\AI 프로젝트 목록 + 메모리 파일 주입
+  • 클라우드 Claude가 CLI 만복이처럼 동작
+
+🗂️ 전체 아키텍처
+폰(Flutter) → Firebase chat/requests
+    ↓ desktop_daemon.py 감지
+Anthropic API 호출 (CLAUDE.md + REF 컨텍스트 포함)
+    ↓
+Firebase chat/responses → 폰 화면 표시
+
+🔑 핵심 기술 1 — Firebase Realtime DB 릴레이
+서버 없이 폰 ↔ 데스크탑 실시간 통신
+요청/응답 경로 분리: chat/requests vs chat/responses
+120자마다 중간 업데이트 → streaming 효과
+
+🔑 핵심 기술 2 — 컨텍스트 주입 (v1.2)
+CLAUDE.md(전역 지시사항) + REF_continue.md + 프로젝트 목록
+→ 클라우드 Claude가 CLI 만복이처럼 동작
+
+🔑 핵심 기술 3 — 온라인/오프라인 자동 분기
+만복 온라인 → Firebase 릴레이 (진짜 만복이)
+만복 오프라인 → Anthropic API 직접 호출 (폴백)
+
+⚠️ 주의사항 / 함정
+• 한국어 Windows에서 httpx ASCII 인코딩 오류
+  → _normalize_header_value 몽키패치 필요
+• Python 실행 시 -X utf8 + PYTHONUTF8=1 필수
+• Firebase가 배열을 dict로 변환 → firebase_to_list() 헬퍼 필요
+• Gradle 빌드 시 JVM -Xmx1g 제한 (RAM 부족 환경)
+
+💡 배운 점 / 교훈
+1. &quot;서버리스&quot;가 항상 &quot;브릿지 없음&quot;은 아님 — Firebase가 완벽한 BaaS 브릿지
+2. 컨텍스트가 곧 인격 — CLAUDE.md 주입으로 클라우드 Claude도 만복이처럼 동작
+3. Windows 한국어 환경의 인코딩 함정은 여러 레이어에 숨어있음</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.22 · Flutter · Firebase · Claude API · Python</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260621-2"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
