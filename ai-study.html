@@ -250,6 +250,66 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Web Dev"
+             data-id="20260623-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Web Dev</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">주식 포트폴리오 대시보드 v1.2 — Firebase 실시간 연동 + 신기능 5종</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">주식 대시보드 v1.1 → v1.2 업그레이드 — 핵심 정리
+
+한 줄 요약
+localStorage 전용이던 수동 데이터를 Firebase에 실시간 동기화하고, 5가지 신기능을 추가한 메이저 업그레이드.
+
+🗂️ 변경 구조
+stock-dashboard.html (브라우저)
+  ├ Firebase JS SDK → manual_stocks / accounts / study_results
+  ├ Google News RSS + CORS 프록시 (A모드)
+  └ Firebase study_requests 요청 → 데몬 응답 대기 (B모드)
+
+kakao_watcher.py
+  ├ accounts.json 로드/저장 (신규 계좌 자동 등록)
+  └ 환율 폴백: Dunamu→Naver→Yahoo Finance→ExchangeRate-API
+
+desktop_daemon.py
+  └ study_requests 리스너 추가 (Claude AI 분석 처리)
+
+🔑 신기능 1 — Firebase 수동 종목 동기화
+추가/수정/삭제 시 Firebase real-time DB에 즉시 반영.
+토스트 알림으로 저장 성공/실패 즉시 표시.
+Firebase rules 만료 시 "서버 저장 실패" 경고 자동 표시.
+
+🔑 신기능 2 — 계좌 간 종목 이동
+포트폴리오 탭 종목 행 "이동" 버튼 → 대상 계좌 선택 모달 → 즉시 반영.
+
+🔑 신기능 3 — 신규 계좌 자동 등록
+카카오톡에 미등록 계좌번호 감지 시 일반계좌N으로 자동 추가.
+계좌비교 탭에서 유형 변경(general/ISA/IRP/연금저축) UI 제공.
+
+🔑 신기능 4 — 종목 Study 탭
+🔍 A모드: Google News RSS + CORS 프록시로 오늘 뉴스 최대 5개 자동 조회.
+🤖 B모드: Firebase → 데몬 → Claude AI 투자 분석. 당일 캐시로 토큰 1회만 소비.
+
+🔑 신기능 5 — 환율 API 폴백 강화
+Dunamu(서비스 종료) + Naver(409) 동시 사망 → Yahoo Finance + ExchangeRate-API 추가.
+1,375원 고정 → 실제 ~1,537원 정상 반영.
+
+⚠️ 삽질 — 계좌 ID 순서 변경의 함정
+신규 계좌(71417, 71661)를 id 3, 4에 삽입했더니 기존 ISA(id3)/IRP(id4) 데이터가 전부 잘못된 계좌로 표시됨.
+원인: stocks/trades/dividends가 accountId(숫자)로 계좌 참조.
+→ 규칙 수립: id 1~7 영구 고정, 신규는 항상 뒤에서부터.
+
+💡 배운 점
+1. Firebase Client SDK는 브라우저에서 직접 인증 없이 읽기/쓰기 가능 (test mode 기간 중).
+2. Google News RSS는 API 키 없이 한/영 뉴스 모두 조회 가능 — CORS 프록시만 있으면 됨.
+3. 숫자 ID로 참조하는 데이터 구조는 ID 불변 원칙이 필수.
+4. Firebase rules 만료 대비 방어 코드(토스트 알림)는 처음부터 넣는 게 낫다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-06-23 · #주식대시보드 #Firebase #GoogleNewsRSS #ClaudeAPI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
              data-id="20260622-1"
              style="border-top: 1px solid var(--border);"
