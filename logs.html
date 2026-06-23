@@ -235,6 +235,29 @@
       </div>
       <div class="space-y-4" id="logList">
 
+        <div class="card-hover border rounded-lg p-4 log-card" data-tags="주식대시보드,Firebase,GoogleNewsRSS,ClaudeAPI" data-id="20260623-1" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.23</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">주식 포트폴리오 대시보드 v1.1 → v1.2 업그레이드</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">1. Firebase 수동 종목 동기화 — 추가/수정/삭제 시 Firebase real-time DB 실시간 반영, 토스트 알림 추가
+2. 계좌 간 종목 이동 — 포트폴리오 탭 "이동" 버튼으로 계좌 간 즉시 이동
+3. 신규 계좌 자동 등록 — 카카오톡 미등록 계좌 감지 시 일반계좌N 자동 추가 (일반계좌3: 71417, 일반계좌4: 71661)
+4. 종목 Study 탭 신설 — 🔍 A모드(Google News RSS) / 🤖 B모드(Claude AI 분석, 당일 캐시)
+5. 환율 API 폴백 강화 — Dunamu/Naver 사망 → Yahoo Finance + ExchangeRate-API, 1,375→1,537원 정상화
+
+🐛 디버그: 신규 계좌를 id 3,4에 삽입 → 기존 ISA/IRP 데이터 전체 오매핑 발생
+→ 원인: accountId(숫자) 참조 구조에서 id 순서 변경은 치명적
+→ 해결: id 1~7 영구 고정 규칙 수립, 신규는 id 8부터</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#주식대시보드</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#Firebase</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#GoogleNewsRSS</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#ClaudeAPI</span>
+          </div>
+        </div>
+
                 <div class="card-hover border rounded-lg p-4 log-card" data-tags="Cowork,CLI,자동화,주식" data-id="20260620-1" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
           <div class="flex justify-between items-center">
             <span class="text-xs" style="color: var(--text-tertiary);">2026.06.20</span>
