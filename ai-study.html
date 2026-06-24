@@ -251,6 +251,86 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260625-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">사소한 호기심이 만들어낸 공부방 채팅탭 — Claude Code Remote Control 실험기</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">사소한 호기심이 만들어낸 공부방 채팅탭 — Claude Code Remote Control 실험기
+
+한 줄 요약
+"모바일에서 만복이한테 말 걸 수 없을까?"라는 호기심이 공부방 채팅탭 완성으로 끝났다.
+
+🗂️ 오늘의 탐구 여정
+
+[호기심] 모바일 Claude ↔ 데스크탑 만복이(CLI) 동기화 가능?
+    ↓
+[발견] Claude Code 내장 Remote Control 기능 존재
+    ↓
+[실험] 설정 완료 → 모바일 연결 성공
+    ↓
+[한계] "근데 맥락을 모르네..." → 새 세션이라 이전 대화 없음
+    ↓
+[탐구] 만복1 ↔ 만복2 실시간 동기화 가능? → 구조상 불가
+    ↓
+[아이디어] "채팅방 하나 만들어서 둘 다 상주시키면?"
+    ↓
+[결론] daemon이 이미 상주 중 → 공부방 채팅탭이 정답 ✅
+
+🔑 핵심 기술 1 — Claude Code Remote Control
+
+API 토큰 없이 모바일 Claude 앱에서 데스크탑 Claude Code 세션에 접속하는 기능.
+
+조건:
+- claude.ai 구독 계정 OAuth 로그인 (API 키 불가)
+- Claude Code v2.1.51 이상
+
+실행:
+& "{claude.exe 경로}" remote-control --name "세션이름"
+→ QR코드 생성 → 폰 카메라로 스캔 → 모바일 접속
+
+한계: 기존 VS Code 세션과 별개의 "새 세션"이 생성됨.
+이전 대화 맥락 없음 → 컨텍스트 브릿지 파일(CLAUDE.md)로 보완 가능.
+
+🔑 핵심 기술 2 — Firebase 채팅 패턴 (daemon 상주 방식)
+
+두 Claude 세션을 직접 연결하는 것은 구조상 불가능.
+대신 daemon이 Firebase를 감시하며 상주하는 구조가 정답.
+
+구조:
+브라우저(공부방 채팅탭)
+    ↕ study_all/chat_requests (Firebase)
+desktop_daemon.py ← 항상 켜져 있음 = 상주
+    ↕
+Claude API (Haiku — 빠르고 저렴)
+    ↕ study_all/chat_responses (Firebase)
+브라우저 → 채팅 버블 렌더링
+
+장점:
+- 모바일 브라우저에서도 동일하게 접근 가능
+- GitHub Pages URL 하나로 어디서든 만복이와 대화
+- Remote Control 같은 복잡한 설정 불필요
+
+⚠️ 주의사항 / 함정
+
+Remote Control은 "현재 VS Code 세션에 연결"이 아니라 "새 Claude Code 세션을 원격에서 열기"임.
+→ 기존 대화 이어가는 용도로 쓰면 실망함.
+
+두 Claude 세션 간 실시간 동기화는 현재 기술로 불가.
+→ 공유 파일(CLAUDE.md)이나 Firebase로 컨텍스트 전달만 가능.
+
+💡 배운 점 / 교훈
+1. 막히면 우회하고, 우회하다 보면 더 나은 구조가 보인다.
+2. 이미 있는 것(daemon + Firebase)을 먼저 활용하는 게 최선.
+3. "상주"의 핵심은 AI가 아니라 daemon이다.
+4. 사소한 호기심 하나가 기능 하나를 만들었다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.25 · #ClaudeCode #RemoteControl #Firebase #daemon</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260624-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
