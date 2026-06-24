@@ -250,6 +250,75 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
+             data-id="20260624-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Claude API 비용 절감 — 이론 4가지 vs 실제 바로보기 프로젝트에 적용한 2가지</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Claude API 비용 절감 — 이론 4가지 vs 실제 프로젝트에 적용한 2가지
+
+한 줄 요약
+이론은 4가지지만 실제 프로젝트 구조를 보니 2가지만 현실적이었다.
+
+🗂️ 검토한 절감 이론 4가지
+① 배치 API          — 50% 할인, 단 최대 1시간 대기
+② 프롬프트 캐싱     — 반복 컨텍스트 90% 절감, 5분 TTL
+③ 배치 + 캐싱 조합  — 절감 극대화
+④ 모델 선택         — 단순 작업은 Haiku(저비용) 사용
+
+🔍 바로보기 프로젝트별 적용 가능성 분석
+
+desktop_daemon.py (채팅 릴레이)
+  → 실시간 응답 필요 → 배치 API 불가
+  → 매 요청마다 CLAUDE.md 주입 중 → 프롬프트 캐싱 ✅
+
+퀴즈 생성 (공부방 quiz_requests)
+  → 30초 기다리는데 1시간은 너무 길어 → 배치 불가
+  → 단순 JSON 생성 → Haiku 교체 ✅
+
+종목 Study 분석 (주식 대시보드 study_requests)
+  → 긴급하지 않음 → 배치 가능하나 구현 공수 과다
+  → 종목명 나열 → Haiku 교체 ✅
+
+AI 설명 요청 (공부방 explain_requests)
+  → 실시간 느낌 중요 → 배치 불가
+  → 설명 품질이 중요 → Sonnet 유지
+
+⚠️ 프롬프트 캐싱의 함정 — 시각이 캐시를 죽인다
+기존 코드: system prompt 안에 현재 시각이 있었음
+→ 매 요청마다 시각이 바뀌어 캐시가 매번 무효화됨
+→ 캐싱 비용만 내고 캐시 히트는 0번이 되는 구조!
+
+해결: system을 2개 블록으로 분리
+  Block 1 (캐시됨): CLAUDE.md + 핵심 규칙 (정적)
+  Block 2 (캐시 안 됨): 현재 시각 + 프로젝트 목록 (동적)
+
+🔑 실제 적용한 2가지 (desktop_daemon.py v1.5 → v1.6)
+
+① 프롬프트 캐싱 적용
+  - system 파라미터를 문자열 → 블록 리스트로 변경
+  - CLAUDE.md(전역 지시사항)를 Block 1에 포함 + cache_control 추가
+  - TOOLS 마지막 항목에도 cache_control 추가 (도구 정의도 캐싱)
+  - 채팅 5분 안에 여러 번 주고받으면 두 번째 요청부터 캐시 히트
+    → CLAUDE.md 분량 토큰 90% 절감
+
+② Haiku 모델 교체
+  - 퀴즈 생성: Sonnet → claude-haiku-4-5-20251001
+  - 종목 Study 분석: Sonnet → claude-haiku-4-5-20251001
+  - 채팅 릴레이 + AI 설명: Sonnet 유지 (품질 중요)
+
+💡 배운 점
+1. 이론상 최고 절감(배치+캐싱)보다 실제 구조에 맞는 것을 골라야 한다.
+2. 프롬프트 캐싱은 정적/동적 부분을 반드시 분리해야 효과가 난다.
+3. 모델 선택이 가장 간단하고 즉각적인 절감 방법이다.
+   — Haiku는 구조화된 JSON 생성 같은 단순 작업엔 Sonnet과 품질 차이가 거의 없다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-06-24 · #ClaudeAPI #프롬프트캐싱 #Haiku #비용절감</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Web Dev"
              data-id="20260623-1"
              style="border-top: 1px solid var(--border);"
