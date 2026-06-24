@@ -235,6 +235,31 @@
       </div>
       <div class="space-y-4" id="logList">
 
+        <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="superpowers,협업시스템,claude-code"
+             data-id="20260624-1"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.24</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Superpowers 협업 시스템 구축 — barobogi ↔ 만복이</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">1. Superpowers 스킬 시스템 설치 (17개 스킬 활성화)
+2. barobogi ↔ 만복이 4계층 협업 아키텍처 설계
+   (CLAUDE.md / DEV_ITEM / Global_Define / REF)
+3. 커스텀 스킬 3종 직접 제작
+   - barobogi-project-start: 새 프로젝트 시작 시 Global_Define 자산 제안 + REF 생성
+   - barobogi-session-resume: 세션 재시작 시 REF 품질 검증
+   - barobogi-global-review: 프로젝트 종료 시 CLAUDE.md 점검 + DEV_ITEM 기록
+4. DEV_ITEM 기술 이력장 생성 (1호 기록 완료)
+5. 일복이~육복이 서브에이전트 6형제 첫 출동 🎉</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#superpowers</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#협업시스템</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#claude-code</span>
+          </div>
+        </div>
+
         <div class="card-hover border rounded-lg p-4 log-card" data-tags="주식대시보드,Firebase,GoogleNewsRSS,ClaudeAPI" data-id="20260623-1" style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
           <div class="flex justify-between items-center">
             <span class="text-xs" style="color: var(--text-tertiary);">2026.06.23</span>
