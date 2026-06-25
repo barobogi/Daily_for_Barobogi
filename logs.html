@@ -236,6 +236,37 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="프로젝트구조,설계,뿌리깊은나무"
+             data-id="20260626-1"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.06.26</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">"뿌리 깊은 나무" 고민중....</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">만복 3형제 사망 사건 수습 후 아침에 프로젝트 구조 설계 논의 시작.
+
+1. 만복2(Remote Control), 만복3(텔레그램) 동시 사망 원인 분석 → Watchdog 구현 (master_watch.py)
+2. 공부방 채팅탭 삭제 — API 크레딧 필수 구조, 목표(API 없이 만복이 사용)와 상충
+3. 텔레그램 봇 안정화 — 부팅 자동 시작 + 종료 로그 추가
+
+그리고 프로젝트 계층 구조 고민 시작:
+1번 Question — 호기심(씨앗) + 전체 관리 도구 (master_watch 등)
+2번 Global_Define — 신기술 재활용 근원 (코드 자산 창고)
+3번 Diary — 중심 줄기 (기록 + 출발)
+4~6번 도구/학습/실전 뿌리
+7~10번 reserve
+11번~ 개별 프로젝트
+
+아직 미확정. "뿌리 깊은 나무" 구조로 계속 고민 예정.</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#프로젝트구조</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#설계</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#뿌리깊은나무</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="superpowers,협업시스템,claude-code"
              data-id="20260624-1"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
