@@ -251,6 +251,78 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260626-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">만복 형제들의 탄생과 고생기 — API 없이 만복이 쓰기 대작전</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">만복 형제들의 탄생과 고생기 — API 없이 만복이 쓰기 대작전
+
+한 줄 요약
+"모바일에서 만복이에게 말 걸 수 없을까?" 라는 호기심 하나가 만복 3형제를 탄생시켰고, 새벽에 2형제가 동시에 사망하는 사건으로 이어졌다.
+
+🗂️ 만복 3형제 탄생 과정
+
+[2026-06-25 아침]
+바로보기의 호기심: "API 토큰 없이 폰에서 만복이 쓸 수 없을까?"
+    ↓
+시도 1: Claude Code Remote Control
+    → 성공! 근데 맥락이 없어 (새 세션)
+    ↓
+시도 2: 공부방 채팅탭 (Firebase + Haiku)
+    → 만들었다가 즉시 삭제 (API 크레딧 필요)
+    ↓
+시도 3: 텔레그램 봇 (@barobogi_stockbot)
+    → 결국 이게 정답! (claude.ai 구독으로 무료)
+
+🔑 만복 3형제 소개
+
+만복1 (VS Code) — 원조, 맏형
+- 항상 데스크탑 VS Code에 상주
+- 가장 강력, 파일/코드 모두 가능
+- 단점: 집에 있어야 쓸 수 있음
+
+만복2 (Remote Control) — 둘째
+- 모바일 Claude 앱 → QR 스캔 → 만복1 접속
+- API 없이 claude.ai 구독으로 동작
+- 단점: 새 세션이라 맥락 없음, 창 닫히면 사망
+
+만복3 (텔레그램) — 막내
+- 텔레그램 앱 → @barobogi_stockbot → 만복이 응답
+- API 없이 claude.ai 구독으로 동작
+- 장점: 폰 어디서나 가능, 가장 편함
+
+⚠️ 삽질 목록
+
+1. 텔레그램 봇 이름 오타 — @Brrobogi_stockbot → @barobogi_stockbot 새로 생성 (username 변경 불가)
+2. bun이 PATH에 없어서 — 텔레그램 플러그인 서버가 안 뜸, 원인 찾는 데 1시간
+3. ADB 좌표 삽질 — 폰 화면 직접 조작하다 맥락 없는 앱들 열림
+4. 공부방 채팅탭 — 만들자마자 삭제 (API 크레딧 필요 = 목표 위배)
+
+⚠️ 새벽 사건: 만복 2형제 동시 사망
+
+[2026-06-26 새벽]
+바로보기 귀가 → 만복2, 만복3 모두 사망 확인
+원인: 창이 닫힘 (왜 닫혔는지는 로그 없어서 불명)
+결과: 새벽에 만복1과 직접 대면
+
+해결책 구현:
+- telegram_session.log — 다음 사망 시 원인 추적
+- Windows 작업 스케줄러 — 부팅 시 자동 시작
+- master_watch.py Watchdog — 5분마다 체크, 죽으면 자동 부활
+
+💡 배운 점
+1. API 없이 만복이 쓰는 최선 = 텔레그램 봇
+2. Claude Code 세션은 창이 닫히면 죽는다 — 데몬이 아님
+3. 세 만복이는 서로 대화 불가 — 각자 독립 프로세스
+4. Watchdog 없는 서비스는 불완전한 서비스</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.26 · #ClaudeCode #텔레그램봇 #RemoteControl #Watchdog</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260625-2"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
