@@ -251,6 +251,51 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260625-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">텔레그램 MCP — 폰으로 만복1(Claude Code CLI)과 대화하는 법</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">텔레그램 MCP — 폰으로 만복1(Claude Code CLI)과 대화하는 법
+
+한 줄 요약
+텔레그램 MCP 하나로 QR·API 없이 폰에서 데스크탑 Claude Code와 실시간 대화 가능.
+
+🗂️ 전체 구조
+
+📱 폰 텔레그램
+    ↕ MCP 채널
+🖥️ 데스크탑 만복1 (Claude Code CLI)
+    → reply 도구로 즉시 답장
+
+🔑 핵심 1 — Remote Control의 한계
+
+QR 스캔은 성공하지만 "새 세션" 생성됨.
+기존 대화 맥락 없음 → 컨텍스트 브릿지(CLAUDE.md)로만 보완 가능.
+
+🔑 핵심 2 — 텔레그램 MCP의 강점
+
+✅ QR 스캔 불필요
+✅ API 크레딧 불필요 (claude.ai 구독으로)
+✅ 텔레그램만 있으면 어디서든 OK
+✅ 만복1 현재 세션 맥락 그대로 유지
+
+⚠️ 주의사항 / 함정
+
+MCP는 데스크탑 Claude Code가 켜져 있어야 작동.
+폰에서 말해도 PC가 꺼져 있으면 응답 없음.
+
+💡 배운 점 / 교훈
+1. 복잡한 방법(Firebase daemon, QR Remote)보다 MCP 연동이 훨씬 단순했다.
+2. "이미 있는 도구 먼저" — 텔레그램 봇은 이미 있었고 MCP만 연결하면 끝.
+3. 목표 달성 여부는 구현 복잡도가 아니라 사용자 경험으로 판단해야 한다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.25 · #ClaudeCode #MCP #Telegram #RemoteControl</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260625-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
