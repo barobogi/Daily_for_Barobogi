@@ -251,6 +251,63 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260627-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">두복이 인공호흡하기 #1 — 텔레그램 봇 자동 재시작 3중 방어</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">두복이 인공호흡하기 #1 — 핵심 정리
+
+한 줄 요약
+죽은 두복이(텔레그램 봇)가 혼자 살아나는 3중 방어 구조를 완성했다.
+
+🗂️ 방어 계층 구조
+부팅/로그인
+  → VBS(35초 대기) → master_watch.py 시작
+      → 60초 후 watchdog 최초 체크
+      → 두복이 없으면 start_telegram.bat 실행 (최소화 창)
+          → claude.exe --channels 실행
+          → 죽으면 30초 후 goto loop 자동 재시작
+
+🔑 버그 1 — start_telegram.bat에 pause가 있었다
+pause 때문에 재시작 불가. 수정:
+- pause 제거
+- goto loop + ping -n 31 127.0.0.1 (30초 대기)
+- timeout /nobreak는 비대화형 창에서 즉시 종료됨 → ping으로 대체
+
+🔑 버그 2 — 한글 echo가 명령어로 실행됐다
+bat 파일을 UTF-8로 저장 + 한글 포함
+→ cmd.exe가 CP949로 읽어 한글 바이트를 명령어로 오해
+→ 'IME'은(는) 내부 또는 외부 명령... 오류
+→ 해결: echo 내용 전부 영어로 교체
+
+🔑 버그 3 — hidden 창에서 claude.exe --channels가 즉시 죽었다
+CREATE_NO_WINDOW(숨김)로 실행 시
+→ stdin이 없어 print 모드로 오인 → 즉시 종료
+→ 해결: CREATE_NEW_CONSOLE + SW_MINIMIZE(최소화 창)
+
+🔑 watchdog 체크 로직 개선
+기존: bun 프로세스 존재 여부 체크
+변경: claude.exe --channels 프로세스 직접 체크
+이유: bun은 다른 이유로 살아있을 수 있어서 오탐 발생
+
+⚠️ 삽질 목록
+1. Task Scheduler 등록 시도 → admin 권한 없어서 불가
+   → 이미 VBS 시작프로그램 있었음 (GlobalAutoDeployWatcher.lnk)
+2. Get-Process의 CommandLine은 admin 없으면 null
+   → WMI(Get-WmiObject Win32_Process) 사용해야 CommandLine 조회 가능
+
+💡 배운 점
+1. 프로세스 생성 플래그에 따라 stdin 연결이 달라짐
+2. bat 파일은 인코딩 이슈에 민감 → 한글 쓰면 CP949로 저장하거나 영어만 사용
+3. 방어는 최소 2계층: bat 자체 루프 + 외부 watchdog</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.27 · #두복이 #텔레그램 #자동화 #Windows</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260626-2"
              style="border-top: 1px solid var(--border);">
           <div class="flex justify-between items-center mb-1">
