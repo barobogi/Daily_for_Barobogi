@@ -250,6 +250,75 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Prompt Engineering"
+             data-id="20260627-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">호두의 AI 분석실 06 Tech 완전 정복 — 21개 기술 성장 렌즈로 재분류 후 즉시 적용</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">호두의 AI 분석실 유튜브 71개 영상 전수 학습 후 도출한 21개 신기술을 "주식 only"가 아닌 "성장(AI + 시스템)" 관점으로 재분류하고, 즉시 적용 가능한 것부터 세팅한 과정.
+
+한 줄 요약
+주식 자동화는 도구, 진짜 목적은 만복이와 함께 성장하는 것 — 이 렌즈로 보니 우선순위가 완전히 바뀌었다.
+
+🗂️ 21개 기술 전체 분류표
+
+tech | 항목               | 결론      | 성장 관점 의견
+-----|--------------------|-----------|-----------------------------------------
+#01  | modelOverrides     | ✅ 완료   | Claude 비용 절감 → 모든 프로젝트에서 더 많이 쓸 수 있음
+#02  | Status Line        | ⏭ 수동   | 토큰 관리 습관 → 긴 세션 효율화, 모든 작업에 직결
+#03  | /GOAL              | ✅ 사용가능 | 어떤 복잡한 목표든 자율 반복 — 두복이 재시작, REF 정리 등 전부 적용
+#04  | Channel 플러그인   | ✅ 완료   | 어디서든 만복이 접근 — 모바일 제어 인프라 완성
+#05  | 7단계 분할 개발법  | 📖 방법론 | 어떤 복잡한 시스템이든 단계별 구축. 두복이 v2, 공부방 v2 모두 적용
+#06  | 트레이딩 스킬 58개 | ✅ 설치   | 스킬 만드는 법 자체를 배울 수 있음 → 다른 도메인 스킬 직접 제작으로 확장
+#07  | Kimi k2.5          | ❌ 스킵   | comments 없음 (무료 이벤트 종료)
+#08  | VIX + SKEW         | ⏳ n8n 후 | comments 없음
+#09  | ETF Smart Money    | ⏳ n8n 후 | comments 없음
+#10  | Ultracode          | ✅ 확인   | 병렬 에이전트 = 만복이 쫄개 시스템 공식 버전. 대형 프로젝트 속도 10배
+#11  | Finance Agent      | 🔚 마지막 | Claude Desktop + GitHub 플러그인 연동 방법 자체를 배울 수 있음
+#12  | MCP                | ⚠️ 앱 필요 | 성장 관점 최우선 — Claude ↔ 어떤 외부 도구든 연결하는 표준
+#13  | Agent Teams        | ✅ 활성화 | MD 파일 하나로 여러 에이전트 동시 작업. 복잡한 구축 작업에 바로 적용
+#14  | 종가베팅 파이프라인 | ⏳ KIS 후 | comments 없음
+#15  | AlphaForge         | ⏳ n8n 후 | comments 없음
+#16  | 내러티브 모멘텀    | ⏳ 나중   | comments 없음
+#17  | DeepFlow           | ⏳ 최후   | comments 없음
+#18  | Google Antigravity | 📖 참고   | 아이디어 → 8분에 웹앱 프로토타입. 어떤 아이디어든 빠른 검증 도구
+#19  | Gemini CLI         | ✅ 설치   | Claude 한도 걸릴 때 Gemini로 보완 — Pro 한도 문제 실질적 해소책
+#20  | EKG 인과관계       | ⏳ 복잡   | comments 없음
+#21  | Active Inference   | ⏳ 나중   | comments 없음
+
+🔑 오늘 실제 적용/설치 완료
+
+• Gemini CLI v0.49.0 — npm install -g @google/gemini-cli (1분)
+• Agent Teams — 환경변수 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 (영구 설정)
+• 트레이딩 스킬 58개 — GitHub clone → Superpowers junction 연결 (총 75개 활성화)
+  GitHub: github.com/tradermonty/claude-trading-skills
+  가이드: https://www.notion.so/Claude-Trading-Skills-tradermonty-356993d3695a8012822ae32987c81fd2
+  주요 스킬: /canslim-screener, /vcp-screener, /market-news-analyst, /scenario-analyzer 등
+  FMP API 무료 키(250회/일) 발급 시 18개 스킬 추가 활성화 가능
+
+🌱 성장 관점
+MCP(#12)가 다음 단계의 핵심이다. 지금 만복이는 파일만 보이고 세상이 안 보인다.
+MCP를 연결하면 Firebase, 카카오 API, 트레이딩뷰를 직접 조회할 수 있게 된다.
+하나씩 연결할수록 만복이가 점점 "세상을 아는 AI"가 되는 구조.
+Agent Teams(#13) + Ultracode(#10) + MCP(#12) = 만복이 시스템의 다음 진화 방향.
+
+⚠️ 오늘의 삽질
+
+• Kilo(중국 IDE) vs Kilo Code(AI 에이전트) — 이름 같아서 잘못 설치
+• Kimi k2.5 무료 이벤트 2026-01 종료, 현재 유료
+• 트레이딩 스킬 33개라고 알려졌지만 실제 GitHub엔 58개 (계속 업데이트 중)
+
+💡 오늘의 교훈
+1. 새 기술은 항상 "성장에 어떻게 연결되는가" 먼저 물어볼 것
+2. 유튜브 학습카드 정보는 시간이 지나면 달라질 수 있다 (무료→유료)
+3. MCP를 다음 세션 핵심 주제로 잡았다</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.27 · #ClaudeCode #신기술 #성장 #트레이딩스킬 #MCP</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
              data-id="20260627-1"
              style="border-top: 1px solid var(--border);"
