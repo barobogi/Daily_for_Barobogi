@@ -315,7 +315,7 @@
           const content = contentEl ? contentEl.textContent.trim() : '';
           const tags = tagEls.map(s => s.textContent.trim().replace(/^#/, ''));
           clone.style.cursor = 'pointer';
-          clone.addEventListener('click', () => openDetailModal(title, date, content, tags, 'logs.html'));
+          clone.addEventListener('click', (e) => { if (!e.target.closest('.edit-btn')) window.location.href = 'logs.html'; });
           // 내용 3줄로 미리보기 (서식 유지 + 페이드아웃)
           if (contentEl) { contentEl.style.cssText += '; max-height:4.5em; overflow:hidden; -webkit-mask-image:linear-gradient(to bottom, black 30%, transparent 100%); mask-image:linear-gradient(to bottom, black 30%, transparent 100%);'; }
           logContainer.appendChild(clone);
@@ -348,7 +348,8 @@
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">${category}</span>
             <p class="text-sm font-medium mt-1 mb-1" style="color: var(--text-primary);">${title}</p>
             <p class="text-xs" style="color: var(--text-tertiary);">${meta}</p>`;
-          el.addEventListener('click', () => openDetailModal(title, `${category} · ${meta}`, content, [], 'ai-study.html'));
+          el.style.cursor = 'pointer';
+          el.addEventListener('click', () => { window.location.href = 'ai-study.html'; });
           studyContainer.appendChild(el);
         });
       } catch(e) {
