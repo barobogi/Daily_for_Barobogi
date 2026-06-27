@@ -250,6 +250,49 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
+             data-id="20260627-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[2편] 토스증권 Open API 연동 주식 자동매매 시스템 구축 가이드 (호두채널)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">토스증권 Open API와 Slack을 연동하여, 사용자가 슬랙 메시지 버튼으로 매매를 최종 승인/거절하는 Human-in-the-Loop 자동매매 시스템 구축 방법.
+
+🛠️ 사용 도구
+• Python + .env (환경변수 관리)
+• Claude (코드 생성, 에러 해결, 로컬 테스트 가이드)
+• 토스증권 Open API (시세/계좌 조회, 주문/정정/취소)
+• Slack API (Bot — 매수 제안 카드 + 버튼 인터랙션)
+
+🗂️ 전체 아키텍처
+Python 매매 로직 (VCP 패턴 발굴)
+    ↓ 토스증권 Open API
+    ↓ Slack 매수 제안 카드 발송
+    ↓ 사용자 [승인] / [거절] 버튼
+    ↓ 실제 체결 → Slack 카드 업데이트 (체결수량·금액·손익)
+
+🔑 핵심 1 — 토스증권 Open API 설정
+허용 IP 등록 필수 (미등록 시 주문 불가). Claude로 파이썬 코드 생성 후 삼성전자 주가·잔고 로컬 테스트.
+
+🔑 핵심 2 — Slack 앱 생성 및 권한 설정
+Slack API → From scratch → chat:write 권한 → 봇 토큰(xoxb-...) + Signing Secret → .env 등록 → 자동매매 채널에 봇 초대.
+
+🔑 핵심 3 — Interactivity 버튼 에러 해결
+버튼 클릭 신호 받을 웹훅 서버가 없어서 에러 발생.
+해결: Slack API → Features → Interactivity → ON + Claude가 알려주는 Request URL 등록.
+
+⚠️ 주의사항
+토큰은 반드시 .env 파일로 관리 (코드에 직접 X)
+
+🌱 성장 관점
+"AI 제안 → 사람 승인" Human-in-the-Loop 패턴은 주식 외 모든 자동화에 적용 가능.
+Slack 대신 텔레그램으로 바꾸면 두복이 시스템과 바로 연결되는 구조.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.06.27 · #토스증권 #Slack #Human-in-the-Loop #주식자동매매 #호두채널</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Prompt Engineering"
              data-id="20260627-2"
              style="border-top: 1px solid var(--border);"
