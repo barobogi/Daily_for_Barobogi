@@ -259,6 +259,56 @@
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 28일</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Prompt Engineering"
+             data-id="20260628-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">외부 AI 위임 실행 패턴 — /GOAL 효과를 토큰 없이 얻는 법</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Claude가 설계하고 판단하면, 반복 실행은 Gemini(무료)가 대신한다. /GOAL의 실시간 토큰 소모 한계를 역할 분리로 해결하는 AI 협업 아키텍처.
+
+🗂️ 전체 구조
+만복이(설계+판단) → job.py 생성
+    ↓
+Gemini CLI(실행) → 반복 수행 → results.json 저장
+    ↓
+만복이(다음 세션) → results.json 읽고 업데이트
+
+🔑 핵심 1 — /GOAL의 한계
+/GOAL은 실시간 토큰 소모. 반복×토큰 = 주기적 실행 시 Max 구독 필요.
+결과가 세션 끝나면 사라짐 — 자동 저장 안 됨.
+
+🔑 핵심 2 — 위임 패턴으로 해결
+역할 분리:
+- 비싼 판단 → 만복이 (Claude)
+- 저비용 반복 → Gemini CLI / 다른 AI
+결과는 파일로 전달 → 만복이가 읽고 판단.
+
+🔑 핵심 3 — 뿌리 구조 4개 적용 지점
+① 학습뿌리: 새 동영상 → Gemini 학습카드 → 만복이 검증
+② 실전뿌리: 신호 백테스팅 → Gemini 승률 계산 → 만복이 전략 조정
+③ 도구뿌리: 코드 에러 → Gemini 반복 수정 → 만복이 최종 승인
+④ 줄기: REF 품질 체크 → Gemini 검증 → 만복이 완성 컨텍스트 수신
+
+⚠️ 주의사항
+Gemini 결과를 그대로 믿으면 안 됨. 만복이의 최종 검토 단계 필수.
+
+💡 배운 점
+1. 비싼 AI는 판단에, 싼 AI는 반복에 쓰는 게 현명하다
+2. 파일 시스템이 AI 간 소통의 매개체가 된다
+3. Gemini CLI가 이미 설치돼 있어 바로 적용 가능
+
+🌱 성장 관점
+이 패턴은 주식 자동화에만 국한되지 않는다.
+동영상 학습, 코드 개선, 지식 관리 — 어디든 반복이 필요한 곳에 적용 가능.
+만복이가 설계한 함수가 쌓일수록 Gemini가 할 수 있는 일도 늘어난다.
+결국 이건 &quot;나와 AI의 분업 구조를 설계하는 능력&quot; 이다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-06-28 · AI아키텍처 · Gemini · 자동화 · 성장</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
              data-id="20260627-3"
              style="border-top: 1px solid var(--border);"
