@@ -148,6 +148,23 @@
 </head>
 <body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
 
+  <!-- PASSWORD OVERLAY -->
+  <div id="pwOverlay" style="position:fixed;inset:0;background:var(--bg-primary,#fff);z-index:9999;display:flex;align-items:center;justify-content:center;">
+    <div style="text-align:center;padding:2rem;max-width:340px;width:100%;">
+      <p style="font-size:24px;margin-bottom:0.5rem;">🔒</p>
+      <p style="font-size:15px;font-weight:600;margin-bottom:0.25rem;color:var(--text-primary,#111827);">접근 제한</p>
+      <p style="font-size:12px;color:var(--text-secondary,#6B7280);margin-bottom:1.5rem;">비밀번호를 입력하세요</p>
+      <input type="password" id="pwInput" placeholder="비밀번호"
+        style="width:100%;padding:10px 14px;border:1px solid var(--border,#E5E7EB);border-radius:8px;font-size:14px;outline:none;margin-bottom:0.75rem;background:var(--bg-secondary,#F9FAFB);color:var(--text-primary,#111827);box-sizing:border-box;"
+        onkeydown="if(event.key==='Enter')checkDiaryPw()">
+      <button onclick="checkDiaryPw()"
+        style="width:100%;padding:10px;background:#5B8DEE;color:white;border:none;border-radius:8px;font-size:14px;cursor:pointer;font-weight:600;">
+        입력
+      </button>
+      <p id="pwError" style="color:#EF4444;font-size:12px;margin-top:0.5rem;display:none;">비밀번호가 틀렸습니다.</p>
+    </div>
+  </div>
+
   <!-- HEADER -->
   <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
     <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
@@ -960,6 +977,25 @@ fetch → fetch_details → generate_cards 3단계는 어떤 유튜브 채널이
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { closeLogModal(); closeEditLogModal(); }
     });
+  </script>
+
+  <script>
+    (function() {
+      if (localStorage.getItem('diary_pw_ok') === '1') {
+        document.getElementById('pwOverlay').style.display = 'none';
+      }
+    })();
+    function checkDiaryPw() {
+      const v = document.getElementById('pwInput').value;
+      if (v === '7942') {
+        localStorage.setItem('diary_pw_ok', '1');
+        document.getElementById('pwOverlay').style.display = 'none';
+      } else {
+        document.getElementById('pwError').style.display = 'block';
+        document.getElementById('pwInput').value = '';
+        document.getElementById('pwInput').focus();
+      }
+    }
   </script>
 
 </body>
