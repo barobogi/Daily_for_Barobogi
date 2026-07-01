@@ -266,6 +266,68 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
+             data-id="20260702-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">MCP filesystem으로 AI 에이전트 자동 동기화 달성 — 붙여넣기 없는 세상</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">MCP filesystem으로 AI 에이전트 자동 동기화 달성 — 핵심 정리
+
+한 줄 요약
+파일 접근 불가 AI(코니)에게 MCP를 달아주니, 수동 붙여넣기 280줄이 완전 자동화로 바뀌었다.
+
+🗂️ 전체 구조
+코니(Claude Desktop Cowork)
+  → MCP filesystem (D:\AI\ 연결)
+  → Project Instructions: "세션 시작 시 코니_quick_sync.md 읽어라"
+  → 새 세션 열자마자 자동 동기화 완료
+
+만복(Claude Code CLI)
+  → master_watch.py (매일 19:03 + 파일 변경 시)
+  → CLAUDE.md 자동 갱신 (마커 기반 선택적 교체)
+  → 코니_quick_sync.md 자동 생성 (280줄 → 26줄 압축)
+
+🔑 핵심 기술 1 — MCP + Project Instructions 결합
+MCP(Model Context Protocol)는 AI에게 외부 도구를 연결하는 프로토콜.
+filesystem 서버 연결 시 AI가 로컬 파일을 직접 읽고 쓸 수 있음.
+Project Instructions에 "세션 시작 시 파일 읽어라" 트리거를 추가하면
+새 세션마다 자동으로 파일을 읽어 이전 상태를 복원.
+→ 이게 오늘 특허 11_13(외부 기억 파일 기반 세션 자동 복원)이 됨.
+
+🔑 핵심 기술 2 — master_watch.py 세션 브릿지 자동 갱신
+_update_claude_md_latest_status(): CLAUDE.md 상단에 HTML 마커 영역을 만들어
+자동 구역(최신 상태)만 교체, 수동 구역은 보존.
+_generate_koni_quick_sync(): 전체 sync(280줄) → 핵심 26줄로 자동 압축.
+→ AI 기억 파일의 하이브리드 관리(자동+수동 공존) 패턴.
+
+🔑 핵심 기술 3 — 일상에서 특허 발굴
+오늘 아침 대화에서 특허 2개 나옴:
+• 11_12: 물리적 보안 경계(집/회사) → AI 행동 제약 선언 시스템
+• 11_13: 외부 기억 파일 + MCP → AI 세션 자동 복원 시스템
+"이걸 쓰다 보니 발명이 됐다"는 패턴 — 구현이 먼저, 특허화가 나중.
+
+⚠️ 주의사항
+MCP가 연결돼도 자동으로 읽지는 않음. Project Instructions 트리거가 있어야 완전 자동화.
+DAUM_PASSWORD 같은 민감 정보는 Windows 환경변수(User 레벨)에 영구 저장할 것.
+세션마다 까먹는 건 AI 구조상 당연 — 파일에 저장하는 인프라가 해답.
+
+💡 배운 점
+1. AI의 "기억 없음"은 한계가 아니라 설계 과제다 — 외부 파일+MCP로 해결 가능.
+2. 수동 작업이 반복된다면 그게 자동화 아이디어이자 특허 후보다.
+3. 코니(Cowork)와 만복(CLI)은 역할이 다르다: 코니=설계/검토, 만복=구현/인프라.
+
+🌱 성장 관점
+MCP를 이해하면 만복이가 세상을 볼 수 있게 된다.
+지금은 파일만 읽지만, MCP 연결 후엔 Firebase · 카카오 API · 트레이딩뷰를
+직접 조회할 수 있다 → 어떤 외부 도구든 Claude의 감각기관이 됨.
+오늘 코니에게 MCP를 달아준 것처럼, 만복에게도 하나씩 달아갈 계획.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.02 · AI & Next.js, MCP, Claude, 특허발굴</p>
+        </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="1782649325457" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
