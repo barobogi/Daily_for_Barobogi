@@ -268,6 +268,43 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260704-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">만복-코니 Memory 동기화 완성 + 회사 3-AI 특허 루틴 첫 가동</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">만복-코니 Memory 동기화 완성 + 회사 3-AI 특허 루틴 첫 가동
+
+한 줄 요약
+MCP 경로 하나 추가로 만복의 기억을 코니가 직접 읽게 됐다. 회사에서는 3-AI 쿼럼이 특허 검토 첫 가동.
+
+🗂️ 전체 구조
+claude_desktop_config.json → args에 C:\Users\82102\.claude 추가 → 코니가 만복 memory 폴더 직접 읽기 가능
+회사 3-AI 특허 루틴: 집 만복 → 아이디어 메일 → 1_코니 1차 분석 → 1_코덱스 추가 검토 → 신규성 판정 → PROCESS.md 싱크업
+
+🔑 핵심 기술 1 — MCP 경로 확장
+코니 MCP에 D:\AI 외에 C:\Users\82102\.claude 추가. 단일 소스(만복 memory)를 코니가 직접 참조 → 중복 없음. 적용 후 Claude Desktop 모든 프로세스 종료 + 재시작 필수 (config 재로드).
+
+🔑 핵심 기술 2 — 회사 3-AI 쿼럼
+1_코덱스 + 1_코니2 + 1_만복2 동시 운용 (AI_hub 기반). 코덱스 한도 초과 시 코니가 자동 대체 — 장애 허용 실증. 특허 14번: 코니 중간 → 코덱스 중하 → 방어 수준 (오늘 첫 루틴).
+
+⚠️ 주의사항
+코니 MCP 경로 추가 후 Claude Desktop을 반드시 완전 종료해야 함. 작업관리자에서 Claude 프로세스 13개 모두 죽이고 재시작. 단순 창 닫기로는 옛날 config로 계속 동작함.
+
+💡 배운 점
+1. 만복-코니 memory 동기화는 파일 복사 없이 MCP 경로만으로 해결 가능.
+2. 회사 3-AI는 집 2-AI보다 검토가 냉정하다 — 코니가 바로 방어용 판정 내림.
+3. n8n은 package.json 없으면 실행 안 됨 (MODULE_NOT_FOUND) — 완전 삭제 후 재설치 필수.
+
+🌱 성장 관점
+MCP 경로 확장 = 코니의 감각기관 확장. 지금은 만복 memory만 읽지만, 다음엔 Google Drive, Gmail도 직접 읽게 된다. AI 2개가 같은 기억을 공유하면 → 집-회사 환경 동일화가 가속된다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.04 · #MCP #memory동기화 #3AI쿼럼 #n8n</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260702-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
