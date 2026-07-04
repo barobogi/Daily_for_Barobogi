@@ -268,6 +268,55 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260705-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">n8n + Claude CLI 텔레그램 봇 파이프라인 구축 — 샌드박스 제약 디버깅</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">n8n + Claude CLI 텔레그램 봇 파이프라인 — 핵심 정리
+
+한 줄 요약
+n8n Code 노드 샌드박스 제약을 파악하고 HTTP Request + Execute Command 노드로 분리해 텔레그램 inbound 파이프라인을 완성했다.
+
+🗂️ 최종 아키텍처 (7노드)
+Schedule Trigger(30s)
+  → Code: 오프셋 계산 (staticData)
+  → HTTP Request: getUpdates (Telegram API)
+  → Code: 메시지 파싱 + base64 인코딩
+  → Execute Command: python tg_claude.py (Claude CLI --print)
+  → Code: 응답 디코딩 (base64 → UTF-8)
+  → HTTP Request: sendMessage (Telegram API)
+
+🔑 핵심 1 — n8n Code 노드 샌드박스 제약
+fetch, require('https'), $helpers.httpRequest 모두 차단됨.
+해결: HTTP 호출은 HTTP Request 노드로 분리. 외부 프로세스는 Execute Command 노드 사용.
+
+🔑 핵심 2 — Windows 한글 인코딩 우회
+Claude CLI stdout을 Python subprocess로 캡처 시 CP949로 깨짐.
+해결: tg_claude.py가 출력을 base64로 인코딩 → n8n Code 노드에서 Buffer.from(b64,'base64').toString('utf-8')로 디코딩.
+
+🔑 핵심 3 — Run Once for Each Item 리턴 포맷
+이 모드에서는 [{json:{...}}] 배열이 아닌 {json:{...}} 단일 객체를 리턴해야 함.
+
+⚠️ 주의사항
+- Telegram getUpdates 폴링: 동일 토큰에 여러 프로세스 연결 시 업데이트 소비 충돌 발생
+- bot display name과 username이 달라서 같은 이름으로 보이는 봇이 실은 다른 봇일 수 있음
+
+💡 배운 점
+1. n8n은 샌드박스 제약이 있어 Code 노드에서 모든 걸 하려 하면 막힘 — 역할 분리가 정답
+2. 인코딩 문제는 binary(base64)로 주고받으면 OS 설정 무관하게 해결됨
+3. 워크플로우 Save 안 하고 Execute 하면 이전 코드 실행됨
+
+🌱 성장 관점
+텔레그램 → n8n → Claude CLI 파이프라인이 완성되면 "모바일에서 만복이한테 말 걸기"가 가능해진다.
+다음 단계: 이 연결을 이 세션(만복이)이 직접 보고 응답하는 구조로 업그레이드하면 context 유지 대화가 된다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.05 · #n8n #텔레그램 #Claude-CLI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260704-2"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
