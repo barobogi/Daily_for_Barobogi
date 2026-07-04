@@ -1,7 +1,9 @@
-# 📚 Study Dashboard → AI Study 통합 제안 v0.1
+# 📚 Study Dashboard → AI Study 통합 제안 v0.2
 
-**작성**: 코니 | **작성일**: 2026-07-04
+**작성**: 코니 | **작성일**: 2026-07-04 (v0.2: 만복 피드백 반영 — n8n webhook 연계 추가)
 **목표**: `Study_Dashboard`(공부방, Firebase 인터랙티브 앱)의 10개 탭을 `Daily_for_Barobogi`의 **AI Study 게시판 하나**로 녹여내기
+
+> **바로보기님 승인 완료** (만복 경유, 2026-07-04)
 
 ---
 
