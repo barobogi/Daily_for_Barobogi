@@ -267,6 +267,37 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
+             data-id="20260706-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">만복2 텔레그램 세션 컨텍스트 기억 문제 해결 (T017)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">텔레그램 --channels 세션이 매번 새로 시작되는 구조 문제를, 대화 이력 파일 저장/자동 로드로 해결
+
+🗂️ 구조
+텔레그램 메시지 수신 → 만복2 세션 새로 시작 (컨텍스트 제로) → CLAUDE.md 규칙: telegram_history.md 자동 로드 → 이전 대화 맥락 복원
+
+🔑 핵심 구현
+- D:\AI\AI_hub\telegram_history.md 생성
+- CLAUDE.md 텔레그램 세션 시작 규칙 추가
+
+⚠️ 함정
+- 코니 브리핑 로드로 해결될 거라 착각 (브리핑은 프로젝트 상태, 대화 이력 아님)
+- 파일 쓰기 권한 문제 → 텔레그램 채널에서 승인으로 해결
+
+💡 배운 점
+1. Hall 방지 원칙 — 아키텍처 확인 없이 "될 것 같다" 발언 금지
+2. 텔레그램 세션은 별도 만복2, 세션 브릿지 파일 패턴으로 기억 연속성 확보 가능
+
+🌱 성장 관점
+세션 브릿지 파일 패턴은 AI_hub 구조를 통해 만복↔코니 동기화에도 이미 쓰이던 방식이다. 이번에 텔레그램 세션에도 동일하게 적용하면서, "세션이 달라도 파일을 공유하면 기억이 연결된다"는 원칙이 시스템 전체에 확장됐다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-06 · #텔레그램 #세션브릿지 #T017 #Hall방지</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Prompt Engineering"
              data-id="20260705-2"
              style="border-top: 1px solid var(--border);"
