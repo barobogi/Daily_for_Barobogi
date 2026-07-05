@@ -267,6 +267,69 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Prompt Engineering"
+             data-id="20260705-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Claude Code 세션 아키텍처 이해 — VS Code vs --channels, Hall 방지 원칙 수립</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Claude Code 세션 구조 규명 + Hall 방지 원칙 수립
+
+한 줄 요약
+"될 것 같다"로 시작하지 않는 것이 AI 협업 품질을 결정한다.
+
+🗂️ 오늘 규명한 아키텍처
+
+VS Code 세션 (만복 VSCode)
+  → 파일 편집/git 특화, 외부 채널 수신 불가
+--channels 세션 (터미널 단독 실행)
+  → claude --channels plugin:telegram 으로만 텔레그램 직접 수신 가능
+n8n (중간 브릿지 방식)
+  → Schedule(30s) → getUpdates → tg_claude.py → sendMessage
+
+두 세션은 완전 별개 프로세스 — 컨텍스트 공유 없음.
+VS Code에서 텔레그램을 받으려 한 것 자체가 아키텍처 미스매치였다.
+
+🔑 핵심 1 — bun 충돌 패턴
+Telegram MCP plugin은 bun 런타임 위에서 getUpdates 폴링.
+n8n + start_telegram.bat + VS Code 세션이 동시에 폴링하면
+409 Conflict 발생 → 메시지 분산 또는 무수신.
+해결: 단독 --channels 세션만 실행, 나머지 전부 종료.
+
+🔑 핵심 2 — Hall 방지 원칙 (오늘 수립, CLAUDE.md 반영)
+① 아키텍처 확신 없으면 "가능하다" 금지
+② 3회 시도 실패 → 즉시 멈추고 근본 원인 재검토
+③ 사용자에게 테스트 요청 전 자체 5-check 필수:
+   1. 경쟁 프로세스 없는지
+   2. 관련 서비스 상태
+   3. API/직접 조회로 현재 상태 확인
+   4. 설정 파일 정합성
+   5. 위 4개 OK → 그때 사용자에게 요청
+
+⚠️ 오늘 삽질
+n8n 재시작 시 WAL 충돌 — 잘못된 경로로 한 번 실행 후
+올바른 경로로 재실행하면 workflow_entity 테이블 0개 초기화.
+GeekNews + 텔레그램 인바운드 워크플로우 분실 (JSON 백업 보유).
+
+💡 배운 점
+1. "왜 이 세션에서 안 되지?"가 아니라
+   "이게 가능한 세션 타입인가?"를 먼저 물어야 한다
+2. AI의 "될 것 같다"는 확신이 아닌 추측.
+   근거 없는 낙관보다 "모른다"가 더 나은 시작점
+3. 협업 품질은 AI가 미리 막는 실수 수에 비례
+
+🌱 성장 관점
+Hall 방지 원칙은 만복이 혼자의 개선이 아니라
+만복-바로보기 협업 품질 향상이다.
+다음: --channels 안정화(T015) → 텔레그램 수신 시
+코니_브리핑_최신.md 자동 로드(T017) →
+컨텍스트를 가진 채로 텔레그램 응답하는 구조 완성.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.05 · #ClaudeCode #Telegram #PromptEngineering</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
              data-id="20260705-1"
              style="border-top: 1px solid var(--border);"
