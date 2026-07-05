@@ -1,5 +1,35 @@
 [
     {
+        "title": "⭐9만 스타로 AI 금융 프로젝트 부동의 1위 오픈소스입니다. (TradingAgents)",
+        "url": "https://www.youtube.com/watch?v=82UVtKOJIFA",
+        "channel": "Hodu's AI Analysis Lab",
+        "summary": "9만 스타를 기록한 AI 금융 오픈소스 프로젝트 'TradingAgents'를 소개하는 영상. 단일 LLM이 아닌 다수의 전문 AI 에이전트가 협업하여 주식 매매 결정을 내리는 멀티 에이전트 아키텍처를 설명합니다. 분석 에이전트 / 리스크 에이전트 / 실행 에이전트가 역할을 분리하여 더 정확한 투자 판단을 내리는 구조입니다.",
+        "categories": ["퀀트트레이딩", "AI에이전트", "오픈소스", "주식자동화"],
+        "stock_related": [
+            "TradingAgents: GitHub 9만 스타, AI 금융 프로젝트 오픈소스 부동의 1위",
+            "멀티 에이전트 협업으로 주식 매매 결정 — 단일 LLM 대비 정확도 향상",
+            "퀀트 트레이딩 + AI 에이전트 결합 구조: 분석/리스크/실행 역할 분리"
+        ],
+        "ai_related": [
+            "멀티 에이전트 아키텍처: 전문 AI 에이전트들이 역할 분리 후 협업",
+            "단일 LLM의 한계(편향, 맥락 과부하)를 다수 에이전트 분산으로 극복",
+            "Improve_stock v2.0 설계 시 TradingAgents 구조 참고 가능"
+        ],
+        "learning_related": [
+            "오픈소스 코드 직접 활용 가능 — KIS API 승인 후 Improve_stock에 통합 검토",
+            "에이전트 역할 설계: 분석가(펀더멘털/기술적 분석) / 리스크 매니저 / 실행 에이전트"
+        ],
+        "key_insights": [
+            "단일 LLM → 멀티 에이전트로의 전환이 AI 금융 자동화의 핵심 트렌드",
+            "바로보기님 시스템(만복+코니 협업)이 이미 멀티 에이전트 개념을 사용 중 — TradingAgents와 동일한 방향성",
+            "KIS API 승인 후 Improve_stock v2.0에 TradingAgents 구조 적용 검토 필요",
+            "오픈소스라 즉시 코드 활용 가능 — 처음부터 구현할 필요 없이 참고/통합 가능"
+        ],
+        "memo": "📋 발전 계획: KIS API 승인 후 Improve_stock v2.0 설계 시 TradingAgents 멀티 에이전트 구조 적용. 호두 채널 새 영상 → n8n 자동 감지 → 멀티미디어 탭 자동 등록 파이프라인 구축 예정 (T018)",
+        "timestamp": "2026-07-06T05:58:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/82UVtKOJIFA/hqdefault.jpg"
+    },
+    {
         "title": "앞으로 10년의 부를 좌우할, 시대를 담은 포트폴리오 | 서재형의 투자교실",
         "url": "https://www.youtube.com/watch?v=6yAQHVGY6bY",
         "channel": "서재형의 투자교실",
