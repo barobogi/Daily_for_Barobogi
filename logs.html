@@ -253,6 +253,32 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="텔레그램,만복2,TradingAgents,n8n,분석"
+             data-id="20260706-1"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.06</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">텔레그램 만복2 세션 안정화 + TradingAgents/CREAO AI 분석</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">1. T015 완료 — start_telegram.bat 생성, --channels 세션 정상 작동. 두복이(텔레그램 세션)가 메시지 수신 + 응답 전송 정상.
+
+2. T017 완료 — telegram_history.md 브릿지 구현. 두복이가 대화 이력 저장 → 만복1이 세션 시작 시 로드. 컨텍스트 기억 문제 90% 해결.
+
+3. TradingAgents 분석 (일복이) — GitHub 91K stars, LangGraph 기반 멀티 에이전트 주식 분석. 분석가 4종→찬반토론→리스크토론→최종결정 4계층 구조. Improve_stock v2.0 Phase1~2 지금 시작 가능. KIS API는 모의투자 전용, 신호 생성+수동 실행 구조 확정.
+
+4. CREAO AI 분석 (이복이) — n8n의 AI 에이전트 반복 실행 버전. SaaS 전용으로 로컬 파일 수정 불가 → T018은 n8n 단독 구현으로 결정.
+
+5. Hall 방지 규칙 — CLAUDE.md에 ⚡ 데스크탑 세션 위임 섹션 즉시 실행 규칙 추가. 두복이 기록 흘리기 방지.</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#텔레그램</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#만복2</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#TradingAgents</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#n8n</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="세계관,뿌리구조,자동화,성장"
              data-id="20260628-2"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
