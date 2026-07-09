@@ -268,6 +268,53 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Web Dev"
+             data-id="20260709-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Web Dev</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Study Dashboard 한글 깨짐(Mojibake) 복구 및 게시판 탭 활성화</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Study Dashboard 한글 깨짐(Mojibake) 복구 및 게시판 탭 활성화 — 핵심 정리
+
+한 줄 요약
+이전 작업 중 꼬인 한글 인코딩(Mojibake)을 복구하고 배포용 index.html 파일에 누락된 게시판(학습카드) 탭을 정상화했습니다.
+
+🗂️ 전체 구조 / 아키텍처
+1. 260623_1_study_all (공부방 프로젝트)
+   ├── study-dashboard.html (로컬 작업 소스 파일 — 12개 탭)
+   └── index.html           (GitHub Pages 배포 파일 — 12개 탭)
+2. 수정 흐름:
+   가. clean 상태인 git commit 5e707fd(v1.1)에서 study-dashboard.html 소스를 추출 (clean_base.html)
+   나. clean_base.html에 v1.2 변경사항(만복이 News 탭, 뉴스 상세 모달 HTML/CSS/JS) 추가
+   다. clean_base.html을 index.html과 study-dashboard.html에 각각 덮어씌워 싱크
+   라. master_watch.py를 통해 뉴스 최신 19건 수동 동기화 및 GitHub 자동 배포 (Pages)
+
+🔑 핵심 기술 1 — 한글 깨짐(Mojibake) 복원 원리
+- 원인: UTF-8 파일을 윈도우 환경 등에서 CP949(EUC-KR)로 잘못 인식하여 열고, 이 상태를 그대로 UTF-8 파일로 저장하여 Mojibake(깨진 문자)가 텍스트에 영구적으로 기록됨.
+- 복구: 깨진 문자(예: 濡쒕뱶留)를 다시 CP949 바이트 배열로 인코딩한 뒤, 그 바이트를 UTF-8로 디코딩하면 원래의 깨끗한 한글(로드맵)로 100% 복구됨. 
+- 단, 4바이트 이모지(🛣️, 🔍 등)는 CP949의 규격 외 영역이라 바이트가 소실되어 복원 후 '?'로 남으므로, git의 이전 정상 커밋(5e707fd)에서 clean 원본을 가져와 이식하는 방식을 사용함.
+
+🔑 핵심 기술 2 — index.html과 study-dashboard.html 싱크
+- index.html은 GitHub Pages에서 서비스되는 진입점(root)이므로, study-dashboard.html에 새로운 탭(학습카드, DEBUG 등)을 개발하고 나면 반드시 index.html에도 복사해 넣어야 배포 환경에 노출됨.
+- 누락 방지를 위해 두 파일의 버전과 내용 싱크를 맞춘 후, master_watch.py 전역 감시 워처를 통해 자동 커밋/푸시가 이루어지도록 설정함.
+
+⚠️ 주의사항 / 함정
+- PowerShell의 리다이렉션(&gt;) 연산자는 기본 인코딩이 UTF-16LE이므로, git show 결과를 text 파일로 저장 시 Out-File -Encoding utf8 또는 python 스크립트를 사용해 바이너리 손상을 막아야 함.
+- 4바이트 이모지가 포함된 UTF-8 문서를 잘못된 인코딩으로 저장하면 이모지 자체가 완전히 소실되므로, 파일 저장 시 항상 UTF-8 인코딩을 명시적으로 체크해야 함.
+
+💡 배운 점 / 교훈
+1. 여러 환경(윈도우 cmd/콘솔, 파이썬, 에이전트 CLI)이 얽힐 때는 입출력 인코딩을 UTF-8로 고정하여 꼬임을 예방해야 함.
+2. 덮어쓰기나 텍스트 땜빵보다는 깨끗했던 과거 Git commit에서 원본을 추출하여 차이점만 병합하는 것이 훨씬 안전함.
+3. GitHub Pages 배포 시 root(index.html)와 개발본(study-dashboard.html)의 동기화 상태를 주기적으로 교차 검증해야 함.
+
+🌱 성장 관점
+이번 트러블슈팅을 통해 단순 버그 수정을 넘어 전역 동기화 및 2단계 분산 배포(로컬 개발 -> Pages 배포)의 중요성을 환기하게 되었습니다. 앞으로 바로보기님과 만복이(CLI)가 작업한 최신 UI/UX 기능들이 배포용 index.html 파일에 누락 없이 안전하게 적용될 수 있는 구조적 기틀을 잡았습니다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.09 · #WebDev #Encoding #Git #Troubleshooting</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Web Dev"
              data-id="20260706-2"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
