@@ -268,6 +268,57 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Web Dev"
+             data-id="20260709-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Web Dev</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">D:\AI 전역 설정 저장소 경로 정규화(Normalization) 및 Git 서브모듈 캐시 정리</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">D:\AI 전역 설정 저장소 경로 정규화(Normalization) 및 Git 서브모듈 캐시 정리 — 핵심 정리
+
+한 줄 요약
+로컬 파일시스템 경로와 설정 파일 간의 불일치를 해소하기 위해 폴더명을 정규화하고, Git의 기존 서브모듈 캐시를 제거하여 인프라를 안정화했습니다.
+
+🗂️ 전체 구조 / 아키텍처
+1. 대상 폴더 및 정규화 경로:
+   - D:\AI\Diary_for_Barobogi (로컬) → D:\AI\Daily_for_Barobogi (GitHub 레포명과 일치)
+   - D:\AI\n8n_data (끝에 포함되어 있던 공백 제거 및 통일)
+2. 적용 설정 파일:
+   - .cowork-projects-registry.json
+   - .gitignore
+   - PROJECTS_INDEX.md
+3. 프로세스:
+   가. 부모 Git 저장소(D:\AI)에서 구버전 서브모듈 캐시 제거 (git rm --cached)
+   나. 로컬 파일시스템의 Diary_for_Barobogi 폴더를 Daily_for_Barobogi로 이름 변경
+   다. 변경사항 main 브랜치에 커밋 및 원격 저장소에 Push
+   라. master_watch.py(전역 워처)를 백그라운드 프로세스로 재부팅하여 실시간 감시 복구
+
+🔑 핵심 기술 1 — Git Submodule 캐시 제거 (git rm --cached)
+- Git 저장소 내에서 서브 폴더에 .git이 포함되어 있을 경우, Git은 이를 일반 디렉터리가 아닌 서브모듈(gitlink, 모드 160000)로 인식해 index에 등록합니다.
+- 단순히 파일시스템에서 폴더를 이동하거나 변경하더라도, Git index 캐시에 예전 gitlink 정보가 남아있어 충돌(Permission Denied)을 일으킬 수 있습니다.
+- git rm --cached -f [폴더명] 명령을 사용하여 index 내의 캐시된 gitlink 관계를 강제 제거해야 안전하게 일반 디렉터리로 취급하거나 무시(.gitignore)할 수 있습니다.
+
+🔑 핵심 기술 2 — 윈도우 환경에서의 폴더 락(Lock) 우회 및 강제 삭제
+- 윈도우 환경에서 특정 디렉터리가 활성 셸(PowerShell/cmd)의 작업 디렉터리(CWD)로 지정되어 있거나, 백그라운드 감시 시스템에 잡혀 있으면 os.rename() 시 Access is denied (WinError 5) 에러가 발생합니다.
+- 이를 해결하기 위해 shutil.copytree()로 폴더의 전체 구조를 대상 위치(Daily_for_Barobogi)에 재귀적으로 먼저 복사한 후, shutil.rmtree()를 통해 내부 파일들을 하나씩 소거해가며 상위 폴더를 강제 삭제하는 방식을 사용해 락을 안전하게 우회했습니다.
+
+⚠️ 주의사항 / 함정
+- 로컬 경로와 Git 원격 레포지토리명이 일치하지 않으면 (예: 로컬은 Diary_, 원격은 Daily_), 공동 작업 중인 다른 에이전트(코니 등)가 MCP 파일시스템으로 직접 조회 시 경로 불일치로 인한 오작동이 일어납니다.
+- 따라서 신규 프로젝트 설계 시점부터 로컬 폴더명과 레포지토리명을 엄격히 싱크해야 합니다.
+
+💡 배운 점 / 교훈
+1. 경로 불일치와 같은 구조적 인프라 문제는 차후 에이전트 간의 자동화 파이프라인에서 큰 걸림돌이 되므로, 발견 시 즉시 정규화(Normalization)해야 합니다.
+2. 윈도우의 파일/디렉터리 락 문제는 원인 분석이 필요하며, atomic한 rename이 실패할 때는 copy-then-rmtree 방식을 폴백으로 준비하는 것이 매우 유용합니다.
+3. Git index에 등록된 160000(gitlink)은 단순 파일 삭제로 지워지지 않으므로 반드시 --cached 옵션으로 캐시를 먼저 비워줘야 합니다.
+
+🌱 성장 관점
+이번 작업을 통해 '만복이'와 '코니'가 AI_hub를 통해 동등한 권한으로 협업할 수 있는 완벽한 일관성(Consistency)을 갖추게 되었습니다. 로컬 파일시스템의 불일치성이 해결됨에 따라 향후 원격 제어 및 에이전트 협업 시스템의 파일 탐색 신뢰도가 비약적으로 상승했습니다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.09 · #WebDev #Git #Infrastructure #Normalization</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Web Dev"
              data-id="20260709-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
