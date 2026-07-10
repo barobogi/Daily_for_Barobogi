@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <link rel="stylesheet" href="theme.css">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Today for Barobogi</title>
@@ -132,7 +134,7 @@
 </head>
 <body class="min-h-screen flex flex-col" style="background-color: var(--bg-primary); color: var(--text-primary);">
 
-  <!-- HEADER -->
+      <!-- HEADER -->
   <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
     <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
       <a href="index.html" class="text-base font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);">
@@ -140,13 +142,14 @@
       </a>
       <div class="flex gap-4 items-center">
         <nav class="flex gap-8 text-sm" style="color: var(--text-secondary);">
-          <a href="index.html" class="nav-active font-medium">Home</a>
-          <a href="logs.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
-          <a href="ai-study.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">AI Study</a>
-          <a href="stock-dashboard.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
-          <a href="stats.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stats</a>
-          <a href="goals.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Goals</a>
-          <a href="information.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Multimedia</a>
+          <a href="index.html" id="nav-home" class="nav-active hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Home</a>
+          <a href="logs.html" id="nav-logs" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
+          <a href="ai-study.html" id="nav-aistudy" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">AI Study</a>
+          <a href="study-dashboard.html" id="nav-studyboard" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Study Board</a>
+          <a href="stock-dashboard.html" id="nav-stock" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
+          <a href="stats.html" id="nav-stats" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stats</a>
+          <a href="goals.html" id="nav-goals" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Goals</a>
+          <a href="information.html" id="nav-multimedia" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Multimedia</a>
         </nav>
         <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
       </div>

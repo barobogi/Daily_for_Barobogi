@@ -1,6 +1,6 @@
 {
-  "project_name": "Diary_for_Barobogi",
-  "repo_path": "D:\\AI\\Diary_for_Barobogi",
+  "project_name": "⑤_자동화_Daily_for_Barobogi",
+  "repo_path": "D:\\AI\\⑤_자동화_Daily_for_Barobogi",
   "project_type": "unknown",
   "watch_extensions": [
     ".py",
@@ -28,5 +28,5 @@
     "max_retries": 3,
     "retry_delay": 30
   },
-  "created": "2026-06-20 17:46"
+  "created": "2026-07-09 23:25"
 }

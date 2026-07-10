@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <link rel="stylesheet" href="theme.css">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Study — Today for Barobogi</title>
@@ -180,7 +182,7 @@
     </div>
   </div>
 
-  <!-- HEADER -->
+      <!-- HEADER -->
   <header class="w-full border-b" style="background-color: var(--bg-primary); border-color: var(--border); height:60px;">
     <div class="max-w-4xl mx-auto px-6 h-full flex justify-between items-center">
       <a href="index.html" class="text-base font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);">
@@ -188,13 +190,14 @@
       </a>
       <div class="flex gap-4 items-center">
         <nav class="flex gap-8 text-sm" style="color: var(--text-secondary);">
-          <a href="index.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Home</a>
-          <a href="logs.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
-          <a href="ai-study.html" class="nav-active font-medium">AI Study</a>
-          <a href="stock-dashboard.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
-          <a href="stats.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stats</a>
-          <a href="goals.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Goals</a>
-          <a href="information.html" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Multimedia</a>
+          <a href="index.html" id="nav-home" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Home</a>
+          <a href="logs.html" id="nav-logs" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Logs</a>
+          <a href="ai-study.html" id="nav-aistudy" class="nav-active hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">AI Study</a>
+          <a href="study-dashboard.html" id="nav-studyboard" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Study Board</a>
+          <a href="stock-dashboard.html" id="nav-stock" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stock</a>
+          <a href="stats.html" id="nav-stats" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Stats</a>
+          <a href="goals.html" id="nav-goals" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Goals</a>
+          <a href="information.html" id="nav-multimedia" class="hover:text-[var(--text-primary)] transition-colors duration-200 pb-[2px]">Multimedia</a>
         </nav>
         <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
       </div>
@@ -266,6 +269,49 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Prompt Engineering"
+             data-id="20260710-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Prompt Engineering</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Claude Code CLI (만복이) 주간 사용량(Quota) 소진 원인 분석 및 Watchdog 루프 방지 보완</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Claude Code CLI (만복이) 주간 사용량(Quota) 소진 원인 분석 및 Watchdog 루프 방지 보완 — 핵심 정리
+
+한 줄 요약
+텔레그램 런타임(bun) 강제 종료에 따른 수신 메시지 백로그(Queue) 누적과 Watchdog 재시작 루프에 의한 API 토큰 급속 소진 현상을 규명하고, 재시작 임계치 차단 로직(Back-off)을 추가하여 시스템 안정성을 강화했습니다.
+
+🗂️ 전체 구조 / 아키텍처
+1. 텔레그램 연동 런타임:
+   - bun.exe (Telegram Plugin 실행용 background worker)
+2. 문제 상황 감지 및 복구 프로세스:
+   - master_watch.py (전역 5분 감시 Watchdog) =&gt; start_telegram.bat (claude.exe --channels 실행)
+3. 토큰 소진 메커니즘:
+   - bun.exe 강제 종료 → 텔레그램 서버 메시지 큐 누적 → 재연결 시 백로그 폭주 유입 → Claude API 무제한 응답 호출 → 주간 사용량 한도(50% -&gt; 0%) 급속 소진
+   - 사용량 소진 후 CLI가 기동 즉시 크래시 → Watchdog이 5분 간격 무한 재시작 시도 → 초기 인증/조회 트래픽 추가 낭비
+
+🔑 핵심 기술 1 — 텔레그램 백로그 자동 응답 제어
+오프라인 동안 누적된 메시지 큐가 복구 시 한꺼번에 CLI 세션으로 주입되면서 대량의 자동 프롬프트가 실행되었습니다. 향후 백로그 누적 시 필터링 처리나 CLI 인바운드 커맨드 제한이 동반되어야 합니다.
+
+🔑 핵심 기술 2 — Watchdog 연속 실패 임계치 차단 (Back-off)
+master_watch.py 내의 _telegram_watchdog 및 _remote_control_watchdog 함수에 연속 실패 횟수(consecutive_failures)를 계측하는 로직을 통합했습니다.
+3회 연속 재시작 실패 시 API 사용량 초과 혹은 세션 만료로 임시 잠금 처리하여 1시간 동안 프로세스 기동 시도를 완전히 보류(time.sleep(3600))함으로써 비정상적인 트래픽/토큰 소진 루프를 차단하도록 조치했습니다.
+
+⚠️ 주의사항 / 함정
+1. bun.exe는 텔레그램 플러그인의 중추 엔진으로, 임의 taskkill 시 텔레그램 백로그 누적의 불씨가 됨.
+2. CLI 사용량 상태는 Claude Web App 구독 계정 또는 API 크레딧 한도와 유기적으로 연결되어 있음.
+
+💡 배운 점 / 교훈
+1. 백그라운드 데몬 및 Watchdog 자동화 설계 시에는 단순 재시작 로직 외에 '연속 실패 예외 처리(Back-off)' 및 '임계치 기반 중단'을 필수로 연계해야 예기치 못한 API 과금 및 토큰 소진 참사를 방지할 수 있습니다.
+2. 비정상적인 CPU 사용량이나 무한 대기 현상이 발생했을 때 프로세스를 무조건 끄는 것보다, 그에 묶인 백로그 메시지가 있는지 사전 점검하는 예방 습관이 필요합니다.
+
+🌱 성장 관점
+이번 장애 대응을 통해 단순히 코드를 고치는 수준을 넘어, 여러 자율형 에이전트(만복이, 코니)들이 연동되어 도는 분산 환경에서 리소스 보안 및 트래픽 폭주 방지(Back-off/Rate limit)의 견고성이 얼마나 중요한지 체감했습니다. 에이전트 간의 통신 안정성을 확보함으로써, 향후 멀티 에이전트 협업 체계(Teamwork)로 나아가기 위한 핵심적인 예외 처리 구조를 확립했습니다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.10 · #manbok #koni #telegram #watchdog #rate-limit</p>
+        </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Web Dev"
              data-id="20260709-2"

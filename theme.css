@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Light Mode Variables */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+  --border: #E5E7EB;
+  --accent: #5B8DEE;
+  --accent-light: #EBF0FF;
+  --accent-green: #10B981;
+  --accent-red: #EF4444;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-blur: blur(8px);
+}
+
+/* Dark Mode Variables */
+html[data-theme="dark"], [data-theme="dark"] {
+  --bg-primary: #0F172A; /* Deep Slate Blue */
+  --bg-secondary: #1E293B; /* Slate Card */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-tertiary: #64748B;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #5B8DEE; /* Neon Blue */
+  --accent-light: rgba(91, 141, 238, 0.15);
+  --glass-bg: rgba(30, 41, 59, 0.6);
+  --glass-blur: blur(12px);
+}
+
+/* Base Body Styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(91, 141, 238, 0.3);
+  box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.15), 0 4px 8px -4px rgba(91, 141, 238, 0.1);
+}
+
+/* Interactive Navigation Link Point */
+.nav-active {
+  color: var(--accent) !important;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Dark Mode overrides for Tailwind hardcoded white backgrounds (Stock Dashboard) */
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] tr.bg-white,
+html[data-theme="dark"] div.bg-white {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .border-t-0,
+html[data-theme="dark"] .border,
+html[data-theme="dark"] .border-gray-100,
+html[data-theme="dark"] .border-purple-100,
+html[data-theme="dark"] .border-\[\#E5E7EB\] {
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] th {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] td {
+  border-bottom-color: var(--border) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Dark Mode overrides for Study Board Tab Bar and Buttons */
+html[data-theme="dark"] .tab-bar {
+  background-color: var(--bg-secondary) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .tab-btn {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] .tab-btn:hover {
+  color: var(--accent) !important;
+}
+
+html[data-theme="dark"] .tab-btn.active {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+}
+
