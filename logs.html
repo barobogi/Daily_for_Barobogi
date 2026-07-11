@@ -256,6 +256,28 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="만복Hall,n8n,memory관리"
+             data-id="20260711-1"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.11</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">만복이야기 — compact 후 기억상실 Hall (n8n 재설치 낭비)</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">오늘 /compact 후 세션이 새로 시작되면서 기존 결정을 잊고 Hall을 일으켰다.
+
+1. C:\n8n에 n8n v1.123.63이 이미 설치되어 있었음 (D 드라이브 HDD 실패로 C에 설치 결정했던 것)
+2. compact 후 그 결정을 잊고 D 드라이브에 재설치 2회 시도 → 시간 낭비
+3. 바로보기님이 "D가 HDD라서 실패했고 C에 설치하기로 했었는데?" 라고 알려주셔서 Hall 인지
+4. 교훈: 인프라 결정은 compact 전에 반드시 memory 저장 필수 → 오늘 project_n8n_install.md 등록 완료</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#만복Hall</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#n8n</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#memory관리</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="3AI,제미나이,만복,코니"
              data-id="20260710-1"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
