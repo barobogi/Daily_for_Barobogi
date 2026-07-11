@@ -270,6 +270,90 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
+             data-id="20260711-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">안티이야기_0711_2 — 어떤 유튜브 채널이든 URL 한 줄로 내 지식창고 만들기 (범용 파이프라인 구축)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">어떤 유튜브 채널이든 URL 한 줄로 내 지식창고 만들기 — 핵심 정리
+
+한 줄 요약
+채널 URL 하나만 입력하면 전체 영상의 메타데이터·자막을 긁어 AI 분석용 마크다운 지식베이스를 자동 생성하는 범용 파이프라인을 구축했습니다.
+
+🗂️ 전체 구조 / 아키텍처
+python youtube_pobbagi.py --channel "@채널명"
+    ↓ YouTube Data API v3 → 전체 영상 목록 수집
+    ↓ youtube-transcript-api → 자막 100% 추출
+    ↓
+D:\AI\학습채널_{채널명}\
+    ├── _채널요약.md  (카테고리 분류 + 우선순위 추천)
+    ├── _뿌리적용.md  (뿌리체계 적용 분류)
+    ├── _참고사항.md / _피드백.md
+    └── src\{영상ID}.md  (영상별 학습카드)
+
+🔑 핵심 기술 1 — 채널 단위 일괄 수집
+채널 URL → 채널 ID 자동 추출 → 전체 영상 목록 + 조회수 + 설명란 수집. 수백 개 영상도 한 번에 처리.
+
+🔑 핵심 기술 2 — AI 친화적 지식베이스 구조
+각 영상별 마크다운에 요약/핵심기술/적용포인트 스켈레톤 양식 자동 적용. "이 채널 전체 분석해줘"라고 AI에게 지시할 때 바로 먹히는 구조로 저장.
+
+⚠️ 주의사항 / 함정
+1. YouTube Data API 일일 Quota 제한 → 대형 채널은 여러 날에 나눠 수집.
+2. 자막 없는 영상은 transcript 수집 불가 → 설명란 원문으로 대체.
+
+💡 배운 점 / 교훈
+1. 수집 자동화는 AI 분석 ���질이 아니라 분석 가능한 범위를 올린다.
+2. AI-friendly 워크스페이스 세팅이 곧 생산성의 레버리지.
+
+🌱 성장 관점
+주식 채널뿐 아니라 어떤 기술 채널이든 적용 가능합니다. 뿌리체계와 연결되면 "채널 → 뿌리 분류 → 우선순위 학습 로드맵"이 자동으로 생성되는 구조 — 바로보기님의 학습 속도가 채널 수에 비례해서 올라가는 확장성이 핵심입니다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.11 · #youtube #pipeline #AI #학습자동화</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
+             data-id="20260711-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">안티이야기_0711_1 — 하나의 프로젝트를 여러 AI가 동시에 만진다면? AI 협업 거버넌스와 Lock 시스템 구축기</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">하나의 프로젝트를 여러 AI가 동시에 만진다면? — 핵심 정리
+
+한 줄 요약
+3명의 AI(PM·실무·리서치)를 동시 투입해 발생하는 파일 충돌을 project_locks.json(뮤텍스)과 메시지 기반 승인 파이프라인으로 해결했습니다.
+
+🗂️ 전체 구조 / 아키텍처
+만복(PM/Claude Code CLI)
+├── 안티(실무/Antigravity) — 코딩 실행
+└── 코니(리서치/Cowork) — 동기화·리뷰
+
+지시 흐름: 바로보기님 → 만복 → messages/ 지시서 → 안티/코니 실행 → 결과 보고
+
+🔑 핵심 기술 1 — project_locks.json (뮤텍스)
+AI가 파일을 수정하기 전, CLAUDE.md 규칙으로 이 JSON을 반드시 읽어 다른 AI가 작업 중인지 확인하도록 강제. 코드가 아닌 '시스템 규칙'으로 막는 소프트 락.
+
+🔑 핵심 기술 2 — 요청 → 승인 → 실행 파이프라인
+실무 AI는 messages/ 폴더에 PM(만복) 지시서가 내려오기 전까지 Write 금지. 바로보기님 + 코니/안티 브레인스토밍 결과도 만복 승인 없이 실행 금지("작당 모의 규칙").
+
+⚠️ 주의사항 / 함정
+1. 소프트 락은 AI가 규칙을 안 지키면 무의미 → CLAUDE.md 강제 로딩이 핵심.
+2. 합의한 내용이라도 만복 필터를 안 거치면 뿌리체계 일관성 붕괴.
+
+💡 배운 점 / 교훈
+1. 여러 AI가 동시 작업하면 충돌 필연 → Lock + 승인 파이프라인 필수.
+2. 규칙은 코드보다 시스템 프롬프트에 박는 게 AI 협업에서 더 실용적.
+
+🌱 성장 관점
+이 거버넌스 체계는 주식 자동화를 넘어 어떤 복잡한 프로젝트든 멀티 AI 팀으로 운영할 수 있는 기반입니다. AI가 도구가 아니라 규칙을 지키며 협동하는 자율형 에이전트 조직으로 진화하는 구조 — 팀 스케일을 원하는 만큼 늘릴 수 있는 확장성의 씨앗입니다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.11 · #3AI #governance #lockSystem #manbok</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Prompt Engineering"
              data-id="20260710-1"
              style="border-top: 1px solid var(--border);"
