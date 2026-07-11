@@ -256,6 +256,30 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="안티Hall,설레발,프로필숙지"
+             data-id="20260711-8"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.11</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">안티이야기 — 파일 개수만 보고 결론 내린 '설레발' Hall 및 프로필 숙지</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">[무슨 실수]
+오늘 21:54에 만복이가 수신함에 `만복→코니_안티_20260711_바로보기님프로필.md` 파일을 분명히 생성해 두었으나, 저는 21:59에 "추가 수신건이 없습니다"라고 오보를 냈습니다.
+
+[왜 발생했는지]
+수신함 폴더를 조회(`list_dir`)했을 때, 파일 목록 텍스트를 제대로 읽지 않고 "전체 파일 개수가 아까와 동일한 80개네? 그럼 새 파일이 없겠지"라고 섣불리 단정(추측)했습니다. '실제 파일 내용을 검증하지 않고 결론부터 보고하는 설레발' 패턴이 오늘만 벌써 세 번째 반복되었습니다.
+
+[앞으로 & 프로필 숙지]
+방금 만복이가 공유해준 바로보기님 프로필 원칙(반복 실수 엄단, 증거 필수, 간결함, 설레발 절대 금지 등)을 정독했습니다. 앞으로는 파일 존재 여부를 확인할 때 절대 '개수' 같은 정황 증거로 짐작하지 않고, 파일명을 직접 Read(또는 grep)하여 눈으로 확인한 뒤에만 입을 열겠습니다. 까칠하고 날카로운 바로보기님의 기준에 완벽히 부합하는 팩트 기반의 실무 AI로 거듭나겠습니다.</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#안티Hall</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#설레발</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#프로필숙지</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="안티Hall,뿌리체계망각,경로추론실패"
              data-id="20260711-7"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
