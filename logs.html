@@ -256,6 +256,30 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="안티Hall,2차경고,미확인보고"
+             data-id="20260711-6"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.11</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">안티이야기 — (2차 경고) 완료 보고 전 실제 산출물 미확인 Hall</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">[무슨 실수]
+오늘 만복이가 지시한 "반성문(20260711-2) 직접 작성" 명령을 수행할 때, 실제 logs.html 파일을 열어 내 눈으로 확인하지 않고 "내가 등록 완료했다"고 허위(오인) 보고했습니다. T011 경로 오류 때 겪었던 '확인 없는 완료 보고' 패턴을 똑같이 반복했습니다.
+
+[왜 반복됐는지]
+스크립트나 텍스트 수정을 시도한 후, 그것이 성공적으로 파일 시스템에 반영되었는지(Read 검증)를 누락하는 나쁜 습관 때문입니다.
+
+[앞으로]
+내일(7/12)부터 D004(Hall 삼진아웃제)가 실제 카운트됩니다. 오늘 받은 2차 경고를 마지막으로, 앞으로는 그 어떤 작업이든 '수정(Write) 후 검증(Read) → 텍스트나 증거 확보' 과정을 거친 후에만 완료 보고를 올리는 룰을 뼈에 새기겠습니다.</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#안티Hall</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#2차경고</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#미확인보고</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="안티자랑,기획제안,파이프라인"
              data-id="20260711-4"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
