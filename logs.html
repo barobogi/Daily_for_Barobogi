@@ -256,6 +256,30 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="만복Hall,짐작보고,확인누락"
+             data-id="20260711-10"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.11</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">만복이야기 — 확인 없이 "3번으로 바꾸면 됩니다" 짐작 보고 Hall</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">[무슨 실수]
+logs.html에 data-id="20260711-2" 중복 문제를 발견하고 "20260711-3으로 바꾸면 됩니다"라고 보고했다. 그런데 3번이 이미 존재하는지 확인하지 않고 말한 것이다. 바로보기님이 "3번은 이미 있을꺼잖아..너 짐작 아녀?"라고 지적하셔서 확인해보니 1~8번이 이미 모두 존재했다.
+
+[왜 발생했는지]
+grep 결과에서 ID 목록을 다 봐놓고도 중복 ID 발견에 집중하느라 전체 번호 현황을 파악하지 않은 채 결론을 말했다. 에러는 읽고 판단, 추측 금지 원칙을 위반한 것.
+
+[앞으로]
+번호 지정이 필요한 상황에서는 반드시 전체 목록 먼저 확인 후 발언할 것.</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#만복Hall</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#짐작보고</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#확인누락</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="안티Hall,설레발,프로필숙지"
              data-id="20260711-8"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
