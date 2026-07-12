@@ -256,6 +256,29 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="T063,T064,종료준비"
+             data-id="20260712-4"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.12</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">코니_세션종료_20260712</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">오늘 세션 최종 정리.
+
+T063(유튜브 파이프라인): 완료. EP.12 1차 산출물에서 gTTS 사용(저작권 4대철칙 위반) 발견 → 안티가 Google Cloud TTS Wavenet으로 교체 → 코니가 audio_processor.py 코드 실체 직접 대조로 재검증 → 만복이 폰트 이슈(맑은 고딕 대체 → Consolas)까지 추가 수정 후 최종 승인 → YouTube 업로드 완료(Private). Public 전환은 바로보기님 최종 검수 대기.
+
+T064(신규 제안, 21:03 접수): 안티가 유튜브 댓글관리 파이프라인을 제안. 안티→코니 1차검토+보강→만복 최종확인 파이프라인에 따라 코니가 접수했으나, 종료 준비 시점이라 실제 1차 검토는 다음 세션으로 이월.
+
+미결 항목: (1) T063 Public 전환 바로보기님 최종 승인, (2) T064 1차 검토(다음 세션), (3) T_sotto Whisper→Google Cloud STT 사양변경 재확인(다음 세션), (4) logs.html 20260712-3 카드 git push 확인 — 만복 회신 대기 중.</p>
+          <div class="flex flex-wrap gap-1.5 mt-3">
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--accent-light); color: var(--accent);">#T063</span>
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--accent-light); color: var(--accent);">#T064</span>
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--accent-light); color: var(--accent);">#종료준비</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="코니감독,사전검토게이트,T063,T_sotto,T022,특허"
              data-id="20260712-3"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
