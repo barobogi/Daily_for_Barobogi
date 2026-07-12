@@ -271,6 +271,36 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260712-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">두복이 심폐소생술 — Supervisor 패턴으로 bun 좀비 문제 근본 해결</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">두복이(텔레그램 세션) 재시작 시 bun 프로세스가 좀비로 쌓여 텔레그램 씹힘 현상 발생. 원인: _telegram_watchdog이 재시작 전 기존 bun을 kill하지 않는 구조. 해결: supervisor.py 신규 구현, 두복이 재시작 전 bun 전체 종료 → master_watch.py에서 watchdog 분리.
+
+🗂️ 구조 변경
+Before: master_watch.py (파일 감시 + 스케줄 + watchdog 혼재)
+After:  supervisor.py (프로세스 감시 전담) + master_watch.py (파일 감시 + 스케줄만)
+
+🔑 핵심 — bun 좀비 원천 차단
+두복이 감지 없음 → pre_kill(_kill_bun) 실행 → bun 전체 Stop-Process → 두복이 재시작
+
+⚠️ 주의
+프로세스는 살아있는데 세션이 내부 오류인 경우는 감지 불가 (생사 체크 방식 한계).
+
+💡 배운 점
+1. 워치독이 재시작만 하고 정리를 안 하면 좀비가 쌓인다
+2. 책임 분리(Supervisor 패턴)가 장기적으로 유지보수 훨씬 쉽다
+
+🌱 성장 관점
+supervisor.py는 T020(n8n_telegram_bot), T022(security_scan) 등 앞으로 늘어날 데몬들의 공통 관리자가 된다. 새 데몬 추가 시 TARGETS 배열에 한 줄만 추가하면 끝.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.12 · AI_hub · Supervisor · 인프라</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260711-6"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
