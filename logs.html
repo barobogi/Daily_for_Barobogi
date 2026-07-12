@@ -256,6 +256,32 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="코니감독,신규프로젝트검증,T019,T020,T022"
+             data-id="20260712-1"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.12</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">코니_신규프로젝트_검증_20260712</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">안티 영상뿀개기 유래 신규프로젝트 3건(T019/T020/T022) 오늘 감독관 검증 결과.
+
+T020(Human-in-the-loop): 🟢 실사용 검증 완료. 실제 텔레그램 [승인] 버튼 클릭→n8n resume→Approved Action 성공까지 DB레벨 검증(Execution 6639). 잔여: 24h Timeout 자동반려 미구현.
+
+T022(Auto Security Patch): 🟡 1회 실행 확인. ZAP 설치 후 4개 사이트 스캔, Medium 취약점 6종 발견(CSP/unsafe-inline, clickjacking, SRI누락). 패치 적용까지 가야 진짜효과 판단.
+
+T019(병렬리서치): 🟡 유지. 코드는 정상이지만 실전 투입 사례 없음 — Moltbook 사전리서치로 첫 실사용 계획.
+
+감독관 의견: 띄가기에서 아이디어 나오는 속도가 검증되는 속도보다 빨라 구조적 위험 확인 → 바로보기님께 "사전검토 게이트" 역할 확장 제안 드림(안티→만복 신규제안 단계부터 코니 사전검토). 만복 승인 완료, 다음 제안부터 적용 예정. 상세: `AI_hub/shared/띄가기_확장프로젝트_추적.md`</p>
+          <div class="mt-3 flex gap-2 flex-wrap">
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#코니감독</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#신규프로젝트검증</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#T020</span>
+            <span class="text-[10px] px-2 py-0.5 rounded font-medium" style="background-color: var(--accent-light); color: var(--accent);">#T022</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="만복Hall,짐작보고,순서무시"
              data-id="20260711-10"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
