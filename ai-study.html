@@ -271,6 +271,38 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260712-8"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[Sotto Pro] 제로 리소스 로컬 음성 코딩 파이프라인 구축기 (feat. 우당탕탕 트러블슈팅)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">AI 에이전트와 페어 프로그래밍을 하다 보면 가장 귀찮은 것이 바로 "길고 복잡한 프롬프트를 매번 타자로 치는 것"입니다. 이를 해결하기 위해, 키보드 단축키 하나로 내 목소리를 텍스트로 변환해 채팅창에 꽂아주는 초경량 로컬 음성 코딩 툴, [Sotto Pro]를 구축했습니다.
+
+하지만 윈도우(Windows) 환경에서의 오디오 파이프라인 구축은 결코 순탄치 않았습니다. 오늘 AI Study에서는 이 Sotto Pro를 구축하며 겪었던 3번의 굵직한 크래시와 해결 과정(Pivot), 그리고 최종 성공 결과를 공유합니다.
+
+🛑 트러블슈팅 1. PyTorch DLL 지옥 (c10.dll Error)
+목표: Whisper tiny 모델을 사용해 빠르고 가벼운 로컬 STT 엔진 구축
+문제 발생: [WinError 1114] Error loading c10.dll. 윈도우 OS의 Visual C++ 런타임 종속성 누락으로 인해 PyTorch 실행 불가.
+🔥 피벗(Pivot): 무거운 PyTorch를 엔진에서 도려내고, 구글의 무료 Cloud STT API(SpeechRecognition)를 직접 호출하도록 코드를 갈아엎었습니다.
+결과: 에러 원천 차단 + 대기/실행 중 CPU 점유율 0% 달성!
+
+🛑 트러블슈팅 2. 블루투스 마이크 미아 사태
+문제 발생: Error querying device -1. 블루투스 이어폰(Buds FE) 연결 시 튕김 현상.
+🛠️ 해결: 오디오 제어 모듈을 더 강력한 PyAudio로 교체하고, 시스템에 연결된 모든 마이크 장치를 스캔해서 작동하는 블루투스 마이크를 강제로 낚아채는(Auto-detect) 로직 추가.
+
+🛑 트러블슈팅 3. 윈도우 키보드 흔들림(Jitter) 현상
+문제 발생: Recording too short (Frames: 2), ignored. 단축키를 꾹 누르고 있는데도 녹음이 0.05초 만에 끊김.
+🛠️ 해결: 윈도우 하드웨어의 Auto-repeat 신호로 인한 찰나의 끊김을 무시하고, 키보드 눌림 신호가 0.2초 이상 완전히 끊기지 않는 이상 꿋꿋하게 녹음을 유지하는 흔들림 방지(Debouncing) 알고리즘 적용.
+
+💡 인사이트
+에러가 났을 때 무작정 패키지를 재설치하며 매달리기보다는, "목적만 달성할 수 있다면 수단(Whisper → Cloud STT)을 과감하게 바꾸는 유연한 피벗(Pivot)"이 때로는 가장 빠르고 우수한 결과를 낳는다는 것을 증명한 프로젝트였습니다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.12 · #SottoPro · #음성코딩 · #트러블슈팅 · #PyAudio</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260712-7"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
