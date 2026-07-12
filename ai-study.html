@@ -271,6 +271,42 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260712-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">T019 병렬 리서치 스킬 첫 실전 — 속도는 빠르지만 쿼리가 답이다</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">parallel_search.py 1.27초/4쿼리 동시 실행 성공. 그러나 모호한 쿼리면 코니 WebSearch보다 품질 낮음 — 즉시 보강해서 해결.
+
+🗂️ T019 구조
+D:\AI\Global_Define\parallel_search.py
+  ddgs (DuckDuckGo) → 병렬 비동기 검색
+  Wikipedia REST API → 결과 중 위키 URL 자동 감지 → 전문 summary 추가
+  JSON 입출력 표준화 → n8n 연동 준비 완료
+
+🔑 핵심 발견 1 — 속도 우위는 실제로 있다
+4쿼리 동시: 1.27초 / 수동 검색: 12~20초 예상
+
+🔑 핵심 발견 2 — 쿼리 구체성이 품질을 결정한다
+"Moltbook" → 동일 소스 5개 반복
+"Moltbook Meta acquisition 2026" → TechCrunch·Wiz 기사 즉시 반환
+
+⚠️ 주의사항
+- WebFetch 없이 snippet만으로는 최신 정보 누락 가능 (Meta 인수 같은 핵심 사실)
+- 일반 단어 포함 쿼리는 엉뚱한 결과 반환 ("create" → Minecraft 모드)
+- 코니(WebSearch)와 교차검증 병행이 최선
+
+💡 배운 점
+1. "속도 10배"는 사실이지만 "품질 10배"는 아님 — 도구는 목적에 맞게 조합
+2. 첫 실전에서 한계 발견 → 당일 보강한 것이 진짜 검증 (Wikipedia API 추가)
+3. 코니 교차검증 덕분에 Meta 인수·보안사고 핵심 사실을 잡아냄</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-12 · #parallel-search #DuckDuckGo #Wikipedia #T019 #3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260712-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
