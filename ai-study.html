@@ -271,6 +271,42 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260712-6"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">T022 보안 자동 패치 파이프라인 완성 — ZAP→Claude→승인→Git 전자동</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">GitHub Pages 4개 사이트의 보안 취약점을 AI가 자동으로 찾아 패치하고 사람 승인 후 배포까지 완전 자동화한 파이프라인 완성.
+
+🗂️ 전체 흐름
+ZAP 스캔(passive) → Medium 이상 취약점 감지 → Claude CLI 패치 코드 생성 → 텔레그램 [승인]/[반려] 버튼 → 승인 시 git commit+push 자동 실행. master_watch.py가 GitHub Pages push 감지 시 3분 후 자동 재스캔(1시간 쿨다운).
+
+🔑 핵심 1 — T020 Human-in-the-loop 연동
+patch_generator.py가 Claude CLI로 패치 생성 → send_approval.py가 텔레그램에 승인 버튼 전송 → n8n_telegram_bot.py가 승인 클릭 감지 → 파일 쓰기+git push 자동 실행. n8n 없이 직접 동작하는 T022 전용 모드 추가.
+
+🔑 핵심 2 — 자동패치 화이트리스트 정의
+GitHub Pages는 서버 헤더 설정 불가. 처리 가능: CSP meta 태그, SRI integrity 속성 (HTML 수정). 처리 불가: X-Frame-Options, HSTS 등 서버 헤더 전용 항목. 이 구분을 명문화해서 AI가 판단 오류 없이 패치 범위를 결정.
+
+🔑 핵심 3 — 실제 배포까지 검증
+Daily_for_Barobogi CSP 패치(커밋 e167b16) + Study Dashboard/Improve_stock CSP 추가(17:20)까지 총 3개 사이트 실 배포 완료.
+
+⚠️ 한계
+Claude CLI subprocess를 현재 만복이 세션에서 호출하면 충돌로 타임아웃 발생. → 직접 패치 적용 방식으로 전환. 별도 프로세스로 claude.exe 실행하는 방식 개선 필요.
+
+💡 배운 점
+1. 파이프라인 E2E 검증은 실제 승인 버튼까지 눌러봐야 진짜 완료다.
+2. 서버 헤더 vs HTML 수정 가능 항목 구분이 자동패치 안전성의 핵심.
+3. 안티 제안1이 이미 완성된 내용이었다 — 실사용 시점 추적이 중요한 이유.
+
+🌱 성장 관점
+T020(승인) + T022(보안) 두 모듈이 결합해서 "AI가 발견하고, 사람이 승인하고, 자동 배포"하는 Agentic DevSecOps 흐름이 완성됐다. T063(유튜브) 배포 파이프라인에도 이 패턴을 그대로 적용할 수 있다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.12 · #T022 · #보안자동화 · #DevSecOps · #T020연동</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260712-5"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
