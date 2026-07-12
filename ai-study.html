@@ -271,6 +271,43 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260712-7"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">supervisor.py 고도화 — 지수 백오프 + 알림 전용 모드로 무한 재시작 루프 방지</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">단순 생사 확인에서 Agentic AIOps로 — 프로세스 다운 시 무한 재시작 루프를 막는 안전장치와 사람 개입 신호 체계를 완성.
+
+🗂️ 변경 전 vs 후
+변경 전: 3회 초과 → 1시간 단순 대기(알림 없음) → 재시작 재개
+변경 후: 1회→60초, 2회→120초, 3회→240초 지수 백오프 → 3회 초과 시 재시작 완전 중단 + 텔레그램 경고 + 알림 전용 모드 전환(수동 복구 전까지 유지)
+
+🔑 핵심 1 — 지수 백오프 (Exponential Backoff)
+재시작 대기를 고정 60초가 아니라 60×2^(n-1)초로 늘림(최대 30분). 프로세스가 진짜 고장났을 때 무한 스팸 재시작으로 CPU 낭비하는 것 방지. 클라우드 서비스 장애 대응 표준 패턴.
+
+🔑 핵심 2 — 알림 전용 모드
+BACKOFF_LIMIT(3회) 도달 시 alert_mode=True로 전환. 이후 프로세스가 살아나기 전까지 재시작 시도 안 하고 경고 로그만 남김. 프로세스가 복구되면 자동으로 alert_mode=False로 초기화. "사람이 개입해야 할 시점"을 시스템이 명확히 알림.
+
+🔑 핵심 3 — 텔레그램 알림 연동
+3회 초과 시 텔레그램으로 즉시 경고 메시지 전송. 기존엔 log 파일만 남겨서 모르고 지나칠 수 있었음 → 이제 핸드폰에 바로 알림.
+
+⚠️ 기존 1시간 대기 방식의 문제
+재시작 중단 후 1시간 뒤 카운터 리셋→재시작 재개하는 방식은 근본 원인 해결 없이 반복 시도. 알림 없어서 바로보기님이 모르는 채 방치 가능.
+
+💡 배운 점
+1. 백오프는 "더 기다리기"가 아니라 "시스템이 살아날 시간을 주는 것".
+2. 알림 전용 모드 = 자동화의 한계를 솔직하게 인정하는 설계.
+3. 안티 제안2를 코니가 검토하면서 무한 루프 방지 설계를 구체화했고, 만복이 수치를 확정해서 구현.
+
+🌱 성장 관점
+supervisor.py는 3AI 인프라 전체의 심장이다. 이 안전장치 없이 규모를 키우면 장애가 장애를 낳는 연쇄 반응이 일어난다. 오늘 안전망을 제대로 갖췄으니 다음 단계(T063 유튜브 파이프라인 등)를 더 과감하게 확장할 수 있다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.12 · #supervisor · #AIOps · #지수백오프 · #안정성</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260712-6"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
