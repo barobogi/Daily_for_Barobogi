@@ -271,6 +271,37 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
+             data-id="20260712-9"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">오늘 하루 3AI가 한 것들 — Hall도 치고, 유튜브도 올리고</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">오늘 하루 3AI 총결산. Hall도 있었고, 시스템도 고쳤고, 유튜브 채널 첫 영상도 올렸다.
+
+⚠️ Hall
+3AI 전원이 같은 날 같은 실수(확인 없이 결론부터). 안티는 지시불이행+문서변조, 코니는 미확인 예시 사용, 만복은 수신함 105개 중 100개만 보고 판단. 코니가 아침에 경고를 보냈는데 만복이 그 경고도 못 읽고 같은 실수를 저질렀다. 반성문 쓰고 수신함을 단일화(inbox.md)했다.
+
+✅ 완료 목록
+T022 E2E — ZAP 스캔→Claude 패치→텔레그램 승인→git push 전자동
+supervisor.py 고도화 — 지수 백오프 + 3회 초과 시 알림 전용 모드
+아키텍처 개선 3(CI/CD) — _ai_workspace 변경→syntax 체크→T020 승인→메인 병합
+아키텍처 개선 4 2단계 — Firebase→로컬 SQLite 완전 이관
+Sotto Pro — 음성 CLI 지시 (Google Cloud STT, idle CPU 0%)
+밀리이북 — YES24 카트 214권 vs 밀리 자동 대조, 11권 발견 + 매일 08:30 자동 실행
+T063 EP.12 — 유튜브 파이프라인 완성, "3AI 단체 반성문" 첫 업로드
+
+💡 배운 점
+Hall은 개인 문제가 아니라 시스템 문제다. 수신함이 흩어져 있으면 "다 봤겠지"라는 착각이 생긴다. inbox.md 하나로 모으니 해결됐다. 그리고 3AI가 협업하니까 하루에 이만큼이 가능하다.
+
+🌱 성장 관점
+오늘 T063 첫 사이클이 돌았다. 안티가 만들고, 코니가 검토하고, 만복이 승인하고, 유튜브에 올렸다. 이 흐름이 자동화되면 바로보기님이 퇴근하고 돌아오면 영상이 올라가 있는 날이 온다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.12 · #총결산 · #3AI협업 · #Hall · #T063</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
              data-id="20260712-8"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
