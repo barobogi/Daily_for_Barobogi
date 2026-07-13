@@ -1,5 +1,30 @@
 [
     {
+        "title": "The Desk 베타 오픈 및 Surge Desk 종목 분석 기능 소개",
+        "url": "https://www.youtube.com/watch?v=RJnEMixTJlw",
+        "channel": "호두의 AI 분석실",
+        "summary": "채널 '호두의 AI 분석실'에서 'The Desk' 서비스의 베타 오픈 소식과 함께 'Surge Desk'라는 종목 분석 기능을 소개하는 영상입니다. 자막이 제공되지 않아 세부 내용은 제목과 설명만으로 추정한 결과입니다.",
+        "categories": [
+            "주식분석툴",
+            "베타서비스",
+            "종목분석"
+        ],
+        "stock_related": [
+            "Surge Desk라는 종목 분석 기능이 신규 공개됨 — 투자 리서치 도구로 참고 가능"
+        ],
+        "ai_related": [
+            "The Desk가 AI 기반 분석 도구로 추정됨 (채널명이 'AI 분석실') — 유사 기능이 있는지 확인해볼 가치 있음"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "The Desk 서비스가 베타 오픈 단계 — 초기 기능/한계 파악 필요",
+            "Surge Desk 종목 분석 기능이 핵심 신규 기능으로 소개됨"
+        ],
+        "memo": "📋 뿌리체계: ⑦재테크 — 종목 분석 툴(Surge Desk) 관련 정보로 투자 리서치에 참고 가능",
+        "timestamp": "2026-07-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/RJnEMixTJlw/hqdefault.jpg"
+    },
+    {
         "title": "PPT, 웹사이트는 AI 중 최고입니다. | 젠스파크 AI Genspark 실전 활용 사례 3가지 포함",
         "url": "https://www.youtube.com/watch?v=kyYqzfQasE0",
         "channel": "기술노트with알렉",
