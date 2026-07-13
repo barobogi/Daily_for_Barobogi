@@ -1,26 +1,5 @@
 [
     {
-        "title": "테스트 영상",
-        "url": "https://www.youtube.com/watch?v=test123",
-        "channel": "테스트 채널",
-        "summary": "AI 자동화를 주제로 한 테스트 영상으로, 실제 콘텐츠 없이 자막에 '테스트 자막 AI 자동화'라는 텍스트만 포함되어 있습니다. 파이프라인 검증용 더미 데이터로 보입니다.",
-        "categories": [
-            "테스트",
-            "AI자동화"
-        ],
-        "stock_related": [],
-        "ai_related": [
-            "AI 자동화 관련 테스트 콘텐츠로 추정됨 — 실제 인사이트는 자막 내용 부족으로 확인 불가"
-        ],
-        "learning_related": [],
-        "key_insights": [
-            "조회수 0, 설명 없음, 자막이 최소 텍스트만 포함된 것으로 보아 실제 영상이 아닌 파이프라인/시스템 테스트용 데이터로 판단됨"
-        ],
-        "memo": "📋 뿌리체계: ⑤자동화 — YouTube 분석 파이프라인 동작 테스트 목적으로 추정",
-        "timestamp": "2026-07-14T00:00:00.000000",
-        "thumbnail": "https://i.ytimg.com/vi/test123/hqdefault.jpg"
-    },
-    {
         "title": "PPT, 웹사이트는 AI 중 최고입니다. | 젠스파크 AI Genspark 실전 활용 사례 3가지 포함",
         "url": "https://www.youtube.com/watch?v=kyYqzfQasE0",
         "channel": "기술노트with알렉",
