@@ -1,5 +1,32 @@
 [
     {
+        "title": "n8n 금융앱 만들기",
+        "url": "https://www.youtube.com/watch?v=EJZfDLn67Kk",
+        "channel": "호두의 AI 분석실",
+        "summary": "n8n을 활용해 금융 관련 자동화 앱/워크플로우를 구축하는 방법을 다루는 영상으로 추정됩니다. 자막이 제공되지 않아 상세 내용은 확인이 어렵습니다.",
+        "categories": [
+            "n8n",
+            "금융자동화",
+            "노코드"
+        ],
+        "stock_related": [
+            "금융 데이터 처리 자동화 워크플로우 관련 가능성"
+        ],
+        "ai_related": [
+            "n8n 기반 자동화 파이프라인 구축"
+        ],
+        "learning_related": [
+            "n8n 워크플로우 설계 기법 학습 가능성"
+        ],
+        "key_insights": [
+            "자막 미제공으로 상세 인사이트 추출 불가",
+            "제목 기준 n8n+금융 자동화 앱 제작 튜토리얼로 추정됨"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — n8n 워크플로우 활용, ⑦재테크 — 금융앱 관련 가능성",
+        "timestamp": "2026-06-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/EJZfDLn67Kk/hqdefault.jpg"
+    },
+    {
         "title": "토스증권 Open API x 슬랙(Slack) 연동 주식 자동매매 시스템 구축 가이드 1편",
         "url": "https://www.youtube.com/watch?v=G1E921X5LYI",
         "channel": "호두의 AI 분석실",
