@@ -1,5 +1,32 @@
 [
     {
+        "title": "AI시대 당신의 경쟁력을 올려줄 빅데이터 분석 | ADSP 자격증 | 바이브코딩을 하시는 분들까지 꼭 끝까지 보세요.",
+        "url": "https://www.youtube.com/watch?v=gBDD9GWESDg",
+        "channel": "기술노트with알렉",
+        "summary": "ADSP(데이터분석 준전문가) 자격증을 통해 AI 시대에 필요한 빅데이터 분석 역량을 기를 것을 권장하는 영상으로, 특히 바이브코딩을 하는 개발자들에게도 유용한 내용이라고 강조한다. 자막이 제공되지 않아 구체적 내용은 제목 기반 추정이다.",
+        "categories": [
+            "빅데이터",
+            "ADSP",
+            "자격증",
+            "AI역량"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "바이브코딩 하는 사람도 데이터 분석 기초(ADSP)가 AI 활용 역량에 도움된다는 관점 제시"
+        ],
+        "learning_related": [
+            "ADSP(데이터분석 준전문가) 자격증 취득이 AI 시대 경쟁력 강화 수단으로 제시됨"
+        ],
+        "key_insights": [
+            "AI 시대에는 코딩뿐 아니라 데이터 분석 기초 역량(ADSP)도 경쟁력 요소로 부각",
+            "바이브코딩(AI 툴 활용 개발) 종사자에게도 데이터 이해력이 필요하다는 메시지",
+            "자막 미제공으로 상세 내용 확인 불가 — 실제 시청 시 세부 검증 필요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — ADSP 자격증 학습/경쟁력 관련 콘텐츠",
+        "timestamp": "2026-06-02T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/gBDD9GWESDg/hqdefault.jpg"
+    },
+    {
         "title": "바이브코딩 환경 설정 - 서비스 유형 - 주제 - 프론트엔드 - 백엔드 - 데이터베이스 - 서버 - 배포 | 당근 마켓 웹사이트 뚝딱 만드는 장면 포함",
         "url": "https://www.youtube.com/watch?v=CcEBaDXgjq0",
         "channel": "기술노트with알렉",
