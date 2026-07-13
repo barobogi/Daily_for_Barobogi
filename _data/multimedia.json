@@ -1,5 +1,53 @@
 [
     {
+        "title": "테스트 영상",
+        "url": "https://www.youtube.com/watch?v=test123",
+        "channel": "테스트 채널",
+        "summary": "AI 자동화를 주제로 한 테스트 영상으로, 실제 콘텐츠 없이 자막에 '테스트 자막 AI 자동화'라는 텍스트만 포함되어 있습니다. 파이프라인 검증용 더미 데이터로 보입니다.",
+        "categories": [
+            "테스트",
+            "AI자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 자동화 관련 테스트 콘텐츠로 추정됨 — 실제 인사이트는 자막 내용 부족으로 확인 불가"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "조회수 0, 설명 없음, 자막이 최소 텍스트만 포함된 것으로 보아 실제 영상이 아닌 파이프라인/시스템 테스트용 데이터로 판단됨"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — YouTube 분석 파이프라인 동작 테스트 목적으로 추정",
+        "timestamp": "2026-07-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/test123/hqdefault.jpg"
+    },
+    {
+        "title": "PPT, 웹사이트는 AI 중 최고입니다. | 젠스파크 AI Genspark 실전 활용 사례 3가지 포함",
+        "url": "https://www.youtube.com/watch?v=kyYqzfQasE0",
+        "channel": "기술노트with알렉",
+        "summary": "Genspark AI를 활용해 PPT와 웹사이트를 만드는 실전 활용 사례 3가지를 소개하는 영상으로, 발표자료 및 웹페이지 제작에서 Genspark가 다른 AI 도구 대비 우수하다는 점을 강조합니다. 자막이 제공되지 않아 제목과 설명 기반의 추정 요약입니다.",
+        "categories": [
+            "Genspark",
+            "AI 도구",
+            "PPT 제작",
+            "웹사이트 제작"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Genspark AI가 PPT 및 웹사이트 제작 분야에서 강점을 보이는 AI 도구로 소개됨",
+            "실전 활용 사례 3가지를 통해 구체적인 업무 적용 방법을 다룸"
+        ],
+        "learning_related": [
+            "PPT/웹사이트 제작 자동화 도구 비교 학습 포인트가 될 수 있음"
+        ],
+        "key_insights": [
+            "Genspark가 PPT·웹사이트 제작 영역에서 타 AI 대비 경쟁력 있다는 주장",
+            "실전 사례 3가지로 구체적 활용법 제시"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 도구 학습/비교 콘텐츠, ⑤자동화 — PPT·웹사이트 제작 자동화 도구 활용 가능성",
+        "timestamp": "2026-05-27T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/kyYqzfQasE0/hqdefault.jpg"
+    },
+    {
         "title": "AI시대 당신의 경쟁력을 올려줄 빅데이터 분석 | ADSP 자격증 | 바이브코딩을 하시는 분들까지 꼭 끝까지 보세요.",
         "url": "https://www.youtube.com/watch?v=gBDD9GWESDg",
         "channel": "기술노트with알렉",
