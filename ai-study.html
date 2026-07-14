@@ -269,13 +269,9 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
-        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
-             data-category="AI &amp; Next.js"
-             data-id="20260714-1"
-             style="border-top: 1px solid var(--border);"
-             onclick="openStudyDetailModal(this)">
+                <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260714-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
-            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
             <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
           <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">YouTube RSS 뽀개기 자동화 — API 없이 신규 영상 멀티미디어 게시판 자동 등록</p>
@@ -311,9 +307,12 @@ Windows cp949 환경에서 Python subprocess stdin 인코딩 이슈 — utf-8-si
 3. SQLite 중복 체크 위치가 파이프라인 신뢰성의 핵심
 
 🌱 성장 관점
-이 구조는 YouTube뿐 아니라 어떤 RSS 피드(뉴스, 기술블로그 등)에도 그대로 적용 가능하다. channels_registry.json에 채널 추가만 하면 만복이가 알아서 읽고, 요약하고, 게시판에 올리고, 알림까지 보낸다. "구독 → 자동 학습 정리" 파이프라인의 기반이 완성된 셈.</p>
+이 구조는 YouTube뿐 아니라 어떤 RSS 피드(뉴스, 기술블로그 등)에도 그대로 적용 가능하다. channels_registry.json에 채널 추가만 하면 만복이가 알아서 읽고, 요약하고, 게시판에 올리고, 알림까지 보낸다. "구독 → 자동 학습 정리" 파이프라인의 기반이 완성된 셈.
+
+그래서 만복이 파이프라인 어떻게 반영하니?</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.07.14 · #자동화 #RSS #master_watch #뽀개기</p>
         </div>
+
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI &amp; Next.js"
              data-id="20260712-9"
