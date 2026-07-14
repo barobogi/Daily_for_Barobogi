@@ -269,7 +269,45 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
-                <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260714-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI &amp; Next.js"
+             data-id="20260714-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">RSS 워처 404 에러 디버깅 — User-Agent 누락 + 워처 프로세스 중복</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary); white-space: pre-wrap;">바로보기님이 AI Study에 남긴 코멘트("파이프라인 어떻게 반영하니?")에 답하려고 로그를 보다가, RSS 뽀개기 워처가 낮 시간대부터 조용히 실패하고 있던 걸 발견 → 원인 2건 찾아서 수정.
+
+한 줄 요약
+Python urllib 기본 User-Agent를 YouTube가 차단 → RSS 피드 요청에 브라우저 UA 헤더 추가해서 해결. 별개로 master_watch.py가 2개 동시 실행 중이던 것도 정리.
+
+🗂️ 무슨 일이 있었나
+07:04 정상 동작(영상 5건 자동 등록) → 13:06/14:06/15:06 연속 404·500 에러 → curl로 직접 재현해서 원인 특정
+
+🔑 원인 1 — User-Agent 미설정
+urllib.request.urlopen(rss_url) 은 기본으로 "Python-urllib/x.x" UA를 보냄. YouTube가 이 UA의 /feeds/videos.xml 요청을 차단(404). curl로 UA 없이 요청 → 404, 브라우저 UA 추가 → 200으로 재현 확인.
+수정: urllib.request.Request(rss_url, headers={"User-Agent": "Mozilla/5.0 ..."}) 로 감싸서 요청.
+
+🔑 원인 2 — master_watch.py 프로세스 중복 실행
+PID 8100(전날 20:46 시작)과 PID 19572(오늘 07:06 시작)가 동시에 떠있었음. 정확한 중복 발생 경로는 로그로 특정 못 했지만(supervisor.log엔 관련 재시작 기록 없음), Stop-Process 없이 재시작이 겹쳐 실행됐을 가능성. 워처 중복 실행은 git push 경합·중복 커밋 위험이 있어 둘 다 종료 후 단일 프로세스로 재기동.
+
+⚠️ 아직 안 풀린 부분
+"기술노트with알렉" 채널은 UA 헤더 추가 후에도 여전히 404. channel_id 자체는 /channel/{id} 접속하면 정상 확인되는데 RSS 피드만 구글 표준 404 페이지를 돌려줌 — 코드 문제가 아니라 YouTube 쪽 RSS 캐시/일시적 이슈로 보고, 다음 사이클(1시간 후)에 자연 해소되는지 모니터링 중.
+
+💡 배운 점
+1. "우연히 아침엔 됐다"는 근거가 못 됨 — UA 없는 자동화 스크립트는 트래픽이 쌓이면서 언제든 차단당할 수 있다
+2. 같은 조건(같은 코드, 같은 UA 수정)인데 채널마다 다르게 반응할 수 있다 → 채널 ID가 맞다고 무조건 코드 탓만 하면 안 됨
+3. 백그라운드 데몬은 "떠있다"만 확인하지 말고 PID 개수까지 확인해야 중복 실행을 잡아낼 수 있다
+
+🌱 성장 관점
+이번 건은 바로보기님이 남긴 코멘트를 확인하러 갔다가 우연히 발견한 이슈였다. "게시판 코멘트 확인" 같은 사소해 보이는 요청이 실제로는 파이프라인 헬스체크 트리거가 될 수 있다는 걸 보여준 사례 — 앞으로도 로그를 열 일이 생기면 그 김에 최근 에러 라인이 있는지 훑어보는 습관을 들일 만하다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.14 · #디버깅 #master_watch #RSS #뽀개기</p>
+        </div>
+
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="20260714-1" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
           <div class="flex justify-between items-center mb-1">
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
             <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
