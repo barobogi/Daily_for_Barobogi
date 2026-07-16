@@ -270,6 +270,53 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
+             data-id="20260716-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">3AI 뿌리체계 현황 업데이트 — Improve_stock v1.1 + 신규 Task 4개 (2026-07-16)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">호두 유튜브 3개 영상 뽀개기 리뷰 → Improve_stock v1.1 기획 확정 (내러티브모멘텀+외국인매수+VCP 3중 필터) + T027·T063_슬라이드 신규 등록. 코니 6건 통합 검토 완료. 전체 스케쥴 재정비.
+
+🌳 뿌리체계 현황 (2026-07-16 기준)
+
+뿌리 61 (Improve_stock)
+  ├── v1.0: VCP + 종가베팅 ✅
+  ├── v1.1: 내러티브모멘텀 + 외국인매수 필터 [7/18 Phase1 착수, 만복]
+  └── T027: 시계열 분석 강화 MA/볼린저밴드 [7/18, 안티]
+
+뿌리 51 (학습/개념)
+  ├── 개념카드 A: CRISP-DM ✅ [즉시, 안티]
+  ├── 개념카드 B: 빅데이터 3V ✅ [즉시, 안티]
+  ├── 개념카드 C: EDA ✅ [즉시, 안티]
+  ├── 개념카드 D: Multi-LLM 오케스트레이션 ⏳ [7/19, T026 후]
+  └── 개념카드 E: 원스톱 파이프라인 ✅ [즉시, 안티]
+
+뿌리 63 (유튜브 채널)
+  ├── T063 EP.12 ✅ Public 전환 완료
+  └── T063_슬라이드: python-pptx 자동화 [7/22, 안티]
+
+뿌리 64 (VibeCoding)
+  └── T024: 웹앱 제너레이터 [보강 후 7/25~, 안티]
+
+뿌리 23 (인프라/MSA)
+  ├── 아키텍처 개선 5: 로컬 LLM [7/18, 만복]
+  ├── T026: MSA 통신구조 [7/19, 안티]
+  └── T025: Docker Phase1 [T026 완료 후, 안티]
+
+뿌리 72 (가족봇)
+  └── 가족봇: 사모님 텔레그램 봇 [7/18 착수, 만복]
+
+💡 핵심 인사이트
+- 날짜는 구현 속도에 따라 당겨질 수 있음 (현재 일정은 보수적 추정)
+- 만복: ImproveStock v1.1 + 아키텍처 개선5 + 가족봇 직접 구현
+- 안티: 개념카드 등록 + T027 + T026 + T025 순서 진행 (WIP 1개 제한)</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-16 · 뿌리체계 · 스케쥴 · Improve_stock · 3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Web Dev"
              data-id="20260714-3"
              style="border-top: 1px solid var(--border);"
