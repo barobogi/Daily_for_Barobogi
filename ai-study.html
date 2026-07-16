@@ -270,6 +270,36 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Architecture"
+             data-id="20260716-7"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Architecture</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[발전계획] 3AI 뿌리체계 LangGraph 패턴 도입 고도화 로드맵</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">블루닷 AI의 LangGraph 9시간 풀강의(자막 12,308개 세그먼트) 뽀개기 완료. 이를 바탕으로 우리 3AI 거버넌스 시스템에 LangGraph 핵심 패턴을 단계적으로 도입하는 고도화 로드맵을 수립함.
+
+🔴 Phase 1 (즉시 착수 — T026 연계)
+① 오케스트레이터-워커 패턴: 만복이 tasks.json을 수동 편집하는 현재 방식에서 벗어나, 오케스트레이터 AI가 자연어 요청을 받아 동적으로 Task를 생성·분배·회수하는 자율 파이프라인으로 전환.
+- 참조: LangGraph 강의 [254:04] "오케스트레이터 지휘자가 동적으로 워커를 만들고 업무를 분산"
+
+② Human-in-the-Loop(다이나믹 인터럽트): 에이전트가 사전 정의된 체크포인트에서 자동 일시정지 → 바로보기님 승인/수정 대기 → 재개. 현재 구두 요청 방식을 코드로 정형화.
+
+🟡 Phase 2 (T026 완료 후)
+③ 에루에이터-옵티마이저 패턴: 코니의 품질검수를 사전 기준(체크리스트)으로 자동화하고, 기준 미달 시 재작업 루프 자동 실행.
+④ State 스키마 정규화: tasks.json, concepts.json 등 Shared Brain을 TypedDict 기반으로 표준화하여 에이전트 간 데이터 충돌 제거.
+
+🟢 Phase 3 (장기)
+⑤ 타임트래블 & 포킹: 3AI 작업 오류 시 체크포인트 자동 롤백으로 장애복구 체계 완성.
+
+📋 현재 진행 상태
+기획서 → 코니 1차 검토 및 보강 → 만복 2차 검토, 확장안, 최종 승인 요청 단계로 파이프라인 진행 중.
+기획서 위치: D:\AI\AI_hub\shared\messages\안티→코니_만복_20260716_LangGraph_3AI고도화_기획서.md</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-16 · AI Architecture · LangGraph · 3AI 거버넌스 · 발전계획</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Data Analysis"
              data-id="20260716-6"
              style="border-top: 1px solid var(--border);"
