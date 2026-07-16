@@ -271,6 +271,42 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260716-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Improve_stock v1.1 완성 — 뉴스 내러티브 + 외국인매수 + VCP 3중 필터 구현</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">호두 유튜브 뽀개기 리뷰에서 발굴한 내러티브 모멘텀 전략을 기존 VCP에 추가. 오늘 하루 4단계 파이프라인 전체 구현 완료.
+
+🗂️ 전체 구조
+yfinance(VCP) + 한경/매경 RSS(뉴스) + pykrx/yfinance(외국인) 3개 데이터 소스
+→ Claude CLI 테마 추출 → 섹터 매핑 → 합산(VCP50%+외국인20%+뉴스30%) → 텔레그램
+
+🔑 Phase 1 — narrative_scanner.py
+한경+매경 RSS 40개 헤드라인 → Claude CLI → 테마 5개 + 점수 추출 → 섹터별 종목 점수 배분
+
+🔑 Phase 2 — foreign_filter.py
+pykrx 1순위 (외국인 순매수 실데이터) → 실패 시 yfinance 거래량 급등 프록시 자동 폴백
+
+🔑 Phase 3 — sector_mapping.json
+반도체/2차전지/AI/에너지/바이오/금융/자동차 7개 섹터 → 26개 종목 매핑
+
+🔑 Phase 4 — combined_scorer.py + run_yfinance.py 통합
+3개 점수 가중합산 → S/A/B/C/D 등급 재산출 → 텔레그램 알림 자동 발송
+
+⚠️ 주의사항
+pykrx KRX 서버 응답 없을 때 (오늘 발생) yfinance 폴백이 작동하나 정확도 낮음
+VCP 데이터 없는 종목은 외국인+뉴스 두 가지만 합산 (자동 비율 재분배)
+
+💡 다음 단계 (v1.2)
+가중치 동적 조정 (장세별) + 토스증권 API 실매매 연결</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-16 · Improve_stock · 내러티브모멘텀 · 퀀트 · 3중필터</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260716-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
