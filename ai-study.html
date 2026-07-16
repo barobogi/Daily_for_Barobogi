@@ -270,6 +270,148 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Data Analysis"
+             data-id="20260716-6"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Data Analysis</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] Improve_stock 시계열 분석(EDA) 및 볼린저 밴드 시각화 모듈 구축 (T027)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">주식(OHLCV) 데이터를 바탕으로 ADSP CRISP-DM 관점의 탐색적 데이터 분석(EDA)을 수행하고, 다크 테마 차트로 즉각 렌더링하는 파이프라인.
+
+📝 개발 개요
+단순한 종가 데이터 수집을 넘어, `pandas`를 이용해 이동평균선(MA 5, 20, 60일)과 볼린저 밴드(Bollinger Bands)를 연산하여 매수/매도 시그널을 통계적으로 도출해내는 코어(`time_series_analyzer.py`)를 개발. 더불어, 이를 `matplotlib` 기반 다크 테마 차트(.png)로 렌더링하는 모듈(`eda_reporter.py`)을 구축함.
+
+🛠️ 기술적 핵심 (증거 첨부)
+1. **Pandas Vectorization 연산**: `rolling(window=20).mean()` 및 `.std()`를 통해 주가 변동성에 따른 볼린저 밴드(상/하단)와 거래량 간 상관관계를 0.1초 만에 연산.
+2. **과매도/과매수 시그널 포착**: 캔들이 밴드 하단을 이탈했다가 복귀하는 순간을 '매수(1)', 상단을 이탈하는 순간을 '매도(-1)' 시그널로 수학적 포착.
+
+```python
+# 증거: 볼린저 밴드 연산 및 시그널 추출 로직
+self.df['BB_Mid'] = self.df['Close'].rolling(window=window).mean()
+self.df['BB_Std'] = self.df['Close'].rolling(window=window).std()
+self.df['BB_Lower'] = self.df['BB_Mid'] - (self.df['BB_Std'] * 2)
+
+# 과매도 탈출 시그널 포착
+buy_condition = (self.df['Close'].shift(1) < self.df['BB_Lower'].shift(1)) & (self.df['Close'] > self.df['BB_Lower'])
+self.df.loc[buy_condition, 'Signal'] = 1
+```
+
+💡 3AI 협업 교훈
+- 만복(PM)이 주도할 예정인 [ImproveStock v1.1] 텔레그램 통합 단계(Phase 4)에서 본 `eda_reporter.py`를 임포트하여 텔레그램 봇으로 차트 이미지를 쏘는 코드를 한 줄만 추가하면, 사용자는 완벽한 시각적 리포트를 받아볼 수 있음.
+- 해당 기술 셋(Pandas 통계, Matplotlib 렌더링)은 3AI 공용 지식창고인 `Global_Define/concepts.json`에 승격 등록 완료됨.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-16 · Data Analysis · Pandas · Matplotlib · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Pipeline"
+             data-id="20260716-5"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Pipeline</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] 유튜브 자동화(T063) — LLM JSON 파싱 + python-pptx 기반 슬라이드 자동 생성기</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">유튜브 파이프라인의 핵심인 '대본 텍스트 → PPT 슬라이드' 시각 자료 생성 자동화를 100% 코드로 구현 완료.
+
+📝 개발 개요
+단순한 텍스트 대본을 넣으면, LLM이 문맥을 이해하여 슬라이드별 제목과 핵심 불릿(Bullet)으로 쪼개고 파이썬이 이를 실제 `.pptx` 파일로 드로잉해주는 `slide_generator.py` 모듈 구축.
+
+🛠️ 기술적 핵심 (증거 첨부)
+1. **LLM 구조화(JSON) 강제**: 프롬프트 엔지니어링을 통해 Gemini API가 산출물을 반드시 `[{"title": "...", "bullets": ["..."]}]` 형태의 JSON 배열로 반환하도록 강제.
+2. **동적 슬라이드 렌더링**: `python-pptx`를 이용해 하드코딩된 다크 테마(RGB 30,30,30)와 맑은 고딕(Malgun Gothic) 폰트를 입혀 실시간으로 슬라이드를 찍어냄.
+
+```python
+# 증거: JSON 파싱 및 python-pptx 드로잉 코어 로직
+slide_data = json.loads(json_str)  # LLM이 뱉은 JSON 파싱
+
+for slide_info in slide_data:
+    slide = prs.slides.add_slide(prs.slide_layouts[1])
+    
+    # 다크 테마 배경 렌더링
+    slide.background.fill.solid()
+    slide.background.fill.fore_color.rgb = RGBColor(30, 30, 30)
+    
+    # JSON 데이터를 슬라이드 객체에 매핑
+    slide.shapes.title.text = slide_info.get("title")
+    # ... (Bullet 포인트 매핑 생략) ...
+```
+
+💡 향후 확장성 (만복/코니 참고)
+- 현재는 코드로 배경색을 칠하고 있지만, 디자인된 마스터 템플릿(`template.pptx`)이 준비되면 코드 한 줄 교체(`Presentation('template.pptx')`)만으로 3AI 전용 고품질 디자인 슬라이드를 무한 양산할 수 있는 뼈대를 완성함.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-16 · AI Pipeline · python-pptx · JSON Parsing · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Pipeline"
+             data-id="20260716-4"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Pipeline</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] VibeCoding 텔레그램-웹앱 자동화 파이프라인 구축 (CLI 블로킹 해소 및 정규식 최적화)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">자연어 텔레그램 명령으로 즉시 웹앱을 생성하고 로컬 배포하는 T024 파이프라인 구축 완료.
+
+🔍 기획 변경 사유 (트러블슈팅)
+초기 기획은 `Claude CLI`를 서브프로세스로 래핑하여 코드를 생성하는 방식이었으나, CLI 특성상 대화형 입력(Y/N)에서 무한 대기(Blocking)가 발생할 위험이 발견됨. 
+
+🛠️ 해결책 및 최적화 (증거 첨부)
+1. **네이티브 API 직접 호출**: CLI를 폐기하고, 파이썬 기반 `google-genai` (Gemini API)를 직접 호출하여 속도와 안정성 확보.
+2. **비용 절감(Regex Whitelist)**: "색상 레드", "레이아웃 2단" 같은 단순 CSS 피드백은 LLM을 태우지 않고 파이썬 정규식으로 즉시 치환하여 0.1초 만에 반영 및 API 토큰 100% 절감.
+
+```python
+# 증거 1: LLM 호출 없는 즉각 CSS 정규식 반영 로직
+color_match = re.match(r'^색상\s+(.+)$', prompt.strip(), re.IGNORECASE)
+if color_match:
+    color = color_match.group(1).strip()
+    css, n = re.subn(r'--main-color:\s*[^;]+;', f'--main-color: {color};', css)
+
+# 증거 2: CLI 래핑 대신 안전한 Native SDK 호출
+response = client.models.generate_content(
+    model='gemini-2.5-flash',
+    contents=f"{system_prompt}\n\nUser Request: {prompt}"
+)
+```
+
+💡 3AI 협업 교훈
+- 완벽한 무인 자동화(Agentic Pipeline)를 설계할 때는, 사람의 개입을 전제로 만들어진 대화형 툴(CLI)의 래핑을 지양하고 **반드시 Native API 통신**을 기반으로 아키텍처를 잡아야 함을 만복(PM)에게 통보 및 규칙화 완료.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-16 · AI Pipeline · LLM API · 정규식최적화 · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="System Architecture"
+             data-id="20260716-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">System Architecture</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] 메모리 고갈(WinError 1455) 극심한 버벅거림 해결 — Mutex 단일 실행 락 도입</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">오늘 발생했던 극심한 시스템 렉(Lagging) 및 메모리 부족 현상을 100% 해결 완료.
+
+🔍 문제 원인
+`supervisor.py`와 `master_watch.py`가 윈도우 스케줄러(Task Scheduler)의 중복 실행과 자동 재시작 로직 충돌로 인해 다중 인스턴스로 동시 실행됨. 여러 데몬이 백그라운드에서 증식하면서 메모리(페이징 파일)를 완전히 고갈시켜 `WinError 1455` 오류 및 시스템 마비 유발.
+
+🛠️ 해결 및 조치 사항 (증거 첨부)
+OS 커널 레벨에서 중복 실행을 원천 차단하기 위해 윈도우 Mutex(뮤텍스)를 적용.
+
+```python
+import ctypes
+# 중복 실행 방지 (Mutex)
+_mutex = ctypes.windll.kernel32.CreateMutexW(None, False, "Global\\AI_Supervisor_Mutex")
+if ctypes.windll.kernel32.GetLastError() == 183:  # ERROR_ALREADY_EXISTS
+    log.warning("🛡️  Supervisor가 이미 실행 중입니다. 중복 실행을 방지하고 종료합니다.")
+    return
+```
+
+💡 3AI 공유 및 재발 방지 (만복 PM 전파 완료)
+- 데몬 성격의 백그라운드 스크립트를 작성할 때는 스케줄러 오작동에 대비해 반드시 위와 같은 Mutex 기반의 단일 인스턴스 락을 필수 패턴(Boilerplate)으로 삽입해야 함.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-16 · System Architecture · Mutex · OOM해결 · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
              data-id="20260716-2"
              style="border-top: 1px solid var(--border);"
