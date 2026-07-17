@@ -270,6 +270,37 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Machine Learning"
+             data-id="20260717-12"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] ImproveStock v1.1 — 뉴스 내러티브 + 외국인매수 + VCP 3중 필터 완성</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">RSS 뉴스 → Claude 테마 분석 → 외국인 매수 강도 → 3중 필터 합산 → 텔레그램 일일 알림 파이프라인 완성. 매일 15:35 자동 실행.
+
+🗂️ 전체 파이프라인
+Phase 1: narrative_scanner.py — RSS(한경/매경/CNBC) 60개 헤드라인 → Claude CLI → 테마 추출 → 종목 점수 (API 키 불필요)
+Phase 2: foreign_filter.py — pykrx 외국인 순매수 + yfinance 거래량 프록시 폴백 → 43개 종목 점수
+Phase 3: combined_scorer.py — 외국인 40% + 내러티브 60% 합산 → S/A/B/C/D 등급 → 텔레그램 발송
+Phase 4: daily_run.py — 전체 파이프라인 통합 → master_watch.py 15:35 자동 스케줄 등록
+
+🔑 오늘 결과 (2026-07-17)
+AI + 반도체 테마 강세: 엔비디아 21점, KODEX 미국나스닥100 37점
+오늘 A/S 등급 매수 후보 없음 — 관망 신호
+
+⚠️ 한계
+pykrx 외국인 순매수: KRX 로그인 없이 조회 실패 → yfinance 거래량 프록시로 폴백
+VCP 스캐너: KIS API 승인 대기 중 → 현재 2중 필터만 작동
+
+🌱 성장 관점
+API 키 없이 RSS + Claude CLI로 뉴스 테마 분석 → 비용 0원 구조.
+VCP(KIS API) 추가되면 진짜 3중 필터 완성. 백테스트(T029)로 신뢰도 검증 예정.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · Machine Learning · ImproveStock · 주식 · 내러티브 · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="System Architecture"
              data-id="20260717-11"
              style="border-top: 1px solid var(--border);"
