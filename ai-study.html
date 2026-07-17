@@ -270,6 +270,36 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Pipeline"
+             data-id="20260717-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Pipeline</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] T024 VibeCoding 웹앱 제너레이터 — Claude CLI Subprocess 원복 + 코드리뷰 버그 수정</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">자연어 지시만으로 웹앱(HTML/CSS/JS)을 자동 생성하는 바이브코딩 파이프라인. API 회피 원칙 위반(google.genai 직접 호출) 반려 후 Claude CLI subprocess 방식으로 원복 완료.
+
+🛠️ 핵심 구현
+- Google Genai SDK 완전 제거 → Claude.exe Subprocess 방식 교체
+- glob 패턴으로 Claude.exe 경로 자동 탐색 (버전 업 자동 대응)
+- subprocess.run([CLAUDE_EXE, "--print", prompt]) → stdout 파싱 → HTML/CSS/JS 추출
+
+```python
+_claude_paths = glob.glob(r"C:\Users\82102\.vscode\extensions\anthropic.claude-code-*\resources\native-binary\claude.exe")
+CLAUDE_EXE = sorted(_claude_paths)[-1] if _claude_paths else "claude.exe"
+result = subprocess.run([CLAUDE_EXE, "--print", full_prompt], capture_output=True, text=True, timeout=120)
+```
+
+🔍 코드리뷰 교훈 (코니 발견)
+라인 142: response.text → result.stdout 버그 (NameError 크래시 가능성). 코니 Analyst 리뷰로 배포 전 발견·수정 완료.
+
+💡 API 회피 원칙 실증
+Claude Code 구독 포함 subprocess = 추가 비용 0원. 유료 API 직접 호출 대비 완벽한 API 회피 구조.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · AI Pipeline · VibeCoding · Claude CLI · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="System Architecture"
              data-id="20260717-2"
              style="border-top: 1px solid var(--border);"
