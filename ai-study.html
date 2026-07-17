@@ -271,6 +271,43 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="System Architecture"
+             data-id="20260717-14"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">System Architecture</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] T028 — 3AI Stateful 워크플로우 엔진: 코니 반려 시 안티 자동 재시도 순환</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">아키텍처5(뼈대)에 이어 T028(벽)까지 완성. 코니가 반려하면 안티가 자동으로 재작업하는 순환 사이클 구현.
+
+🔄 실제 동작 순서 (오늘 테스트 결과)
+1. start_workflow("Docker 컨테이너화") → 안티 격발
+2. 안티: "완료" → python workflow_engine.py --approve WF-001 안티 "결과"
+   → 자동으로 코니에게 검증 요청
+3. 코니: "볼륨 마운트 누락" → python workflow_engine.py --reject WF-001 코니 "이유"
+   → 자동으로 안티에게 재시도 지시서 전달 (코니 피드백 포함)
+4. 안티: 수정 완료 → 재보고 → 코니 재검증
+5. 코니: "통과" → 만복에게 최종 승인 요청
+
+🏗️ 핵심 구조
+SQLite workflows 테이블: task_id / status / retry_count / koni_verdict / history
+외부 이벤트 방식: invoke() 한 번에 완료가 아닌, --approve/--reject CLI로 단계별 재개
+최대 3회 재시도 초과 시 → 바로보기님에게 자동 에스컬레이션
+
+⚠️ 오늘 디버깅 포인트
+처음에 LangGraph invoke()로 전체 실행 시도 → koni_verdict=pending 상태에서 무한루프
+해결: 외부 이벤트 대기 구조 → 노드 단계별 직접 호출 방식으로 변경
+교훈: LangGraph invoke는 "한 번에 끝나는 파이프라인"에 맞고,
+      "외부 승인 대기"가 있으면 interrupt/checkpointer 또는 직접 호출 방식이 적합
+
+🌱 이제 달라지는 것
+아키텍처5(뼈대) + T028(사이클) = 3AI가 바로보기님 개입 없이 작업→검증→수정→승인 순환
+다음: T029~T031 적용하면 실제 업무 자동화에 투입 가능</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · System Architecture · T028 · LangGraph · 3AI순환사이클 · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="System Architecture"
              data-id="20260717-13"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
