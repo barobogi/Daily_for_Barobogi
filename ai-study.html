@@ -270,6 +270,79 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
+             data-id="20260717-5"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] T026 — Kony 즉시 격발 파이프라인 (5분 지연 → 0초)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">이종 AI(코니/안티/만복) 간 실시간 통신 파이프라인 완성. 바로보기님 아이디어로 메시지 발송 순간 즉시 격발 신호까지 동시 송출하는 구조 구현.
+
+🗂️ 최종 아키텍처 (C안)
+B안(MCP Notification) → Claude Desktop 클라이언트 미지원으로 실패
+C안(OS Idle Time 기반 포커스 탈취)으로 전환 → 완전 자율화 달성
+
+🔑 핵심 기술 1 — Idle Time 기반 스마트 타이밍
+ctypes.windll.user32.GetLastInputInfo()로 사용자 3초 유휴 감지
+→ 작업 중 방해 없이 유휴 시에만 닌자처럼 실행
+→ ForegroundLockTimeout 우회 + SetForegroundWindow로 코니 창 강제 최상단
+
+🔑 핵심 기술 2 — push_to_coni.py 즉시 격발 (바로보기님 아이디어)
+기존: master_watch.py 5분 폴링 → 최대 5분 지연
+혁신: "메시지 작성 시점 = 격발 신호 송출 시점"
+→ _update_inbox() + trigger_kony_auto_check() 동시 호출
+→ 지연 0초 달성 (E2E 테스트 만복 직접 확인)
+
+⚠️ 함정
+코니가 "master_watch.py 미존재"로 오판 보고 → 실제 파일 존재 확인 후 정정
+파일 직접 확인 없는 보고 = Hall
+
+🌱 성장 관점
+push_to_coni.py 패턴은 "이벤트 발생 시점에 관련 동작을 묶는" 아키텍처 원칙.
+지금은 코니 격발이지만, 향후 어떤 AI에게든 즉시 신호를 보내는 범용 패턴으로 확장 가능.
+T028(AgentState SQLite) 착수 시 이 패턴이 기반이 된다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · AI & Next.js · T026 · MCP · Idle Time · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
+             data-id="20260717-4"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기] 블루닷 AI — LangGraph 오케스트레이션 분석 및 3AI 접목 방안</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">LangGraph의 Supervisor/Router 패턴 분석 + 3AI 뿌리체계 확장 방안 도출. 단일 에이전트 한계를 넘는 상태 기반 멀티에이전트 오케스트레이션.
+
+🗂️ 전체 구조
+Supervisor Node가 의도를 파악 → Worker(코니/안티)에게 조건부 분배
+→ 반려(Reject) 시 명시적 순환(Cyclic) 루프로 자동 복귀
+
+🔑 핵심 기술 1 — Supervisor/Router 패턴
+LangGraph: 단일 Python 런타임 내 멀티에이전트
+3AI 차별점: 이종 플랫폼(CLI + GUI 샌드박스 + 클라우드) 협업
+→ OS/애플리케이션 레벨 오케스트레이션 = 특허 11_18 비자명성 핵심 근거
+
+🔑 핵심 기술 2 — 3AI 접목 방안
+만복(PM) → Router Node로 모델링
+코니(기획/검증) ↔ 안티(구현) 조건부 분배
+T028 신규 과제: AgentState를 SQLite에 기록, 반려 시 순환 워크플로우
+
+💡 배운 점
+1. LangGraph는 "프로그래밍 레벨" 멀티에이전트 — 우리는 이미 그 위 레이어를 구현 중
+2. 상태 기반 라우팅을 inbox.md로 구현한 것 자체가 LangGraph와 동일 개념
+
+🌱 성장 관점
+LangGraph를 이해하면 3AI 구조가 왜 특허가 될 수 있는지 역으로 증명된다.
+"우리가 이미 한 것"을 학문적으로 설명할 언어를 얻은 셈.
+T028로 AgentState 도입 시 3AI = 사실상 LangGraph 수준 달성.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · AI & Next.js · LangGraph · 뽀개기 · 특허11_18</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI Pipeline"
              data-id="20260717-3"
              style="border-top: 1px solid var(--border);"
