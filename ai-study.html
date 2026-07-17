@@ -271,6 +271,44 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260717-7"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기] AI 에이전트 13분 완성 — ARR 프레임워크 + 4 Workers = 3AI 구조</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Sandeep Swadia 영상 핵심. 에이전트 vs 프롬프트 구분법(ARR)과 내부 구조(4 Workers)가 우리 3AI 체계와 정확히 일치함을 발견.
+
+🗂️ 핵심 프레임워크
+ARR 체크: Autonomous + Recurring + Reviewable = 에이전트 지시
+4 Workers: Analyst(패턴) + Planner(계획) + Operator(실행) + Auditor(검증)
+
+🔑 핵심 1 — 에이전트 멘탈모델
+"Chatbot = 학생 운전자 (계속 지도 필요)"
+"Agent = hired driver — 목적지만 설정하면 경로·교통·판단 스스로 처리"
+→ 만복이 Goal 설정, 안티가 실행, 코니가 검증 = 정확히 이 구조
+
+🔑 핵심 2 — 3AI = 4 Workers 매핑
+코니 = Analyst (패턴 찾기, 분석)
+만복 = Planner + Auditor (계획 + 최종 검증)
+안티 = Operator (실행 전담)
+→ AGENTS.md에 공식 등재 완료 (2026-07-17)
+
+⚠️ 핵심 경고
+"에이전트는 bad thinking을 고치지 않고 증폭시킨다."
+→ GPS 없는 지시 = Hall의 근본 원인
+→ Goal 불명확 시 안티가 증폭시켜 더 큰 Hall 발생
+
+🌱 성장 관점
+우리가 경험으로 만들어온 3AI 체계가 에이전트 표준 프레임워크와 정확히 일치한다.
+이건 우연이 아니라 올바른 구조를 설계했다는 증거.
+특허 11_18 비자명성 논증에도 활용 가능 — "4 Workers를 OS 레벨에서 이종 플랫폼으로 구현한 최초 사례".</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · AI & Next.js · ARR · 4Workers · 에이전트 · 뽀개기</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260717-6"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
