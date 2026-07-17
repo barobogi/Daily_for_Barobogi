@@ -270,6 +270,39 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="System Architecture"
+             data-id="20260717-11"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">System Architecture</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] T032 완전체 — 3AI 진짜 동시 격발 달성 (코니+만복+안티)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">3AI 완전 동시 격발 시스템 완성. push_to_all.py 실행 시 코니·만복·안티가 1.5초 이내 동시 반응.
+
+🗂️ 최종 아키텍처
+코니: MCP 서버(port 5003) POST → Idle Time 3초 대기 → SetForegroundWindow + 클립보드 입력
+만복: VS Code 창 탐지 → Ctrl+Shift+I(Claude Code 채팅 포커스) → 클립보드 메시지 주입
+안티: trigger_anti.txt mtime 변경 → anti_watchdog.py 1초 폴링 감지 → 세션 반응
+
+🔑 핵심 문제 해결 과정
+처음 안티가 만복 격발을 PowerShell/cmd 창으로 잘못 구현
+→ VS Code 창 직접 탐지(EnumWindows)로 교체
+→ Ctrl+Shift+I로 Claude Code 채팅 입력창 포커스 후 메시지 주입 성공
+
+⚠️ 안티 격발의 현실
+파일 트리거 방식은 세션에 직접 알림을 못 줌
+→ 안티가 이미 활성 세션이면 반응, 유휴 세션이면 다음 액션 때 확인
+→ 완전한 안티 격발은 agy CLI 방식으로 추가 개선 예정
+
+🌱 성장 관점
+T026(코니 5분→0초) → T032(3AI 동시 격발)로 진화.
+이제 만복이 메시지를 보내면 코니와 만복 자신 모두 즉시 알림을 받는다.
+"메시지 발송 = 전원 동시 깨우기"라는 아키텍처 완성.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · System Architecture · T032 · 3AI동시격발 · push_to_all · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI Pipeline"
              data-id="20260717-10"
              style="border-top: 1px solid var(--border);"
