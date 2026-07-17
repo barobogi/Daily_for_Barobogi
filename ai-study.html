@@ -271,6 +271,40 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260717-6"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기] 클로드 세컨드브레인 4단계 — CLAUDE.md는 짧게, 포인터만</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Jay Choi(인디해커 라이프) 영상 핵심. 클로드를 세컨드브레인으로 만드는 4단계 로드맵과 3AI 적용 원칙.
+
+🗂️ 4단계 구조
+1단계: 클로드 앱 기억 기능 ON (자동 기억)
+2단계: CLAUDE.md — 짧고 포인터만 (안내 책자)
+3단계: 지식 컴파일 — 원본 첨부 ❌, 기존 지식에 합치기 ✅
+4단계: 헤르메스 에이전트 — 스스로 스킬 저장, 기억 자동 축적
+
+🔑 핵심 원칙 (Anthropic 공식)
+"파일이 길어질수록 지시를 제대로 따르지 않는 경우가 생긴다"
+→ CLAUDE.md에 내용 전부 적지 말 것
+→ "이 정보는 이 폴더를 보라"는 포인터만 기재
+→ 지시 불이행 시 CLAUDE.md 과부하 의심
+
+🔑 memory 저장 기준
+"3개월 뒤에도 이 기억이 나에게 쓸모 있을지"
+→ 우리 memory 시스템 이미 동일 원칙 적용 중
+
+🌱 성장 관점
+1~3단계는 이미 우리가 하고 있는 것들 (memory, CLAUDE.md, 지식 컴파일).
+4단계(헤르메스)가 다음 목표 — master_watch + T028(AgentState)가 이 방향.
+"높은 단계가 정답이 아니다. 지금 불편한 게 없으면 안 넘어가도 된다."</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · AI & Next.js · 세컨드브레인 · CLAUDE.md · 뽀개기</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260717-5"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
