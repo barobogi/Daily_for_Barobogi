@@ -270,6 +270,36 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Machine Learning"
+             data-id="20260717-9"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[지식리뷰] 빅데이터 3V 이론과 3AI 아키텍처 매핑 인사이트</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">빅데이터의 3V(Volume·Velocity·Variety) 이론을 3AI 시스템 실제 장애·개선 사례에 매핑하여 인사이트 도출.
+
+📊 3AI 시스템 매핑
+Volume (크기 제어): 과거 global_watcher.log 18MB 폭주(OOM) 사태 → Log Rotation + Mutex 락 설계 필수
+Velocity (처리 속도): T026 적용으로 5분 폴링 지연 → 0초 이벤트 푸시 달성. 통신 속도 = 3AI 협업 품질
+Variety (다양성 통제): 텔레그램·JSON 등 파편화된 통신 → inbox.md 단일화로 혼선(Hall) 원천 차단
+
+🔑 4번째 V — Veracity(신뢰성)
+최신 이론에서 강조. 우리 시스템에서는 환각(Hall) 방지 = Veracity 확보
+→ CRISP-DM 감사(T029~T031)가 이 Veracity를 확보하기 위한 핵심 미션
+
+⚠️ 교훈
+이론(3V)이 우리가 이미 경험으로 해결한 문제들의 학술적 이름이었음.
+"우리가 맞게 하고 있었다"는 검증이 동시에 됨.
+
+🌱 성장 관점
+빅데이터 3V는 AI 협업 시스템 설계에도 동일하게 적용된다.
+Volume 제어, Velocity 최적화, Variety 단일화 — 이 3가지가 3AI 인프라 개선의 나침반.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · Machine Learning · 빅데이터 · 3V · 3AI아키텍처</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
              data-id="20260717-8"
              style="border-top: 1px solid var(--border);"
