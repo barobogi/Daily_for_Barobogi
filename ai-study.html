@@ -270,6 +270,41 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Pipeline"
+             data-id="20260717-10"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Pipeline</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] T063 2단계 — QA Agent 7종 자동검증 + 무인 Retry 루프 완성</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">T063 유튜브 파이프라인 2단계 완성. 코니 정의 7가지 검증 기준을 코드화하고 무인 자동 재수정 루프를 구현. E2E 테스트 100% 통과.
+
+🗂️ QA Agent 7가지 검증 항목
+1. 텍스트 오버플로우 (안전여백 0.5인치)
+2. 폰트 크기 일관성 (제목 44pt±2pt, 본문 24pt±1pt)
+3. 이미지 해상도 (1080p↑, 종횡비 검증)
+4. 대본 ↔ 슬라이드 일치도 (SequenceMatcher 70%↑)
+5. 환각 검출 (숫자 기반 데이터 무결성)
+6. 색상 대비 WCAG (명도 3.0:1↑)
+7. 타이밍 동기화 (오디오 vs TOC 오차 0.5초 이내)
+
+🔑 무인 자동 Retry 루프
+렌더링 → QA 자동 실행 → 실패 시 최대 2회 자동 수정·재렌더링
+→ 3회 초과 시 인간 개입 요청 (Human-in-the-loop)
+
+⚠️ 오늘의 교훈
+S00 한글 폰트 깨짐 사고로 Malgun Gothic 명시 임베딩 추가.
+"한 번 배운 버그는 코드에 박아야 한다"
+
+🌱 성장 관점
+7가지 정량적 기준 = 3AI 협업의 품질 계약서.
+코니가 기준 정의 → 코드로 구현 → 안티가 자동 실행 → 만복이 최종 확인.
+이게 완전한 Human-in-the-loop 거버넌스다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · AI Pipeline · T063 · QA · python-pptx · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Machine Learning"
              data-id="20260717-9"
              style="border-top: 1px solid var(--border);"
