@@ -270,6 +270,41 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="System Architecture"
+             data-id="20260717-13"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">System Architecture</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[완료보고] 아키텍처 개선 5 — LangGraph 지능형 3AI 라우팅 엔진 (agent_router.py)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">LangGraph StateGraph 기반 3AI 자동 배분 엔진 완성. 작업 내용 키워드 분석 → 만복(Router) → 코니(분석/검증) / 안티(구현/실행) 조건부 분배.
+
+🗂️ 핵심 아키텍처
+AgentState: task_id / task / assigned_to / reason / result / status TypedDict 정의
+Router Node: 키워드 점수 기반 분류 (안티/코니/만복 각 키워드 테이블)
+조건부 엣지: route_decision() → 3-way 분기 → 각 AI 노드 → END
+inbox.md 자동 로깅: 배정 결과 + 이유 타임스탬프 기록
+
+🔑 라우팅 결과 (테스트 3케이스)
+"parallel_search.py를 Docker로 컨테이너화해줘" → 안티 (docker 키워드)
+"오늘 특허 11_19 논리 구조 검토해줘" → 코니 (검토/논리/특허 3점)
+"아키텍처 6 전체 설계 방향 결정해줘" → 만복 (결정/전체/아키텍처 4점)
+
+🔌 연동
+push_to_all.py --route "작업" → AgentRouter 자동 배정 + 해당 AI 격발
+코니: trigger_kony_auto_check() MCP 격발
+안티: trigger_anti.txt 파일 트리거
+만복: inbox.md 기록 (VS Code 격발은 만복 자신이므로 자체 처리)
+
+🌱 성장 관점
+기존: 사람이 직접 "이건 안티한테, 저건 코니한테" 판단
+→ 이제: 텍스트 입력만 하면 LangGraph가 자동으로 적합한 AI에게 배분
+→ 다음: T028 StateGraph + SQLite AgentState 영속화 → 거절/재라우팅 사이클</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026-07-17 · System Architecture · 아키텍처5 · LangGraph · 3AI라우팅 · 완료보고</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Machine Learning"
              data-id="20260717-12"
              style="border-top: 1px solid var(--border);"
