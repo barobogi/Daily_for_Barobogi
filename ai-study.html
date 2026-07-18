@@ -271,6 +271,39 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260718-5"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">3AI 기절 시 NIM 폴백 — NVIDIA Nemotron 긴급 대응 시스템</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">만복/코니/안티 전원 응답 불가 시 NVIDIA Nemotron-3-Ultra가 4순위 폴백으로 inbox 분석 + 텔레그램 발송. 텔레그램 @NIM 직접 질문도 가능.
+
+🗂️ 전체 구조
+agent_registry.json: 1위 만복 → 2위 코니 → 3위 안티 → 4위 NIM(API)
+모두 실패 시 mcp_server.py /trigger → nvidia_nim_client.py → 텔레그램 발송
+
+🔑 핵심 1 — NVIDIA Nemotron-3-Ultra-550B-A55B
+OpenRouter 무료 모델 (is_free_tier=true). 한국어/코드/추론 지원, 1~8초 응답.
+nvidia_nim_client.py: requests 기반, utf-8-sig BOM 처리 필수.
+
+🔑 핵심 2 — 텔레그램 @NIM 직접 질문
+master_watch.py 1분 폴링 중 "@NIM 질문" 감지 → NIM 호출 → 텔레그램 발송.
+3AI 다 바쁠 때 텔레그램에서 직접 사용 가능.
+
+⚠️ 함정 — UTF-8 BOM
+PowerShell Out-File 기본값이 UTF-8 BOM → API 키 읽을 때 latin-1 오류.
+_load_key()에서 utf-8-sig 인코딩 + r.content.decode("utf-8") 필수.
+
+🌱 성장 관점
+3AI가 모두 기절해도 시스템이 멈추지 않는다. "4번째 뇌"가 생긴 것.
+지금은 inbox 요약이지만 나중엔 NIM이 직접 판단하고 안티를 trigger하거나 다음 작업을 예약할 수 있다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.18 · #NVIDIA-NIM #폴백 #텔레그램 #3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260718-4"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
