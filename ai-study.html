@@ -271,6 +271,43 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260718-6"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">RAG는 필요없다 — Karpathy가 검증한 방향, 우리가 이미 하고 있었다</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Andrej Karpathy가 한 달 써보고 내린 결론: 벡터DB·RAG 없이 Claude Code + 마크다운 파일 직접 탐색이 더 정확하고 저렴하다. 만복 시스템이 처음부터 이 패턴이었다.
+
+🗂️ Karpathy 방식 vs 만복 시스템
+Karpathy: Obsidian .md 볼트 → Claude Code가 grep/glob으로 직접 탐색
+만복: D:\AI .md 파일들 → Claude Code CLI가 Read/Grep으로 직접 탐색
+→ 구조가 동일하다.
+
+🔑 RAG가 필요 없는 이유
+RAG(청킹+임베딩+벡터DB)는 컨텍스트 윈도우가 작을 때의 우회책.
+Claude의 200K 컨텍스트 + 파일 직접 탐색으로 청크 경계 손실 없이 원문 그대로 전달.
+벡터DB 인프라 구축·유지 비용 0원 — API 회피 원칙과 완벽히 일치.
+
+🔑 우리 시스템과의 정렬 포인트
+CLAUDE.md, inbox.md, REF_continue.md를 Claude Code가 직접 읽는 구조 = No-RAG 세컨드 브레인.
+뿌리체계(.md + 폴더 구조)가 곧 Obsidian 볼트 역할.
+만복 memory/ 폴더 = Karpathy의 "append-only LLM wiki".
+
+⚠️ 단, 확장 한계
+D:\AI 폴더 규모가 매우 커지면(수만 개 파일) grep 탐색만으로 느려질 수 있음.
+그 시점엔 경량 로컬 인덱스 추가 검토 — 지금 당장 벡터DB 도입 불필요.
+
+🌱 성장 관점
+"우리가 틀린 방향으로 가고 있지 않은가?"에 대한 외부 검증이 됐다.
+세계적인 AI 연구자가 1달 쓰고 내린 결론과 우리 설계가 같다.
+다음 단계: D:\AI 파일들에 [[백링크]] 추가로 연결성 강화하면 Karpathy 방식 완전 구현.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.18 · #RAG #Obsidian #Karpathy #Claude #세컨드브레인</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260718-5"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
