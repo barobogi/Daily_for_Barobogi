@@ -271,6 +271,38 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260718-8"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI & Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">하이브리드 라우팅 — VibeCoding 개발망 vs N-AI 업무망 분리</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">텔레그램 봇 하나에서 VibeCoding 지시와 N-AI 업무 대화가 충돌하는 문제를 키워드 필터 + subprocess 격리로 해결. 안티(Operator) 구현, 코니(Analyst) 검증 완료.
+
+🗂️ 구조
+텔레그램 메시지 수신
+  → "/vibe" 또는 "바이브" 키워드 감지 → subprocess.Popen으로 VibeCoding 격발 (개발망)
+  → 키워드 없으면 → N-AI 레지스트리 동적 라우팅 (업무망)
+두 경로가 상호 배타적 → Race Condition 원천 차단.
+
+🔑 핵심 설계 포인트
+subprocess 백그라운드 격발: VibeCoding 실행이 N-AI 대화 흐름 방해 안 함.
+명시적 키워드 필터: 암묵적 의도 추측 없이 확실한 분기.
+확장성: 새 개발망 추가 시 필터만 추가하면 됨.
+
+⚠️ 주의
+"바이브 콘서트 추천해" 같은 오매칭 가능성 존재.
+키워드 설정 파일화 + 정확 매칭으로 오류율 낮추는 게 다음 단계.
+
+🌱 성장 관점
+N-AI 3AI 시스템이 커질수록 "어떤 채널로 보낼 것인가"를 명확히 하는 라우터가 필수.
+지금은 VibeCoding vs 업무, 나중엔 특허봇/주식봇/가족봇이 추가될 때도 같은 패턴으로 확장 가능.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.18 · #하이브리드라우팅 #VibeCoding #텔레그램봇 #3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260718-7"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
