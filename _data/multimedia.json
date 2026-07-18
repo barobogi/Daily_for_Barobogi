@@ -1,5 +1,33 @@
 [
     {
+        "title": "🖥️ Claude Fable 5 vs Kimi K3 코딩 성능 비교: 마인크래프트 비행 시뮬레이터 제작  (클로드 vs 키미 3)",
+        "url": "https://www.youtube.com/watch?v=F_sY25dDGqc",
+        "channel": "호두의 AI 분석실",
+        "summary": "Claude Fable 5와 Kimi K3 두 AI 모델의 코딩 성능을 마인크래프트 비행 시뮬레이터 제작이라는 동일 과제로 비교하는 영상입니다. 자막이 제공되지 않아 상세 내용은 제한적이나, 제목과 설명 기준으로 두 모델의 코드 생성 품질·완성도를 비교하는 벤치마크 콘텐츠로 판단됩니다.",
+        "categories": [
+            "AI모델비교",
+            "코딩벤치마크",
+            "Claude",
+            "Kimi"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Fable 5와 Kimi K3의 실전 코딩 태스크(게임 제작) 비교 벤치마크",
+            "동일 프롬프트/과제 기반 AI 모델 코딩 성능 비교 방법론 참고 가능"
+        ],
+        "learning_related": [
+            "마인크래프트 비행 시뮬레이터라는 복합 로직(물리엔진+입력처리) 과제로 AI 코딩 실력 검증 사례",
+            "AI 모델별 코드 생성 결과물 비교 시 체크할 항목(정확성/완성도/버그) 참고 가능"
+        ],
+        "key_insights": [
+            "자막 미제공으로 실제 비교 결과(승패, 세부 코드 품질)는 영상 시청 없이는 확인 불가",
+            "동일 과제 기반 AI 모델 비교는 향후 3AI(만복/코니/안티) 작업 배분 시 참고할 벤치마크 방법론"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 모델 코딩 성능 비교 학습 자료로 활용 가능",
+        "timestamp": "2026-07-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/F_sY25dDGqc/hqdefault.jpg"
+    },
+    {
         "title": "올리브영 같은 매장, AI 에이전트가 통째로 운영하면?",
         "url": "https://www.youtube.com/watch?v=OITqjlUnmAM",
         "channel": "호두의 AI 분석실",
