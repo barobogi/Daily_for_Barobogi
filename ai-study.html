@@ -330,6 +330,21 @@
 "AI가 실수하면 그 실수가 다시 안 나오도록 환경을 고치는 것"
 → Hookify가 이것을 자동화. 현재 만복이 수동으로 CLAUDE.md에 Hall 예방 룰 추가하는 것과 동일한 원리.
 
+⚡ 자막 재분석으로 명확해진 것 (2026-07-19 오후)
+
+[Hookify vs CLAUDE.md — 보완 관계, 상충 없음]
+- Hookify → .claude/ 로컬 훅 파일 (프로젝트 단위, 코딩 패턴 실수)
+- CLAUDE.md → 전역 선언 (만복 단독 수정 권한, 3AI 운영 원칙)
+- 로컬 반복 실수 = Hookify 자동화 / 전역 운영 원칙 = CLAUDE.md 수동 추가
+
+[Claude MD Management 2가지 도구]
+- revise-claude-md: 세션 끝날 때 실행 → 이번 대화 분석 → CLAUDE.md 추가 후보 자동 제시 (회의록)
+- claude-md-improver: 주기적 점검용 → 6가지 기준 채점 → 안 쓰는 규칙/누락 설정 감지
+
+[Serena MCP 전제조건]
+- UV 파이썬 패키지 매니저 시스템 설치 필수
+- 없으면 /mcp reconnect 해도 fail 상태 유지
+
 ⚠️ 설치 방법
 - 플러그인 3개: claude plugin enable [name]@claude-plugins-official
 - Serena MCP: claude mcp add serena -- uvx --from git+https://github.com/oraios/serena serena start-mcp-server
