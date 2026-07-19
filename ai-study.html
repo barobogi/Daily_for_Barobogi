@@ -310,6 +310,40 @@
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260719-5"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기 B] Claude Code 6시간 강의 — 자판기 vs 슬롯머신 + Ugly MVP + 심미안</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+Claude Code를 올바르게 쓰기 위한 3가지 철학. 우리 3AI가 이미 무의식적으로 실천하던 것을 명시화.
+
+🗂️ 핵심 3가지 (→ AGENTS.md 정식 편입)
+
+1. 자판기 우선 법칙 (Vending Machine First) [만복]
+"이게 Script로 가능한가?" 먼저 물어볼 것.
+가능하면 Script(자판기), 불가능한 창의/판단 영역에만 Agent(슬롯머신) 사용.
+예측 불가능한 AI 사용 최소화 → 신뢰성 향상
+
+2. Ugly MVP + 쾌속 이터레이션 [안티]
+완벽한 버전 기다리며 멈추지 말 것. v0.1 배포 → 피드백 → v0.2 반복.
+예외: 보안/법률 이슈는 v0.1 전에 해결 필수
+
+3. 심미안(Taste) + 책임감 [코니]
+검증은 "버그 없는가?"가 아닌 "정말 좋은가?"
+기술 완성도 + 설계 원칙 일관성 + 우리 문화와의 맞음 모두 체크
+내 검증 결과에 내 책임 명시
+
+🌱 3AI 역할 재정의
+만복(Planner+Script판단) / 안티(Operator+MVP배포) / 코니(Auditor+심미안)
+→ Claude Code 강의가 우리 3AI 헌법의 기준점이 됨</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.19 · #ClaudeCode #자판기법칙 #UglyMVP #심미안 #3AI헌법 #AGENTS편입</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260719-4"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
