@@ -298,6 +298,40 @@
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260719-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기 실전 반영] 클로드 코드 공식 플러그인 4개 설치 — 토큰 절약 + Hall 방지 자동화</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약: 짐코딩 영상에서 발굴한 4개 플러그인을 오늘 실제 만복 환경에 설치 완료. 2026-07-26 일요일 1주일 효과 리뷰 예정.
+
+🗂️ 설치 완료 목록
+① Session Report — 토큰 사용량 HTML 명세서 (캐시 히트율까지 분석)
+② Claude MD Management — CLAUDE.md 자동 채점 (6가지 기준)
+③ Hookify — 반복 실수 패턴 감지 → 자동 훅 등록 (Hall 방지 자동화)
+④ Serena MCP — 의미 기반 코드 검색, 토큰 최대 70% 절약
+
+🔑 핵심 개념 — 하네스 엔지니어링 (Mitchell Hashimoto)
+"AI가 실수하면 그 실수가 다시 안 나오도록 환경을 고치는 것"
+→ Hookify가 이것을 자동화. 현재 만복이 수동으로 CLAUDE.md에 Hall 예방 룰 추가하는 것과 동일한 원리.
+
+⚠️ 설치 방법
+- 플러그인 3개: claude plugin enable [name]@claude-plugins-official
+- Serena MCP: claude mcp add serena -- uvx --from git+https://github.com/oraios/serena serena start-mcp-server
+
+💡 검증 계획
+새 세션 시작 후 /session-report 실행 → 캐시 히트율 확인
+2026-07-26(일) 1주일 누적 데이터로 최종 효과 판정
+
+🌱 성장 관점
+Hookify = Hall 방지 자동화. 바로보기님이 일일이 "CLAUDE.md에 추가해"라고 지시하지 않아도 만복이 스스로 패턴을 감지하고 환경을 고치는 구조로 발전하는 첫 걸음.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.19 · #ClaudeCode #플러그인 #토큰절약 #HarnessEngineering #Hookify #SerenaMCP #Hall방지</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260718-8"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
