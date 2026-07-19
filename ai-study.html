@@ -310,6 +310,34 @@
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260719-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기 C] Hermes Agent — 24/7 오픈소스 에이전트 운영 모델 분석</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+VPS 24/7 + Telegram Topic 워크스페이스 분리 + /goal 자가치유 루프 — 오픈소스 에이전트가 혼자 계속 돌아가는 구조.
+
+🗂️ 핵심 3가지
+1. VPS 24/7: 로컬 머신 의존 없이 항상 켜져 있는 에이전트 인프라
+2. Telegram Topic: 주제별 채팅 분리 → 멀티태스크 추적 + 모바일 접근
+3. /goal 루프: 목표 설정 → 에이전트가 스스로 검토/수정/반복 (자가 치유)
+
+🌱 3AI 뿌리 확장 (별도 프로젝트로 등록)
+T-TG-TOPIC: Telegram 멀티 Topic 연동 → 코니/안티/만복 채널 분리 (2026-07-26 예정)
+T-GOAL-LOOP: /goal 루프 통합 → 뽀개기 7~8단계 자동 재시도 엔진 (2026-08-02 예정)
+T-VPS-DEPLOY: VPS 자동 배포 파이프라인 → 24/7 운영 인프라 (2026-08 중순 예정)
+
+⚠️ /goal 제어 기준 (API 비용 폭발 방지)
+최대 20턴 + 1시간 + 할당량 75% 중 하나 충족 시 자동 중단
+뿌리체계 진행 상황에 따라 일정 당겨질 수 있음</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.19 · #HermesAgent #24/7에이전트 #TelegramTopic #자가치유루프 #오픈소스</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260719-2"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
