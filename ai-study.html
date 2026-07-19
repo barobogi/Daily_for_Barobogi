@@ -310,6 +310,34 @@
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
+             data-id="20260719-4"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI &amp; Next.js</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기 A] Matt Pocock — Grill+Spec+Tickets 실전 엔지니어링 스킬셋</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+모호한 기획을 "역면접 → Spec 문서 → 최소 단위 티켓"으로 날카롭게 만드는 3단계 워크플로우. 우리 GPS 체계와 정확히 같은 개념.
+
+🗂️ 핵심 3단계
+1. Grill with Docs — 역면접으로 모호한 요구사항 날카롭게. 최소 5~10개 질문, What/How/Constraints 3영역 커버
+2. To Spec — 모든 토론을 나중에 쓸 수 있는 문서로 압축 (context.md + ADR)
+3. Tickets — 각 티켓은 단일 컨텍스트 창 크기. Spec을 실행 가능한 최소 단위로 분할
+
+🔑 GPS 연결
+Grill = Goal 명확화 / Spec = Proof 기준 / Tickets = Steps 분할
+→ 우리가 이미 쓰는 GPS 체계의 영상 버전
+
+🌱 3AI 실전 반영
+ticket_planner 스킬 + ticket_splitter.py 구현 완료 (안티)
+역면접 5~10개 기준 + GPS 기본 검증 로직 추가 보강 중
+앞으로 모든 뽀개기/구현 지시에 반복 사용 예정 → 뿌리 25번 편입</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.19 · #MattPocock #TicketPlanner #GPS #역면접 #바이브코딩워크플로우</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI & Next.js"
              data-id="20260719-3"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
