@@ -349,6 +349,54 @@ Supabase(DB+인증) + Vercel(배포) + Stripe(결제) + OpenAI+웹검색(핵심 
           <p class="text-xs" style="color: var(--text-tertiary);">2026.07.19 · #바이브코딩 #ToneAdapt #창업사례 #ClaudeCode #멀티플랫폼 #아이디어검증</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Claude Code"
+             data-id="20260720-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Claude Code</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뽀개기 1] Claude Code 팀이 터득한 자동화의 역설 — 단순할수록 강하지만, 기본을 지켜야 한다</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+Peter Yang × Tariq Shihipar(Claude Code 팀) 40분 인터뷰. Loop·Goal·Workflow 3총사 + 시스템 프롬프트 80% 삭감 이유 + 우리 3AI 구조와의 충격적 일치.
+
+🔑 핵심 3가지
+
+① Flash Goal / Workflow 3총사
+- Flash Goal: exit condition 명시 → 에이전트 조기 종료 방지
+- Workflow: 서브에이전트 병렬 + 별도 검증 에이전트 분리
+- Self-preferential bias: 작업한 AI가 자기 결과물에 관대 → 우리 3AI(안티 실행 / 코니 검증 / 만복 승인)가 이미 이 구조였음
+
+② 시스템 프롬프트 80% 삭감
+- Claude Code 팀 자체 프롬프트 80% 축소
+- 모델이 스마트해질수록 예제·제약이 오히려 방해
+- "Never X" → "왜 하면 안 되는지 이유"가 더 효과적
+
+③ 스펙 = Unknown unknowns 제거 과정
+- 계획은 일회성이 아닌 반복 (탐색 → 구현 → 재스펙)
+- 가장 단순한 프로토타입 먼저 → 점진적 발전
+
+🔴 바로보기님 핵심 인사이트
+"축소는 좋은데 기본이 무너지면 안 된다"
+오늘 CLAUDE.md 78% 축소 실천 → 그러나 더 중요해진 것이 있음.
+
+절대 빼면 안 되는 기본 원칙 4가지:
+1. master_watch.py 항상 실행 (빠지면 하루 자동화 전체 누락)
+2. inbox.md 전체 읽기 (부분 확인 = Hall)
+3. 일기 위치 단일화 (D:\AI\AI_hub\shared\diaries\)
+4. Human-in-the-Loop 승인 (무단 격발 방지)
+
+💡 역설의 핵심
+"단순하게 줄여라" + "기본은 더 강하게 지켜라" — 이 둘은 모순이 아니다.
+줄일수록 남은 것의 무게가 더 무거워진다.
+
+🌱 3AI 적용
+오늘 master_watch 재시작 누락 → 18:00 자동화 전체 누락 = 이 원칙의 실제 사례
+세션 시작 체크리스트에 master_watch 확인 추가 완료</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.20 · #ClaudeCode #Goal #Workflow #시스템프롬프트최적화 #자동화역설 #기본원칙 #뽀개기</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
              data-id="20260719-5"
              style="border-top: 1px solid var(--border);"
