@@ -247,6 +247,10 @@
             data-tag="Web Dev" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
             Web Dev
           </button>
+          <button class="filter-btn px-3 py-1 rounded-full text-xs font-medium transition-colors"
+            data-tag="파이프라인" style="background-color: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border);">
+            파이프라인
+          </button>
         </div>
       </div>
     </section>
@@ -269,6 +273,41 @@
         <button onclick="clearStudyPat()" class="px-3 py-2 rounded-lg text-xs font-semibold" style="background-color: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border);">삭제</button>
       </div>
       <div id="studyList" style="border-color: var(--border);">
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
+             data-id="20260720-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[T033] Kling AI에서 RoboNeo 애그리게이터로 파이프라인 우회 전환</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약: Kling AI의 도메인 변경과 UI 전면 개편으로 Playwright 자동화가 파탄(ARR 기준 미달)남에 따라, RoboNeo 애그리게이터로 우회하여 백엔드 파이프라인을 재건축함.
+
+🗂️ 문제 발생 경위 (7/18)
+1. Kling 도메인 이전 (klingai.com → kling.ai)으로 인한 세션 붕괴.
+2. 영어 버전 UI 개편으로 React DOM 구조 완전 변경 → Playwright Locator 타임아웃 무한 반복.
+3. ARR 자율성(Autonomous) 미달: 에러 복구를 위해 사람이 계속 개입해야 하므로, 안티가 작업을 중단하고 만복에게 이관함 (안티→만복_20260718_이미지생성_이관).
+
+🔑 핵심 기술 1 — RoboNeo (우회 경로 채택)
+- RoboNeo는 Kling과 Sora2 등 복수 AI 모델을 단일 인터페이스에서 제공하는 애그리게이터.
+- roboneo_auto.py v0.1(뼈대)을 신규 설계하여 UI 불안정성 및 세션 제한 리스크 회피 시도.
+
+⚠️ 주의사항 / 함정
+- 기존 Kling 자동화 복구에 매달려 시간 낭비(Hallucination 루프) 발생.
+- 원인: 이전 컨텍스트(7/18 안티의 반납 기록)를 잊고 무지성으로 버그 픽스를 시도함.
+- 해결: 전체 히스토리를 파악한 후 빠른 피벗(Pivot) 결정.
+
+💡 배운 점 / 교훈
+1. 에러를 억지로 고치는 것보다, 파이프라인 전체를 우회(애그리게이터 사용)하는 것이 유지보수에 유리할 수 있다.
+2. 자율성(Autonomous)이 훼손된 자동화는 즉각 버려야 한다.
+
+🌱 성장 관점
+로보네오 애그리게이터로의 우회는 특정 플랫폼(Kling) 종속성을 끊어내는 첫 단계입니다.
+향후 RoboNeo마저 막히더라도, agent_router.py의 폴백(Fallback) 구조처럼 다른 플랫폼으로 즉각 전환할 수 있는 '모듈형 설계'의 중요성을 깨달았습니다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.20 · #RoboNeo #KlingAI #트러블슈팅 #파이프라인 #ARR</p>
+        </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI & Next.js"
              data-id="20260719-1"
