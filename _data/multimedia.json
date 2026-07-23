@@ -1,5 +1,32 @@
 [
     {
+        "title": "One Agent, Many Devices? 🧠 Full Hermes Agentic AI + Tailscale Workflow",
+        "url": "https://www.youtube.com/watch?v=OMQo6YMZYzo",
+        "channel": "Wanderloots",
+        "summary": "Hermes 계열 로컬 에이전틱 AI를 Tailscale(메시 VPN)로 여러 디바이스에 연결해 하나의 AI 에이전트를 여러 기기에서 접근·활용하는 워크플로우를 다루는 영상으로 추정됩니다. 자막이 제공되지 않아 제목 정보만으로 분석했습니다.",
+        "categories": [
+            "AI 에이전트",
+            "네트워킹",
+            "로컬 LLM"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Hermes 기반 에이전틱 AI를 여러 디바이스에서 공유 접근하는 구조",
+            "Tailscale을 활용해 로컬 AI 에이전트를 원격/멀티 디바이스로 노출하는 패턴"
+        ],
+        "learning_related": [
+            "Tailscale 메시 VPN 구성 방식 학습 가치",
+            "단일 에이전트 인스턴스를 여러 클라이언트가 공유하는 아키텍처 참고 가능"
+        ],
+        "key_insights": [
+            "로컬에서 구동한 AI 에이전트를 클라우드/유료 API 없이 여러 기기에서 접근 가능하게 만드는 접근으로 보임",
+            "자막 부재로 세부 구현 방식(포트 포워딩, 인증 등)은 확인 불가 — 원문 확인 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 로컬 AI 에이전트 멀티 디바이스 접근 구조, API 회피(비용 0원) 원칙과 부합 가능성",
+        "timestamp": "2026-07-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/OMQo6YMZYzo/hqdefault.jpg"
+    },
+    {
         "title": "Why Hermes Agent? 🤔 Intro & Future AI Benefits  #ai #agenticai #hermes",
         "url": "https://www.youtube.com/watch?v=PuXlss5ODkc",
         "channel": "Wanderloots",
