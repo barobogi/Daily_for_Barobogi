@@ -1,5 +1,19 @@
 [
     {
+        "title": "DuckDB: The 20MB Database Killing Your Snowflake Bill",
+        "url": "https://www.youtube.com/watch?v=lwnhJajthWc",
+        "channel": "Cloud Codes",
+        "summary": "DuckDB: The 20MB Database Killing Your Snowflake Bill",
+        "categories": [],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/lwnhJajthWc/hqdefault.jpg"
+    },
+    {
         "title": "🖥️ Claude Fable 5 vs Kimi K3 코딩 성능 비교: 마인크래프트 비행 시뮬레이터 제작  (클로드 vs 키미 3)",
         "url": "https://www.youtube.com/watch?v=F_sY25dDGqc",
         "channel": "호두의 AI 분석실",
