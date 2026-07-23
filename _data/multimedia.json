@@ -1,5 +1,247 @@
 [
     {
+        "title": "똑같은 프롬프트인데 비용이 1/3? Claude Code에 제2의 뇌 만들기 (Graphify + Obsidian)",
+        "url": "https://www.youtube.com/watch?v=ZCK-zL3c2vA",
+        "channel": "techyoo",
+        "summary": "Claude Code로 대규모 코드베이스를 다룰 때, 그래피파이(Graphiti)로 코드를 AST 기반 그래프 구조로 변환하고 옵시디안으로 영구 저장해 AI의 '제2의 뇌'를 만드는 방법을 소개한다. 기존 RAG/벡터 임베딩 방식 대비 LLM 토큰을 전혀 쓰지 않고 무료·로컬로 코드 관계를 매핑할 수 있어, 매번 처음부터 물어보는 것보다 토큰 비용이 3~4배 절감된다.",
+        "categories": [
+            "Claude Code",
+            "그래프DB",
+            "옵시디안",
+            "코드베이스 관리",
+            "AI 생산성 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Graphiti는 코드/문서/PDF/이미지/비디오를 그래프로 변환해 쿼리 가능하게 만드는 오픈소스 툴(깃허브 스타 약 8만 개)",
+            "LLM을 사용하지 않고 코드의 AST(트리 구조)만 활용하므로 매핑이 완전 무료·로컬로 진행됨",
+            "벡터 인덱스/임베딩이 필요 없어 별도 벡터 스토어 구축 불필요 — 기존 RAG 대비 구조적 이점",
+            "UV 툴로 설치 후 AI 어시스턴트 스킬로 등록, `graphify .` 명령 한 줄로 프로젝트 디렉토리에 graph.html/graph.md/graph.json 생성",
+            "옵시디안으로 그래프를 열면 노드/커뮤니티(연결 관계) 형태로 코드 구조를 시각적으로 탐색 가능 (graph.html은 5,000노드 이상이면 브라우저에서 열기 어려움)"
+        ],
+        "learning_related": [
+            "대형 코드베이스(파일당 1만 줄↑, 수백~수천 파일)는 컨텍스트 제한으로 AI가 맥락을 자주 잃음 — 기존 RAG 청킹 방식의 한계",
+            "그래프 기반 접근은 두 컴포넌트 간 관계, 패스 탐색, 개념 설명 등 RAG보다 정교한 질의를 지원",
+            "graph.json에는 노드별 id/label/type/summary/confidence/location 등 구조화된 메타데이터가 포함됨"
+        ],
+        "key_insights": [
+            "AI에게 매번 코드를 처음부터 설명하는 대신, 그래프화된 코드 지식을 미리 만들어두면 조회 시 토큰 비용이 3~4배 절감됨",
+            "Graphiti(그래프 생성, 무료/로컬) + 옵시디안(영구 메모리 저장) + Claude Code(그래프 기반 추론)의 3단 조합이 핵심 워크플로우",
+            "벡터 임베딩 없는 그래프 기반 코드 매핑은 대규모 코드베이스에서 RAG보다 비용·정확도 면에서 우위"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code 작업 시 토큰 비용 절감 및 세션 간 컨텍스트 유지 파이프라인에 적용 가능, ③지식관리 — 옵시디안을 코드/지식 그래프 영구 저장소로 활용하는 방식은 만복의 프로젝트 REF/메모리 구조에도 참고할 만함, ⑥인프라 — LLM 토큰 없이 로컬·무료로 동작하는 구조라 'API 회피 우선' 원칙에 부합, Global_Define 도구 후보로 검토 가능",
+        "timestamp": "2026-07-11T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ZCK-zL3c2vA/hqdefault.jpg"
+    },
+    {
+        "title": "디자인 1도 몰라도 웹페이지 뚝딱 만드는 AI #shorts",
+        "url": "https://www.youtube.com/watch?v=PSpWMEnPF4A",
+        "channel": "techyoo",
+        "summary": "오픈소스 UI 라이브러리/디자인 툴 'Open Design'을 소개하는 쇼츠 영상으로, 클로드 코드·코덱스 등 AI 코딩 에이전트가 만드는 결과물이 흔히 'AI스러운' 디자인처럼 보이는 문제를 100개 이상의 디자인 템플릿으로 보완할 수 있다고 설명한다. 프롬프트 기반으로 웹페이지, 슬라이드 덱, 이미지, 오디오, 모션 그래픽 등 다양한 아티팩트를 생성할 수 있으며 CLAUDE.md의 스타일 가이드(색상, 폰트 등)가 잘 반영된 예시를 보여준다.",
+        "categories": [
+            "AI 툴",
+            "웹디자인",
+            "오픈소스",
+            "개발생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Open Design(오픈소스, 깃허브 스타 7만+)을 클로드 코드·코덱스·제미나이 등 에이전트 툴과 연동해 100개 이상 디자인 템플릿 활용 가능",
+            "AI 코딩 에이전트 산출물의 'AI스러운' 디자인 한계를 템플릿 기반 툴로 보완하는 접근",
+            "프롬프트만으로 웹페이지(index.html)/슬라이드덱/이미지/오디오/모션그래픽까지 생성",
+            "CLAUDE.md에 정의한 스타일(색상, 타이포그래피 등)이 실제 산출물에 반영되는 것을 확인 가능"
+        ],
+        "learning_related": [
+            "에이전트 툴 연동형 디자인 템플릿 라이브러리라는 개념",
+            "CLAUDE.md 스타일 정의 → 실제 생성물 반영 검증 사례"
+        ],
+        "key_insights": [
+            "클로드 코드/코덱스로 개발할 때 나오는 산출물의 '티 나는 AI 디자인' 문제를 해결할 오픈소스 대안(Open Design)이 존재",
+            "단순 코드 생성뿐 아니라 웹페이지·슬라이드·이미지·오디오·모션까지 한 툴에서 프롬프트로 처리 가능",
+            "CLAUDE.md 기반 스타일 가이드 적용이 실제로 작동하는 사례로, 자체 프로젝트의 CLAUDE.md 디자인 규칙화에 참고 가능"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 클로드 코드/코덱스 연동 디자인 템플릿 툴로 웹페이지·슬라이드 등 산출물 자동 생성 파이프라인에 활용 가능, ④공부방 — Open Design 툴 및 CLAUDE.md 스타일 가이드 적용 방식 학습 포인트",
+        "timestamp": "2026-07-05T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/PSpWMEnPF4A/hqdefault.jpg"
+    },
+    {
+        "title": "AI Models 대결: GPT-5.6 SOL vs Claude Fable 5 vs Grok 4.5 vs GLM 5.2",
+        "url": "https://www.youtube.com/watch?v=oD0GGBI3T7o",
+        "channel": "techyoo",
+        "summary": "GPT-5.6 Sol, Claude Fable 5, Grok 4.5, GLM 5.2 네 모델에 동일한 코딩 과제(3D 레이캐스터 미로, 3D 루빅스 큐브, SVG 생성)를 5회씩 반복 테스트한 비교 영상. 리더보드 순위(Fable 5 1위)와 실제 결과가 불일치하며, 같은 3D 과제인데도 미로에서는 Sol이 압승(5점)하고 Fable 5는 평범했지만, 큐브에서는 정반대로 Fable 5가 만점, Sol은 큐브 전체가 검게 렌더링되는 실패를 보였다. GLM 5.2는 프론티어 3D 과제에서 0점을 받았지만 저렴한 비용과 흔한 과제(로켓 착륙 SVG)에서는 선전했다.",
+        "categories": [
+            "AI모델비교",
+            "코딩벤치마크",
+            "LLM",
+            "생산성도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "리더보드 순위(Arena 웹개발/에이전트)가 실제 특정 과제 수행력을 보장하지 않음 — Fable 5가 종합 1위였지만 미로 과제에서는 Sol에 압도당함",
+            "동일 카테고리(3D)라도 세부 과제(레이캐스터 미로 vs 루빅스 큐브)에 따라 모델별 강약점이 정반대로 뒤집힐 수 있음 — 모델 선택 시 카테고리 단위가 아닌 태스크 단위 검증 필요",
+            "난이도가 낮은 과제(연산자 우선순위 계산기)에서는 상위 모델 간 격차가 거의 사라짐 — 실제 모델 차별화는 고난도 과제에서만 드러남",
+            "GLM 5.2 같은 오픈웨이트 저가 모델은 인터넷에 흔한 유형의 과제(로켓 착륙 SVG)일수록 고가 프론티어 모델을 따라잡음 — 비용 절감 시 과제 성격에 따라 저가 모델 활용 가능성",
+            "Fable 5는 품질은 최상급이나 생성 속도(초당 30토큰)와 비용 면에서 가장 느리고 비쌈 — 속도/비용 민감 작업엔 부적합할 수 있음"
+        ],
+        "learning_related": [
+            "3D 렌더링류 코딩 과제(레이캐스터, 큐브)는 모델별 실패 양상이 상이함(움직임 미구현 vs 색상 렌더링 실패) — 실제 활용 전 반드시 동작 테스트 필요",
+            "동일 모델도 반복 시행(5회) 결과가 갈릴 수 있어 1회 테스트만으로 모델 역량 판단은 위험"
+        ],
+        "key_insights": [
+            "AI 모델 벤치마크/리더보드 순위만 믿지 말고, 실제 사용하려는 과제 유형으로 직접 테스트해야 함 — 같은 '3D 과제' 카테고리 안에서도 결과가 정반대로 뒤집힘",
+            "고난도 과제에서만 모델 간 실력 차이가 뚜렷하게 드러나며, 쉬운 과제에서는 상위 모델들이 대부분 동률",
+            "비용/속도 vs 품질 트레이드오프 — Fable 5(품질 최상, 최고가·최저속) vs GLM(저가·과제 따라 편차 큼) 구도"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude Fable 5 등 최신 모델 성능/한계 파악은 3AI 파이프라인 모델 선택에 참고 가능, ⑤자동화 — 코딩 과제별 모델 강약점 차이는 향후 안티/코니 작업에 어떤 모델을 붙일지 결정할 때 참고할 벤치마크 사례",
+        "timestamp": "2026-07-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/oD0GGBI3T7o/hqdefault.jpg"
+    },
+    {
+        "title": "같은 질문인데 Claude Code 비용이 3배 차이? (Graphify) #shorts",
+        "url": "https://www.youtube.com/watch?v=MGd_y23RZeQ",
+        "channel": "techyoo",
+        "summary": "Claude Code에서 Graphify(코드베이스 그래프 인덱싱 도구)를 켰을 때와 껐을 때를 동일한 프롬프트로 비교한 영상. Graphify를 켠 쪽은 56초 만에 완료되고 서버 진입부터 응답 반환까지 구조화된 답변을 준 반면, 꺼진 쪽은 소스 코드를 하나하나 탐색하며 1분 53초가 걸렸고 토큰 비용도 약 3배 더 소모됐다.",
+        "categories": [
+            "Claude Code",
+            "Graphify",
+            "코드베이스 인덱싱",
+            "토큰 비용 비교",
+            "개발 생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Graphify 같은 코드 그래프 인덱싱 플러그인을 켜면 Claude Code가 관련 소스를 매번 재탐색하지 않아 응답 속도(56초 vs 1분53초)와 토큰 비용(약 3배 절감) 모두 개선됨",
+            "동일 프롬프트라도 컨텍스트 사전 구조화 여부에 따라 아웃풋 토큰량이 2K대 vs 5K대로 크게 갈림 — 반복 작업이 많은 코드베이스일수록 인덱싱 도구의 비용 절감 효과가 커짐"
+        ],
+        "learning_related": [
+            "코드베이스 구조(서버 진입 → 요청 생성 → 미들웨어 체인 → URL 라우팅 → 예외 처리 → 응답 반환) 전체를 사전에 그래프화해두면 LLM이 매 요청마다 소스를 재탐색할 필요가 없어짐"
+        ],
+        "key_insights": [
+            "코드 그래프 인덱싱(Graphify) 도입 여부가 동일 프롬프트 대비 응답 시간과 토큰 비용에 최대 3배 차이를 만든다",
+            "반복적으로 동일 코드베이스에 질의하는 워크플로우에서는 사전 인덱싱 투자가 비용 회수로 이어질 수 있다"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code 비용/속도 최적화 도구(Graphify)로 만복/안티/코니 작업 시 API 비용 절감 구조에 참고 가능, ④공부방 — Claude Code 내부 동작(요청 처리 구조) 이해 및 코드 인덱싱 기법 학습 포인트",
+        "timestamp": "2026-07-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/MGd_y23RZeQ/hqdefault.jpg"
+    },
+    {
+        "title": "ORCA로 Claude, Codex AI 에이전트를 동시에 제어하는 방법",
+        "url": "https://www.youtube.com/watch?v=hcDz6yGT59M",
+        "channel": "techyoo",
+        "summary": "Orca는 Claude Code, Codex, Grok, Cursor 등 여러 AI 코딩 에이전트를 동시에 오케스트레이션할 수 있는 오픈소스 ADE(Agent Development Environment)입니다. 에이전트마다 Git Worktree를 자동 생성해 서로 간섭 없이 병렬로 여러 브랜치에서 작업시키고, 완료된 결과만 비교해 가져올 수 있습니다. GitHub 스타 약 2만2천 개, 800개 이상의 릴리즈로 매우 활발히 업데이트되는 프로젝트이며 Windows/macOS/Linux 모두 지원합니다.",
+        "categories": [
+            "AI 에이전트",
+            "오케스트레이션",
+            "개발도구",
+            "오픈소스",
+            "Git Worktree"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Orca는 Claude Code·Codex 등 여러 에이전트를 Git Worktree 기반으로 동시 병렬 실행 — 같은 문제를 여러 에이전트에게 시켜 결과 비교, 또는 작업을 나눠 개발 속도 단축 가능",
+            "Orca CLI로 멀티 에이전트 Orchestration 명령 실행 지원, 모바일 연동으로 원격지에서도 작업 이어가기 가능",
+            "IDE가 아닌 ADE(Agent Development Environment) 컨셉 — 사람이 코딩하는 도구가 아니라 에이전트가 병렬로 개발하는 환경을 제공"
+        ],
+        "learning_related": [
+            "Git Worktree를 활용한 멀티 에이전트 격리 실행 구조 이해",
+            "Orca 다운로드 페이지에서 설치 후 워크스페이스/터미널/에이전트 탭 구성 확인 가능"
+        ],
+        "key_insights": [
+            "같은 작업을 여러 에이전트(Claude, Codex 등)에게 동시에 시켜 결과를 비교하거나, 다른 기능을 각 에이전트에 분담시켜 개발 속도를 높이는 두 가지 활용 패턴 제시",
+            "Git Worktree 자동 생성으로 브랜치 전환 없이 병렬 작업 결과만 취합하는 구조가 핵심 차별점",
+            "800개 이상 릴리즈·2.2만 스타로 활발한 커뮤니티 기여가 이루어지는 신생 오픈소스"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code/Codex 등 멀티 AI 에이전트 병렬 오케스트레이션 도구, 3AI 협업 구조(만복/코니/안티) 확장 시 참고 가능, ⑥인프라 — Git Worktree 기반 격리 실행 구조, 향후 3AI 워크플로우 인프라 개선 아이디어로 검토 가능",
+        "timestamp": "2026-07-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/hcDz6yGT59M/hqdefault.jpg"
+    },
+    {
+        "title": "Cloud is a Trap (Why Basecamp Left AWS)",
+        "url": "https://www.youtube.com/watch?v=kR7-KlxdR1E",
+        "channel": "Cloud Codes",
+        "summary": "37signals(Basecamp/HEY)가 연간 320만 달러였던 AWS 클라우드 비용을 자체 서버 구매(2 팔레트 Dell 서버)로 전환해 5년간 1000만 달러 이상을 절감한 사례를 분석한다. 컴퓨트 비용은 자체 하드웨어로 거의 해결했지만, 8~10페타바이트에 달하는 S3 스토리지 비용(연 150만 달러)은 여전히 클라우드에 남아있다는 점이 핵심 포인트다.",
+        "categories": [
+            "클라우드비용",
+            "인프라전략",
+            "탈AWS",
+            "온프레미스",
+            "IT비용절감"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "안정적/예측 가능한 24시간 상시 부하(steady workload)는 클라우드의 '탄력성 프리미엄'을 지불할 이유가 없고, 자체 하드웨어 구매가 1년 내 손익분기점을 넘길 수 있음",
+            "이미 예약 인스턴스·커밋 유즈 할인·전담 비용 최적화팀까지 동원한 '최적화된' 클라우드 비용조차도 여전히 자체 인프라 대비 훨씬 비쌀 수 있음",
+            "컴퓨트는 자체 구매로 전환 가능하지만, 대용량 스토리지(S3 등)는 이전 난이도·비용 구조상 클라우드 탈출이 가장 어려운 영역"
+        ],
+        "key_insights": [
+            "37signals는 연 320만 달러 AWS 비용을 자체 서버(약 70만 달러 투자)로 대체해 첫 해에만 1.3배 절감, 5년 누적 1000만 달러+ 절감",
+            "컴퓨트(EC2/K8s) 비용의 핵심 문제는 '항상 풀가동되는 예측 가능한 워크로드'에 온디맨드 클라우드 요금을 지불하는 비효율성",
+            "스토리지(S3)는 데이터 이전 비용·복잡성 때문에 클라우드 탈출 전략에서 가장 마지막까지 남는 병목 구간"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 자체 서버 vs 클라우드 비용구조 비교 사례, 향후 D:\\AI 인프라 비용 검토 시 참고 가능",
+        "timestamp": "2026-07-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/kR7-KlxdR1E/hqdefault.jpg"
+    },
+    {
+        "title": "DuckDB Is Quietly Killing Pandas (SQLite for Analytics)",
+        "url": "https://www.youtube.com/watch?v=Mqj9OChctRQ",
+        "channel": "Cloud Codes",
+        "summary": "판다스는 15년간 파이썬 데이터 분석의 표준이었지만 단일 코어만 사용하고 데이터셋 크기의 5~10배 RAM을 요구해 대용량 데이터에서 메모리 에러로 죽는 한계가 있다. 덕DB는 컬럼 단위·배치 처리와 멀티코어 병렬 실행, 쿼리 옵티마이저를 갖춘 분석 특화 임베디드 DB로, 서버 설치 없이 pip install만으로 같은 파일에 대해 훨씬 빠르고 적은 메모리로 쿼리를 처리한다.",
+        "categories": [
+            "DuckDB",
+            "Pandas",
+            "데이터분석",
+            "파이썬",
+            "성능최적화"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "Pandas는 단일 코어만 사용하고 데이터셋의 5~10배 RAM이 필요해 대용량 CSV 처리 시 메모리 에러로 커널이 죽는 구조적 한계가 있음",
+            "DuckDB는 컬럼 기반 배치 처리 + 멀티코어 병렬화 + 쿼리 옵티마이저를 갖춰 동일 파일·쿼리에서 Pandas보다 훨씬 빠르고 적은 메모리 사용 (SQLite의 분석 버전 개념)",
+            "설치도 pip install 한 줄, 서버/계정 불필요 — Python 프로세스 내에서 바로 실행 가능, 약 4만 GitHub 스타 보유 (암스테르담 연구소 출신)"
+        ],
+        "key_insights": [
+            "대용량 CSV를 다루다 메모리 에러가 자주 난다면 Pandas 대신 DuckDB로 교체만 해도 즉시 해결될 가능성이 큼 (쿼리 시간이 분 단위 → 초 단위로 단축)",
+            "DuckDB는 Pandas를 완전히 대체하기보다 대용량 집계·조인·필터링 등 무거운 분석 작업에 강점이 있으며, Pandas는 여전히 소규모 데이터·세밀한 조작에 쓰일 여지가 있음(영상 후반부 미언급 but 시사됨)"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Pandas 대안 DuckDB 학습, 개인 데이터 분석 자동화 작업에 적용 검토 가능",
+        "timestamp": "2026-07-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Mqj9OChctRQ/hqdefault.jpg"
+    },
+    {
+        "title": "Best Local Coding Model Right Now",
+        "url": "https://www.youtube.com/watch?v=60lYsmAhoAg",
+        "channel": "Cloud Codes",
+        "summary": "2026년 기준 로컬 코딩 LLM 중 가장 신뢰도 높은 모델로 Qwen 3.6 27B(Dense 모델)를 소개하며, 24GB급 GPU 한 장으로 4비트 양자화 시 약 128K 토큰 컨텍스트까지 처리 가능하다고 설명한다. Qwen, Gemma, Minimax, DeepSeek 등 로컬 무료 모델들이 각자 강점이 다르며 '최고'보다 '용도별 최적'이 중요하다는 점을 강조한다.",
+        "categories": [
+            "AI/LLM",
+            "로컬모델",
+            "코딩툴",
+            "오픈소스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Qwen 3.6 27B는 Dense 모델 구조 덕분에 크기 대비 코딩 작업 신뢰도가 가장 높다고 평가됨 (r/LocalLlama 사용자 다수 언급)",
+            "4비트 양자화로 24GB GPU 한 장에서 128K 토큰 컨텍스트 구동 가능 — 로컬 코딩 어시스턴트의 실용성 크게 향상",
+            "GGUF 단일 파일 배포 방식으로 설치/계정 없이 바로 로드 가능 — 로컬 AI 활용 진입장벽 낮음",
+            "모델 선택 시 4가지 변수(모델 자체·양자화 정도·하니스·GPU 하드웨어)를 함께 고려해야 함"
+        ],
+        "learning_related": [
+            "Dense 모델은 모든 파라미터가 매 토큰마다 활성화되어 장문 멀티스텝 작업에서 일관성 유지 — MoE류 대비 코딩 신뢰도 우위",
+            "양자화(16bit→4bit) 시 모델 크기 약 1/4로 축소되면서도 품질 손실 미미"
+        ],
+        "key_insights": [
+            "2026년 로컬 코딩 모델 시장은 '단일 최강자'가 아닌 '용도별 최적 모델' 구도로 재편됨",
+            "Qwen 3.6 27B가 중급 하드웨어(24GB GPU)에서 가장 신뢰할 수 있는 코딩 파트너로 커뮤니티 검증됨",
+            "로컬 LLM 코딩 어시스턴트가 파일 읽기→수정→테스트→재시도의 실제 에이전트 루프를 무료·오프라인으로 수행 가능한 수준에 도달"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 로컬 무료 코딩 LLM으로 API 비용 0원 구조 강화 가능성 검토 가치 있음, ④공부방 — 로컬 모델 양자화/하니스 개념 학습 포인트",
+        "timestamp": "2026-07-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/60lYsmAhoAg/hqdefault.jpg"
+    },
+    {
         "title": "HTMX + PHP + CSS Is Insanely Fast (No Javascript Required)",
         "url": "https://www.youtube.com/watch?v=dl25OUcWj2k",
         "channel": "Cloud Codes",
