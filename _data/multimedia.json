@@ -1,5 +1,168 @@
 [
     {
+        "title": "Kimi3 로 태양계 렌더링",
+        "url": "https://www.youtube.com/watch?v=C9Hs6qFm-Ac",
+        "channel": "로치의개발일기",
+        "summary": "개발 유튜버 '로치의개발일기'가 Kimi3(문샷AI의 LLM) 모델에게 태양계를 렌더링하는 코드를 생성시켜 그 결과물을 시연하는 영상으로 추정됩니다. 자막과 설명이 없어 정확한 진행 방식은 확인 불가하며, 최근 코딩 LLM 벤치마크로 흔히 쓰이는 '3D 태양계 시뮬레이션 생성' 테스트로 보입니다.",
+        "categories": [
+            "AI 코딩",
+            "LLM 벤치마크",
+            "3D 렌더링",
+            "Kimi3"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Kimi3(Moonshot AI) 모델의 코드 생성 능력을 태양계 렌더링이라는 시각적 결과물로 테스트 — 코딩 LLM 실력 비교용 소재로 활용 가능",
+            "무료/저비용 LLM(Kimi 계열)의 코딩 성능이 실전 데모 수준에 도달했는지 확인하는 참고 사례"
+        ],
+        "learning_related": [
+            "LLM에게 3D 그래픽스(태양계 시뮬레이션) 코드를 원샷으로 생성시키는 프롬프팅 접근 방식 참고 가능"
+        ],
+        "key_insights": [
+            "자막·설명이 없어 상세 분석에 한계가 있음 — 제목만으로는 어떤 프레임워크(Three.js 등)를 썼는지 불명확",
+            "코딩 LLM의 시각적 결과물 데모는 3AI 파이프라인에서 '뽀개기' 소재로서 원본 영상 재확인 후 활용 검토 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — LLM 코드 생성 데모, AI 활용 자동화 소재로 참고 가능, ④공부방 — Kimi3 코딩 성능 벤치마크 학습 자료로 활용 가능",
+        "timestamp": "2026-07-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/C9Hs6qFm-Ac/hqdefault.jpg"
+    },
+    {
+        "title": "토큰 가격은 계속 오릅니다 (K3 쇼크의 진짜 의미)",
+        "url": "https://www.youtube.com/watch?v=1WjgurxHJMY",
+        "channel": "로치의개발일기",
+        "summary": "자막이 없어 정확한 내용 파악은 제한적이나, 제목상 최근 공개된 K3(모델) 관련 'AI 쇼크'가 단기 이슈가 아니라 토큰(API) 가격 상승 추세와 연결된 구조적 신호라는 주장을 다루는 것으로 추정됩니다. 개발자 채널 특성상 LLM API 비용 구조와 실무 영향(개발 도구/서비스 원가) 관점에서 해설할 가능성이 높습니다.",
+        "categories": [
+            "AI",
+            "LLM",
+            "개발",
+            "API비용",
+            "시황분석"
+        ],
+        "stock_related": [
+            "'토큰 가격 상승'이 사실이라면 AI 인프라/반도체(HBM, GPU) 관련 수요 지속 신호로 해석될 수 있음 — 원문 확인 필요"
+        ],
+        "ai_related": [
+            "LLM API 토큰 단가 상승 트렌드 — 자체 자동화 파이프라인(만복/코니/안티)의 API 비용 구조에 시사점 있을 수 있음",
+            "'K3 쇼크'가 특정 모델(예: Kimi/Claude 계열) 릴리스발 업계 충격을 의미한다면, 경쟁 심화가 오히려 단가 상승으로 이어지는 역설적 신호일 가능성 — 원문 확인 후 판단 필요"
+        ],
+        "learning_related": [
+            "자막 미제공으로 실제 내용 검증 불가 — 원문 시청 후 재분석 권장"
+        ],
+        "key_insights": [
+            "자막 부재로 제목 기반 추정만 가능하며, 확정적 인사이트로 사용하기엔 근거 부족",
+            "AI 토큰 가격 추이는 API 회피 우선 원칙(무료/로컬 대체 구조)의 중요성을 재확인시키는 소재가 될 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — LLM API 비용 구조 변화가 API 회피/무료 우선 자동화 설계 원칙에 참고자료가 될 수 있음",
+        "timestamp": "2026-07-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/1WjgurxHJMY/hqdefault.jpg"
+    },
+    {
+        "title": "6$ 코딩 플랜, 배달 한 번 값으로 GLM-5.2·DeepSeek V4 쓰는 법",
+        "url": "https://www.youtube.com/watch?v=bA-l0x65w0o",
+        "channel": "로치의개발일기",
+        "summary": "월 6달러 수준의 저렴한 코딩 플랜으로 중국계 오픈소스 LLM인 GLM-5.2와 DeepSeek V4를 활용해 코딩 작업을 하는 방법을 소개하는 영상으로 보인다. 고가의 Claude/GPT 계열 유료 API 대신 저비용 대안 모델로 코딩 어시스턴트를 구성하는 방법을 다룬다.",
+        "categories": [
+            "AI코딩",
+            "LLM비교",
+            "비용절감",
+            "오픈소스AI"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "GLM-5.2, DeepSeek V4 등 저비용 중국계 LLM을 코딩 플랜에 활용하는 방법",
+            "월 6달러 수준 초저가 요금제로 코딩 어시스턴트 구성 (Claude/GPT 대비 비용 절감)"
+        ],
+        "learning_related": [
+            "GLM-5.2·DeepSeek V4 모델 성능 및 코딩 활용도 벤치마크 확인 필요",
+            "저가 API/플랜 제공 서비스 확인 (구체적 서비스명은 자막 부재로 확인 불가)"
+        ],
+        "key_insights": [
+            "고가 코딩 어시스턴트(Claude Code, Copilot 등) 대신 저비용 대안 모델로 비슷한 워크플로우 구성 가능성 시사",
+            "자막이 없어 구체적 설정 방법·서비스명은 영상 직접 확인 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 저비용 LLM 기반 코딩 파이프라인 구성에 참고 가능, 기존 'API 회피/무료 우선' 원칙과 맞닿음, ⑦재테크 — 코딩 도구 구독비 절감(월 6달러) 관련 실용 정보",
+        "timestamp": "2026-07-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/bA-l0x65w0o/hqdefault.jpg"
+    },
+    {
+        "title": "6$ 짜리 코딩 플랜 이용하기",
+        "url": "https://www.youtube.com/watch?v=LD8DdDUbRk4",
+        "channel": "로치의개발일기",
+        "summary": "자막이 제공되지 않아 정확한 내용 파악에는 제한이 있으나, 제목상 월 6달러 수준의 저비용 AI 코딩 플랜(Cursor, Copilot 등 저가 요금제 추정)을 실제로 사용해본 경험을 다루는 영상으로 보입니다. '로치의개발일기' 채널 특성상 개발자 실사용 후기/팁 형태로 구성되었을 가능성이 높습니다.",
+        "categories": [
+            "AI 코딩툴",
+            "개발생산성",
+            "구독서비스리뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "저가형(월 $6) AI 코딩 플랜 실사용 후기로 추정 — 비용 대비 효율 검증에 참고 가능",
+            "API 회피/저비용 구조를 지향하는 만복 프로젝트 원칙과 비교 검토 가치 있음"
+        ],
+        "learning_related": [
+            "저비용 AI 코딩 구독 플랜의 실제 성능/한계 파악 시 참고 자료 후보"
+        ],
+        "key_insights": [
+            "자막 미제공으로 세부 내용 확인 불가 — 실제 시청 후 재분석 필요",
+            "제목만으로는 어떤 서비스(예: Cursor/Copilot 등)의 $6 플랜인지 특정 불가"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 저비용 AI 코딩 플랜 활용 여부가 자동화 파이프라인 비용 구조에 참고될 수 있음",
+        "timestamp": "2026-07-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/LD8DdDUbRk4/hqdefault.jpg"
+    },
+    {
+        "title": "월 6$ 코딩 플랜으로 클로드 코드 / 코덱스 이용하기",
+        "url": "https://www.youtube.com/watch?v=paHJvtAnFzs",
+        "channel": "로치의개발일기",
+        "summary": "월 6달러 수준의 저비용 코딩 플랜을 활용해 클로드 코드(Claude Code)와 코덱스(Codex)를 함께 이용하는 방법을 다루는 영상으로 보입니다. 자막이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "AI코딩",
+            "클로드코드",
+            "비용절감"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "월 6달러 저비용 플랜으로 클로드 코드/코덱스 활용 — API 회피/비용 최적화 구조와 방향성 일치, 실제 플랜 내용 확인 시 참고 가치 있음"
+        ],
+        "learning_related": [
+            "클로드 코드와 코덱스(Codex) 병행 사용 시 요금제 구조 학습 필요 — 자막 없어 상세 내용 추가 확인 권장"
+        ],
+        "key_insights": [
+            "저비용 코딩 플랜 조합이 실제로 존재한다면 현재 사용 중인 Claude Code CLI 비용 구조 재검토에 참고할 수 있음",
+            "자막 미제공으로 신뢰도 낮음 — 영상 직접 시청 후 재분석 권장"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code/Codex 비용 최적화는 API 회피·비용 0원 구조 원칙과 관련",
+        "timestamp": "2026-07-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/paHJvtAnFzs/hqdefault.jpg"
+    },
+    {
+        "title": "Fable 5 is INSANE: Build ANY App in Plain English (No Code)",
+        "url": "https://www.youtube.com/watch?v=7Sk6soglMKU",
+        "channel": "Cloud Codes",
+        "summary": "Cloud Codes 채널에서 'Fable 5'라는 신규 AI 모델/도구를 활용해 코드 작성 없이 자연어(Plain English)만으로 애플리케이션을 빌드하는 방법을 소개하는 영상으로 추정됨. 자막과 설명이 없어 세부 데모 내용은 확인 불가.",
+        "categories": [
+            "AI",
+            "No-Code",
+            "생산성 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "'Fable 5'로 추정되는 신규 모델을 활용한 노코드 앱 빌드 데모 (자막 부재로 구체적 기능 미확인)",
+            "자연어 프롬프트만으로 앱 개발이 가능하다는 주장 — 사실관계 확인 필요"
+        ],
+        "learning_related": [
+            "노코드/자연어 기반 앱 개발 트렌드 파악용 참고 영상"
+        ],
+        "key_insights": [
+            "제목의 'Fable 5'는 Claude 5 패밀리 모델명(claude-fable-5)과 동일 — 신규 Claude 모델 관련 서드파티 리뷰/데모 영상일 가능성 있음",
+            "자막·설명이 모두 없어 실제 내용(실제 데모 결과, 과장 여부)은 영상 시청 후 재확인 필요",
+            "조회수 0 — 업로드 직후 영상으로 검증된 정보 아님, 액션 아이템으로 채택하기엔 시기상조"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Claude 신규 모델(Fable 5) 관련 정보이므로 사실관계 확인 후 아카이빙 가치 있음, ⑤자동화 — 노코드 앱 빌드 방식이 실제 자동화 파이프라인에 적용 가능한지 검토 여지",
+        "timestamp": "2026-07-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/7Sk6soglMKU/hqdefault.jpg"
+    },
+    {
         "title": "My secret to getting perfect AI responses",
         "url": "https://www.youtube.com/watch?v=Xy2HM3Zz-xg",
         "channel": "Lewis Jackson",
