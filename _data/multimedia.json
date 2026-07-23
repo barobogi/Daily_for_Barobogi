@@ -1,5 +1,95 @@
 [
     {
+        "title": "Go + SQLite + Stripe: The \"Boring\" Tech Stack Behind $10K/mo Side Projects",
+        "url": "https://www.youtube.com/watch?v=udBL9zW4Gm4",
+        "channel": "Cloud Codes",
+        "summary": "Go + SQLite + Stripe 조합만으로 월 1만 달러 규모의 사이드 프로젝트를 1인 개발자가 서버 1대로 운영할 수 있다는 내용. Go는 단일 정적 바이너리로 배포 및 런타임 문제를 제거하고, SQLite는 별도 DB 서버 없이 파일 하나로 데이터 계층을 없애며, Stripe는 결제 컴플라이언스를 대신 처리해준다는 '지루한 기술 스택'의 장점을 설명함.",
+        "categories": [
+            "개발",
+            "백엔드",
+            "기술스택",
+            "사이드프로젝트",
+            "Go언어"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "2026년 들어 AI가 코드를 작성해주는 시대에 '보일러플레이트가 적고 이해하기 쉬운 단순한 스택'이 AI 코드 생성과 궁합이 좋다는 언급 (영상 후반부에 다룰 예정으로 시사)"
+        ],
+        "learning_related": [
+            "Go는 단일 정적 바이너리로 컴파일되어 cgo 끄고 크로스 컴파일 가능, go embed로 HTML/CSS/JS/DB 스키마까지 바이너리에 포함해 배포 단순화",
+            "SQLite는 네트워크 서버가 아닌 프로세스 내 파일 기반 DB라 커넥션 풀/포트/비밀번호 관리가 불필요 — 단, 대규모 동시 쓰기에는 한계가 있을 수 있음(영상에서 '진짜 catch가 있다'고 예고)",
+            "Stripe로 결제 컴플라이언스 계층을 통째로 위임, Go 표준 라이브러리 net/http만으로 프레임워크 종속성 없이 서버 구현 가능"
+        ],
+        "key_insights": [
+            "'지루한(boring) 기술'이 오히려 경쟁력 — 한 사람이 시스템 전체를 머릿속에 담을 수 있어 마이크로서비스 메쉬 대비 유지보수 부담이 극단적으로 낮음",
+            "Go/SQLite/Stripe 각각이 런타임 관리, DB 티어, 결제 규제 준수라는 전체 계층을 하나씩 삭제해줌으로써 인프라 비용(커피 한 잔 값)과 인지 부하를 동시에 줄임",
+            "Go의 컴파일러가 '첫 코드 리뷰어' 역할을 해 타입 불일치로 인한 새벽 프로덕션 버그를 사전 차단함"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Go/SQLite/Stripe 미니멀 백엔드 스택 학습 콘텐츠, 향후 자동화 프로젝트 경량화 설계에 참고 가능, ⑤자동화 — 현재 Python/SQLite 기반 자동화 인프라(local_store.db, master_watch 등) 설계 철학과 유사한 '단일 파일·단일 프로세스' 원칙 참고 가치 있음",
+        "timestamp": "2026-07-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/udBL9zW4Gm4/hqdefault.jpg"
+    },
+    {
+        "title": "Rust is Quietly Eating JavaScript's Backend",
+        "url": "https://www.youtube.com/watch?v=XBhqYWe6kQo",
+        "channel": "Cloud Codes",
+        "summary": "React 빌드 과정에서 실제 작업(트랜스파일, 번들링, 린팅)을 수행하는 도구들이 이미 대부분 Rust로 작성되어 있음을 설명한다. SWC, Turbopack, Oxlint, Biome, Rolldown 등 JS 생태계 핵심 툴체인이 Rust 기반으로 전환되었고, 그 이유는 멀티스레딩·GC 부재·AOT 컴파일이라는 Rust의 구조적 이점 때문이다.",
+        "categories": [
+            "개발도구",
+            "Rust",
+            "JavaScript생태계",
+            "빌드시스템",
+            "기술트렌드"
+        ],
+        "stock_related": [
+            "2026-06 Cloudflare가 이 Rust 툴체인을 만드는 회사를 인수 — 개발자 도구 인프라 통합 트렌드, Cloudflare 관련주 모니터링 포인트로 참고 가능"
+        ],
+        "ai_related": [],
+        "learning_related": [
+            "JS 툴체인(SWC/Turbopack/Oxlint/Biome/Rolldown)이 Rust로 재작성되는 이유: 멀티코어 병렬처리, GC 부재로 인한 예측 가능한 메모리 해제, AOT 컴파일로 즉시 네이티브 속도 확보",
+            "Next.js 16은 Turbopack을 개발/프로덕션 기본값으로 채택 — Webpack 시대 종료 신호",
+            "Rust뿐 아니라 Go도 유사한 이유로 개발도구 영역에서 경쟁 중(esbuild 등 시사)"
+        ],
+        "key_insights": [
+            "JS 언어 자체는 바뀌지 않지만 그것을 빌드·검사·실행하는 도구 계층이 Rust로 대체되는 중",
+            "속도 차이의 근본 원인은 언어 문법이 아니라 병렬처리·메모리관리·컴파일 방식의 구조적 차이",
+            "Vue/Vite 창시자 Evan You 등 핵심 인물들이 공개적으로 이 전환을 주도하고 있어 일시적 유행이 아닌 구조적 흐름"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Rust 기반 프론트엔드 툴체인 트렌드, 향후 프로젝트 빌드 환경 선택 시 참고",
+        "timestamp": "2026-07-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/XBhqYWe6kQo/hqdefault.jpg"
+    },
+    {
+        "title": "10 Open Models | Zero API Keys | Ultimate AI Coding Setup (Cline)",
+        "url": "https://www.youtube.com/watch?v=q_FQegMRWUQ",
+        "channel": "Cloud Codes",
+        "summary": "Cline(자막상 'Kline') 스폰서 영상으로, ClinePass라는 서비스가 GLM 5.2, Kimi K3, DeepSeek V4 Pro, MiniMax M3, Qwen 3.7 Max 등 11개 오픈 웨이트 코딩 모델을 하나의 로그인으로 에디터에 통합 제공한다는 내용. API 키 관리·다중 청구 없이 모델을 작업 성격별(대규모 리팩터링, 전체 레포 컨텍스트, 빠른 초안 등)로 골라 쓸 수 있고, 비용은 기존 폐쇄형 모델 대비 약 10배 저렴(1M 토큰당 $15 → $1.5 수준)하다고 소개.",
+        "categories": [
+            "AI 코딩툴",
+            "오픈소스 LLM",
+            "개발자 생산성",
+            "스폰서 콘텐츠"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "ClinePass: 11개 오픈 웨이트 모델(GLM 5.2, Kimi K3, DeepSeek V4 Pro/Flash, MiniMax M3, Qwen 3.7 Max/Plus 등)을 단일 로그인으로 통합, API 키/청구 관리 부담 제거",
+            "Kimi K3: 2.8조 파라미터 + 100만 토큰 컨텍스트로 현재 최대 오픈 웨이트 모델, 프론트엔드 코드 아레나 1위",
+            "오픈 웨이트 모델 가격이 폐쇄형 대비 약 10배 저렴($15/M → $1.5/M 토큰)해지면서 품질 격차도 좁혀짐"
+        ],
+        "learning_related": [
+            "모델 자체보다 '루프(에이전트 워크플로우) 설계'가 코딩 생산성의 핵심이라는 관점 — 좋은 모델 + 잘 짜인 루프",
+            "작업 유형별 모델 선택 전략: 큰 리팩터링→GLM 5.2, 전체 레포 컨텍스트 필요→Kimi K3, 빠르고 저렴한 초안→DeepSeek V4 Flash"
+        ],
+        "key_insights": [
+            "오픈 웨이트 모델의 강점은 '누구도 모델을 끄거나 가격을 바꿀 수 없다'는 공급 안정성 — 벤더 락인 회피",
+            "여러 랩(ZAI, Moonshot, DeepSeek, MiniMax 등)의 모델을 한 구독으로 묶는 것 자체가 제품 가치(6개 사이트 가입/청구를 1개로 통합)",
+            "비용 0원(API Free) 구조를 우선하는 만복 원칙과 반대로, 이 서비스는 유료 구독이지만 개별 API 키 발급보다 저렴/편리하다는 포지셔닝"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Cline 기반 멀티모델 코딩 에이전트 구조는 만복/안티의 자동화 파이프라인(예: T063 Pollinations)과 유사한 '멀티 프로바이더 통합' 아이디어로 참고 가치 있음, ⑥인프라 — API 키 관리 없이 다중 LLM을 쓰는 구조는 '유료 API 회피' 원칙과 상충되므로 채택 여부는 사전 검토 필요",
+        "timestamp": "2026-07-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/q_FQegMRWUQ/hqdefault.jpg"
+    },
+    {
         "title": "Top 10 AI Repos You Need Right Now",
         "url": "https://www.youtube.com/watch?v=p2OZqljmGww",
         "channel": "Cloud Codes",
