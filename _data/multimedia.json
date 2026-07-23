@@ -1,5 +1,33 @@
 [
     {
+        "title": "Run Your Own Agentic AI? 🦙 Full Ollama Setup + Hermes Workflow",
+        "url": "https://www.youtube.com/watch?v=4KXLW9Y1r4c",
+        "channel": "Wanderloots",
+        "summary": "Ollama를 이용해 로컬 환경에서 에이전틱 AI를 구축하는 방법을 다루는 영상으로, 전체 설치 과정과 Hermes 모델을 활용한 워크플로우 구성을 소개합니다. 자막과 설명이 제공되지 않아 세부 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "AI",
+            "로컬 LLM",
+            "에이전트 자동화",
+            "Ollama"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Ollama 기반 로컬 LLM 구동으로 API 비용 없이 에이전틱 AI 실행 가능",
+            "Hermes 모델을 활용한 에이전트 워크플로우 구성 사례"
+        ],
+        "learning_related": [
+            "Ollama 설치 및 셋업 전체 과정",
+            "로컬 모델(Hermes)로 에이전틱 워크플로우 구축하는 방법"
+        ],
+        "key_insights": [
+            "로컬 LLM(Ollama)으로 유료 API 없이 에이전트 시스템 구축 가능 — 비용 0원 구조와 연결",
+            "Hermes 모델이 로컬 에이전틱 워크플로우에 적합한 후보로 언급됨"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 로컬 LLM 기반 에이전트 워크플로우는 비용 0원 자동화 구조 설계에 참고 가능",
+        "timestamp": "2026-06-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/4KXLW9Y1r4c/hqdefault.jpg"
+    },
+    {
         "title": "100% Free & Private AI 🦙 Build & Run Local AI Agents #ai #agenticai #ollama #localllm",
         "url": "https://www.youtube.com/watch?v=aAm_lh2beZY",
         "channel": "Wanderloots",
