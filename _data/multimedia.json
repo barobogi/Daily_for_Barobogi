@@ -1,5 +1,33 @@
 [
     {
+        "title": "100% Free & Private AI 🦙 Build & Run Local AI Agents #ai #agenticai #ollama #localllm",
+        "url": "https://www.youtube.com/watch?v=aAm_lh2beZY",
+        "channel": "Wanderloots",
+        "summary": "Ollama를 활용해 100% 무료·프라이빗하게 로컬 AI 에이전트를 구축하고 실행하는 방법을 다루는 짧은 영상으로 보입니다. 클라우드 API 없이 로컬 LLM만으로 에이전틱 AI를 운영하는 방법에 초점을 맞춘 것으로 추정됩니다. (자막 미제공으로 제목·설명 기반 추정 요약)",
+        "categories": [
+            "AI",
+            "로컬LLM",
+            "Ollama",
+            "에이전틱AI",
+            "프라이버시"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Ollama 기반 로컬 LLM으로 AI 에이전트를 무료·프라이빗하게 구축하는 방법",
+            "클라우드 API 비용 없이 에이전틱 워크플로우를 로컬에서 실행하는 접근법"
+        ],
+        "learning_related": [
+            "로컬 AI 에이전트 구축 실습 사례 (Ollama + 로컬 모델)"
+        ],
+        "key_insights": [
+            "유료 API 없이 로컬 모델만으로 AI 에이전트 실행 가능성 제시",
+            "프라이버시 보장이 필요한 환경에서의 AI 활용 대안 소개"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 로컬 LLM 기반 AI 에이전트 구축은 API 비용 회피 원칙과 직결되어 자동화 파이프라인 설계에 참고 가능",
+        "timestamp": "2026-06-27T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/aAm_lh2beZY/hqdefault.jpg"
+    },
+    {
         "title": "Full Hermes Agent Tutorial (Desktop) 🧠 A Useful Agentic AI Workflow",
         "url": "https://www.youtube.com/watch?v=GL67DEf2nyI",
         "channel": "Wanderloots",
