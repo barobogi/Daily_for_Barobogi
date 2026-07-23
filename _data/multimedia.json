@@ -1,5 +1,31 @@
 [
     {
+        "title": "Obsidian + Agentic AI? 🧠 Full Hermes Obsidian Workflow & Wiki Prep",
+        "url": "https://www.youtube.com/watch?v=znj-WpMj1dI",
+        "channel": "Wanderloots",
+        "summary": "Wanderloots 채널의 영상으로, Obsidian 노트 앱과 Agentic AI를 결합한 'Hermes Obsidian Workflow'를 소개하며 위키(Wiki) 구축 준비 과정을 다루는 것으로 제목에서 추정됩니다. 자막이 제공되지 않아 상세 내용은 확인 불가하며 제목 기반 추정입니다.",
+        "categories": [
+            "Obsidian",
+            "Agentic AI",
+            "지식관리",
+            "워크플로우"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Agentic AI를 Obsidian과 연동하는 워크플로우 (Hermes) — 자동화된 노트/지식 관리 파이프라인 사례로 참고 가능"
+        ],
+        "learning_related": [
+            "Obsidian 기반 위키(Wiki) 구축 준비 프로세스 — 개인 지식베이스 구조화 참고"
+        ],
+        "key_insights": [
+            "AI 에이전트를 개인 노트 시스템(Obsidian)에 결합하는 시도로, 3AI 협업 체계의 지식관리(뿌리③)/자동화(뿌리⑤) 파이프라인과 유사한 문제의식일 가능성",
+            "자막 부재로 실제 구현 방식(어떤 AI/도구 연동인지)은 확인 불가 — 원문 시청 후 재분석 필요"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Obsidian Wiki 구축 워크플로우, AI_hub/노트 구조화에 참고 가능, ⑤자동화 — Agentic AI와 노트 앱 연동 사례, 3AI 파이프라인 자동화 아이디어 참고",
+        "timestamp": "2026-07-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/znj-WpMj1dI/hqdefault.jpg"
+    },
+    {
         "title": "요즘 핫한 ADE 오르카 소개",
         "url": "https://www.youtube.com/watch?v=0ELc1pcfcQk",
         "channel": "로치의개발일기",
