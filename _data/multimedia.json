@@ -1,5 +1,34 @@
 [
     {
+        "title": "HTMX + PHP + CSS Is Insanely Fast (No Javascript Required)",
+        "url": "https://www.youtube.com/watch?v=dl25OUcWj2k",
+        "channel": "Cloud Codes",
+        "summary": "PHP + HTMX + 모던 CSS 조합으로 자바스크립트 프레임워크 없이도 React 앱보다 빠른 웹페이지를 만들 수 있다는 내용. 평균 웹페이지가 697KB의 JS를 로드하는 반면, 서버에서 완성된 HTML을 바로 내려주는 방식(PHP)에 HTMX(16KB, 속성 기반 상호작용)와 CSS만으로 드롭다운/모달/탭까지 처리해 하이드레이션 부담을 없앤다는 주장.",
+        "categories": [
+            "웹개발",
+            "PHP",
+            "HTMX",
+            "프론트엔드경량화",
+            "성능최적화"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "PHP는 여전히 웹 백엔드의 약 70%를 차지하며 PHP 8.5(2026-11 예정 언급, 실제로는 파이프 연산자 등 최신 문법 포함)로 다시 주목받는 중",
+            "HTMX는 별도 빌드 없이 HTML 속성만으로 서버 렌더링 결과를 부분 갱신하는 경량 라이브러리(약 16KB, 무의존성)",
+            "React류 SPA의 '하이드레이션' 비용(번들 다운로드→파싱→메모리 재구성)이 체감 지연의 주 원인이며, 서버에서 완성된 HTML을 보내는 방식이 이를 회피",
+            "모던 CSS만으로 드롭다운/모달/탭 등 과거 JS 프레임워크가 담당하던 UI 패턴 구현 가능"
+        ],
+        "key_insights": [
+            "무거운 JS 프레임워크 없이도 '서버 렌더링(PHP) + 부분 상호작용(HTMX) + 순수 CSS' 조합으로 체감 속도를 크게 개선할 수 있음",
+            "복잡한 SPA 아키텍처가 필요 없는 CRUD성/문서형 앱에는 이 경량 스택이 개발 단순성과 성능 두 마리 토끼를 잡을 수 있는 대안",
+            "빌드 스텝이 없다는 점(설치/컴파일 불필요)이 개발 생산성 측면에서도 장점"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — HTMX/PHP 경량 웹스택 학습 포인트, 향후 만복 대시보드나 3AI 관련 웹 UI 제작 시 참고 가능, ⑤자동화 — AI_hub dashboard.html 등 내부 도구를 자바스크립트 프레임워크 없이 경량화하는 데 참고할 수 있는 아키텍처",
+        "timestamp": "2026-07-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/dl25OUcWj2k/hqdefault.jpg"
+    },
+    {
         "title": "Go + SQLite + Stripe: The \"Boring\" Tech Stack Behind $10K/mo Side Projects",
         "url": "https://www.youtube.com/watch?v=udBL9zW4Gm4",
         "channel": "Cloud Codes",
