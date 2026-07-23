@@ -1,5 +1,45 @@
 [
     {
+        "title": "AI For Old People: What Is An AI Agent?",
+        "url": "https://www.youtube.com/watch?v=bnCDzCGPhHA",
+        "channel": "Lewis Jackson",
+        "summary": "AI For Old People: What Is An AI Agent?",
+        "categories": [],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/bnCDzCGPhHA/hqdefault.jpg"
+    },
+    {
+        "title": "PocketBase + HTMX: A Whole Production App Built in One File",
+        "url": "https://www.youtube.com/watch?v=MbkDloawTf4",
+        "channel": "Cloud Codes",
+        "summary": "PocketBase(백엔드 올인원 솔루션)와 HTMX(경량 프론트엔드 라이브러리)를 조합해 프로덕션급 애플리케이션을 단일 파일로 구축하는 방법을 다루는 영상으로 보입니다. 자막이 없어 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "PocketBase",
+            "HTMX",
+            "웹개발",
+            "백엔드"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "PocketBase: SQLite 기반 올인원 백엔드(인증·DB·API·파일스토리지) 단일 바이너리 솔루션",
+            "HTMX: 자바스크립트 프레임워크 없이 서버사이드 렌더링으로 동적 UI 구현하는 경량 라이브러리",
+            "'단일 파일 프로덕션 앱' 컨셉 — 복잡한 빌드/배포 파이프라인 없이 최소 스택으로 실서비스 구축하는 미니멀리즘 아키텍처"
+        ],
+        "key_insights": [
+            "PocketBase+HTMX 조합은 Node.js/React 등 무거운 스택 없이 빠르게 MVP나 소규모 서비스를 배포하는 저비용 대안이 될 수 있음",
+            "단일 파일 구조는 유지보수 단순화 장점이 있으나 확장성 측면에서는 검증 필요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — PocketBase/HTMX 스택 학습 시 신규 자동화 프로젝트(Global_Define) 경량 백엔드 후보로 검토 가능, ⑤자동화 — 무료/저비용 자체 백엔드 구축 원칙(API 회피 우선)에 부합하는 대안 스택",
+        "timestamp": "2026-07-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/MbkDloawTf4/hqdefault.jpg"
+    },
+    {
         "title": "Fine-Tune the biggest open-source models (even with a bad PC)",
         "url": "https://www.youtube.com/watch?v=kxstlfc8Lw4",
         "channel": "David Ondrej",
