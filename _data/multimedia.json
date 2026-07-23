@@ -1,5 +1,32 @@
 [
     {
+        "title": "Obsidian Smart Plugin Workflow 📝 New Smart Connections + Context AI",
+        "url": "https://www.youtube.com/watch?v=_i3577ti8jg",
+        "channel": "Wanderloots",
+        "summary": "Wanderloots 채널에서 Obsidian 노트 앱의 신규 플러그인 워크플로우를 소개하는 영상으로, 'Smart Connections'와 'Context AI' 플러그인을 활용해 노트 간 연결과 AI 기반 컨텍스트 탐색을 강화하는 방법을 다루는 것으로 추정됩니다. 자막/설명이 없어 제목 기반 추정입니다.",
+        "categories": [
+            "Obsidian",
+            "PKM",
+            "AI 플러그인",
+            "노트관리"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Obsidian용 'Smart Connections' 플러그인 — AI 임베딩 기반 노트 자동 연결 기능으로 추정",
+            "'Context AI' 플러그인 — 노트 작성 중 관련 컨텍스트를 AI가 실시간 제공하는 기능으로 추정"
+        ],
+        "learning_related": [
+            "Obsidian 플러그인 조합을 통한 지식관리(PKM) 워크플로우 개선 사례"
+        ],
+        "key_insights": [
+            "Obsidian 생태계에서 AI 기반 노트 연결/탐색 플러그인이 계속 발전 중",
+            "자막·설명 부재로 정확한 내용 파악 불가 — 실제 시청 후 재검토 필요"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Obsidian PKM 플러그인 워크플로우와 직접 관련, ⑤자동화 — AI 기반 노트 자동 연결/컨텍스트 제공이 자동화 인사이트로 참고 가능",
+        "timestamp": "2026-05-31T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/_i3577ti8jg/hqdefault.jpg"
+    },
+    {
         "title": "Build Once, Use In AI Forever 🧠 Shared AI Memory Layer Obsidian  LLM Wiki #ai #obsidian #agenticai",
         "url": "https://www.youtube.com/watch?v=AF-8qzKHr7c",
         "channel": "Wanderloots",
