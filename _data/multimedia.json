@@ -1,5 +1,30 @@
 [
     {
+        "title": "My secret to getting perfect AI responses",
+        "url": "https://www.youtube.com/watch?v=Xy2HM3Zz-xg",
+        "channel": "Lewis Jackson",
+        "summary": "자막이 제공되지 않아 상세 내용은 확인 불가하나, 제목 기준으로 AI(주로 LLM) 응답 품질을 높이는 프롬프팅 노하우를 다루는 영상으로 추정됩니다.",
+        "categories": [
+            "AI",
+            "프롬프트 엔지니어링",
+            "생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "제목상 'perfect AI responses'를 얻는 개인 노하우 공유 — 프롬프트 설계/컨텍스트 제공 방식 관련 인사이트일 가능성 높음"
+        ],
+        "learning_related": [
+            "자막 부재로 구체적 기법 확인 불가 — 원본 영상 재확인 필요"
+        ],
+        "key_insights": [
+            "자막 데이터 없음 — 제목/메타데이터만으로는 신뢰도 있는 인사이트 추출 제한적",
+            "AI 응답 품질 개선 관련 콘텐츠로 추정, 후속 확인 시 자막 확보 권장"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 프롬프트 최적화가 확인될 경우 3AI 협업 프롬프트 설계에 참고 가능(자막 확보 후 재평가 필요)",
+        "timestamp": "2026-07-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Xy2HM3Zz-xg/hqdefault.jpg"
+    },
+    {
         "title": "AI For Old People: What Is An AI Agent?",
         "url": "https://www.youtube.com/watch?v=bnCDzCGPhHA",
         "channel": "Lewis Jackson",
