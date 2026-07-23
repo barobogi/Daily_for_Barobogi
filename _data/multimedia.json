@@ -1,5 +1,56 @@
 [
     {
+        "title": "Tailscale, Clearly Explained (Beginner's Guide)",
+        "url": "https://www.youtube.com/watch?v=eNn2tT-lrz4",
+        "channel": "David Ondrej",
+        "summary": "Tailscale를 처음 접하는 사람들을 위해 핵심 개념과 설정 방법을 설명하는 영상으로, VPN 설정의 복잡함 없이 WireGuard 기반 메시 네트워크로 여러 기기를 안전하게 연결하는 방법을 다룹니다. 실제 사용 시나리오(원격 서버 접속, 홈 네트워크 접근 등)를 중심으로 초보자도 따라할 수 있는 가이드 형태로 구성된 것으로 보입니다.",
+        "categories": [
+            "네트워킹",
+            "VPN",
+            "개발자도구",
+            "인프라"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "Tailscale은 WireGuard 기반 메시 VPN으로 NAT/방화벽 설정 없이 기기 간 P2P 연결 제공",
+            "홈서버·원격 개발환경 접근 시 포트포워딩 없이 안전한 프라이빗 네트워크 구성 가능",
+            "MagicDNS, ACL 등 팀/개인 환경별 접근 제어 기능 존재"
+        ],
+        "key_insights": [
+            "전통적 VPN 대비 설정 난이도가 낮아 개인 인프라 관리에 실용적",
+            "여러 기기(홈PC, 서버, NAS 등)를 하나의 프라이빗 네트워크로 묶어 원격 접근 보안 강화 가능"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 홈/원격 서버 네트워크 접근을 Tailscale로 구성 시 회사↔집 통신 인프라 개선 검토 가능",
+        "timestamp": "2026-07-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/eNn2tT-lrz4/hqdefault.jpg"
+    },
+    {
+        "title": "Bad Claude Code Habits",
+        "url": "https://www.youtube.com/watch?v=Z1NTwYuuvvw",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 Claude Code 사용 시 흔히 저지르는 나쁜 습관들을 다루는 영상으로 추정됩니다(자막 미제공으로 제목 기반 추정). 프롬프트 설계, 컨텍스트 관리, 코드 검증 소홀 등 개발자들이 AI 코딩 툴을 비효율적으로 쓰는 패턴을 지적하는 내용으로 보입니다.",
+        "categories": [
+            "Claude Code",
+            "AI 코딩",
+            "생산성/워크플로우"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code 같은 에이전틱 코딩 툴 사용 시 흔한 안티패턴(막연한 프롬프트, 검증 없는 수용 등)을 다룰 가능성 — 실제 확인 필요(자막 없음)"
+        ],
+        "learning_related": [
+            "자막이 제공되지 않아 구체적 학습 포인트 추출 불가 — 원본 영상 시청 또는 자막 확보 후 재분석 권장"
+        ],
+        "key_insights": [
+            "제목·채널만으로는 신뢰도 있는 핵심 인사이트 도출이 제한적임",
+            "David Ondrej는 AI 코딩 도구 리뷰/튜토리얼 채널로, 유사 주제(Claude Code, Cursor 등) 콘텐츠를 반복 다룸"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 만복이 실제 Claude Code 운영 습관 점검에 참고 가능성 있으나 자막 확보 후 재검토 필요",
+        "timestamp": "2026-07-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Z1NTwYuuvvw/hqdefault.jpg"
+    },
+    {
         "title": "L8 Principal's Agentic Engineering Setup (just copy him)",
         "url": "https://www.youtube.com/watch?v=8ZgpAXe5V5w",
         "channel": "David Ondrej",
