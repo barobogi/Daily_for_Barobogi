@@ -1,5 +1,72 @@
 [
     {
+        "title": "KimiK3 - The Biggest moment in Open Source AI ever...",
+        "url": "https://www.youtube.com/watch?v=SK8SSr7-JaY",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 새로운 오픈소스 AI 모델 'Kimi K2(K3로 표기)'의 출시를 다루며 이를 오픈소스 AI 역사상 가장 큰 사건으로 평가하는 영상입니다. 자막이 제공되지 않아 상세 내용은 제목/채널 맥락 기반 추정입니다.",
+        "categories": [
+            "AI모델",
+            "오픈소스",
+            "LLM"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "중국(Moonshot AI 등) 오픈소스 LLM이 폐쇄형 모델(OpenAI/Anthropic/Google) 대비 경쟁력을 빠르게 좁히고 있다는 트렌드 시사",
+            "오픈소스 대형 모델 등장 시 로컬 구동/파인튜닝 비용 절감 가능성 — API 회피 구조(비용 0원 우선 원칙)와 연결 가능"
+        ],
+        "learning_related": [
+            "자막 없이 제목만으로는 벤치마크 수치나 구체 아키텍처 확인 불가 — 실제 활용 검토 전 원본 영상/공식 발표자료 직접 확인 필요"
+        ],
+        "key_insights": [
+            "제목이 과장('Biggest moment ever')일 가능성 있어 실제 성능/라이선스 조건은 별도 검증 필요",
+            "자막 부재로 신뢰도 있는 요약 불가 — 정보 부족 상태의 판단은 지양"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 신규 오픈소스 LLM 동향 파악용 참고 자료",
+        "timestamp": "2026-07-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/SK8SSr7-JaY/hqdefault.jpg"
+    },
+    {
+        "title": "Ranking AI CEOs",
+        "url": "https://www.youtube.com/watch?v=wN1qJPuPI44",
+        "channel": "David Ondrej",
+        "summary": "자막/설명 미제공으로 실제 내용 확인 불가. 제목상 David Ondrej가 주요 AI 기업 CEO들(예: OpenAI, Anthropic, Google 등)을 순위 매기거나 비교 평가하는 콘텐츠로 추정됨.",
+        "categories": [
+            "AI",
+            "CEO 비교",
+            "정보 부족"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 업계 CEO 랭킹/평가 콘텐츠로 추정 (내용 미확인)"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "자막 및 설명 부재로 신뢰할 수 있는 요약/인사이트 도출 불가 — 원본 영상 시청 또는 자막 확보 필요"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/wN1qJPuPI44/hqdefault.jpg"
+    },
+    {
+        "title": "People are using AI wrong",
+        "url": "https://www.youtube.com/watch?v=GCI7pydoc-M",
+        "channel": "David Ondrej",
+        "summary": "자막과 설명이 제공되지 않아 실제 영상 내용은 확인할 수 없습니다. 제목만으로 추정하면 David Ondrej(AI 유튜버)가 사람들이 AI를 잘못 사용하는 방식에 대해 다루는 영상으로 보이나, 구체적 내용은 파악 불가합니다.",
+        "categories": [
+            "AI",
+            "제목기반추정"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [
+            "자막/설명 부재로 실제 인사이트 추출 불가 — 원본 영상 확인 또는 자막 재수집 필요"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GCI7pydoc-M/hqdefault.jpg"
+    },
+    {
         "title": "The major bottleneck with AI Coding in 2026",
         "url": "https://www.youtube.com/watch?v=GapEWqXgKHk",
         "channel": "David Ondrej",
