@@ -1,5 +1,32 @@
 [
     {
+        "title": "Restricting Agentic AI? 🧠 Full Docker Tutorial + Hermes Agent Workflow",
+        "url": "https://www.youtube.com/watch?v=v_E42FkgH2I",
+        "channel": "Wanderloots",
+        "summary": "Docker를 활용해 Agentic AI(자율 행동 AI 에이전트)의 권한과 실행 범위를 제한하는 방법을 다루는 튜토리얼로 추정됩니다. Hermes 에이전트 워크플로우를 예시로 컨테이너 기반 샌드박싱 구성을 시연하는 것으로 보입니다. (자막이 없어 제목 기반 추정 요약임)",
+        "categories": [
+            "AI 에이전트",
+            "Docker",
+            "보안/샌드박싱",
+            "자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Agentic AI 실행 권한을 Docker 컨테이너로 제한하는 접근 — 로컬/자체 인프라에서 AI 에이전트 안전하게 운용하는 패턴",
+            "Hermes(오픈소스 LLM, Nous Research 계열로 추정) 기반 에이전트 워크플로우 구성 사례"
+        ],
+        "learning_related": [
+            "Docker 컨테이너를 이용한 AI 에이전트 격리/권한 제한 실습 튜토리얼"
+        ],
+        "key_insights": [
+            "자율 행동하는 AI 에이전트는 파일시스템/네트워크 접근 등에서 위험 소지가 있어 컨테이너 격리로 제한하는 설계가 필요",
+            "Hermes 같은 오픈소스 모델 기반 에이전트 워크플로우 예시 제공 가능성"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Docker 기반 AI 에이전트 격리/실행 제한 구조는 향후 안티(Operator) 실행 환경 안전성 설계에 참고 가능, ⑥인프라 — 컨테이너 기반 AI 에이전트 운영 인프라 설계 참고",
+        "timestamp": "2026-07-03T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/v_E42FkgH2I/hqdefault.jpg"
+    },
+    {
         "title": "One Agent, Many Devices? 🧠 Full Hermes Agentic AI + Tailscale Workflow",
         "url": "https://www.youtube.com/watch?v=OMQo6YMZYzo",
         "channel": "Wanderloots",
