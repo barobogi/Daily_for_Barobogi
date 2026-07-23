@@ -1,5 +1,32 @@
 [
     {
+        "title": "Full Hermes Agent Tutorial (Desktop) 🧠 A Useful Agentic AI Workflow",
+        "url": "https://www.youtube.com/watch?v=GL67DEf2nyI",
+        "channel": "Wanderloots",
+        "summary": "Wanderloots 채널에서 'Hermes Agent'라는 데스크톱용 에이전트 도구의 전체 사용법을 튜토리얼 형식으로 다루는 영상으로, 실용적인 에이전틱 AI 워크플로우 구축 방법을 소개합니다. 자막이 없어 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "AI 에이전트",
+            "튜토리얼",
+            "자동화 워크플로우"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Hermes Agent 데스크톱 도구를 활용한 에이전틱 AI 워크플로우 구축 튜토리얼",
+            "자막 미제공으로 구체적 기능/설정 방법은 영상 직접 시청 또는 자막 확보 후 재분석 필요"
+        ],
+        "learning_related": [
+            "에이전틱 AI(Agentic AI) 워크플로우 설계 패턴 학습 가능성",
+            "데스크톱 환경에서의 AI 에이전트 실행 구조 이해"
+        ],
+        "key_insights": [
+            "'Full Tutorial'과 'Useful Agentic AI Workflow'라는 제목으로 보아 실무 적용 가능한 에이전트 구성 가이드로 추정됨",
+            "자막 부재로 신뢰도 낮은 요약 — 실제 자동화 이식 전 원본 영상 재확인 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전틱 AI 워크플로우가 T063 Pollinations 파이프라인 등 기존 자동화 작업에 참고될 수 있음",
+        "timestamp": "2026-07-01T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GL67DEf2nyI/hqdefault.jpg"
+    },
+    {
         "title": "Restricting Agentic AI? 🧠 Full Docker Tutorial + Hermes Agent Workflow",
         "url": "https://www.youtube.com/watch?v=v_E42FkgH2I",
         "channel": "Wanderloots",
