@@ -1,5 +1,32 @@
 [
     {
+        "title": "Information ➡️ Knowledge: How To Build An LLM Wiki In Obsidian 🧠 #obsidian #ai #agenticai",
+        "url": "https://www.youtube.com/watch?v=f2xJepiVTyQ",
+        "channel": "Wanderloots",
+        "summary": "Obsidian을 활용해 단순 정보(Information)를 구조화된 지식(Knowledge)으로 전환하는 'LLM 위키' 구축법을 다루는 영상으로, AI와 에이전틱 워크플로우를 접목해 개인 지식관리 시스템을 자동화하는 방법을 소개하는 것으로 추정됩니다. 자막이 제공되지 않아 상세 내용은 제목과 태그(#obsidian #ai #agenticai) 기반 추정입니다.",
+        "categories": [
+            "Obsidian",
+            "지식관리",
+            "AI 에이전트",
+            "PKM"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "LLM을 Obsidian 노트 시스템과 연결해 정보를 지식으로 구조화하는 접근 — agentic AI 활용 가능성",
+            "개인 지식관리(PKM)에 AI 에이전트를 결합한 워크플로우 사례로, 우리 뿌리체계(D:\\AI) 자동화 설계에 참고할 수 있음"
+        ],
+        "learning_related": [
+            "Information → Knowledge 전환이라는 프레이밍은 단순 자료 축적이 아닌 구조화·연결 중심 지식관리 원칙을 강조"
+        ],
+        "key_insights": [
+            "단순 정보 저장이 아닌 '지식화'를 목표로 한 위키 구조 설계가 핵심 메시지로 보임",
+            "Obsidian + LLM 결합은 로컬 우선 도구이므로 API 비용 없이 구현 가능한 구조일 가능성이 있어 확인해볼 가치 있음"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Obsidian 기반 LLM 위키는 지식관리 뿌리와 직접 연관, ⑤자동화 — agentic AI를 활용한 노트 자동 구조화는 자동화 뿌리에 참고 가능",
+        "timestamp": "2026-06-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/f2xJepiVTyQ/hqdefault.jpg"
+    },
+    {
         "title": "Run Your Own Agentic AI? 🦙 Full Ollama Setup + Hermes Workflow",
         "url": "https://www.youtube.com/watch?v=4KXLW9Y1r4c",
         "channel": "Wanderloots",
