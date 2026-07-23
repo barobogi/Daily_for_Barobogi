@@ -1,5 +1,238 @@
 [
     {
+        "title": "8 Ways I Make Money With Claude",
+        "url": "https://www.youtube.com/watch?v=CkyPE0vZ7Lc",
+        "channel": "Lewis Jackson",
+        "summary": "Lewis Jackson이 Claude(AI)를 활용해 수익을 창출하는 8가지 방법을 소개하는 영상으로 추정됨. 자막/설명이 제공되지 않아 구체적 방법은 제목 기반 추정치임.",
+        "categories": [
+            "AI수익화",
+            "Claude활용",
+            "사이드프로젝트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude를 활용한 다양한 수익 창출 모델 소개 (자막 부재로 구체적 방법 미확인)",
+            "AI 도구를 활용한 개인 사업/프리랜싱 사례일 가능성"
+        ],
+        "learning_related": [
+            "자막 없이 제목만으로는 실질적 학습 포인트 추출 제한적 — 원본 영상 시청 또는 자막 확보 권장"
+        ],
+        "key_insights": [
+            "AI(Claude) 기반 수익화 사례 벤치마킹 가치 있음",
+            "자막 미제공으로 실제 인사이트 검증 불가 — 뽀개기 후보로는 원본 확인 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude 활용 수익화/자동화 사례로 벤치마킹 가능성",
+        "timestamp": "2026-07-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/CkyPE0vZ7Lc/hqdefault.jpg"
+    },
+    {
+        "title": "Building an AI investing system with Claude",
+        "url": "https://www.youtube.com/watch?v=A3fpSGyYoFM",
+        "channel": "Lewis Jackson",
+        "summary": "Claude를 활용해 AI 기반 투자 시스템을 구축하는 과정을 다루는 영상으로 추정됩니다. 자막과 설명이 제공되지 않아 제목 기반 추정 분석이며, 세부 내용(전략·코드·백테스트 여부 등)은 확인이 불가능합니다.",
+        "categories": [
+            "AI투자",
+            "Claude활용",
+            "자동화시스템"
+        ],
+        "stock_related": [
+            "AI 기반 투자 시스템 구축 사례 — 자동매매/분석 파이프라인 설계 참고 가능성 (세부 내용 미확인)"
+        ],
+        "ai_related": [
+            "Claude를 활용한 투자 시스템 구축 — 3AI 체계의 재테크 자동화(T028 등)와 연관 가능성"
+        ],
+        "learning_related": [
+            "Claude API/에이전트를 실전 투자 도메인에 적용하는 아키텍처 패턴 참고 가능"
+        ],
+        "key_insights": [
+            "제목만으로는 구체적 인사이트 도출 불가 — 자막 확보 시 재분석 필요",
+            "채널 조회수 0으로 신규/저노출 영상, 검증된 정보인지 불확실"
+        ],
+        "memo": "📋 뿌리체계: ⑦재테크 — AI 투자 시스템 구축 관련 가능성, 단 세부 검증 필요, ⑤자동화 — Claude 기반 자동화 파이프라인 설계 참고 가능성",
+        "timestamp": "2026-07-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/A3fpSGyYoFM/hqdefault.jpg"
+    },
+    {
+        "title": "Anthropic's New Skill Builds Your AI Agents In SECONDS (Claude Code)",
+        "url": "https://www.youtube.com/watch?v=-rkdt--Q4KM",
+        "channel": "Ethan Nelson",
+        "summary": "Anthropic이 Claude Code에 새로 추가한 'Skill' 기능을 활용해 AI 에이전트를 몇 초 만에 빌드하는 방법을 소개하는 영상으로 추정됩니다. 자막이 제공되지 않아 세부 워크플로우나 구체적 데모 내용은 확인할 수 없습니다.",
+        "categories": [
+            "Claude Code",
+            "AI Agent",
+            "Skill 기능",
+            "자동화 튜토리얼"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code의 Skill 기능을 이용한 에이전트 빠른 빌드 워크플로우로 추정됨 (자막 부재로 세부 검증 불가)"
+        ],
+        "learning_related": [
+            "Claude Code Skill 시스템 학습 후보 — 자체 스킬 제작/커스터마이징에 참고 가능할 수 있음"
+        ],
+        "key_insights": [
+            "자막이 없어 핵심 내용은 제목 기반 추정 수준에 머묾 — 확정적 인사이트 도출 불가",
+            "조회수 0 (업로드 직후 상태로 보임) — 검증된 유용성 판단 근거 부족"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude Code Skill 활용법 학습 자료로 참고 가능성 있으나 자막 부재로 우선순위 낮음",
+        "timestamp": "2026-06-30T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/-rkdt--Q4KM/hqdefault.jpg"
+    },
+    {
+        "title": "This OPEN SOURCE REPO Just Solved Claude Code's #1 Problem",
+        "url": "https://www.youtube.com/watch?v=gyLfrnB0Qqo",
+        "channel": "Ethan Nelson",
+        "summary": "Claude Code의 대표적인 문제(추정: 컨텍스트 손실/메모리 관리/세션 연속성 문제)를 해결한다는 오픈소스 레포를 소개하는 영상으로 보입니다. 자막이 제공되지 않아 상세 내용은 확인 불가하며, 제목 기반 추정입니다.",
+        "categories": [
+            "Claude Code",
+            "오픈소스",
+            "AI 개발도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code의 '#1 문제'를 해결한다고 주장하는 오픈소스 레포 소개 — 자막 부재로 구체적 해결 방식 확인 불가, 원본 영상 시청 필요"
+        ],
+        "learning_related": [
+            "자막 없이는 실제 해결책(메모리/컨텍스트 관리 도구인지, 서브에이전트 프레임워크인지 등) 파악 불가 — 신뢰성 있는 요약을 위해 원본 확인 권장"
+        ],
+        "key_insights": [
+            "제목만으로는 어떤 구체적 문제(컨텍스트 압축, 메모리 영속성, 세션 관리 등)를 다루는지 특정하기 어려움",
+            "자막/설명이 없어 실제 레포명, 핵심 메커니즘 등 확인 불가 — 만복의 memory 시스템이나 CLAUDE.md 운영과 관련 있을 가능성 있으나 확정 불가"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — Claude Code 운영/도구 관련 가능성, 원본 확인 후 재분류 필요",
+        "timestamp": "2026-07-01T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/gyLfrnB0Qqo/hqdefault.jpg"
+    },
+    {
+        "title": "Stop Prompting Claude. Use Karpathy's Method Instead.",
+        "url": "https://www.youtube.com/watch?v=xAeBZOApXNc",
+        "channel": "Ethan Nelson",
+        "summary": "Stop Prompting Claude. Use Karpathy's Method Instead.",
+        "categories": [],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-03T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/xAeBZOApXNc/hqdefault.jpg"
+    },
+    {
+        "title": "Claude Fable 5 Built a $10K Website in Minutes",
+        "url": "https://www.youtube.com/watch?v=CNcPflFcZ04",
+        "channel": "Ethan Nelson",
+        "summary": "Ethan Nelson가 Claude Fable 5를 활용해 단 몇 분 만에 1만 달러 상당의 웹사이트를 제작하는 과정을 소개하는 영상으로 추정됩니다. 자막이 없어 상세 내용은 확인 불가하며 제목 기준 AI 코딩 자동화 사례로 보입니다.",
+        "categories": [
+            "AI 코딩",
+            "웹개발 자동화",
+            "Claude"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Fable 5로 웹사이트 제작을 자동화한 사례 — 코딩 자동화 파이프라인 참고 가능",
+            "자막 부재로 구체적 워크플로우 확인 불가, 원문 영상 직접 시청 필요"
+        ],
+        "learning_related": [
+            "Claude 기반 웹사이트 생성 프롬프트/워크플로우 학습 포인트로 참고 가능"
+        ],
+        "key_insights": [
+            "제목만으로는 실제 구현 방식(풀스택 생성 여부, 어떤 스택 사용했는지) 확인 불가",
+            "자막 없음 + 조회수 0 — 최신 업로드로 검증된 정보 아님, 신뢰도 낮음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude 기반 웹사이트 자동 생성 워크플로우 참고 가능성",
+        "timestamp": "2026-07-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/CNcPflFcZ04/hqdefault.jpg"
+    },
+    {
+        "title": "Claude Just Made AI Agents That Actually Work in Production",
+        "url": "https://www.youtube.com/watch?v=ns6X42koGUA",
+        "channel": "Ethan Nelson",
+        "summary": "제목만으로 추정되는 내용으로, Claude 기반 AI 에이전트가 실제 프로덕션 환경에서 안정적으로 작동하는 사례를 다루는 영상으로 보입니다. 자막과 설명이 없어 세부 내용(구체적 아키텍처, 사용 사례)은 확인이 불가능합니다.",
+        "categories": [
+            "AI 에이전트",
+            "Claude",
+            "프로덕션 배포"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude 기반 AI 에이전트의 프로덕션 적용 사례로, 실제 동작 여부·안정성 검증 방식을 확인할 가치가 있음 (단, 자막 없어 상세 불명)"
+        ],
+        "learning_related": [
+            "AI 에이전트를 실험 단계에서 프로덕션으로 넘길 때의 실무적 고려사항(에러 핸들링, 모니터링 등)을 참고할 수 있는 소재일 가능성"
+        ],
+        "key_insights": [
+            "자막·설명이 없어 실제 인사이트 추출 불가 — 제목 기반 추정만 가능",
+            "조회수 0회로 신규/저노출 영상이라 검증된 정보로 보기 어려움"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 에이전트 프로덕션 운영 사례로 향후 자동화 파이프라인 참고 가능성 (자막 확보 후 재검토 필요)",
+        "timestamp": "2026-07-05T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ns6X42koGUA/hqdefault.jpg"
+    },
+    {
+        "title": "I Turned Karpathy's Second Brain Into an AI Operating System",
+        "url": "https://www.youtube.com/watch?v=RWehAoQ5iMo",
+        "channel": "Ethan Nelson",
+        "summary": "I Turned Karpathy's Second Brain Into an AI Operating System",
+        "categories": [],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-06T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/RWehAoQ5iMo/hqdefault.jpg"
+    },
+    {
+        "title": "Claude Code Works Better With Loops, Not Prompts",
+        "url": "https://www.youtube.com/watch?v=JjZrsI5irOQ",
+        "channel": "Ethan Nelson",
+        "summary": "제목만으로 볼 때, Claude Code를 단발성 프롬프트가 아닌 반복 루프(loop) 구조로 운영할 때 더 나은 결과를 낸다는 주장을 다루는 영상으로 추정됩니다. 자막이 제공되지 않아 구체적 근거나 사례는 확인할 수 없습니다.",
+        "categories": [
+            "Claude Code",
+            "AI 워크플로우",
+            "자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code를 1회성 프롬프트가 아닌 루프(반복 실행) 구조로 운영하는 것이 더 효과적이라는 주장 — 자막 부재로 구체적 방법론은 확인 불가"
+        ],
+        "learning_related": [
+            "자막 없이 제목만으로는 실제 기법(예: /loop 스킬, 반복 검증 루프 등)을 판단하기 어려움 — 자막/스크립트 확보 후 재분석 필요"
+        ],
+        "key_insights": [
+            "'Prompts보다 Loops' — 단발 지시보다 반복 실행 구조가 Claude Code 활용에 유리하다는 주제 제기",
+            "조회수 0, 설명 없음, 자막 없음 → 신규 업로드 영상으로 정보량이 극히 제한적임"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code 루프 기반 실행 구조는 만복 세션의 /loop 스킬 및 자동화 파이프라인 설계와 직접 연관",
+        "timestamp": "2026-07-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/JjZrsI5irOQ/hqdefault.jpg"
+    },
+    {
+        "title": "Graphify + Claude Code + Obsidian = GOD MODE",
+        "url": "https://www.youtube.com/watch?v=GnA9xjYWHBg",
+        "channel": "Ethan Nelson",
+        "summary": "Graphify(Obsidian 그래프 시각화/지식관리 플러그인 추정)와 Claude Code, Obsidian을 결합해 AI 코딩 에이전트가 Obsidian의 지식 그래프를 직접 읽고/쓰고 활용하는 워크플로우를 소개하는 영상으로 추정됨. 자막과 설명이 없어 정확한 내용은 확인 불가.",
+        "categories": [
+            "Obsidian",
+            "Claude Code",
+            "지식관리 자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code를 Obsidian 볼트와 연동해 지식 그래프 기반 컨텍스트 활용 가능성 (제목 기반 추정, 검증 필요)"
+        ],
+        "learning_related": [
+            "Graphify 플러그인 구조 및 Claude Code MCP/CLI 연동 방식 확인 필요 (자막 없어 직접 시청 후 재분석 권장)"
+        ],
+        "key_insights": [
+            "제목만으로는 'GOD MODE'가 구체적으로 무엇을 의미하는지(자동화 범위, 실제 기능) 확인 불가",
+            "자막/설명 부재 + 조회수 0 → 신규 업로드 영상으로 직접 시청 확인이 필요함"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Obsidian 볼트와 AI 에이전트 연동 아이디어로 향후 만복 워크플로우에 참고 가능성 있으나 영상 직접 확인 후 재검토 필요",
+        "timestamp": "2026-07-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GnA9xjYWHBg/hqdefault.jpg"
+    },
+    {
         "title": "Paste This Into Claude, It'll Make You Build 10x Faster.",
         "url": "https://www.youtube.com/watch?v=vDUQDleC7Cs",
         "channel": "Ethan Nelson",
