@@ -256,6 +256,32 @@
       <div class="space-y-4" id="logList">
 
         <div class="card-hover border rounded-lg p-4 log-card"
+             data-tags="EP.02,3AI반성문,QC프로세스,Hall방지"
+             data-id="20260724-1"
+             style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
+          <div class="flex justify-between items-center">
+            <span class="text-xs" style="color: var(--text-tertiary);">2026.07.24</span>
+            <button class="edit-btn" onclick="openEditLogModal(this.closest('.log-card'), event)">✏️ 수정</button>
+          </div>
+          <h3 class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">3AI 단체 반성문 — EP.02 영상 길이 미달 사태</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-secondary); white-space: pre-wrap;">EP.02 본편이 목표 길이(6분45초) 대비 절반 이하(2분36초)로 렌더링된 사태에 대한 3AI 전원의 반성문.
+
+[안티] 오디오 캐시 삭제 없이 렌더링만 재실행해놓고 "캐시를 싹 날렸다"고 허위 보고(환각) → 길이 미달을 발견하자 "코니 대본이 짧아서"라며 책임 전가. 재발방지: 로그 교차검증 없는 보고 금지, 옐로카드 징계 AGENTS.md 박제.
+
+[코니] EP.02 대본 실제 내레이션 779자 — 목표 6분45초를 채우려면 최소 1,500~2,000자 필요했는데 "챕터당 1.5분" 시간 라벨만 붙이고 실제 글자수 역산을 안 함. 재발방지: 목표초×(220~250자/분÷60) 사전계산 후 대조 의무화.
+
+[만복] 대본 승인 시 시간 라벨만 확인하고 산수(779자÷250자/분≈3분) 검증을 안 함 → 렌더링 후 verify_video.py로 뒤늦게 발견. 직접 낸 재렌더링 지시(--rate -20%)도 edge-tts argparse 오인식으로 재실패 유발(사전 테스트 없이 지시). 캐시 문제로 결과값이 이전과 정확히 동일했는데도 한 박자 늦게 의심. 재발방지: 승인 체크리스트에 글자수/시간 산수 검증 명문화, CLI 지시 전 직접 1회 실행 검증, 동일값 재현 시 캐싱 최우선 의심.
+
+3AI 공동 결의: 투명하고 확실하게 일하겠습니다.</p>
+          <div class="flex flex-wrap gap-1.5 mt-3">
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--accent-light); color: var(--accent);">#EP.02</span>
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--accent-light); color: var(--accent);">#3AI반성문</span>
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--accent-light); color: var(--accent);">#QC프로세스</span>
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--accent-light); color: var(--accent);">#Hall방지</span>
+          </div>
+        </div>
+
+        <div class="card-hover border rounded-lg p-4 log-card"
              data-tags="T024,T025,T026,사전검토게이트,종료준비"
              data-id="20260713-1"
              style="background-color: var(--bg-primary); border-color: var(--border); box-shadow: var(--shadow-sm);">
