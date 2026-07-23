@@ -1,5 +1,55 @@
 [
     {
+        "title": "What Top 1% of Agentic Engineers Do Differently",
+        "url": "https://www.youtube.com/watch?v=EWk9PBbKqzc",
+        "channel": "David Ondrej",
+        "summary": "AI 개발자 David Ondrej가 상위 1% 에이전틱 엔지니어들의 차별화된 작업 방식을 다루는 영상으로, 자막이 제공되지 않아 상세 내용은 확인 불가하나 제목상 AI 에이전트 개발 워크플로우와 생산성 습관을 다룰 것으로 추정됨.",
+        "categories": [
+            "AI 에이전트",
+            "개발 생산성",
+            "에이전틱 코딩"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "제목 기반 추정: 상위 1% 에이전틱 엔지니어의 차별화 습관/워크플로우 다룸 (자막 없어 구체 내용 미확인)",
+            "David Ondrej 채널 특성상 Claude Code, Cursor 등 AI 코딩 툴 활용법 관련 가능성 높음"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "자막 미제공으로 실제 인사이트 추출 불가 — 제목/채널명 기반 추정치임",
+            "3AI(만복/코니/안티) 에이전틱 협업 구조와 비교 검토 가치 있을 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전틱 엔지니어링 워크플로우, 3AI 협업 구조 개선 참고 가능성 (자막 부재로 확정적 판단 보류)",
+        "timestamp": "2026-07-09T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/EWk9PBbKqzc/hqdefault.jpg"
+    },
+    {
+        "title": "AI Coding Agents tier list",
+        "url": "https://www.youtube.com/watch?v=H-MU1gXsf2U",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 여러 AI 코딩 에이전트(Cursor, Claude Code, Windsurf, Cline, Devin 등으로 추정)를 티어리스트 형태로 비교 평가하는 영상으로 보입니다. 자막이 제공되지 않아 정확한 순위와 근거는 확인되지 않았습니다.",
+        "categories": [
+            "AI 코딩",
+            "티어리스트",
+            "개발도구 비교"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 코딩 에이전트 툴 비교/랭킹 콘텐츠 — 현재 시장에서 어떤 도구가 우위인지 트렌드 파악용으로 참고 가능",
+            "자막 없이는 구체적 순위·평가 기준 확인 불가 — 실제 인사이트 반영 전 영상 시청 또는 자막 재확인 필요"
+        ],
+        "learning_related": [
+            "AI 코딩 에이전트 생태계 동향 학습 콘텐츠로 분류됨"
+        ],
+        "key_insights": [
+            "자막 미제공으로 세부 내용 파악 불가 — 제목/채널 정보만으로는 신뢰도 있는 요약 어려움",
+            "David Ondrej 채널은 AI 개발도구/에이전트 리뷰 전문 채널로, 코딩 에이전트 선택에 참고될 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 코딩 에이전트 도구 비교로 개발 생산성 학습에 참고 가능",
+        "timestamp": "2026-07-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/H-MU1gXsf2U/hqdefault.jpg"
+    },
+    {
         "title": "Tailscale, Clearly Explained (Beginner's Guide)",
         "url": "https://www.youtube.com/watch?v=eNn2tT-lrz4",
         "channel": "David Ondrej",
