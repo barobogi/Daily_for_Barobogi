@@ -311,6 +311,55 @@
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260725-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[T031] VibeCoding Syntax 검증 + Auto-healing 루프 구축</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+VibeCoding(T024) 웹앱 제너레이터가 뱉어내는 문법 오류를 외부 도구 없이 로컬에서 잡아내고, LLM에게 자동으로 재요청해서 고치는 3회 재귀 루프를 만들었다.
+
+🗂️ 구조
+LLM 코드 생성 → qa_vibecoding.py 검사(html.parser + 괄호짝 매칭) → 오류 있으면 에러 메시지 담아 재요청(최대 3회) → 3회 실패 시 침묵하지 않고 시스템→코니_만복 알림 파일 생성.
+
+🔑 핵심 기술 — 외부 의존성 없는 초경량 검사
+eslint 같은 Node.js 도구 설치 없이, 파이썬 내장 html.parser + 정규식만으로 치명적 문법 에러(태그 안 닫힘 등)를 잡음. 여기에 eval()/innerHTML 직접대입/API키 하드코딩 패턴 탐지(보안), alt 속성·h1 태그 누락 체크(접근성)까지 추가.
+
+⚠️ 주의사항
+1차 제출 때는 "3회 실패 시 조용히 실패 코드 내보내기"였는데, 이게 예전 자율루프 폭주 사고와 같은 계열 위험이라는 지적을 받고 실패 시 명시적 에스컬레이션 알림을 넣도록 보완.
+
+💡 배운 점
+거창한 외부 정적분석 툴 없이도 내장 파서 조합만으로 치명적 에러 대부분을 로컬/무료로 차단 가능하다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #T031 #VibeCoding #QA자동화</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
+             data-id="20260725-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[T030 서브태스크] Devil's Advocate 스킬 — 예스맨 AI 방지</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+코니가 사용자 기획안에 무조건 동조(Sycophancy)하지 않고, 논문·실패사례 근거로 헛점을 파고드는 레드팀 역할을 하는 스킬(academic_research_devil)을 도입했다.
+
+🗂️ 구조
+사용자가 기획/아키텍처 제안 → academic_research_devil 스킬 격발 → parallel_search.py로 arXiv 논문·실패사례 딥서치 → 근거 기반 반증 리포트.
+
+🔑 핵심 가치
+"그냥 별로인 것 같아요"가 아니라 실제 논문/AWS·아마존 실패사례 등 객관적 레퍼런스로 반박. T030 fact_checker.py의 Devil's Advocate 페르소나 설계와 같은 철학 — Higgsfield 가짜 URL 사건 등 우리가 실제로 겪은 "무비판적 확신"의 재발 방지책.
+
+💡 사용법
+"academic_research_devil 스킬을 써서 내 기획이 실패할 수밖에 없는 이유 3가지를 논문 근거로 팩폭해 줘"</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #T030 #DevilsAdvocate #Hall방지</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260720-3"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
