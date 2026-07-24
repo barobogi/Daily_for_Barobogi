@@ -1,5 +1,32 @@
 [
     {
+        "title": "Build Anything with Kimi K3, Here’s How",
+        "url": "https://www.youtube.com/watch?v=ZW7R3qNw4nk",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 Kimi K3(문샷 AI의 신규 LLM)를 활용해 코딩 프로젝트를 구축하는 방법을 소개하는 영상으로 보입니다. 자막이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "AI 코딩",
+            "LLM 도구",
+            "개발자 튜토리�얼"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Kimi K3 모델을 활용한 실전 코딩 워크플로우 소개 가능성",
+            "오픈소스/저비용 LLM으로 개발 생산성 높이는 사례 (API 회피 구조와 관련)"
+        ],
+        "learning_related": [
+            "Kimi K3의 코드 생성·에이전트 활용법 학습 가치",
+            "David Ondrej 채널 특성상 실습형 데모 위주일 가능성 높음"
+        ],
+        "key_insights": [
+            "제목만으로는 구체적 기능 파악 어려움 — 자막 없이는 신뢰도 낮은 요약",
+            "Kimi K3가 언급된 것으로 보아 최신 중국계 오픈 LLM 활용 트렌드 반영 영상으로 추정"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Kimi K3 등 저비용/무료 LLM 활용한 코딩 자동화 가능성, API 회피 구조 우선 원칙과 연결",
+        "timestamp": "2026-07-24T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ZW7R3qNw4nk/hqdefault.jpg"
+    },
+    {
         "title": "Laguna S 2.1: The Best Local Model? Beats GLM 5.2",
         "url": "https://www.youtube.com/watch?v=xSZoPhY9BGA",
         "channel": "Cloud Codes",
