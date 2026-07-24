@@ -1,5 +1,34 @@
 [
     {
+        "title": "Tokenization Just Got 1,000x Faster! (Gigatoken)",
+        "url": "https://www.youtube.com/watch?v=vFtJeZ7ifTA",
+        "channel": "Cloud Codes",
+        "summary": "GigaToken이라는 신규 오픈소스 토크나이저가 OpenAI의 tiktoken 대비 최대 900배 이상 빠른 속도로 텍스트를 토큰화하며, 출력 결과는 완전히 동일하다는 내용을 다루는 영상. 서버(24GB/s)와 M4 Max 노트북(9GB/s) 양쪽에서 Hugging Face tokenizers와 tiktoken을 압도적으로 능가하는 벤치마크 결과를 제시한다.",
+        "categories": [
+            "AI 인프라",
+            "오픈소스",
+            "토크나이저",
+            "LLM 최적화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "GigaToken: tiktoken 대비 최대 680~900배, Hugging Face 대비 최대 1300배 빠른 오픈소스 토크나이저 (MIT 라이선스, pip install gigatoken)",
+            "GPT-2, Llama, Qwen, DeepSeek, GLM, Phi, Nemotron, GPT-OSS 등 주요 모델 토크나이저 전부 20GB/s 이상 처리 — 기존 코드에 드롭인 교체 가능",
+            "토큰화는 모든 학습/추론 파이프라인의 병목 지점(plumbing)이며, 출력은 기존 도구와 토큰 단위로 100% 동일 (품질 손실 없는 순수 속도 개선)"
+        ],
+        "learning_related": [
+            "제작자는 스탠퍼드에서 '밑바닥부터 언어모델 만들기' 강의를 하는 개발자 — 신뢰도 있는 기술 출처",
+            "벤치마크 단위 차이(MB/s vs GB/s)를 직관적으로 이해시키는 설명 방식이 인상적 (소설 5만 권/초 비유)"
+        ],
+        "key_insights": [
+            "토큰화 속도는 그동안 크게 주목받지 못한 영역이었으나, 대규모 데이터 전처리·학습 파이프라인에서 실질적 병목이었음이 드러남",
+            "무료 오픈소스(MIT) + pip 설치 한 줄로 기존 tiktoken/HuggingFace 코드를 대체 가능 — 즉시 실무 적용 가능성 높음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 파이프라인/토크나이저 성능 개선은 향후 로컬 LLM 자동화 구축 시 참고할 오픈소스 도구, ④공부방 — LLM 내부 동작(토크나이제이션) 이해에 도움되는 기술 자료",
+        "timestamp": "2026-07-24T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/vFtJeZ7ifTA/hqdefault.jpg"
+    },
+    {
         "title": "키미 K3 마스터 AI 트레이팅  1탄  (Kimi k3 & Claude + TradingView Course)",
         "url": "https://www.youtube.com/watch?v=SW0IV4d1pqA",
         "channel": "호두의 AI 분석실",
