@@ -1,5 +1,29 @@
 [
     {
+        "title": "AI Concepts tier list",
+        "url": "https://www.youtube.com/watch?v=z8pjFF9-Vss",
+        "channel": "David Ondrej",
+        "summary": "자막과 설명이 제공되지 않아 실제 영상 내용은 확인 불가. 제목(AI Concepts tier list)과 채널(David Ondrej, AI/자동화 전문 크리에이터) 기반 추정으로는 RAG, 에이전트, 파인튜닝, 프롬프트 엔지니어링 등 여러 AI 개념/기술을 등급(티어)으로 나눠 평가하는 콘텐츠로 보임. 조회수 0으로 매우 최근 업로드된 영상.",
+        "categories": [
+            "AI",
+            "티어리스트",
+            "David Ondrej"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "제목 기반 추정: AI 핵심 개념들을 실용성/중요도 기준으로 랭킹화하는 포맷일 가능성 — 실제 자막 확보 후 재분석 필요"
+        ],
+        "learning_related": [
+            "David Ondrej 채널은 평소 AI 에이전트/코딩 자동화 실전 콘텐츠 위주 — 이번 영상도 개념 정리용 학습 자료일 가능성"
+        ],
+        "key_insights": [
+            "자막·설명 부재로 신뢰할 수 있는 요약 불가 — 자막 확보 전까지는 추정 수준의 정보만 제공됨"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — AI 개념 정리/학습 자료로 뿌리체계 지식DB 편입 검토 가능 (자막 확보 후 재판단 필요)",
+        "timestamp": "2026-07-24T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/z8pjFF9-Vss/hqdefault.jpg"
+    },
+    {
         "title": "알리바바 토큰 플랜 6$ 헤르메스 에이전트에 연동하기",
         "url": "https://www.youtube.com/watch?v=fyfvVtb6xxs",
         "channel": "로치의개발일기",
