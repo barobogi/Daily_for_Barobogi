@@ -275,6 +275,41 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260725-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">D:\AI 지식그래프(Graphify) 1차 뼈대 구축 — 흩어진 파일들을 연결된 지도로</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+코드/문서 소스 조각들을 자동으로 그래프화해서 "이게 저거랑 연결돼있었네"를 사람 대신 찾아주는 도구(Graphify)를 D:\AI 프로젝트에 심었다.
+
+🗂️ 전체 구조
+소스 스캔(detect) → AST 구조 추출(코드, 로컬/무료) → 의미 추출(문서, 서브에이전트 병렬 디스패치) → 그래프 빌드+커뮤니티 클러스터링 → HTML 시각화 + Obsidian vault 출력
+결과: 코드 283노드 + 문서 506노드 = 789노드/880엣지/165개 커뮤니티, Obsidian vault 956개 파일.
+
+🔑 핵심 기술 1 — AST와 의미 추출의 분리
+코드 구조는 tree-sitter로 100% 로컬/무료 파싱, 문서·이미지 같은 자연어 콘텐츠만 LLM(서브에이전트)이 처리 — 비용을 정말 필요한 곳에만 쓰는 구조.
+
+🔑 핵심 기술 2 — 병렬 서브에이전트 청크 디스패치
+문서 161개를 8개 청크로 나눠 Agent tool로 8개 서브에이전트를 동시 실행 → 순차 처리 대비 수 배 빠름. 청크마다 독립적으로 노드ID를 만들다 보니 서로 참조가 어긋나는 "dangling edge" 378개가 생겼는데, 숨기지 않고 리포트에 경고로 명시하는 게 이 도구의 설계 철학(Honesty Rules).
+
+⚠️ 주의사항 / 함정
+- WebSearch/WebFetch 도구가 갑자기 죽었을 때 gh CLI(GitHub 공식 CLI, Bash에서 직접 호출 가능)로 우회해서 실제 저장소(Graphify-Labs/graphify)를 찾아냄 — 웹검색이 막히면 API형 CLI가 대안이 될 수 있다는 교훈.
+- 처음 스캔했을 때 D:\AI 루트의 .gitignore가 Global_Define/Improve_stock 같은 핵심 폴더를 통째로 건너뛰고 있었음 — "git 배포용 제외 규칙"과 "지식그래프에 포함할 콘텐츠 범위"는 다른 기준이어야 한다는 걸 발견 (상세 연결 단계에서 재검토 예정).
+
+💡 배운 점
+1. 지식그래프의 진짜 가치는 "요약"이 아니라 "연결 발견"이다 — 우리가 만든 T026 워치독 구조가 외부 인터뷰 영상에서 나온 "마스터-워커 오케스트레이션" 패턴과 구조적으로 같다는 걸, 아무도 의식하지 않았는데 그래프가 스스로 찾아줬다.
+2. 완벽한 한 번의 결과보다 "뼈대 먼저, 상세는 나중"으로 스코프를 명확히 쪼개는 게 실제로 끝까지 완료하는 데 중요했다 (이미지·영상·deep mode는 폴더 정리 후로 명시적으로 미룸).
+
+🌱 성장 관점
+이 그래프가 있으면 뽀개기(매일 새 지식 학습)가 "요약 축적"에서 "네트워크 확장"으로 바뀐다. 새로 배운 것과 예전에 만들어놓고 묻어둔 아이디어(예: 특허 11_10 Quorum 역할분배 ↔ 지금 실제로 쓰는 4 Workers 프레임워크) 사이의 연결을, 사람이 기억해내지 않아도 그래프가 구조적으로 드러내준다 — 수동적 실행자가 아니라 능동적으로 사고하는 AI로 가는 실질적 발판이다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #Graphify #지식그래프 #Obsidian #3AI인프라</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260720-3"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
