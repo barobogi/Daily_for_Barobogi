@@ -1,5 +1,28 @@
 [
     {
+        "title": "Remote Work is the #1 Productivity Killer",
+        "url": "https://www.youtube.com/watch?v=k9Gd1fYYWa8",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej와 팀원들이 원격근무보다 대면근무가 생산성이 훨씬 높다고 주장하는 영상. 유니콘 스타트업 99.5%가 대면 전용이라는 점과 일론 머스크 계열사들이 코로나 이후 즉시 대면 복귀한 사례를 근거로 들며, 실제 재택근무 경험담(생산성 절반 하락, 딴짓 유혹)을 공유한다.",
+        "categories": [
+            "원격근무",
+            "생산성",
+            "스타트업",
+            "조직문화"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [
+            "10억 달러 밸류에이션 스타트업의 99.5%가 대면근무 전용이라는 통계를 근거로 제시",
+            "실제 원격근무 하루 경험 시 체감 생산성이 평소의 절반으로 하락했다는 개인 사례",
+            "사무실 근무가 딴짓(트위터 스크롤 등)을 줄이는 사회적 압력 효과가 있다는 주장"
+        ],
+        "memo": "📋 뿌리체계: ①목표관리 — 팀/조직 생산성 관리 인사이트로 참고 가능",
+        "timestamp": "2026-07-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/k9Gd1fYYWa8/hqdefault.jpg"
+    },
+    {
         "title": "Best Local AI Models For Your GPU",
         "url": "https://www.youtube.com/watch?v=T8v8Rxr8rMM",
         "channel": "Cloud Codes",
