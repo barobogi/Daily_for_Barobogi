@@ -1,5 +1,40 @@
 [
     {
+        "title": "Model Distillation : Steal a Billion Dollar AI",
+        "url": "https://www.youtube.com/watch?v=FIwqMbfZUaE",
+        "channel": "Cloud Codes",
+        "summary": "이 영상은 AI 모델 증류(Distillation) 기법을 설명합니다. API만으로 거대 프론티어 모델의 답변을 수집해 소형 모델을 학습시키면 원본 모델의 능력을 저비용으로 복제할 수 있으며, DeepSeek이 이 방식으로 Nvidia 시가총액을 하루 만에 약 6000억 달러 증발시킨 사례와 Qwen 기반 모델을 50달러 미만으로 프론티어급 추론 능력을 복제한 사례를 소개합니다.",
+        "categories": [
+            "AI",
+            "머신러닝",
+            "LLM",
+            "테크"
+        ],
+        "stock_related": [
+            "2026년 1월 DeepSeek의 오픈모델(증류 기법 활용)이 하루 만에 Nvidia 시가총액을 약 6000억 달러 증발시킴 — AI 반도체/빅테크 관련주 리스크 요인으로 참고 가능"
+        ],
+        "ai_related": [
+            "모델 증류(Distillation): 큰 교사 모델(teacher)의 API 응답을 대량 수집해 작은 학생 모델(student)을 파인튜닝하는 기법",
+            "White box 증류: 교사 모델의 내부 확률분포(soft label, 예: 고양이 90%/개 9%/자동차 1%)까지 활용해 더 적은 데이터로 효율적 학습 가능 — 단, 모델을 직접 소유해야만 가능",
+            "Black box 증류: 내부를 보지 않고 출력 결과만 복제 — API만 있으면 누구나 시도 가능해 프론티어 랩들이 우려하는 방식",
+            "Alibaba의 오픈소스 Qwen 모델이 증류의 인기 학생 베이스로 활용되며, 한 팀이 50달러 미만 비용으로 프론티어급 추론 능력 복제에 성공",
+            "OpenAI/Google의 저가 티어 모델(mini, flash, Haiku 등)도 대개 더 크고 비싼 형제 모델의 증류 산물"
+        ],
+        "learning_related": [
+            "Dark Knowledge 개념 (Geoffrey Hinton 외, Google, 2015): 모델의 예측 확률분포에 담긴 유용한 잠재 신호",
+            "증류 3단계: ①큰 교사 모델 준비 ②대량 질문 후 답변 기록 ③학생 모델을 그 답변으로 파인튜닝",
+            "저작권/소유권 논쟁: 증류가 '기술 도용'인지 '아이디어 확산'인지 미국 의회에서 논의 중"
+        ],
+        "key_insights": [
+            "API 접근만으로 프론티어 모델의 핵심 능력을 저비용 복제 가능한 증류 기법이 AI 업계 판도를 흔들고 있음",
+            "DeepSeek·Qwen 기반 오픈모델 사례가 증류의 파괴력을 실증 — 대형 랩들의 API 요금 정책 및 IP 보호 전략에 근본적 위협",
+            "white box(내부 확률 접근) vs black box(출력만 복제) 구분이 증류의 합법성·윤리성 논쟁의 핵심"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 모델 증류(Distillation) 개념 학습 자료, LLM 아키텍처 이해에 유용, ⑦재테크 — DeepSeek發 Nvidia 시총 급락 사례, AI 반도체/빅테크 주 리스크 모니터링 참고",
+        "timestamp": "2026-07-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/FIwqMbfZUaE/hqdefault.jpg"
+    },
+    {
         "title": "최신 모델 전체 비교 Opus 5.0 vs Fable 5 vs Kimi K3 vs GPT 5.6 Sol",
         "url": "https://www.youtube.com/watch?v=Oe6R8qGLHrQ",
         "channel": "호두의 AI 분석실",
