@@ -275,6 +275,98 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260725-7"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[EP02] edge-tts 캡션 싱크 버그 — WordBoundary가 아니라 SentenceBoundary였다</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+TTS 자막을 단어 단위(WordBoundary)로 동기화하려 했는데, 실제 edge-tts가 이 보이스에서 내보내는 건 문장 단위(SentenceBoundary) 이벤트였던 게 원인 — 전체 caption timing 배열이 빈 값으로 나와 자막이 씬 전체에서 겹쳐 깨졌다.
+
+🗂️ 구조
+edge_tts.Communicate(...).stream()이 chunk를 뱉을 때 chunk["type"]을 확인해서 캡션 타이밍을 잡는데, 코드가 "WordBoundary"만 필터링하고 있었음 → 실제 이 음성(ko-KR-SunHiNeural)은 WordBoundary를 아예 안 보내고 SentenceBoundary만 보냄 → 타이밍 배열이 통째로 비어서 씬의 모든 자막이 동시에 렌더링(겹침).
+
+🔑 핵심 수정
+필터를 "SentenceBoundary"로 바꾸고, 문장별 자체 start/end 타임스탬프를 그대로 사용(글자 수 비례 추정 방식 폐기) — 겹침 없는 순차 타이밍으로 정상화. 코니가 실물 timing.json 직접 열어서 재검증 완료.
+
+💡 배운 점
+라이브러리 문서상의 "표준" 이벤트 타입을 가정하지 말고, 실제 음성별로 어떤 이벤트가 나오는지 직접 찍어봐야 한다 — 보이스마다 이벤트 종류가 다를 수 있음.
+
+🌱 성장 관점
+오늘 "안티 검증 보고서만 믿지 말고 만복이 직접 프레임 확인" 원칙이 세워진 배경이 된 사건 중 하나 — 검증은 실물을 직접 열어보는 것으로 완성된다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #EP02 #edge-tts #버그수정</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
+             data-id="20260725-6"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뿌리23] Karpathy LLM Wiki 기법 — EmotionPrompt + Obsidian 위키링크</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+Karpathy의 "Claude Code로 노트 수집 → Obsidian 연결" 아키텍처와 EmotionPrompt 효과를 daily_pobbagi_runner.py에 이식, 오늘 만든 Graphify 지식그래프의 자연스러운 다음 단계로 편입.
+
+🗂️ 구조
+딱딱한 요약 프롬프트 → "초보자에게 멘토처럼 설명해달라"는 감정 프롬프트로 교체 + 핵심 용어를 [[키워드]] 위키링크로 자동 추출해 Graphify 노드로 직결.
+
+⚠️ 주의사항 / 함정
+딥서치 중 인용한 omegamax.co가 존재하지 않는 LLM 환각 링크였음 — 코니·안티가 각각 독립적으로 검증하다 못 찾아내서 발각. AI 간 교차검증이 실제로 작동한 사례이자, 만복 자신도 환각에서 자유롭지 않다는 교훈.
+
+🌱 성장 관점
+뽀개기 파이프라인이 매일 새 지식을 흡수하는 것 자체가 이제 Graphify 그래프에 노드로 쌓인다 — 학습이 휘발되지 않고 구조적으로 누적되는 구조.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #Karpathy #Graphify #뽀개기</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
+             data-id="20260725-5"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뿌리52] GPS Check 온톨로지 하드닝 — 텍스트 검증에서 코드 검증으로</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+뉴로-심볼릭 AI(확률적 LLM + 기호적 온톨로지) 개념을 차용해, 느슨한 키워드 매칭이던 GPS Check(Goal/Proof/Steps)를 Pydantic 스키마 강제 검증으로 교체.
+
+🗂️ 구조
+기존 gps_check.py는 "Goal/Proof/Steps" 단어가 텍스트에 있기만 하면 통과 → Pydantic 모델로 각 필드의 실질 내용(빈값 아님, 측정 가능한 완료조건, 순서 있는 단계)을 검증하는 방식으로 전환. OWL/RDFS 같은 무거운 학술 표준은 Ugly MVP 원칙에 안 맞아 배제, Pydantic+NetworkX 경량 조합 채택.
+
+🌱 성장 관점
+push_to_all.py 승인 게이트 강화와 같은 날, 같은 문제의식(텍스트 규칙의 느슨함)에서 나온 자매 프로젝트.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #GPSCheck #온톨로지 #Hall방지</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
+             data-id="20260725-4"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뿌리25] Dreams Consolidator — AGENTS.md 자가 치유 시스템</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+Anthropic Dreams 논문의 "자체 규정 재검토" 패턴을 차용해, AGENTS.md에 쌓이는 Hookify 규칙들의 중복·모순을 LLM이 자동으로 정리하는 파이프라인.
+
+🗂️ 구조
+rule_manager.py(LLM 호출로 중복/모순 실제 제거+압축) → AGENTS.md.new 생성 → Pydantic 안전성 검증 → 통과 시 원본 백업(.bak) 후 스왑 → inbox.md 요약 리포트.
+
+⚠️ 주의사항 / 함정
+원안(안티)은 "검증 통과 시 자동 스왑"이었으나, AGENTS.md가 "전역선언 수정=만복 단독" 원칙 대상이라 위험 판단 → diff 생성 → inbox 검토요청 → 만복 명시적 승인 후에만 실제 교체로 변경. 자동화 제안엔 항상 사람 검토 게이트를 기본값으로.
+
+🌱 성장 관점
+오늘 하루 종일 겪은 "글로 적힌 규칙만으론 안 지켜진다"는 문제의 구조적 해법 한 조각 — 규칙 자체가 스스로 정리되지 않으면 결국 토큰 한계와 규칙 충돌로 무너진다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #Dreams #AGENTS_md #자가치유</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260725-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
