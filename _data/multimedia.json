@@ -1,5 +1,37 @@
 [
     {
+        "title": "최신 모델 전체 비교 Opus 5.0 vs Fable 5 vs Kimi K3 vs GPT 5.6 Sol",
+        "url": "https://www.youtube.com/watch?v=Oe6R8qGLHrQ",
+        "channel": "호두의 AI 분석실",
+        "summary": "호두의 AI 분석실이 2026년 7월 24일 출시된 Opus 5를 포함해 Fable 5, Kimi K3, GPT 5.6 Sol 네 개 최신 모델을 토네이도/중장비 파괴 시뮬레이션 앱 제작으로 비교 테스트했다. 시각적 디테일은 GPT 5.6과 Fable 5가 우수했고 Opus 5와 Kimi K3는 상대적으로 단순했으며, 벤치마크 점수(61/60/59/57)는 사실상 오차범위 내 동일 성능이지만 가격·속도·강점 영역에서 뚜렷한 차이를 보였다.",
+        "categories": [
+            "AI 모델비교",
+            "Claude Opus 5",
+            "LLM 벤치마크",
+            "코딩 에이전트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Opus 5(2026-07-24 출시)는 Fable 5 대비 가격이 정확히 절반이며, '가장 균형잡힌 모델'로 포지셔닝됨. 최고 사이버보안 성능은 여전히 앤트로픽의 상위 모델(미도스급)보다 낮고, 사이버/생화학 관련 민감 요청 시 하위 클로드로 폴백되는 안전장치 있음",
+            "Fable 5는 4개 모델 중 최고 성능·최고 출력속도를 보이지만 가격이 가장 비싸고, 최상급 장기 자율 코딩·과학 작업에 유리한 대신 사용량 제약이 가장 큼 (30일 데이터 보존 조건)",
+            "GPT 5.6 Sol은 '모델'이라기보다 '도구 부착형 시스템'에 가까워 웹검색·파일검색·코드실행 등 외부 도구 연동 작업에서 강점을 보임",
+            "Kimi K3는 압도적으로 저렴하지만 출력 속도가 타 모델 대비 절반 이하이며 디테일 표현력이 상대적으로 부족함",
+            "동일 프롬프트 벤치마킹 방법론: Claude 두 세팅(Fable 5/Opus 5) + Codex(GPT 5.6) + Kimi를 동시에 띄워 같은 프롬프트로 HTML 앱을 만들게 하고 결과물·소요시간(약 20분)·작업 과정(설계 확인 방식 차이)을 직접 비교"
+        ],
+        "learning_related": [
+            "모델별 작업 착수 전 확인 프로세스가 다름: Fable 5는 핵심설계 확인 후 즉시 코딩, Opus 5는 신규 '인사이트' 기능으로 한 번 더 검증, GPT 5.6 Sol은 장면 구조·세부 요소를 단계적으로 확정, Kimi는 순차 진행형",
+            "독립 벤치마크 1~2점 차이는 사실상 동일 성능으로 해석해야 하며, 실사용 판단은 비용·속도·강점 영역(코딩/도구연동/장기작업)을 종합해야 함"
+        ],
+        "key_insights": [
+            "출시 하루차 벤치마크라 변동 가능성이 있다는 전제하에, Opus 5·Fable 5·GPT 5.6 Sol·Kimi K3는 성능 차이보다 강점 영역(장기 자율작업 vs 도구연동 vs 가성비)의 차이가 더 큼",
+            "가격 대 성능 트레이드오프: Kimi K3(최저가·저속) < Opus 5(Fable 절반가) < GPT 5.6 Sol < Fable 5(최고가·최고속) 순",
+            "Anthropic 모델(Fable 5, Opus 5)이 4개 모델 비교에서 상위권 유지, 특히 Fable 5는 여전히 '최상위 모델'로 평가됨"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude Opus 5/Fable 5 등 사용 중인 AI 모델 스펙·가격·강점 변화 학습 자료로 활용 가능, ③지식관리 — 모델별 벤치마크/가격/속도 비교표를 향후 모델 선택 의사결정 참고자료로 축적 가치 있음",
+        "timestamp": "2026-07-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Oe6R8qGLHrQ/hqdefault.jpg"
+    },
+    {
         "title": "Remote Work is the #1 Productivity Killer",
         "url": "https://www.youtube.com/watch?v=k9Gd1fYYWa8",
         "channel": "David Ondrej",
