@@ -1,5 +1,36 @@
 [
     {
+        "title": "Best Local AI Models For Your GPU",
+        "url": "https://www.youtube.com/watch?v=T8v8Rxr8rMM",
+        "channel": "Cloud Codes",
+        "summary": "GPU VRAM 용량별(4GB~384GB) 5단계로 나눠 각 구간에서 현재 가장 뛰어난 로컬 오픈소스 AI 모델을 소개하는 영상으로, 이번 영상은 4~8GB 최하위 구간을 다룬다. 이 구간 최고 모델은 중국 Nan Bee의 30억(3B) 파라미터 모델 'Nanbeige 4.2'로, 반복 레이어를 재사용하는 looped transformer 구조를 통해 9B급 Qwen 3.5나 12B급 Gemma 4보다 뛰어난 성능(SWE-bench 63%, GPQA Diamond 87%)을 단 2GB 메모리로 달성한다.",
+        "categories": [
+            "로컬 LLM",
+            "온디바이스 AI",
+            "GPU/VRAM",
+            "오픈소스 모델",
+            "AI 모델 벤치마크"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "3B 모델(Nanbeige 4.2)이 looped transformer 구조로 레이어를 반복 재사용해 파라미터 대비 성능을 극대화 — '작은 모델=멍청함' 공식이 깨짐",
+            "256k 토큰 컨텍스트로 2GB급 하드웨어에서도 코드베이스/문서 뭉치를 통째로 다룰 수 있음",
+            "클라우드 API 없이 로컬 실행 시 토큰당 비용·요청 제한·데이터 유출 리스크 자체가 사라짐 — 만복 CLAUDE.md의 'API 회피 우선(비용 0원 구조)' 원칙과 정확히 부합"
+        ],
+        "learning_related": [
+            "GPU VRAM 확인법: Windows는 작업관리자→성능→GPU '전용 메모리', Mac은 통합 메모리 총량 확인",
+            "SWE-bench Verified(실제 GitHub 이슈 해결률), GPQA Diamond(대학원급 과학 시험) 같은 벤치마크로 소형 모델의 실질 성능 비교 가능"
+        ],
+        "key_insights": [
+            "모델 선택 기준이 '똑똑함'이 아니라 '내 GPU 메모리 용량'이라는 프레이밍 — 하드웨어 제약이 곧 모델 선택 기준",
+            "3B 모델이 4~9배 큰 모델을 능가하는 사례는 로컬/저사양 환경에서도 실전급 AI 활용이 가능해졌음을 시사",
+            "저비용·프라이버시 중시 자동화(파일 태깅, 티켓 분류, 데이터 라벨링 등 대량 반복 작업)에 특히 적합"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 2GB급 로컬 모델로 파일 태깅/분류 등 무료(API 회피) 자동화 파이프라인 구축 가능성 검토, ④공부방 — 로컬 LLM VRAM 티어별 최적 모델 정보, 향후 로컬 AI 도입 판단 시 참고 자료",
+        "timestamp": "2026-07-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/T8v8Rxr8rMM/hqdefault.jpg"
+    },
+    {
         "title": "Build an Obsidian SYSTEM Not a Second Brain!",
         "url": "https://www.youtube.com/watch?v=oJGksQokqNs",
         "channel": "Ethan Nelson",
