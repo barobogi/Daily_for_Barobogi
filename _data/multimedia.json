@@ -1,5 +1,33 @@
 [
     {
+        "title": "The Ultimate AI Office Shortcut",
+        "url": "https://www.youtube.com/watch?v=l0fbv5neQb8",
+        "channel": "The Next New Thing",
+        "summary": "Office CLI라는 도구가 AI 에이전트에게 Word, Excel, PowerPoint를 조작할 수 있는 '눈'을 부여해 텍스트/차트가 겹치는 등의 어설픈 결과를 방지한다는 내용. 스크린샷 기반으로 실제 결과물을 보게 하는 방식이 최근 트렌드이며, 기존 방식(에이전트가 직접 오피스 파일을 코드로 조작)보다 토큰과 시간을 훨씬 절약할 수 있다고 설명한다.",
+        "categories": [
+            "AI 에이전트",
+            "생산성 도구",
+            "오피스 자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Office CLI: AI 에이전트가 Word/Excel/PowerPoint를 조작할 때 스크린샷(시각 피드백)을 통해 겹침/오버플로우 오류를 줄이는 도구",
+            "코드/데이터만이 아니라 '보이는 화면'을 모델에 직접 주는 방식(스크린샷 기반 피드백)이 최근 에이전트 개발 트렌드로 부상",
+            "Claude Code/Codex 같은 범용 에이전트도 Excel 편집이 가능하지만 토큰과 시간을 많이 소모함 — 전용 레이어 도구가 특정 작업에서 훨씬 효율적",
+            "특정 앱(PowerPoint 등)에 특화된 전용 도구 5~6개를 구비해 반복 작업을 증강시키는 전략이 권장됨"
+        ],
+        "learning_related": [
+            "AI에게 창작 관련 조작을 맡길 때 '시각적 확인(눈)'이 없으면 레이아웃 겹침 같은 sloppy한 결과가 나오기 쉽다는 원리"
+        ],
+        "key_insights": [
+            "AI 에이전트에 시각 피드백(스크린샷) 레이어를 추가하면 오피스 문서 편집 품질과 속도가 크게 개선됨",
+            "범용 LLM으로도 가능하지만 전용 도구가 토큰/시간 비용 면에서 우위 — 자주 쓰는 앱마다 전용 도구를 갖추는 전략이 효율적"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 오피스 문서(Word/Excel/PPT) 자동화 도구 벤치마킹 가능, 63_youtube_creator 등 콘텐츠 파이프라인에 PPT/문서 자동생성 적용 검토 가치",
+        "timestamp": "2026-07-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/l0fbv5neQb8/hqdefault.jpg"
+    },
+    {
         "title": "Serverless vs Monoliths: Why Tech Giants Are Going Back to Servers",
         "url": "https://www.youtube.com/watch?v=Yu1ECFDoaL8",
         "channel": "Cloud Codes",
