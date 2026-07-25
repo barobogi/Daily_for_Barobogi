@@ -275,6 +275,35 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260726-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[플러그인 리뷰] 1주차 결과 — 클로드 코드 플러그인 4종 효과 추적</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+7/19 설치한 플러그인 4종(Session Report/Claude MD Management/Hookify/Serena MCP) 1주일 실사용 데이터 — 캐시 활용은 이미 우수, Hookify 등록량이 과제로 드러남.
+
+🗂️ 데이터 (7/19~7/25, 7일)
+세션 107개, API 호출 2,000회, 사람 메시지 674개. 캐시 히트율 98.1%(기준선 85% 대비 크게 상회) — 토큰 낭비 거의 없음. Wall clock 216.8시간 vs 실제 활성 31.9시간 — 세션이 열려있는 시간 대부분은 대기 상태. Hookify 신규 등록 22건/주 — 특히 7/25 하루에 절반 이상 집중.
+
+🔑 핵심 인사이트
+캐시 히트율은 이미 잘 작동하고 있어 추가 조치 불필요. 반면 Hookify 22건/주는 AGENTS.md가 계속 불어나며 규칙 충돌·토큰 압박 위험을 키운다는 뜻 — 별도 신규 구현 없이, 어제 이미 승인된 Dreams Consolidator(뿌리25, AGENTS.md 자동 중복제거/압축)가 정확히 이 문제의 해결책으로 맞물려 있음.
+
+⚠️ 미확인 항목
+claude-md audit 점수는 정확한 커맨드를 못 찾아 이번 주는 스킵 — 다음 리뷰(8/2) 전 확인 예정.
+
+💡 배운 점
+플러그인 효과는 설치 직후가 아니라 실사용 1주일 누적 데이터로 판단해야 정확하다.
+
+🌱 성장 관점
+이 리뷰 자체가 3AI 시스템의 자기 진단 습관 — 오늘 만든 규칙(Hookify)이 쌓이는 속도를 시스템이 스스로 재는 것부터가 "자가 치유"의 첫 단계.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.26 · #플러그인리뷰 #Hookify #session-report</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260725-7"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
