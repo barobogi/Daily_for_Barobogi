@@ -1,5 +1,38 @@
 [
     {
+        "title": "Graphify vs GitNexus vs CodeGraph: Stop Wasting API Tokens",
+        "url": "https://www.youtube.com/watch?v=zIiiu8hS1To",
+        "channel": "Cloud Codes",
+        "summary": "코딩 에이전트가 매번 파일을 직접 읽으며 API 토큰을 낭비하는 문제를, 코드를 트리시터로 파싱해 함수·클래스·파일을 노드로, 호출·임포트·상속을 엣지로 그래프화하는 3개 오픈소스 도구(Graphify, GitNexus, CodeGraph)로 비교 분석한 영상. 같은 질문에 대해 그래프 없이는 40회 툴콜·$1.41, 그래프가 있으면 2회 툴콜·36센트로 비용이 크게 줄어드는 사례를 제시하며, 라이선스(상업적 이용 금지 여부)·실제 구현 언어(레포 배지와 실제 코드의 불일치)·증분 업데이트 성능 등 스타 수만으로는 알 수 없는 실질적 차이를 짚음.",
+        "categories": [
+            "AI 에이전트",
+            "코드 그래프",
+            "개발 생산성",
+            "오픈소스 비교",
+            "토큰 최적화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "코딩 에이전트에 코드 그래프를 붙이면 동일 질문 처리 시 툴콜 40회→2회, 비용 $1.41→$0.36로 절감되는 실측 사례",
+            "3개 도구 모두 임베딩·API 호출 없이 tree-sitter로 로컬 파싱만 수행 (외부 유출 없음, 비용 0원 구조)",
+            "CodeGraph는 SQLite+FTS5 단일 파일 인덱스, 파일시스템 이벤트 기반 증분 업데이트(4천 파일 기준 0.3초)로 매번 전체 재스캔 안 함",
+            "git diff를 파이프해서 영향받는 테스트 파일만 추려내는 'codegraph affected' 같은 실전 활용 패턴 존재"
+        ],
+        "learning_related": [
+            "GitHub 스타 수는 도구 선택 기준으로 부적합 — 라이선스(상업적 이용 가능 여부), 실제 구현 언어, 락인 여부를 직접 확인해야 함",
+            "레포 언어 배지가 실제 코드 구성과 다를 수 있음(예: 'C' 배지지만 실제 사람이 짠 코드는 TypeScript/Rust 위주) — 표면 정보를 그대로 믿지 말 것",
+            "tree-sitter 기반 정적 파싱 + 그래프(노드=함수/클래스/파일, 엣지=호출/임포트/상속)가 코드베이스 이해를 위한 공통 표준 패턴으로 자리잡는 중"
+        ],
+        "key_insights": [
+            "코드 그래프는 AI 에이전트의 '탐색 비용'을 구조적으로 줄이는 핵심 인프라이며, 벤치마크상 90% 이상 비용 절감이 가능",
+            "오픈소스 도구 평가 시 스타 수·README보다 라이선스 조건과 실제 구현 코드를 직접 검증하는 것이 중요",
+            "로컬 파싱 + 로컬 인덱스(SQLite 등) 구조가 API 키/외부 유출 없이 비용 0원으로 구현 가능함을 보여주는 실사례"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화/③지식관리(Graphify, 31번) — 바로보기님이 이미 D:\\AI에 Graphify(코드→지식그래프) 뼈대를 구축해둔 상태라, 영상에서 다룬 GitNexus·CodeGraph와의 기능·라이선스·성능 비교가 Graphify 개선/차별화 참고자료로 직접 활용 가능, ⑧소통(AI Study 게시판) — API 토큰 절감 실측 사례(40콜→2콜)는 뿌리체계 AI 파이프라인 비용 최적화 자료로 게시판 등재 후보",
+        "timestamp": "2026-07-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/zIiiu8hS1To/hqdefault.jpg"
+    },
+    {
         "title": "Nativ vs MLX: The New Way to Run Frontier Models Locally on Mac",
         "url": "https://www.youtube.com/watch?v=ba0JcPUneJI",
         "channel": "Cloud Codes",
