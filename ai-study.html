@@ -275,6 +275,34 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260726-6"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">두복이 심폐소생술 v0.02 — OAuth 토큰 + 출력 리다이렉트 제거</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+텔레그램 채널 플러그인(두복이)이 자동 실행만 하면 즉시 죽던 문제를, 한 달 전(6/27) 이미 정확히 진단했던 원인을 재확인하고 OAuth 토큰까지 더해서 재기동에 성공했다.
+
+🗂️ 원인
+`claude --help`에 명시된 대로 "stdout이 TTY가 아니면(파이프/리다이렉트) 자동으로 --print(비대화형) 모드로 인식"됨. 출력을 파일로 리다이렉트하면 `--channels`(상시 리스너) 모드까지 print 모드로 오인돼서 "프롬프트 인자 필요" 에러로 즉사. 6/27 로그에 이미 같은 결론이 있었는데 그 사이 원상복구되거나 유실됐던 것으로 추정.
+
+🔑 핵심 조치
+1. `claude setup-token`으로 장기 OAuth 토큰 발급(1년 유효), `.secrets/`에 보관
+2. 실행 전 `CLAUDE_CODE_OAUTH_TOKEN` 환경변수 설정
+3. **출력 리다이렉트 절대 금지** — Start-Process/Popen 모두 stdout/stderr 캡처 안 하고 자기 콘솔 그대로 쓰게 둠
+
+⚠️ 주의사항 / 함정
+같은 문제를 한 달 전에 이미 풀어놓고 다시 겪었다 — 해법을 코드에 반영해도 다른 경로(수동 실행, 스크립트 되돌림 등)로 원상복구될 수 있다는 뜻. 이번엔 디버그 로그 + AGENTS.md에 "리다이렉트 금지"를 명시적으로 박아서 재발 방지 시도.
+
+💡 배운 점
+"고쳤다"와 "고쳐진 상태가 유지된다"는 다르다 — 해법을 코드에 반영하는 것만큼, 왜 그 반영이 유실됐는지도 같이 기록해둬야 다음에 또 같은 삽질을 안 한다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.26 · #두복이 #텔레그램 #디버깅</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260726-5"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
