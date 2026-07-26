@@ -1,5 +1,33 @@
 [
     {
+        "title": "Litestream + SQLite: Scale to 1M Users Without Postgres or Cloud Bills",
+        "url": "https://www.youtube.com/watch?v=QOBXFCYYMvk",
+        "channel": "Cloud Codes",
+        "summary": "SQLite에 Litestream을 결합해 프로덕션급 DB를 단일 서버 파일로 운영하면서도 S3에 실시간 백업하는 방법을 소개한다. Postgres RDS(월 $744~$12,000)와 비교해 Litestream+S3 조합은 월 3센트~$13 수준으로 비용을 극적으로 절감할 수 있다.",
+        "categories": [
+            "SQLite",
+            "Litestream",
+            "인프라비용절감",
+            "데이터베이스백업",
+            "서버아키텍처"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "SQLite의 WAL(Write-Ahead Log)을 Litestream이 가로채 변경분을 순서대로 번호 매긴 트랜잭션 파일로 S3에 업로드하는 구조",
+            "30초/5분/1시간 주기로 파일을 병합하고 하루 1회 풀스냅샷을 찍어 최근 이력은 세밀하게, 오래된 이력은 압축해서 보관하는 복구 전략",
+            "파일 번호 연속성 검증으로 누락 시 즉시 손상 감지 — 복구 시 스냅샷+트랜잭션 재생으로 임의 시점 복원 가능"
+        ],
+        "key_insights": [
+            "관리형 Postgres(RDS) 대비 SQLite+Litestream 조합이 동일 워크로드에서 비용을 수백~수천 배 절감 가능",
+            "단일 머신 장애가 유일한 약점이었으나 Litestream이 S3(또는 Backblaze/Azure/GCS/SFTP)로의 실시간 스트리밍 백업으로 이를 해결",
+            "캐시 계층, 리드 레플리카, 별도 백업 인프라 없이 애플리케이션 프로세스 자체에 전체 스택을 접어 넣는 아키텍처 단순화"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 서버 비용 구조를 관리형 DB에서 자체 호스팅+저비용 백업으로 전환하는 아키텍처 패턴, D:\\AI 자동화 인프라 비용 최적화에 참고 가능, ⑤자동화 — Litestream 같은 백그라운드 워처가 WAL을 감시/스트리밍하는 방식이 master_watch.py류 워처 설계와 개념적으로 유사",
+        "timestamp": "2026-07-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/QOBXFCYYMvk/hqdefault.jpg"
+    },
+    {
         "title": "Opus 5 + OKF: The Ultimate 'LLM Wiki' Architecture",
         "url": "https://www.youtube.com/watch?v=JCAe1x68jW0",
         "channel": "Cloud Codes",
