@@ -275,6 +275,32 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260726-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[아키텍처개선 6번] 대규모 코드 한 방에 이해하기 — RepoMix 도입</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+GitHub10 시리즈 1번째 — 거대한 프로젝트 전체를 단일 XML/Markdown 파일로 압축해주는 RepoMix(구 Repopack)를 스킬로 도입, LLM에게 조각난 코드가 아니라 전체 지도를 준다.
+
+🗂️ 구조
+안티그래비티 스킬로 등록(`D:\AI\.agents\skills\repomix\SKILL.md`), 백그라운드에서 `npx repomix --style xml` 실행 → 단일 압축 파일 생성. `.gitignore` 자동 인식으로 불필요한 캐시 제외.
+
+🔑 핵심 가치
+"코드 분석 전 RepoMix 선결 의무화" 룰을 AGENTS.md에 Hookify로 박제 — 자판기 우선 법칙대로, 코니·안티가 파일을 수십 번 뒤지는 대신 명령어 한 줄로 컨텍스트 확보 끝.
+
+⚠️ 주의사항 / 함정
+100만 토큰 넘는 초거대 저장소는 통째로 압축하면 LLM이 감당 못 할 수 있음 — `--include` 옵션으로 특정 디렉토리만 지정할 것.
+
+💡 배운 점
+스킬 Eval 파이프라인(T026)에서 100점 PASS 판정을 받은 뒤에야 정식 편입 — "만들었다"와 "검증됐다"를 구분하는 절차가 그대로 작동한 사례.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.26 · #RepoMix #GitHub10 #아키텍처개선</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260726-2"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
@@ -386,16 +412,19 @@ Karpathy의 "Claude Code로 노트 수집 → Obsidian 연결" 아키텍처와 E
             <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
             <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
-          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뿌리52] GPS Check 온톨로지 하드닝 — 텍스트 검증에서 코드 검증으로</p>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뿌리23] GPS Check 온톨로지 하드닝 — 텍스트 검증에서 코드 검증으로 (구현+승인 완료)</p>
           <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
-뉴로-심볼릭 AI(확률적 LLM + 기호적 온톨로지) 개념을 차용해, 느슨한 키워드 매칭이던 GPS Check(Goal/Proof/Steps)를 Pydantic 스키마 강제 검증으로 교체.
+뉴로-심볼릭 AI(확률적 LLM + 기호적 온톨로지) 개념을 차용해, 느슨한 키워드 매칭이던 GPS Check(Goal/Proof/Steps)를 Pydantic 스키마 강제 검증으로 교체 — 구현 및 만복 최종승인 완료(2026-07-26).
 
-🗂️ 구조
-기존 gps_check.py는 "Goal/Proof/Steps" 단어가 텍스트에 있기만 하면 통과 → Pydantic 모델로 각 필드의 실질 내용(빈값 아님, 측정 가능한 완료조건, 순서 있는 단계)을 검증하는 방식으로 전환. OWL/RDFS 같은 무거운 학술 표준은 Ugly MVP 원칙에 안 맞아 배제, Pydantic+NetworkX 경량 조합 채택.
+🗂️ 구조 (실제 최종본)
+기존 gps_check.py는 "Goal/Proof/Steps" 단어가 텍스트에 있기만 하면 통과 → Pydantic 모델로 각 필드(goal/proof 5자↑+측정가능 키워드 필수, steps 1개↑)를 검증하는 방식으로 교체. 초안에선 NetworkX(관계검증)도 함께 채택할 계획이었으나, 실제 구현해보니 "선형 체인이라 항상 통과하는 죽은 코드"였음이 코니 검증에서 드러나 완전히 제거 — 최종본은 Pydantic 단독.
+
+⚠️ 주의사항 / 함정
+계획 단계에서 "괜찮아 보이는 기술 조합"이 실제 구현에서 죽은 코드로 판명나는 경우가 있다 — 초안의 기술 선택도 구현 후 재검증이 필요하다는 사례.
 
 🌱 성장 관점
 push_to_all.py 승인 게이트 강화와 같은 날, 같은 문제의식(텍스트 규칙의 느슨함)에서 나온 자매 프로젝트.</p>
-          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.25 · #GPSCheck #온톨로지 #Hall방지</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.26 (2026.07.25 계획 → 07.26 구현완료) · #GPSCheck #온톨로지 #Hall방지</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
