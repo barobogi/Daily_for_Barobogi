@@ -1,5 +1,39 @@
 [
     {
+        "title": "Opus 5 + OKF: The Ultimate 'LLM Wiki' Architecture",
+        "url": "https://www.youtube.com/watch?v=JCAe1x68jW0",
+        "channel": "Cloud Codes",
+        "summary": "2026년 7월 24일 같은 날 출시된 Anthropic Claude Opus 5와 Google Cloud OKF v0.2가 조합되어 'LLM 위키'(에이전트가 회사 지식을 저장하는 마크다운 폴더 구조) 아키텍처를 완성한다는 내용. Opus 5는 100만 토큰 컨텍스트를 기본값이자 최대값으로 제공하고, thinking effort를 5단계로 조절 가능하며, 실사용 기업들(Datadog·Box·법률팀·트레이딩펌)이 토큰 효율과 정확도 개선을 보고했다. 특히 Datadog 사례는 에이전트가 자신의 /memories 디렉토리를 직접 조회·수정·삭제하며 컨텍스트를 '살아있는 문서'로 관리하는 패턴을 보여준다.",
+        "categories": [
+            "Claude Opus 5",
+            "OKF",
+            "LLM Wiki/에이전트 메모리",
+            "컨텍스트 엔지니어링",
+            "AI 모델 출시"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Opus 5: 100만 토큰 컨텍스트가 기본=최대(더 작은 변형 없음), 가격은 $5/M in·$25/M out으로 이전 Opus와 동일, 긴 컨텍스트도 토큰당 가격 flat",
+            "thinking이 기본 on, on/off 스위치 대신 low/medium/high/xhigh/max 5단계 effort 다이얼로 추론 깊이를 토큰 단위로 구매하는 방식",
+            "Claude 메모리 툴: /memories 디렉토리를 에이전트가 직접 view/create/edit/delete — '컨텍스트 리셋을 가정하라'는 standing instruction과 결합해 세션 간 지속되는 지식 저장소 역할",
+            "OKF(Open Knowledge Format) v0.2: front matter 기반 마크다운 위키 포맷 — Opus 5(리더/라이터)와 짝을 이루는 게 이 영상이 말하는 '아키텍처'의 핵심",
+            "실사용 효율 사례: 트레이딩펌 최고 점수를 이전 Opus 대비 약 1/7 추론 토큰·절반 미만 지연시간으로 달성, 법률팀은 동일 품질을 26% 적은 토큰(max reasoning)으로, Box는 종합 8%·실사 업무 17% 개선",
+            "Datadog 모니터링 에이전트가 프로덕션에서 자기 메모리 일부를 직접 관리 — 이상 징후 플래그 후 자체 재검증, 정정 내용을 메모리에 기록, 불필요 쿼리 스스로 폐기(에이전트가 자기 컨텍스트를 유지보수하는 위키로 취급)",
+            "영상이 제기하는 3가지 실무 난제: ①100만 토큰 창에 위키를 통째로 덤프하면 안 됨 ②에이전트가 스스로 쓴 컨텍스트 파일이 오히려 성능을 떨어뜨린다는 연구 존재 ③에이전트가 인용한 수치(예: 매출)가 실제 쿼리 결과인지 자기 생성인지 검증 필요 — OKF 0.2가 앞의 두 개를, Opus 5가 세 번째를 일부 해결한다는 주장"
+        ],
+        "learning_related": [
+            "'LLM Wiki' 용어의 최초 출처는 Karpathy가 4월 4일 gist에 명명 — 뿌리23 Karpathy LLM Wiki 프로젝트(EmotionPrompt+Obsidian 위키링크)와 직접 연결되는 아키텍처 레퍼런스"
+        ],
+        "key_insights": [
+            "이 영상은 뿌리23(Karpathy LLM Wiki, EmotionPrompt+Obsidian 위키링크 구조)이 다루려는 것과 정확히 같은 문제(에이전트가 지식을 어디에 어떻게 저장/유지하는가)를 다른 이름(OKF+Opus5 메모리툴)으로 최신 사례와 함께 설명 — 안티 구현 검증 시 참고자료로 유용",
+            "graphify(31_graphify, D:\\AI 지식그래프)도 넓게 보면 동일한 'LLM Wiki' 패턴의 로컬 구현체 — 마크다운+위키링크+에이전트가 읽고쓰는 지식 저장소라는 점에서 이 영상의 아키텍처 논의와 개념적으로 겹침",
+            "Opus 5의 '에이전트가 자기 메모리를 직접 view/edit/delete' 기능은 향후 master_watch나 daily_pobbagi_runner 같은 자율 파이프라인에 '자가 컨텍스트 정리' 개념을 도입할 때 참고할 만한 사례"
+        ],
+        "memo": "📋 뿌리체계: 3지식관리 — 영상 핵심 주제인 'LLM Wiki'(에이전트 지식 저장 구조)가 뿌리23 Karpathy LLM Wiki 프로젝트 및 31_graphify와 직접 맞닿아 있음, 5자동화 — Datadog 사례(에이전트가 프로덕션에서 자기 메모리를 자율 관리)는 자율 파이프라인 설계에 참고 가능, 6인프라 — Opus 5 100만 토큰 컨텍스트·가격 구조는 향후 Claude Code CLI/서브에이전트 비용 설계 시 참고 정보",
+        "timestamp": "2026-07-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/JCAe1x68jW0/hqdefault.jpg"
+    },
+    {
         "title": "Top 10 AI Repos You Should Know",
         "url": "https://www.youtube.com/watch?v=UsZWycrlVVA",
         "channel": "Cloud Codes",
