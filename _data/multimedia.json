@@ -1,5 +1,35 @@
 [
     {
+        "title": "Why Your AI Needs a Company Wiki",
+        "url": "https://www.youtube.com/watch?v=Q0HzMswPV78",
+        "channel": "The Next New Thing",
+        "summary": "Grain 팀이 Karpathy의 '개인 위키' 개념을 확장해, 통화 녹취록·Intercom 대화·웹 스크랩·문서 등 회사의 모든 컨텍스트를 Claude로 구조화한 '컴퍼니 위키'를 만든 사례를 소개한다. MCP로 매번 원본 소스를 실시간 조회하는 대신, 이미 종합·정제된 위키를 두면 토큰 소모를 줄이고 엔티티·주제·인물 간 지식이 누적(compound)된다는 것이 핵심 주장이다.",
+        "categories": [
+            "AI워크플로우",
+            "지식관리",
+            "컨텍스트엔지니어링",
+            "생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "MCP로 매번 원본 소스(콜 녹취록, Intercom 등)를 조회하면 토큰을 빠르게 소모함 — 사전에 Claude로 종합·구조화한 위키를 캐시처럼 두는 것이 더 효율적",
+            "위키는 단순 요약이 아니라 엔티티/토픽/인물별로 재귀적으로 지식이 누적(compound)되는 구조",
+            "다양한 소스(통화, Intercom, 웹 클립, 문서)를 하나의 컨텍스트 계층으로 통합하는 패턴은 RAG보다 '사전 종합 + 위키화'가 더 넓은 컨텍스트를 제공한다는 주장"
+        ],
+        "learning_related": [
+            "Karpathy의 '개인 위키'(personal wiki) 개념과 그 기업 버전 확장 사례",
+            "Claude를 활용해 비정형 대화 데이터를 구조화된 위키 문서로 변환하는 워크플로우"
+        ],
+        "key_insights": [
+            "매 질문마다 MCP로 원본을 실시간 조회하는 방식은 토큰 비용이 크고, 대신 미리 종합된 위키를 두면 훨씬 효율적",
+            "위키의 가치는 '더 넓은 컨텍스트'와 '엔티티/주제/인물에 대한 재귀적 지식 누적'에 있음 — 단순 검색이 아니라 지식이 시간이 지날수록 두터워지는 구조",
+            "회사 차원의 위키는 통화·CS 대화·문서·웹 클립 등 이질적 소스를 하나의 종합된 컨텍스트 레이어로 통합"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — 회사/개인 위키로 컨텍스트를 종합·구조화하는 패턴은 D:\\AI 뿌리23 Karpathy LLM Wiki 작업(EmotionPrompt+Obsidian 위키링크)과 직접 연결됨, ⑤자동화 — Claude가 대화/문서 데이터를 자동으로 위키 구조로 변환하는 파이프라인은 graphify(지식그래프) 프로젝트와 접목 가능",
+        "timestamp": "2026-07-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Q0HzMswPV78/hqdefault.jpg"
+    },
+    {
         "title": "오픈코덱스 이용해서 코덱스 관리하기",
         "url": "https://www.youtube.com/watch?v=dgGY2heDD-8",
         "channel": "로치의개발일기",
