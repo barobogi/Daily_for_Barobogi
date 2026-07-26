@@ -1,5 +1,36 @@
 [
     {
+        "title": "Nativ vs MLX: The New Way to Run Frontier Models Locally on Mac",
+        "url": "https://www.youtube.com/watch?v=ba0JcPUneJI",
+        "channel": "Cloud Codes",
+        "summary": "MLX VLM 개발자 Prince Kanuma가 만든 'native'라는 새 앱을 소개하는 영상으로, 오픈소스 프론티어급 AI 모델을 클라우드나 API 키 없이 맥북에서 완전 로컬로 구동할 수 있게 해준다. Apple Silicon의 unified memory 구조 덕분에 GPU VRAM 제약 없이 70B급 모델도 구동 가능하며, MLX 엔진이 llama.cpp 대비 30~50% 빠른 속도를 낸다는 점을 설명한다.",
+        "categories": [
+            "AI 로컬 실행",
+            "Apple Silicon",
+            "MLX",
+            "오픈소스 도구",
+            "맥북 하드웨어"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "native(Prince Kanuma 개발) — 프론티어 오픈 모델을 맥에서 완전 로컬 구동, MIT 라이선스 무료 오픈소스, Claude Code/Codex/OpenCode 등 코딩 에이전트 연결 가능",
+            "Apple Silicon의 unified memory 구조(CPU/GPU/NPU가 메모리 풀 공유) 덕분에 맥이 GPU VRAM 24GB 한계 없이 70B 모델도 로드 가능",
+            "MLX 프레임워크가 llama.cpp 대비 30~50% 빠름 — Ollama가 3월 MLX로 백엔드 전환 후 58tok/s→112tok/s로 거의 2배 상승"
+        ],
+        "learning_related": [
+            "GPU VRAM vs Apple unified memory 구조 차이 이해 — 로컬 LLM 구동 시 하드웨어 선택 기준",
+            "MLX가 vision/audio/video 모델까지 네이티브 지원한다는 점"
+        ],
+        "key_insights": [
+            "로컬 LLM 실행 도구 생태계가 API 없는 완전 오프라인 방향으로 빠르게 진화 중 (native, MLX 기반)",
+            "맥북의 unified memory 구조가 로컬 대형 모델 구동에서 예상치 못한 경쟁 우위가 됨",
+            "코딩 에이전트(Claude Code 등)를 로컬 모델에 연결하는 흐름이 확산 — 비용 0원 구조 설계에 참고할 만함"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 로컬 LLM+코딩 에이전트 연동은 API 비용 회피 구조(코딩 표준 원칙)와 직결, native 툴 실험 검토 가치, ⑥인프라 — 맥 하드웨어 없이는 해당 안 되지만 로컬 AI 실행 트렌드 파악 차원에서 참고",
+        "timestamp": "2026-07-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ba0JcPUneJI/hqdefault.jpg"
+    },
+    {
         "title": "Why Your AI Needs a Company Wiki",
         "url": "https://www.youtube.com/watch?v=Q0HzMswPV78",
         "channel": "The Next New Thing",
