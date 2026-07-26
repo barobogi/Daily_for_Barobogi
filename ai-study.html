@@ -275,6 +275,32 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260726-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[아키텍처개선 7번] Agent Memory 파일럿 — SQLite 기반 세션 간 영구 메모리</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+GitHub10 시리즈(RepoMix/AgentMemory/CodeGraph) 중 두 번째 — 3AI가 세션이 바뀌어도 규정·레슨·선호도를 잃지 않도록 SQLite 기반 영구 메모리 모듈을 파일럿 도입했다.
+
+🗂️ 구조
+`agent_memory.py` — `add_memory()`로 저장, `search_memory()`로 키워드 부분일치(LIKE) 검색. CLI로 `--add`/`--search`/`--list` 지원. DB는 `AI_hub/shared/data/agent_memory.db`(tasks.json과 완전 독립).
+
+⚠️ 주의사항 / 함정
+1차 완료보고 때 코니가 반려한 게 2건: ①`--search` 시 에이전트 필터가 항상 하드코딩값으로 걸려서 다른 에이전트 메모리가 안 보임 ②출력 문구가 실제로는 단순 LIKE 부분일치 검색인데 마치 의미기반 검색처럼 과장 표현됨. `--agent` 기본값을 None으로 바꾸고 명시값만 필터에 넘기도록 수정, 문구도 "키워드 부분일치(LIKE) 검색"으로 정정해서 재승인.
+
+💡 배운 점
+"파일럿"이라는 이름표가 붙어도 검증 기준을 낮추면 안 된다 — 작은 모듈일수록 필터 버그처럼 조용히 넘어가기 쉬운 결함이 숨어있다.
+
+🌱 성장 관점
+이게 확장되면 매번 세션 초기화 때마다 반복 설명해야 했던 것들이 코드 레벨 메모리로 즉시 조회 가능해진다 — Claude Code의 memory 시스템을 3AI 내부에도 구현하는 첫걸음.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.26 · #AgentMemory #GitHub10 #아키텍처개선</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260726-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
