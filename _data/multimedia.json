@@ -1,5 +1,34 @@
 [
     {
+        "title": "Top 10 AI Repos You Should Know",
+        "url": "https://www.youtube.com/watch?v=UsZWycrlVVA",
+        "channel": "Cloud Codes",
+        "summary": "2026년 AI 에이전트 구축에 필요한 오픈소스 레포 10개를 GitHub 스타 수와 함께 소개하는 영상으로, 웹 브라우저 조작(browser-use), 웹 스크래핑/구조화 데이터 추출(firecrawl) 등 에이전트의 '손'과 '눈' 역할을 하는 도구부터 소개한다. 각 레포를 기억(memory), 계획(brain), 지식(private knowledge) 등 에이전트 구성요소별로 분류해 설명하는 형식이다.",
+        "categories": [
+            "AI 에이전트",
+            "오픈소스",
+            "웹 자동화",
+            "개발 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "browser-use: 자연어 목표만 주면 실제 브라우저를 사람처럼 클릭/입력/스크롤하며 조작하는 에이전트 프레임워크. API 없는 사이트(폼 작성, 체크아웃, 로그인 후 대시보드) 자동화에 강점, WebVoyager 벤치마크 89% 완료율, MIT 라이선스",
+            "firecrawl: 웹페이지를 광고/네비게이션 없이 깨끗한 markdown/JSON으로 변환하는 스크래핑 API. scrape/crawl/search/extract 4개 verb로 구성, JS 렌더링 SPA도 처리",
+            "에이전트 4요소 프레임워크: 웹 접근 수단(browser-use) + 기억(memory) + 계획하는 두뇌(brain) + 신뢰 가능한 사설 지식(private knowledge)"
+        ],
+        "learning_related": [
+            "브라우저 에이전트는 API 부재 사이트에만 쓰고, 속도/비용이 중요하면 API 방식이 낫다는 트레이드오프 인지 필요",
+            "browser-use는 2024년 말 출시 후 1년 반 만에 106,000 스타 도달 — 빠른 성장 사례"
+        ],
+        "key_insights": [
+            "에이전트 툴킹은 '단일 프레임워크'가 아니라 손(브라우저 조작)/눈(스크래핑)/뇌(계획)/기억(memory) 4가지 역할별 전문 레포 조합으로 구성되는 추세",
+            "browser-use, firecrawl 모두 만복 프로젝트의 '자동화 시 무료 우회 라이브러리 우선' 원칙과 정확히 부합하는 무료 오픈소스 대안"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — browser-use/firecrawl은 API 없는 사이트 자동화(예: 카카오/증권 사이트 조회) 대체 수단으로 검토 가치 있음, ③지식관리 — AI 에이전트 아키텍처(4요소 프레임워크) 개념 정리해둘 만함",
+        "timestamp": "2026-07-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/UsZWycrlVVA/hqdefault.jpg"
+    },
+    {
         "title": "The Ultimate AI Office Shortcut",
         "url": "https://www.youtube.com/watch?v=l0fbv5neQb8",
         "channel": "The Next New Thing",
