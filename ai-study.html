@@ -275,6 +275,58 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260726-5"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[아키텍처개선 8번] CodeGraph 파서 — 코드베이스 구조를 지식그래프로</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+GitHub10 시리즈 3번째(RepoMix/AgentMemory에 이어) — Python AST로 클래스·함수·호출관계를 파싱해서 Graphify 지식그래프에 실질 연동하는 CodeGraph 파서를 도입했다.
+
+🗂️ 구조
+`codegraph_parser.py` — Python AST 기반으로 Class/Function/호출(Call) 관계 파싱, `print`/`len`/`str` 같은 내장함수 노이즈 엣지는 완전 제거하고 프로젝트 내부 구조적 호출만 남김. 결과를 `31_graphify/graphify-out/codegraph_nodes.json`에 누적 저장.
+
+⚠️ 주의사항 / 함정
+1차 반려 사유 2건: ①엣지가 중복 누적되는 버그(재실행마다 137개까지 오염) → `(source, target, type)` 키로 중복제거해서 해결 ②존재하지 않는 함수를 가리키는 "댕글링 엣지"(호출 대상이 실제 노드에 없는데 엣지만 생성) → `defined_node_map`으로 실제 노드 id에만 연결하도록 수정. 코니가 노드/엣지 개수를 직접 세어서(23노드/26엣지/댕글링 0건) 검증.
+
+💡 배운 점
+그래프 데이터는 "얼마나 많이 뽑았나"가 아니라 "중복·환각 없이 정확한가"가 품질 기준 — 137개 엣지 중 다수가 중복/댕글링이었다는 사실이 이를 보여준다.
+
+🌱 성장 관점
+RepoMix(전체 압축) → AgentMemory(세션 기억) → CodeGraph(구조 이해)로 이어지는 GitHub10 시리즈가 완성되면서, 3AI가 코드베이스를 "읽는" 방식 자체가 레이어별로 갖춰졌다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.26 · #CodeGraph #GitHub10 #Graphify</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
+             data-id="20260726-4"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[뿌리31] Karpathy LLM Wiki — B안 재정의로 완료</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+"EmotionPrompt를 요약 프롬프트에 적용" 원안이 파이프라인에 요약 LLM 호출 자체가 없어서 3번 반려됐고, 실제 구조에 맞게 "안티가 기획안 작성 시 쓰는 프롬프트"로 재정의(B안)해서 완료했다.
+
+🗂️ 구조
+`daily_pobbagi_runner.py`의 안티 지시서 생성부에 멘토 페르소나+EmotionPrompt 결합. Graphify 위키링크 연동(`[[키워드]]` → `codegraph_nodes.json`류 노드 파일 갱신)은 기존 통과분 유지.
+
+⚠️ 주의사항 / 함정
+반려 3번의 진짜 원인은 안티의 구현력이 아니라 **기획-코드 구조 불일치**였다 — 코니가 이걸 짚어서 만복에게 A(파이프라인에 새 LLM 호출 단계 신설)/B(기획 재정의) 택일을 에스컬레이션했고, 전술적 기법 항목의 원래 스코프를 지키기 위해 B를 선택했다.
+
+💡 배운 점
+같은 반려가 반복되면 "더 열심히 고치기"가 아니라 "애초에 기획이 코드 구조와 맞는가"를 먼저 의심해야 한다 — 무한 반려 루프는 대개 실력 문제가 아니라 전제 오류다.
+
+🌱 성장 관점
+"코니가 검증 부실 반성문을 쓴 그 사건"과 "이 항목이 결국 구조적으로 해결된 것"이 같은 날 이어져 있다 — 확정 기획안을 정확히 대조하는 습관이 에스컬레이션 판단의 근거가 됐다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.07.26 · #Karpathy #Graphify #뽀개기</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260726-3"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
