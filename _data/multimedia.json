@@ -1,5 +1,36 @@
 [
     {
+        "title": "오픈코덱스 이용해서 코덱스 관리하기",
+        "url": "https://www.youtube.com/watch?v=dgGY2heDD-8",
+        "channel": "로치의개발일기",
+        "summary": "오픈소스 프록시 도구 '오픈코덱스(OpenCodex)'를 소개하는 영상으로, ChatGPT/Codex 앱 인터페이스에서 GLM, 키미, 그록 등 다양한 AI 모델을 사용할 수 있게 중계해주는 서버 역할을 한다. 프로바이더 설정, 계정 풀(여러 구독 계정 통합), 콤보(모델 장애 시 자동 전환) 기능을 시연했다.",
+        "categories": [
+            "AI도구",
+            "오픈소스",
+            "생산성",
+            "개발자도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "OpenCodex: npm install로 설치하는 오픈소스 프록시 서버, ChatGPT/Codex 앱에서 GLM/키미/그록 등 타사 모델 사용 가능",
+            "OCX GUI 커맨드로 대시보드 진입, 프로바이더 추가/설정 (앤트로픽은 계정 정지 위험 있어 비권장)",
+            "계정 풀(Account Pool): 코덱스 다중 구독 계정을 묶어 자동 순환 사용",
+            "콤보(Combo) 기능: 특정 모델(GLM 5.2) 사용량 소진 시 자동으로 대체 모델(키미)로 장애조치(failover)",
+            "모델 라우팅: 요청을 조건에 따라 다른 모델(오픈AI 코덱스 대신 GLM/키미 등)로 분기"
+        ],
+        "learning_related": [
+            "프록시(중계 서버) 개념을 비개발자 대상으로 쉽게 설명 - '한 앱에서 여러 AI 회사 모델을 쓰게 해주는 중간 다리'"
+        ],
+        "key_insights": [
+            "무료/저비용 모델(GLM, 키미 등)을 유료 앱 인터페이스(ChatGPT/Codex)에서 그대로 활용 가능해 API 비용 절감 구조에 부합",
+            "콤보(failover) 기능은 barobogi 프로젝트의 '주 모델 장애 시 대체 실행' 자동화 설계와 유사한 패턴 - 벤치마킹 가치 있음",
+            "계정 풀 기능은 다중 AI 구독 관리 효율화 아이디어로 참고할 만함"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 모델 라우팅/콤보(장애조치) 개념이 3AI 협업의 백업·전환 자동화 설계에 참고 가능, ⑥인프라 — 무료/저비용 모델 프록시 구조는 'API 회피·비용 0원' 원칙과 맞닿아 향후 인프라 검토 후보",
+        "timestamp": "2026-07-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/dgGY2heDD-8/hqdefault.jpg"
+    },
+    {
         "title": "Litestream + SQLite: Scale to 1M Users Without Postgres or Cloud Bills",
         "url": "https://www.youtube.com/watch?v=QOBXFCYYMvk",
         "channel": "Cloud Codes",
