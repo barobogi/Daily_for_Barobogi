@@ -1,5 +1,33 @@
 [
     {
+        "title": "Opus 5 - better than Fable?",
+        "url": "https://www.youtube.com/watch?v=_t-Hbg-3_CU",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 Anthropic의 신규 Opus 5를 Fable 5와 비교 리뷰한 영상. Opus 4.8 출시 후 약 2개월 만에 나온 Opus 5는 가격이 Fable 대비 절반이지만, 창의적 문제해결력('빅모델 느낌')이 부족하고 응답이 장황(verbose)하다는 평가. 일부 벤치마크에서는 Opus가 우세하나 전반적으로 Fable을 대체하지 못하며, Mythos/Fable 하이프 실패(밴 사태) 이후 Anthropic이 과대홍보 없이 조용히 Opus를 출시한 전략도 언급됨.",
+        "categories": [
+            "AI모델비교",
+            "Anthropic",
+            "LLM리뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Opus 5는 Fable 5 대비 약 2배 저렴하지만 창의적 솔루션 역량은 열세 — 비용 최적화 시 트레이드오프 고려 필요",
+            "Opus 5는 '간결하게 답하라'는 지시에도 장황(verbose)하게 응답하는 경향 — 프롬프트 엔지니어링/시스템 프롬프트 설계 시 유의",
+            "일부 벤치마크에서 Opus가 Fable보다 우세하나, 실사용 워크플로우 전반에서는 Fable을 대체하지 못함 — 작업 유형별 모델 선택 필요"
+        ],
+        "learning_related": [
+            "Anthropic이 Mythos/Fable 과대홍보 후 밴 이슈를 겪은 학습효과로, Opus는 자극적 네이밍 없이 조용히 출시하는 전략 선택 — 경쟁사(OpenAI, Kimi K3) 압박 속 포지셔닝 변화"
+        ],
+        "key_insights": [
+            "Opus 5는 저렴하지만 '빅모델 느낌'과 창의성이 부족해 Fable 5를 완전히 대체하지 못함",
+            "장황한 응답 특성 때문에 간결성이 중요한 워크플로우에는 부적합할 수 있음",
+            "Anthropic의 출시 전략이 하이프 중심에서 조용한 출시로 전환된 배경에 경쟁 압박이 있음"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 모델 최신 동향(Opus5 vs Fable5 성능·비용 비교) 학습 정보, ⑤자동화 — Claude API 모델 선택 시 참고: Opus5의 verbose 특성으로 인해 자동화 파이프라인엔 Fable 유지가 더 적합할 수 있음",
+        "timestamp": "2026-07-27T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/_t-Hbg-3_CU/hqdefault.jpg"
+    },
+    {
         "title": "이제 기획이 승부처다 | 기획 전문 AI 매니패스트 실전 활용법 3가지 실습 | 바이브 코딩하는 분들 꼭 끝까지 보세요. (30% 할인코드 포함)",
         "url": "https://www.youtube.com/watch?v=gnyuGDSafec",
         "channel": "기술노트with알렉",
