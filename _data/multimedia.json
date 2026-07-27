@@ -1,5 +1,38 @@
 [
     {
+        "title": "Claude Opus 5 공식 문서에서 찾은 3가지 팁 — 테스트 데모",
+        "url": "https://www.youtube.com/watch?v=yV-pc59A9Gs",
+        "channel": "techyoo",
+        "summary": "techyoo 채널이 신규 출시된 'Claude Opus 5'를 Fable 5, Opus 4.8, GPT 5.6과 게임 제작 속도로 비교(각 5분57초/34분/9분38초/7분)하고, Anthropic이 모델 출시마다 제공하는 프롬프팅 가이드 문서를 근거로 Opus 5의 7가지 개선점 중 에이전트 코딩, 저노력(Low/Medium effort) 효율성, 비전(3D/웹사이트 복제) 3가지를 데모와 함께 소개하는 영상.",
+        "categories": [
+            "Claude",
+            "Anthropic",
+            "프롬프트엔지니어링",
+            "AI모델비교",
+            "코딩에이전트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Opus 5는 어려운/복잡한 코딩·에이전트 작업일수록 Opus 4.8 대비 격차가 커지고, 쉬운 작업에서는 차이가 작음 — 처음부터 완전한 작업 명세를 줄수록 성능이 좋아짐",
+            "코드리뷰/버그탐지 시 'High' effort 없이도 Low/Medium에서 충분한 정확도 유지 — 심각도별로 나눠 프롬프트하지 말고 '전체 리스트 먼저 뽑고 그중 심각도 높은 것 선별' 2단계 방식이 더 정확",
+            "비전 성능이 크게 강화되어 이미지나 웹사이트 URL을 주고 시각적으로 복제시키는 프롬프트에서 결과가 뛰어남",
+            "1M 토큰 장문 컨텍스트 지원 + 서브에이전트 오케스트레이션 능력 강화"
+        ],
+        "learning_related": [
+            "Anthropic이 모델 출시마다 공식 프롬프팅 가이드를 제공 — 모델별 설계 의도와 이전 모델 대비 개선점을 문서로 확인 가능",
+            "일반 작업은 Low/Medium effort로 충분하고, 까다로운 에이전트 작업만 X-High로 올리는 effort 단계별 사용 전략",
+            "벤치마크 점수보다 실제 작업(게임 완성 시간 등) 데모 비교가 체감 성능 판단에 더 유용하다는 관점"
+        ],
+        "key_insights": [
+            "'Opus 5'라는 모델명 자체는 자막 상 표기이며 자체 확인은 못 했으나, 핵심 메시지는 effort 파라미터(Low/Medium/High/X-High)를 작업 난이도에 맞춰 조절하라는 실용적 팁",
+            "코드리뷰 프롬프트는 '심각도 높은 것만 보고해줘'보다 '전체 목록 → 심각도 필터링' 2단계가 더 정확하다는 구체적 프롬프팅 기법",
+            "완전한 작업 명세(뭘 해야 하고 뭘 하지 말아야 하는지 명확화)가 어려운 코딩/에이전트 작업일수록 성능 향상에 직결"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude 모델 프롬프팅 가이드/effort 파라미터 활용법 학습 자료, ③지식관리 — AI 모델 업데이트 및 프롬프트 기법 정리 대상",
+        "timestamp": "2026-07-27T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/yV-pc59A9Gs/hqdefault.jpg"
+    },
+    {
         "title": "Graphify vs GitNexus vs CodeGraph: Stop Wasting API Tokens",
         "url": "https://www.youtube.com/watch?v=zIiiu8hS1To",
         "channel": "Cloud Codes",
