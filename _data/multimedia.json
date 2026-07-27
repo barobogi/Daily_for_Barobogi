@@ -1,5 +1,33 @@
 [
     {
+        "title": "HTMX 4.0 Is Here - And There's No HTMX 3 (Here's Why)",
+        "url": "https://www.youtube.com/watch?v=qhfgXVVNYL0",
+        "channel": "Cloud Codes",
+        "summary": "HTMX 개발자 Carson Gross가 'HTMX 3는 없다'고 한 약속을 기술적으로만 지키고 곧바로 HTMX 4로 건너뛴 사연을 다룬 영상입니다. 핵심은 XMLHttpRequest를 완전히 fetch로 교체하고, 암묵적 속성 상속(attribute inheritance)을 명시적으로 바꾸는 등 대규모 코드 삭제형 메이저 업데이트라는 점이며, 기존 HTMX 2 앱을 깨뜨릴 수 있는 두 가지 변경점을 경고합니다.",
+        "categories": [
+            "웹개발",
+            "HTMX",
+            "프론트엔드",
+            "오픈소스",
+            "메이저버전업"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "HTMX 4 beta 6(2026-07-23, npm 'next' 태그)부터 모든 요청이 XMLHttpRequest 대신 fetch 기반으로 전환됨 — 라이브러리 크기가 50KB→35.44KB로 감소",
+            "암묵적 속성 상속(예: 부모 div의 hx-confirm이 하위 요소에 자동 전파)이 제거되고 명시적 방식으로 변경 — 기존 템플릿이 깨질 수 있는 주요 원인",
+            "개발 배경: Carson Gross가 2025년 1월 만든 실험 라이브러리 fixy.js(fetch+async/await 기반)가 HTMX 4 설계의 토대가 됨, 알파1(2025-11-03)부터 4~6주 간격으로 활발히 릴리즈 중"
+        ],
+        "key_insights": [
+            "'버전 3는 없다'는 공개 약속을 '버전 4에 대해서는 말한 적 없다'는 기술적 허점으로 지키면서 2.x에서 4.x로 직행",
+            "이번 메이저 버전은 기능 추가보다 5년간 쌓인 IE 대응용 워크어라운드 코드를 걷어내는 '뺄셈형' 릴리즈",
+            "기존 HTMX 2 프로젝트를 업그레이드하려는 개발자는 attribute inheritance와 fetch 전환으로 인한 breaking change를 사전에 점검해야 함"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 웹프레임워크(HTMX) 메이저업데이트 기술 학습 소재",
+        "timestamp": "2026-07-27T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/qhfgXVVNYL0/hqdefault.jpg"
+    },
+    {
         "title": "Agentic Engineering, explained by a 10x developer",
         "url": "https://www.youtube.com/watch?v=FU5_kpTAVDo",
         "channel": "David Ondrej",
