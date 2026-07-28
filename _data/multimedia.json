@@ -1,5 +1,32 @@
 [
     {
+        "title": "$5 VPS That Replaced My Entire AWS Bill",
+        "url": "https://www.youtube.com/watch?v=KNkhpKghoDU",
+        "channel": "Cloud Codes",
+        "summary": "동일한 웹앱을 AWS에 올리면 월 $223.60, 독일 소재 $5.99 Hetzner VPS(CX23)에 올리면 월 $5.99로 37배 차이가 난다. 컴퓨팅 자체는 2배 차이에 불과하고, 데이터 전송(egress), NAT 게이트웨이, 로드밸런서, 퍼블릭 IPv4 과금 등 4가지 부가 서비스가 비용 격차의 핵심 원인임을 항목별로 분해해 설명한다.",
+        "categories": [
+            "클라우드비용",
+            "VPS",
+            "AWS",
+            "인프라최적화",
+            "DevOps"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "AWS 비용 구조: 컴퓨팅은 저렴하지만 데이터 전송(9센트/GB), NAT 게이트웨이(시간당 과금+이중 전송료), ALB(시간당+용량단위), 퍼블릭 IPv4(2024.2.1부터 시간당 과금) 등 부가 서비스가 실제 청구서의 대부분을 차지함",
+            "Hetzner 등 유럽 VPS는 대역폭(20TB 포함)과 고정IP를 기본 요금에 포함시켜 동일 워크로드 대비 최대 37배 저렴할 수 있음",
+            "TLS 종단 처리를 관리형 ALB 대신 Caddy 같은 경량 리버스 프록시로 대체하면 월 $22 상당의 비용을 4줄 설정으로 절감 가능"
+        ],
+        "key_insights": [
+            "클라우드 비용은 컴�트가 아니라 '보이지 않는 4개 서비스'(egress, NAT, LB, IP 과금)에서 발생 — 아키텍처를 그대로 옮기면 비용 구조도 그대로 따라옴",
+            "$5~6대 VPS + 최소 구성(Caddy 등)으로도 동일 트래픽/워크로드를 감당 가능하다는 점에서, 소규모 프로젝트의 클라우드 선택 시 관리형 서비스의 '숨은 과금 지점'을 항목별로 따져볼 필요가 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — D:\\AI n8n(C:\\n8n)·master_watch 등 자체 서버 인프라 운영 시 VPS 비용구조 비교 참고 가능",
+        "timestamp": "2026-07-28T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/KNkhpKghoDU/hqdefault.jpg"
+    },
+    {
         "title": "AI 에이전트 2개를 동시에 부리는 법 — Orca 멀티 오케스트레이션 #shorts",
         "url": "https://www.youtube.com/watch?v=gqABbZjExk0",
         "channel": "techyoo",
