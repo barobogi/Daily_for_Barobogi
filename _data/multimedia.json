@@ -1,5 +1,30 @@
 [
     {
+        "title": "New Cursor plan…",
+        "url": "https://www.youtube.com/watch?v=GR4cCUL51wU",
+        "channel": "David Ondrej",
+        "summary": "Cursor가 인도 지역에서만 저렴한 가격에 Grok 4.5와 Composer 기능을 제공하는 'Cursor Start' 플랜을 출시했고, 유튜버 David Ondrej는 이 지역 한정 할인 정책에 합리적 근거가 없다며 '일방향적 인종차별'이라고 비판하는 영상. 다른 저소득 국가(남미, 아프리카)는 제외하고 인도만 특혜를 준 점을 문제 삼으며, 반대로 유럽/슬라브인 전용 할인이었다면 즉시 비난받았을 것이라는 논지를 편다.",
+        "categories": [
+            "Cursor",
+            "AI 코딩툴",
+            "가격정책",
+            "소셜 논란"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Cursor가 인도 한정 'Cursor Start' 저가 플랜 출시 — Grok 4.5 + Composer 접근 포함, 지역별 차등 가격 전략 사례로 참고 가능"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "AI 코딩툴(Cursor)의 지역 한정 할인 정책이 논리적 근거 없이 특정 국가만 대상으로 함",
+            "유사한 지역 차등 가격 정책을 다른 저소득 국가에는 적용하지 않아 형평성 논란 발생",
+            "콘텐츠 자체는 기술 뉴스보다 소셜/정치적 논쟁 성격이 강해 실질적 액션 아이템은 적음"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-28T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GR4cCUL51wU/hqdefault.jpg"
+    },
+    {
         "title": "Free, local meeting transcription. Better than Granola, Fireflies & others",
         "url": "https://www.youtube.com/watch?v=GB6S5cUqZrk",
         "channel": "The Next New Thing",
