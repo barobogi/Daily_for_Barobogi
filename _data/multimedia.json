@@ -1,5 +1,35 @@
 [
     {
+        "title": "Free, local meeting transcription. Better than Granola, Fireflies & others",
+        "url": "https://www.youtube.com/watch?v=GB6S5cUqZrk",
+        "channel": "The Next New Thing",
+        "summary": "무료 로컬 미팅 노트테이커 도구를 소개하는 영상으로, 회의를 녹음/전사하고 요약까지 자동 생성하되 모든 처리가 클라우드가 아닌 로컬 컴퓨터에서 이루어져 프라이버시를 보장한다는 점을 강조한다. Parakeet(경량), Whisper(고성능, GPU/RAM 필요) 등 전사 엔진을 선택할 수 있고, 저장 폴더를 지정해 향후 AI 에이전트가 과거 회의 데이터를 참조하도록 활용할 수 있다.",
+        "categories": [
+            "AI도구",
+            "생산성",
+            "로컬AI",
+            "음성전사"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "클라우드 전송 없이 로컬에서 동작하는 무료 미팅 노트테이커 — Granola/Fireflies 대비 프라이버시 우위",
+            "전사 엔진 선택형 아키텍처(경량 Parakeet vs 고성능 Whisper)로 하드웨어 사양에 따라 유연하게 대응",
+            "로컬 저장 폴더를 지정해 AI 에이전트가 과거 회의 기록(할일/요약 등)을 사후에 참조하도록 연결 가능"
+        ],
+        "learning_related": [
+            "실시간 전사 모드는 발화가 끊기지 않고 계속될 경우 처리 지연이 발생할 수 있음",
+            "GPU 없는 노트북에서도 Parakeet으로 준수한 정확도의 로컬 전사가 가능"
+        ],
+        "key_insights": [
+            "회의 노트 자동화 도구는 편의성만큼 민감정보 노출 리스크가 크므로(사내 뒷담화 유출, 병원 상담 녹음 등) 로컬 처리 여부가 핵심 선택 기준이 됨",
+            "무료·로컬·API불필요 구조라는 점에서 바로보기님의 'API 회피 우선' 원칙과 부합하는 사례",
+            "저장 폴더를 AI 에이전트 연동 지점으로 설계한 점이 뿌리체계의 로컬DB/자동화 파이프라인과 유사한 패턴"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 무료·로컬·비API 미팅 전사+요약 자동화 구조, 향후 3AI 회의록/다이어리 자동화에 참고 가능, ③지식관리 — 로컬 저장 회의 기록을 AI가 사후 조회하는 방식이 Hermes vault 등 지식관리 구조와 유사",
+        "timestamp": "2026-07-28T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GB6S5cUqZrk/hqdefault.jpg"
+    },
+    {
         "title": "Redis vs Valkey: Stop Overengineering Your Cache Architecture",
         "url": "https://www.youtube.com/watch?v=3Qc49WnQnSg",
         "channel": "Cloud Codes",
