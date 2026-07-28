@@ -1,5 +1,32 @@
 [
     {
+        "title": "Redis vs Valkey: Stop Overengineering Your Cache Architecture",
+        "url": "https://www.youtube.com/watch?v=3Qc49WnQnSg",
+        "channel": "Cloud Codes",
+        "summary": "Redis가 2024년 오픈소스 라이선스를 포기하자 이틀 만에 동일 코드 기반의 Valkey가 Linux Foundation 산하로 포크되어 AWS·Google·Oracle 등 클라우드 기업들의 후원을 받게 된 과정을 설명한다. 이후 Redis가 2025년 AGPL v3를 추가해 셀프호스팅 시 다시 오픈소스로 인정받게 된 상황과, 애초에 캐시 서버 자체가 필요한지(SQLite/파일 기반 대안)까지 다루는 기술 비교 영상.",
+        "categories": [
+            "인프라",
+            "데이터베이스",
+            "오픈소스 라이선스",
+            "캐싱"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "Redis의 라이선스 변경(BSD → 이중 라이선스 → AGPLv3 추가) 타임라인과 그로 인한 Valkey 포크 탄생 배경",
+            "AGPL은 카피레프트(수정 시 소스 공개 의무) 성격이라 상업적 매니지드 서비스 운영자에게는 여전히 부담",
+            "일부 기업은 Redis를 제거하고 파일 기반(SQLite 등) 방식으로 전환해 3배 속도 향상 사례 존재 — 캐시 서버가 항상 필요한 건 아님"
+        ],
+        "key_insights": [
+            "오픈소스 라이선스 정의(OSI 기준) 위반 여부가 Fedora 같은 배포판의 실제 채택 결정을 좌우할 만큼 중요한 실무적 이슈",
+            "클라우드 대기업들(AWS, Google, Alibaba 등)이 서로 경쟁하면서도 Valkey라는 동일 오픈소스 프로젝트에 공동 투자하는 아이러니한 구도",
+            "캐시 도입 전에 '정말 서버가 필요한가'를 먼저 질문하는 것이 아키텍처 오버엔지니어링을 막는 핵심 포인트"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — Redis/Valkey 라이선스 이슈 및 캐시 아키텍처 선택 기준은 향후 인프라 스택 결정 시 참고 가능, ④공부방 — 오픈소스 라이선스 변화사와 DB/캐시 대안 비교 학습 자료",
+        "timestamp": "2026-07-28T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/3Qc49WnQnSg/hqdefault.jpg"
+    },
+    {
         "title": "AI Coding Loops Burn Tokens—Here’s the Fix",
         "url": "https://www.youtube.com/watch?v=1BhTwBXHJCY",
         "channel": "The Next New Thing",
