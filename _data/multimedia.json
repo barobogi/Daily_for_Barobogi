@@ -1,5 +1,30 @@
 [
     {
+        "title": "Making money is kinda simple",
+        "url": "https://www.youtube.com/watch?v=Yn4eAlmnrSo",
+        "channel": "Lewis Jackson",
+        "summary": "Lewis Jackson이 AI를 활용해 온라인으로 돈을 벌었다고 주장하며, '카피 앤 페이스트'로 24/7 자동 수익을 낼 수 있는 비즈니스 모델을 8월 5일 무료 웨비나에서 공개한다고 홍보하는 영상. 구체적인 방법론이나 증거 없이 무료 이벤트 등록을 유도하는 마케팅 훅 성격이 강함.",
+        "categories": [
+            "온라인비즈니스",
+            "마케팅퍼널",
+            "AI활용주장",
+            "웨비나홍보"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI를 활용해 수익화했다고 주장하나 구체적 방법(어떤 AI 도구, 어떤 워크플로우인지)은 제시하지 않음 — 검증 불가"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "전형적인 '무료 웨비나 → 유료 전환' 마케팅 퍼널 구조 (구체적 증거 없이 신뢰만 주장)",
+            "\"경험/기술/오디언스 불필요\" 같은 문구는 하이리스크 정보상품 마케팅의 전형적 신호",
+            "실질적인 정보 가치는 거의 없음 — 8/5 웨비나 등록 유도가 유일한 목적"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-07-28T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Yn4eAlmnrSo/hqdefault.jpg"
+    },
+    {
         "title": "$5 VPS That Replaced My Entire AWS Bill",
         "url": "https://www.youtube.com/watch?v=KNkhpKghoDU",
         "channel": "Cloud Codes",
