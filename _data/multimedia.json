@@ -1,5 +1,34 @@
 [
     {
+        "title": "Always On Agentic AI? 🧠 Hermes Supercomputer Setup (Abacus AI)",
+        "url": "https://www.youtube.com/watch?v=ZL-8IhjQDvE",
+        "channel": "Wanderloots",
+        "summary": "Abacus AI의 'Supercomputer'는 클라우드에서 Hermes 같은 상시 구동 에이전트를 원클릭으로 배포할 수 있는 관리형 서버로, Route LLM을 통해 작업에 맞는 최적 프론티어 모델을 자동 선택해준다. DIY로 로컬에 에이전트를 24/7 돌리기엔 비용·보안·인프라 부담이 크다는 문제를 클라우드 VPS로 해결하는 스폰서 영상.",
+        "categories": [
+            "AI 에이전트",
+            "클라우드 인프라",
+            "Abacus AI",
+            "스폰서 영상"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Abacus AI Supercomputer: 원클릭으로 Ubuntu 기반 VPS에 상시구동(always-on) 에이전트(Hermes, OpenClaw 등) 배포",
+            "Route LLM 개념: 질문마다 태스크에 최적인 모델을 자동 라우팅해 여러 프론티어 모델을 한 곳에서 활용",
+            "자체 구독(모델) 연결(BYO model) 또는 Route LLM 중 선택 가능한 과금 구조"
+        ],
+        "learning_related": [
+            "로컬 DIY 에이전트 운영의 4대 난제(상시구동 하드웨어, 모델 비용, 보안/격리, 원격 통신)를 관리형 클라우드가 어떻게 해소하는지 구조 파악에 참고할 만함"
+        ],
+        "key_insights": [
+            "에이전트를 '항상 켜두고' 쓰려는 니즈가 늘면서, 로컬 인프라 대신 관리형 클라우드(Supercomputer 같은)로 옮기는 흐름이 생기고 있음",
+            "여러 LLM을 하나의 구독/게이트웨이로 묶어 태스크별 자동 라우팅하는 'Route LLM' 방식은 API 비용 최적화 아이디어로 참고 가치 있음",
+            "스폰서 콘텐츠 특성상 실사용 난점(비용, 데이터 보안, 락인)은 다루지 않음 — 실제 도입 전 검증 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 상시구동 에이전트 클라우드 배포 방식, 두복이/master_watch 같은 자체 상시 자동화와 비교 참고 가치, ⑥인프라 — 로컬 VPS/서버 대신 관리형 클라우드로 에이전트 인프라를 옮기는 대안 구조 참고, ③지식관리 — 영상 속 'Hermes' 에이전트 명칭이 바로보기님 자체 'Hermes vault' 프로젝트와 이름이 겹치므로 혼동 주의 필요(Abacus의 Hermes는 별개 제품)",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ZL-8IhjQDvE/hqdefault.jpg"
+    },
+    {
         "title": "Anthropic vs Open Source: Hidden Policy Trap That Bans Open Weights",
         "url": "https://www.youtube.com/watch?v=WhmYDf5sSFs",
         "channel": "Cloud Codes",
