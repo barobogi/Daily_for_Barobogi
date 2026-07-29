@@ -1,5 +1,32 @@
 [
     {
+        "title": "Anthropic's shady tactics...",
+        "url": "https://www.youtube.com/watch?v=nWzWlFAudoQ",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej는 Anthropic이 주도하고 OpenAI도 서명한 'Pacing the Frontier' 성명을 비판하며, 이것이 AI 안전이 아닌 규제 포획(regulatory capture) 시도라고 주장한다. 미국 vs 중국 프레이밍을 쓰지만 본질은 폐쇄형 vs 오픈소스 경쟁이며, 중국은 이 합의를 따르지 않을 것이므로 오히려 Anthropic·OpenAI만 손해 보는 전략이라고 결론짓는다.",
+        "categories": [
+            "AI정책",
+            "AI업계비판",
+            "오픈소스AI",
+            "지정학"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Anthropic·OpenAI가 'Pacing the Frontier' 성명으로 프론티어 모델 개발 속도 조절(규제)을 주장 — 명분은 안전, 실제 의도는 오픈소스·경쟁사 견제라는 비판",
+            "중국은 매달 오픈소스 모델을 쏟아내는 반면 OpenAI·Anthropic은 이름과 달리 폐쇄형 모델 운영 — 개방성 구도의 역설",
+            "단일 관할권(미국)에서만 집행 가능한 자율 규제 성명이라 중국 등 타 국가엔 강제력 없음 — 정책 신뢰도·실효성에 시사점"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "'AI Pacing/안전' 프레이밍이 실제로는 경쟁 억제·규제 포획 수단으로 활용될 수 있다는 업계 권력구조 인사이트",
+            "오픈소스 vs 폐쇄형 AI 경쟁이 미중 프레임보다 더 본질적인 축이라는 관점",
+            "자발적 업계 합의는 비참여 국가(중국)에 구속력이 없어 실효성이 떨어진다는 정책 설계상 한계"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — AI 업계 동향/정책 트렌드 파악용 참고자료로 저장 가치 있음",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/nWzWlFAudoQ/hqdefault.jpg"
+    },
+    {
         "title": "13 Claude Code Plugins to 10X Your Projects",
         "url": "https://www.youtube.com/watch?v=ZXibaZnQbsI",
         "channel": "Ethan Nelson",
