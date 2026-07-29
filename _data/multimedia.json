@@ -1,5 +1,32 @@
 [
     {
+        "title": "Claude Opus 5, 스크린샷 한 장으로 3D 웹사이트를 만듭니다. #shorts",
+        "url": "https://www.youtube.com/watch?v=3_KApaBUo0k",
+        "channel": "techyoo",
+        "summary": "techyoo 채널의 쇼츠 영상으로, Claude Opus 5 모델이 스크린샷 한 장만으로 3D 웹사이트를 생성하는 과정을 시연합니다. 이미지 기반 코드 생성 능력을 짧은 포맷으로 소개하는 데모 영상입니다.",
+        "categories": [
+            "AI",
+            "Claude",
+            "웹개발",
+            "쇼츠"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Opus 5가 스크린샷(이미지) 입력만으로 3D 웹사이트 코드를 생성 — 멀티모달 코드 생성 능력 시연",
+            "이미지→코드 변환 워크플로우는 UI 프로토타이핑 자동화에 활용 가능"
+        ],
+        "learning_related": [
+            "Opus 5의 비전 기반 코드 생성 데모 확인 필요 — 실제 프롬프트/워크플로우 파악 시 3AI 파이프라인에 참고 가능"
+        ],
+        "key_insights": [
+            "스크린샷 한 장 → 3D 웹사이트 생성은 Claude Opus 5의 향상된 비전+코드 통합 능력을 보여주는 사례",
+            "자막/설명이 없어 세부 프롬프트 기법은 영상 직접 시청 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 이미지 기반 코드 생성이 웹/UI 자동화 파이프라인에 참고될 수 있음, ④공부방 — Claude 신규 모델 활용법 학습 포인트",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/3_KApaBUo0k/hqdefault.jpg"
+    },
+    {
         "title": "Everything That Actually Matters for Local AI (Hardware, VRAM & Speed Specs, Etc)",
         "url": "https://www.youtube.com/watch?v=RfoMhAWbibU",
         "channel": "Cloud Codes",
