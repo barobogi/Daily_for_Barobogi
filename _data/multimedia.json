@@ -1,5 +1,36 @@
 [
     {
+        "title": "Everything That Actually Matters for Local AI (Hardware, VRAM & Speed Specs, Etc)",
+        "url": "https://www.youtube.com/watch?v=RfoMhAWbibU",
+        "channel": "Cloud Codes",
+        "summary": "로컬 AI(LLM) 추론 속도를 결정하는 것은 파라미터 수가 아니라 메모리 대역폭이라는 것을 실증 데이터로 설명하는 영상. GPU 세대나 가격보다 GB/s 대역폭과 토큰당 읽는 바이트 수가 실제 tok/s를 좌우하며, MoE(Mixture of Experts) 모델은 전체 가중치를 읽지 않아 동일 크기의 dense 모델보다 훨씬 빠르다는 점을 사례로 보여준다.",
+        "categories": [
+            "로컬 AI",
+            "하드웨어",
+            "LLM 추론",
+            "GPU"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "토큰 생성 속도(tok/s) ≈ 메모리 대역폭 ÷ 토큰당 읽는 바이트 수 — 실제 엔진은 이론치의 50~75% 수준",
+            "구형 저가 GPU(12GB, 대역폭 360GB/s)가 신형 고가 GPU(16GB, 대역폭 288GB/s)보다 채팅(생성) 속도에서 더 빠를 수 있음 — 단, 프롬프트 처리(병렬/컴퓨트 바운드)는 반대로 신형이 우세",
+            "MoE 모델(예: Qwen3 30B MoE)은 라우터가 일부 전문가 블록만 활성화해 읽기 때문에 비슷한 크기의 dense 모델(Qwen3 32B) 대비 4.5배 빠름",
+            "Apple 통합메모리(M5 Max, 614GB/s, 128GB)는 200W 이하로 671B DeepSeek 모델을 약 17tok/s로 구동 — 랙/쿨링 없이 대형 모델 로컬 구동 가능"
+        ],
+        "learning_related": [
+            "로컬 LLM 하드웨어 선택 시 확인해야 할 5요소: 메모리 대역폭, 토큰당 바이트 수, 모델이 VRAM에 맞는지, 요청 컨텍스트 길이, 실제 용도(채팅 vs 프롬프트 처리)",
+            "GPU 스펙시트의 컴퓨팅 성능(TFLOPS)은 생성 속도와 직결되지 않음 — 대역폭이 핵심 지표"
+        ],
+        "key_insights": [
+            "'$250 카드가 $4,000 카드를 이긴다'는 핵심 메시지 — 채팅 용도라면 대역폭이 컴퓨팅 성능보다 중요",
+            "MoE 아키텍처가 로컬 추론 속도의 게임체인저 — 파라미터 수만으로 속도를 판단하면 안 됨",
+            "용도(채팅 vs 대량 프롬프트 처리)에 따라 최적 하드웨어가 정반대로 갈림"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 로컬 LLM 하드웨어(대역폭/VRAM/MoE) 개념 정리, 향후 로컬 모델 운용 시 참고자료, ⑤자동화 — 향후 로컬 AI(무료/저비용) 파이프라인 구축 시 GPU 선택 기준으로 활용 가능 (API 회피 우선 원칙과 연결)",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/RfoMhAWbibU/hqdefault.jpg"
+    },
+    {
         "title": "비개발자를 위한 에이전트와 깃 이용하기 강좌",
         "url": "https://www.youtube.com/watch?v=c5EP2Y4H-n4",
         "channel": "로치의개발일기",
