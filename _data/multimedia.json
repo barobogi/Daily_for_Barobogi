@@ -1,5 +1,37 @@
 [
     {
+        "title": "Claude’s New Trading Agent Just Changed Everything! (Liquid Co-Invest)",
+        "url": "https://www.youtube.com/watch?v=PCqm2PFlsMo",
+        "channel": "Cloud Codes",
+        "summary": "Liquid의 'Coinvest' 제품을 다루는 스폰서 영상으로, Claude/ChatGPT 같은 LLM에 실거래 기능을 연결해 자연어 문장 하나가 실제 주문으로 실행되는 구조를 해부한다. 핵심은 LLM이 자연어를 타입/검증된 구조화 tool call(스키마)로 변환한 뒤에만 거래소에 전달된다는 점이며, 필드 누락 시 추측 대신 되묻고 잘못된 값은 거래소 도달 전 스키마 단계에서 걸러진다.",
+        "categories": [
+            "AI 에이전트",
+            "트레이딩 자동화",
+            "Tool Calling",
+            "스폰서 영상"
+        ],
+        "stock_related": [
+            "실거래 연동(최대 50배 레버리지, 상시개장 시장) 구조라 리스크가 이론이 아닌 실제 자금 손실로 직결됨",
+            "국내 사용자 입장에선 KIS API가 모의투자 전용·삼성증권 고정이라 이런 '대화형 실매매' 구조를 그대로 이식하기 어려움 — 신호생성+수동실행 구조 제약과 대비됨"
+        ],
+        "ai_related": [
+            "자연어 지시를 곧바로 실행하지 않고 typed & validated된 구조화 tool call(스키마)로 변환한 뒤에만 실행 — '언어 입력, 스키마 출력'",
+            "필수 필드(예: 사이즈) 누락 시 모델이 추측하지 않고 되물음 — hallucination 방지를 스키마 검증 단계에 위임",
+            "동일한 tool-calling 함수 표면을 Claude, ChatGPT, iMessage 등 여러 대화 인터페이스에 노출해 특정 앱에 종속시키지 않음"
+        ],
+        "learning_related": [
+            "스키마 우선 설계: 잘못된 필드는 벤더(거래소)가 아니라 스키마 검증 단계에서 죽는다 — 이 패턴은 GPS Check/온톨로지 하드닝처럼 우리 쪽 에이전트 지시서 검증 구조에도 참고할 만함"
+        ],
+        "key_insights": [
+            "이 영상은 스폰서 콘텐츠임을 명시 — Coinvest는 Liquid가 만든 제품이고 화면상 시연도 실거래가 아닌 시뮬레이션 재연이라고 고지함",
+            "실거래 자동화의 안전장치는 '더 똑똑한 모델'이 아니라 '엄격한 타입 스키마 + 필수값 미기입 시 거부'라는 단순한 공학적 원칙에서 나옴",
+            "여러 대화 인터페이스(Claude/ChatGPT/iMessage)에 동일 함수 표면을 노출하는 설계는 자동화를 '새 앱'이 아니라 '기존 대화 습관' 위에 얹는 전략"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — tool call 스키마 검증 패턴은 자체 에이전트/GPS Check 지시서 검증 구조 설계에 참고 가능, ⑦재테크 — 실거래 LLM 연동 사례지만, KIS API 모의투자 제약(project_improve_stock_constraint) 때문에 국내 자동매매엔 직접 적용 불가, 신호생성 구조 참고만",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/PCqm2PFlsMo/hqdefault.jpg"
+    },
+    {
         "title": "Always On Agentic AI? 🧠 Hermes Supercomputer Setup (Abacus AI)",
         "url": "https://www.youtube.com/watch?v=ZL-8IhjQDvE",
         "channel": "Wanderloots",
