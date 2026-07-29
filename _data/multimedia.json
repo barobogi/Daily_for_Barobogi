@@ -1,5 +1,30 @@
 [
     {
+        "title": "13 Claude Code Plugins to 10X Your Projects",
+        "url": "https://www.youtube.com/watch?v=ZXibaZnQbsI",
+        "channel": "Ethan Nelson",
+        "summary": "Claude Code의 생산성을 높여주는 플러그인 13개를 소개하는 영상으로 추정됨(자막 미제공으로 상세 내용 확인 불가). 제목상 프로젝트 작업 속도를 10배 끌어올릴 수 있는 확장 도구들을 다루는 것으로 보임.",
+        "categories": [
+            "Claude Code",
+            "생산성 도구",
+            "AI 개발"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code 플러그인 생태계 활용 시 반복 작업 자동화 및 프로젝트 속도 향상 가능성 (자막 부재로 구체적 플러그인 목록은 확인 필요)"
+        ],
+        "learning_related": [
+            "자막이 제공되지 않아 상세 학습 포인트 추출 불가 — 원본 영상 직접 시청 후 실제 플러그인 목록/설치법 확인 권장"
+        ],
+        "key_insights": [
+            "제목 기준으로는 만복(Claude Code CLI) 운영 효율화에 참고할 만한 플러그인 목록일 가능성 있음",
+            "자막 없이 제목·설명만으로는 신뢰도 낮은 요약 — 실제 내용 검증 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code 플러그인으로 3AI(만복/코니/안티) 워크플로우 자동화 개선 여지 있는지 검토 가치",
+        "timestamp": "2026-07-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ZXibaZnQbsI/hqdefault.jpg"
+    },
+    {
         "title": "This Claude Code Plugin Spends 94% Less Tokens (Ponytail)",
         "url": "https://www.youtube.com/watch?v=LOOltDkp8jM",
         "channel": "Ethan Nelson",
