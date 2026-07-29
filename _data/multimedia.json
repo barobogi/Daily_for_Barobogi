@@ -1,5 +1,33 @@
 [
     {
+        "title": "AGI는 계단이 아니라 방향이다 | Kimi 창업자 양즈린 [한국어 자막 풀버전]",
+        "url": "https://www.youtube.com/watch?v=kp5YhJtxH8c",
+        "channel": "로치의개발일기",
+        "summary": "Kimi(달빛AI/Moonshot AI) 창업자 양즈린이 AGI를 '계단(도달 가능한 특정 지점)'이 아니라 '방향(지속적으로 나아가는 벡터)'으로 봐야 한다는 관점을 제시하는 인터뷰 영상입니다. AGI를 특정 시점에 '완성'되는 목표가 아니라 모델 능력이 계속 개선되어가는 연속적 과정으로 재정의하는 내용으로 보입니다. 한국어 자막이 달린 풀버전이나, 실제 자막 텍스트가 제공되지 않아 세부 논지는 제목 기반 추정입니다.",
+        "categories": [
+            "AGI",
+            "AI철학",
+            "중국AI",
+            "Kimi",
+            "인터뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AGI를 고정된 목표(계단)가 아닌 지속적 개선 방향(벡터)으로 재정의하는 프레이밍은 AI 발전 로드맵을 논의할 때 참고할 만한 관점",
+            "중국 AI 스타트업(Moonshot AI/Kimi) 창업자의 AGI관 — 미국 빅테크와 다른 AGI 정의·전략 비교 참고 가능"
+        ],
+        "learning_related": [
+            "자막이 제공되지 않아 정확한 발언 인용 불가 — 실제 학습 자료로 쓰려면 원본 자막/스크립트 확보 필요"
+        ],
+        "key_insights": [
+            "AGI는 '도달하면 끝나는 계단'이 아니라 '계속 나아가는 방향'이라는 프레이밍 전환",
+            "중국 AI 업계(Kimi 창업자) 시각에서 본 AGI 담론 — 서구 담론과의 비교 지점으로 활용 가능"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — AGI 개념/프레이밍 정리 자료로 참고 가능",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/kp5YhJtxH8c/hqdefault.jpg"
+    },
+    {
         "title": "Claude’s New Trading Agent Just Changed Everything! (Liquid Co-Invest)",
         "url": "https://www.youtube.com/watch?v=PCqm2PFlsMo",
         "channel": "Cloud Codes",
