@@ -1,5 +1,58 @@
 [
     {
+        "title": "K2가 K3를 만들었다 — 양즈린이 말하는 모델이 모델을 만드는 시대",
+        "url": "https://www.youtube.com/watch?v=-mJn4bvSkxI",
+        "channel": "로치의개발일기",
+        "summary": "Moonshot AI의 양즈린(Yang Zhilin)이 자사 모델 K2가 후속 모델 K3 개발에 활용된 사례를 언급하며, AI 모델이 모델을 만드는(모델 자기개선/자동화 개발) 시대로의 전환을 이야기하는 영상으로 추정됩니다. 자막이 없어 구체적 발언 내용은 확인 불가하며 제목과 채널 성격(개발 뉴스/트렌드 해설) 기반 추정 요약입니다.",
+        "categories": [
+            "AI모델",
+            "LLM개발",
+            "자기개선AI"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "모델이 모델을 학습/개발에 활용하는 자기강화형 AI 개발 패턴(K2→K3) 동향 파악 필요",
+            "Moonshot AI(K2/K3) 같은 중국계 오픈소스 LLM 개발 속도 및 방식 모니터링 가치"
+        ],
+        "learning_related": [
+            "자막 부재로 실제 기술적 디테일(어떤 방식으로 K2가 K3 생성에 기여했는지) 확인 위해 원본 시청 필요"
+        ],
+        "key_insights": [
+            "AI 업계에서 '모델이 모델을 만드는' 자기개선 루프가 실제 사례(K2→K3)로 언급되기 시작 — 3AI 자가성장 트랙과 유사한 방향성",
+            "자막 없는 영상이라 제목만으로는 신뢰도 낮은 요약 — 조회수 0(신규 업로드)로 아직 정보 확산 전 단계"
+        ],
+        "memo": "📋 뿌리체계: 43_function_dev — 모델이 모델을 개선/생성하는 자기강화 개발 패턴이 현재 진행 중인 '3AI 자가성장' 트랙과 개념적으로 연결됨, ③지식관리 — LLM 자기개선 동향 자료로 참고 가치 있으나 원본 확인 후 저장 판단 필요",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/-mJn4bvSkxI/hqdefault.jpg"
+    },
+    {
+        "title": "AI의 두 가지 사고법 — Test-time scaling의 모든 것",
+        "url": "https://www.youtube.com/watch?v=Oyoxx2rmQO4",
+        "channel": "로치의개발일기",
+        "summary": "AI 모델이 답을 낼 때 즉각적으로 추론하는 방식과, 추론 과정에서 더 많은 연산(사고 시간)을 투입해 정답률을 높이는 test-time scaling 방식을 대비해 설명하는 영상으로 추정됩니다. 자막/설명이 제공되지 않아 제목 기반 추정 요약이며, 실제 시청 후 재확인이 필요합니다.",
+        "categories": [
+            "AI",
+            "LLM",
+            "추론",
+            "test-time scaling"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "System 1/System 2 유사 구조(직관적 즉답 vs 단계적 추론)로 LLM의 두 가지 사고 모드를 설명하는 콘텐츠로 추정",
+            "OpenAI o1/DeepSeek R1류 모델의 test-time compute(추론 시 연산량 증가로 성능 향상) 트렌드와 연관 가능성"
+        ],
+        "learning_related": [
+            "test-time scaling 개념 자체가 최신 LLM 추론 기법 트렌드라 3AI 파이프라인(Karpathy Wiki, function_dev 등)의 학습 소재로 참고 가치 있음"
+        ],
+        "key_insights": [
+            "자막·설명이 없어 제목만으로는 구체적 기법(예: CoT, self-consistency, MCTS 기반 추론 등) 특정 불가 — 원본 확인 필요",
+            "채널 '로치의개발일기'는 개발자 대상 AI 개념 설명 채널로 보이며, 최신 LLM 추론 트렌드를 다루는 것으로 추정"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — test-time scaling은 LLM 추론 최신 기법으로 3AI 자가성장/펑션 개발 학습 소재 후보, ③지식관리 — AI 사고방식(추론 패러다임) 관련 개념 정리 자료로 활용 가능",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Oyoxx2rmQO4/hqdefault.jpg"
+    },
+    {
         "title": "Why hard work is keeping you broke",
         "url": "https://www.youtube.com/watch?v=69a5cNzv7Mo",
         "channel": "Lewis Jackson",
