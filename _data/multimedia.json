@@ -1,5 +1,34 @@
 [
     {
+        "title": "5 AI Agents Building Simultaneously #githubrepo #aicoding #devtools",
+        "url": "https://www.youtube.com/watch?v=zo9Q2vSq0R4",
+        "channel": "The Next New Thing",
+        "summary": "5개의 코딩 에이전트(Codex, Claude 등)를 각각 별도의 git worktree와 에뮬레이터에서 동시에 실행해 같은 앱/웹사이트를 4~5개 버전으로 병렬 개발한 뒤, 가장 잘 나온 결과물을 선택하거나 각 버전의 장점만 조합하는 개발 도구를 소개하는 영상. '토큰 맥싱'(토큰 예산을 최대한 활용하는 트렌드)과 연결지어, 에이전트에게 다양한 디자인 변형을 명시적으로 요청하는 것이 창의성을 끌어내는 좋은 practice라고 설명함.",
+        "categories": [
+            "AI 코딩 에이전트",
+            "개발도구",
+            "병렬 워크플로우",
+            "git worktree"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "여러 코딩 에이전트(Codex+Claude 조합)를 worktree별로 병렬 실행해 각각 완전히 동작하는 앱 버전을 만들고 비교 선택하는 도구",
+            "'토큰 맥싱' 트렌드 — 여러 모델의 토큰 예산을 동시에 소진해 산출물 다양성을 늘리는 접근",
+            "에이전트는 기본적으로 창의적이지 않으므로, 명시적으로 '4가지 다른 디자인 변형을 달라'고 요청해야 divergent한 결과를 얻고, 그중 좋은 부분들을 조합하는 것이 권장 워크플로우"
+        ],
+        "learning_related": [
+            "각 work tree마다 독립된 에뮬레이터를 붙여 동시에 4개 앱 인스턴스를 렌더링/실행하는 구조",
+            "단일 결과물을 요청하기보다 '옵션 A/B/C/D를 각각 만들어달라'고 지시해 최고의 부분만 취합하는 프롬프팅 전략"
+        ],
+        "key_insights": [
+            "다중 에이전트 병렬 실행 + worktree 격리 + 결과물 비교선택 구조는 현재 바로보기님의 3AI(만복/코니/안티) 분업 체계, 그리고 dispatching-parallel-agents/using-git-worktrees 스킬과 개념적으로 매우 유사함",
+            "에이전트에게 divergent 옵션(A/B/C/D)을 명시적으로 요청해 조합하는 방식은 뽀개기 후보 선별이나 디자인 검토 시 그대로 적용 가능한 실전 프롬프팅 팁"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 다중 에이전트 병렬 실행/worktree 격리 구조가 3AI 분업 자동화 파이프라인에 참고 가능, ④공부방 — divergent 옵션 요청 후 조합하는 프롬프팅 기법은 코딩/기획 작업 전반에 적용 가능한 학습 포인트",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/zo9Q2vSq0R4/hqdefault.jpg"
+    },
+    {
         "title": "Anthropic's shady tactics...",
         "url": "https://www.youtube.com/watch?v=nWzWlFAudoQ",
         "channel": "David Ondrej",
