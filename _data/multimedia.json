@@ -1,5 +1,39 @@
 [
     {
+        "title": "How DeepSeek Cut AI Coding Costs to $0.14",
+        "url": "https://www.youtube.com/watch?v=WzafGLl_m2k",
+        "channel": "Cloud Codes",
+        "summary": "DeepSeek V4 Flash는 압축 희소 어텐션(Compressed Sparse Attention), 라이트닝 인덱서, 스킴 레인이라는 세 가지 기법을 결합해 100만 토큰 컨텍스트 처리 비용을 GPT-5.6($5), Claude Opus 5($5), Gemini 3.6 Flash($1.50) 대비 14센트로 낮췄다(최대 36배 격차). 이는 표준 어텐션의 이차적(quadratic) 연산 비용과 KV 캐시 메모리 부담을 토큰 중요도 예측을 통해 선택적으로만 연산하는 방식으로 해결한 아키텍처적 혁신이며, DeepSeek가 논문으로 공개해 VLLM·SGLang이 며칠 만에 구현체를 출시했다.",
+        "categories": [
+            "AI모델비교",
+            "LLM아키텍처",
+            "DeepSeek",
+            "비용최적화",
+            "오픈소스AI"
+        ],
+        "stock_related": [
+            "DeepSeek의 초저가 추론 비용 공개로 OpenAI·Anthropic·Google 등 폐쇄형 API 제공사의 프라이싱 파워 약화 가능성 — 관련 AI 기업 밸류에이션에 부담 요인이 될 수 있음"
+        ],
+        "ai_related": [
+            "압축 희소 어텐션: 4개 토큰 단위를 학습된 가중합으로 압축(슬라이딩 윈도우 방식)해 연산량 감소",
+            "라이트닝 인덱서: 저랭크(low-rank) 스코어러로 압축된 요약 토큰의 중요도를 relu+top-k로 평가해 512개만 선별",
+            "긴 컨텍스트 비용 절감이 코딩 에이전트처럼 예측 실패 시 무경고로 조용히 깨지는 작업 유형에는 취약할 수 있다는 경고 — 코딩 에이전트 파이프라인 설계 시 주의 필요"
+        ],
+        "learning_related": [
+            "2023년 논문 'Efficient Streaming LMs with Attention Sinks'(Xiao et al.) — 시퀀스 초반 토큰이 어텐션 대부분을 흡수하는 현상 규명",
+            "2025년 2월 DeepSeek 'Native Sparse Attention' 논문 — 사전학습 단계부터 압축·선택·윈도우 방식을 통합 설계",
+            "V4 Flash 스펙: 총 2840억 파라미터 중 130억 활성 파라미터, 32조 토큰 이상으로 학습"
+        ],
+        "key_insights": [
+            "긴 프롬프트 비용의 대부분은 실제로는 거의 기여하지 않는 토큰 쌍 연산에서 발생하며, DeepSeek는 이를 예측·생략하는 구조로 해결했다",
+            "14센트 vs $5의 가격 차이는 할인이 아니라 근본적으로 다른 아키텍처(희소 어텐션) 때문이며, 이미 오픈소스로 공개되어 빠르게 확산 중이다",
+            "이 방식은 코딩 에이전트처럼 예측이 틀렸을 때 조용히 실패하는 워크로드에서 리스크가 있을 수 있음을 암시한다"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 어텐션 아키텍처(희소 어텐션, KV 캐시 압축) 기술 학습 자료로 유용, ⑤자동화 — 코딩 에이전트에 저비용 장문 컨텍스트 모델 활용 가능성 검토 대상",
+        "timestamp": "2026-08-06T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/WzafGLl_m2k/hqdefault.jpg"
+    },
+    {
         "title": "Turso + LibSQL: The $0 Edge Database Killing Enterprise Postgres Bills",
         "url": "https://www.youtube.com/watch?v=zhILRZIXbQQ",
         "channel": "Cloud Codes",
