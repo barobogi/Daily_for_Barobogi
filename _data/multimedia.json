@@ -1,5 +1,36 @@
 [
     {
+        "title": "LangGraph in 10 Minutes (Explained Clearly)",
+        "url": "https://www.youtube.com/watch?v=BwZbdCzmZJc",
+        "channel": "Cloud Codes",
+        "summary": "이 영상은 LangGraph가 단순한 그래프 시각화 도구가 아니라, 에이전트 실행 도중 프로세스가 죽어도 상태를 복구할 수 있는 런타임(체크포인팅/영속성)에 진짜 가치가 있다고 설명한다. State, Node, Edge, Compile 4가지 핵심 개념과 Reducer(예: add_messages)를 통해 상태 업데이트 방식을 제어하는 법을 다룬다.",
+        "categories": [
+            "LangGraph",
+            "AI 에이전트",
+            "개발 튜토리얼",
+            "LLM 프레임워크"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "LangGraph는 월 6500만 다운로드, Klarna·Replit·Elastic·Uber·LinkedIn·Cisco 등이 프로덕션에서 사용 중이며 MIT 라이선스 무료",
+            "그래프 API(State, Node, Edge, Compile) 자체는 20줄 내외로 간단하지만, 진짜 가치는 장애 발생 시 상태를 복구하는 런타임(persistence/checkpointing)에 있음",
+            "Node는 별도 base class/interface 없이 상태를 받아 partial update를 반환하는 순수 Python 함수(동기/비동기 모두 가능)"
+        ],
+        "learning_related": [
+            "State: TypedDict/dataclass/Pydantic 모델로 선언하는 단일 공유 스키마 — 모든 노드가 여기서 읽고 씀",
+            "Edge: 고정 엣지(A→B) vs 조건부 엣지(런타임에 라우팅 함수가 다음 노드 결정), Command 객체로 상태 업데이트+라우팅 동시 처리 가능",
+            "Reducer 개념: 기본은 값 덮어쓰기지만, add_messages 같은 리듀서를 붙이면 특정 필드만 append 방식으로 동작 변경 가능 (병렬 브랜치 충돌 방지 목적)"
+        ],
+        "key_insights": [
+            "튜토리얼 대부분이 그래프 '그리기'(쉬운 절반)에 집중하지만, 실제 가치는 크래시 후에도 살아남는 런타임 계층(체크포인팅)에 있음 — 이건 인수 하나(체크포인터 지정)로 켜짐",
+            "40분간 38단계 실행한 에이전트 프로세스가 죽으면 아무 메모리 없이 처음부터 재실행되며 비용이 중복 발생 — 이것이 LangGraph 존재 이유",
+            "그래프 API 자체는 하루 오후 안에 직접 구현 가능할 만큼 단순 — '살 만한 가치'는 API가 아니라 상태 영속성/복구 런타임"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — LangGraph의 State/Node/Edge/Reducer 및 체크포인팅 개념은 3AI 에이전트 파이프라인의 중단-복구 설계에 참고 가능, ④공부방 — LangGraph 핵심 개념(그래프 API vs 런타임 지속성) 학습 정리 대상",
+        "timestamp": "2026-08-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/BwZbdCzmZJc/hqdefault.jpg"
+    },
+    {
         "title": "SSE Explained: The \"Dumb\" HTTP Trick Powering Every AI App",
         "url": "https://www.youtube.com/watch?v=GpOTaKdxamY",
         "channel": "Cloud Codes",
