@@ -1,5 +1,33 @@
 [
     {
+        "title": "Stop Using Postgres: SQLite Is All You Need",
+        "url": "https://www.youtube.com/watch?v=OfUI2GDd6Dc",
+        "channel": "Cloud Codes",
+        "summary": "Postgres를 별도 서버로 쓰는 것이 대부분 앱에서는 반사적 선택일 뿐 실제 필요에 의한 결정이 아니라는 주장. SQLite는 함수 호출 수준의 인프로세스 라이브러리라 지연시간과 비용 면에서 우위가 있으며, Intuit의 벤치마크(Postgres 16 vs SQLite 3.46, Django 앱)에서 populated DB 기준 SQLite가 median 응답속도(500ms vs 640ms), throughput(5.1 vs 4.1 req/s), p99 tail latency(8.2s vs 14s) 모두 우세했다고 소개. 다만 빈 스키마의 단순 조회에서는 Postgres가 더 빠르고, SQLite 채택을 막는 세 가지 장벽(두 번째 앱 서버, 동시 writer, 특정 Postgres 기능)을 넘어야 한다는 조건을 건다.",
+        "categories": [
+            "데이터베이스",
+            "SQLite",
+            "PostgreSQL",
+            "백엔드 아키텍처",
+            "성능 벤치마크"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "SQLite는 인프로세스 라이브러리로 소켓 왕복(round trip) 없이 함수 호출로 쿼리를 처리해 PK lookup 기준 수십 µs vs Postgres 수백 µs 수준 차이가 남",
+            "관리형 Postgres(RDS)는 entry-level $15/월에서 프로덕션급 구성 시 월 $475까지 비용이 커지는 반면 SQLite는 파일 기반이라 비용이 0원",
+            "Intuit 벤치마크(2026-05, Django + Locust, 동일 1vCPU/8GB 우분투 환경): populated DB에서 SQLite가 median 응답속도·throughput·p99 tail latency 모두 우세, 반대로 빈 스키마 단순 조회는 Postgres가 우세"
+        ],
+        "key_insights": [
+            "SQLite 채택을 가로막는 3가지 장벽(두 번째 앱 서버 필요성, 동시 writer, 대체 불가능한 Postgres 전용 기능) 중 가장 큰 장벽이 최근(2026-07-24 SQLite 신규 릴리즈) 완화됐다는 주장이 영상의 핵심 결론",
+            "단순 벤치마크 숫자보다 p99 tail latency 차이(14s vs 8.2s)가 실사용 체감에 더 크게 작용한다는 지적",
+            "소규모/단일 서버 트래픽(하루 수백 명 수준) 앱에 Postgres를 반사적으로 붙이는 관행에 대한 재검토 요구 — 아키텍처 선택은 트래픽/동시성 요구에 근거해야 한다는 논지"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 향후 소규모 프로젝트 DB 선택 시 Postgres 대신 SQLite 고려 가능한 참고 자료",
+        "timestamp": "2026-08-06T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/OfUI2GDd6Dc/hqdefault.jpg"
+    },
+    {
         "title": "How DeepSeek Cut AI Coding Costs to $0.14",
         "url": "https://www.youtube.com/watch?v=WzafGLl_m2k",
         "channel": "Cloud Codes",
