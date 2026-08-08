@@ -1,5 +1,32 @@
 [
     {
+        "title": "Datastar Explained: The \"11KB\" Library Replacing HTMX & Alpine.js",
+        "url": "https://www.youtube.com/watch?v=LglyxRWKP-o",
+        "channel": "Cloud Codes",
+        "summary": "Datastar와 htmx의 번들 크기를 실제로 압축해 비교한 결과, gzip 기준 차이는 457바이트에 불과해 '11KB' 마케팅 주장은 사실상 무의미하다는 것을 보여준다. 영상은 이어서 Datastar 개발자 Delaney Gillilan이 htmx 코드베이스를 분석하고 TypeScript로 포팅해 htmx 창시자 Carson Gross에게 제안했으나 거절당한 뒤 별도 프로젝트로 포크한 배경을 다룬다.",
+        "categories": [
+            "웹개발",
+            "프론트엔드",
+            "htmx",
+            "Datastar",
+            "오픈소스"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "htmx와 Datastar의 gzip 압축 후 실제 번들 크기 차이는 457바이트로 마케팅 문구('11KB 대체재')와 달리 미미함",
+            "htmx 4.0에서 fetch 기반 전환, 스트리밍, 모핑, 반응형 표현식 등 Datastar가 먼저 제안했던 기능들이 헤드라인 기능으로 채택됨",
+            "Datastar는 htmx 소스코드 분석 후 TypeScript 포팅 제안이 거절되자 별도 포크로 시작된 프로젝트"
+        ],
+        "key_insights": [
+            "라이브러리 비교 시 마케팅 문구(예: '11KB')보다 실제 gzip 압축 크기 등 정량적 검증이 중요",
+            "오픈소스 생태계에서 제안 거절 후 경쟁 포크가 탄생하고, 결과적으로 원 프로젝트가 그 아이디어를 나중에 채택하는 경우가 있음"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — htmx/Datastar 같은 프론트엔드 라이브러리 기술 학습 콘텐츠",
+        "timestamp": "2026-08-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/LglyxRWKP-o/hqdefault.jpg"
+    },
+    {
         "title": "LangGraph in 10 Minutes (Explained Clearly)",
         "url": "https://www.youtube.com/watch?v=BwZbdCzmZJc",
         "channel": "Cloud Codes",
