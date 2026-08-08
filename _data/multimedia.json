@@ -1,5 +1,34 @@
 [
     {
+        "title": "Turso + LibSQL: The $0 Edge Database Killing Enterprise Postgres Bills",
+        "url": "https://www.youtube.com/watch?v=zhILRZIXbQQ",
+        "channel": "Cloud Codes",
+        "summary": "Turso 팀이 SQLite를 Rust로 재작성한 오픈소스 프로젝트(구 Limbo, 23,000+ 스타)가 최근 PostgreSQL 프론트엔드까지 지원한다고 발표했으나, 실제로는 41개 기능만 완전 지원하고 345개는 미지원 상태인 초기 데모 수준. 영상은 lib SQL(포크), Turso Database(재작성), Turso Cloud(관리형 서비스) 세 가지가 같은 'Turso' 이름을 공유해 혼란을 준다는 점과, 재작성 엔진은 아직 1.0도 출시되지 않았는데 실제 유료 고객 서비스는 여전히 안정적인 fork 버전(lib SQL)을 쓰고 있다는 괴리를 지적한다.",
+        "categories": [
+            "데이터베이스",
+            "오픈소스",
+            "Rust",
+            "SQLite",
+            "PostgreSQL",
+            "인프라"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "Turso/libSQL/Limbo(Turso Database) 세 프로젝트의 관계와 차이: fork(lib SQL, 프로덕션용) vs 클린룸 재작성(Turso Database, Rust, 아직 beta) vs 관리형 클라우드(Turso Cloud)",
+            "PostgreSQL 호환 레이어를 표방하지만 실제 지원 기능은 41개뿐이고 345개가 미지원 상태 — 마케팅과 실제 성숙도 간 괴리를 확인하는 습관 필요",
+            "신규 프로젝트엔 재작성 엔진, 미션 크리티컬 시스템엔 기존 fork를 권장하는 팀 자체 가이드라인이 존재함"
+        ],
+        "key_insights": [
+            "동일 브랜드명 아래 서로 다른 성숙도의 3개 제품(fork/rewrite/cloud)이 혼재하면 AI 에이전트조차 혼동한다는 CTO의 인정 — 인프라 선택 시 브랜드명이 아닌 실제 구현체를 확인해야 함",
+            "PostgreSQL 호환을 내세운 신규 발표라도 실제 기능 커버리지(41 vs 345)를 원문 파일에서 직접 확인하는 것이 과대광고 여부 판단에 중요",
+            "SQLite 클린룸 재작성 프로젝트가 6주 만에 8,000 스타 증가 등 빠르게 성장 중이나, 인덱스/트리거/뷰/vacuum 등 핵심 기능이 아직 미완성 — 프로덕션 도입 전 신중한 검증 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 향후 프로젝트에서 SQLite/Postgres 호환 임베디드 DB 채택 시 Turso/libSQL 성숙도 판단에 참고 가능, ④공부방 — Rust 기반 DB 엔진 재작성 사례로 시스템 프로그래밍 학습 소재",
+        "timestamp": "2026-08-06T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/zhILRZIXbQQ/hqdefault.jpg"
+    },
+    {
         "title": "Go + Templ + HTMX: Build Full-Stack Apps With Zero React",
         "url": "https://www.youtube.com/watch?v=t5Xub05UdhQ",
         "channel": "Cloud Codes",
