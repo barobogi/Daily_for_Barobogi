@@ -1,5 +1,31 @@
 [
     {
+        "title": "Control Multiple AI Coders Easily",
+        "url": "https://www.youtube.com/watch?v=vjqL40r3DPE",
+        "channel": "The Next New Thing",
+        "summary": "제목 기준으로 볼 때 여러 AI 코딩 에이전트(예: Claude Code, Cursor 등)를 동시에 관리·제어하는 방법이나 도구를 다루는 영상으로 추정됩니다. 자막이 제공되지 않아 상세 내용은 확인할 수 없으며, 제목만으로 추론한 요약입니다.",
+        "categories": [
+            "AI 코딩",
+            "생산성 도구",
+            "멀티 에이전트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "여러 AI 코딩 에이전트를 병렬로 운용하는 워크플로우 관련 영상으로 추정 — 3AI(만복/코니/안티) 협업 구조와 유사한 주제일 가능성",
+            "자막 미제공으로 구체적 도구명/방법론 확인 불가, 추가 조사 필요"
+        ],
+        "learning_related": [
+            "멀티 AI 에이전트 오케스트레이션 관련 최신 도구 트렌드 파악용으로 참고 가능"
+        ],
+        "key_insights": [
+            "자막이 없어 제목/채널 정보만으로는 구체적 인사이트 도출이 제한적임",
+            "제목상 '여러 AI 코더를 쉽게 제어'라는 주제는 현재 3AI 협업 체계와 관련성이 있을 수 있어 원본 영상 직접 확인이 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 멀티 AI 에이전트 제어/오케스트레이션 도구 관련 가능성, 3AI 협업 구조 개선에 참고할 여지 있음",
+        "timestamp": "2026-08-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/vjqL40r3DPE/hqdefault.jpg"
+    },
+    {
         "title": "An agent you & your team will actually use",
         "url": "https://www.youtube.com/watch?v=U6y2xP9pSt8",
         "channel": "The Next New Thing",
