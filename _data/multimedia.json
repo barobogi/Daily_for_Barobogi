@@ -1,5 +1,32 @@
 [
     {
+        "title": "My double DGX Spark setup",
+        "url": "https://www.youtube.com/watch?v=hST4u6lhY5U",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 두 대의 NVIDIA DGX Spark를 연결한 개인 AI 컴퓨팅 셋업을 소개하는 영상으로 추정됩니다. 로컬 LLM 추론/파인튜닝을 위한 온프레미스 컴퓨팅 인프라 구축 사례로 보이며, 자막이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "하드웨어",
+            "AI인프라",
+            "로컬LLM",
+            "DGX Spark"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "NVIDIA DGX Spark 2대 클러스터링을 통한 로컬 AI 컴퓨팅 파워 확장 사례로 추정",
+            "클라우드 API 대신 온프레미스 하드웨어로 LLM 추론/학습 비용을 절감하는 접근 — API 회피 구조 원칙과 관련"
+        ],
+        "learning_related": [
+            "DGX Spark 멀티 유닛 연결(NVLink/네트워킹) 구성 방식은 자체 로컬 AI 서버 구축 시 참고 가능"
+        ],
+        "key_insights": [
+            "제목·채널·설명만으로는 구체적 스펙(연결 방식, 성능, 비용)을 확정하기 어려움 — 자막 없이는 추측성 요약",
+            "David Ondrej 채널은 AI 개발/툴 리뷰 중심이라 실사용 워크플로우 소개일 가능성 높음"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 로컬 AI 컴퓨팅 하드웨어 구축 참고 사례, ⑤자동화 — API 유료 사용 최소화(무료/로컬 우선) 원칙과 연결 가능",
+        "timestamp": "2026-08-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/hST4u6lhY5U/hqdefault.jpg"
+    },
+    {
         "title": "Is AI Stopping you making money?",
         "url": "https://www.youtube.com/watch?v=PNfjLbl-FX0",
         "channel": "Lewis Jackson",
