@@ -1,5 +1,33 @@
 [
     {
+        "title": "인류 문명의 상한을 포기할 수 없다 | Kimi 창업자 양즈린",
+        "url": "https://www.youtube.com/watch?v=Iv_0nE6irrM",
+        "channel": "로치의개발일기",
+        "summary": "Kimi(문샷 AI) 창업자 양즈린이 인류 문명의 상한(한계)을 끌어올리는 것을 AI 개발의 궁극적 목표로 제시하는 인터뷰/강연 영상으로 보입니다. 자막이 제공되지 않아 상세 발언 내용은 확인할 수 없으나, 제목상 AGI 지향점과 중국 AI 스타트업의 야심을 다루는 것으로 추정됩니다.",
+        "categories": [
+            "AI",
+            "스타트업",
+            "인터뷰",
+            "중국AI",
+            "AGI"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Kimi(문샷 AI) 창업자의 AGI/인류 문명 확장 관점 — 중국 AI 스타트업의 방향성 참고 가능",
+            "자막 부재로 구체적 기술 인사이트 확인 불가 — 원문 확인 필요"
+        ],
+        "learning_related": [
+            "중국 AI 산업 동향 및 Kimi(Moonshot AI) 전략 파악용 참고 영상"
+        ],
+        "key_insights": [
+            "제목 기준 '인류 문명의 상한'을 목표로 한 AGI 지향적 메시지로 추정",
+            "자막이 없어 실제 발언 근거 없이 제목/메타데이터만으로 추정한 요약임 — 신뢰도 낮음, 원본 영상 확인 권장"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — 중국 AI 스타트업(Kimi) 동향 파악용 자료로 축적 가능",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Iv_0nE6irrM/hqdefault.jpg"
+    },
+    {
         "title": "모델이 곧 제품이다 | Kimi 창업자의 스케일링·에이전트 강의 [한국어 자막]",
         "url": "https://www.youtube.com/watch?v=36I6CJzzE2c",
         "channel": "로치의개발일기",
