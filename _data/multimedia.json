@@ -1,5 +1,31 @@
 [
     {
+        "title": "How to Build a High Converting Landing Page in Minutes Using Claude Code",
+        "url": "https://www.youtube.com/watch?v=gZrBDTnWPZs",
+        "channel": "Ethan Nelson",
+        "summary": "Claude Code를 활용해 짧은 시간 안에 전환율 높은 랜딩페이지를 제작하는 방법을 다루는 영상으로 추정됩니다. 자막이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "Claude Code",
+            "랜딩페이지 제작",
+            "AI 코딩 자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code를 웹페이지/랜딩페이지 생성에 활용하는 사례 — 코딩 자동화 툴로서의 실용적 활용법",
+            "'고전환율(High Converting)' 키워드로 보아 마케팅 카피/UX 요소까지 AI가 함께 생성하는 워크플로우일 가능성"
+        ],
+        "learning_related": [
+            "Claude Code의 코드 생성 범위가 백엔드/스크립트를 넘어 프론트엔드 페이지 제작까지 확장되는 트렌드 참고 가능"
+        ],
+        "key_insights": [
+            "자막 미제공으로 정확한 내용 파악 불가 — 제목만으로 추정한 요약",
+            "Claude Code를 활용한 빠른 프로토타이핑/랜딩페이지 제작 사례는 5(자동화) 뿌리와 관련 있을 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code로 랜딩페이지 제작 자동화 관련 참고 가능 (단, 자막 부재로 확신도 낮음)",
+        "timestamp": "2026-08-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/gZrBDTnWPZs/hqdefault.jpg"
+    },
+    {
         "title": "Claude Design 2.0 Just Became Unstoppable (Here's Why)",
         "url": "https://www.youtube.com/watch?v=7HggM1A2dag",
         "channel": "Ethan Nelson",
