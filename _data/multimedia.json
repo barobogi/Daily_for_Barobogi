@@ -1,5 +1,33 @@
 [
     {
+        "title": "모델이 곧 제품이다 | Kimi 창업자의 스케일링·에이전트 강의 [한국어 자막]",
+        "url": "https://www.youtube.com/watch?v=36I6CJzzE2c",
+        "channel": "로치의개발일기",
+        "summary": "Kimi(문샷AI) 창업자가 '모델이 곧 제품이다'라는 관점에서 LLM 스케일링 전략과 AI 에이전트 설계 철학을 강의하는 영상입니다. 자막 데이터가 제공되지 않아 제목과 설명 기반의 제한적 분석이며, 모델 자체의 완성도를 제품 경쟁력으로 직결시키는 접근을 다루는 것으로 추정됩니다.",
+        "categories": [
+            "AI",
+            "LLM",
+            "에이전트",
+            "스케일링"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "'모델이 곧 제품' 철학 — 별도 UX 레이어보다 모델 성능 자체가 핵심 경쟁력이라는 관점",
+            "Kimi(Moonshot AI) 창업자의 스케일링 전략 및 에이전트 설계 인사이트"
+        ],
+        "learning_related": [
+            "중국 AI 스타트업(Moonshot AI/Kimi)의 LLM 개발 방법론 학습 자료",
+            "AI 에이전트 아키텍처 설계 관점 습득 가능"
+        ],
+        "key_insights": [
+            "모델 성능 자체를 제품력으로 보는 관점은 자체 자동화 파이프라인의 모델 선택/튜닝 우선순위 판단에 참고 가능",
+            "자막이 제공되지 않아 구체적 기술 인사이트는 실제 시청 후 재분석 필요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 스케일링·에이전트 설계 강의 학습 자료, ⑤자동화 — 에이전트 설계 인사이트가 자동화 파이프라인 설계에 참고될 수 있음",
+        "timestamp": "2026-07-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/36I6CJzzE2c/hqdefault.jpg"
+    },
+    {
         "title": "OpenAI 의 비공개모델 탈출후 허깅페이스 공격",
         "url": "https://www.youtube.com/watch?v=uKHJn9-2rKc",
         "channel": "로치의개발일기",
