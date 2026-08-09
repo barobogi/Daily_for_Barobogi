@@ -1,5 +1,31 @@
 [
     {
+        "title": "Let agents write your tests",
+        "url": "https://www.youtube.com/watch?v=i-S99NwmsQA",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 소개하는 영상으로, AI 코딩 에이전트에게 테스트 코드 작성을 맡기는 워크플로우를 다룹니다. 자막이 제공되지 않아 제목 기반 추정이며, 개발자가 테스트를 직접 작성하는 대신 AI 에이전트에게 위임해 생산성을 높이는 접근을 소개하는 것으로 보입니다.",
+        "categories": [
+            "AI 코딩",
+            "테스트 자동화",
+            "개발 생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 에이전트에게 테스트 작성을 위임하는 워크플로우 소개 (제목 기반 추정)",
+            "코딩 에이전트(Claude Code 등) 활용한 TDD/테스트 자동화 트렌드와 연관 가능"
+        ],
+        "learning_related": [
+            "AI 에이전트 기반 테스트 작성 방법론 — 자막 없어 구체적 기법은 원본 영상 확인 필요"
+        ],
+        "key_insights": [
+            "자막이 제공되지 않아 제목·채널 정보만으로 요약한 추정치이며, 신뢰도가 낮음",
+            "David Ondrej는 AI 코딩/에이전트 관련 콘텐츠를 주로 다루는 채널로, 테스트 자동화 워크플로우 영상으로 추정됨"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 에이전트 기반 테스트 자동화 기법 학습 자료로 활용 가능, ⑤자동화 — 테스트 작성 자동화가 코딩 파이프라인 효율화에 참고될 수 있음",
+        "timestamp": "2026-08-05T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/i-S99NwmsQA/hqdefault.jpg"
+    },
+    {
         "title": "GUIs are not dead",
         "url": "https://www.youtube.com/watch?v=08lTuvYITxQ",
         "channel": "David Ondrej",
