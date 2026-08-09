@@ -1,5 +1,32 @@
 [
     {
+        "title": "This Free Tool Catches Dangerous AI Skills Before You Install",
+        "url": "https://www.youtube.com/watch?v=mCwmUEYifcM",
+        "channel": "The Next New Thing",
+        "summary": "제목상 이 영상은 AI 도구(예: Claude Code 등 AI 에이전트용 'Skill'/플러그인)를 설치하기 전에 악성이거나 위험한 코드가 포함되어 있는지 스캔해주는 무료 툴을 소개하는 내용으로 추정됩니다. AI 확장 기능 생태계가 커지면서 발생하는 공급망 보안 리스크와 이를 방어하는 무료 솔루션을 다루는 것으로 보입니다. 자막/설명이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "AI 보안",
+            "AI 툴",
+            "공급망 보안",
+            "개발자 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 에이전트/스킬 설치 전 악성코드·위험 권한을 사전 검사하는 무료 툴 존재 가능성 — 만복/코니/안티가 외부 스킬·플러그인을 설치하기 전 유사한 사전 검증 절차 도입 검토 가치 있음",
+            "AI 확장 생태계(스킬, MCP 서버 등) 확산에 따른 공급망 보안 이슈가 부각되는 흐름"
+        ],
+        "learning_related": [
+            "제목만으로는 구체적 툴 이름·작동 방식 확인 불가 — 자막/설명 확보 후 재분석 필요"
+        ],
+        "key_insights": [
+            "AI 스킬/플러그인 설치 전 보안 검증이 새로운 니즈로 부상 중",
+            "무료 도구로 이런 검증이 가능하다는 점이 실용적 시사점"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — AI 스킬/플러그인 설치 시 보안 스캔 도구 도입 검토 가능, ⑤자동화 — 3AI(만복/코니/안티)가 외부 스킬을 다룰 때 사전 안전 점검 프로세스에 참고 가능",
+        "timestamp": "2026-08-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/mCwmUEYifcM/hqdefault.jpg"
+    },
+    {
         "title": "24/7 Agentic AI? ☁️ Safe, Secure Always On Hermes Agent (or Openclaw) #agenticai #ai #hermesagent",
         "url": "https://www.youtube.com/watch?v=WYpXfaf5FnA",
         "channel": "Wanderloots",
