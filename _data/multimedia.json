@@ -1,5 +1,32 @@
 [
     {
+        "title": "A 9B Model Just Outperformed 397B One at Repairing Agents (Harness R1)",
+        "url": "https://www.youtube.com/watch?v=mYx3r8YA-HY",
+        "channel": "Cloud Codes",
+        "summary": "Cloud Codes 채널에서 소개하는 영상으로, 'Harness R1'이라는 9B 파라미터 규모의 모델이 397B급 대형 모델보다 에이전트(코딩 에이전트 등) 오류 복구(repair) 작업에서 더 우수한 성능을 보였다는 내용을 다룸. 자막이 제공되지 않아 세부 벤치마크·기법은 제목 기반 추정임.",
+        "categories": [
+            "AI모델",
+            "코딩에이전트",
+            "LLM벤치마크",
+            "소형모델"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "9B 소형 모델이 397B 초대형 모델을 특정 태스크(에이전트 리페어)에서 능가 — 태스크 특화 파인튜닝/RL(R1 계열)이 모델 크기보다 중요할 수 있음을 시사",
+            "'Harness R1'은 에이전트 실행 실패를 감지하고 복구하는 데 특화된 것으로 보임 — 3AI(만복/코니/안티) 파이프라인의 자체 오류복구·재시도 로직 설계에 참고 가능"
+        ],
+        "learning_related": [
+            "대형 범용 모델 대신 소형 특화 모델(R1 스타일 RL 파인튜닝)로 특정 서브태스크를 대체하는 접근 — API 비용 절감 구조 설계 시 참고할 만한 사례"
+        ],
+        "key_insights": [
+            "모델 크기보다 태스크 특화 학습(RL/파인튜닝)이 에이전트 복구 성능에 더 결정적일 수 있음",
+            "자막/설명이 없어 구체적 벤치마크 수치나 방법론은 확인 불가 — 원문 영상 재확인 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전트 오류 복구 기법은 향후 안티/자동화 파이프라인의 실패 처리 로직에 참고 가능, ④공부방 — 소형 특화 모델 vs 대형 범용 모델 트렌드 학습 자료",
+        "timestamp": "2026-08-09T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/mYx3r8YA-HY/hqdefault.jpg"
+    },
+    {
         "title": "Control Multiple AI Coders Easily",
         "url": "https://www.youtube.com/watch?v=vjqL40r3DPE",
         "channel": "The Next New Thing",
