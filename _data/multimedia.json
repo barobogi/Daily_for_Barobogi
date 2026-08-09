@@ -1,5 +1,32 @@
 [
     {
+        "title": "Why I Run Agents Overnight",
+        "url": "https://www.youtube.com/watch?v=p3Gqwtk-qAQ",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 AI 코딩 에이전트(Claude Code 등)를 밤새 자율적으로 실행시켜 두는 이유와 방법을 다루는 영상으로 추정됩니다. 자막이 제공되지 않아 상세 내용은 제목 기반 추정이며, 사람이 자는 동안 에이전트가 반복 작업·코딩 태스크를 처리하게 하는 오버나이트 에이전트 운영 전략을 다루는 것으로 보입니다.",
+        "categories": [
+            "AI 에이전트",
+            "자동화",
+            "코딩",
+            "생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 코딩 에이전트를 야간에 자율 실행시켜 개발 생산성을 높이는 운영 방식 소개 추정",
+            "사람의 개입 없이 장시간 작업을 이어가는 자율 에이전트(autonomous agent) 워크플로우 관련 인사이트 가능성"
+        ],
+        "learning_related": [
+            "장시간 자율 실행 가능한 에이전트 설계/모니터링 방법에 대한 참고 가능성"
+        ],
+        "key_insights": [
+            "자막이 없어 정확한 내용 파악에 한계가 있음 — 제목/채널 성격 기반 추정 요약",
+            "David Ondrej 채널은 주로 AI 코딩·에이전트 자동화 콘텐츠를 다루므로, 만복의 야간 자동 파이프라인(master_watch.py 등) 운영과 비교 참고 가치 있을 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전트 오버나이트 자율 실행 운영 방식이 master_watch.py 등 기존 자동 워처 구조와 비교 참고될 수 있음, ⑥인프라 — 장시간 무인 실행 환경(모니터링, 에러 복구) 설계 참고 가능성",
+        "timestamp": "2026-07-31T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/p3Gqwtk-qAQ/hqdefault.jpg"
+    },
+    {
         "title": "My Biggest AI Mistake...",
         "url": "https://www.youtube.com/watch?v=FtyePPCE5q0",
         "channel": "David Ondrej",
