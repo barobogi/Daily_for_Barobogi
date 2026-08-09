@@ -1,5 +1,29 @@
 [
     {
+        "title": "This Tool Shows You How Top Apps Are Designed",
+        "url": "https://www.youtube.com/watch?v=EqFR6DbASQc",
+        "channel": "The Next New Thing",
+        "summary": "이 영상은 인기 앱들의 UI/UX 디자인을 분석하고 벤치마킹할 수 있게 해주는 도구를 소개하는 콘텐츠로 추정됩니다. 자막이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "디자인 도구",
+            "UI/UX",
+            "앱 개발",
+            "생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "상위 앱들의 디자인 패턴/UI 레퍼런스를 수집·분석하는 도구 활용법으로 추정 — 실제 자막 확보 후 재분석 필요"
+        ],
+        "key_insights": [
+            "제목 기준으로 앱 디자인 벤치마킹/레퍼런스 도구를 소개하는 영상으로 보임",
+            "자막이 없어 핵심 내용(도구명, 사용법)은 확인 불가 — 자막 또는 설명 확보 시 재분석 권장"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — UI/UX 디자인 레퍼런스 도구는 콘텐츠/제품 기획 시 참고 자료로 활용 가능",
+        "timestamp": "2026-08-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/EqFR6DbASQc/hqdefault.jpg"
+    },
+    {
         "title": "This Free Tool Catches Dangerous AI Skills Before You Install",
         "url": "https://www.youtube.com/watch?v=mCwmUEYifcM",
         "channel": "The Next New Thing",
