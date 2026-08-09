@@ -1,5 +1,33 @@
 [
     {
+        "title": "딥시크 오푸스급 새로운 모델 90% 할인 중",
+        "url": "https://www.youtube.com/watch?v=OxPdQ40l6EM",
+        "channel": "로치의개발일기",
+        "summary": "딥시크(DeepSeek)가 클로드 오푸스급 성능을 가진 새로운 AI 모델을 출시했으며, 현재 API 이용료가 90% 할인되는 프로모션이 진행 중이라는 내용을 다루는 개발 관련 영상입니다. 자막이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "AI모델",
+            "딥시크",
+            "LLM",
+            "가격정책"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "딥시크의 신규 모델이 오푸스(Claude Opus)급 성능을 주장 — 오픈소스/저비용 진영의 고성능 모델 경쟁 심화",
+            "API 90% 할인 프로모션 — 비용 최적화 관점에서 검토 가치 있음 (단, 자막 없어 정확한 조건 확인 필요)"
+        ],
+        "learning_related": [
+            "신규 LLM 출시 시 성능 벤치마크와 가격 정책을 함께 확인하는 습관 필요"
+        ],
+        "key_insights": [
+            "저비용/오픈소스 모델이 프론티어 모델 성능을 추격하는 흐름 지속",
+            "할인 프로모션은 한시적일 가능성이 높아 실제 활용 검토 시 기간 확인 필요",
+            "영상에 자막이 없어 세부 스펙(정확한 모델명, 할인 조건, 벤치마크 수치)은 원본 영상 직접 확인 권장"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 저비용 고성능 모델 등장 시 기존 자동화 파이프라인의 API 비용 절감 가능성 검토, ④공부방 — 신규 LLM 트렌드 학습 자료로 활용 가능",
+        "timestamp": "2026-08-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/OxPdQ40l6EM/hqdefault.jpg"
+    },
+    {
         "title": "DeepSeek V4 Flash, 지금 Nous Portal에서 90% 할인 중입니다 🐳",
         "url": "https://www.youtube.com/watch?v=7tFYVxOmDJs",
         "channel": "로치의개발일기",
