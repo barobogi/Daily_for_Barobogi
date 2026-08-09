@@ -1,5 +1,19 @@
 [
     {
+        "title": "The Search Engine Hiding Inside SQLite (Goodbye Elasticsearch)",
+        "url": "https://www.youtube.com/watch?v=SawMbxsvWY4",
+        "channel": "Cloud Codes",
+        "summary": "The Search Engine Hiding Inside SQLite (Goodbye Elasticsearch)",
+        "categories": [],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-08-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/SawMbxsvWY4/hqdefault.jpg"
+    },
+    {
         "title": "Rewrites Are a Trap: Why Facebook Never Rewrote Its PHP",
         "url": "https://www.youtube.com/watch?v=ii7nyGQmQOk",
         "channel": "Cloud Codes",
