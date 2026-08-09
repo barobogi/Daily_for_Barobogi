@@ -1,5 +1,33 @@
 [
     {
+        "title": "Rewrites Are a Trap: Why Facebook Never Rewrote Its PHP",
+        "url": "https://www.youtube.com/watch?v=ii7nyGQmQOk",
+        "channel": "Cloud Codes",
+        "summary": "이 영상은 대규모 레거시 코드베이스를 전면 재작성(rewrite)하는 대신 점진적으로 개선하는 전략의 우수성을 다룹니다. Facebook이 PHP 코드베이스를 완전히 새로 작성하지 않고 HHVM(HipHop Virtual Machine)과 Hack 언어를 통해 기존 코드를 단계적으로 전환·최적화한 사례를 핵심 예시로 듭니다.",
+        "categories": [
+            "소프트웨어 아키텍처",
+            "기술부채",
+            "레거시 시스템",
+            "리팩토링",
+            "엔지니어링 전략"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "전면 재작성은 '2차 시스템 증후군(Second-system syndrome)'을 유발해 프로젝트 실패 위험이 크다는 원칙",
+            "Facebook 사례: PHP를 버리지 않고 HHVM+Hack으로 점진적 마이그레이션하여 성능과 안정성을 동시에 확보",
+            "레거시 코드는 검증된 자산이며, 재작성보다 점진적 개선(strangler pattern류 접근)이 리스크 관리에 유리"
+        ],
+        "key_insights": [
+            "대형 레거시 시스템의 전면 재작성은 오랜 시간·비용이 들고 기존에 검증된 비즈니스 로직을 잃을 위험이 크다",
+            "Facebook은 PHP를 재작성하는 대신 컴파일러/런타임 계층(HHVM)과 점진적 언어 전환(Hack)으로 문제를 해결했다",
+            "성공적인 대규모 시스템 개선은 '전부 교체'가 아니라 '기존 위에서 점진적으로 대체'하는 전략에서 나온다"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 소프트웨어 아키텍처/레거시 시스템 리팩토링 전략 학습 자료로 참고 가능",
+        "timestamp": "2026-08-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ii7nyGQmQOk/hqdefault.jpg"
+    },
+    {
         "title": "10 Self-Hosted AI Tools That Kill Your Monthly Subscriptions",
         "url": "https://www.youtube.com/watch?v=DIbVdatFl6I",
         "channel": "Cloud Codes",
