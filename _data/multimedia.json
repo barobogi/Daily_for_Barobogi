@@ -1,5 +1,26 @@
 [
     {
+        "title": "Buzz Sucks, Actually",
+        "url": "https://www.youtube.com/watch?v=_8Jy7w7cU6s",
+        "channel": "Ethan Nelson",
+        "summary": "제목 'Buzz Sucks, Actually'와 채널명 외에 설명·자막 정보가 전혀 제공되지 않아 실제 영상 내용은 확인할 수 없습니다. 제목상 어떤 대상('Buzz')에 대한 비판적/반박성 의견을 담은 영상으로 추정되나, 구체적 주제(제품/인물/서비스 등)는 불명확합니다.",
+        "categories": [
+            "의견/리뷰(추정)",
+            "정보부족",
+            "확인필요"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [],
+        "key_insights": [
+            "자막과 설명이 없어 내용 기반 분석 불가 — 제목만으로 추정 시 신뢰도 낮음",
+            "조회수 0으로 신규 업로드 영상으로 보이며, 'Buzz'가 무엇을 지칭하는지 추가 확인 필요"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-08-06T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/_8Jy7w7cU6s/hqdefault.jpg"
+    },
+    {
         "title": "How to Build a High Converting Landing Page in Minutes Using Claude Code",
         "url": "https://www.youtube.com/watch?v=gZrBDTnWPZs",
         "channel": "Ethan Nelson",
