@@ -1,5 +1,31 @@
 [
     {
+        "title": "Ex-NASA dev reveals his Agentic Engineering Workflow",
+        "url": "https://www.youtube.com/watch?v=xgkjtF89-44",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej 채널에 게시된 영상으로, NASA 출신 개발자가 자신의 '에이전틱 엔지니어링 워크플로우'를 공개하는 내용으로 추정됩니다. 자막/설명이 제공되지 않아 상세 내용은 제목 기반 추정이며, AI 코딩 에이전트를 활용한 실무 개발 프로세스를 다룰 가능성이 높습니다.",
+        "categories": [
+            "AI 에이전트",
+            "개발 워크플로우",
+            "코딩 자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "NASA 출신 개발자가 실무에서 사용하는 AI 에이전트 기반 개발 워크플로우 소개 (제목 기준 추정)",
+            "David Ondrej 채널은 Claude Code, Cursor 등 에이전틱 코딩 도구 리뷰/워크플로우 콘텐츠를 주로 다룸"
+        ],
+        "learning_related": [
+            "실무자의 AI 에이전트 개발 프로세스 벤치마킹 가능성 — 자막 확보 후 재분석 필요"
+        ],
+        "key_insights": [
+            "자막이 제공되지 않아 정확한 내용 파악 불가 — 제목/채널 성격 기반 추정 분석임을 감안 필요",
+            "채널 특성상 실전 AI 코딩 에이전트 워크플로우(도구 조합, 프롬프트 전략 등)를 다룰 가능성"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 에이전트 개발 워크플로우 벤치마킹 가능성, 자막 확보 후 상세 검토 필요",
+        "timestamp": "2026-08-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/xgkjtF89-44/hqdefault.jpg"
+    },
+    {
         "title": "My double DGX Spark setup",
         "url": "https://www.youtube.com/watch?v=hST4u6lhY5U",
         "channel": "David Ondrej",
