@@ -1,5 +1,31 @@
 [
     {
+        "title": "로치의 바이브 코딩 - 서비스 만들기",
+        "url": "https://www.youtube.com/watch?v=OFDvHVbuVSw",
+        "channel": "로치의개발일기",
+        "summary": "개발 유튜버 '로치'가 AI를 활용한 '바이브 코딩(Vibe Coding)' 방식으로 실제 서비스를 만들어보는 과정을 다루는 영상으로 추정됩니다. 자막과 설명이 제공되지 않아 세부 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "바이브코딩",
+            "AI개발",
+            "서비스제작",
+            "개발브이로그"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "'바이브 코딩'은 AI(Claude Code, Cursor 등)와 대화하며 직관적으로 서비스를 완성하는 개발 방식으로, 만복 워크플로우와 유사한 접근 — 자막 확보 후 재분석 시 구체적 도구/스택 비교 가치 있음"
+        ],
+        "learning_related": [
+            "AI 보조 개발로 아이디어→서비스 배포까지의 실전 사이클을 참고할 수 있는 사례일 가능성"
+        ],
+        "key_insights": [
+            "자막 없음으로 실제 내용 확인 불가 — 제목 기반 추정치이므로 신뢰도 낮음",
+            "'바이브 코딩' 트렌드 영상은 최근 AI 개발 유튜브 콘텐츠에서 자주 등장하는 주제"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 기반 서비스 제작(바이브 코딩) 워크플로우가 3AI 파이프라인 자동화 아이디어에 참고될 수 있음",
+        "timestamp": "2026-08-01T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/OFDvHVbuVSw/hqdefault.jpg"
+    },
+    {
         "title": "딥시크 오푸스급 새로운 모델 90% 할인 중",
         "url": "https://www.youtube.com/watch?v=OxPdQ40l6EM",
         "channel": "로치의개발일기",
