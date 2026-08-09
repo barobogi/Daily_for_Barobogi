@@ -1,5 +1,31 @@
 [
     {
+        "title": "Never Hit AI Token Limits Again With This Easy One-Endpoint Trick",
+        "url": "https://www.youtube.com/watch?v=aCZPC1YNrZ8",
+        "channel": "The Next New Thing",
+        "summary": "자막이 제공되지 않아 정확한 내용 확인은 제한적이나, 제목상 'AI 토큰 한도(Token Limits)에 걸리지 않는 원엔드포인트(One-Endpoint) 트릭'을 다루는 영상으로 추정됩니다. 여러 AI 모델/API 요청을 하나의 엔드포인트로 통합 라우팅하여 토큰 제한이나 컨텍스트 한도를 우회하는 방법을 소개하는 것으로 보입니다.",
+        "categories": [
+            "AI 자동화",
+            "API 관리",
+            "개발 팁"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 토큰/컨텍스트 한도 문제를 단일 엔드포인트 라우팅으로 우회하는 방식으로 추정됨 (자막 부재로 상세 검증 필요)",
+            "다중 모델/키를 하나의 API 게이트웨이로 통합하는 구조일 가능성 (예: LiteLLM, OpenRouter 유사 패턴)"
+        ],
+        "learning_related": [
+            "자막이 없어 구체적 구현 방법(코드/설정)은 확인 불가 — 원문 영상 직접 시청 후 재분석 권장"
+        ],
+        "key_insights": [
+            "제목만으로는 구체적 기술 스택 확인 불가, 자막/설명 없음으로 분석 신뢰도 낮음",
+            "만약 API 게이트웨이/라우팅 트릭이라면 API 회피·비용 절감 구조와 관련될 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI API 토큰 한도 우회 트릭이 자동화 파이프라인 안정성에 참고될 수 있음 (자막 미확보로 확정 아님)",
+        "timestamp": "2026-08-05T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/aCZPC1YNrZ8/hqdefault.jpg"
+    },
+    {
         "title": "This AI Agent Built and Deployed an App From One Prompt",
         "url": "https://www.youtube.com/watch?v=Q7yjn6067PQ",
         "channel": "The Next New Thing",
