@@ -1,5 +1,35 @@
 [
     {
+        "title": "AI Bubble: Big Tech is Hiding $1.65 Trillion in Debt",
+        "url": "https://www.youtube.com/watch?v=63bG4C3jfmE",
+        "channel": "Cloud Codes",
+        "summary": "빅테크 기업들이 AI 인프라(데이터센터, GPU 등) 투자를 위해 특수목적법인(SPV)이나 오프밸런스시트 금융 구조를 활용해 실제 약 1.65조 달러 규모의 부채를 재무제표에서 숨기고 있다는 의혹을 제기하는 영상으로 추정됩니다. AI 붐을 뒷받침하는 자금 조달 방식의 불투명성과 이것이 잠재적 'AI 버블' 붕괴 시 시스템 리스크로 이어질 수 있다는 경고가 핵심 주제로 보입니다.",
+        "categories": [
+            "AI버블",
+            "빅테크",
+            "부채/재무",
+            "주식시장",
+            "매크로경제"
+        ],
+        "stock_related": [
+            "빅테크(마이크로소프트, 메타, 구글, 아마존 등)의 오프밸런스시트 부채 규모가 실제 리스크보다 저평가되어 있을 가능성 — 관련주 밸류에이션 재검토 필요",
+            "AI 인프라 투자가 부채 기반(SPV, 리스, 채권 발행)으로 이루어지고 있다면, 금리 상승기 또는 AI 수익화 지연 시 신용 리스크 확대 가능",
+            "AI 버블 논쟁은 반도체(엔비디아 등)·클라우드·데이터센터 관련주 전반의 조정 리스크로 확산될 수 있음"
+        ],
+        "ai_related": [
+            "AI 데이터센터/GPU 인프라 구축 비용이 막대해 전통적 자기자본 대신 부채·리스·합작 구조로 조달되는 트렌드",
+            "AI 산업 성장의 자금 조달 방식 자체가 투명성 부족 문제를 안고 있다는 지적"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "AI 인프라 투자의 실제 부채 규모(1.65조 달러 추정)가 공식 재무제표에 온전히 반영되지 않을 수 있다는 의혹",
+            "이는 AI 버블 논쟁에서 '펀더멘털 대비 과열' 주장을 뒷받침하는 새로운 각도(회계·부채 구조)로 볼 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑦재테크 — 빅테크 부채/AI 버블 리스크는 투자 판단(관련주 비중 조절)에 직접 참고할 인사이트",
+        "timestamp": "2026-08-09T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/63bG4C3jfmE/hqdefault.jpg"
+    },
+    {
         "title": "A 9B Model Just Outperformed 397B One at Repairing Agents (Harness R1)",
         "url": "https://www.youtube.com/watch?v=mYx3r8YA-HY",
         "channel": "Cloud Codes",
