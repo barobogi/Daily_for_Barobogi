@@ -1,5 +1,33 @@
 [
     {
+        "title": "Free: turn books into skills & the top 10 GitHub repos",
+        "url": "https://www.youtube.com/watch?v=HQqX4rF1nDM",
+        "channel": "The Next New Thing",
+        "summary": "책 내용을 실전 스킬로 전환하는 방법과, 개발자/AI 활용에 유용한 GitHub 저장소 상위 10개를 소개하는 영상으로 추정됩니다. 자막이 제공되지 않아 세부 내용은 제목과 채널 성격(The Next New Thing, AI/기술 트렌드 채널) 기반 추정입니다.",
+        "categories": [
+            "GitHub",
+            "생산성",
+            "AI도구",
+            "학습법"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 활용 GitHub 저장소 추천 콘텐츠 — 자동화/에이전트 관련 신규 도구 발굴 가능성"
+        ],
+        "learning_related": [
+            "'책→스킬 전환' 프레임워크 — 지식관리(뿌리③) 및 공부방(뿌리④) 운영에 참고 가능",
+            "GitHub 상위 리포 큐레이션 — 신규 오픈소스 도구 스카우팅 소스로 활용 가능"
+        ],
+        "key_insights": [
+            "자막이 없어 구체적 내용 확인 불가 — 직접 시청 후 재분석 필요",
+            "제목상 'Free' 강조 — 무료 도구/자료 위주 콘텐츠로 추정",
+            "채널 특성상 최신 AI/개발 트렌드 큐레이션형 콘텐츠일 가능성 높음"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — 책→스킬 전환 방법론은 개인 지식체계화에 참고 가능, ⑤자동화 — GitHub 저장소 발굴이 자동화 도구 스카우팅에 도움될 수 있음",
+        "timestamp": "2026-08-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/HQqX4rF1nDM/hqdefault.jpg"
+    },
+    {
         "title": "This Tool Shows You How Top Apps Are Designed",
         "url": "https://www.youtube.com/watch?v=EqFR6DbASQc",
         "channel": "The Next New Thing",
