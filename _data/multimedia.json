@@ -1,5 +1,30 @@
 [
     {
+        "title": "GUIs are not dead",
+        "url": "https://www.youtube.com/watch?v=08lTuvYITxQ",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 'AI 발전으로 GUI(그래픽 사용자 인터페이스)가 사라질 것'이라는 최근 업계 담론에 반박하며, 에이전트/CLI 중심 워크플로우가 확산되는 와중에도 GUI가 왜 여전히 필요하고 유효한지를 주장하는 영상으로 추정됩니다. 자막이 제공되지 않아 세부 논거는 제목·채널 맥락 기반 추정입니다.",
+        "categories": [
+            "AI 트렌드",
+            "UX/UI",
+            "개발자 의견"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "'AI 에이전트가 GUI를 대체한다'는 업계 내러티브에 대한 반박 관점 — 자동화 설계 시 CLI/에이전트 중심으로만 몰아가는 게 항상 정답은 아닐 수 있음을 시사"
+        ],
+        "learning_related": [
+            "David Ondrej 채널은 AI 에이전트/코딩 자동화 관련 실전 인사이트를 다수 다루므로, 자막 확보 시 재분석 가치 있음"
+        ],
+        "key_insights": [
+            "AI 자동화(CLI/에이전트) 확산 속에서도 시각적 인터페이스의 존재 이유를 재확인하는 관점 제시 추정",
+            "자막 부재로 정확한 논거·사례는 확인 불가 — 자막 확보 후 재요약 권장"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — GUI vs 에이전트/CLI 워크플로우 설계 판단에 참고 가능",
+        "timestamp": "2026-08-06T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/08lTuvYITxQ/hqdefault.jpg"
+    },
+    {
         "title": "Ex-NASA dev reveals his Agentic Engineering Workflow",
         "url": "https://www.youtube.com/watch?v=xgkjtF89-44",
         "channel": "David Ondrej",
