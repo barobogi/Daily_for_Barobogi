@@ -1,5 +1,33 @@
 [
     {
+        "title": "GPT·Claude와 똑같이 만드는데 가격은 1/36? GOD성비 DeepSeek V4 Flash",
+        "url": "https://www.youtube.com/watch?v=JL8pRQzlsSU",
+        "channel": "techyoo",
+        "summary": "GPT, 클로드 오퍼스 4.8, 딥시크 V4 플래시로 동일한 코인 시세 웹사이트(실시간 차트, 체결 내역 표시)를 만들어 코딩 성능을 비교한 영상입니다. 세 모델 모두 기능 구현 품질은 비슷했지만, 딥시크 V4 플래시는 입력 $0.14/출력 $0.28로 경쟁 모델 대비 입력 약 30배, 출력 약 100배 저렴해 '갓성비' 모델로 평가됩니다.",
+        "categories": [
+            "AI 모델 비교",
+            "LLM 가격",
+            "코딩 벤치마크",
+            "DeepSeek"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "DeepSeek V4 Flash가 GPT/Claude Opus 4.8과 동등한 수준의 코딩 결과물(실시간 차트, 코인 시세 사이트)을 생성함",
+            "가격 비교: DeepSeek V4 Flash 입력 $0.14 / 출력 $0.28 — 경쟁 모델 대비 입력 30배, 출력 100배 저렴",
+            "성능 저하 없이 비용만 절감되는 '갓성비' 모델로 실무 활용 가능성 제시"
+        ],
+        "learning_related": [
+            "동일 프롬프트로 여러 LLM에 코딩 태스크를 시켜 결과물과 비용을 비교하는 벤치마크 방법론"
+        ],
+        "key_insights": [
+            "코딩 품질 차이가 크지 않다면 비용이 저렴한 모델(DeepSeek V4 Flash)이 실무 대체재로 유효할 수 있음",
+            "API 비용 절감 관점에서 딥시크 계열 모델을 자동화 파이프라인에 검토해볼 가치가 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — API 회피/저비용 구조 우선 원칙과 연결, DeepSeek V4 Flash를 유료 API 대안으로 검토 가능, ④공부방 — LLM 코딩 성능 비교 벤치마크 학습 자료로 활용 가능",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/JL8pRQzlsSU/hqdefault.jpg"
+    },
+    {
         "title": "Browsers Are Being Rebuilt for AI Agents (Chromium Is the Casualty)",
         "url": "https://www.youtube.com/watch?v=j4Ef__g5FBc",
         "channel": "Cloud Codes",
