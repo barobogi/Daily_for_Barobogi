@@ -1,5 +1,33 @@
 [
     {
+        "title": "Now shockingly good: ChatGPT (aka Codex)",
+        "url": "https://www.youtube.com/watch?v=jEi9IsMwFBk",
+        "channel": "The Next New Thing",
+        "summary": "The Next New Thing 채널에서 ChatGPT(Codex 관련 기능/모델)의 최근 업데이트가 예상보다 훨씬 뛰어난 성능을 보인다고 소개하는 영상으로 추정됩니다. 제목만으로 보아 코딩 어시스턴트로서의 ChatGPT/Codex 성능 개선을 다루는 리뷰/체험기 성격의 콘텐츠로 보입니다. 자막과 설명이 제공되지 않아 구체적인 내용은 확인이 어렵습니다.",
+        "categories": [
+            "AI",
+            "ChatGPT",
+            "Codex",
+            "코딩어시스턴트",
+            "리뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "ChatGPT(Codex)의 코딩 성능이 최근 업데이트로 크게 향상되었다는 평가 - 사실 여부 및 세부 벤치마크는 자막 부재로 확인 불가",
+            "경쟁 AI 코딩 도구(Claude Code 등) 대비 포지셔닝 파악에 참고 가능"
+        ],
+        "learning_related": [
+            "OpenAI Codex/ChatGPT의 코딩 능력 변화 트렌드 모니터링 필요"
+        ],
+        "key_insights": [
+            "자막·설명이 없어 제목 기반 추정 요약만 가능함 - 정확한 인사이트 도출을 위해서는 원본 영상 확인 필요",
+            "조회수 0으로 최신 업로드(2026-08-10) 영상으로, 아직 검증되지 않은 초기 반응일 가능성"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 코딩 도구 트렌드 학습 자료로 참고 가능, ⑤자동화 — Claude Code 등 자체 파이프라인과 경쟁 도구 비교 참고",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/jEi9IsMwFBk/hqdefault.jpg"
+    },
+    {
         "title": "Claude Is Secretly Going To Tell On You",
         "url": "https://www.youtube.com/watch?v=q_UcXqyGx74",
         "channel": "The Next New Thing",
