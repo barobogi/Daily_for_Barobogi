@@ -1,5 +1,36 @@
 [
     {
+        "title": "Kafka vs NATS : Why an 18MB Binary Beats an $11B Stack",
+        "url": "https://www.youtube.com/watch?v=chyt5Az6ZaU",
+        "channel": "Cloud Codes",
+        "summary": "NATS(18MB 단일 바이너리)와 Apache Kafka(141MB, 108개 JAR + 별도 Java 런타임 필요)를 실제로 다운로드해 용량과 구성 요소를 직접 비교한 영상. IBM이 Confluent(Kafka 기반 회사)를 110억 달러에 인수한 것을 언급하며, Kafka가 제공하는 나머지 120MB가 실제로 필요한 내구성인지 아니면 2011년 레거시 유산인지를 짚어본다.",
+        "categories": [
+            "메시징시스템",
+            "인프라비교",
+            "오픈소스",
+            "Kafka",
+            "NATS"
+        ],
+        "stock_related": [
+            "IBM이 2026년 3월 Confluent(Kafka 기반 상용화 기업)를 110억 달러에 인수 완료 — 메시징/데이터 인프라 시장 M&A 동향 참고 지표"
+        ],
+        "ai_related": [],
+        "learning_related": [
+            "NATS 2.14.4: 6.9MB 압축 아카이브, 단일 18.1MB 실행파일에 브로커+영속성+KV스토어+오브젝트스토어+MQTT/websocket 게이트웨이 모두 내장, 별도 런타임 불필요",
+            "Kafka 4.3.1: 141MB, libs 디렉터리에 108개 JAR 파일(최대는 RocksDB 72.7MB), 79개 셸스크립트+16개 설정파일, Java 런타임 별도 설치 필요(약 49.7MB 추가)",
+            "프로덕션 구성 시 Kafka는 최소 3브로커+3 KRaft 컨트롤러(메타데이터 쿼럼) 필요 — 단일 브로커는 데모 수준에 불과",
+            "NATS는 2010년 10월 한 엔지니어가 주말 프로젝트로 시작, 15년 뒤 초당 수백만 메시지를 처리하는 수준으로 성장"
+        ],
+        "key_insights": [
+            "바이너리/의존성 크기 차이(18MB vs 141MB+런타임)는 단순 용량 문제가 아니라 아키텍처 철학의 차이 — NATS는 '올인원 경량', Kafka는 '기능별 모듈+생태계' 방식",
+            "Kafka의 무게가 불필요한 레거시(2011년 JVM 생태계 관성)인지, 실제로 필요한 내구성/스트림 처리 기능(RocksDB 기반 Kafka Streams 등)인지는 사용 사례에 따라 다름",
+            "IBM의 Confluent 110억 달러 인수는 Kafka가 여전히 업계 표준 메시징 인프라로 자리잡고 있음을 보여주는 신호"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 메시징/브로커 시스템 아키텍처 비교, 향후 자동화 파이프라인의 메시지 큐 선택 시 참고 가능",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/chyt5Az6ZaU/hqdefault.jpg"
+    },
+    {
         "title": "Context as a Variable: The Fix for Context Rot (RLMs)",
         "url": "https://www.youtube.com/watch?v=k2rkLm1eA9k",
         "channel": "Cloud Codes",
