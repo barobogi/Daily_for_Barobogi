@@ -1,5 +1,32 @@
 [
     {
+        "title": "You Can Now Program Real Physical Robots Using Simple AI Prompts!",
+        "url": "https://www.youtube.com/watch?v=zl3udVsuv_M",
+        "channel": "The Next New Thing",
+        "summary": "실제 물리적 로봇을 자연어(AI 프롬프트)로 간단히 프로그래밍할 수 있게 됐다는 내용을 다루는 영상으로, 복잡한 로보틱스 코딩 없이 LLM 기반 명령으로 로봇 동작을 제어하는 최신 기술 트렌드를 소개하는 것으로 보입니다. 자막이 제공되지 않아 세부 기술 스택이나 데모 내용은 확인하지 못했습니다.",
+        "categories": [
+            "로보틱스",
+            "AI 자동화",
+            "LLM 응용"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "자연어 프롬프트로 물리 로봇 제어 — LLM이 로봇 API/모션 플래닝 계층과 결합되는 흐름의 사례",
+            "코드 작성 없이 자연어만으로 하드웨어 제어가 가능해지는 흐름은 향후 자동화 프로젝트 설계에 참고할 만함"
+        ],
+        "learning_related": [
+            "LLM-to-로봇 제어 파이프라인(자연어 → 액션 시퀀스 변환) 구조를 확인해볼 가치 있음",
+            "자막 없이 제목/설명만으로는 구체적 기술(어떤 모델·어떤 로봇 플랫폼인지) 확인 불가 — 추가 조사 필요"
+        ],
+        "key_insights": [
+            "로보틱스 프로그래밍의 진입장벽이 낮아지는 방향으로 AI가 활용되고 있음",
+            "자막/설명이 없어 구체적 정보(사용 모델, 로봇 종류, 실제 데모 완성도) 확인이 제한적이므로 원문 시청 후 재분석 권장"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 자연어 기반 로봇 제어는 향후 물리적 작업 자동화 아이디어에 참고 가능",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/zl3udVsuv_M/hqdefault.jpg"
+    },
+    {
         "title": "Now shockingly good: ChatGPT (aka Codex)",
         "url": "https://www.youtube.com/watch?v=jEi9IsMwFBk",
         "channel": "The Next New Thing",
