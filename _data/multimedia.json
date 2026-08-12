@@ -1,5 +1,35 @@
 [
     {
+        "title": "Why Technical AI Skills Won't Make You Money (And What Will)",
+        "url": "https://www.youtube.com/watch?v=KuK8PtRID6g",
+        "channel": "Ethan Nelson",
+        "summary": "기술적 AI 스킬(코딩, MCP 등)은 돈을 버는 병목이 아니며, 클라이언트는 코드나 아키텍처가 아니라 '신뢰'와 '결과물 전달 여부'에만 관심이 있다는 내용. 진짜 병목은 아웃리치와 수요 창출이며, CTO 혼자서는 회사를 만들 수 없듯 기술만으로는 비즈니스가 성립하지 않는다는 메시지를 전달한다.",
+        "categories": [
+            "AI 비즈니스",
+            "프리랜싱/컨설팅",
+            "커리어 조언",
+            "마케팅/세일즈"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 기술 스킬(cloud code, MCP 등)은 무한 복제 가능해서 그 자체로는 경쟁우위(moat)가 되지 않음",
+            "클라이언트는 기술 스택이 아니라 신뢰와 결과물 전달 여부만 신경씀 — MCP/DB 설계 설명은 오히려 역효과",
+            "비즈니스 오너는 'agentic RAG 파이프라인'을 원하는 게 아니라 티켓 감소, 매출 파이프라인 증가 같은 구체적 성과를 원함"
+        ],
+        "learning_related": [
+            "기술 스킬 학습보다 아웃리치·세일즈·수요 창출 능력이 AI로 돈 버는 실제 병목",
+            "CTO 혼자 회사를 만들 수 없다는 비유 — 기술과 비즈니스(마케팅/세일즈) 스킬의 균형 필요"
+        ],
+        "key_insights": [
+            "기술적 깊이보다 신뢰 구축과 니즈 파악이 클라이언트 확보의 핵심",
+            "만들기(building)는 쉬운 부분, 수요 창출(demand generation)이 진짜 어려운 부분",
+            "AI 프로젝트도 결국 비즈니스 스킬 게임 — 시장이 원하는 구체적 아웃컴에 초점 맞춰야 함"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 자동화 스킬을 실제 수익화하려면 기술보다 영업/신뢰 구축이 우선이라는 관점, 향후 특허/프로젝트 영업 전략에 참고 가능",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/KuK8PtRID6g/hqdefault.jpg"
+    },
+    {
         "title": "I Sold AI for 692 Days: What I Wish I Knew Day 1",
         "url": "https://www.youtube.com/watch?v=zmsKopjyV4I",
         "channel": "Ethan Nelson",
