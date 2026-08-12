@@ -1,5 +1,38 @@
 [
     {
+        "title": "Ex-Uber dev explains his Multi-Agent Workflow",
+        "url": "https://www.youtube.com/watch?v=utb7zYbK10c",
+        "channel": "David Ondrej",
+        "summary": "Ex-Uber 개발자 Flo와 David Ondrej가 AI 에이전트 시대의 협업 방식 변화를 논의합니다. 기존 소프트웨어는 인간 전용으로 설계되어 에이전트에 최적화되어 있지 않으며, AI가 '새로운 팀원'으로서 인간과 동일한 방식으로 협업해야 한다는 전환이 일어나고 있다고 주장합니다. 현재는 각자 개인 컴퓨터에서 Claude Code 등 자기만의 에이전트를 돌리고 GitHub repo나 Slack으로 산출물을 주고받는 비효율적 구조라고 지적합니다.",
+        "categories": [
+            "AI 에이전트",
+            "멀티에이전트 워크플로우",
+            "미래 소프트웨어",
+            "협업 도구",
+            "인터뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 채택이 이제 기술이 아니라 조직의 '결정' 문제라는 관점 — 미래형 비즈니스 vs 과거형 비즈니스 중 선택해야 한다는 프레이밍",
+            "2025~2026을 '에이전트가 장시간 과업(long time horizon tasks)을 실제로 해내기 시작한 시기'로 규정",
+            "현재 협업 방식은 이메일로 문서 주고받던 시절과 유사 — Google Docs처럼 여러 명이 같은 산출물(artifact)을 실시간 공유하는 멀티플레이어 AI 협업 도구로 진화 중이라는 비유",
+            "기존 소프트웨어는 전부 '에이전트 이전(pre-agent)' 시대에 인간 전용으로 설계됨 → 에이전트에게는 구조적으로 비효율적이라는 지적",
+            "향후 소프트웨어 사용의 99%가 에이전트를 통해 이루어질 것이라는 전망(개인 에이전트가 사용자 대신 도구를 조작)"
+        ],
+        "learning_related": [
+            "현재 팀 협업에서 MD/HTML 파일을 Slack으로 주고받는 방식의 한계 — GitHub repo도 '차선책'일 뿐 최적 솔루션은 아님",
+            "AI를 '새로운 팀원'으로 취급하고 인간 동료와 동일한 협업 프로토콜(공유 아티팩트, 실시간 협업)에 통합해야 한다는 설계 원칙"
+        ],
+        "key_insights": [
+            "AI 도구 채택의 병목은 기술이 아니라 조직/개인의 의지이며, 이는 곧 생존을 가르는 전략적 선택이 될 것",
+            "협업 패러다임이 '개인별 로컬 에이전트 + 파일 교환'에서 '공유 아티팩트 기반 멀티플레이어 AI 협업'으로 이동 중",
+            "AGI 이후 세계에 대한 정확한 예측은 불가능하지만, 기존 회사 운영 방식이 근본적으로 재구성될 것은 확실하다는 전제"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 3AI(만복/코니/안티) 협업 구조가 영상에서 언급된 '멀티플레이어 AI 협업/공유 아티팩트' 문제와 직접 관련, AI_hub 대시보드 개선 아이디어로 참고 가능, ③지식관리 — GitHub repo 기반 산출물 공유의 한계 논의는 현재 project_locks.json/AI_hub 메시지 체계 개선에 참고할 만함",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/utb7zYbK10c/hqdefault.jpg"
+    },
+    {
         "title": "Why Technical AI Skills Won't Make You Money (And What Will)",
         "url": "https://www.youtube.com/watch?v=KuK8PtRID6g",
         "channel": "Ethan Nelson",
