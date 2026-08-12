@@ -1,5 +1,28 @@
 [
     {
+        "title": "This AI Schedules Better Than an Executive Assistant",
+        "url": "https://www.youtube.com/watch?v=v6ggB5v9YMs",
+        "channel": "The Next New Thing",
+        "summary": "제목상 AI 기반 일정 관리 도구가 사람 비서(Executive Assistant)보다 뛰어난 스케줄링 능력을 보여준다는 내용으로 추정됩니다. 자막과 설명이 제공되지 않아 세부 기능이나 구체적 시연 내용은 확인할 수 없습니다.",
+        "categories": [
+            "AI 비서",
+            "생산성 도구",
+            "일정관리 자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 스케줄링 에이전트가 인간 비서 업무를 대체/보완하는 사례로 추정 (자막 없어 확인 제한적)"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "자막·설명 미제공으로 실제 기능·데모 내용 확인 불가 — 제목 기반 추정만 가능",
+            "AI 일정관리 비서 트렌드는 지속 확인해볼 가치 있음"
+        ],
+        "memo": "📋 뿌리체계: ②일정 — AI 스케줄링 비서 관련 도구일 가능성, 후속 리서치 필요, ⑤자동화 — 반복 일정관리 업무 자동화 사례 후보",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/v6ggB5v9YMs/hqdefault.jpg"
+    },
+    {
         "title": "You Can Now Program Real Physical Robots Using Simple AI Prompts!",
         "url": "https://www.youtube.com/watch?v=zl3udVsuv_M",
         "channel": "The Next New Thing",
