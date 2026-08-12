@@ -1,5 +1,36 @@
 [
     {
+        "title": "Browsers Are Being Rebuilt for AI Agents (Chromium Is the Casualty)",
+        "url": "https://www.youtube.com/watch?v=j4Ef__g5FBc",
+        "channel": "Cloud Codes",
+        "summary": "Cloudflare가 Chromium 없이 Rust로 처음부터 새로 작성한 브라우저 엔진 'KiteSurf'를 공개했다. 사람이 아닌 AI 에이전트만을 위한 브라우저로, 스크린샷/HTML 추출 작업에서 Chromium 대비 CPU 3~4배, 메모리 최대 7배 효율적이다. 같은 주에 Vercel Labs도 CSS 셀렉터 없이 동작하는 에이전트용 브라우저 자동화 툴로 4만 스타를 받으며, '브라우저는 사람이 보는 것'이라는 전제가 깨지고 있음을 보여준다.",
+        "categories": [
+            "AI 에이전트",
+            "브라우저 엔진",
+            "인프라",
+            "Rust/WebAssembly",
+            "Cloudflare"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 에이전트 전용 워크로드(스크린샷/HTML 추출)는 사람용 브라우저 기능(탭, 북마크, 서브픽셀 렌더링 등) 대부분이 불필요 — 에이전트 특화 경량 엔진이 비용/성능 면에서 압도적으로 유리",
+            "Cloudflare KiteSurf: Blitz(레이아웃)+Stylo(CSS)+Boa(JS)+Parley(텍스트 셰이핑) 등 기존 오픈소스 컴포넌트를 조합해 12주 만에 완성, V8 isolate 위에서 서버리스로 구동",
+            "Vercel Labs의 브라우저 자동화 툴은 CSS 셀렉터 작성을 없애는 방향으로 에이전트-웹 상호작용 패러다임을 재정의 중"
+        ],
+        "learning_related": [
+            "새 엔진을 밑바닥부터 재작성하지 않고 검증된 오픈소스 모듈(레이아웃/CSS/JS/텍스트 엔진)을 조합해 빠르게 완성하는 아키텍처 전략",
+            "정량적 비교: 스크린샷 380ms vs Chromium 1173ms(약 3배), HTML 추출 229ms vs 877ms(약 4배), 메모리 58MiB vs 271MiB(약 5배), 39MiB vs 274MiB(약 7배)"
+        ],
+        "key_insights": [
+            "AI 에이전트 트래픽이 급증하면서 '사람이 보는 브라우저' 전제로 설계된 Chromium이 에이전트 워크로드엔 과잉 스펙/과잉 비용 구조가 되고 있음",
+            "Cloudflare(엔진 레이어)와 Vercel(자동화/추상화 레이어)이 동시에 같은 문제의 다른 지점을 공격 — 에이전트 전용 웹 인프라가 스택 전반에서 재편되는 초기 신호",
+            "서버리스 환경(V8 isolate)에서 브라우저 엔진을 직접 구동함으로써 브라우저 자동화의 과금 단위(브라우저 시간)를 근본적으로 낮추는 구조 전환"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전트용 경량 브라우저 엔진/자동화 툴은 향후 웹 스크래핑·API 회피 자동화 파이프라인에 참고 가능, ⑥인프라 — 서버리스(V8 isolate) 기반 브라우저 엔진 구동 방식은 3AI 파이프라인의 크롤링/자동화 인프라 설계 시 참고할 만함",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/j4Ef__g5FBc/hqdefault.jpg"
+    },
+    {
         "title": "AI Agent Verification:  Open Source CLI Closing the Loop (TestSprite)",
         "url": "https://www.youtube.com/watch?v=-_F2dCvdWg4",
         "channel": "Cloud Codes",
