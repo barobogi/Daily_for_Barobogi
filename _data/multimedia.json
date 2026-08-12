@@ -1,5 +1,36 @@
 [
     {
+        "title": "This 2.6B Model Runs Agents on Phones (LFM2.5 Explained)",
+        "url": "https://www.youtube.com/watch?v=qIkH_SauxpY",
+        "channel": "Cloud Codes",
+        "summary": "Liquid AI가 2026년 8월 4일 공개한 2.6B 파라미터 모델 LFM2.5가 GPU 없이 스마트폰 CPU에서 초당 30토큰 속도로 도구 호출·에이전트 작업을 수행한다고 주장했으나, 영상은 이 수치들이 전부 Liquid AI 자체 측정치임을 지적하고 독립 테스터들의 실제 벤치마크(예: OnePlus 13에서 17토큰/초)와 비교 검증한다. 핵심은 30개 레이어 중 8개만 어텐션이고 22개는 게이트형 short convolution으로 구성된 하이브리드 아키텍처가 CPU 캐시 미스를 줄여 속도를 낸다는 점.",
+        "categories": [
+            "AI",
+            "온디바이스 AI",
+            "LLM",
+            "에이전트",
+            "벤치마크 검증"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "LFM2.5(2.6B)는 2.5GB 메모리로 GPU 없이 CPU만으로 128K 컨텍스트, 도구 호출, 멀티스텝 에이전트 워크플로우를 지원 — API 서버·계정 없이 완전 로컬 실행 가능",
+            "아키텍처: 30개 레이어 중 8개 어텐션 + 22개 게이트형 short convolution 하이브리드 구조로 CPU에서 캐시 미스를 줄여 속도 확보 (LFM2 기술 리포트, 2025-11 근거)",
+            "벤더 자체 발표 벤치마크(30토큰/초)와 독립 테스터 실측치(OnePlus 13에서 17토큰/초, llama.cpp 8bit M5 Pro에서 90토큰/초) 간 괴리 존재 — 벤더 벤치마크는 검증 없이 그대로 신뢰하면 안 됨"
+        ],
+        "learning_related": [
+            "Attention vs Convolution 트레이드오프: 어텐션은 매 토큰마다 커지는 KV 캐시를 재작성해 CPU 캐시 미스 유발, convolution은 인접 위치만 혼합해 CPU 친화적",
+            "벤치마크 검증 습관: 1차 소스(제조사 발표)만 믿지 말고 BenchLM, Developers Digest 등 독립 트래킹·커뮤니티 실측 데이터를 교차 확인하는 것이 중요"
+        ],
+        "key_insights": [
+            "2.6B급 초소형 모델도 하이브리드(어텐션+컨볼루션) 구조 설계로 GPU 없는 온디바이스 에이전트 실행이 가능해지는 추세 — 향후 로컬 에이전트/자동화 설계 시 참고할 만한 아키텍처 방향",
+            "벤더가 발표한 성능 수치는 '증거'가 아니라 '주장'이며, 독립 재현 테스트가 나오기 전까지는 실사용 판단을 유보해야 함",
+            "온디바이스 소형 모델 + 도구 호출 조합은 서버·API 비용 없이(marginal cost zero) 반복 실행 가능한 구조로, API 회피 자동화 설계에 직접적 시사점 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — API 비용 0원 구조(온디바이스 소형 모델+도구 호출)는 '유료 API 회피 우선' 원칙과 직접 연결, 향후 로컬 에이전트 자동화 설계 시 참고 가능, ④공부방 — 어텐션/컨볼루션 하이브리드 아키텍처와 벤치마크 검증 방법론은 AI 기술 학습 포인트로 기록할 가치 있음",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/qIkH_SauxpY/hqdefault.jpg"
+    },
+    {
         "title": "Kafka vs NATS : Why an 18MB Binary Beats an $11B Stack",
         "url": "https://www.youtube.com/watch?v=chyt5Az6ZaU",
         "channel": "Cloud Codes",
