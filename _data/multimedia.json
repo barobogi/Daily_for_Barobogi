@@ -1,5 +1,36 @@
 [
     {
+        "title": "AI Agent Verification:  Open Source CLI Closing the Loop (TestSprite)",
+        "url": "https://www.youtube.com/watch?v=-_F2dCvdWg4",
+        "channel": "Cloud Codes",
+        "summary": "AI 에이전트 개발 루프(plan-edit-run-verify-fix) 중 유일하게 병목인 'verify' 단계를 자동화하는 오픈소스 CLI TestSprite를 소개하는 영상입니다. 실제 앱에 대해 실제 세션(클릭, 입력)을 실행하고, 실패 시 실패 지점·스크린샷·원인·수정 제안이 담긴 'failure bundle'을 에이전트에게 넘겨 무인으로 패치·재실행하게 합니다.",
+        "categories": [
+            "AI 에이전트",
+            "테스트 자동화",
+            "오픈소스 CLI",
+            "개발 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "TestSprite: Apache 2.0 오픈소스 CLI, 실제 앱 대상으로 실제 사용자 흐름을 실행해 검증",
+            "실패 시 단순 pass/fail이 아니라 실패 단계+스크린샷+근본원인+수정제안을 포함한 'failure bundle'을 에이전트에 전달 → 에이전트가 스스로 패치 후 재실행",
+            "모든 실행 기록이 영구 저장되어 컨텍스트 윈도우가 초기화돼도 '지난 화요일에 뭐가 깨졌는지' 참조 가능한 영속 메모리 역할",
+            "야간에 작업을 큐에 넣어두면 plan-edit-run-verify 루프가 사람 개입 없이 스스로 도는 무인 파이프라인 구조"
+        ],
+        "learning_related": [
+            "AI 에이전트 루프의 5블록(plan, edit, run, verify, fix) 중 verify만 아직 미해결 — '거부(no)할 수 있는' 유일한 블록이라는 프레이밍",
+            "Coder Cup이라는 공개 레퍼런스 프로젝트에서 실제 실행 로그와 failure bundle을 설치 전에 미리 확인 가능"
+        ],
+        "key_insights": [
+            "에이전트 코딩의 병목은 '생성'이 아니라 '검증'이며, 검증을 자동화해야 완전 무인 루프가 완성된다는 메시지",
+            "Mock이 아닌 라이브 앱 대상 실제 세션 테스트 + 구조화된 실패 정보 전달이 자동 수정 성공률을 높이는 핵심",
+            "실행 이력의 영속 저장이 에이전트의 짧은 컨텍스트 한계를 보완하는 실질적 장기 메모리로 작동"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전트 개발 루프의 verify/fix 단계를 무인 자동화하는 오픈소스 CLI로, 만복/안티의 자율 파이프라인 QA(verify_video.py, qa_s00_frames.py) 흐름과 개념적으로 유사해 참고 가치 있음, ④공부방 — AI 에이전트 검증 패턴(failure bundle, 영속 실행 로그) 학습 소재로 활용 가능",
+        "timestamp": "2026-08-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/-_F2dCvdWg4/hqdefault.jpg"
+    },
+    {
         "title": "This 2.6B Model Runs Agents on Phones (LFM2.5 Explained)",
         "url": "https://www.youtube.com/watch?v=qIkH_SauxpY",
         "channel": "Cloud Codes",
