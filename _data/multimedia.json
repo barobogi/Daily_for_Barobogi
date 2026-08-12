@@ -1,5 +1,35 @@
 [
     {
+        "title": "I Sold AI for 692 Days: What I Wish I Knew Day 1",
+        "url": "https://www.youtube.com/watch?v=zmsKopjyV4I",
+        "channel": "Ethan Nelson",
+        "summary": "AI 자동화 서비스를 692일간 판매하며 23만 달러를 벌어들인 크리에이터가 초기에 겪은 실수와 교훈을 공유하는 영상입니다. 바이브 코딩은 돈이 되지 않으며, 실제 비즈니스 오너의 문제를 결과(아웃컴) 중심으로 해결해야 한다는 점, 시간당 요금이 아닌 프로젝트/가치 기반 요금제로 포지셔닝해야 한다는 점을 강조합니다.",
+        "categories": [
+            "AI 자동화",
+            "비즈니스",
+            "프리랜싱",
+            "가격전략"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "바이브 코딩(vibe coding)만으로는 수익화가 어렵다 — 소프트웨어 제작 비용이 급격히 저렴해지면서 차별화 요소(moat)가 되지 못함",
+            "AI 자동화 판매 시 실제 비즈니스 오너와 직접 소통(Zoom 콜 등)하며 진짜 문제를 파악하는 과정이 필수",
+            "AI 시스템을 '개발자의 작업 시간'이 아닌 '비즈니스 성과(KPI)'로 포지셔닝해야 함"
+        ],
+        "learning_related": [
+            "시간당 과금(예: $50/hr) 대신 프로젝트 단위 고정가(예: $4K 셋업비) 청구 전략",
+            "시간당 과금은 저가 경쟁(race to the bottom)으로 이어져 마진이 사라짐"
+        ],
+        "key_insights": [
+            "AI/자동화로 돈을 버는 핵심은 코딩 실력이 아니라 실제 비즈니스 문제 해결과 아웃컴 중심의 포지셔닝",
+            "시간당 요금 대신 가치/프로젝트 기반 가격 책정이 지속 가능한 수익 모델",
+            "고객이 자신을 '개발자'가 아닌 '전략적 문제 해결사'로 인식하게 만드는 것이 중요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 자동화 서비스 판매/가격전략 관련 인사이트, 향후 관련 프로젝트 기획 시 참고 가능, ⑦재테크 — 프로젝트 기반 가격 책정 전략은 수익화 모델 설계에 참고 가능",
+        "timestamp": "2026-08-11T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/zmsKopjyV4I/hqdefault.jpg"
+    },
+    {
         "title": "GPT·Claude와 똑같이 만드는데 가격은 1/36? GOD성비 DeepSeek V4 Flash",
         "url": "https://www.youtube.com/watch?v=JL8pRQzlsSU",
         "channel": "techyoo",
