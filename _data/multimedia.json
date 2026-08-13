@@ -1,5 +1,36 @@
 [
     {
+        "title": "Cloud Is a Trap: How Dropbox Left AWS and Saved $75M",
+        "url": "https://www.youtube.com/watch?v=m5NLYxscKio",
+        "channel": "Cloud Codes",
+        "summary": "Dropbox가 Amazon S3에서 자체 개발한 스토리지 시스템 'Magic Pocket'으로 전환하며 SEC 공시 기준 7460만 달러를 절감한 사례를 다룬 영상입니다. 소수 정예 엔지니어팀이 6개월 만에 엑사바이트급 시스템을 구축했으며, Go와 Rust를 활용한 아키텍처(블록 해시 기반 저장, 이레이저 코딩, 커스텀 하드웨어 'Diskotech')를 상세히 설명합니다.",
+        "categories": [
+            "클라우드 인프라",
+            "스토리지 아키텍처",
+            "비용 최적화",
+            "빅테크 사례연구",
+            "Rust/Go"
+        ],
+        "stock_related": [
+            "Dropbox가 AWS 의존을 줄이고 자체 인프라(Magic Pocket)로 전환해 비용을 절감한 사례 — 클라우드 비용 구조가 기업 마진에 미치는 영향을 보여주는 투자 분석 포인트로 활용 가능"
+        ],
+        "ai_related": [],
+        "learning_related": [
+            "Magic Pocket 아키텍처: 파일을 최대 4MB 암호화 블록으로 쪼개 해시로 식별, 버킷→볼륨→셀(약 50PB) 구조로 확장",
+            "핫 데이터는 복제, 콜드 데이터는 이레이저 코딩(6+3 패리티)으로 저장 비용 절감",
+            "메타데이터 인덱싱은 샤딩된 MySQL 클러스터 사용, 스토리지 엔진은 Go에서 Rust로 재작성(디스크당 100+ 드라이브 환경의 GC 오버헤드 문제 해결)",
+            "5명 미만의 소규모 팀이 12-9(99.9999999999%) 내구성 목표를 가진 시스템을 구축"
+        ],
+        "key_insights": [
+            "범용 퍼블릭 클라우드는 여러 워크로드에 최적화되어 '최소공통분모'로 수렴하지만, 단일 워크로드(파일 저장)만 하는 기업은 전용 시스템을 만들어 훨씬 효율적으로 최적화할 수 있음",
+            "SEC 공시에서 널리 알려진 절감액(7460만 달러) 뒤에는 자체 데이터센터 캐비닛 임대, 하드웨어 설계, 소규모지만 고도로 전문화된 엔지니어링 조직 구축이라는 숨겨진 비용/노력이 존재",
+            "클라우드 탈출(cloud exit) 전략은 모든 기업에 적용 가능한 것이 아니라, Dropbox처럼 예측 가능하고 단일한 대규모 워크로드를 가진 특정 조건의 기업에게만 유효함"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 자체 스토리지/서버 설계 및 클라우드 비용 최적화 사례로 Global_Define 인프라 원칙(D드라이브 우선, 워처 시스템 등) 참고 시 비교 사례로 활용 가능, ⑦재테크 — 클라우드 비용 구조와 기업 마진 관계 분석에 참고 가능한 빅테크 재무 공시 사례",
+        "timestamp": "2026-08-12T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/m5NLYxscKio/hqdefault.jpg"
+    },
+    {
         "title": "11 Lines of Code Broke the Internet (left-pad)",
         "url": "https://www.youtube.com/watch?v=HT78ca5owcY",
         "channel": "Cloud Codes",
