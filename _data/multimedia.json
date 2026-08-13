@@ -1,5 +1,32 @@
 [
     {
+        "title": "Zuck is finally back...",
+        "url": "https://www.youtube.com/watch?v=HHlWC6uAgkc",
+        "channel": "David Ondrej",
+        "summary": "메타의 마크 저커버그가 최신 최고 모델인 뉴스(Llama) 1.2를 오픈소스로 공개한다고 발표했으며, 이는 최상위 프론티어 모델은 아니지만 Llama 4 시리즈 부진 이후 18개월 만의 오픈소스 복귀로 의미 있는 행보로 평가됨. OpenAI와 Anthropic 등 선두 업체들이 오픈 웨이트 규제를 로비하는 것과 대비되는 경쟁 역학이 논의됨.",
+        "categories": [
+            "AI",
+            "오픈소스",
+            "메타",
+            "LLM",
+            "빅테크"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "메타가 Llama 4 부진 이후 18개월 만에 오픈소스 모델(뉴스 1.2)로 복귀, 프론티어급은 아니지만 자사 최고 오픈소스 모델로 평가됨",
+            "OpenAI·Anthropic 등 선두 AI랩이 오픈 웨이트 규제 강화를 로비하는 것은 regulatory capture(선두주자가 규제를 이용해 격차 유지)로 해석됨"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "메타의 오픈소스 복귀는 오픈소스 AI 생태계 전반에 긍정적 신호",
+            "AI 규제 로비는 기술적 우려보다 경쟁 우위 유지를 위한 전략적 행동일 수 있음",
+            "오픈 웨이트 모델 공개 여부가 빅테크 간 경쟁 구도를 보여주는 지표가 됨"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 오픈소스 LLM 동향 및 빅테크 AI 전략 파악에 참고",
+        "timestamp": "2026-08-12T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/HHlWC6uAgkc/hqdefault.jpg"
+    },
+    {
         "title": "Top 10 Claude Side Hustles That Can Pay A Full-Time Income",
         "url": "https://www.youtube.com/watch?v=tu3s7SsGuUQ",
         "channel": "Ethan Nelson",
