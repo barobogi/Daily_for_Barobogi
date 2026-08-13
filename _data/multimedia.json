@@ -1,5 +1,38 @@
 [
     {
+        "title": "Nemotron 3.5 Lightning Is NOT a Transformer (Mamba + MoE Explained)",
+        "url": "https://www.youtube.com/watch?v=vc8HlG1pQw4",
+        "channel": "Cloud Codes",
+        "summary": "Nvidia가 공개한 Nemotron 3.5 Lightning은 52개 레이어 중 88%(46개)가 Mamba-2와 MoE로 구성되고 단 6개(12%)만 어텐션인 하이브리드 아키텍처로, 순수 트랜스포머가 아니다. 이는 KV 캐시가 컨텍스트 길이에 비례해 무한정 증가하는 어텐션의 메모리 비용 문제(100만 토큰당 52GB)를 해결하기 위한 절충안이며, 5500억 파라미터의 Nemotron 3 Ultra를 증류하고 코딩·툴 사용·멀티턴 작업에 대해 강화학습으로 튜닝해 만들어졌다.",
+        "categories": [
+            "AI모델",
+            "아키텍처",
+            "Nvidia",
+            "Mamba",
+            "MoE",
+            "LLM"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Nvidia Nemotron 3.5 Lightning: 총 312억(공식 반올림 30B) 파라미터 중 토큰당 3.12B만 활성화되는 MoE 구조, H100 1장 또는 4bit 양자화 시 데스크톱에서도 구동 가능",
+            "레이어 구성이 23 Mamba-2 + 23 MoE + 6 Attention(고정 순서)인 하이브리드 아키텍처 — '어텐션이 SSM으로 완전 대체된다'는 3년간의 예측이 빗나가고, 소량의 어텐션 유지가 최적 타협점으로 확인됨",
+            "어텐션의 KV 캐시 비용: 레이어당 토큰당 1KB, 100만 토큰 컨텍스트 시 전체 어텐션이면 52GB 필요 — 이 비용이 하이브리드 설계를 강제한 핵심 동인",
+            "Nemotron 3 Ultra(550B)에서 지식 증류 후 코딩/툴 사용/멀티턴 작업에 RL 튜닝 — 대형 모델을 소형·효율 모델로 압축하는 실전 파이프라인 사례"
+        ],
+        "learning_related": [
+            "Mamba(SSM) 개념: Albert Gu(CMU)와 Tri Dao(Princeton)가 2023년 12월 발표, 제어이론 기반으로 증가하는 KV 리스트 대신 매 토큰마다 갱신되는 고정 크기 상태로 대체",
+            "MoE(Mixture of Experts)와 SSM을 결합해 연산량·메모리 비용과 성능 사이 균형을 잡는 최신 아키텍처 트렌드 학습 자료로 유용"
+        ],
+        "key_insights": [
+            "완전한 어텐션 대체가 아니라 '소수의 어텐션 + 다수의 SSM/MoE' 하이브리드가 현재 최적 실전 타협점으로 자리잡음",
+            "어텐션의 진짜 비용은 연산이 아니라 KV 캐시 메모리(컨텍스트·동시 사용자 수에 비례해 선형 증가)이며, 이것이 아키텍처 설계를 바꾸는 핵심 압력",
+            "대형 모델(550B)을 증류+RL 튜닝으로 소형·저비용 모델(30B, 활성 3.12B)로 압축하는 것이 상용 배포의 실질적 경로"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 최신 LLM 아키텍처(Mamba+MoE 하이브리드) 학습 자료로 활용 가능, ⑤자동화 — 로컬/저비용 구동 가능한 경량 고성능 모델 정보로, API 회피(무료/저비용 구조) 우선 원칙에 맞는 로컬 모델 후보 검토 가치 있음",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/vc8HlG1pQw4/hqdefault.jpg"
+    },
+    {
         "title": "Claude Watermarks Everything You Generate Now",
         "url": "https://www.youtube.com/watch?v=tFJpRNox1GQ",
         "channel": "Cloud Codes",
