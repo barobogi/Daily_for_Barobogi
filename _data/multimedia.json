@@ -1,5 +1,35 @@
 [
     {
+        "title": "Nemotron 3.5 Lightning: Why 46 of 52 Layers Aren't Transformers",
+        "url": "https://www.youtube.com/watch?v=ftzWn5wVm5M",
+        "channel": "Cloud Codes",
+        "summary": "Nvidia가 공개한 Nemotron 3.5 Lightning은 52개 레이어 중 6개만 어텐션이고 나머지 46개는 Mamba 2(SSM) 구조인 하이브리드 모델입니다. 이 구조 덕분에 KV 캐시 부담 없이 100만 토큰 컨텍스트를 처리하면서도, 4배 큰 Nemotron 3 Super와 OpenAI 오픈웨이트 모델보다 높은 Elo 점수(824)를 기록했습니다.",
+        "categories": [
+            "AI모델",
+            "오픈소스",
+            "LLM아키텍처",
+            "Nvidia",
+            "Mamba"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "어텐션(6/52)+Mamba2(46/52) 하이브리드 구조로 KV 캐시 증가 없이 100만 토큰 컨텍스트 처리 가능 — 장문 처리 자동화 파이프라인에 참고할 만한 아키텍처",
+            "3.6B 활성 파라미터로 4배 큰 모델(Nemotron 3 Super) 능가 — 경량 로컬 모델 후보로 검토 가능",
+            "가중치 공개(오픈웨이트) — 로컬 구동 가능성 있어 API 회피 구조 설계 시 후보군에 포함 검토"
+        ],
+        "learning_related": [
+            "순수 SSM(Mamba)은 미세한 디테일을 뭉갤 수 있어 소수의 어텐션 레이어가 정밀 회상(recall) 역할을 보완하는 설계 원리",
+            "어텐션 비용의 근본 원인: 모든 토큰이 이전 모든 토큰을 재참조 → KV 캐시가 컨텍스트 길이에 비례해 증가"
+        ],
+        "key_insights": [
+            "적은 수의 어텐션 레이어(6개)만으로도 나머지 46개 Mamba 레이어를 보완해 성능·효율을 동시에 확보하는 하이브리드 트렌드 등장",
+            "모델 크기보다 아키텍처 설계(어텐션/SSM 비율)가 성능-효율 트레이드오프에 더 큰 영향을 줄 수 있음을 시사"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 하이브리드 아키텍처(Attention+Mamba) 기술 학습 포인트, ⑤자동화 — 오픈웨이트 경량 모델은 API 회피/로컬 구동 자동화 설계 시 참고 후보",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ftzWn5wVm5M/hqdefault.jpg"
+    },
+    {
         "title": "내 인생을 송두리째 바꿔버린 그때 그 실패 | 혹시 사는게 좀 힘들다면 들어보세요. 50대가 되어보니 깨닫는 것들",
         "url": "https://www.youtube.com/watch?v=_E59k7aUySw",
         "channel": "기술노트with알렉",
