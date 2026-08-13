@@ -1,5 +1,33 @@
 [
     {
+        "title": "11 Lines of Code Broke the Internet (left-pad)",
+        "url": "https://www.youtube.com/watch?v=HT78ca5owcY",
+        "channel": "Cloud Codes",
+        "summary": "2016년 한 개발자가 상표권 분쟁으로 273개의 NPM 패키지를 게시 취소하면서, 그중 11줄짜리 left-pad 패키지에 의존하던 Babel과 수천 개 프로젝트가 연쇄적으로 빌드 실패를 겪은 사건을 다룬다. NPM은 정책을 깨고 강제 복구했고 이후 게시 취소 규칙을 강화했지만, 영상은 그 조치가 진짜 문제(과도한 암묵적 코드 신뢰와 설치 스크립트 자동 실행)를 해결하지 못했다고 지적하며 최근 400개 이상의 패키지를 뚫은 웜 사건을 근거로 든다.",
+        "categories": [
+            "소프트웨어 공급망 보안",
+            "오픈소스",
+            "NPM",
+            "개발 히스토리",
+            "의존성 관리"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "npm install은 파일 다운로드가 아니라 코드 실행이며, 설치 스크립트가 사용자 권한으로 사전 실행될 수 있다는 공급망 보안 개념",
+            "매니페스트에 명시된 직접 의존성(19개)보다 실제 설치되는 전이 의존성(227개)이 훨씬 많다는 현대 패키지 생태계의 구조적 위험",
+            "NPM의 72시간 게시취소 제한 등 사후 정책 변화가 표면적 증상만 막았을 뿐 근본적 신뢰 문제는 남아있다는 시사점"
+        ],
+        "key_insights": [
+            "left-pad 사건의 본질은 '작은 패키지 의존'이 아니라 코드 실행 신뢰 구조와 권력(상표권 대 오픈소스 정신) 충돌 문제였다",
+            "10년 뒤에도 동일한 신뢰 남용(웜이 400개 이상 패키지, 월 20억 설치 침투) 사건이 재발해 근본 해결이 안 됐음을 보여준다",
+            "러스 콕스(Go 언어 총괄)의 '더 적은 근거로 더 많은 코드를 신뢰한다'는 경고가 현재도 유효하다"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — NPM/의존성 공급망 보안 사고 사례, 자체 프로젝트의 패키지 의존성 검토에 참고 가능",
+        "timestamp": "2026-08-12T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/HT78ca5owcY/hqdefault.jpg"
+    },
+    {
         "title": "Mojo 1.0 Is Here: The CUDA Rival Goes Stable",
         "url": "https://www.youtube.com/watch?v=oKaQrSJLXeo",
         "channel": "Cloud Codes",
