@@ -1,5 +1,33 @@
 [
     {
+        "title": "Remotion vs Hyperframes: Which Code Video Tool Should You Use?",
+        "url": "https://www.youtube.com/watch?v=2nC5roepPL4",
+        "channel": "The Next New Thing",
+        "summary": "Remotion과 Hyperframes를 비교하는 영상으로, 둘 다 코드(React/HTML-CSS)로 영상을 제작하는 툴입니다. Remotion은 오래되고 성숙한 생태계와 편집기를 갖췄지만 3인 초과 기업은 유료 라이선스가 필요하고, Hyperframes는 Remotion에서 영감을 받은 완전 오픈소스 대안으로 라이선스 제약이 없지만 툴링 성숙도가 낮습니다.",
+        "categories": [
+            "영상제작툴",
+            "React",
+            "오픈소스",
+            "AI자동화영상"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 에이전트가 영상을 자동 생성하는 흐름에서 Remotion이 최초 타겟이 되었고, 이것이 Hyperframes 접근법에 영감을 줌 — 코드 기반 영상 생성이 에이전트 자동화와 궁합이 좋음",
+            "Hyperframes는 HTML/CSS를 영상으로 변환하는 방식으로, 에이전트가 다루기 더 단순할 수 있음"
+        ],
+        "learning_related": [
+            "Remotion: React 기반, 성숙한 편집기 제공, 3인 초과 기업은 상업적 이용 시 유료 라이선스 필요",
+            "Hyperframes: 완전 오픈소스, HTML/CSS→영상 변환 방식, 아직 툴링이 덜 성숙"
+        ],
+        "key_insights": [
+            "코드 기반 영상 제작 두 축(Remotion vs Hyperframes)의 핵심 차이는 '라이선스 자유도'와 '툴링 성숙도'의 트레이드오프",
+            "3인 이하 소규모 팀/개인 프로젝트는 Remotion 무료 사용 가능하나, 상업적 용도로 확장 시 라이선스 비용 발생 여지 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 3AI 연구소 유튜브 파이프라인이 AI 자동 영상 생성 구조라 Remotion/Hyperframes 같은 코드 기반 영상 툴이 향후 렌더링 파이프라인 대안으로 검토 가능, ⑨창작 — 유튜브 채널 영상 제작 방식과 직접 연관된 툴 비교",
+        "timestamp": "2026-08-12T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/2nC5roepPL4/hqdefault.jpg"
+    },
+    {
         "title": "Hyperagent: The AI that gets customers",
         "url": "https://www.youtube.com/watch?v=pIyqwrZ0x8Y",
         "channel": "The Next New Thing",
