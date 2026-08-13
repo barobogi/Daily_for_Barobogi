@@ -1,5 +1,36 @@
 [
     {
+        "title": "진짜 매일 쓰는 Claude Skill 3개 (꾸준히 쓰는 이유)",
+        "url": "https://www.youtube.com/watch?v=VABNRP-S124",
+        "channel": "techyoo",
+        "summary": "유튜버가 꾸준히 실사용 중인 Claude Skill 3가지(Last 30 Days, Watch, Agent Browser)를 소개하고, skills.sh 사이트에서 스킬을 검색·설치하는 방법과 여러 스킬을 번들로 한 번에 설치하는 신기능 'Pack'(Vercel 연동)까지 설명한다. 선정 기준은 '지속 사용 여부'와 '업무 효율화 정도' 두 가지.",
+        "categories": [
+            "Claude Skill",
+            "AI 도구",
+            "생산성",
+            "자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Last 30 Days: 주제를 던지면 Reddit/X/YouTube/Hacker News를 훑어 최근 30일간 사람들의 실제 반응을 리포트로 정리 — 기사가 아닌 '진짜 여론'을 확인할 때 구글 검색 대신 사용 (깃허브 스타 57k)",
+            "Watch: 유튜브 링크나 영상 파일을 주면 프레임 추출+자막 읽기로 영상을 요약하거나 '몇 분에 이 장면 나옴?' 같은 질문에 답변 — 볼 시간 없는 긴 영상 처리용 (깃허브 스타 14k)",
+            "Agent Browser(Vercel 제작): AI에게 브라우저 제어 권한을 부여해 사이트 열기·클릭·입력·스크린샷까지 자동 수행 — 반복 웹 작업 자동화용",
+            "skills.sh 사이트: All-time/Trending(24h)/Hot(1h) 탭으로 인기 스킬 탐색 가능, 스킬 이름 검색 지원",
+            "skills.sh 신기능 'Pack': Vercel 팀 계정과 연동해 여러 스킬을 하나의 번들로 묶고, 설치 명령어 한 줄로 한 번에 설치 가능"
+        ],
+        "learning_related": [
+            "스킬 선택 기준: ①지속적으로 사용할 수 있는가 ②업무 효율을 실제로 얼마나 높여주는가",
+            "skills.sh에서 Create Pack → 팩 이름 지정 → 깃허브 연동 또는 스킬 폴더 드래그앤드랍 → 스킬 여러 개 선택 후 Create Pack으로 설치 명령어 생성"
+        ],
+        "key_insights": [
+            "AI 스킬은 설치는 쉬워도 실제 '꾸준히 쓰는' 것은 소수 — 리서치(여론 수집), 영상 시청 대체, 브라우저 자동화 3개 영역이 실사용 검증된 사례",
+            "skills.sh의 Pack 기능으로 여러 스킬을 한 번에 배포/설치할 수 있어, 팀 단위로 표준 스킬셋을 배포하는 워크플로우가 가능해짐"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Agent Browser로 반복 웹 작업(확인/클릭/입력) 자동화 가능, master_watch류 워처와 조합 검토 여지, ③지식관리 — Last 30 Days 스킬로 커뮤니티 반응 기반 리서치, 선행검색/트렌드 파악에 활용 가능, ④공부방 — Watch 스킬로 긴 유튜브 영상을 텍스트 요약/타임스탬프 질의로 대체, 학습 효율화",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/VABNRP-S124/hqdefault.jpg"
+    },
+    {
         "title": "Cloud Is a Trap: How Dropbox Left AWS and Saved $75M",
         "url": "https://www.youtube.com/watch?v=m5NLYxscKio",
         "channel": "Cloud Codes",
