@@ -1,5 +1,33 @@
 [
     {
+        "title": "Scrape And Monitor The Entire Web Instantly On Complete Autopilot!",
+        "url": "https://www.youtube.com/watch?v=OzYi_dIgROk",
+        "channel": "The Next New Thing",
+        "summary": "Firecrawl(파이어콜)이 단순 웹 페이지 가져오기 도구에서 사이트 전체 스크래핑, 링크 탐색(미니 구글 스파이더), 그리고 신규 모니터링 기능(주기적으로 지정 사이트를 크롤링해 이메일/웹훅으로 알림)까지 지원하는 AI 기반 웹 크롤링 서비스로 급성장했다는 내용. 유료 서비스이지만 월 1000 무료 크레딧을 제공해 시작하기 충분하다고 소개한다.",
+        "categories": [
+            "AI 도구",
+            "웹 스크래핑",
+            "자동화",
+            "모니터링"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Firecrawl: 웹 fetch → 사이트 전체 스크래핑 → 링크 탐색(스파이더) → 모니터링 기능까지 확장된 AI 기반 크롤링 툴",
+            "모니터링 기능: 특정 산업/키워드 관련 콘텐츠를 여러 사이트에서 주기적(예: 6시간마다)으로 감시, 이메일 또는 웹훅으로 알림",
+            "가격: 유료 서비스지만 월 1000 크레딧 무료 제공 — 워크플로우 적합성 테스트에 충분"
+        ],
+        "learning_related": [
+            "AI 크롤링 툴이 단순 fetch에서 검색+스파이더링+모니터링으로 기능이 확장되는 트렌드 확인"
+        ],
+        "key_insights": [
+            "Firecrawl이 주간 트렌딩 리포에는 오르지 못했지만 실사용 언급이 급증하는 트래젝토리를 보임",
+            "웹 모니터링을 API/코드 없이 '어떤 콘텐츠를 어떤 사이트에서 몇 시간마다 찾아라'는 자연어 지시만으로 구성 가능해짐"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Firecrawl 모니터링 기능으로 뉴스/경쟁사/키워드 자동 감시 파이프라인 구축 가능, 기존 parallel_search.py나 게시판 자동화와 연계 검토 여지, ⑥인프라 — 웹훅 기반 알림 구조가 텔레그램/이메일 통보 체계(email_notify.py)와 통합 가능",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/OzYi_dIgROk/hqdefault.jpg"
+    },
+    {
         "title": "How To Cut Your AI Token Usage By Turning Text Into Images!",
         "url": "https://www.youtube.com/watch?v=oVhInG-dEi0",
         "channel": "The Next New Thing",
