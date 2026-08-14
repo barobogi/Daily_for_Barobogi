@@ -1,5 +1,37 @@
 [
     {
+        "title": "Best Local AI Models for Every VRAM Tier (4GB to 32GB+)",
+        "url": "https://www.youtube.com/watch?v=JQfA5WzRKN8",
+        "channel": "Cloud Codes",
+        "summary": "Steam Hardware Survey에서 16GB VRAM이 최초로 8GB를 제치고 가장 흔한 GPU 사양이 되었다는 데이터를 기점으로, 4GB부터 24GB+까지 VRAM 티어별 로컬 AI 모델 추천 가이드를 제공하는 영상. Ollama와 LM Studio 두 실행 도구의 구조, 양자화(Quantization) 특히 Q4KM 방식의 원리와 정확도 손실 폭(3~5%)을 설명하며 로컬 LLM 실행의 기술적 배경을 다룬다.",
+        "categories": [
+            "로컬 AI",
+            "LLM",
+            "하드웨어",
+            "오픈소스 도구",
+            "가이드"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Ollama(178k GitHub stars)와 LM Studio(llama.cpp + Apple MLX 엔진) 두 축이 로컬 LLM 실행 생태계를 사실상 양분하고 있음",
+            "Apple Silicon에서는 MLX 엔진이 llama.cpp 대비 30~50%, 최대 2배 이상 빠르다는 벤치마크 존재",
+            "양자화(Q4KM)는 16비트 대비 메모리를 크게 줄이면서도 attention/embedding 레이어는 고정밀 유지 — 정확도 손실 3~5% 수준으로 VRAM 제약 환경에서 실용적 선택",
+            "Hugging Face에 약 135,000개 GGUF 파일이 존재, 개발자의 약 42%가 로컬 하드웨어에서 최소 일부 모델 워크로드를 실행 중"
+        ],
+        "learning_related": [
+            "VRAM 티어(4/6/8/16/24GB+)별로 실행 가능한 모델이 갈리며, 기존 가이드에 반복 등장하는 두 개 티어 추천은 모델 발전 속도 및 이름 유지+내부 변경으로 인해 이제 부정확해졌다는 지적",
+            "모델 크기 계산 기본 공식: 16비트 기준 파라미터 10억 개당 2GB 메모리 필요 — 양자화 전 이 수치가 VRAM 예산 산정의 출발점"
+        ],
+        "key_insights": [
+            "16GB VRAM이 처음으로 8GB를 제치고 최다 보급 사양이 됨 — 로컬 AI 실행 가능 범위가 대중적으로 한 단계 상향됨을 시사",
+            "영상 말미에 '어떤 티어에도 맞지 않지만 모든 모델을 능가하는' 모델이 언급되는 구조로, 고사양/클라우드급 모델과 로컬 실행 가능 모델 사이의 트레이드오프를 강조",
+            "자막이 8GB 티어 설명 도중 끊겨 있어 4~6GB 및 16GB 이상 티어의 구체적 모델 추천 목록은 본 자막만으로 확인 불가"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 로컬 LLM(Ollama/LM Studio) VRAM 티어별 모델 선택 및 양자화 원리 학습 자료, ⑤자동화 — 자체 컴퓨팅 자원 기반 로컬 AI 모델 활용 시 API 비용 절감(무료 구조) 관점에서 참고 가능",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/JQfA5WzRKN8/hqdefault.jpg"
+    },
+    {
         "title": "Top 10 AI GitHub Repos: The 2 Commit Repo Outrunning Every Tool",
         "url": "https://www.youtube.com/watch?v=YHPVQvrvYeQ",
         "channel": "Cloud Codes",
