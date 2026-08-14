@@ -1,5 +1,31 @@
 [
     {
+        "title": "Apple should have built this",
+        "url": "https://www.youtube.com/watch?v=_WXIpV5YJAU",
+        "channel": "The Next New Thing",
+        "summary": "AI 신제품 위클리 리뷰 영상으로, Siri를 대체할 만한 음성 비서 'Voice OS'(딕테이션+에이전트 모드로 회의 예약·이메일 발송·작업 관리 자동화, 연간 요금 월 12달러)와 X.com/Cursor가 내놓은 범용 에이전트 'Grokbot'(Hermes Agent·Open Claw 유사, 브라우저 제어 가능한 다중 에이전트 운영)을 소개한다.",
+        "categories": [
+            "AI 신제품",
+            "생산성 도구",
+            "AI 에이전트",
+            "음성비서"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Voice OS: 딕테이션 + 에이전트 모드로 회의예약/이메일발송/작업관리 자동화, 연 12달러(월 결제 시 30달러), Whisper Flow 대체 후보로 언급됨",
+            "Grokbot: X.com·Cursor의 범용 에이전트, Hermes Agent/Open Claw 대비 진입장벽 낮음, 에이전트별 개별 브라우저 제어 가능",
+            "범용 에이전트 시장이 빠르게 상품화(commoditized)되는 추세 — Hermes/Open Claw 등 무료 기반 도구 확산 중"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "짧고 사소한 작업(30초 내외)에 Claude/Codex를 부르기엔 비효율적인데, Voice OS의 원클릭 에이전트 모드가 그 공백을 메워 하루 20~30분 절약 가능하다는 실사용 평가",
+            "가격 전략상 연간 결제(12달러)와 월 결제(30달러) 격차가 커서 무료체험 후 사용량 보고 전환하는 방식이 합리적"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Voice OS/Grokbot 에이전트 모드는 두복이·kakao_watcher 등 기존 자동화 파이프라인에 참고할 만한 '음성→작업 실행' 패턴, ④공부방 — 범용 에이전트(Grokbot) 상품화 동향은 43_function_dev 자가성장 트랙 벤치마킹 후보로 검토 가능",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/_WXIpV5YJAU/hqdefault.jpg"
+    },
+    {
         "title": "Stop Scaling Postgres: The $22 Fix for Connection Crashes",
         "url": "https://www.youtube.com/watch?v=eIABrB2QT2M",
         "channel": "Cloud Codes",
