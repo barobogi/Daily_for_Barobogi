@@ -1,5 +1,33 @@
 [
     {
+        "title": "Stop Scaling Postgres: The $22 Fix for Connection Crashes",
+        "url": "https://www.youtube.com/watch?v=eIABrB2QT2M",
+        "channel": "Cloud Codes",
+        "summary": "PostgreSQL은 연결마다 스레드가 아닌 별도 OS 프로세스를 포크하는 구조라 기본 max_connections=100이라는 한계에 부딪히며, 리드 레플리카를 추가해도 동일한 100 슬롯 제한이 복제되어 문제가 해결되지 않는다는 내용의 영상. 진짜 해법은 커넥션 풀러(예: PgBouncer, 월 $22 수준의 관리형 서비스)이며, RDS 등 매니지드 서비스가 인스턴스 메모리 기준으로 연결 제한을 산정하는 방식과 실제 연결당 메모리 비용(약 7~12MB, huge pages 사용 시 1.3MB)의 괴리를 설명한다.",
+        "categories": [
+            "PostgreSQL",
+            "DB 인프라",
+            "커넥션 풀링",
+            "클라우드 비용최적화"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "Postgres는 연결마다 스레드가 아닌 독립 OS 프로세스를 포크하는 구조라 크래시 격리에는 유리하지만 연결당 오버헤드가 크다",
+            "리드 레플리카 추가는 CPU/메모리 부족이 아닌 '연결 슬롯 고갈' 문제를 전혀 해결하지 못한다 (동일한 max_connections=100이 복제될 뿐)",
+            "RDS는 인스턴스 메모리를 약 9.53MB로 나눠 연결 제한을 자동 산정 — 실제 연결당 진짜 증분 비용(7~12MB)과 괴리가 있어 과소/과대 산정 가능",
+            "근본 해법은 PgBouncer 같은 단일 스레드 C 커넥션 풀러이며 관리형 버전 비용이 월 $22 수준으로 저렴"
+        ],
+        "key_insights": [
+            "모니터링 대시보드(CPU/메모리 그린)가 정상이어도 'FATAL: too many clients already' 같은 연결 슬롯 고갈은 별도로 확인해야 한다",
+            "서버리스/오토스케일링 환경은 워커마다 새 연결을 열기 쉬워 100개 제한에 쉽게 부딪힌다 — 스케일 업보다 커넥션 풀러 도입이 먼저",
+            "레플리카 추가는 읽기 부하 분산에는 맞지만 연결 슬롯 고갈 문제의 해법이 아니라는 흔한 오판을 짚어줌"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — Postgres 커넥션 풀링(PgBouncer) 및 RDS 연결 제한 산정 로직, n8n/자동화 백엔드 DB 설계 시 참고 가능",
+        "timestamp": "2026-08-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/eIABrB2QT2M/hqdefault.jpg"
+    },
+    {
         "title": "Best Local AI Models for Every VRAM Tier (4GB to 32GB+)",
         "url": "https://www.youtube.com/watch?v=JQfA5WzRKN8",
         "channel": "Cloud Codes",
