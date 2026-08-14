@@ -1,5 +1,35 @@
 [
     {
+        "title": "Top 10 AI GitHub Repos: The 2 Commit Repo Outrunning Every Tool",
+        "url": "https://www.youtube.com/watch?v=YHPVQvrvYeQ",
+        "channel": "Cloud Codes",
+        "summary": "GitHub 트렌딩 저장소 순위를 스타 수가 아닌 실질 가치로 재분석한 영상으로, OpenAI 소속 Ryan LaPoe가 작성한 커밋 2개짜리 'Harness Engineering' 문서 저장소가 8,800개 커밋을 가진 실사용 코딩 에이전트보다 훨씬 높은 관심을 받고 있다는 역설을 지적한다. 핵심 메시지는 AI 코딩 에이전트 시대에는 모델 자체보다 컨텍스트와 툴(하니스)을 설계하는 능력이 진짜 희소 자원이라는 것이다.",
+        "categories": [
+            "AI 코딩 에이전트",
+            "GitHub 트렌드",
+            "컨텍스트 엔지니어링",
+            "생산성 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "'Harness Engineering' 개념: 모델/에이전트는 고정된 블랙박스로 두고, 컨텍스트(context)와 툴(tools)만이 실제로 통제 가능한 레버라는 관점",
+            "OpenAI 팀 사례: 5개월간 3명이 100만 라인 이상 코드를 100% AI 작성+무검토 병합으로 출시, 하루 20~30억 토큰(1일 $2~3천) 소모, PR 1,500건, 빌드 1분 이내 유지",
+            "커밋 2개짜리 저장소가 실사용 툴보다 스타를 훨씬 많이 받는 현상 — 코드가 아니라 '방법론 문서(에이전트 컨텍스트 번들)'의 가치가 재평가되고 있음을 시사"
+        ],
+        "learning_related": [
+            "레포 스타 수는 '실제 작동하는 코드'가 아니라 '에이전트를 잘 다루는 방법론'에도 몰릴 수 있다는 신호 — 툴 선택 시 스타 수만으로 판단 금지",
+            "Creative Commons Attribution 라이선스는 코드가 아니라 '글(방법론 문서)'이라는 신호로 해석 가능"
+        ],
+        "key_insights": [
+            "AI 코딩 에이전트 시대에는 모델 성능보다 컨텍스트·툴 설계(하니스)가 실질적 차별화 요소가 되고 있다",
+            "적은 커밋 수에도 방법론 문서형 저장소가 실제 코드 저장소보다 폭발적 관심을 끄는 새로운 GitHub 트렌드 패턴 등장",
+            "OpenAI 내부 사례(100% AI작성, 무인간검토, 1,500 PR)는 향후 3AI 파이프라인의 자동화 신뢰 수준 설계에 참고할 만한 극단적 벤치마크"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Harness Engineering(컨텍스트/툴 중심 설계) 개념은 3AI 파이프라인 및 GoalRunner 자동화 고도화에 참고 가능, ③지식관리 — 코드가 아닌 '방법론 문서'가 에이전트 성능을 좌우한다는 인사이트는 AGENTS.md/CLAUDE.md류 문서 설계 방향과 직결",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/YHPVQvrvYeQ/hqdefault.jpg"
+    },
+    {
         "title": "xAI's Real Plan to Win Isn't Grok 4.6",
         "url": "https://www.youtube.com/watch?v=2rIwMITAZBE",
         "channel": "Cloud Codes",
