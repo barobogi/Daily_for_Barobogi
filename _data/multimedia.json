@@ -1,5 +1,39 @@
 [
     {
+        "title": "xAI's Real Plan to Win Isn't Grok 4.6",
+        "url": "https://www.youtube.com/watch?v=2rIwMITAZBE",
+        "channel": "Cloud Codes",
+        "summary": "xAI가 Grok 4.6을 GPT-5.6/Claude Opus 5와 비슷한 벤치마크 점수에 훨씬 낮은 가격으로 출시했지만, 실제 핵심 전략은 모델 자체가 아니라 코드 에디터 인수, 자체 GPU 슈퍼컴퓨터 임대, 자율 에이전트 제품이라는 것을 분석하는 영상. 벤치마크 버전 차이(Terminal Bench 2.1 vs 3)로 인한 점수 왜곡 문제도 지적하며, 벤치마크 숫자만으로 모델을 평가하는 것의 위험성을 경고한다.",
+        "categories": [
+            "AI모델비교",
+            "xAI/Grok",
+            "벤치마크분석",
+            "AI산업전략"
+        ],
+        "stock_related": [
+            "xAI 창업자(일론 머스크)가 5년 내 AI가 SpaceX 기업가치의 99%를 차지할 것이라 언급 — AI 인프라/컴퓨트 임대가 향후 핵심 수익원이 될 것이라는 시그널",
+            "xAI가 경쟁사에 자사 슈퍼컴퓨터를 임대하기 시작 — AI 모델 경쟁보다 컴퓨트 인프라 임대가 수익모델의 핵심이 되는 추세"
+        ],
+        "ai_related": [
+            "Grok 4.6: Artificial Analysis 종합지수 61점(GPT-5.6 Saul과 동점, Opus 5보다 2점 낮음), 가격은 입력 $2/출력 $6로 Opus 5(5/25) 대비 output 기준 약 1/4 수준",
+            "Agentic Evaluation에서 ELO 1753(Opus 5 다음 2위)이면서 턴 수(53턴)와 토큰 사용량(Opus 5의 1/4)이 훨씬 효율적 — 비용 대비 에이전트 작업 성능이 강점",
+            "Deep SWE(소프트웨어 엔지니어링 벤치마크)에서는 Grok 65.9 vs Saul 73으로 격차 존재 — 종합 점수만으로 판단하면 안 됨",
+            "Terminal Bench 버전 차이 함정: 같은 벤치마크명이라도 2.1과 3.0은 다른 시험 — 2.1에서는 Grok 88.4/Saul 89.5로 거의 동점이지만, 3.0에서는 Grok 26/Saul 34.6/Opus 5 43.5로 격차가 크게 벌어짐. 차트를 볼 때 벤치마크 버전을 반드시 확인해야 함"
+        ],
+        "learning_related": [
+            "벤치마크 비교 시 '같은 이름'이 아니라 '같은 버전'인지 확인하는 것이 핵심 — 버전이 바뀌면 난이도(과제 재설계)가 달라져 점수 하락이 모델 퇴보를 의미하지 않을 수 있음",
+            "모델 평가 시 종합 지수 하나가 아니라 세부 카테고리별(에이전틱/코딩/정직성 등) 점수를 분리해서 봐야 실제 강약점 파악 가능"
+        ],
+        "key_insights": [
+            "AI 기업 경쟁의 무게중심이 '모델 성능'에서 '인프라(컴퓨트 임대)+제품 생태계(에디터 인수, 자율 에이전트)'로 이동하고 있음",
+            "벤치마크 리더보드는 버전 관리가 허술해 같은 이름의 벤치마크라도 시점에 따라 비교 불가능한 경우가 많음 — AI 모델 선택 시 원문 벤치마크 버전을 직접 확인하는 습관 필요",
+            "가격 대비 에이전틱 작업 효율(턴 수·토큰 소모량)이 종합 벤치마크 점수보다 실무 도입 판단에 더 중요한 지표일 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — AI 모델(Grok/Claude/GPT) 벤치마크 비교 및 업계 동향 정리, ④공부방 — 벤치마크 버전 함정 등 AI 평가 방법론 학습 포인트",
+        "timestamp": "2026-08-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/2rIwMITAZBE/hqdefault.jpg"
+    },
+    {
         "title": "This NEW Claude Prompting Technique is blowing people's minds (gauntlet-loop)",
         "url": "https://www.youtube.com/watch?v=9mjGK_oUTK8",
         "channel": "Ethan Nelson",
