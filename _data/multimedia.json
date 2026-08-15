@@ -1,5 +1,37 @@
 [
     {
+        "title": "GLM-5.3 vs Fable 5: Finally a Head to Head?",
+        "url": "https://www.youtube.com/watch?v=dmEVBrpkGSw",
+        "channel": "Cloud Codes",
+        "summary": "Zhipu(智谱)가 GLM-5.3을 공개하며 16개 벤치마크에서 Claude Fable 5와 정면 비교했는데, 6승 9패라는 다소 불리한 결과를 스스로 공개했다. 특히 취약점 '발견'(Cyber Gym 84.5점, 최고)에는 강하지만 그 취약점을 '실제로 악용'하는 벤치마크에서는 24점 가까이 떨어지는 뚜렷한 격차가 확인됐다. 이 모델은 5.2와 동일한 7530억(활성 400억) 파라미터 MoE 가중치를 그대로 쓰며, 1M 토큰 컨텍스트를 감당하기 위해 32-head 소형 인덱서로 매 쿼리마다 상위 2048개 토큰만 골라 어텐션에 넘기고, 4개 레이어 중 1개만 실제 인덱스를 계산해 나머지 3개는 재사용하는 '희소성의 이중 구조'를 채택했다.",
+        "categories": [
+            "AI/LLM",
+            "모델벤치마크",
+            "사이버보안",
+            "모델아키텍처",
+            "오픈소스모델"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "GLM-5.3은 신규 파라미터 학습 없이(5.2와 동일 가중치) 벤치마크 재포지셔닝만으로 출시됨 — 오픈모델의 '재브랜딩' 전략 사례로 참고할만함",
+            "취약점 탐지(84.5, SOTA) vs 취약점 악용(54.4, -24점) 사이 큰 격차 — AI 보안 도구 평가 시 '찾기'와 '무기화'는 별개 역량으로 분리해서 봐야 함",
+            "MoE(256 experts, top-8 라우팅) + DeepSeek류 희소 인덱서(1M 컨텍스트를 상위 2048 토큰으로 압축, 4레이어마다 1회 인덱싱) 구조는 장문맥 처리 비용을 낮추는 실전 설계 패턴으로 자동화/에이전트 설계 시 참고 가능"
+        ],
+        "learning_related": [
+            "MoE 아키텍처 기본 개념: 78레이어 중 첫 3개는 dense, 이후 레이어마다 256개 expert 중 8개 + shared expert 1개를 라우터가 선택",
+            "긴 컨텍스트에서 어텐션의 O(n²) 비용 문제와 이를 완화하는 '인덱서 sparse attention' 기법(index share: 4레이어당 1회만 실계산)",
+            "벤치마크 해석 시 주의점: 전체 승패 스코어만 볼 게 아니라 어떤 항목에서 지고 이기는지 '군집 패턴'을 봐야 실제 의미가 드러남 (예: 탐지 vs 실행 능력 분리)"
+        ],
+        "key_insights": [
+            "GLM-5.3은 새 학습 없이 기존 5.2 가중치 그대로 사이버 벤치마크에 특화 포지셔닝한 릴리스",
+            "취약점 발견 능력과 실제 악용(exploit) 능력 사이에 상당한 격차가 존재 — AI 보안 리스크 평가 시 이 구분이 핵심",
+            "1M 토큰 컨텍스트를 다루기 위해 소형 인덱서로 관련 토큰만 추려 어텐션에 넘기는 이중 희소화 구조가 비용 절감의 핵심 설계"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — GLM-5.3의 MoE/희소 어텐션 아키텍처 및 벤치마크 해석법은 AI 모델 학습 자료로 유용, ⑤자동화 — 취약점 탐지 vs 악용 능력 격차는 AI 기반 보안 자동화 도구 설계/평가 시 참고할 인사이트",
+        "timestamp": "2026-08-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/dmEVBrpkGSw/hqdefault.jpg"
+    },
+    {
         "title": "Scrape And Monitor The Entire Web Instantly On Complete Autopilot!",
         "url": "https://www.youtube.com/watch?v=OzYi_dIgROk",
         "channel": "The Next New Thing",
