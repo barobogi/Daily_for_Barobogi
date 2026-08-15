@@ -1,5 +1,31 @@
 [
     {
+        "title": "Explaining The Week’s Top 10 Repos",
+        "url": "https://www.youtube.com/watch?v=TlTUwzzJ_WE",
+        "channel": "The Next New Thing",
+        "summary": "채널 'The Next New Thing'이 그 주간 화제가 된 GitHub 상위 10개 레포지토리를 소개하고 각각의 특징을 간단히 설명하는 영상으로 추정됩니다. 자막과 설명이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "GitHub",
+            "오픈소스",
+            "개발도구",
+            "주간정리"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "주간 인기 오픈소스 레포 트렌드 파악 시 AI/자동화 관련 신규 도구 발굴 가능성 있음 (자막 부재로 구체 확인 불가)"
+        ],
+        "learning_related": [
+            "GitHub Trending 성격의 콘텐츠 — 신규 라이브러리/프레임워크 트렌드 캐치업 용도로 활용 가능"
+        ],
+        "key_insights": [
+            "자막 미제공으로 구체적 레포 목록/내용 확인 불가",
+            "제목상 '이번 주 Top 10 레포' 소개 포맷 영상으로 추정"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 주간 오픈소스 트렌드 캐치업용 학습 콘텐츠로 활용 가능 (단, 상세 내용 미확인)",
+        "timestamp": "2026-08-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/TlTUwzzJ_WE/hqdefault.jpg"
+    },
+    {
         "title": "SpaceX launched the easy ai agent",
         "url": "https://www.youtube.com/watch?v=rznGK-txQyU",
         "channel": "The Next New Thing",
