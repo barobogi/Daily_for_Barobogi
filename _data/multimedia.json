@@ -1,5 +1,30 @@
 [
     {
+        "title": "Anthropic Engineers Just Fixed Claude Code and Nobody's Talking About it!",
+        "url": "https://www.youtube.com/watch?v=h6HL5hBKiMI",
+        "channel": "Ethan Nelson",
+        "summary": "Anthropic 엔지니어들이 Claude Code에 조용히 적용한 개선사항을 다루는 영상으로 보이나, 자막과 설명이 제공되지 않아 구체적 내용은 확인 불가. 제목상 최근 업데이트나 버그 수정이 크게 주목받지 못했다는 점을 다루는 것으로 추정됨.",
+        "categories": [
+            "Claude Code",
+            "Anthropic",
+            "AI 도구 업데이트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code 관련 최신 업데이트/수정사항 — 자막 부재로 상세 내용 확인 필요, 실제 릴리즈 노트나 공식 발표 대조 권장"
+        ],
+        "learning_related": [
+            "Claude Code 사용자로서 최신 변경사항 파악 차원에서 원본 영상 시청 또는 자막 확보 후 재분석 필요"
+        ],
+        "key_insights": [
+            "제목만으로는 구체적 변경 내용(버그 수정 항목) 파악 불가",
+            "자막·설명이 없어 심층 요약이 제한적 — 원문 확인 권장"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude Code 신규 기능/수정사항 학습 자료로 활용 가능성, ⑤자동화 — Claude Code는 현재 3AI 파이프라인의 핵심 도구이므로 업데이트 내용 확인 필요",
+        "timestamp": "2026-08-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/h6HL5hBKiMI/hqdefault.jpg"
+    },
+    {
         "title": "Claude Skills: Build Your First AI Marketing Team in 22 Minutes (Claude Code)",
         "url": "https://www.youtube.com/watch?v=BRAGn8m2b40",
         "channel": "Ethan Nelson",
