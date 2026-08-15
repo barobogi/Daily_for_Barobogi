@@ -1,5 +1,35 @@
 [
     {
+        "title": "문장 하나로 브라우저 자동화? Claude 스킬 3개 리뷰 #shorts",
+        "url": "https://www.youtube.com/watch?v=ZUmyyxUCmzs",
+        "channel": "techyoo",
+        "summary": "Claude 스킬 3개를 리뷰하는 영상으로, 특히 Vercel이 만든 '에이전트 브라우저' 스킬을 소개합니다. AI가 브라우저를 직접 열고 클릭·입력·스크린샷까지 수행하며, 스킬 마켓플레이스에서 3개 스킬(와치, 에이전트 브라우저 등)의 설치 수를 각각 검색해 표로 정리하는 실제 시연을 보여줍니다.",
+        "categories": [
+            "AI 자동화",
+            "Claude 스킬",
+            "브라우저 에이전트",
+            "생산성 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Vercel이 만든 '에이전트 브라우저' Claude 스킬 — 말로 지시하면 AI가 직접 사이트 열고 클릭/입력/스크린샷까지 수행",
+            "반복적인 웹 확인 작업(설치 수 조회 등)을 스킬에 위임하는 실사용 시연",
+            "스킬 마켓플레이스에서 여러 키워드로 순차 검색 → 데이터 수집 → 표로 정리하는 멀티스텝 자동화 플로우"
+        ],
+        "learning_related": [
+            "에이전트 브라우저형 스킬은 세션 관리(마지막에 브라우저 세션 정리)까지 포함해 동작함",
+            "말 한마디(자연어 지시)로 여러 사이트 탐색 + 데이터 집계 + 표 작성까지 엔드투엔드 처리 가능"
+        ],
+        "key_insights": [
+            "브라우저 자동화 스킬은 매일 반복하던 웹 확인 작업(예: 설치 수 모니터링)을 AI에게 위임할 수 있는 대표 사례",
+            "단일 자연어 지시로 다중 검색 → 데이터 수집 → 표 정리까지 한 번에 처리되는 워크플로우 실증",
+            "이런 류의 브라우저 컨트롤 스킬은 반복 리서치·모니터링 업무 자동화에 바로 적용 가능"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전트 브라우저 스킬로 반복 웹 확인/데이터 수집 자동화 가능, 바로보기 3AI 파이프라인의 API 회피/무료 자동화 구조 설계에 참고할 만함",
+        "timestamp": "2026-08-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ZUmyyxUCmzs/hqdefault.jpg"
+    },
+    {
         "title": "DeepSeek Strikes Again: 1,114% API Price Hike, Open Harness & Updates",
         "url": "https://www.youtube.com/watch?v=Llv1WIGyeg8",
         "channel": "Cloud Codes",
