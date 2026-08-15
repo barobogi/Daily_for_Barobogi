@@ -1,5 +1,36 @@
 [
     {
+        "title": "DeepSeek Strikes Again: 1,114% API Price Hike, Open Harness & Updates",
+        "url": "https://www.youtube.com/watch?v=Llv1WIGyeg8",
+        "channel": "Cloud Codes",
+        "summary": "DeepSeek가 목요일 V4 Pro 모델을 정식 출시하고 90분 후 오픈소스 코딩 에이전트(하니스)를 MIT 라이선스로 무료 공개했으며, 그 사이 API 가격표를 발표해 특정 항목이 1,114% 인상됐다. 새 코딩 에이전트는 공개 14시간 만에 GitHub 스타 55,000개를 돌파했고, V4 Pro는 4월 프리뷰와 동일한 아키텍처(1.6T 파라미터, MoE)에 D-Spark 추측 디코딩 모듈을 추가한 서빙 최적화 버전이다.",
+        "categories": [
+            "AI모델출시",
+            "DeepSeek",
+            "오픈소스",
+            "API가격정책",
+            "코딩에이전트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "DeepSeek V4 Pro는 4월 프리뷰 대비 아키텍처 변경 없이 D-Spark 추측 디코딩(speculative decoding)을 추가한 서빙 최적화 + 에이전트용 post-training이 핵심 변화",
+            "동일 모델을 API로는 비싸게 과금하면서 가중치(892GB, 8bit, MIT 라이선스)는 Hugging Face에 무료 공개 — 오픈소스 배포와 API 유료화를 동시에 취하는 전략",
+            "오픈소스 코딩 에이전트가 출시 14시간 만에 GitHub 스타 55,000개 돌파 — 별도 마케팅/키노트 없이 유기적 확산"
+        ],
+        "learning_related": [
+            "추측 디코딩(speculative decoding) 개념: 빠른 draft 모델이 다음 토큰 여러 개를 예측하고 큰 모델이 한 번에 검증하는 방식으로 추론 속도 개선",
+            "MoE(Mixture of Experts) 구조: 1.6조 파라미터 중 토큰당 490억 개만 활성화, 384개 라우팅 전문가 중 6개 동시 사용, 100만 토큰 컨텍스트, 32조+ 토큰 학습"
+        ],
+        "key_insights": [
+            "API 가격 인상과 도구 무료 공개가 같은 날 동시에 일어난 것은 우연이 아니라 벤치마크 측정 방식(모델카드 각주)에 근거한 하나의 전략적 움직임",
+            "모델 자체는 4월과 동일 아키텍처이며, 실질 변화는 서빙 최적화(D-Spark)와 에이전트 지향 post-training에 있음 — '새로운 두뇌'가 아니라 '새로운 입과 손'",
+            "가중치를 MIT 라이선스로 무료 공개하면서 API는 대폭 인상 — 셀프호스팅 대 관리형 API 간 가격 차별화 전략으로 해석 가능"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 아키텍처(MoE, speculative decoding) 학습 포인트, ⑤자동화 — 오픈소스 코딩 에이전트(하니스) 활용 가능성 검토 여지",
+        "timestamp": "2026-08-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Llv1WIGyeg8/hqdefault.jpg"
+    },
+    {
         "title": "Gemini 3.7 Flash Beats Sonnet 5 for $0.75 (But There’s a Catch)",
         "url": "https://www.youtube.com/watch?v=GqGqcnJNsKI",
         "channel": "Cloud Codes",
