@@ -1,5 +1,36 @@
 [
     {
+        "title": "Run Qwen 3.8 27B Locally: Opus 4.6 max Performance on Your GPU?",
+        "url": "https://www.youtube.com/watch?v=fkEfPLu4UyI",
+        "channel": "Cloud Codes",
+        "summary": "Alibaba Qwen팀이 공개한 27B 밀집 파라미터 오픈소스 모델(Apache 2.0)이 Opus 4.6과 비교되며 화제가 된 영상. 코딩/에이전트/OS 조작 등 7개 벤치마크 중 5개에서 Opus를 앞섰지만, 심층 추론(HLE)과 GPQA 등 연구형 과제에서는 뒤처지는 결과를 상세히 분석한다.",
+        "categories": [
+            "로컬LLM",
+            "오픈소스모델",
+            "벤치마크비교",
+            "GPU하드웨어"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Qwen3.8-27B(Apache 2.0, dense, 262K~1M 컨텍스트, 네이티브 비전)가 SWEBench Pro·OSWorld·IFBench·LiveCodeBench·Android제어·멀티모달SWE 등에서 Opus 4.6 Max를 앞섰다는 벤치마크 공개",
+            "단, Terminal Bench 2.1(-5.2p), GPQA Diamond(-2.1p), HLE(-9.2p)에서는 Opus가 우위 — 장시간 에이전트 작업과 심층 추론에서는 아직 격차 존재",
+            "로컬 GPU(24/17/16/12/8GB 등급)에서 구동 가능한 로컬 모델이 특정 작업군(코딩 에이전트)에서 상용 프론티어 모델을 대체할 잠재력을 시사"
+        ],
+        "learning_related": [
+            "벤치마크 해석 시 '누가 테스트를 실행했는가'(자체 발표 vs 제3자 검증) 확인이 중요하다는 지적",
+            "모델 성능은 작업 유형(코딩 에이전트 vs 연구/추론)에 따라 우열이 갈리므로 단일 벤치마크로 일반화하면 안 됨",
+            "로컬 구동 시 실제 병목은 광고된 스펙(VRAM 용량)이 아니라 다른 요인(예상: 메모리 대역폭)일 수 있다는 암시 — 영상 후반 하드웨어 분석 파트에서 다룰 것으로 보임"
+        ],
+        "key_insights": [
+            "27B 파라미터 오픈소스 모델이 코딩/에이전트 작업 벤치마크 다수에서 Opus 4.6 Max를 능가한다고 주장 — 로컬 GPU로 '집에서 Opus급' 실현 가능성 화두",
+            "심층 추론(HLE) 격차는 9.2점으로 크게 벌어져, 모든 영역에서의 대체는 아직 시기상조",
+            "하드웨어 등급별(24GB~8GB) 구동 가능 여부와 '함정' 등급이 있다는 언급 — 실제 로컬 배포 시 VRAM 외 변수 존재 시사"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 로컬 LLM(Qwen3.8-27B) 성능·구동 스펙 학습 자료로 활용 가능, ⑤자동화 — API 회피/비용 0원 구조 우선 원칙과 맞물려, 로컬 구동 가능한 오픈소스 모델은 유료 API 대체 후보로 검토 가치 있음",
+        "timestamp": "2026-08-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/fkEfPLu4UyI/hqdefault.jpg"
+    },
+    {
         "title": "GLM-5.3 vs Fable 5: Finally a Head to Head?",
         "url": "https://www.youtube.com/watch?v=dmEVBrpkGSw",
         "channel": "Cloud Codes",
