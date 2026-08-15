@@ -1,5 +1,35 @@
 [
     {
+        "title": "Gemini 3.7 Flash Beats Sonnet 5 for $0.75 (But There’s a Catch)",
+        "url": "https://www.youtube.com/watch?v=GqGqcnJNsKI",
+        "channel": "Cloud Codes",
+        "summary": "구글이 2026년 8월 13일 Gemini 3.7 Flash를 입력 75센트/백만 토큰이라는 파격적인 가격에 출시하며 코딩 벤치마크(Frontier Code, SWE, Code Arena 웹개발)에서 Sonnet 5, GPT 계열을 능가하는 성적을 냈다. 반면 진짜 플래그십인 Gemini 3.5 Pro는 5월 발표 이후 3번째 출시 연기를 겪고 있어, 구글이 저가 Flash 모델 월 단위 출시 전략으로 이를 만회하고 있다는 내용이다.",
+        "categories": [
+            "AI모델뉴스",
+            "LLM벤치마크",
+            "코딩AI",
+            "가격정책"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Gemini 3.7 Flash가 $0.75/$3.75(백만 토큰 in/out)로 Anthropic Claude, OpenAI 모델 대비 절반 이하 가격이면서 Frontier Code 34.4→43.6, SWE 49%→65.3%로 코딩 성능 대폭 상승",
+            "Code Arena 웹개발 리더보드에서 Gemini 3.7 Flash(1588)가 Sonnet 5, Terra, Meta Muse Spark보다 상위 랭크 — 저가 모델이 자사 플래그십(3.1 Pro, rank 46/1447)조차 압도",
+            "Gemini 3.5 Pro는 5월 발표 후 3회 연속 출시 연기 중(코딩/안정성 이슈, 연구진 이탈, 프리트레이닝 재시작 가능성 보도) — 구글은 대신 Flash 모델을 5월/7월/8월 월 단위로 연속 출시하는 전략으로 전환 중"
+        ],
+        "learning_related": [
+            "가격 대비 코딩 성능 벤치마크(Frontier Code, SWE, Code Arena)를 비교 지표로 활용하는 방식",
+            "LLM 제공사의 '플래그십 지연 vs 경량 모델 고빈도 출시' 전략 패턴 이해"
+        ],
+        "key_insights": [
+            "구글은 플래그십(3.5 Pro) 지연을 저가 Flash 모델의 월간 출시 캐던스로 상쇄하며, 실제로 Flash가 자사 및 경쟁사 상위 모델보다 코딩 벤치마크에서 앞서는 역전 현상 발생",
+            "Claude Code CLI(만복)가 사용하는 Sonnet 5도 Code Arena 웹개발 벤치마크에서 Gemini 3.7 Flash에 뒤처진다는 외부 평가 존재 — 가격 대비 코딩 작업 대안으로 참고 가치 있음",
+            "이 영상의 가격 정보는 '만료일이 명시된 프로모션성 수치'라는 점을 언급 — 실제 도입 검토 시 최신 공식 가격 재확인 필요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 코딩 벤치마크·가격 동향 학습 자료로 활용 가능, ⑥인프라 — Claude Code CLI(만복) 대안/보완 모델 후보로 Gemini Flash 가격·성능 참고, API 회피/저비용 구조 설계 원칙과 연관",
+        "timestamp": "2026-08-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GqGqcnJNsKI/hqdefault.jpg"
+    },
+    {
         "title": "Gemini 3.7 Flash vs DeepSeek V4 Pro (0813): Who Actually Wins Per Dollar?",
         "url": "https://www.youtube.com/watch?v=IEjylUYFLf4",
         "channel": "Cloud Codes",
