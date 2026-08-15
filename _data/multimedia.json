@@ -1,5 +1,35 @@
 [
     {
+        "title": "DeepSeek Harness Architecture: Insane Software Engineering Behind It",
+        "url": "https://www.youtube.com/watch?v=1NyOG9z9RT0",
+        "channel": "Cloud Codes",
+        "summary": "DeepSeek이 공개한 오픈소스 에이전트 프레임워크 'DeepSeek Harness'(MIT 라이선스, v0.1)를 분석한 영상으로, 공개 하루 만에 스타 7.2만 개를 받았다. 핵심 설계 철학은 '한번 모델에 전송된 대화 기록은 절대 수정하지 않고 새 줄을 append한다'는 규칙이며, 이는 프리픽스 캐싱(prefix caching)의 캐시 히트율을 극대화해 비용을 최대 120배 절감하기 위함이다.",
+        "categories": [
+            "AI 에이전트",
+            "LLM 인프라",
+            "오픈소스",
+            "프롬프트 캐싱",
+            "소프트웨어 아키텍처"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "LLM은 매 스텝마다 전체 대화(시스템 프롬프트+툴 정의+메시지 전체)를 처음부터 재전송해야 하므로, 프리픽스 캐싱 없이는 1시간 에이전트 작업 비용이 엔지니어 인건비를 초과할 수 있음 — Claude Code 등 만복의 CLI 에이전트 운영 비용 구조 이해에 참고할 만함",
+            "history immutability 원칙(전송된 메시지 수정 금지, 오류는 새 줄로 정정 append)이 캐시 히트율을 지키는 핵심 설계 규칙 — 향후 자체 에이전트/harness 설계 시 참고 가능",
+            "DeepSeek Harness는 자체 프레임워크 안에서 Claude Code, Codex를 공식 kit으로 내부 실행 가능 — 멀티 에이전트 오케스트레이션 구조 사례"
+        ],
+        "learning_related": [
+            "'Harness'(모델을 감싸 에이전트로 만드는 코드층: 루프, 툴 호출, 권한 체크, 샌드박스, 요약 등)와 '모델'(입출력만 하고 기억 없음)의 개념적 분리",
+            "72시간도 안 되는 리포지토리에 88페이지 연구 논문 + 63일간 683개 의사결정 메모(채택/기각 안 포함)를 공개한 투명한 개발 문서화 사례"
+        ],
+        "key_insights": [
+            "에이전트 프레임워크의 성능/비용은 모델 자체보다 'harness' 설계(특히 프리픽스 캐싱을 살리는 불변 히스토리 규칙)에 좌우된다",
+            "DeepSeek Harness는 오픈소스 공개 직후 폭발적 확산(하루 7.2만 스타)과 함께 AI 에이전트가 스스로 자기 개발 의사결정 메모(683개)를 작성하는 자기문서화 개발 프로세스를 보여줌"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 에이전트 harness/프리픽스 캐싱 개념은 Claude Code CLI 운영 비용·구조 이해에 학습 가치 있음, ⑤자동화 — 멀티 에이전트(Claude Code+Codex 내장) 오케스트레이션 사례, 3AI 협업 구조 설계에 참고 가능",
+        "timestamp": "2026-08-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/1NyOG9z9RT0/hqdefault.jpg"
+    },
+    {
         "title": "Run Qwen 3.8 27B Locally: Opus 4.6 max Performance on Your GPU?",
         "url": "https://www.youtube.com/watch?v=fkEfPLu4UyI",
         "channel": "Cloud Codes",
