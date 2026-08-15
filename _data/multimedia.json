@@ -1,5 +1,32 @@
 [
     {
+        "title": "Claude Skills: Build Your First AI Marketing Team in 22 Minutes (Claude Code)",
+        "url": "https://www.youtube.com/watch?v=BRAGn8m2b40",
+        "channel": "Ethan Nelson",
+        "summary": "Claude Code의 Skills 기능을 활용해 22분 만에 AI 마케팅팀을 구축하는 방법을 다루는 튜토리얼 영상으로 보입니다. 자막과 설명이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "Claude Code",
+            "AI Skills",
+            "마케팅 자동화",
+            "튜토리얼"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Skills 기능으로 다중 역할(마케팅팀) AI 에이전트 구성 가능성 시사",
+            "Claude Code 기반 실전 워크플로우 구축 사례 — 3AI 협업 체계에 참고 가능"
+        ],
+        "learning_related": [
+            "Claude Skills 문법/구조를 22분 튜토리얼로 학습 가능할 것으로 예상 (자막 없어 세부 확인 불가)"
+        ],
+        "key_insights": [
+            "제목만으로는 구체적 Skills 활용법 파악 어려움 — 자막/설명 부재로 신뢰도 낮은 요약",
+            "'AI 마케팅팀' 컨셉은 다중 Skill을 역할별로 나누는 패턴일 가능성 — 3AI(만복/코니/안티) 역할 분업과 유사한 아이디어일 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Skills 기반 멀티 에이전트(마케팅팀) 구성 방식이 3AI 협업 자동화에 참고될 수 있음",
+        "timestamp": "2026-08-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/BRAGn8m2b40/hqdefault.jpg"
+    },
+    {
         "title": "How to Use Gauntlet-Loop To Market 10X Better",
         "url": "https://www.youtube.com/watch?v=RlrqbkTChAY",
         "channel": "Ethan Nelson",
