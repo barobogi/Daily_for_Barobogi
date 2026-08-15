@@ -1,5 +1,37 @@
 [
     {
+        "title": "China's New AI Broke the Bug Bounty (2,436 Findings)",
+        "url": "https://www.youtube.com/watch?v=T3Lth8nrT_I",
+        "channel": "Cloud Codes",
+        "summary": "중국 Z.ai가 출시한 GLM 5.3이 269개 오픈소스 프로젝트에서 2,436건의 버그(평균 26.6년간 방치)를 발견했으며, 이는 새로운 사전학습이 아닌 순수 post-training 강화만으로 달성한 결과(Terminal Bench 3점수 4.6→28.3, 6배 향상). 같은 주에 Grok 4.6, DeepSeek, Gemini 3.7, Qwen 3.8까지 4개 프론티어 모델이 3일 연속 출시되며 AI 경쟁이 격화되고 있음을 보여줌.",
+        "categories": [
+            "AI모델",
+            "오픈소스보안",
+            "LLM경쟁",
+            "코드분석",
+            "Z.ai/GLM"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "GLM 5.3은 동일한 753B 파라미터 베이스(GLM 5.2와 동일)에 post-training(사후 학습)만 강화해 벤치마크 점수를 대폭 개선 — 프리트레이닝 없이도 성능 향상 가능함을 시사",
+            "GLM 5.3이 자체 코딩 벤치마크에서 Opus 4.8보다 높은 점수를 기록하면서 출력 토큰은 약 40%만 사용 — 비용 효율성 측면에서 주목할 만함",
+            "2026-08 둘째 주에만 Grok 4.6, DeepSeek 업데이트, Gemini 3.7 Flash, Qwen 3.8(2.4조 파라미터, 최초 오픈웨이트 플래그십), GLM 5.3까지 5개 모델이 연쇄 출시 — AI 랩 간 출시 경쟁 사이클이 매우 빨라짐",
+            "GLM 5.3 가중치는 2주간 비공개(세이프티 리뷰) 후 공개 예정 — '오픈소스가 정체성'인 랩도 보안 검토를 이유로 즉시 공개하지 않는 사례"
+        ],
+        "learning_related": [
+            "AI 모델을 실제 소프트웨어에 '찾아보라'고 지시하는 방식으로 45년 묵은 취약점까지 발견 — 코드가 오래 살아남은 것은 '검증됨'이 아니라 '아무도 안 봤음'을 의미할 수 있다는 인사이트",
+            "Post-training만으로 동일 베이스 모델의 벤치마크 성능을 몇 배 끌어올릴 수 있다는 사례 — 프리트레이닝 대비 비용 효율적인 성능 개선 경로"
+        ],
+        "key_insights": [
+            "'오래된 코드=안전한 코드'라는 통념이 AI 기반 자동 코드 분석으로 깨지고 있음 — 대규모 오픈소스 취약점 스캔이 실용화 단계에 진입",
+            "post-training 강화만으로 6배 벤치마크 향상이 가능하다는 것은 향후 AI 랩들의 개발 전략(재학습 vs 사후 튜닝)에 영향을 줄 수 있는 신호",
+            "일주일 새 4~5개 프론티어 모델이 동시다발 출시되는 것은 AI 랩 간 속도 경쟁이 임계점에 달했음을 보여줌 — 후발 주자는 차별화된 한 방(GLM 5.3의 버그바운티 사례)이 필요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 모델 학습 전략(post-training vs pre-training) 및 코드 취약점 분석 트렌드 파악용 참고자료, ⑤자동화 — AI 기반 자동 코드/취약점 스캔 방식은 향후 프로젝트 보안 점검 자동화에 참고 가능",
+        "timestamp": "2026-08-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/T3Lth8nrT_I/hqdefault.jpg"
+    },
+    {
         "title": "DeepSeek Harness Architecture: Insane Software Engineering Behind It",
         "url": "https://www.youtube.com/watch?v=1NyOG9z9RT0",
         "channel": "Cloud Codes",
