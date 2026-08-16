@@ -1,5 +1,31 @@
 [
     {
+        "title": "Inside X's (Twitter) Algorithm: Insane Software Engineering Behind It",
+        "url": "https://www.youtube.com/watch?v=1LOwYI_uPuw",
+        "channel": "Cloud Codes",
+        "summary": "X(Twitter)의 추천 알고리즘을 구성하는 소프트웨어 엔지니어링 요소들을 다루는 영상으로, 대규모 실시간 소셜 미디어 피드를 어떻게 랭킹·필터링하는지 기술적 관점에서 설명하는 것으로 보입니다. 자막과 설명이 제공되지 않아 상세 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "소프트웨어 엔지니어링",
+            "추천 알고리즘",
+            "빅테크 시스템 설계"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "대규모 추천 시스템의 랭킹 알고리즘 구조는 3AI 파이프라인의 콘텐츠 큐레이션/추천 로직 설계에 참고 가능"
+        ],
+        "learning_related": [
+            "X 알고리즘의 오픈소스 코드(2023년 공개된 'the-algorithm' 레포)와 연계해 실시간 랭킹 시스템 아키텍처 학습 가치 있음",
+            "대규모 트래픽 처리를 위한 후보 생성(candidate generation) → 랭킹(ranking) → 필터링 파이프라인 구조 학습 포인트"
+        ],
+        "key_insights": [
+            "소셜 미디어 피드 알고리즘은 단순 시간순이 아닌 다단계 랭킹 파이프라인(후보추출→스코어링→필터링)으로 구성됨을 시사",
+            "대규모 서비스의 실시간 개인화 엔지니어링 난이도(지연시간, 확장성)를 강조하는 영상으로 추정"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 대규모 시스템 설계/추천 알고리즘 학습 자료로 참고 가능, ⑤자동화 — 콘텐츠 추천/큐레이션 로직 설계 시 참고 가능",
+        "timestamp": "2026-08-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/1LOwYI_uPuw/hqdefault.jpg"
+    },
+    {
         "title": "This API Flaw \"Leaked\" Passwords From AI's Hidden Reasoning",
         "url": "https://www.youtube.com/watch?v=U9QxkyT4JsQ",
         "channel": "Cloud Codes",
