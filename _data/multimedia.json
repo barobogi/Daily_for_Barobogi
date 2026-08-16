@@ -1,5 +1,33 @@
 [
     {
+        "title": "How Qwen Makes Such Efficient AI Models (Qwen 3.8-27B Teardown)",
+        "url": "https://www.youtube.com/watch?v=RkmLDANXfQc",
+        "channel": "Cloud Codes",
+        "summary": "Cloud Codes 채널에서 Qwen 시리즈(3.8B~27B) 모델이 어떻게 적은 파라미터로도 효율적인 성능을 내는지 아키텍처 관점에서 분석하는 영상입니다. MoE(Mixture of Experts) 구조, 학습 데이터 품질, 파라미터 효율화 기법 등을 다룰 것으로 예상됩니다. 자막이 제공되지 않아 세부 내용은 제목 기반 추정입니다.",
+        "categories": [
+            "AI모델",
+            "오픈소스LLM",
+            "Qwen",
+            "아키텍처분석"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Qwen 계열 모델(3.8B~27B)의 효율성 확보 방식 — 로컬/저비용 AI 파이프라인 구축 시 참고 가능",
+            "소형~중형 모델로 고성능을 내는 기법은 API 비용 절감(로컬 모델 대체) 전략에 직접 활용 가능"
+        ],
+        "learning_related": [
+            "MoE(Mixture of Experts) 등 파라미터 효율화 아키텍처 이해",
+            "모델 크기 대비 성능 최적화 트레이드오프 학습"
+        ],
+        "key_insights": [
+            "자막 미제공으로 정확한 내용 파악 불가 — 제목/채널 기반 추정 요약",
+            "Qwen 모델의 효율성 원리는 향후 로컬 모델 도입 검토 시 참고 자료가 될 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Qwen 아키텍처 학습 자료로 활용 가능, ⑤자동화 — 저비용/로컬 모델 대체 검토 시 API 회피 구조 설계에 참고",
+        "timestamp": "2026-08-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/RkmLDANXfQc/hqdefault.jpg"
+    },
+    {
         "title": "Grok Bot 자동매매 법 알려드림 (자료 무료 제공)  - 그록 Bot 트레이딩",
         "url": "https://www.youtube.com/watch?v=5DmUR6kF0dM",
         "channel": "호두의 AI 분석실",
