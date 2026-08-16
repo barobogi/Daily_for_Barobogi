@@ -1,5 +1,31 @@
 [
     {
+        "title": "Does harness matter more than the model?",
+        "url": "https://www.youtube.com/watch?v=e2W5HLrj-w4",
+        "channel": "David Ondrej",
+        "summary": "제목만으로 볼 때 AI 코딩/에이전트 도구에서 '하네스(harness, 에이전트를 감싸는 실행 환경·프롬프트·툴체인 구조)'가 기반 모델(LLM) 자체보다 실제 성능과 결과물 품질에 더 큰 영향을 주는지를 다루는 영상으로 추정됩니다. 자막이 제공되지 않아 구체적 논거나 사례는 확인할 수 없습니다.",
+        "categories": [
+            "AI 에이전트",
+            "코딩 도구",
+            "LLM 비교"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 에이전트 성능이 모델 자체보다 하네스(프롬프트/툴/워크플로우 설계)에 좌우될 수 있다는 논점 — Claude Code/Antigravity 등 3AI 파이프라인 설계에 참고할 여지 있음",
+            "자막 미제공으로 실제 주장 검증 불가, 원문 시청 후 재분석 필요"
+        ],
+        "learning_related": [
+            "하네스 vs 모델 논쟁은 현재 3AI 협업 구조(만복/코니/안티) 설계 방향성과도 관련될 수 있는 주제"
+        ],
+        "key_insights": [
+            "자막 없음으로 인해 확정적 요약 불가 — 제목 기반 추정치임을 명시",
+            "필요 시 영상 직접 시청 또는 자막 재확보 후 재분석 권장"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 에이전트 하네스 설계가 3AI 자동화 파이프라인 구조 개선에 참고될 수 있음, ④공부방 — AI 에이전트/모델 아키텍처 학습 자료로 활용 가능",
+        "timestamp": "2026-08-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/e2W5HLrj-w4/hqdefault.jpg"
+    },
+    {
         "title": "Inside X's (Twitter) Algorithm: Insane Software Engineering Behind It",
         "url": "https://www.youtube.com/watch?v=1LOwYI_uPuw",
         "channel": "Cloud Codes",
