@@ -1,5 +1,35 @@
 [
     {
+        "title": "Matt Pocock Built the Skills Repo Every AI Coder Is Using",
+        "url": "https://www.youtube.com/watch?v=LMpMmOWTtVk",
+        "channel": "The Next New Thing",
+        "summary": "AI 코딩 도구 개발자 Matt Pocock이 GitHub 20만 스타를 받은 'Skills' 저장소를 소개하며, Claude Code 에이전트에게 작업을 시키기 전 목표를 정렬(align)하는 'grill me' 스킬의 활용법을 시연한다. 핵심 메시지는 코드를 바로 구현/리뷰시키기보다 사전에 AI와 요구사항을 명확히 정렬하는 단계(pre-alignment)가 결과물 품질을 크게 좌우한다는 것이다.",
+        "categories": [
+            "AI 코딩",
+            "Claude Code",
+            "생산성 도구",
+            "개발자 인터뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Matt Pocock의 Skills 저장소(GitHub 20만+ 스타)는 Claude Code용 재사용 가능한 스킬 팩 — 커스텀 스킬로 에이전트 출력 품질을 높이는 접근",
+            "'grill me' 스킬: 작업을 바로 실행시키지 않고 AI가 먼저 질문을 던져 목표·범위를 정렬(align)한 뒤 진행하는 패턴 — plan→implement→review 앞에 'align' 단계를 추가",
+            "보안 리뷰 등 비트리비얼 작업에서 사전 정렬 없이 바로 프롬프트를 던지면 결과가 부실할 수 있음을 실제 시연 (Opus 5, Claude Max 구독 사용)"
+        ],
+        "learning_related": [
+            "구현 전 AI와 '무엇을 얻고 싶은지' 먼저 합의하는 프로세스가 결과 품질 향상의 핵심",
+            "스킬(재사용 가능한 지시서/절차)을 만들어 에이전트에게 미리 로드시키는 방식이 반복 작업 품질 표준화에 유효"
+        ],
+        "key_insights": [
+            "AI 에이전트 작업의 정석 흐름은 'plan → implement → review'지만, 대부분은 그 앞의 'pre-alignment(사전 정렬)' 단계에 시간을 충분히 쓰지 않아 결과물 품질이 떨어진다.",
+            "Matt Pocock의 'grill me' 스킬은 에이전트가 작업을 시작하기 전 사용자에게 되물어 목표와 초점을 명확히 하는 방식으로, 이 정렬 과정 자체를 스킬화했다.",
+            "인터뷰어는 아이디어 단계에서는 방향을 잡기 어렵고 결과물을 직접 만져봐야 의견이 생긴다는 반론을 제기 — 이는 '충실도(fidelity)'의 문제로 연결된다."
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude Code 스킬(grill me 등) 설계 패턴은 바로보기님이 이미 운영 중인 스킬 시스템(brainstorming, writing-plans 등)과 직접 비교/벤치마크 가능, ⑤자동화 — 작업 전 목표 정렬(pre-alignment) 단계를 스킬로 표준화하는 아이디어는 3AI 협업 GPS Check(Goal+Proof+Steps) 원칙과 유사한 접근으로 참고 가치 있음",
+        "timestamp": "2026-08-17T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/LMpMmOWTtVk/hqdefault.jpg"
+    },
+    {
         "title": "Anthropic Published 186 Pages of Its Own Failures",
         "url": "https://www.youtube.com/watch?v=ci-0ahyWQRA",
         "channel": "Cloud Codes",
