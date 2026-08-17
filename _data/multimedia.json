@@ -1,5 +1,38 @@
 [
     {
+        "title": "The Week Open Source Won: 7 Open Models in 7 Days",
+        "url": "https://www.youtube.com/watch?v=Spjxg9Gwq5I",
+        "channel": "Cloud Codes",
+        "summary": "일주일 사이 Meta, Nvidia, Alibaba(Qwen), DeepSeek, Z.ai, Red Note 등이 연이어 오픈소스 프론티어급 모델을 공개한 사건을 다룸. Hugging Face의 'State of Open Models' 리포트를 근거로 다운로드 수보다 '파생 모델 수'가 생태계 영향력의 진짜 지표이며, Qwen이 15만 개 이상의 파생 모델로 압도적 우위를 점했다는 점을 강조.",
+        "categories": [
+            "AI",
+            "오픈소스",
+            "LLM",
+            "산업동향"
+        ],
+        "stock_related": [
+            "이번 주 AI 업계에서 600억 달러 규모의 자금이 이동했으나 대부분 '모델 구매'가 아닌 다른 곳(인프라·인재·인수 등)에 쓰였다는 언급 — AI 밸류체인에서 모델 자체보다 배포/서빙/하네스 레이어가 수익화 지점이 될 수 있음을 시사"
+        ],
+        "ai_related": [
+            "Qwen(Alibaba) 계열 모델이 다운로드 수뿐 아니라 파생 모델(derivative) 수에서 Google 대비 2.6배, Meta 전체 대비 압도적 우위 — 실제 생태계 채택 지표로는 다운로드보다 파생작 수가 더 정확",
+            "중국 랩들이 20B+ 파라미터 모델의 59%를 Apache, 22%를 MIT 라이선스로 공개하며 상업적 제약 없는 오픈웨이트 전략을 취함 — 미국 오픈소스 진영(130B 이하 유지)과 파라미터 규모 격차가 커지는 중",
+            "Alibaba의 27B Dense Apache 모델이 SWE-bench Pro에서 Opus 4.6을 8.3점 앞서면서도 4bit 양자화 시 17GB로 소비자 GPU에서 구동 가능 — '작지만 강한' 오픈모델이 실질적 경쟁력 확보",
+            "DeepSeek이 1.6조 파라미터 모델을 MIT 라이선스로 공개한 지 90분 만에 벤치마크 실행에 쓴 하네스(harness)까지 오픈소스화 — 모델 자체보다 평가/실행 파이프라인의 개방이 다음 경쟁 지점이 될 가능성"
+        ],
+        "learning_related": [
+            "오픈모델 생태계 영향력 평가 시 '다운로드 수' 단일 지표의 함정(작은 모델일수록 다운로드 유리)과 '파생 모델 수'라는 대안 지표의 유용성",
+            "벤치마크 수치는 모두 벤더 자체 채점(vendor grading its own homework)이라는 점을 항상 감안해야 한다는 리마인더"
+        ],
+        "key_insights": [
+            "일주일 사이 4개 중국 랩(Meta 제외, Meta는 미국)이 연쇄적으로 오픈웨이트 프론티어 모델을 출시하며 오픈소스 AI 경쟁의 중심축이 이동 중",
+            "가중치(weights)와 최상급 하네스까지 무료로 풀리면서, 순수 모델 자체보다 그 위에 무엇을 쌓느냐(서빙, 파인튜닝, 애플리케이션)가 새로운 수익화 지점으로 부상",
+            "Google Gemini처럼 성능은 앞서지만 다운로드 불가한 폐쇄형 모델과, 다운로드 가능한 오픈모델 간의 '접근성 격차'가 이번 주 서사의 핵심 축"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 오픈소스 LLM 생태계 동향(라이선스, 파생모델 지표) 학습 자료로 활용 가능, ⑤자동화 — Qwen/DeepSeek 등 저비용·오픈 라이선스 모델을 API 회피 구조(무료 우회) 설계에 검토 가능",
+        "timestamp": "2026-08-17T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Spjxg9Gwq5I/hqdefault.jpg"
+    },
+    {
         "title": "Matt Pocock Built the Skills Repo Every AI Coder Is Using",
         "url": "https://www.youtube.com/watch?v=LMpMmOWTtVk",
         "channel": "The Next New Thing",
