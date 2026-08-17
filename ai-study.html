@@ -275,6 +275,43 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
+             data-id="20260817-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">실시간 3AI 협업 — 네트워크마운트 DB 유실 + 자동전송을 UI Automation으로 해결</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+원격 세션의 SQLite WAL 직접쓰기가 데이터를 계속 잃어버리던 문제와, 자동화 Enter가 전송을 못 시키던 문제를 각각 파일 스풀 릴레이 + UI Automation(접근성 API)으로 해결했다.
+
+🗂️ 전체 구조
+[코니: 원격 세션] → JSON 파일 드롭 → [spool/] → 호스트 워처 감지 → [SQLite DB]
+[호스트 워처] → 1초마다 스냅샷 export → [latest_snapshot.json] → 읽기 → [코니]
+[mcp_server.py] → UI Automation(SetValue+Invoke) → [대상 AI 창]
+
+🔑 핵심 기술 1 — SQLite WAL은 네트워크 파일시스템에서 못 쓴다
+SQLite 공식 문서: WAL 모드는 모든 프로세스가 같은 머신의 공유메모리(-shm)를 써야 안전. 네트워크 마운트를 넘으면 데이터 유실. 원격 세션은 SQLite를 절대 직접 열지 않고, 일반 파일(원자적 write-then-rename)만 주고받는 구조로 우회.
+
+🔑 핵심 기술 2 — 앱이 합성 키 입력을 거부하면 UI Automation
+클립보드 붙여넣기+자동 Enter 4가지 방식(표준/이중시도/Ctrl+Enter/하드웨어 스캔코드)이 전부 실패했다. 사람이 누른 진짜 Enter만 성공 — 신뢰된(trusted) OS 입력만 받아들이는 구조로 추정. pywinauto(Windows UI Automation)로 전환해서, 입력창에 SetValue로 값을 직접 넣고 전송 버튼을 Invoke()로 직접 호출 — 키보드 시뮬레이션이 아니라 앱의 접근성 트리를 통한 정식 경로라 100% 성공.
+
+⚠️ 주의사항 / 함정
+- 대상 앱마다 컨트롤 이름이 다르고 불안정함(입력창 접근성 이름이 내용에 따라 바뀜) — title 매칭 대신 "마지막 Edit/Button 컨트롤" 같은 위치 기반 매칭이 더 안정적인 경우가 있음.
+- 창을 제목 문자열로만 찾으면 안 됨 — 콘솔 로그 창이나 대화주제 기반 제목(앱 이름이 아예 안 들어있는 경우)에 오매칭되는 사고가 3번 발생. 프로세스 실행파일명으로 이중검증 필수.
+- 자동응답 봇(다른 AI 이름을 사칭해 대신 답하는 방식)은 오늘 하루 여러 번 만들었다가 전부 폐기 — "빠르게 자동화하고 싶은 유혹"이 "누가 진짜 말했는가"를 흐리는 게 제일 큰 리스크였음.
+
+💡 배운 점
+1. 키보드/마우스 흉내가 안 먹히면, 더 정교한 흉내를 시도하기보다 접근성 API로 완전히 다른 경로를 타는 게 낫다.
+2. "성공했다"는 표본 1~4건으로는 단정하지 말 것 — 실제로 오늘 "완전 해결" 선언이 성급했던 사례가 여러 번 나왔고, 매번 직접 재검증해서 걸러냈다.
+
+🌱 성장 관점
+이 패턴(합성 입력 필터 → UI Automation 우회)은 3AI 프로젝트를 넘어 어떤 데스크톱 앱 자동화에도 적용 가능하다. 특히 "이 앱이 봇을 막으려 한다"는 신호(자동화는 성공 로그를 남기는데 앱엔 변화가 없음)를 알아채는 게 핵심 — 더 정교한 가짜 입력을 만들기보다 pywinauto로 실제 접근성 트리부터 덤프해보는 습관을 들이면 훨씬 빨리 답이 나온다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.08.17 · #3AI #실시간채팅 #UIAutomation #SQLite</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
              data-id="20260726-6"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
