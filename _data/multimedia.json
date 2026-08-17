@@ -1,5 +1,35 @@
 [
     {
+        "title": "Extract Text From Giant PDFs Instantly With This Free AI Tool!",
+        "url": "https://www.youtube.com/watch?v=wiplFT84U1Q",
+        "channel": "The Next New Thing",
+        "summary": "Unlimited OCR by Dudes라는 무료 AI OCR 모델이 긴 PDF 문서를 한 번에 처리할 수 있다는 내용을 소개하는 영상입니다. DeepSeek OCR 기반이지만 슬라이딩 윈도우 어텐션 방식을 사용해 문서가 길어져도 속도 저하 없이 일정한 성능(RTX 3090 Ti 기준 초당 약 90토큰)을 유지하는 것이 특징입니다.",
+        "categories": [
+            "AI도구",
+            "OCR",
+            "PDF처리",
+            "오픈소스AI"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "DeepSeek OCR를 기반으로 슬라이딩 윈도우 어텐션 방식을 적용해 문서 길이에 따른 연산량 증가(quadratic complexity) 문제를 해결한 사례",
+            "긴 PDF/복잡한 레이아웃 문서 OCR 자동화에 활용 가능 (단, Nvidia GPU 필요)",
+            "RTX 3090 Ti 기준 초당 약 90토큰 처리 속도 확인됨 — 로컬 실행 가능한 무료 OCR 대안"
+        ],
+        "learning_related": [
+            "일반 어텐션은 문서가 길어질수록 연산량이 quadratic하게 증가해 느려지지만, 슬라이딩 윈도우 어텐션은 일정한 연산량을 유지해 VRAM 사용량과 속도가 안정적",
+            "Hugging Face에 공개된 모델로 로컬(Nvidia GPU) 환경에서 실행 가능"
+        ],
+        "key_insights": [
+            "긴 문서 OCR에서 속도 저하 없이 일관된 처리량을 내는 것이 슬라이딩 윈도우 어텐션의 핵심 장점",
+            "무료·오픈소스 OCR 대안으로 유료 API 없이 로컬 GPU만으로 대용량 PDF 텍스트 추출 가능",
+            "레이아웃이 복잡한 문서(표, 이미지 혼재 등)에서도 성능이 양호하다고 언급됨"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 무료 로컬 OCR로 PDF 텍스트 추출 자동화 파이프라인에 활용 가능, API 회피 원칙과 부합, ④공부방 — 슬라이딩 윈도우 어텐션 개념 학습 포인트 (DeepSeek OCR 응용 사례)",
+        "timestamp": "2026-08-17T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/wiplFT84U1Q/hqdefault.jpg"
+    },
+    {
         "title": "The Week Open Source Won: 7 Open Models in 7 Days",
         "url": "https://www.youtube.com/watch?v=Spjxg9Gwq5I",
         "channel": "Cloud Codes",
