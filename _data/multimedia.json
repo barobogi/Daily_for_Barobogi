@@ -1,5 +1,39 @@
 [
     {
+        "title": "You Can't Afford Local AI: NO Affordable RAM Until 2027 & Beyond",
+        "url": "https://www.youtube.com/watch?v=3y9Qs1HZiv0",
+        "channel": "Cloud Codes",
+        "summary": "AI 수요 폭증으로 DRAM/NAND 메모리 가격이 단기간에 3~4배 폭등하며, Framework 미니PC(128GB 모델 $1999→$3449), Xbox, Raspberry Pi, 샤오미 스마트폰 등 소비자 전자기기 가격까지 연쇄 상승하고 있음을 보여준다. 삼성전자는 이 메모리 슈퍼사이클 덕분에 모바일 사업부 적자에도 불구하고 사상 최대 분기 영업이익(89.5조원, 메모리 사업부 마진 약 70%)을 기록했다.",
+        "categories": [
+            "반도체",
+            "AI하드웨어",
+            "메모리가격",
+            "삼성전자",
+            "로컬AI"
+        ],
+        "stock_related": [
+            "삼성전자 메모리 사업부가 분기 영업이익 89.2조원(전체 89.5조원 중 대부분), 약 70% 영업마진 기록 — DRAM/HBM 슈퍼사이클 수혜 확인 사례",
+            "DDR5 32GB 키트 가격이 $95에서 $380~590로, DDR4 1GB 스팟가격이 2025년 11월 $12.18에서 2026년 8월 $42.45(+249%)로 급등 — 메모리 반도체 업황 강세 지속 시그널",
+            "GDDR6 소비자용 그래픽 메모리도 $2.50/GB에서 $7.50/GB로 급등, Nvidia가 올해만 보드 파트너 공급가를 3차례 인상 — 메모리 관련주(삼성전자·SK하이닉스·마이크론) 추가 강세 가능성 시사"
+        ],
+        "ai_related": [
+            "로컬 AI 구동용 미니PC(Framework 128GB 모델)가 메모리값 폭등으로 1년 만에 72% 가격 인상 — 로컬 LLM 구동 진입장벽이 하드웨어 비용 측면에서 크게 높아짐",
+            "메모리 품귀가 2027년까지 지속될 것으로 전망되어(Xbox 제조사 마이크로소프트 언급) 온디바이스/로컬 AI 하드웨어 구매 타이밍에 유의할 필요"
+        ],
+        "learning_related": [
+            "TrendForce 등에서 공개하는 DRAM/NAND 스팟가격 데이터를 통해 메모리 반도체 업황을 정량적으로 추적하는 방법",
+            "AI 데이터센터 수요가 소비자 하드웨어(PC, 콘솔, 라즈베리파이, 스마트폰) 가격에 어떻게 연쇄적으로 전이되는지 보여주는 공급망 사례"
+        ],
+        "key_insights": [
+            "AI 붐의 진짜 수혜자는 GPU가 아니라 메모리(DRAM/NAND) 제조사이며, 삼성전자 실적이 이를 극명하게 증명함(모바일 적자 vs 메모리 70% 마진)",
+            "로컬 AI를 저렴하게 돌릴 수 있는 시대는 끝났다는 주장 — 메모리 부족은 최소 2027년까지 구조적으로 지속될 전망",
+            "메모리값 급등의 파급효과가 데이터센터를 넘어 일반 소비자 전자제품(폰, 콘솔, 미니PC, 라즈베리파이) 전반의 가격 인상으로 확산 중"
+        ],
+        "memo": "📋 뿌리체계: ⑦재테크 — 삼성전자 메모리 사업부 실적 및 DRAM/NAND 가격 급등 데이터, 반도체 관련주 투자 판단 참고 자료, ⑥인프라 — 로컬 AI 서버/미니PC 하드웨어 구매 비용 상승 관련, 향후 인프라 투자 계획 시 참고",
+        "timestamp": "2026-08-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/3y9Qs1HZiv0/hqdefault.jpg"
+    },
+    {
         "title": "DeepSeek Harness Architecture: The Hidden Engine Underneath.",
         "url": "https://www.youtube.com/watch?v=KmA1kNI_oEE",
         "channel": "Cloud Codes",
