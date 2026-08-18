@@ -1,5 +1,36 @@
 [
     {
+        "title": "DeepSeek Harness Architecture: The Hidden Engine Underneath.",
+        "url": "https://www.youtube.com/watch?v=KmA1kNI_oEE",
+        "channel": "Cloud Codes",
+        "summary": "DeepSeek이 공개한 코딩 에이전트 하니스가 4일 만에 13만 스타를 넘기며 화제가 됐지만, 실제 핵심 엔진인 'Cordis'는 DeepSeek이 만든 것이 아니라 2022년부터 존재한 챗봇 플러그인 프레임워크(Koishi에서 파생)라는 점을 지적하는 영상. 537/550 커밋이 한 명(Tianyi Cui)에게서 나왔고, 하니스 공개 84분 전 같은 조직에 관련 논문이 올라온 점 등을 근거로 이 출시가 사전에 조율된 것일 가능성을 제기한다.",
+        "categories": [
+            "AI",
+            "오픈소스",
+            "코딩 에이전트",
+            "DeepSeek",
+            "기술분석"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "DeepSeek의 코딩 에이전트 하니스가 'Everything is a plugin' 아키텍처(모델 어댑터, 툴, 스킬, 세션, 샌드박스, 스토리지, 스케줄링, 인터페이스 전부 플러그인화)로 설계됨",
+            "핵심 커널인 Cordis는 원래 챗봇/디스코드봇용 프레임워크(Koishi)에서 파생된 별개 오픈소스 프로젝트로, DeepSeek 소속이 아님",
+            "대형 AI랩의 신규 프로젝트가 검증된 소규모 오픈소스 인프라 위에 세워지는 사례 — 오픈소스 생태계 재활용/기여 귀속 이슈"
+        ],
+        "learning_related": [
+            "레포지토리 화제성(스타 수)만 보고 판단하지 말고 커밋 히스토리, 의존성 매니페스트, 컨트리뷰터 분포까지 확인하는 실사(due diligence) 방법론",
+            "'MIT 라이선스 + README 한 줄'처럼 겉보기 정보가 부족할 때 package.json/dependency 파일에서 실제 계보를 추적하는 기법"
+        ],
+        "key_insights": [
+            "화제의 신규 오픈소스 프로젝트도 실제로는 훨씬 오래되고 덜 알려진 기존 프레임워크 위에 얹혀 있을 수 있으므로, 표면적 발표보다 의존성/커밋 이력 검증이 중요",
+            "출시 84분 전 관련 논문 게시, 최대 기여자가 논문 공저자인 점 등은 대형 랩의 오픈소스 발표가 사전 조율된 마케팅일 가능성을 시사",
+            "코딩 에이전트류 프로젝트를 스터디/도입 검토할 때는 발표사 단독 개발인지, 실제로는 커뮤니티 프레임워크를 재포장한 것인지 구분해서 평가할 필요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 코딩 에이전트 아키텍처 및 오픈소스 실사 방법론 학습 자료로 참고 가능, ⑤자동화 — 플러그인 기반 에이전트 하니스 설계 패턴, 향후 3AI 파이프라인 자동화 참고 사례",
+        "timestamp": "2026-08-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/KmA1kNI_oEE/hqdefault.jpg"
+    },
+    {
         "title": "AI가 이제 카메라도 컨트롤 할 수 있네?",
         "url": "https://www.youtube.com/watch?v=3DxWtPhElBs",
         "channel": "호두의 AI 분석실",
