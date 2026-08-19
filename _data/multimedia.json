@@ -1,5 +1,37 @@
 [
     {
+        "title": "Can You Fine-Tune a 27B Model on a Laptop? (I Did the Math)",
+        "url": "https://www.youtube.com/watch?v=XcniP0CD-bs",
+        "channel": "Cloud Codes",
+        "summary": "노트북 RTX 4090(16GB)과 데스크톱 RTX 4090(24GB)의 VRAM 차이에서 출발해, 270억 파라미터 모델을 노트북에서 파인튜닝할 수 있는지 계산으로 검증하는 영상입니다. 풀 파인튜닝은 파라미터당 18바이트(486GB)가 필요해 불가능하지만, QLoRA(4비트 양자화 + LoRA 어댑터)를 쓰면 프리즌된 베이스 모델에 그래디언트/옵티마이저 상태가 없어져 훨씬 적은 메모리로 가능해진다는 점을 수치로 설명합니다.",
+        "categories": [
+            "AI/LLM",
+            "파인튜닝",
+            "하드웨어",
+            "머신러닝 최적화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "QLoRA(Dettmers et al., 2023): 650억 파라미터 모델을 780GB+ → 48GB(단일 GPU)로 줄이는 4비트 양자화 + LoRA 어댑터 기법",
+            "풀 파인튜닝 메모리 공식: Mixed precision + AdamW 기준 파라미터당 18바이트(가중치 6 + 옵티마이저 상태 8 + 그래디언트 4) 필요",
+            "프리즌된 베이스 모델은 그래디언트/옵티마이저 상태가 없어 메모리 부담 대부분(18바이트 중 12바이트)이 사라짐 — LoRA 어댑터만 학습",
+            "27B 체크포인트 55.5GB 대비 어댑터는 수십 MB 수준으로, 결과물 배포·공유가 매우 가벼워짐",
+            "실제 병목은 4비트 가중치가 아니라 배치 크기·시퀀스 길이에 비례하는 activation 메모리라는 점을 지적"
+        ],
+        "learning_related": [
+            "모델을 '실행'하는 것과 '학습'시키는 것은 메모리 요구량이 완전히 다른 작업이라는 개념 정리",
+            "QLoRA의 3대 핵심 기법: bell-curve 분포에 최적화된 4비트 포맷(NF4), 이중 양자화(quantization constants 재양자화), paged optimizer(메모리 스파이크 방지)"
+        ],
+        "key_insights": [
+            "270억 파라미터 모델의 풀 파인튜닝은 노트북(16GB)은커녕 데스크톱(24GB) GPU로도 불가능(486GB 필요) — 30장의 노트북 GPU가 필요한 규모",
+            "QLoRA는 '대부분의 모델을 학습시키지 않는다'는 발상 전환으로 메모리 요구량을 극적으로 줄여 소비자급 하드웨어에서의 파인튜닝을 실질적으로 가능하게 함",
+            "많은 튜토리얼이 간과하는 지점: 4비트 양자화로 가중치 메모리는 줄여도 activation 메모리(배치/시퀀스 길이 의존)는 그대로 남아 실제 병목이 될 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — QLoRA/파인튜닝 메모리 계산 원리, 로컬 LLM 파인튜닝 인프라 설계 시 참고 가능, ⑤자동화 — 향후 로컬 모델 파인튜닝을 API 회피(비용 0원) 구조로 활용할 경우 근거 자료로 참고",
+        "timestamp": "2026-08-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/XcniP0CD-bs/hqdefault.jpg"
+    },
+    {
         "title": "I Opened a New AI Model's Config File. Every Line Was a Paper",
         "url": "https://www.youtube.com/watch?v=-vJZByDDvUc",
         "channel": "Cloud Codes",
