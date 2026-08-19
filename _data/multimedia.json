@@ -1,5 +1,36 @@
 [
     {
+        "title": "I Opened a New AI Model's Config File. Every Line Was a Paper",
+        "url": "https://www.youtube.com/watch?v=-vJZByDDvUc",
+        "channel": "Cloud Codes",
+        "summary": "채널 'Cloud Codes'가 최신 오픈소스 모델(가상의 'QWin 3.8', 2.4조 파라미터, MoE 아키텍처)의 config.json 설정값 하나하나를 실제 논문 계보와 연결해 해설하는 영상입니다. num_experts(MoE, 2017년 논문), rope_theta, GQA(num_key_value_heads), use_cache 같은 설정이 서빙 비용·컨텍스트 길이·GPU당 수용 유저 수를 좌우한다고 설명하며, RLHF의 기원인 Christiano et al.(2017)과 Attention Is All You Need가 같은 날 33분 간격으로 발표됐다는 일화, InstructGPT(2022)의 '1.3B 모델이 175B GPT-3를 이긴' 결과를 핵심 사례로 제시합니다.",
+        "categories": [
+            "AI모델아키텍처",
+            "LLM인프라비용",
+            "논문리뷰",
+            "MoE/RLHF"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "config.json의 설정값(num_experts, rope_theta, num_key_value_heads/GQA, use_cache)이 곧 서빙 비용·컨텍스트 길이·GPU당 동시접속자 수를 결정 — 모델 선정/자체 호스팅 비용 추정 시 이 4개 파라미터를 우선 체크하는 것이 실전적",
+            "RLHF의 원류는 Christiano et al. 2017 'Deep RL from Human Preferences' — 사람이 두 클립 중 선호를 고르는 것만으로 보상모델을 학습(전체 상호작용의 1% 미만 피드백, 약 1시간 인력)한 방식이 현재 모든 모델카드의 RLHF로 이어짐",
+            "InstructGPT(2022) 사례: 1.3B 파라미터 모델이 175B GPT-3보다 사람 평가에서 선호됨 — 파라미터 규모보다 정렬(alignment) 품질이 실사용 품질을 좌우한다는 근거로, 자체 모델/에이전트 설계 시 '더 큰 모델' 대신 '더 잘 정렬된 작은 모델' 옵션을 검토할 근거가 됨"
+        ],
+        "learning_related": [
+            "MoE(Mixture-of-Experts): 전체 512개 전문가 중 토큰당 10개만 활성화되는 구조 — 이 아이디어의 뿌리는 Transformer 논문보다도 이전인 2017년 이전 문헌",
+            "GQA(Grouped Query Attention)에서 query head 64개 대비 key/value head 4개로 줄이는 것이 추론 비용(캐시 메모리)을 크게 낮추는 핵심 트릭",
+            "영상이 11개 핵심 논문 중 '비용/컨텍스트/GPU 수용량을 결정하는 4개'와 '흥미롭지만 급하지 않은 7개'를 구분해 읽기 우선순위를 제시하는 방식 — 논문 리딩리스트 구성 시 참고할 프레임"
+        ],
+        "key_insights": [
+            "모델의 config.json 한 줄 한 줄이 실제로는 개별 연구 논문의 결론이며, 이를 읽을 줄 알면 모델 카드만으로 서빙 비용과 성능 트레이드오프를 추정할 수 있다",
+            "AI 업계의 근본 동력은 지난 9년간 반복된 단 하나의 불만, '이거 돌리기엔 너무 비싸다(too expensive to run)'였고 MoE/GQA/RLHF 등은 모두 그 해결책",
+            "Attention Is All You Need와 RLHF의 시초 논문이 2017년 6월 12일 33분 간격으로 나란히 발표됐다는 사실은, '모델(엔진)'과 '정렬(조향장치)'이 처음부터 쌍으로 발전해왔음을 상징"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 아키텍처(MoE, GQA, RLHF) 및 관련 논문 계보 학습 자료로 활용 가능, ③지식관리 — config.json 파라미터별 논문 매핑 정보를 향후 모델 선정/비용 추정 레퍼런스로 축적 가치",
+        "timestamp": "2026-08-18T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/-vJZByDDvUc/hqdefault.jpg"
+    },
+    {
         "title": "Programmatic Tool Calling: The Architecture Replacing JSON Function Calls",
         "url": "https://www.youtube.com/watch?v=EjDN2EX2lOE",
         "channel": "Cloud Codes",
