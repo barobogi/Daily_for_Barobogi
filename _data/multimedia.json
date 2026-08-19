@@ -1,5 +1,34 @@
 [
     {
+        "title": "He earns $5k building agents",
+        "url": "https://www.youtube.com/watch?v=FIhj0yb9KPI",
+        "channel": "The Next New Thing",
+        "summary": "AI 에이전트 빌더가 기업에게 월 5,000달러를 받고 에이전트를 만들어주는 방법을 다룬 영상. 컴퓨터를 조작하는 AI 에이전트(Orgo, OpenClaw, Hermes 등)를 직접 시연해 고객의 이해를 끌어내는 것이 핵심 세일즈 전략으로 소개된다.",
+        "categories": [
+            "AI 에이전트",
+            "비즈니스/세일즈",
+            "컴퓨터 사용 AI",
+            "스타트업"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Orgo: 에이전트(및 인간)에게 가상 컴퓨터를 즉시 스핀업해주는 서비스 — 컴퓨터 조작형 AI 에이전트의 인프라 계층",
+            "고객에게 AI 에이전트를 파는 핵심은 '설명'이 아니라 '컴퓨터를 실제로 조작하는 모습을 직접 보여주는 것' — 챗 인터페이스보다 컴퓨터 유즈 데모가 설득력 높음",
+            "창업자는 오디언스 없이 개인적으로 기업 대상 AI 에이전트 구축 서비스를 제공해 첫 달에 7,000달러를 벌었고, 이후 Orgo 공동창업으로 전환한 사례"
+        ],
+        "learning_related": [
+            "Computer-use agent(OpenClaw, Hermes 등)의 세일즈 데모 방식: 브라우저 열기 → 검색 → 에이전트가 직접 클릭/타이핑하는 과정을 실시간으로 시연"
+        ],
+        "key_insights": [
+            "AI 에이전트를 기업에 파는 가장 효과적인 방법은 '컴퓨터를 실제로 조작하는 에이전트'를 라이브로 보여주는 것 — 추상적 설명보다 시각적 임팩트가 구매 결정을 이끔",
+            "1인 개발자가 오디언스 없이도 기업 대상 AI 에이전트 커스텀 구축으로 월 7K 매출을 낸 뒤, 이를 인프라 SaaS(Orgo)로 피벗한 성장 경로",
+            "Orgo는 에이전트뿐 아니라 인간 사용자도 함께 쓰는 '온디맨드 가상 컴퓨터' 포지셔닝으로 시장을 넓히고 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 컴퓨터 사용 AI 에이전트 및 기업 대상 자동화 세일즈 모델 참고 가능",
+        "timestamp": "2026-08-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/FIhj0yb9KPI/hqdefault.jpg"
+    },
+    {
         "title": "This FREE Tool Replaces Claude Code (Any AI Model)",
         "url": "https://www.youtube.com/watch?v=Dck0Bnm-3Ug",
         "channel": "The Next New Thing",
