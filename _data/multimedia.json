@@ -1,5 +1,34 @@
 [
     {
+        "title": "This FREE Tool Replaces Claude Code (Any AI Model)",
+        "url": "https://www.youtube.com/watch?v=Dck0Bnm-3Ug",
+        "channel": "The Next New Thing",
+        "summary": "터미널 기반 오픈소스 AI 코딩 에이전트를 소개하는 영상으로, 특정 모델 제공사에 종속되지 않고 Anthropic, OpenAI, Deepseek 등 수백 개 모델을 API 키만 넣으면 자유롭게 전환하며 사용할 수 있다는 점이 핵심 셀링포인트다. Claude Code와 유사한 UX를 제공하면서도 완전 오픈소스라는 점에서 비용 관리와 모델 선택의 유연성을 원하는 개발자들에게 어필한다고 평가한다.",
+        "categories": [
+            "AI 코딩툴",
+            "오픈소스",
+            "터미널 에이전트",
+            "멀티모델"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code 대체 가능한 오픈소스 터미널 AI 코딩 에이전트 — 특정 모델에 종속되지 않고 자체 API 키로 Anthropic/OpenAI/Deepseek 등 수백 개 모델 전환 가능",
+            "오픈소스이기 때문에 비용 통제(API 회피/최적화)와 커스텀 모델 적용이 용이 — 만복 CLAUDE.md의 'API 회피 우선, 비용 0원 구조' 원칙과 맞닿아 있음",
+            "UX 완성도가 Claude Code에 필적한다는 평가 — Linux/오픈소스 지향 개발자들 사이에서 화제"
+        ],
+        "learning_related": [
+            "멀티모델 지원 아키텍처(모델 제공사 추상화) 방식이 어떻게 구현되는지 살펴볼 가치 있음"
+        ],
+        "key_insights": [
+            "Claude Code와 유사한 경험을 제공하면서 모델 종속성이 없는 오픈소스 대안이 개발자 커뮤니티에서 부상 중",
+            "API 키만 교체하면 여러 모델(Anthropic/OpenAI/Deepseek 등)을 자유롭게 오갈 수 있어 비용/성능 최적화에 유리",
+            "완전 오픈소스라는 점이 Linux/오픈소스 지향 사용자층에게 특히 매력적으로 작용"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 코딩 에이전트/CLI 자동화 툴 트렌드 파악, 만복(Claude Code)과의 비교·대체 가능성 검토, ⑥인프라 — 비용 0원(API 회피) 구조 설계 시 참고할 수 있는 멀티모델 전환 아키텍처 사례",
+        "timestamp": "2026-08-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Dck0Bnm-3Ug/hqdefault.jpg"
+    },
+    {
         "title": "Claude's Invisible Watermark in 6 Minutes (Everything You Need to Know)",
         "url": "https://www.youtube.com/watch?v=GwWXIaMEV_k",
         "channel": "Ethan Nelson",
