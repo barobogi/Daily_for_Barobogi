@@ -1,5 +1,36 @@
 [
     {
+        "title": "Claude's Invisible Watermark in 6 Minutes (Everything You Need to Know)",
+        "url": "https://www.youtube.com/watch?v=GwWXIaMEV_k",
+        "channel": "Ethan Nelson",
+        "summary": "EU AI Act 규제에 따라 Anthropic이 Claude 모델에 SynthID 기반의 보이지 않는 워터마크를 도입한다는 내용을 다룬 영상입니다. 이 워터마크는 토큰 생성 시 확률 분포를 미세하게 조정하는 방식으로 작동하며, 2026년 8월 2일 이후 출시되는 모델부터 적용되고 향후 기존 모델에도 소급 적용될 예정입니다.",
+        "categories": [
+            "AI",
+            "Claude",
+            "워터마크",
+            "규제",
+            "SynthID"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude(및 OpenAI, Microsoft 등 EU AI Act 서명 기업들)가 AI 생성 텍스트에 Google DeepMind의 SynthID 기반 워터마크를 적용 예정",
+            "워터마크는 단일 복호화 키가 아니라 토큰 생성 확률 분포를 미세 조정하는 패턴 기반 방식(예: 동의어 중 특정 단어를 통계적으로 더 자주 선택)이라 특정 방법으로 우회하기 어려움",
+            "2026년 8월 2일 이후 출시 모델부터 적용, 현재까지 해당일 이후 신규 모델 없어 아직 미적용 상태이며 기존 모델에도 소급 적용 예정"
+        ],
+        "learning_related": [
+            "AI 텍스트 워터마킹 원리: 모델이 다음 토큰을 선택할 때 확률이 높은 후보들(예: mango 문장에서 banana vs airplane) 사이의 확률 점수를 미세하게 조정해 특정 단어 선택 빈도를 통계적으로 편향시킴으로써 검출 가능한 패턴을 심는 방식",
+            "오디오 워터마킹 유사 사례: AI 생성 음성에서 인간 청각으로는 감지 불가능한 미세한 변형을 넣어 컴퓨터 분석으로만 검출 가능하게 함(SynthID 오디오 방식과 동일 원리)"
+        ],
+        "key_insights": [
+            "AI 생성 콘텐츠 워터마킹이 EU AI Act 규제 준수 목적으로 업계 전반(Anthropic, OpenAI, Microsoft)에 표준화되고 있음",
+            "워터마크는 사후 삽입이 아니라 모델 출력 확률 분포 자체를 조정하는 방식이라 탐지 회피가 구조적으로 어려움",
+            "현재(2026-08-19 기준) 실제로 워터마크가 적용된 Claude 모델은 아직 없으며, 8월 2일 이후 신모델부터 적용 예정 — 코드 생성물에 대한 영향 여부는 영상 후반부(제공된 자막 이후)에서 다뤄질 것으로 보임"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Claude/Anthropic 정책 변화(워터마킹) 트렌드 파악용 학습 자료, ⑤자동화 — 향후 3AI 파이프라인에서 생성 콘텐츠(대본·자막)의 AI 워터마킹 여부가 저작권/오리지널리티 판단에 영향 줄 수 있어 모니터링 필요",
+        "timestamp": "2026-08-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GwWXIaMEV_k/hqdefault.jpg"
+    },
+    {
         "title": "Can You Fine-Tune a 27B Model on a Laptop? (I Did the Math)",
         "url": "https://www.youtube.com/watch?v=XcniP0CD-bs",
         "channel": "Cloud Codes",
