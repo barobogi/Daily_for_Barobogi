@@ -1,5 +1,35 @@
 [
     {
+        "title": "Claude Design Finally Got a MASSIVE Upgrade … I'm Done",
+        "url": "https://www.youtube.com/watch?v=toS49wmACrE",
+        "channel": "Ethan Nelson",
+        "summary": "Anthropic 엔지니어 출신 투자자 Matt Shumer가 고안한 'Gauntlet Loop' 프롬프팅 기법을 소개하는 영상으로, Builder 에이전트가 결과물을 만들고 Critic 에이전트가 블라인드로 평가·개선점을 지적하는 과정을 반복해 퀄리티를 끌어올리는 방식이다. Claude Code에 커뮤니티 스킬로 설치해 유튜브 썸네일, 인스타 카드뉴스, 랜딩페이지 등 마케팅 디자인을 원샷 프롬프트로 반복 개선 제작하는 데 활용하는 실습을 보여준다.",
+        "categories": [
+            "Claude Code",
+            "AI 프롬프팅",
+            "디자인 자동화",
+            "마케팅"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Gauntlet Loop: Builder 에이전트(생성) + Critic 에이전트(블라인드 평가·비교)가 루프를 돌며 결과물 퀄리티를 자동으로 끌어올리는 멀티 에이전트 프롬프팅 패턴",
+            "Claude Code에 커뮤니티 스킬(Skill)을 PDF/텍스트로 복사해 설치 후 슬래시 커맨드(/marketing design loop)로 즉시 호출하는 워크플로우",
+            "레퍼런스 이미지(템플릿)를 주고 원샷 프롬프트로 동일 스타일의 디자인을 반복 생성·개선하는 방식"
+        ],
+        "learning_related": [
+            "Claude Desktop 'Code' 탭에서 로컬 폴더를 선택해 스킬을 설치하고 테스트하는 절차",
+            "블라인드 비교 평가(Critic이 어떤 결과물인지 모른 채 판단)가 루프 방식의 핵심 신뢰성 장치"
+        ],
+        "key_insights": [
+            "생성-평가-재생성을 반복하는 self-critique 루프 구조가 단발성 프롬프트보다 결과물 퀄리티를 크게 높임",
+            "게임 제작보다 마케팅 크리에이티브(썸네일·카드뉴스·랜딩페이지) 제작에 더 실용적 가치가 있다는 저자의 관점",
+            "Claude Code의 커뮤니티 Skill 생태계를 활용하면 복잡한 프롬프트 엔지니어링을 재사용 가능한 명령어로 패키징할 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Builder/Critic 루프를 Claude Code 스킬로 설치해 디자인 산출물을 자동 반복 개선하는 구조, 3AI 파이프라인의 콘텐츠 QA(안티 1차 검증→만복 최종) 방식과 유사한 아이디어, ⑨창작 — 유튜브 썸네일·인스타 카드뉴스 등 3AI 유튜브 채널 콘텐츠 제작에 바로 응용 가능한 기법",
+        "timestamp": "2026-08-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/toS49wmACrE/hqdefault.jpg"
+    },
+    {
         "title": "Run Ornith 1.5 35B Locally: 155 Tokens/Sec on Your GPU?",
         "url": "https://www.youtube.com/watch?v=iOLF9T6aoV8",
         "channel": "Cloud Codes",
