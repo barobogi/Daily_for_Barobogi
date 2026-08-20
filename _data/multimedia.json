@@ -1,5 +1,36 @@
 [
     {
+        "title": "The Real Reason Why Stripe Bought OpenRouter",
+        "url": "https://www.youtube.com/watch?v=6i2503NESzU",
+        "channel": "Cloud Codes",
+        "summary": "Stripe가 투자자에게 보낸 서한에서 2026년 1월 1일을 '싱귤래리티' 시작점으로 선언했으며, 그 근거로 신생 기업 창업률 급증을 제시했다. 같은 주 Stripe는 사상 최대 규모의 인수(OpenRouter)를 발표했고, Stripe Atlas 법인 설립 건수가 전년 대비 130% 증가(델라웨어 신규 법인의 25% 이상)했다는 데이터가 핵심 증거로 제시된다.",
+        "categories": [
+            "AI",
+            "스타트업",
+            "Stripe",
+            "경제지표",
+            "투자"
+        ],
+        "stock_related": [
+            "Stripe의 2026년 상반기 순수익 41% YoY 증가, 잉여현금흐름 43% 증가 — AI/크립토向 매출 비중이 전년 대비 2배 이상 증가 중이라는 점은 결제 인프라 기업 실적에 AI 붐이 직접 반영되고 있다는 신호",
+            "Forbes AI 50 기업의 88%가 Stripe 결제 인프라를 사용 — AI 스타트업 생태계와 결제 플랫폼 기업 간 연관성 참고 지표"
+        ],
+        "ai_related": [
+            "Stripe 창업자들이 '싱귤래리티'의 근거로 벤치마크 점수가 아닌 신생기업 창업률(Atlas 법인 설립 130% 증가)을 제시 — AI로 인한 경제적 파급효과를 창업 활동 데이터로 측정하는 관점",
+            "Stripe Atlas 통한 신규 법인 설립이 델라웨어 전체 신규 법인의 25% 이상을 차지 — AI 도구가 창업 장벽을 낮추고 있다는 실물 지표",
+            "팬데믹 시기(2020년) 소상공인 창업 붐(약 50% 증가)보다 현재 AI발 창업 붐(약 2배 증가)이 더 크다는 비교"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "결제 인프라 기업(Stripe)이 GDP의 약 2%를 처리하는 위치에서 관찰한 '창업률 급증'을 AI 임팩트의 실물 증거로 제시한 것은, 벤치마크가 아닌 경제 활동 데이터로 AI 전환점을 측정하려는 새로운 접근",
+            "Stripe의 OpenRouter 인수와 '싱귤래리티' 선언이 같은 주에 발표된 것은 우연이 아니라 AI 인프라 투자 확대 의지의 표현으로 해석 가능",
+            "신생기업 창업률 급증은 향후 AI 관련 스타트업 투자/M&A 활성화의 선행지표로 볼 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 도구로 인한 창업 장벽 완화 사례, 자동화 기반 신사업 창출 트렌드 참고, ⑦재테크 — Stripe 실적지표(매출 41%↑, FCF 43%↑) 및 AI/크립토 매출 비중 증가 데이터, 투자 판단 참고용",
+        "timestamp": "2026-08-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/6i2503NESzU/hqdefault.jpg"
+    },
+    {
         "title": "Claude Design Finally Got a MASSIVE Upgrade … I'm Done",
         "url": "https://www.youtube.com/watch?v=toS49wmACrE",
         "channel": "Ethan Nelson",
