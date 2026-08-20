@@ -1,5 +1,68 @@
 [
     {
+        "title": "Free Grok Bot and all of this week’s news",
+        "url": "https://www.youtube.com/watch?v=PdM8YNuLEgc",
+        "channel": "The Next New Thing",
+        "summary": "Inbox Zero라는 회사가 200달러짜리 Grok Bot(에이전트)의 무료 대안을 오픈소스로 출시해, 원하는 LLM 모델을 자유롭게 선택해 로컬에서 실행할 수 있게 됐다. 또한 업무별로 특화된 이름과 기능을 가진 '봇 모드'가 에이전트 UX의 새로운 트렌드로 부상하고 있으며, Hermes 등 여러 도구가 이를 채택하는 중이다.",
+        "categories": [
+            "AI 에이전트",
+            "오픈소스",
+            "생산성 도구",
+            "뉴스 요약"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Inbox Zero가 Grok Bot(월 200~300달러)의 무료 오픈소스 대안을 출시 — 로컬 실행 + 모델 자유 선택 가능, GitHub에서 직접 다운로드 가능, 추후 유료 호스팅 버전도 계획 중",
+            "'봇 모드'(특정 이름과 단일 기능을 가진 전문화된 에이전트) 방식이 에이전트 대중화의 핵심 트렌드로 부상 — 사람들은 '모든 걸 하는 범용 에이전트'보다 '장보기만 하는 봇' 같은 구체적 기능 단위를 더 쉽게 이해함",
+            "일일 업무 완료 내역을 자동으로 요약해주는 에이전트(Meridian) 언급 — '오늘 뭐 했지?'에 답해주는 자동 회고 기능",
+            "컴퓨터 내 모든 정보를 기억하고 여러 에이전트가 접근 가능하게 만드는 '세컨드 브레인' 도구 등장"
+        ],
+        "learning_related": [
+            "고가 구독형 AI 도구(Grok Heavy, Cursor 등)에 대한 대중의 벤더 록인 거부감이 오픈소스 대안 확산의 주요 동력으로 작용"
+        ],
+        "key_insights": [
+            "유료 프리미엄 AI 에이전트가 나오면 곧이어 무료/오픈소스 대안이 빠르게 뒤따르는 패턴이 반복되고 있음",
+            "범용 단일 에이전트보다 '기능별로 이름 붙인 전문 봇' 인터페이스가 일반 사용자 채택률을 높이는 방향으로 업계 전체가 수렴 중",
+            "자동 일일 회고, 개인 지식 통합('세컨드 브레인') 등 개인 생산성 특화 에이전트들이 각각 하나의 도구 카테고리로 자리잡고 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Grok Bot 무료 대안(Inbox Zero) 로컬 실행 및 비용 0원 구조 참고 가능, ④공부방 — 봇 모드/전문화 에이전트 트렌드, 일일 회고 에이전트(Meridian) 개념은 3AI 협업 구조(전문화된 역할 분담)와 유사해 참고할 만함",
+        "timestamp": "2026-08-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/PdM8YNuLEgc/hqdefault.jpg"
+    },
+    {
+        "title": "$75M founder reveals his Agentic Engineering setup",
+        "url": "https://www.youtube.com/watch?v=QBfXiWvM0qc",
+        "channel": "David Ondrej",
+        "summary": "Morning Brew 공동창업자 Alex Lieberman과 10X 엔지니어링 디렉터 Dan이 나눈 AI 네이티브 전환 팟캐스트. 기업을 AI 네이티브로 바꾸는 방법, 코드보다 마크다운 설계(에이전틱 엔지니어링)의 중요성, AI 시대 컨설팅 비즈니스의 풀스택 전환을 다룸.",
+        "categories": [
+            "AI",
+            "에이전틱 엔지니어링",
+            "컨설팅",
+            "생산성",
+            "팟캐스트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "'AI는 고agency·지능형 인재를 더 돋보이게 하고, 저agency 인재는 더 무능해 보이게 만든다' — AI 시대 인재 격차 심화",
+            "코드를 직접 작성/실행하는 시간보다 '마크다운(작업지시서/설계문서) 엔지니어링'에 쓰는 시간 비중이 더 커져야 한다는 주장 — GPS Check 지시서 원칙과 방향 일치",
+            "'조만간 엔지니어를 포함해 누구도 코드를 직접 읽거나 쓰지 않게 될 것' — AI 코드 생성/에이전트 자동화가 표준이 되는 시점 예측",
+            "포춘 2000 기업 AI 전환 컨설팅에서 첫 단계는 대개 경영진에게 Claude Cowork/Claude Code 사용법을 직접 가르치는 것 — 실무 도입은 임원 리터러시부터 시작",
+            "AI 네이티브 컨설팅은 전략 수립부터 체인지 매니지먼트, 포워드 디플로이(현장 배치)까지 밸류체인 전체를 커버하는 풀스택 모델로 진화 중",
+            "인보이싱/AR/AP/HR 같은 백오피스 업무의 에이전트화가 기업 AI 도입의 실질적 진입점으로 언급됨"
+        ],
+        "learning_related": [
+            "'Agentic Engineering' 개념: 코드 실행보다 마크다운(맥락/지시서) 설계에 더 많은 시간을 투자하는 워크플로우 — GPS Check(Goal+Proof+Steps) 지시서 원칙과 유사한 접근"
+        ],
+        "key_insights": [
+            "AI는 실력차를 좁히는 게 아니라 오히려 확대시킨다 — 고agency 인재에게는 레버리지, 저agency 인재에게는 격차 심화 요인",
+            "소프트웨어 개발의 핵심 산출물이 '코드'에서 '마크다운(지시서/컨텍스트 설계)'로 이동 중이라는 관점",
+            "AI 네이티브 컨설팅은 슬라이드 덱 납품형이 아니라 임원 교육부터 실행 배치까지 전 과정에 개입하는 풀스택 파트너십으로 재정의되고 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 마크다운 기반 에이전틱 엔지니어링 워크플로우는 GPS Check/지시서 체계와 직접 연관, 3AI 협업 프로세스 개선에 참고 가능, ④공부방 — AI 네이티브 전환/에이전틱 엔지니어링 트렌드 학습 자료로 유용",
+        "timestamp": "2026-08-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/QBfXiWvM0qc/hqdefault.jpg"
+    },
+    {
         "title": "The Real Reason Why Stripe Bought OpenRouter",
         "url": "https://www.youtube.com/watch?v=6i2503NESzU",
         "channel": "Cloud Codes",
