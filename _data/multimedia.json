@@ -1,5 +1,37 @@
 [
     {
+        "title": "NVIDIA NOOA vs LangChain: Half the Tokens, Higher Score",
+        "url": "https://www.youtube.com/watch?v=9NzdeRZ-Kzw",
+        "channel": "Cloud Codes",
+        "summary": "Nvidia Research가 공개한 NOA(NOOA, Object-Oriented Agents)는 클래스 메서드 본문을 '...'로 남기면 런타임에 LLM이 해당 메서드를 직접 작성/실행하는 방식으로 에이전트를 구현하는 프레임워크다. 프롬프트 템플릿, 툴 스키마, 콜백, 워크플로우 그래프 없이 독스트링=프롬프트, 타입 힌트=계약, 필드=상태, 일반 파이썬 코드=오케스트레이션으로 통합해, 기존 LangChain류 프레임워크의 별도 관리 요소 4가지를 제거한다는 주장이다. 7월 공개 후 4주 만에 1,700 스타를 받았지만 Hacker News 노출은 미미해, 실무자들이 아직 제대로 주목하지 않았거나 무시했을 가능성을 제기한다.",
+        "categories": [
+            "AI 에이전트",
+            "LangChain 대안",
+            "Nvidia Research",
+            "오픈소스",
+            "Python 프레임워크"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Nvidia가 만든 NOA(Noah) 프레임워크는 파이썬 메서드 본문을 '...'로 남기면 LLM이 런타임에 해당 로직을 직접 작성·실행하는 구조 — 프롬프트 템플릿/툴 스키마/콜백/그래프 정의를 별도로 관리할 필요가 없어짐",
+            "독스트링을 프롬프트로, 타입 어노테이션을 툴 스키마(계약)로, 객체 필드를 메모리/상태로, 일반 파이썬 제어 흐름을 오케스트레이션으로 재활용하는 것이 핵심 아이디어",
+            "모델이 데이터의 텍스트 스냅샷이 아니라 객체를 레퍼런스로 직접 조작(bounded preview) — LangChain 대비 토큰 사용량 절반, 성능은 더 높다는 벤치마크 주장",
+            "Apache 2.0 라이선스, 4주 만에 1,700 스타/240 포크에도 불구하고 Hacker News 반응은 미미(3회 제출, 총 9포인트) — 실무 채택 신호와 잠재력 사이 괴리"
+        ],
+        "learning_related": [
+            "에이전트 프레임워크의 본질을 '이미 가지고 있던 언어 기능(독스트링, 타입힌트, 객체 필드, 제어흐름)을 재발견해서 쓰는 것'으로 재정의하는 관점 — 프레임워크 없이도 파이썬 자체가 에이전트 인프라가 될 수 있음",
+            "기존 LangChain식 4중 관리(프롬프트/툴스키마/콜백/그래프) 구조와 NOA의 단일 코드베이스 구조를 비교 학습할 가치 있음"
+        ],
+        "key_insights": [
+            "타입 애노테이션이 곧 툴 스키마가 되면, 잘못된 출력이 '나쁜 바이브'가 아니라 타입 에러로 감지된다는 점이 프레임워크 없는 에이전트 설계의 핵심 이점",
+            "논문/코드 품질과 실제 커뮤니티 주목도(HN 9포인트) 사이의 괴리는 SOTA급 연구도 마케팅/노출 없이는 묻힐 수 있음을 보여줌",
+            "이 프레임워크는 랭체인 대비 토큰 절반, 스코어 향상을 주장하므로 향후 에이전트 파이프라인(3AI 자동화 등) 설계 시 비교 검토 대상"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 3AI 파이프라인(코니/안티/만복)에서 사용 중인 에이전트 구조를 NOA식 경량 패턴(독스트링=프롬프트, 타입힌트=계약)과 비교해 토큰 절감 여지 검토 가능",
+        "timestamp": "2026-08-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/9NzdeRZ-Kzw/hqdefault.jpg"
+    },
+    {
         "title": "10 Github Repos That Solve Your Token Problems",
         "url": "https://www.youtube.com/watch?v=BKAPj1OJ-t4",
         "channel": "The Next New Thing",
