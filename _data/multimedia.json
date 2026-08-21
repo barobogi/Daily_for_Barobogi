@@ -1,5 +1,32 @@
 [
     {
+        "title": "Show Claude a Task ONCE and It Does It Forever",
+        "url": "https://www.youtube.com/watch?v=NKWvUi5Sir8",
+        "channel": "Ethan Nelson",
+        "summary": "제목 기준으로 볼 때 Claude(Claude Code로 추정)에게 특정 작업을 한 번 시연하면 이후 동일 작업을 자동으로 반복 수행하도록 만드는 방법을 다루는 영상으로 보입니다. Skill/Hook/메모리 기반 자동화 패턴을 소개하는 튜토리얼 성격일 가능성이 높습니다. 단, 자막이 제공되지 않아 세부 내용은 추정입니다.",
+        "categories": [
+            "Claude Code",
+            "자동화",
+            "AI 워크플로우",
+            "생산성 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude에게 작업을 1회 시연 후 영구 자동화하는 패턴 소개 가능성 (Skill/Hook/서브에이전트 활용 추정)",
+            "반복 작업의 스크립트화·에이전트화 사례로 자판기 우선 원칙(Script > Agent)과 연결 가능"
+        ],
+        "learning_related": [
+            "제목만으로는 구체적 구현 방식(Skill 생성, Hook 설정, 메모리 기록 등) 확인 불가 — 자막/스크립트 확보 후 재분석 필요"
+        ],
+        "key_insights": [
+            "자막이 없어 실제 내용 검증 불가 — 제목 기반 추정 요약임을 감안할 것",
+            "\"한 번 보여주면 영원히 수행\"이라는 컨셉은 barobogi 체계의 자판기(Script) 우선 원칙과 유사한 방향성"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 작업 1회 시연 후 자동 반복 수행이라는 컨셉이 Global_Define/master_watch류 자동화 파이프라인과 관련",
+        "timestamp": "2026-08-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/NKWvUi5Sir8/hqdefault.jpg"
+    },
+    {
         "title": "Tired of Manual Logins? Agent Cookie Is Here #AIagents #DevTools",
         "url": "https://www.youtube.com/watch?v=IJZZQ_tecSo",
         "channel": "The Next New Thing",
