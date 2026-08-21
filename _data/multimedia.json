@@ -1,5 +1,36 @@
 [
     {
+        "title": "Rate Limits Explained: Claude, OpenAI & Gemini",
+        "url": "https://www.youtube.com/watch?v=j-Dtp9705Bs",
+        "channel": "Cloud Codes",
+        "summary": "API 429 (Too Many Requests) 에러의 근본 원인과 해결책을 다루는 영상으로, 재시도 로직이 무분별하게 작동하면 오히려 트래픽을 증폭시켜 장애를 유발한다는 점(Amazon 사례: 243배 부하 증폭)을 설명합니다. Anthropic의 API가 고정 카운터가 아닌 토큰 버킷(Token Bucket) 알고리즘으로 rate limit을 구현한다는 점과, 이를 다루기 위한 3가지 고전 기법(토큰 버킷, 지수 백오프, 지터)을 소개합니다.",
+        "categories": [
+            "API 설계",
+            "Rate Limiting",
+            "분산 시스템",
+            "백엔드 아키텍처"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude(Anthropic), OpenAI, Gemini API 모두 rate limit을 갖고 있으며, Anthropic은 RPM(requests/min), Input TPM, Output TPM 세 종류의 버킷을 각각 운영 — 어느 버킷에 걸렸는지 응답 코드만으로는 구분 불가",
+            "Anthropic API는 '분당 리셋'이 아니라 초당 연속 리필되는 토큰 버킷 방식 — 60 RPM 한도라도 요청을 한 번에 몰아 쏘면 실질적으로 즉시 한도 초과",
+            "멀티 에이전트(fleet) 환경에서 여러 에이전트가 동시에 같은 API를 호출하면 재시도가 동기화되어 순간 부하가 기하급수적으로 증폭됨"
+        ],
+        "learning_related": [
+            "Token Bucket 알고리즘: 리필 속도(sustained throughput)와 버킷 크기(burst capacity) 두 값으로 설명되며, 사람들이 리필 속도만 보고 버킷 크기를 간과해 문제가 발생",
+            "Exponential Backoff + Jitter: 1970년대 하와이 제도 간 라디오 패킷 통신(ALOHAnet)에서 유래한 기법으로, 56년이 지난 지금도 동일한 문제(충돌/재시도 폭주)에 대한 표준 해법",
+            "재시도 폭풍(retry storm) 메커니즘: 계층화된 서비스에서 각 계층이 3회씩 재시도하면 최하단은 지수적으로 부하가 증폭됨(Amazon 사례 243배)"
+        ],
+        "key_insights": [
+            "429 에러 자체는 시스템 붕괴가 아니라 '속도를 늦추라'는 신호인데, 무지성 즉시 재시도가 오히려 스스로 트래픽을 유발해 실제 장애로 발전시킴",
+            "Rate limit을 다루는 코드는 존재하지 않는 '카운터'를 가정하고 짜여지는 경우가 많음 — 실제로는 연속 리필되는 토큰 버킷이므로 버스트 후 대기하는 패턴이 필요",
+            "3중 방어(토큰 버킷 인지 + 지수 백오프 + 지터)는 AI API 시대에 새로 발명된 게 아니라 50년 넘은 네트워킹 원리를 재사용한 것"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 3AI 파이프라인(만복/코니/안티)이 Claude API를 병렬 호출할 때 동일한 retry storm 위험 존재, 백오프+지터 로직 점검 필요, ⑥인프라 — API 호출 아키텍처 설계 시 참고할 rate limit 대응 표준 패턴",
+        "timestamp": "2026-08-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/j-Dtp9705Bs/hqdefault.jpg"
+    },
+    {
         "title": "Opus 5 Is Annoying. The Fix Is OFF By Default.",
         "url": "https://www.youtube.com/watch?v=M3qE32107wA",
         "channel": "Ethan Nelson",
