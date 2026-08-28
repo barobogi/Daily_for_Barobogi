@@ -1,5 +1,31 @@
 [
     {
+        "title": "Your Own Private Google Photos — Self-Hosted",
+        "url": "https://www.youtube.com/watch?v=zjvSs1VNDSQ",
+        "channel": "The Next New Thing",
+        "summary": "구글 포토를 대체할 수 있는 셀프호스팅(자체 서버 구축) 사진 백업 솔루션을 소개하는 영상으로, 클라우드 서비스에 의존하지 않고 개인 서버나 NAS에 사진을 저장·관리하는 방법을 다룹니다. 프라이버시 보호와 비용 절감을 핵심 가치로 내세우는 것으로 보입니다.",
+        "categories": [
+            "셀프호스팅",
+            "프라이버시",
+            "홈서버",
+            "사진관리",
+            "오픈소스"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "구글 포토 대체 셀프호스팅 툴(Immich, PhotoPrism 등 추정) 아키텍처 학습 가치",
+            "NAS/홈서버 환경에서 사진·미디어 백업 파이프라인 구축 참고 가능"
+        ],
+        "key_insights": [
+            "클라우드 종속 없이 개인 데이터 주권을 확보하는 셀프호스팅 트렌드 반영",
+            "자막/설명이 없어 구체적 툴체인 확인은 영상 시청 후 재분석 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 홈서버/NAS 기반 자체 스토리지 구축과 직접 연관, ⑤자동화 — 사진 백업 자동화 파이프라인 참고 가능성",
+        "timestamp": "2026-08-28T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/zjvSs1VNDSQ/hqdefault.jpg"
+    },
+    {
         "title": "GLM 5.3 Flash: China Shipped a Frontier AI Model Without Nvidia",
         "url": "https://www.youtube.com/watch?v=Sz0W7Zt39d0",
         "channel": "Cloud Codes",
