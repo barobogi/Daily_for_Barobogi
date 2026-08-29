@@ -1,5 +1,37 @@
 [
     {
+        "title": "Anthropic's Model Hardware Standard: What You Need To Know",
+        "url": "https://www.youtube.com/watch?v=gOjQViPkIS8",
+        "channel": "Cloud Codes",
+        "summary": "Anthropic가 8월 27일 공개한 'Model Hardware Standard'는 AI 에이전트가 실험실 장비(레이저, 로봇팔, 액체 핸들러 등)를 직접 제어할 수 있게 하는 드라이버 표준으로, 서로 다른 벤더의 장비들이 Read/Write 같은 공통 동사로 통신하도록 만든다. 4개 연구소가 이미 실제 하드웨어에 적용해 성과를 냈지만, 표준 스펙 자체는 비공개이며 신청을 통해서만 열람 가능하다는 한계가 있다.",
+        "categories": [
+            "AI",
+            "Anthropic",
+            "하드웨어자동화",
+            "로보틱스",
+            "연구실자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Anthropic이 AI 에이전트-하드웨어 간 통신을 표준화하는 'Model Hardware Standard'를 발표 (USB에 비유되는 모델-불가지론적 프로토콜)",
+            "기존 몇 주~몇 달 걸리던 장비 통합 작업이 몇 시간~몇 분으로 단축되는 사례 보고됨 (4개 연구소 실증)",
+            "표준이 공개 문서가 아니라 신청 후에만 열람 가능하다는 점에서 폐쇄성 논란 소지"
+        ],
+        "learning_related": [
+            "Read/Write, Get/Set Temperature 같은 최소 프리미티브 세트로 이기종 장비 간 통신을 통일하는 드라이버 설계 패턴",
+            "자연어 태그(장비 스펙, 안전 한계 등)를 장비 메타데이터로 삽입해 모델이 사전 학습 없이 장비를 이해하게 하는 방식",
+            "속도가 중요한 작업은 매 스텝 모델 추론 없이 드라이버 명령을 체인으로 묶어 자율 실행"
+        ],
+        "key_insights": [
+            "AI 에이전트가 물리적 실험 장비를 직접 제어하는 시대가 실증 단계에 진입 — 연구실 자동화의 병목이던 '장비 간 소통 부재' 문제 해결 시도",
+            "표준은 모델 불가지론적(model-agnostic)이라 Claude 외 다른 에이전트 프레임워크도 사용 가능하지만, 스펙 자체가 비공개라는 점은 진짜 오픈 표준인지에 대한 의문 제기",
+            "6초 만에 99% 성공률로 레이저를 재조정한 사례는 하드웨어 유지보수의 무인화 가능성을 보여줌"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI가 물리적 하드웨어(실험 장비)를 직접 제어하는 자동화 표준, n8n류 소프트웨어 자동화를 넘어선 사례로 참고 가치, ④공부방 — Anthropic 신규 발표 스펙이라 AI 트렌드 학습 자료로 축적할 가치 있음",
+        "timestamp": "2026-08-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/gOjQViPkIS8/hqdefault.jpg"
+    },
+    {
         "title": "챗GPT vs 클로드 vs Kimi k3, 실제 HTML 스타크래프트 만들고 6만 경기 학습시킴 자료 무료공유",
         "url": "https://www.youtube.com/watch?v=t--c7RBpl54",
         "channel": "호두의 AI 분석실",
