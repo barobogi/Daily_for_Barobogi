@@ -1,5 +1,36 @@
 [
     {
+        "title": "My Complete Obsidian + Hermes Agent & Human-In-The-Loop Guide 🧠",
+        "url": "https://www.youtube.com/watch?v=_bieksxg6oY",
+        "channel": "Wanderloots",
+        "summary": "Obsidian과 Hermes 에이전트를 활용해 AI가 스스로 정리하는 '신뢰할 수 있는 LLM 위키'를 구축하는 방법을 소개하는 영상. AI 메모리 오염(잘못된 정보가 연쇄적으로 확산되는 문제)을 막기 위해 raw sources-wiki-schema 3계층 구조와 human-in-the-loop 승인 절차를 결합한다.",
+        "categories": [
+            "AI 자동화",
+            "지식관리",
+            "Obsidian",
+            "LLM 워크플로우",
+            "Human-in-the-loop"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 메모리의 가장 큰 위험은 '망각'이 아니라 '한 번도 사실이 아니었던 것을 기억하는 것' — 잘못된 노트 하나가 연쇄적으로 다른 결론에 영향을 줌",
+            "Andrej Karpathy가 제안한 LLM wiki 개념: raw sources(원본) → wiki(LLM이 생성한 마크다운 디렉토리) → schema(운영 규칙 문서) 3계층 아키텍처",
+            "Hermes 에이전트의 내장 LLM wiki 스킬 + 리뷰 컴패니언 스킬로 사람이 제안된 변경을 승인해야만 vault(지식베이스)에 반영되는 구조",
+            "결정론적(deterministic) 툴링을 추가해 '검증된 에이전틱 라이브러리언'으로 발전시키는 접근"
+        ],
+        "learning_related": [
+            "AI가 최종 문장을 작성하더라도, 라이브러리에 들어갈지 여부는 사람의 판단이 결정해야 신뢰 가능한 지식베이스가 됨",
+            "ingesting, querying, linting(정합성 검증), indexing 등의 운영을 스키마 문서로 통제"
+        ],
+        "key_insights": [
+            "AI 지식관리의 핵심 리스크는 '오염된 정보의 연쇄 확산'이며, 이를 막는 해법은 AI의 판단력 향상이 아니라 사람의 승인 게이트(human-in-the-loop) 삽입",
+            "raw → wiki → schema 3계층 구조가 AI 자동 정리와 신뢰성 확보를 동시에 달성하는 핵심 설계"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Obsidian 기반 LLM wiki, 노트 자동 연결/정리 구조가 만복의 지식관리 뿌리와 직접 연관, ⑤자동화 — AI 에이전트가 지식베이스를 자동 업데이트하되 승인 게이트를 두는 구조, 3AI 협업의 Lock/승인 체계와 유사한 패턴",
+        "timestamp": "2026-08-29T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/_bieksxg6oY/hqdefault.jpg"
+    },
+    {
         "title": "Every Agent Harness Copied a Mistake From JSON",
         "url": "https://www.youtube.com/watch?v=nIBJy3sNu9A",
         "channel": "Cloud Codes",
