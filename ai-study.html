@@ -275,6 +275,51 @@
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Machine Learning"
+             data-id="20260829-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Stop Burning Tokens — AI 자동개선 루프의 Target Function 설계법 (Langfuse)</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+AI 에이전트가 스스로를 개선하는 루프를 만들 때 "뭘 목표로 삼는지"(target function)가 애매하면 아무리 돌려도 소용없다 — 논문분류 실험으로 확인한 "고신호 vs 저신호 평가" 설계법.
+
+🗂️ 전체 구조
+[에이전트 실행] → [고신호 평가(예/아니오)] → 오류 패턴 분석
+                                                    ↓
+                                        가장 큰 오류 군집 타겟 프롬프트 개선
+                                                    ↓
+                              validate셋에서 개선 확인될 때만 채택 → 반복
+                                                    ↓
+                                  탈출구(턴수/시간 상한) → held-out test셋 최종검증
+
+🔑 핵심 기술 1 — 코딩엔 있고 대부분 도메인엔 없는 것: 명확한 성공기준
+"컴파일 되는가"는 예/아니오가 명확해서 자동 루프가 잘 작동한다. 의료/챗봇 등 대부분 도메인은 "좋다"의 정의 자체가 애매해서, 목표를 잘못 잡으면 루프가 엉뚱한 방향으로 최적화된다.
+
+🔑 핵심 기술 2 — 실험: 논문 분류로 자동 프롬프트 개선 루프 검증
+소형 모델(에이전트)+Claude Opus(옵티마이저) 조합. fit(200)/validate(100)/test(300) 3분할. 베이스라인 68% → 첫 이터레이션에서 바로 78%(+10%p, 오답 패턴 분석 후 규칙+예시 추가) → 83%까지 개선, test셋에서도 80.2%로 일반화 확인.
+
+🔑 핵심 기술 3 — 고신호(high-signal) vs 저신호(low-signal) 평가기준
+나쁜 예: "정확성 1~5점" — 매번 다르게 채점됨, 노이즈 큼
+좋은 예: "답변이 검색된 컨텍스트에 실제로 근거하는가(예/아니오)", "이 5가지 실패유형 중 어디에 해당하는가"
+요령: 도메인 전문가와 실제 사례를 보며 "왜 맞고 왜 틀렸는지" 물어서 암묵지를 명시적 기준으로 뽑아내기.
+
+⚠️ 주의사항 / 함정
+루프에 탈출구(escape hatch)가 없으면 벽에 부딪힌 채 토큰만 계속 태운다. validate셋에만 계속 반복하면 그 evaluator에 과적합될 위험 — 한 번도 안 보여준 test셋으로 최종 검증해야 진짜 일반화됐는지 안다.
+
+💡 배운 점
+1. 평가기준을 애매한 점수(1~5)가 아니라 구체적 예/아니오로 쪼개야 신뢰할 수 있다.
+2. 같은 검증 기준으로만 반복하면 그 기준 자체에 과적합될 수 있다 — 독립적인 최종 확인이 필요하다.
+3. 첫 개선 한 방이 전체 효과의 대부분을 차지할 수 있다 — 완벽을 기다리지 말고 가장 큰 오류부터 잡아라.
+
+🌱 성장 관점
+이 영상을 뽀개고 나서 우리 시스템을 비판적으로 다시 대조해보니 실제 갭 3개를 발견해서 바로 고쳤다 — (1) verify_video.py가 해상도/길이만 보고 실제 프레임 디코딩은 검증 안 하던 구멍(EP03 손상영상 통과 원인), (2) 코니 Auditor "심미안" 판단이 이 영상이 경고하는 저신호 패턴이었던 것, (3) goal_runner.py가 매 턴 같은 기준으로만 반복해서 과적합 위험이 있던 것 — held-out 최종검증(--final-check-command) 추가. 뽀개기가 "우리 잘하고 있다"는 자기위안이 아니라 실제 개선으로 이어진 사례.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.08.29 · Langfuse, RL, Target Function, 3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Machine Learning"
              data-id="20260829-1"
              style="border-top: 1px solid var(--border);"
              onclick="openStudyDetailModal(this)">
