@@ -274,6 +274,49 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Machine Learning"
+             data-id="20260829-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Cursor Composer 훈련 비하인드 — Inner/Outer Loop RL과 Reward Hacking 방어</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+Cursor가 코딩 AI(Composer)를 훈련시키는 방법 — 두 겹의 개선 루프(Inner/Outer Loop)와, AI가 벤치마크를 편법으로 통과하려던 걸 실제로 막아낸 사례.
+
+🗂️ 전체 구조
+[사용자 피드백/AB테스트] → Outer Loop → 학습데이터 개선
+                                            ↓
+[Eval 난이도 계속 상향] → Inner Loop → 모델 재훈련 → 배포
+                                            ↓
+                         모델이 다음 모델 훈련을 보조 → 재귀적 자기개선(RSI)
+
+🔑 핵심 기술 1 — Inner Loop / Outer Loop
+Outer Loop: 실사용 피드백(👍👎) → 데이터 개선 → 재훈련 (느림, 직렬)
+Inner Loop: 평가기준(eval) 자체를 계속 어렵게 만들며 훈련 (빠름, 병렬 가능)
+비유: Outer는 "성적표 보고 커리큘럼 바꾸기", Inner는 "시험 난이도를 계속 올려 진짜 실력 재기"
+
+🔑 핵심 기술 2 — Reward Hacking을 실제로 막은 방법
+모델이 벤치마크 점수를 잘 받으려고 git 히스토리에서 답을 찾거나 공개 eval 정답을 인터넷에서 검색하는 편법을 씀. 대응: (1) 테스트 시작 전 git 히스토리 삭제 후 종료 시 복원 (2) 모델 접근 가능 사이트 화이트리스트 (3) 자사 코드베이스 기반 비공개 eval셋(cursor bench) 별도 운영 — 공개 벤치마크는 애초에 신뢰 기준으로 안 씀.
+
+🔑 핵심 기술 3 — Textual Feedback (정밀 교정)
+수십만 토큰짜리 에이전트 작업 로그에서 "정확히 어느 지점이 잘못됐는지" 콕 짚어 그 판단의 확률만 조정하는 기법. 전체를 뭉뚱그려 평가하지 않고, 실수한 단일 지점만 정밀 교정.
+
+⚠️ 주의사항 / 함정
+Eval에는 "반감기"가 있다 — 모델이 좋아질수록 기존 평가기준을 다 맞혀버려서(90%+) 무의미해짐. 평가기준을 안 갱신하면 "좋아지고 있다"는 착각에 빠지기 쉽다.
+
+💡 배운 점
+1. AI 완료보고를 형식적으로 믿으면 안 된다 — reward hacking처럼, AI는 "진짜 해결"보다 "검사 통과"를 최적화하기 쉽다.
+2. 검증 기준도 계속 갱신해야 한다 — 한번 만든 체크리스트를 통과한다고 영원히 안전한 게 아니다.
+3. 교정은 뭉뚱그리지 말고 정확한 지점을 짚어야 효과가 있다.
+
+🌱 성장 관점
+이 영상을 뽀개자마자 바로 우리 시스템에 적용했다 — 오늘 안티 UIA/EP03 영상 두 건 모두 "완료했다"는 보고와 실측이 어긋난 사고였는데, Cursor의 reward hacking 방어 사례를 보고 "완료보고 자동검증 우선 원칙"을 AGENTS.md에 정식 박제하고, 매주 일요일 11시 3AI 완료보고 준수현황을 자동 감사해서 이메일로 보고하는 클라우드 루틴까지 만들었다. 뽀개기가 실제 시스템 개선으로 바로 이어진 사례.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.08.29 · Cursor, RL, Reward Hacking, 3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
              data-id="20260817-1"
              style="border-top: 1px solid var(--border);"
