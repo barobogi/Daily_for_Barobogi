@@ -274,6 +274,45 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Machine Learning"
+             data-id="20260830-3"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">GPT 5.6 Soul vs Fable 5 실전 비교 — "5점짜리 과제엔 5점짜리 모델"</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+OpenAI GPT 5.6(Soul)과 Anthropic Fable 5를 하루 종일 나란히 돌려본 실전 비교 — 창의/판단 작업은 Fable이 압도하지만 최대 16배 비싸고, 단순 반복작업은 Soul이 비슷한 품질에 훨씬 저렴하다.
+
+🗂️ 전체 구조
+[에이전틱 작업: 게임/웹사이트 제작] → Fable 압승(품질), 비용 최대 16배↑
+[1회성 API 질의] → Soul 24:3 압승(비용), 단 Fable은 안전장치로 응답거부 다수
+→ 결론: Fable=매니저/판단, Soul=실무자/실행
+
+🔑 핵심 기술 1 — 작업 유형별로 승자가 완전히 갈린다
+자전거 게임/인터랙티브 웹사이트/5개 비주얼 요소 같은 개방형 창작 과제 3개 전부 Fable 승. 근데 비용 차이가 어마어마함(한 케이스 $19.24 vs $1.22, 약 16배). 반면 짧은 1회성 질의응답에선 Soul이 24:3으로 압승 — Fable은 안전장치 때문에 아예 답변을 거부한 경우가 많았음.
+
+🔑 핵심 기술 2 — "답변했을 때만" 비교하면 실력은 거의 동일
+Soul 0.98점, Fable 0.966점 — 명목 승률(24:3)만 보면 차이가 커 보이지만, Fable이 답변 자체를 거부한 케이스를 빼면 실력 차는 거의 없다. 지표 하나만 보고 판단하면 안 되는 이유.
+
+🔑 핵심 기술 3 — 토큰 효율성 자체가 다르다
+같은 비용을 쓴다고 가정해도 Soul이 토큰을 훨씬 적게 쓴다(같은 작업에 Fable 90k 출력 vs Soul 31k 출력). 모델 자체의 harness/훈련 방식 차이로 추정.
+
+⚠️ 주의사항 / 함정
+"Soul 5.6"이라는 버전 넘버링이 이상하다는 지적 — 크리에이터는 "진짜 최고 모델이면 왜 Soul 6이 아니라 5.6인가, 진짜 차세대 모델은 아직 안 나온 것 아니냐"고 추측. 벤치마크 이름/버전만 보고 체급을 단정하면 안 됨.
+
+💡 배운 점
+1. "과제가 5점짜리면 5점짜리 모델로 충분하다" — 무조건 최고급 모델을 쓰는 게 항상 정답은 아니다.
+2. 집계 지표(승률)만 보지 말고 실패/거부 케이스를 걸러낸 지표도 같이 봐야 한다.
+3. 창의/판단 작업과 단순반복 작업은 애초에 다른 모델을 쓰는 게 비용 대비 합리적이다.
+
+🌱 성장 관점
+이 영상 덕분에 우리 시스템의 실제 갭 하나를 찾아 바로 고쳤다 — 서브에이전트 스폰할 때 전부 같은 모델을 쓰고 있었는데, 확인해보니 만복·코니 둘 다 이미 Agent 툴에 model 파라미터로 작업별 선택 기능이 있었다. "서브에이전트 모델 티어링 원칙"으로 AGENTS.md에 확정하고, 1주일 뒤 토큰 사용량 비교 리포트까지 예약해뒀다 — 뽀개기가 바로 그날 시스템 개선으로 이어진 사례.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.08.30 · GPT-5.6, Fable5, 모델비교, 3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="파이프라인"
              data-id="20260830-1"
              style="border-top: 1px solid var(--border);"
