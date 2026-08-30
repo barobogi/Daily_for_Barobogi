@@ -274,6 +274,83 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="파이프라인"
+             data-id="20260830-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">파이프라인</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">git push 9일 대장애 — 설치 프로그램 폴더 오커밋이 부른 연쇄 사고</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+저장소 2개가 각기 다른 원인(설치 앱 폴더 오커밋 / 자기 로그파일 방치)으로 9일씩 조용히 push가 막혀 있었고, loose object 폭증은 원인이 아니라 결과였다.
+
+🗂️ 전체 구조
+git add . (master_watch.py) → 설치 앱 폴더(Antigravity IDE/paseo, 40,784파일, 100MB+ exe) 실수로 포함
+→ GitHub 100MB 파일 push 서버단 거부 → loose object 65,038개 방치(재시도만 반복, gc 안 됨)
+→ 모든 git 명령이 몇 분씩 멈춤 → "정체불명 프로세스"로 오인
+
+🔑 핵심 기술 1 — loose object 폭증은 증상이지 원인이 아니다
+처음엔 "git 명령이 느려진 것"만 보고 git gc로 해결될 거라 판단했다. 실제로는 100MB+ 파일이 push를 서버에서 거부당하며 로컬에 계속 쌓인 게 진짜 원인 — 증상만 보고 처방하면 헛수고할 뻔했다.
+
+🔑 핵심 기술 2 — git filter-repo로 히스토리 자체에서 제거
+git rm만으론 안 됨(과거 커밋에 파일이 남아있으면 여전히 push 거부). filter-repo --path X --invert-paths로 전체 히스토리 재작성 → 810MB→326MB로 축소, force-push 성공. 흥미로운 점: origin 마지막 커밋이 문제 파일 이전 시점이면 그 커밋 해시는 그대로 유지돼서 일반 push(fast-forward)로도 먹힘.
+
+⚠️ 주의사항 / 함정
+같은 날 두 번째 저장소에서 똑같은 패턴(이번엔 자기 로그파일 125MB)이 또 나왔다 — "한 번 고쳤다"가 "전체가 안전하다"는 뜻이 아니다. 등록된 전체 저장소를 실제로 순회 점검하고 나서야 upstream 추적 자체가 빠진 것도 추가로 발견했다(직접 만든 재발방지 코드가 방금 만든 코드의 실수를 잡아낸 것).
+
+💡 배운 점
+1. 증상(느려짐)과 원인(push 거부)을 구분해야 한다 — 증상만 고치면 재발한다.
+2. "재발방지 장치를 만들었다"와 "그 장치가 실제로 전체를 커버한다"는 다르다 — 직접 순회 점검까지 해야 확인된다.
+3. 좀비 프로세스(CPU 0)와 느린 정상 작업(CPU 실사용)은 구분해서 대응해야 한다 — 후자를 죽이면 진행 중이던 작업을 날린다.
+
+🌱 성장 관점
+이 사고를 계기로 master_watch.py에 3중 방어(대용량파일 커밋가드 + 일일 git gc + push밀림 텔레그램 경보)를 상시 장착했다. 그리고 그 세 번째 장치가 바로 다음날 "내가 만든 코드의 실수"(upstream 추적 누락)를 스스로 잡아냈다 — 재발방지 장치가 자기 자신에게도 적용된 사례.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.08.30 · git, 인프라, filter-repo, 3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="Machine Learning"
+             data-id="20260830-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">Machine Learning</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">고신호 검증 프레임워크와 96,472건 공공데이터 카탈로그 — 뽀개기가 실제 인프라가 된 이틀</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+"애매한 판단 대신 명확한 예/아니오 검증"이라는 뽀개기 교훈을, 재사용 가능한 코드(검증 프레임워크)와 데이터(공공데이터 카탈로그) 두 가지 실물로 만들었다.
+
+🗂️ 전체 구조
+[뽀개기: Langfuse "Stop Burning Tokens"] → 고신호 vs 저신호 평가 원칙
+→ verify_video.py(메타데이터만 체크하던 구멍 발견) 프레임 디코딩 체크 추가
+→ 43_function_dev/03_verification_framework로 공통 모듈 승격(video/json/pytest/dup 4종)
+→ goal_runner.py에 --final-check-command(held-out 최종검증) 옵션 추가
+→ [별도 계기] "3탄 아이디어 직감으로 5개만 봤다" 지적 → odcloud API 96,472건 전체를 DuckDB로
+
+🔑 핵심 기술 1 — 검증 스크립트 자체가 불완전한 target function일 수 있다
+verify_video.py는 해상도/길이만 체크했는데, 실제로 프레임이 깨진 영상(EP.03)을 그대로 통과시킨 전적이 있었다. "검증했다"는 그 검증 자체가 뭘 놓치고 있는지부터 의심해야 한다는 걸 실사고로 확인했다.
+
+🔑 핵심 기술 2 — held-out 검증: 루프가 안 본 기준으로 마지막에 한 번 더
+자가치유 루프(goal_runner.py)가 매 턴 같은 proof_command로만 반복하면 그 기준 자체에 과적합될 위험이 있다. proof 통과 후 딱 1회, 별도 기준(final_check_command)으로 재확인하는 구조를 추가 — 실패하면 "성공"으로 안 치고 에스컬레이션한다.
+
+🔑 핵심 기술 3 — DuckDB 대량 적재는 executemany 쓰지 말 것
+96,472건을 con.executemany()로 한 줄씩 넣었더니 25분 넘게 걸려서 중단. pandas.DataFrame 경유(CREATE TABLE ... AS SELECT * FROM df)로 바꾸니 수 초로 단축됐다 — 대량 데이터는 항상 벌크 경로를 먼저 찾을 것.
+
+⚠️ 주의사항 / 함정
+카탈로그를 만들면서 "이 정도면 충분히 넓게 봤다"고 5개 도메인만 조사했다가 "왜 5개밖에 안 되냐, 크게 생각하자"는 지적을 받았다 — 도구(fork, WebSearch)가 있다고 탐색 범위를 자동으로 넓혀주진 않는다. 편의상 좁히는 습관 자체를 고쳐야 했다.
+
+💡 배운 점
+1. 뽀개기에서 나온 원칙은 "알았다"에서 끝나면 휘발된다 — 재사용 가능한 코드/데이터로 만들어야 다음에도 저절로 적용된다.
+2. 검증 도구를 만들 때 "이 도구가 뭘 못 잡는가"를 먼저 물어야 한다.
+3. 자원(데이터/API)이 충분히 크면 스스로 탐색 범위를 좁히지 말 것.
+
+🌱 성장 관점
+이 카탈로그 덕분에 바로 다음 날 "도서관/열람실" 후보를 SQL 검색 한 줄로 찾아냈고, 그게 실제로 2탄으로 채택됐다. 뽀개기 → 원칙 도출 → 코드화 → 실제 의사결정에 사용, 이 전체 사이클이 이틀 안에 한 바퀴 돈 사례.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.08.30 · DuckDB, 검증프레임워크, 공공데이터, 3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Machine Learning"
              data-id="20260829-2"
              style="border-top: 1px solid var(--border);"
