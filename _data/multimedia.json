@@ -1,5 +1,37 @@
 [
     {
+        "title": "AMD Shipped Skills for Claude, Cursor and Codex (All 8 of Them)",
+        "url": "https://www.youtube.com/watch?v=tlMP_Ds46js",
+        "channel": "Cloud Codes",
+        "summary": "AMD가 ROCm 7.14에서 6주 만에 ROCm 10으로 두 메이저 버전을 건너뛰며 'AMD Skills'라는 마크다운 기반 스킬 폴더를 공개, Claude·Cursor·Codex 세 코딩 에이전트에 설치되도록 만들었다. Anthropic이 만든 오픈 스킬 포맷(skill.md, 이름+한줄설명+본문)을 활용해 문서화가 아닌 'AMD 엔지니어의 암묵적 의사결정(어떤 플래그, 어떤 컨테이너, 어떤 순서)'을 에이전트에 주입하는 방식이며, roc-m.ai 산하에 CLI 도구와 워크로드를 자율 최적화하는 에이전트 'Hyperloom'까지 포함한 3단 구성이다.",
+        "categories": [
+            "AI 에이전트",
+            "AMD/ROCm",
+            "Claude Skills",
+            "개발도구",
+            "하드웨어 벤더 AI 전략"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Anthropic의 skill.md 오픈 포맷(이름+한줄 설명은 항상 로드, 본문은 태스크 매칭 시에만 로드)이 타사 에이전트(Cursor, Codex)에도 채택될 만큼 사실상 업계 표준이 되고 있음 — 자체 파이프라인에 스킬 설계 시 이 경량 로딩 구조를 참고할 만함",
+            "'문서화는 API 표면을 서술하지만 스킬은 의견이 담긴 특정 경로를 인코딩한다'는 AMD의 설명은 사내 Global_Define 유틸리티나 반복 워크플로우를 스킬화할 때 적용 가능한 프레임 — 단순 사용법이 아니라 '검증된 특정 절차'를 스킬 본문에 담는 방식",
+            "Hyperloom처럼 프로파일링→병목탐지→코드수정→벤치마크→검증까지 무인 자율 루프를 도는 에이전트 설계 사례 — master_watch.py류 자동화 확장 시 참고 가능"
+        ],
+        "learning_related": [
+            "AMD Skills 구조: skill.md = name + 1줄 when-to-use 설명(상시 로드, 저비용) + 본문 지시(매칭 시에만 로드) → 스킬 100개 있어도 컨텍스트 낭비 없음",
+            "roc-m.ai 3구성: ① 여러 설치 스크립트를 통합한 CLI(테크 프리뷰, 추론 모델 구성 및 드라이버 진단 가능) ② AMD Skills(스킬 폴더) ③ Hyperloom(자율 추론 워크로드 최적화 에이전트)",
+            "ROCm은 2016년 4월 1.0 출시 이후 이번에 6주 만에 3개 메이저 버전을 건너뛴 파격적 버저닝 — 'agentic AI 시대에 맞춘' 마케팅 재정의로 해석됨"
+        ],
+        "key_insights": [
+            "칩 제조사(AMD)가 자사 하드웨어를 더 잘 다루도록 '남의 에이전트'(Claude/Cursor/Codex)를 똑똑하게 만드는 소프트웨어를 직접 배포하는 새로운 벤더 전략 패턴 등장",
+            "Anthropic이 만든 스킬 포맷이 사실상 개방형 산업 표준으로 자리잡아 하드웨어 벤더까지 이를 채택하는 신호",
+            "영상 진행자는 이 흐름 자체는 옳다고 평가하되, AMD의 실행이 경쟁사 대비 약 6주 늦었고 스킬 수도 부족(a few hundred short)하다고 비판적으로 평가"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude Skills 표준 포맷과 AMD 사례는 향후 자체 스킬(barobogi 스킬들) 설계 시 참고할 학습 소재, ⑤자동화 — Hyperloom형 자율 프로파일링/최적화 에이전트 패턴은 master_watch.py 등 자동화 파이프라인 확장 아이디어로 연결 가능",
+        "timestamp": "2026-08-31T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/tlMP_Ds46js/hqdefault.jpg"
+    },
+    {
         "title": "Every Skill You Add Breaks Your Harness (Here's the Fix)",
         "url": "https://www.youtube.com/watch?v=YnXl7bb3V0o",
         "channel": "Cloud Codes",
