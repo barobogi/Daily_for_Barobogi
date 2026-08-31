@@ -1,5 +1,37 @@
 [
     {
+        "title": "China Just Open-Sourced 6 Ways to Speed Up AI Inference (Tencent AngelSpec)",
+        "url": "https://www.youtube.com/watch?v=68kXJQCMBEg",
+        "channel": "Cloud Codes",
+        "summary": "Tencent이 공개한 AngelSpec 프레임워크는 Dflash2를 포함해 6가지 방식의 speculative decoding(추론 가속) 드래프터 모델을 학습시킬 수 있는 오픈소스 도구이지만, 개별 모델인 Dflash2(70,000회 다운로드, HN 인기글)에 비해 정작 이를 만든 상위 프레임워크 AngelSpec은 219 stars, 1,773회 다운로드로 거의 주목받지 못하고 있음을 지적한다. 영상은 LLM 디코딩이 메모리 대역폭에 의해 병목되는 이유와, speculative decoding이 이 낭비되는 메모리 트립을 활용해 품질 손실 없이(동일 분포 보장) 최대 4.6배 속도를 내는 원리를 설명한다.",
+        "categories": [
+            "AI",
+            "LLM 추론최적화",
+            "오픈소스",
+            "Tencent",
+            "speculative decoding"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Speculative decoding: 작은 드래프트 모델이 여러 토큰을 미리 예측하고 큰 모델이 한 번의 forward pass로 검증/승인하는 방식으로, 품질 저하 없이 추론 속도를 최대 4.6배 향상",
+            "LLM 디코딩은 연산량이 아니라 메모리 대역폭(가중치를 매 토큰마다 다시 로드)이 병목이므로, 한 번의 메모리 이동으로 여러 토큰을 처리하는 접근이 유효함",
+            "Tencent의 AngelSpec은 Dflash 방식 포함 6가지 드래프터 학습 프레임워크로, 개별 화제성 있는 모델(Dflash2)보다 상위 오픈소스 툴이 상대적으로 저평가되는 현상을 보여줌 (Hacker News 검색 결과 0건 vs 70,000 다운로드)"
+        ],
+        "learning_related": [
+            "Roofline 분석 관점에서 LLM 디코딩은 약 1 FLOP/byte로 메모리 바운드 영역에 속한다는 개념",
+            "B200 GPU 클라우드 렌탈 가격(시간당 $3.49~$14.24, 2026년 4월 기준)과 토큰당 비용 계산 방식",
+            "accept/reject 규칙을 통해 speculative decoding이 근사가 아닌 '정확히 동일한' 확률분포를 보장하는 메커니즘"
+        ],
+        "key_insights": [
+            "화제성(Hacker News 등)과 실제 기술적 가치는 비례하지 않을 수 있음 — 상위 프레임워크(AngelSpec)가 파생 모델(Dflash2)보다 훨씬 적은 주목을 받은 사례",
+            "LLM 추론 속도 개선의 핵심은 연산 최적화가 아니라 '이미 낭비되고 있는 메모리 대역폭을 활용'하는 데 있음",
+            "speculative decoding은 품질-속도 트레이드오프가 아니라 무료에 가까운 속도 향상(동일 출력 분포 보장)이라는 점이 중요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 추론 최적화(speculative decoding, 메모리 바운드 디코딩) 기술 학습 포인트, ⑤자동화 — AngelSpec 같은 오픈소스 추론 가속 프레임워크는 향후 로컬 LLM 파이프라인 비용/속도 개선에 참고 가능",
+        "timestamp": "2026-08-30T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/68kXJQCMBEg/hqdefault.jpg"
+    },
+    {
         "title": "AMD Shipped Skills for Claude, Cursor and Codex (All 8 of Them)",
         "url": "https://www.youtube.com/watch?v=tlMP_Ds46js",
         "channel": "Cloud Codes",
