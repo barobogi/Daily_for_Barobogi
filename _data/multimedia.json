@@ -1,5 +1,31 @@
 [
     {
+        "title": "Revive Your Old Mac With Omarchy",
+        "url": "https://www.youtube.com/watch?v=mHGDF8mwkY4",
+        "channel": "The Next New Thing",
+        "summary": "Omarchy는 Linux 기반 배포판을 Mac처럼 매끄럽게 설치·사용할 수 있도록 만든 프로젝트로, macOS 최신 버전을 지원하지 않는 구형 Mac 기기(MacBook Air 등)를 되살려 다시 활용할 수 있게 해준다. 발표자들은 오래된 기기를 버리기 아까워하던 사용자들이 이를 통해 다시 사용할 수 있게 된 사례를 소개한다.",
+        "categories": [
+            "Linux",
+            "Omarchy",
+            "Mac 재활용",
+            "오픈소스 OS",
+            "지속가능성"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "Omarchy는 Linux의 진입장벽(설치 난이도, '너드스러움')을 낮추고 Mac 수준의 매끄러운 UX를 제공하는 것을 목표로 함",
+            "macOS가 더 이상 지원하지 않는 구형 Mac 하드웨어에 대체 OS를 설치해 재사용하는 접근"
+        ],
+        "key_insights": [
+            "구형 Mac 하드웨어는 macOS 업데이트 중단으로 방치되기 쉬운데, Linux 기반 대체 OS로 수명을 연장할 수 있음",
+            "Omarchy는 'Linux답지 않은 Linux' 즉 설치·사용 편의성을 Mac 수준으로 끌어올리는 것이 핵심 차별점"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 구형 하드웨어 재활용 및 대체 OS 설치 관련 인프라 지식",
+        "timestamp": "2026-09-01T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/mHGDF8mwkY4/hqdefault.jpg"
+    },
+    {
         "title": "Ads Are Already Inside Your AI's Answers",
         "url": "https://www.youtube.com/watch?v=n-RVHnTGA5I",
         "channel": "Cloud Codes",
