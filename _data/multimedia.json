@@ -1,5 +1,37 @@
 [
     {
+        "title": "Ads Are Already Inside Your AI's Answers",
+        "url": "https://www.youtube.com/watch?v=n-RVHnTGA5I",
+        "channel": "Cloud Codes",
+        "summary": "OpenAI가 ChatGPT 광고주 페이지에 공개한 대로, 답변 하단에 노출되는 광고는 관련성 가중 2차가격 경매(초당 몇 초 만에 낙찰)로 결정되며 클릭당 3~5달러부터 입찰이 시작되고 2026년 2월 미국에서 실제 운영을 시작해 41개국까지 확대됐다. 영상은 '광고가 답변 내용에 영향을 주지 않는다'는 공식 입장과, 동시에 지난 3년간 발표된 연구들(Google Research의 토큰 단위 경매, Maryland의 검색 단계 경매, 뉴런 단위까지 파고든 2026년 5월 논문)이 실제로는 경매를 답변 생성 파이프라인의 더 앞 단계로 계속 침투시켜 온 흐름을 대비시킨다.",
+        "categories": [
+            "AI광고",
+            "LLM경제모델",
+            "OpenAI",
+            "테크뉴스",
+            "AI윤리"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "OpenAI ChatGPT 광고가 2026년 2월 미국에서 실제 경매(relevance-weighted second-price auction) 방식으로 라이브 시작, 현재 41개국 중 9개국에서 운영 중",
+            "클릭당 입찰 시작가 $3~5, 답변 생성 후(post-generation) 단계에 광고 슬롯이 붙는 구조라 현재는 답변 내용 자체엔 영향 없음",
+            "Google Research 등 학계 연구는 토큰 샘플링 분포(2023) → 검색/컨텍스트 단계(Maryland) → 개별 뉴런 활성화(2026.5) 순으로 광고 경매를 답변 생성 파이프라인 더 깊숙이 이식하는 메커니즘을 이미 제안해온 상태",
+            "5단계 파이프라인(질문→검색→경매→생성→답변) 중 경매가 어느 지점에 위치하는지가 '광고가 답변에 영향을 주는가'를 가르는 핵심 포인트"
+        ],
+        "learning_related": [
+            "2차가격 경매(second-price auction) 메커니즘이 검색광고뿐 아니라 LLM 답변 뒤 광고 슬롯, 나아가 토큰/뉴런 단위 입찰 연구에까지 적용되는 사례",
+            "monotone blend 조건 하에서 '더 많이 낸 입찰자가 원하는 출력을 더 많이 얻는다'는 것이 수학적으로 증명 가능하다는 연구 결과"
+        ],
+        "key_insights": [
+            "현재 ChatGPT 광고는 답변 생성이 끝난 뒤 별도로 붙는 구조라 '답변에 영향 없음'이라는 주장이 기술적으로는 사실이지만, 이미 존재하는 연구들은 경매를 생성 과정 안(토큰/뉴런 단위)으로 옮기는 것이 기술적으로 가능함을 보여준다",
+            "광고 침투가 슬롯 단계 → 검색/컨텍스트 단계 → 토큰 샘플링 단계 → 뉴런 활성화 단계로 점점 더 깊이 들어가는 추세이며, 이는 향후 AI 서비스의 신뢰성·투명성 문제로 이어질 수 있는 구조적 리스크",
+            "10만 명 광고주가 100개 슬롯을 두고 경쟁해도 노트북에서 1.25초 만에 처리될 만큼 경매 시스템 자체는 이미 실용화 단계에 근접"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-09-01T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/n-RVHnTGA5I/hqdefault.jpg"
+    },
+    {
         "title": "How to have Claude run your company",
         "url": "https://www.youtube.com/watch?v=F-_q6VIHMS8",
         "channel": "The Next New Thing",
