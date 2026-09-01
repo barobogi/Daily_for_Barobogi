@@ -1,5 +1,38 @@
 [
     {
+        "title": "How to have Claude run your company",
+        "url": "https://www.youtube.com/watch?v=F-_q6VIHMS8",
+        "channel": "The Next New Thing",
+        "summary": "AI 자동화 전문가 James가 Claude Code 하나로 월 25만 달러 매출을 무직원 체제로 운영하는 사례를 소개하며, 클로드(주로 Fable/Opus, 장애 시 GLM 5.2 대체)에 콘텐츠 스택·분석 도구를 전부 연동해 LinkedIn 인포그래픽(HTML→프레임별 GIF 애니메이션)을 만드는 실제 워크플로우를 시연한다. 이 인포그래픽은 리드 퍼널(코멘트→DM→랜딩페이지→메일링리스트)로 이어져 비즈니스 전환에 활용된다.",
+        "categories": [
+            "AI자동화",
+            "Claude활용",
+            "콘텐츠마케팅",
+            "1인기업",
+            "LinkedIn"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code(터미널)를 비즈니스 전체 운영의 허브로 사용, 모든 콘텐츠/분석 툴을 연동",
+            "모델 이중화 전략: 기본 Fable/Opus, Claude 장애 시 GLM 5.2(중국 저가 모델)로 폴백",
+            "Claude Skills 기능으로 'LinkedIn 인포그래픽' 같은 반복 워크플로우를 스킬화하여 재사용",
+            "Whisper Flow로 음성 입력(분당 150단어)해 타이핑(분당 100단어)보다 빠르게 Claude와 상호작용",
+            "HTML 페이지를 프레임별로 캡처해 애니메이션 GIF로 변환 → LinkedIn에서 이미지 도달률로 GIF 유통(플랫폼 알고리즘 우회 활용법)"
+        ],
+        "learning_related": [
+            "인포그래픽 제작 파이프라인: 대화로 요구사항 정의 → 와이어프레임 초안 → 피드백 반영 → 애니메이션화 → GIF 출력",
+            "LinkedIn 알고리즘 특성: GIF가 이미지와 동일한 노출/참여율을 받는다는 점을 활용한 포맷 전략"
+        ],
+        "key_insights": [
+            "Claude Code를 단순 코딩 툴이 아닌 '비즈니스 운영체제'로 사용하는 사례 — 전체 툴스택을 하나의 CLI로 오케스트레이션",
+            "Claude Skills로 콘텐츠 제작(마케팅 인포그래픽)을 표준화·자동화해 리드 퍼널까지 연결한 실전 그로스 해킹 모델",
+            "모델 장애 대비 이중화(Fable/Opus + GLM 5.2)와 음성 입력 병행으로 실행 속도를 극대화하는 운영 패턴"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code 허브형 운영 + Skills 기반 콘텐츠(인포그래픽) 자동 생성 파이프라인, 3AI 체계에도 참고 가능, ⑨창작 — HTML→GIF 인포그래픽 제작 기법, 유튜브/LinkedIn 콘텐츠 제작에 응용 가능, ④공부방 — Claude Skills 활용법(반복 워크플로우 스킬화) 학습 포인트",
+        "timestamp": "2026-09-01T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/F-_q6VIHMS8/hqdefault.jpg"
+    },
+    {
         "title": "China Just Open-Sourced 6 Ways to Speed Up AI Inference (Tencent AngelSpec)",
         "url": "https://www.youtube.com/watch?v=68kXJQCMBEg",
         "channel": "Cloud Codes",
