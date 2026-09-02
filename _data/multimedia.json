@@ -1,5 +1,36 @@
 [
     {
+        "title": "Google Built a Future Predicting Model. So Why Ban Us From Using It?",
+        "url": "https://www.youtube.com/watch?v=iJ1GinGFc1Q",
+        "channel": "Cloud Codes",
+        "summary": "Google이 2026년 8월 31일 공개한 시계열 예측 전용 파운더데이션 모델 'TimesFM3'을 다룬 영상으로, 언어모델의 토큰 개념을 32개 연속 수치 '패치'로 바꿔 학습한 디코더 온리 구조를 설명한다. 3.3억 파라미터의 작은 모델임에도 특정 예측 벤치마크에서 역대 최고 성적을 냈지만, 다른 리더보드에서는 Google의 또 다른 팀이 만든 모델에 밀려 10위에 그친다는 점도 짚는다.",
+        "categories": [
+            "AI모델",
+            "시계열예측",
+            "Google",
+            "머신러닝",
+            "테크뉴스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "TimesFM3: 언어모델 토큰 대신 32개 연속 수치를 하나의 '패치'로 취급해 학습하는 디코더온리 시계열 예측 모델 (2024년 2월 최초 논문 → 2026년 8월 3세대 공개)",
+            "동일 회사 Google 내에서도 서로 다른 팀이 만든 모델끼리 벤치마크 순위 경쟁 — 하나의 리더보드에서 1위, 다른 리더보드에서는 10위",
+            "올해 추가된 핵심 개선점: 단일 시계열만 보던 기존 방식에서 벗어나 프로모션 캘린더 등 외부 공변량(covariate)을 함께 학습해 이벤트에 반응하는 예측 가능"
+        ],
+        "learning_related": [
+            "시계열 예측에 트랜스포머 아키텍처를 적용할 때 '패치(patch)' 단위 토큰화가 핵심 트릭 — 트랜잭션 데이터가 아니라 '모양(shape)'을 학습",
+            "3.3억 파라미터로도 특정 벤치마크 1위를 기록 — 모델 크기보다 도메인 특화 표현(patch tokenization)이 성능에 더 크게 기여할 수 있음을 보여주는 사례"
+        ],
+        "key_insights": [
+            "언어모델의 '다음 단어 예측' 원리를 시계열에 그대로 적용하되, 토큰을 '단어'가 아닌 '32개 수치로 이뤄진 패치'로 바꾼 것이 TimesFM 계열의 핵심 아이디어",
+            "모델이 개별 비즈니스를 '인식'하는 게 아니라 '이 화요일이 다른 수백만 개의 화요일과 비슷한 패턴'이라는 식으로 일반화해서 예측",
+            "외부 변수(프로모션, 날씨 등)를 함께 넣을 수 있게 된 멀티변량 지원이 올해 가장 큰 실질적 개선점"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — 시계열 예측 파운데이션 모델(TimesFM3) 아키텍처 학습 자료로 보관 가치 있음, ⑤자동화 — 향후 수요예측/재고예측 등 자동화 파이프라인에 시계열 예측 모델 활용 검토 가능",
+        "timestamp": "2026-09-02T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/iJ1GinGFc1Q/hqdefault.jpg"
+    },
+    {
         "title": "How I Ship Faster Than 99% of Devs (just copy me)",
         "url": "https://www.youtube.com/watch?v=c9nRxEy1kUY",
         "channel": "David Ondrej",
