@@ -1,5 +1,33 @@
 [
     {
+        "title": "This $399 Robot Does Tricks — And You Program It",
+        "url": "https://www.youtube.com/watch?v=0CexicXSXW0",
+        "channel": "The Next New Thing",
+        "summary": "HuggingFace가 출시한 399달러짜리 소형 로봇 'Micro Duck'을 소개하는 영상으로, 사용자가 직접 프로그래밍해 스케이트보드 타기 등 다양한 동작을 시킬 수 있다. AI 하드웨어가 점점 저렴해지고 비개발자도 접근 가능해지는 흐름을 보여주는 사례로 제시된다.",
+        "categories": [
+            "AI 하드웨어",
+            "로보틱스",
+            "HuggingFace",
+            "저가형 로봇"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "HuggingFace가 399달러의 프로그래밍 가능한 로봇 'Micro Duck' 출시 — AI 하드웨어 진입장벽 하락 사례",
+            "비개발자·일반인도 AI 로봇을 저비용으로 구매·프로그래밍할 수 있는 시장 형성 초기 신호"
+        ],
+        "learning_related": [
+            "저가형 프로그래밍 가능 로봇 플랫폼(Micro Duck) 존재 확인 — 향후 AI+하드웨어 자동화 프로젝트 참고 자원 가능"
+        ],
+        "key_insights": [
+            "AI 파워드 하드웨어가 급격히 저렴해지고 일반 소비자 접근성이 높아지는 추세",
+            "HuggingFace가 소프트웨어를 넘어 실물 하드웨어(로봇) 영역까지 확장",
+            "$399라는 가격대는 AI 로보틱스 취미/교육 시장 진입장벽을 크게 낮추는 신호"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 저가형 프로그래밍 가능 로봇(Micro Duck) 학습·실험 소재로 활용 가능, ⑤자동화 — AI 하드웨어 접근성 확대 트렌드, 향후 자동화 프로젝트 하드웨어 옵션으로 참고 가능",
+        "timestamp": "2026-09-02T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/0CexicXSXW0/hqdefault.jpg"
+    },
+    {
         "title": "Google Built a Future Predicting Model. So Why Ban Us From Using It?",
         "url": "https://www.youtube.com/watch?v=iJ1GinGFc1Q",
         "channel": "Cloud Codes",
