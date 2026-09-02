@@ -1,5 +1,35 @@
 [
     {
+        "title": "How I Ship Faster Than 99% of Devs (just copy me)",
+        "url": "https://www.youtube.com/watch?v=c9nRxEy1kUY",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 2026년 기준 자신의 에이전틱 엔지니어링(Agentic Engineering) 풀 셋업을 공개하는 영상으로, 여러 AI 코딩 에이전트를 하나의 인터페이스에서 통합 사용하는 오픈소스 툴 'BB'와 터미널 기반 멀티 워크스페이스 툴 'CMAX', 그리고 Ghostty 터미널을 소개한다. 각 툴의 장단점(특히 CMAX의 사이드바 확장성 한계)을 비교하며 자신의 실전 워크플로우를 공유한다.",
+        "categories": [
+            "AI 코딩 에이전트",
+            "개발 생산성",
+            "터미널 툴",
+            "오픈소스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "BB(오픈소스, 무료)는 Codex/Claude Code/Cursor CLI/OpenCode/Grok/Hermes 등 다양한 에이전트·구독·모델을 단일 UI에서 사용 가능 — Cursor/Codex처럼 자체 모델·구독에 종속되지 않음",
+            "BB는 서브에이전트를 부모 매니저 에이전트가 자동으로 launch·관리해줌 (수동 프롬프트 작성 불필요)",
+            "CMAX는 tmux처럼 터미널 화면을 분할해 여러 워크스페이스(코덱스 등)를 동시 운영 가능하지만, 에이전트/프로젝트 수가 많아지면 사이드바 UI가 스케일링 한계를 보임",
+            "터미널은 Ghostty를 사용 — 속도 이점 강조"
+        ],
+        "learning_related": [
+            "여러 AI 코딩 에이전트를 하나의 인터페이스로 통합 관리하는 오픈소스 대안(BB) 존재 확인",
+            "대규모 멀티 에이전트 작업 시 인터페이스(사이드바 vs 다른 패러다임) 선택이 생산성에 큰 영향을 줌"
+        ],
+        "key_insights": [
+            "특정 회사의 폐쇄형 앱(Cursor, Codex)에 갇히지 않고 오픈소스 통합 인터페이스로 여러 구독/모델을 최대 활용하는 것이 2026년 에이전틱 엔지니어링의 핵심 전략",
+            "에이전트 수가 늘어날수록 관리 인터페이스의 구조(사이드바 리스트 vs 대안 UI)가 병목이 될 수 있음 — 도구 선택 시 확장성 고려 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 다중 AI 에이전트(코드/서브에이전트) 통합 관리 워크플로우, 현재 3AI(만복/코니/안티) 협업 구조와 비교·참고 가능, ⑥인프라 — 오픈소스 무료 툴(BB) 기반 에이전트 통합 인터페이스는 '비용 0원 구조' 원칙과 부합, 도입 검토 가치 있음, ④공부방 — 최신 에이전틱 엔지니어링 트렌드/툴 학습 자료로 활용 가능",
+        "timestamp": "2026-09-02T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/c9nRxEy1kUY/hqdefault.jpg"
+    },
+    {
         "title": "They Doubled the Limit You See. Not the One That Stops You",
         "url": "https://www.youtube.com/watch?v=39_ynW5nRGU",
         "channel": "Cloud Codes",
