@@ -1,5 +1,28 @@
 [
     {
+        "title": "Claude Code 쓰는 개발자의 마감 10분 전ㅋㅋ",
+        "url": "https://www.youtube.com/watch?v=Alu3kZYQvqA",
+        "channel": "호두의 AI 분석실",
+        "summary": "제목만으로 추정컨대, 마감 10분 전이라는 압박 상황에서 Claude Code를 활용해 개발 작업을 해결하는 개발자의 모습을 다룬 밈/코미디성 영상으로 보입니다. 자막과 설명이 제공되지 않아 상세 내용은 확인이 어렵습니다.",
+        "categories": [
+            "Claude Code",
+            "개발자 밈",
+            "AI 코딩 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code를 실제 마감 압박 상황에서 활용하는 개발자 워크플로우를 보여주는 콘텐츠로 추정됨 (자막 부재로 세부 확인 불가)"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "자막과 설명이 없어 정확한 내용 파악에 한계가 있음",
+            "제목상 'Claude Code + 마감 임박' 상황의 유머/실전 활용 콘텐츠로 추정"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code 실전 활용 사례로 향후 코딩 워크플로우 벤치마킹 가능성",
+        "timestamp": "2026-09-02T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Alu3kZYQvqA/hqdefault.jpg"
+    },
+    {
         "title": "Fable 5.1은 역대 최고의 모델입니다 (Fable 5보다 저렴하기까지 함)",
         "url": "https://www.youtube.com/watch?v=V0D6qgHrQHg",
         "channel": "호두의 AI 분석실",
