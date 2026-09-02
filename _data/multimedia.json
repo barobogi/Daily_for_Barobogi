@@ -1,5 +1,31 @@
 [
     {
+        "title": "우린 원래 붙어 있었다? 한국과 일본의 비밀",
+        "url": "https://www.youtube.com/watch?v=Oj_U42E25dw",
+        "channel": "호두의 AI 분석실",
+        "summary": "약 2,500만 년 전에는 지금의 동해가 존재하지 않았으며, 대륙이 갈라지며 바닷물이 유입되고 일본 열도가 동쪽으로 이동하는 지각변동 과정을 거쳐 오늘날의 동해 지형이 형성되었다는 내용을 다룬 지질학 교양 영상입니다.",
+        "categories": [
+            "지질학",
+            "지구과학",
+            "한일역사",
+            "교양",
+            "쇼츠"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "신생대 마이오세 동해 형성 과정(대륙 분리 → 해수 유입 → 일본 열도 동진) 지질학 상식"
+        ],
+        "key_insights": [
+            "동해는 원래부터 존재한 바다가 아니라 약 2,500만 년 전 대륙 분리 과정에서 형성됨",
+            "일본 열도가 동쪽으로 이동하면서 현재의 동해 형태가 완성됨",
+            "한국과 일본이 과거 지질학적으로 붙어 있었다는 대중적 흥미 소재를 짧은 포맷으로 전달"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-09-02T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Oj_U42E25dw/hqdefault.jpg"
+    },
+    {
         "title": "Revive Your Old Mac With Omarchy",
         "url": "https://www.youtube.com/watch?v=mHGDF8mwkY4",
         "channel": "The Next New Thing",
