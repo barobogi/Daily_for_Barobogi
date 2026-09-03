@@ -1,5 +1,33 @@
 [
     {
+        "title": "Someone Built Autocomplete... For Piano",
+        "url": "https://www.youtube.com/watch?v=twVd1dyPlz8",
+        "channel": "The Next New Thing",
+        "summary": "AI를 활용해 피아노 연주에 '자동완성' 기능을 적용한 프로젝트를 소개하는 영상으로, 사용자가 연주한 멜로디를 이어서 AI가 다음 프레이즈를 제안해준다. Hacker News에서 큰 화제가 되었으며, 음악가들의 작곡 및 즉흥연주(iteration) 워크플로우에 실질적 도움이 될 수 있다는 반응을 다룬다.",
+        "categories": [
+            "AI음악",
+            "생성형AI",
+            "음악창작도구",
+            "HackerNews화제작"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "텍스트 자동완성 개념을 음악(피아노 연주)에 적용한 사례 — 도메인 전이 아이디어의 좋은 예시",
+            "까다롭고 냉소적인 Hacker News 커뮤니티에서도 긍정적 반응을 얻은 드문 AI 프로젝트"
+        ],
+        "learning_related": [
+            "기존 UX 패턴(자동완성)을 전혀 다른 창작 도메인(작곡/연주)에 이식하는 아이디어 확장 방식",
+            "음악가의 실제 페인포인트(다음에 뭘 해야 할지 막막함)를 AI 제안으로 해결하는 접근"
+        ],
+        "key_insights": [
+            "익숙한 인터페이스 패턴(자동완성)을 새로운 도메인에 적용하면 예상치 못한 강력한 툴이 나올 수 있다",
+            "AI 도구가 창작자의 '다음 단계' 막힘을 뚫어주는 보조자 역할로 포지셔닝될 때 수용도가 높다"
+        ],
+        "memo": "📋 뿌리체계: ⑨창작 — AI 기반 음악 창작/작곡 보조 도구 아이디어 참고 가능, ⑤자동화 — 창작 워크플로우에 AI 자동완성/제안 기능 적용 사례",
+        "timestamp": "2026-09-03T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/twVd1dyPlz8/hqdefault.jpg"
+    },
+    {
         "title": "Did China Really Build an AI That Writes CUDA Better Than Humans?",
         "url": "https://www.youtube.com/watch?v=ckommYyFgGo",
         "channel": "Cloud Codes",
