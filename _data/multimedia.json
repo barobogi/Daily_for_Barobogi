@@ -1,5 +1,35 @@
 [
     {
+        "title": "New: AI seller + phone for your agent + OpenClaw 2.0 boy-is-it-bad",
+        "url": "https://www.youtube.com/watch?v=MaTkyO-8hZ0",
+        "channel": "The Next New Thing",
+        "summary": "The Next New Thing 채널이 최신 AI 도구 3종을 소개: 상품 URL만 넣으면 AI가 실시간으로 홈쇼핑처럼 판매 방송을 진행하는 AI QVC 서비스, Levels IO가 만든 끝없이 생성되는 AI 슬롭 라이브스트림(시청자 채팅이 다음 장면 결정), 그리고 Claude/Codex에 연결해 연락처·이메일·전화번호를 찾아주는 오픈소스 데이터 enrichment MCP 도구 TEG.",
+        "categories": [
+            "AI 뉴스",
+            "AI 에이전트",
+            "라이브 커머스",
+            "MCP 도구",
+            "영상 생성 AI"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 판매원(AI QVC) — URL만 입력하면 AI가 실시간 라이브 커머스 방송으로 상품을 판매하고 원클릭 구매 링크 제공, 라이브 쇼핑의 미래 가능성",
+            "무한 AI 슬롭 라이브스트림 — 영상 생성 모델이 실시간 소비 속도만큼 빠르게 생성 가능해짐(1주일 전 대비 획기적 발전), 월 수십만 달러 운영비, 광고 판매(월 $25,000)로 수익화 사례",
+            "TEG — Claude/Codex에 꽂아 쓰는 오픈소스 MCP 데이터 enrichment 툴, Apollo/Clay 대체 가능한 무료 연락처·이메일·전화번호 검색 도구"
+        ],
+        "learning_related": [
+            "MCP(Model Context Protocol) 기반 오픈소스 데이터 enrichment 도구가 유료 SaaS(Apollo, Clay)를 대체할 수 있는 사례로 주목할 만함"
+        ],
+        "key_insights": [
+            "영상 생성 AI가 실시간 소비 속도를 따라잡는 수준에 도달 — 콘텐츠 생성 비용/속도의 임계점 돌파",
+            "AI 에이전트가 전화번호를 부여받아 실제 통화까지 대신 수행하는 방향으로 발전 중(제목 언급, 본문 트랜스크립트에는 미상세)",
+            "무료/오픈소스 MCP 도구(TEG)가 데이터 enrichment 같은 유료 SaaS 영역을 잠식하기 시작"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — TEG MCP 도구는 Claude Code에 직접 연결해 연락처 enrichment 자동화 가능, API 회피/무료 우선 원칙과 부합해 검토 가치 있음, ⑨창작 — AI 라이브 커머스/AI 슬롭 스트림 트렌드는 향후 유튜브 채널 콘텐츠 포맷 아이디어로 참고 가능",
+        "timestamp": "2026-09-03T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/MaTkyO-8hZ0/hqdefault.jpg"
+    },
+    {
         "title": "바이브코딩 클로드코드 AI로 개발할 때, 알아야 하는 필수 IT 지식 | 기술노트 도서 목차 설명",
         "url": "https://www.youtube.com/watch?v=ABlchZTPUVI",
         "channel": "기술노트with알렉",
