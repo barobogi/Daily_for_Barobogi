@@ -1,5 +1,29 @@
 [
     {
+        "title": "He Made $236K in a Week... From a 3-Hour Website",
+        "url": "https://www.youtube.com/watch?v=qr7Zwjx-nWU",
+        "channel": "The Next New Thing",
+        "summary": "Jonathan이라는 개발자가 단 3시간 만에 만든 outbid.lol이라는 사이트가 X(트위터)에서 바이럴을 타며, 기업들이 리스트 상단 자리를 놓고 경매식으로 입찰(1.4만~1.7만 달러)하는 진기한 현상이 발생했다. 이 사이트는 출시 일주일 만에 23만 6천 달러의 매출을 기록했으며, 운영비가 거의 들지 않아 대부분이 순수익이라는 점이 강조된다.",
+        "categories": [
+            "바이럴마케팅",
+            "사이드프로젝트",
+            "스타트업"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "아이디어를 빠르게(3시간) 프로토타입으로 구현해 시장 반응을 즉시 테스트하는 린 스타트업 방식의 실증 사례"
+        ],
+        "key_insights": [
+            "단순한 '입찰식 순위 노출' 아이디어 하나로 3시간 개발 투입 대비 23만 6천 달러 매출이라는 극단적 ROI를 달성",
+            "사이트 자체가 화제성(바이럴)을 만들어 방문자를 끌어들이고, 그 트래픽이 다시 입찰 기업들에게 실질적 홍보 효과를 주는 자기강화 구조",
+            "초기 비용이 거의 없는 웹 기반 아이디어는 실패해도 리스크가 작고, 성공 시 비대칭적으로 큰 보상을 얻을 수 있음을 보여주는 사례"
+        ],
+        "memo": "📋 뿌리체계: ⑨창작 — 저비용·고속 프로토타이핑으로 바이럴 아이디어를 실험하는 사이드 프로젝트 참고 사례",
+        "timestamp": "2026-09-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/qr7Zwjx-nWU/hqdefault.jpg"
+    },
+    {
         "title": "Top 10 Repos explained: Archify, Omarchi, OpenMAIC, and more",
         "url": "https://www.youtube.com/watch?v=AWzzmrCPe-A",
         "channel": "The Next New Thing",
