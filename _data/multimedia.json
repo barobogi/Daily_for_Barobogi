@@ -1,5 +1,36 @@
 [
     {
+        "title": "GPT-6 Astra, Fable 5.1보다 좋을까? 공식 차트로 비교",
+        "url": "https://www.youtube.com/watch?v=pEfYiRpDH-Q",
+        "channel": "호두의 AI 분석실",
+        "summary": "GPT-6 Astra는 단순 대화 능력보다 도구 사용·브라우저 조작·전문 소프트웨어 연동 등 '작업 완수형' AI로 발전한 모델로, 공식 벤치마크에서 컴퓨터 사용·업무 자동화 영역은 Fable 5.1보다 우수하지만 초고난도 종합 추론과 지식 업무 지수는 Fable 5.1이 앞선다. 가격은 100만 토큰당 입출력 50달러로 Fable 5.1과 동일 수준이며 현재 제한된 기업 대상으로 우선 제공된다.",
+        "categories": [
+            "AI 모델 비교",
+            "GPT-6",
+            "벤치마크"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "GPT-6 Astra는 도구 사용(에이전틱) 능력 중심 모델 — 컴퓨터 작업 시간 약 47% 단축",
+            "과학 연구 에이전트 성공률 64.6%(Astra) vs 52.6%(Fable 5.1), 예상 API 비용은 Astra가 약 31% 낮음",
+            "업무 자동화 성공률 41.4%(Astra) vs 31.4%(Fable 5.1)",
+            "초고난도 종합 추론·지식 업무 지수는 Fable 5.1이 우위(65점 vs 57.2점)",
+            "가격은 100만 토큰당 입력·출력 50달러로 Fable 5.1과 동일, 현재 제한된 기업부터 순차 제공"
+        ],
+        "learning_related": [
+            "긴 컨텍스트 창으로 코드·문서를 한 번에 넓게 펼쳐 처리 가능",
+            "단일 답변형 태스크보다 여러 단계가 이어지는 실제 업무(브라우저·코드·문서·전문 SW 오가기)에서 에이전틱 모델의 장점이 커짐"
+        ],
+        "key_insights": [
+            "모델 선택 기준이 '더 똑똑한 답변'에서 '화면에서 끝까지 일을 완수하는 능력'으로 이동 중",
+            "특정 영역(에이전틱 자동화)은 Astra, 특정 영역(고난도 추론·지식 업무)은 Fable 5.1로 용도별 모델 선택이 필요",
+            "회사 자체 공개 벤치마크이므로 실제 업무 적용 시 직접 비교 검증 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 컴퓨터 작업/에이전틱 툴 사용 벤치마크가 향후 만복·안티 자동화 파이프라인 모델 선택에 참고 가능, ④공부방 — Fable 5.1 vs GPT-6 Astra 성능·비용 비교 데이터는 향후 AI 모델 채택 판단 시 참고 자료",
+        "timestamp": "2026-09-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/pEfYiRpDH-Q/hqdefault.jpg"
+    },
+    {
         "title": "Someone Built Autocomplete... For Piano",
         "url": "https://www.youtube.com/watch?v=twVd1dyPlz8",
         "channel": "The Next New Thing",
