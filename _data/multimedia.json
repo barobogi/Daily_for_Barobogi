@@ -1,5 +1,34 @@
 [
     {
+        "title": "Top 10 Repos explained: Archify, Omarchi, OpenMAIC, and more",
+        "url": "https://www.youtube.com/watch?v=AWzzmrCPe-A",
+        "channel": "The Next New Thing",
+        "summary": "The Next New Thing 채널의 주간 GitHub 저장소 소개 영상으로, 자연어 설명을 클릭 가능한 시스템 아키텍처 다이어그램으로 변환해주는 'Archify'와 위성/드론/공공카메라 등 실시간 공개 데이터를 하나의 브라우저 지도 인터페이스로 통합한 'God's Eye View'를 소개한다. 두 진행자가 각 툴의 실사용 시나리오(AI에게 시스템 설계 전달, 공개 실시간 데이터 열람)를 대화 형식으로 설명한다.",
+        "categories": [
+            "GitHub",
+            "개발도구",
+            "AI",
+            "시각화",
+            "오픈소스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Archify — 자연어/화이트보드 스케치 대신 AI와 상호작용 가능한 클릭형 시스템 아키텍처 다이어그램을 생성, 문서·스펙으로 활용 가능",
+            "AI에게 요구사항 전달 시 텍스트보다 다이어그램/이미지가 관계·흐름·방향성 전달에 더 효과적이라는 관점 제시"
+        ],
+        "learning_related": [
+            "God's Eye View — 실시간 항공기, 선박, 위성, 산불, 공공 CCTV 등 이미 공개된 데이터를 단일 인터페이스로 통합 시각화하는 오픈소스 프로젝트",
+            "Archify는 단순 이미지 생성형 다이어그램 툴과 달리 드래그·편집이 가능한 인터랙티브 다이어그램이라는 차별점"
+        ],
+        "key_insights": [
+            "시스템 설계를 AI와 소통할 때 텍스트 프롬프트보다 시각적 다이어그램이 정확도를 높이고 작업량을 줄여준다는 인사이트",
+            "공개된 실시간 데이터(위성·선박·CCTV 등)를 접근성 있게 통합하는 오픈소스 툴의 수요가 존재함"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — Archify류 다이어그램 도구는 프로젝트 코드/아키텍처 문서화·스펙 작성에 참고 가능, ⑤자동화 — AI에게 시스템 설계를 다이어그램으로 전달하는 워크플로우는 향후 3AI 협업 스펙 작성 시 참고할 만함",
+        "timestamp": "2026-09-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/AWzzmrCPe-A/hqdefault.jpg"
+    },
+    {
         "title": "The Outage That Proved AI Has No Plan B",
         "url": "https://www.youtube.com/watch?v=CUAcao5N2ok",
         "channel": "Cloud Codes",
