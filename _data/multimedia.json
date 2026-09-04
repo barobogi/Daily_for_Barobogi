@@ -1,5 +1,35 @@
 [
     {
+        "title": "The Outage That Proved AI Has No Plan B",
+        "url": "https://www.youtube.com/watch?v=CUAcao5N2ok",
+        "channel": "Cloud Codes",
+        "summary": "2026년 9월 4일 목요일, 앤스로픽(Claude)·xAI(Grok)·OpenAI(ChatGPT)가 90분 간격으로 잇달아 장애를 일으켰다. 클라우드플레어와 애저는 원인에서 배제됐고, 실제 원인은 xAI/SpaceX가 소유·운영하는 멤피스 'Colossus One' 데이터센터였다. Anthropic이 이 건물 전체(22만개 이상 칩, 월 12.5억 달러)를 임대해 Claude를 구동 중이었는데, 경쟁사인 Grok과 물리적으로 같은 건물·같은 GPU 도메인을 공유하고 있었다는 사실이 드러났다.",
+        "categories": [
+            "AI인프라",
+            "클라우드장애",
+            "GPU클러스터",
+            "빅테크뉴스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Anthropic(Claude)과 xAI(Grok)이 경쟁사임에도 멤피스 'Colossus One' 데이터센터를 공유 — 물리적 단일 장애점(SPOF) 존재. AI 서비스의 '이중화'가 실제로는 브랜드만 다를 뿐 동일 인프라에 의존할 수 있음을 보여주는 사례",
+            "엔비디아 GPU 랙 1개가 72개 GPU를 NVLink로 묶어 13.4TB 메모리를 공유하는 단일 도메인으로 작동 — 하드웨어 레벨에서 즉시 페일오버가 불가능한 구조적 이유 설명",
+            "언론 보도가 상태 페이지 원문 확인 없이 헤드라인부터 작성돼 장애 원인(애저)과 지속시간이 실제와 크게 다르게 보도됨 — 1차 소스(상태 페이지) 직접 확인의 중요성"
+        ],
+        "learning_related": [
+            "GPU 클러스터 아키텍처(NVLink 도메인, 랙 단위 GPU 72개 공유 구조) 기초 이해",
+            "대형 AI 서비스 장애 발생 시 원인 추적 방법론: 공유 의존성(CDN, 클라우드 리전) 순차 배제 → 상태 페이지 원문 대조"
+        ],
+        "key_insights": [
+            "AI 업계의 '경쟁'은 표면적일 뿐, 실제 컴퓨팅 인프라(전력·건물·GPU)는 소수 회사(SpaceX/xAI)에 집중돼 있어 백업/이중화가 사실상 존재하지 않을 수 있음",
+            "대규모 AI 인프라 임대 계약이 정치적 대립(머스크-앤스로픽 갈등)과 무관하게 비즈니스적으로는 얽혀 있다는 점이 시사하는 바 — 표면적 서사와 실제 인프라 의존관계는 다를 수 있음",
+            "미디어의 속보 경쟁이 정확도를 희생시키는 구조적 문제 — 원인·지속시간 모두 오보된 사례"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — AI 서비스(Claude 등) 의존 시 단일 데이터센터/공급업체 리스크 인지 필요, 백업 도구 전략 재검토 근거, ③지식관리 — AI 산업 인프라 동향(멤피스 Colossus, GPU 클러스터 구조) 스터디 자료로 축적 가치",
+        "timestamp": "2026-09-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/CUAcao5N2ok/hqdefault.jpg"
+    },
+    {
         "title": "Higgsfield Genjutsu: Hollywood VFX, No Reshoot",
         "url": "https://www.youtube.com/watch?v=2hynVHIlJGw",
         "channel": "Cloud Codes",
