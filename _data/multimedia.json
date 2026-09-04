@@ -1,5 +1,36 @@
 [
     {
+        "title": "GPT 6 Astra: The End of Chain-of-Thought?",
+        "url": "https://www.youtube.com/watch?v=HS0x-KJEXlg",
+        "channel": "Cloud Codes",
+        "summary": "OpenAI의 신모델(Astra/GPT-6 추정)이 'recurrent depth'라는 순환 잠재공간(latent) 추론 기법을 사용해 35억 파라미터로 500억 파라미터급 연산을 흉내낸다는 주장이 나왔으나, 이 루프 내부 사고는 텍스트로 기록되지 않아 기존 chain-of-thought 모니터링으로 감시할 수 없다는 점이 안전성 논쟁을 촉발했다. 영상은 이 기법의 실제 성능 검증 결과가 처음 발표된 수치만큼 좋지 않았다는 반박 논문과 OpenAI 수석과학자의 발언까지 다루며 서사가 세 번 뒤집힌다고 설명한다.",
+        "categories": [
+            "AI",
+            "LLM",
+            "AI안전성",
+            "추론기법",
+            "OpenAI"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "recurrent depth(순환 깊이) 기법: 동일한 연산 블록을 잠재공간에서 반복 실행해 적은 파라미터로 큰 모델급 연산량을 흉내내는 방식",
+            "이 방식은 추론 과정이 토큰(텍스트)이 아닌 숫자 상태(latent state)로만 존재해 chain-of-thought 모니터링(안전성 감시 수단)이 무력화될 수 있음",
+            "초기 발표된 성능 수치(3.5B 파라미터로 50B급 연산)를 검증한 후속 논문에서 실제로는 주장만큼 재현되지 않았다는 반박이 나옴"
+        ],
+        "learning_related": [
+            "Chain-of-thought monitoring 개념: 모델이 추론을 텍스트로 남기면 별도 모델이 그 텍스트를 읽어 위험한 계획을 감지할 수 있다는 안전장치",
+            "Latent reasoning vs explicit reasoning의 트레이드오프 — 효율성은 높아지지만 해석가능성(interpretability)은 낮아짐"
+        ],
+        "key_insights": [
+            "AI 모델의 추론이 텍스트가 아닌 잠재공간(latent space) 루프 안에서 이뤄지면, 인간이 그 사고 과정을 감시할 방법이 사라진다는 것이 핵심 안전성 이슈",
+            "화제가 된 효율성 주장(적은 파라미터로 큰 모델 흉내)은 독립 검증에서 재현되지 않아 과대포장 가능성이 제기됨",
+            "이 영상은 단순히 '루프 기법 자체'보다 '모델 사고의 불투명성 증가'가 진짜 문제라고 프레이밍함"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — AI 추론 기법(recurrent depth) 및 안전성 논쟁 트렌드 파악용 자료, ④공부방 — LLM 아키텍처/해석가능성(interpretability) 학습 소재로 활용 가능",
+        "timestamp": "2026-09-04T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/HS0x-KJEXlg/hqdefault.jpg"
+    },
+    {
         "title": "GPT-6 Astra, Fable 5.1보다 좋을까? 공식 차트로 비교",
         "url": "https://www.youtube.com/watch?v=pEfYiRpDH-Q",
         "channel": "호두의 AI 분석실",
