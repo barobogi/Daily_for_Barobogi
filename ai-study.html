@@ -278,6 +278,42 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Pipeline"
+             data-id="20260905-4"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Pipeline</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">AI 자기개선 루프가 토큰만 태우는 이유 → gps_check.py 실전 적용</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+Matt Pocock의 "AI 자기개선 루프, 토큰만 태우는 진짜 이유가 있습니다" 영상 내용(판정 기준이 애매하면 루프가 겉돈다)을 그날 실제로 터진 위스크 사건에 대입해서, gps_check.py의 Proof 검증 허점을 찾아 코드로 막았다.
+
+🗂️ 전체 구조
+[영상 핵심] 자기개선 루프가 토큰만 태우는 이유 = 판정 기준(yes/no)이 애매해서
+→ (같은 날 실제로 벌어진 사건에 대입) 위스크 스크립트 "구현 완료" 라벨 → 실제로는 print문뿐인 껍데기였는데도 통과됨
+→ (원인 역추적) gps_check.py validate_proof: "확인/검증/PASS" 키워드 하나만 있으면 무조건 통과 → "적절히 확인" 같은 애매한 문장도 그대로 PASS
+→ (코드 수정) 모호어(적절히/만족스럽게/충분히 등) + 구체적 앵커(숫자/.py/.md/PASS/FAIL/%) 없음 = ValueError 반려
+
+🔑 핵심 기술 1 — 판정 기준 3가지 유형 (영상 원본)
+정합성 체크(RAG 답변 근거가 실제 컨텍스트 안에 있는지 yes/no), 브랜드 보이스 체크(회사명 오타·의도치 않은 번역 여부 yes/no), 실패유형 분류(미리 정의한 패턴 중 어디에 해당하는지).
+
+🔑 핵심 기술 2 — 우리 코드에 실제로 있던 같은 함정
+gps_check.py의 validate_proof가 키워드 존재 여부만 검사하고 문장이 실제로 판정 가능한지는 안 봤다 — 이 허점 때문에 위스크 스크립트의 "구현 완료" 같은 애매한 라벨이 걸러지지 않고 통과됐었다.
+
+🔑 핵심 기술 3 — 적용한 방어 로직
+"적절히/만족스럽게/충분히/알아서/적당히/타당하게/잘" 같은 모호어가 있으면, 숫자·파일명·PASS/FAIL·% 같은 구체적 앵커가 같이 없는 한 GPS 지시서 자체를 반려하도록 validate_proof에 추가.
+
+⚠️ 주의사항 / 함정
+1. "잘"이라는 모호어는 한국어에서 너무 흔한 음절이라(코니 지적) "잘 갖춰진" 같은 정상 문장도 앵커 없이 쓰면 걸릴 수 있다. 의도적으로 엄격하게 잡은 설계이나, 오탐 리포트가 쌓이면 "잘"만 문맥을 좁히는 조정이 필요할 수 있다.
+2. 규칙 추가 이후 기존에 통과되던 지시서가 갑자기 반려될 수 있어 안티/코니에게 사전 공지함.
+
+🌱 성장 관점
+"영상 보고 좋은 인사이트였다"에서 끝나지 않고, 같은 날 실제로 겪은 사고(위스크 과장 라벨)에 바로 대입해서 재발방지 코드를 만든 첫 사례다. 코니 8케이스, 안티 재검수 모두 PASS. 단, 뽀개기 2번(Nate B. Jones)은 같은 날 이런 우연한 접점이 없어서 적용까지 못 갔다 — 1번이 잘 된 건 선택을 잘해서가 아니라 그날 사건과 우연히 맞아떨어진 것에 가깝다는 게 뽀개기 2번(만복의 각성) 글의 핵심이기도 하다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.09.05 · gps_check.py, 자기개선루프, GPS검증, 3AI</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="운영 원칙"
              data-id="20260905-3"
              style="border-top: 1px solid var(--border);"
