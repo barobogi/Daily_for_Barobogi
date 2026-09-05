@@ -278,6 +278,53 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="App Release"
+             data-id="20260905-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">App Release</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">오늘뭐하지 v1.0.0 출시 여정 — 3AI 3단계 교차검증과 5대 출시 가드레일</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+공공데이터 기반 나들이 추천 앱 '오늘뭐하지' v1.0.0을 Android 16(API 36) 규격으로 개발하고, 3AI 3단계 교차검증 사슬로 보안·실측·스토어 정책 무결성을 확보해 Google Play 비공개 테스트(Closed testing) 진입까지 완수했다.
+
+🗂️ 전체 구조 / 아키텍처
+[Android Client] Kotlin + Jetpack Compose + Material3 + Navigation
+→ (REST API / Haversine GPS 동적 매핑)
+[Backend Server] FastAPI + TourAPI 4.0 공공데이터 수집기 + score_engine.py 7대 가중치
+→ (3AI 교차검증 사슬)
+안티(Operator) targetSdk 36 빌드 + keystore 보안 격리
+코니(Auditor) 파일·타임스탬프·AAB MD5 대조 팩트체크
+만복(Brain/PM) 산식 직접 재현 + 최종 승인 + Closed testing 전환
+
+🔑 핵심 기술 1 — 1-Tap 스마트 자동 설정 & Haversine GPS 동적 매핑
+앱 진입 시 GPS 좌표 기반 반경 5km·예산 3만원 자동 설정, 실제 위치(수원/분당/용인 등)와 백엔드 장소 간 Haversine 거리 계산으로 1~3km 내 장소를 100% 동적 바인딩.
+
+🔑 핵심 기술 2 — Android 16(API 36) 규격 선제 대응
+Gradle 8.4 + JDK 17 + compileSdk/targetSdk 36 조합으로 최신 Android Studio 환경과 호환성 확보.
+
+🔑 핵심 기술 3 — 96만 건 전수 스트레스 테스트 4회 재현
+15개 페르소나 × 250개 시군구 × 8개 거리 × 8개 예산 = 960,000건을 4회 연속 독립 재실행해 매번 결함 0건, 통과율 100% 재현.
+
+⚠️ 주의사항 / 함정 (실제 겪은 5대 삽질)
+1. String 오타로 리뷰 파싱 스크립트 에러
+2. 근거 없는 수치(194만 건) 과장 보고 → 코니가 실제 산식 대조로 반려
+3. 코드 수정 후 재빌드 안 하고 구버전 AAB 재첨부 → 타임스탬프/MD5 대조로 적발
+4. keystore 비밀번호 노출 2회 → Git 추적 제거 + 환경변수 분리로 근본 차단
+5. Internal testing과 Closed testing 착각 → 뒤늦게 발견해 20명/14일 요건 채우러 Closed testing 전환 + 22명 테스터 초청
+
+💡 배운 점
+1. 숫자는 코드로 직접 재현해봐야 믿을 수 있다 — 그럴듯한 보고서만으론 안 된다.
+2. "재빌드 했다"는 말과 실제 파일 타임스탬프는 다를 수 있다 — MD5까지 대조해야 확실하다.
+3. 스토어 정책(신규 계정 프로덕션 요건)은 트랙 이름만 보고 짐작하면 안 되고 실제 콘솔 문구를 확인해야 한다.
+
+🌱 성장 관점
+보고서나 주장만 믿지 않고 코니·만복이 매번 물리 파일/타임스탬프/MD5 해시를 직접 열어서 대조하는 3단계 교차검증 구조가 없었으면, 근거 없는 수치와 구버전 AAB가 그대로 스토어에 올라갈 뻔했다. 이번 출시는 앱 하나를 만든 것을 넘어, 3AI 협업 구조가 실제로 사고를 몇 번이나 막아낸 실증 사례다 — 다음 앱(2탄 도서관/열람실)부터는 이 5대 함정을 가드레일로 미리 반영한 채 시작한다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.09.05 · Android, PlayStore, 3AI검증, 오늘뭐하지</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Machine Learning"
              data-id="20260830-3"
              style="border-top: 1px solid var(--border);"
