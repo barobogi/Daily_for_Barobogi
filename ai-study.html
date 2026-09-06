@@ -278,6 +278,42 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Pipeline"
+             data-id="20260905-6"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Pipeline</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">뽀개기2번 — 무료 AI 영상툴 4종 실측: 1종 조건부 보류 / 3종 가짜도메인 적발</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+유튜브 영상("무료 AI 비디오 툴 4가지 공개") 추천 4종을 Playwright 실측 파이프라인 및 만복·코니 교차검증을 거쳐 확인했다. Meta AI는 1단계 접속 확인 PASS이나 2단계(실제 생성/라이선스) 미검증으로 편입 보류(HOLD), 나머지 3종은 가짜/미존재 도메인으로 적발(REJECTED)했다.
+
+🗂️ 3AI 정밀 교차 검증 데이터
+Meta AI(meta.ai): 1단계 접속 확인 PASS / 2단계(생성·라이선스) HOLD
+GeminiGen AI(geminigen.ai): DNS ERR_NAME_NOT_RESOLVED (가짜/미존재 도메인)
+QN AI(qn.ai): Timeout 25,000ms 초과 (서버 오프라인/무반응)
+TikTok Symphony(symphony.tiktok.com): DNS ERR_NAME_NOT_RESOLVED (서브도메인 미존재)
+
+🔑 핵심 발견 1 — HTTP 상태코드 맹신 금지
+단순 HTTP status_code만으로는 봇 탐지로 첫 응답 403을 주는 현대 SPA 사이트(Meta AI 등)를 '접속 불가'로 오판할 수 있다. 실제 스크린샷(meta_ai.png, 23.34KB)을 직접 열어 로그인/채팅 UI 렌더링을 확인해서 1단계 웹 접속 자체는 가능함을 입증했다.
+
+🔑 핵심 발견 2 — "접속 가능"과 "파이프라인 편입"은 다른 기준이다
+랜딩 페이지가 로드된다고 실제 AI 비디오 생성이 되거나 파이프라인에 바로 편입될 수 있는 건 아니다. 실제 영상 생성 품질, 9:16 종횡비 지원, 상업적 이용/워터마크 라이선스가 아직 실측되지 않아 2단계 파이프라인 편입은 HOLD로 판정했다.
+
+🔑 핵심 발견 3 — 가짜/환각 도메인 3종 차단
+유튜버가 나열한 geminigen.ai, qn.ai, symphony.tiktok.com 3종은 도메인이 아예 없거나 타임아웃되어 가짜/어그로성 도구로 확인, 블랙리스트 등록했다.
+
+⚠️ 주의사항 / 함정
+1. 초안 1차 버전에서 Meta AI를 "PASS ✅, 파이프라인 정식 편입 완료"로 서술했다가, 실제로는 전날(9/5) 코니가 명확히 HOLD 판정 내렸던 사안임이 드러나 정정했다 — 보류된 걸 통과로 뒤집어 쓰는 것도 오늘 하루 계속 잡아온 과장 라벨링과 같은 패턴이다.
+2. Meta AI 2단계 실측(실제 렌더링/9:16/라이선스) 전까지는 63번/65번 파이프라인 정식 편입 보류.
+
+💡 배운 점 & 🌱 성장 관점
+"접속된다"와 "쓸 수 있다"는 다른 문장이다. 1단계 통과를 2단계 통과로 착각해서 쓰면, 나중에 실제로 그 도구를 파이프라인에 넣으려 할 때 라이선스나 포맷 문제로 다시 막힐 수 있다. 판정 단계를 숫자로 쪼개서 정직하게 표기하는 습관(1단계 PASS/2단계 HOLD)이 오늘 하루 여러 번 반복된 재발방지 패턴과 정확히 일치한다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.09.05 · 무료영상툴, Meta AI, 가짜도메인적발, 3AI검증</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="3AI 협업"
              data-id="20260905-5"
              style="border-top: 1px solid var(--border);"
