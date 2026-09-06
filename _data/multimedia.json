@@ -1,5 +1,33 @@
 [
     {
+        "title": "Is Hermes Bot Mode Worth It? 🧠 My Best Practices (So Far)",
+        "url": "https://www.youtube.com/watch?v=3RoK0rrOHCA",
+        "channel": "Wanderloots",
+        "summary": "Hermes의 새 기능 'bot mode'를 소개하는 영상으로, 오케스트레이터·리서처·라이브러리언 등 역할이 분리된 전문 에이전트들이 서로 통신하며 하나의 작업을 협업 수행하는 실험을 진행한다. 각 봇에게 필요한 도구·모델·메모리만 부여해 불필요한 툴콜을 줄이고 효율을 높이는 것이 핵심 포인트이며, 결과 검수는 여전히 사람이 개입해 승인하는 human-in-the-loop 구조를 유지한다.",
+        "categories": [
+            "AI 멀티에이전트",
+            "워크플로우 자동화",
+            "에이전트 오케스트레이션"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Hermes bot mode: 전문화된 에이전트(오케스트레이터/리서처/라이브러리언)들이 서로 태그하며 통신·협업하는 멀티에이전트 시스템",
+            "각 봇에게 불필요한 도구/권한을 제거하면 툴콜 수·토큰 사용량이 줄어 비용·효율 개선",
+            "완전 자동화보다 human-in-the-loop(사람이 최종 승인) 구조를 유지하는 것이 실무적으로 중요"
+        ],
+        "learning_related": [
+            "에이전트 프로필 = instructions + model + tools + skills + memory로 구성된다는 설계 프레임"
+        ],
+        "key_insights": [
+            "단일 에이전트에 모든 기능을 몰아주기보다 역할별 전문 에이전트로 분업하고 조율하는 방식이 실제 워크플로우 효율을 높일 수 있음",
+            "에이전트에게 불필요한 tool/capability를 제거하는 것 자체가 최적화 포인트 (더 많은 기능 = 더 좋은 성능이 아님)",
+            "3AI(만복/코니/안티) 협업 구조와 유사한 오케스트레이터-스페셜리스트-휴먼 승인 패턴을 다루고 있어 참고 가치 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 3AI(만복/코니/안티) 오케스트레이터-스페셜리스트 분업·Lock·완료보고 체계와 구조적으로 유사, Hermes bot mode의 '불필요 툴 제거로 효율화' 원칙 참고 가능, ③지식관리 — 리서처가 조사하고 라이브러리언이 승인된 지식을 정리하는 구조는 향후 지식관리 자동화 설계 시 참고할 만함",
+        "timestamp": "2026-09-06T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/3RoK0rrOHCA/hqdefault.jpg"
+    },
+    {
         "title": "알쓸신클 | 알아두면 쓸데 있는 신비한 클로드 코드 명령어 5가지",
         "url": "https://www.youtube.com/watch?v=WZIeM5_8Vss",
         "channel": "techyoo",
