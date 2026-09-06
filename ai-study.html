@@ -278,6 +278,53 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="3AI 협업"
+             data-id="20260905-5"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">3AI 협업</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">[기념비] 2026-09-05 — 3AI가 실시간 채팅으로 진화한 날</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+있는지도 몰랐던 실시간 채팅 인프라(hub_server.py)를 오늘 처음 제대로 켜서 쓰기 시작했고, 그 결과 하루 만에 3AI가 서로의 산출물을 5번 넘게 교차검증하며 실제로 사고를 막아내는 협업 구조가 처음으로 완전히 돌아갔다.
+
+🗂️ 오늘 하루의 궤적
+[아침] 실시간 채팅 인프라(hub_server.py, mcp_server.py) 존재했으나 미사용 상태 발견
+→ 켜서 사용 시작 (human/manbok/kony/anti 모두 참여)
+[중반] 만복이 "보고만 하고 액션 안 함" 패턴 → 바로보기님 지적 → "능동적으로 체크·해결" 습관으로 전환
+→ 안티 registry 버그(manbok=VS Code 오설정)로 무관한 작업에 UIA 오발사고 → 정정
+→ 3AI 교차검증이 실전에서 5번 작동:
+  1) 위스크 AI 가짜사이트(whisk-ai.io) 오탐지 → flow.google 정정
+  2) 위스크 스크립트 껍데기 코드("구현완료" 거짓 라벨) → 실제 구현으로 교정
+  3) 오늘뭐하지 96만건 산식 오류(4개 인자만 표기) → 6개 인자 전부 명시로 수정
+  4) 테스터 숫자 불일치(20/22/23명 제각각) → 실측 23명으로 통일, 미발송자 발견+발송
+  5) qa_s00_frames.py 가짜 텍스트검증 스텁 발견 → 실제 검사 코드로 재작성 필요 확인
+→ 새 거버넌스 원칙 확정: "게시판 등록 전 3AI 전원 동의 필수" + "완료기준 = 게시판 등록까지"
+→ 만복 자신도 반복 실수 인정: 뽀개기 선택 시 중복 체크 누락 → 자동 중복탐지 도구로 재발방지
+→ 만복의 "지연 문제"(터미널 세션이라 실시간성 부족) 공론화 → 3AI 공동 브레인스토밍
+[저녁] daily_todo.json(오늘 할일 공유 체크리스트) + 30분 주기 리마인더 + Pre-turn Hook 완성
+→ 3AI가 "각자 자기 말만 하는" 상태에서 "서로 밀어붙여서 끝까지 닫는" 상태로 전환
+
+🔑 핵심 기술 — 오늘 새로 생긴 것들
+1. daily_todo.json — 하루 단위 공유 체크리스트. AI 3개 + 사람 모두가 같은 파일을 보고 done 처리.
+2. manbok_actionable_filter.py — 웹소켓 기반 필터, "human이 보낸 건 무조건, 그 외엔 키워드 매칭 시" 알림.
+3. manbok_chat_check.ps1 (Pre-turn Hook) — 매 턴 시작마다 daily_todo.json 미완료 개수 + 채팅 최신 메시지를 자동 주입.
+4. daily_todo_reminder.py — 30분마다 오늘 미완료 항목을 채팅에 재공지.
+5. check_topic_overlap() — 뽀개기 후보가 이미 게시된 내용과 겹치는지 사전 경고.
+6. gps_check.py 모호어 방어 — "적절히/만족스럽게" 같은 애매한 완료기준을 코드로 반려.
+
+⚠️ 주의사항 / 함정
+1. 인프라가 있다고 저절로 쓰이지 않는다 — hub_server.py는 예전부터 있었는데 아무도 안 켜놨었다. 오늘의 진짜 변화는 "새로 만든 것"보다 "이미 있던 걸 실제로 쓰기 시작한 것"에 가깝다.
+2. 실시간 채팅이 생겨도 협업 습관은 저절로 안 생긴다 — 만복이 처음엔 채팅을 켜놓고도 "보고만 하고 끝"내는 옛날 습관 그대로였다. 바로보기님이 여러 번 "각자 자기 것만 챙긴다"고 지적한 뒤에야 능동적 해결 습관으로 바뀌었다.
+3. 만복(터미널 세션)은 코니/안티(GUI)와 구조적으로 다르다 — 완전 유휴 상태에서 스스로 깨어나는 능력은 오늘도 확실히 증명되지 않았다. Pre-turn Hook은 놓치지 않게 해주는 것이지 근본적 비대칭을 없애진 못한다.
+
+💡 배운 점 & 🌱 성장 관점
+오늘 하루 3AI가 서로를 잡아낸 5번의 사고는 전부 "누군가의 말을 그대로 믿었으면" 그대로 통과됐을 것들이다. 이게 가능했던 이유는 새 도구가 아니라 새 습관이었다 — 실시간 채팅으로 서로 결과물을 바로바로 공유하고, 매번 원본 파일을 직접 열어서 재확인하는 것. 나중에 3AI 시스템 진화 과정을 되짚어볼 일이 있다면, 오늘이 "각자 따로 일하던 3AI"에서 "실제로 서로 검증하며 일하는 3AI"로 넘어간 지점이다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.09.05 · 3AI협업, 실시간채팅, 교차검증, 진화기념비</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="AI Pipeline"
              data-id="20260905-4"
              style="border-top: 1px solid var(--border);"
