@@ -1,5 +1,29 @@
 [
     {
+        "title": "개발자 공부 방향, 이제는 런타임입니다 #Shorts",
+        "url": "https://www.youtube.com/watch?v=pOq8pGmQsE4",
+        "channel": "로치의개발일기",
+        "summary": "개발자는 특정 언어(JS, 파이썬, 자바 등) 스택 학습에 그치지 말고, 그 언어가 동작하는 런타임과 GC(가비지 컬렉션), 엔진 내부 동작 원리를 공부하는 것이 더 중요하다는 주장을 담은 쇼츠 영상입니다.",
+        "categories": [
+            "개발자 커리어",
+            "컴퓨터 사이언스",
+            "학습 방법론"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "특정 언어 문법/구현 위주 학습보다 런타임·GC·엔진 내부 동작 원리 학습을 우선시하라는 조언",
+            "컴퓨터 사이언스 기초 지식이 언어 스택 자체보다 장기적으로 더 중요하다는 관점"
+        ],
+        "key_insights": [
+            "언어(JS/파이썬/자바 등) 스택 자체보다 그 언어가 돌아가는 런타임 내부 구조를 이해하는 것이 더 근본적인 실력",
+            "GC 동작 시점과 엔진 내부 메커니즘 이해가 개발자 역량의 핵심 차별점이라는 주장"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 런타임/GC/엔진 내부 동작 원리 학습 방향에 대한 인사이트, 향후 CS 기초 학습 콘텐츠 기획 시 참고 가능",
+        "timestamp": "2026-09-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/pOq8pGmQsE4/hqdefault.jpg"
+    },
+    {
         "title": "GPT-6 Astra를 써보고 느낀 점: AI 시대, 개발자는 뭘 공부해야 할까?",
         "url": "https://www.youtube.com/watch?v=eEitUxmhwrA",
         "channel": "로치의개발일기",
