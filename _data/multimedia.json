@@ -1,5 +1,33 @@
 [
     {
+        "title": "AI가 코딩을 다 해도 CS 공부를 해야 하는 이유 #Shorts",
+        "url": "https://www.youtube.com/watch?v=POpsa3T079c",
+        "channel": "로치의개발일기",
+        "summary": "AI로 코딩을 하더라도 컴퓨터 공학(CS) 기초 지식이 있으면 AI가 생성한 코드를 조목조목 이해하고 검증할 수 있다는 내용의 쇼츠. 발표자는 자신이 직접 짜지 않은 코드도 CS를 공부해둔 덕분에 읽고 이해할 수 있다고 설명한다.",
+        "categories": [
+            "AI코딩",
+            "컴퓨터공학",
+            "개발자성장",
+            "Shorts"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI가 코드를 대신 작성해줘도 그 코드를 읽고 검증할 수 있는 능력은 별개로 필요함 — AI 생성 코드에 대한 맹신 경계",
+            "AI 시대에도 개발자의 핵심 역량은 '코드 작성'에서 '코드 이해·검증'으로 이동"
+        ],
+        "learning_related": [
+            "컴퓨터 사이언스(CS) 기초를 탄탄히 해두면 처음 보는 코드도 조목조목 뜯어보며 이해 가능",
+            "AI 도구 활용 능력과 별개로 근본 개념 학습이 장기적 경쟁력이 됨"
+        ],
+        "key_insights": [
+            "AI가 짠 코드라도 CS 기초가 있으면 이해 불가능한 코드는 아니다",
+            "AI 코딩 시대일수록 오히려 CS 공부의 가치가 부각된다"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 시대 CS 기초학습 필요성 관련 인사이트, 향후 학습 방향 참고 가능",
+        "timestamp": "2026-09-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/POpsa3T079c/hqdefault.jpg"
+    },
+    {
         "title": "Is Hermes Bot Mode Worth It? 🧠 My Best Practices (So Far)",
         "url": "https://www.youtube.com/watch?v=3RoK0rrOHCA",
         "channel": "Wanderloots",
