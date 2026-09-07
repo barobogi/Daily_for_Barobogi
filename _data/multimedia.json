@@ -1,5 +1,35 @@
 [
     {
+        "title": "Inside K2 Horizon: The 4B Model That Beat 550B",
+        "url": "https://www.youtube.com/watch?v=apgH1LOwXwY",
+        "channel": "Cloud Codes",
+        "summary": "K2 Horizon MUA는 어텐션 레이어의 '값(Value)' 프로젝션에 처음으로 MoE(Mixture of Experts) 방식을 적용한 신규 오픈소스 모델로, 레이어당 64개의 Value Expert 중 4개만 선택해 사용한다. 전체 파라미터는 360억 개지만 실제 연산은 40억 개 수준으로, 터미널 조작 벤치마크에서는 5500억 파라미터 모델을 능가했지만 대학원 수준 과학 지식 문제에서는 오히려 뒤처지는 상반된 결과를 보였다.",
+        "categories": [
+            "AI모델",
+            "LLM아키텍처",
+            "오픈소스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "기존 MoE는 피드포워드(사고) 블록에만 적용됐는데, K2 Horizon MUA는 어텐션의 Value 매트릭스에 MoE를 적용(레이어당 64개 Value Expert 중 top-4 라우팅)해 '읽는 방식'을 다양화한 최초 사례",
+            "저장 파라미터(36B) 대비 활성 연산량(4B)을 크게 줄이면서도 특정 태스크(터미널/에이전틱 조작)에서 550B급 모델을 능가 — 다만 이는 범용 지능 향상이 아니라 태스크 특화 효율화에 가까움",
+            "동일 모델이 같은 벤치마크 테이블에서 태스크별로 상반된 결과(에이전틱 작업 승리 vs 과학 지식 문제 패배)를 보여, '작은 모델이 큰 모델을 이겼다'는 헤드라인이 과장될 수 있음을 시사",
+            "Apache 2.0 라이선스로 가중치 전면 공개, 상업적 사용·수정·재배포 무료 — Institute of Foundation models 발표"
+        ],
+        "learning_related": [
+            "어텐션 메커니즘의 Query/Key/Value 구조 복습: Query·Key는 '어디를 볼지' 결정, Value는 '무엇을 가져올지' 결정",
+            "MoE를 어텐션 Value에 적용하는 구체적 구현 방식(라우터 + 학습된 바이어스로 top-4 Expert 선택 후 가중합) 및 이것이 메모리 용량은 늘리지만 실제 연산량은 늘리지 않는 이유"
+        ],
+        "key_insights": [
+            "MoE 적용 위치를 피드포워드에서 어텐션 Value로 옮긴 것이 이 모델의 핵심 차별점이며, 이는 '더 다양한 방식으로 같은 단어를 해석'하게 해 저비용 고성능을 가능케 함",
+            "벤치마크상 '작은 모델이 큰 모델을 이겼다'는 결과는 태스크에 따라 달라지므로, 특정 벤치마크 우위만으로 모델의 전반적 우수성을 판단하면 안 됨",
+            "가중치 공개(Apache 2.0) 모델이라 향후 로컬 실행/파인튜닝을 통한 무료 활용 가능성 존재"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 최신 LLM 아키텍처(Value-level MoE) 학습 자료로 활용 가능, ③지식관리 — AI 모델 트렌드 및 벤치마크 해석 기준 축적 자료",
+        "timestamp": "2026-09-07T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/apgH1LOwXwY/hqdefault.jpg"
+    },
+    {
         "title": "Higgsfield + Blender is INSANE",
         "url": "https://www.youtube.com/watch?v=ljFLcPMV3gY",
         "channel": "Cloud Codes",
