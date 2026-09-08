@@ -1,5 +1,33 @@
 [
     {
+        "title": "This Secretive AI Just Raised $250M — And It Calls You",
+        "url": "https://www.youtube.com/watch?v=88iDmiluMsQ",
+        "channel": "The Next New Thing",
+        "summary": "정체를 숨기고 있던 AI 에이전트 스타트업 'Instinct'가 20억 달러 이상 밸류에이션에 2.5억 달러를 투자받았다는 소식. 문자·왓츠앱·통화·이메일까지 대신 처리해주는 기능으로 화제가 됐지만, 서버에 사용자 데이터를 계속 보관하는 것이 드러나면서 프라이버시 신뢰 문제가 불거졌고, 창업자는 최근에야 정체를 공개했다.",
+        "categories": [
+            "AI 에이전트",
+            "스타트업 투자",
+            "프라이버시 이슈"
+        ],
+        "stock_related": [
+            "Instinct가 20억+ 달러 밸류에이션에 2.5억 달러 투자 유치 — AI 에이전트 스타트업 밸류에이션 급등 트렌드 확인용 참고 사례"
+        ],
+        "ai_related": [
+            "AI 에이전트가 문자/왓츠앱/전화/이메일까지 통합 처리 — 개인 비서형 에이전트의 '매직 모먼트'는 메시징 채널 직접 연동",
+            "Linear, Gmail 등 기존 툴과 연동해 실제 업무를 대신 처리하는 방향이 사용자 반응을 이끌어냄",
+            "정체를 숨긴 미스터리 마케팅(사이트를 일부러 허술하게 만드는 등 pattern interrupt 전략)이 화제성 확보에 효과적이었던 사례"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "AI 에이전트의 핵심 사용자 가치는 '메시지 채널 통합 자동화'(문자·왓츠앱·통화·이메일)이며, 이 지점이 실제 화제성과 투자로 이어짐",
+            "연결 해제 후에도 서버에 데이터가 남아있다는 사실이 발견되며 신뢰/프라이버시 이슈가 투자 뉴스와 동시에 부각됨 — 바이럴 성장과 데이터 거버넌스 신뢰는 별개 축",
+            "창업자 익명성이 초기엔 화제성을 키웠지만 결국 신뢰 문제로 이어져 공개 전환을 강제받음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 메시지/이메일/통화 통합 AI 에이전트 구조는 향후 자동화 파이프라인 설계에 참고 가능, ⑦재테크 — AI 에이전트 스타트업 밸류에이션 트렌드 참고",
+        "timestamp": "2026-09-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/88iDmiluMsQ/hqdefault.jpg"
+    },
+    {
         "title": "Before You Buy a Local AI Workstation, Watch This",
         "url": "https://www.youtube.com/watch?v=f9LJbqSGaOo",
         "channel": "Cloud Codes",
