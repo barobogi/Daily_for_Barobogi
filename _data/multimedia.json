@@ -1,5 +1,35 @@
 [
     {
+        "title": "New: Your agent handles finances now",
+        "url": "https://www.youtube.com/watch?v=-ikuVZ9L-UE",
+        "channel": "The Next New Thing",
+        "summary": "QuickBooks가 AI 에이전트의 데이터 접근을 막자, 한 개발자(Trent)가 'Slowbooks'라는 오픈소스 회계 소프트웨어 대안을 만들어 공개했다. Claude Code 같은 CLI 에이전트에게 영수증 폴더 경로만 넘기면 OCR로 인식해 자동으로 비용을 분류·기록하고, 애매한 항목은 확인 요청하며, 수정 요청 시 감사 로그(audit log)에 AI가 변경했다는 기록을 남긴다.",
+        "categories": [
+            "AI 에이전트",
+            "오픈소스",
+            "회계자동화",
+            "CLI 도구",
+            "재테크SW"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Code CLI 등 구독 중인 에이전트로 파일 경로만 드래그하면 영수증 OCR→비용 분류→기록까지 자동 처리",
+            "QuickBooks는 AI 에이전트의 데이터 접근/제어를 의도적으로 제한 — 상용 SaaS가 AI 에이전트 친화적이지 않을 수 있다는 신호",
+            "AI가 수행한 변경사항은 감사 로그에 별도 기록되어 관리자 수동 변경과 구분·추적 가능 (신뢰성/거버넌스 설계 패턴)"
+        ],
+        "learning_related": [
+            "MCP나 데스크탑 앱보다 CLI 에이전트 방식이 현재 가장 쉬운 통합 경로라는 실무 팁",
+            "AI 자동화 시스템에 audit log를 붙여 AI 액션과 사람 액션을 구분하는 설계는 다른 자동화 프로젝트에도 적용 가능"
+        ],
+        "key_insights": [
+            "폐쇄형 SaaS(QuickBooks)가 AI 에이전트 접근을 막는 흐름에 대응해 오픈소스 대안이 등장 — '데이터 주권 + AI 에이전트 친화성'이 향후 SW 선택 기준이 될 수 있음",
+            "CLI 기반 에이전트 워크플로우(파일 드래그 → 자연어 지시 → 자동 처리 → 자연어로 수정)가 반복 사무업무 자동화의 실용적 패턴으로 자리잡는 중"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — CLI 에이전트로 영수증/비용 처리 자동화하는 구조, master_watch나 자체 자동화 파이프라인에 참고 가능, ⑦재테크 — 오픈소스 회계 SW(Slowbooks)는 개인/프로젝트 지출 관리에 API 회피형(비용 0원) 대안으로 검토 가치 있음",
+        "timestamp": "2026-09-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/-ikuVZ9L-UE/hqdefault.jpg"
+    },
+    {
         "title": "This Secretive AI Just Raised $250M — And It Calls You",
         "url": "https://www.youtube.com/watch?v=88iDmiluMsQ",
         "channel": "The Next New Thing",
