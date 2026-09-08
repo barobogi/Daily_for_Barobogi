@@ -1,5 +1,35 @@
 [
     {
+        "title": "Before You Buy a Local AI Workstation, Watch This",
+        "url": "https://www.youtube.com/watch?v=f9LJbqSGaOo",
+        "channel": "Cloud Codes",
+        "summary": "Apple Mac Studio, AMD Halo Station, Nvidia DGX(Spark/Station) 세 로컬 AI 워크스테이션의 가격·메모리 스펙 함정을 비교하고, 조 단위 파라미터 모델을 실제로 로딩·구동하려면 양자화(quantization), KV 캐시, MoE 구조까지 고려해야 함을 설명하는 영상. 단순히 '메모리 용량이 크다'는 스펙만으로는 실사용 가능 여부를 판단할 수 없다는 것이 핵심 메시지.",
+        "categories": [
+            "AI 하드웨어",
+            "로컬 LLM 인프라",
+            "워크스테이션 스펙비교"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "로컬 LLM 구동 시 필요한 실질 메모리 = 모델 가중치(양자화 반영) + 오버헤드(양자화 북키핑/임시공간/OS) + KV 캐시(대화 길이·동시세션에 비례해 증가) 총합으로 계산해야 함",
+            "MoE(Mixture-of-Experts) 모델은 토큰당 일부 전문가만 활성화되어 연산량은 줄지만, 비활성 전문가도 메모리에 상주해야 하므로 느린 메모리로 밀려나면 지연시간이 늘어남",
+            "16bit 저장 시 1조 파라미터 모델은 2TB, 4bit 양자화 시 약 500GB — Mac Studio 512GB 옵션과 거의 여유 없이 맞닿는 수준이라 실제 로딩 가능 여부를 사전에 측정해야 함"
+        ],
+        "learning_related": [
+            "Nvidia DGX Spark(128GB 공유메모리)와 DGX Station(748GB, HBM 252GB+CPU측 496GB 혼합)은 이름만 같고 완전히 다른 제품군 — 발표 스펙을 이름만으로 오인하면 안 됨",
+            "AMD Halo Station은 아직 2027년 출시 예정 '프로토타입'이며 가격도 추정치일 뿐, 확정 소매가가 아님(MI350P 144GB × 최대 4장 = 576GB)",
+            "prefill(프롬프트 읽기)과 decoding(토큰 생성)은 서로 다른 연산 특성을 가지며, 메모리 대역폭/위치(HBM vs 일반 메모리)에 따라 응답 속도가 달라짐"
+        ],
+        "key_insights": [
+            "발표된 가격·용량은 대부분 '시작가'나 '최대 구성'일 뿐 실제 필요한 스펙과 다를 수 있으므로 구매 전 실사용 시나리오 기준으로 재계산 필요",
+            "메모리 용량만으로 워크스테이션을 고르면 안 되고, 양자화 손실·KV 캐시 증가·MoE 전문가 배치까지 감안한 실질 여유 공간을 확인해야 함",
+            "AMD/Nvidia/Apple 세 진영 모두 메모리 아키텍처(HBM vs 공유메모리 vs 카드 분산)가 달라 동일 GB 수치라도 체감 성능이 다름"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 로컬 LLM 하드웨어/양자화/KV캐시 개념 학습 자료로 활용 가능, ⑥인프라 — 향후 로컬 AI 워크스테이션 도입 검토 시 스펙 비교 참고자료",
+        "timestamp": "2026-09-08T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/f9LJbqSGaOo/hqdefault.jpg"
+    },
+    {
         "title": "[소프트웨어 개발] 개발 처음인 분들만 보세요. | 바이브코딩 하는 분들 꼭 끝까지 보세요~",
         "url": "https://www.youtube.com/watch?v=31DR055DFLE",
         "channel": "기술노트with알렉",
