@@ -1,5 +1,30 @@
 [
     {
+        "title": "롯데타워 26개 높이… 비행기가 이 구름을 피하는 이유",
+        "url": "https://www.youtube.com/watch?v=IBw3pAHWijU",
+        "channel": "호두의 AI 분석실",
+        "summary": "롯데타워(약 555m) 높이의 26배에 달하는 거대한 적란운(뇌우구름)의 규모를 소개하며, 비행기가 이런 구름을 피해서 비행하는 이유를 설명하는 영상으로 추정됩니다. 자막이 제공되지 않아 제목 기반 추정 요약입니다.",
+        "categories": [
+            "과학",
+            "기상",
+            "항공",
+            "쇼츠"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "적란운(Cumulonimbus)은 대류권계면까지 성장하며 수직으로 10km 이상 발달할 수 있음",
+            "항공기가 뇌우 구름을 회피하는 이유는 극심한 난기류, 우박, 낙뢰, 윈드시어 등 안전 위험 때문"
+        ],
+        "key_insights": [
+            "거대 구조물(롯데타워) 대비 비교를 통해 적란운의 실제 규모를 직관적으로 전달하는 콘텐츠 포맷",
+            "항공 안전과 기상 현상을 연결한 대중 과학 쇼츠"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 기상/항공 과학 상식, 쇼츠 콘텐츠 포맷 참고용",
+        "timestamp": "2026-09-09T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/IBw3pAHWijU/hqdefault.jpg"
+    },
+    {
         "title": "GPT 아스트라로 이걸 만든다고? 주식 데이터 연결맵 만들기 1탄 #shorts",
         "url": "https://www.youtube.com/watch?v=f7WjxDdMK0I",
         "channel": "호두의 AI 분석실",
