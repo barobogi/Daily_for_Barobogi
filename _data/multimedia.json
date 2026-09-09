@@ -1,5 +1,35 @@
 [
     {
+        "title": "Run a $10,000 AI Model at Home, Here’s How",
+        "url": "https://www.youtube.com/watch?v=mgPj252Dek8",
+        "channel": "David Ondrej",
+        "summary": "Fireworks AI 공동창업자 드미트리(Dmitri)가 오픈소스 AI 모델이 프론티어 모델과의 격차(3~6개월)를 빠르게 좁히고 있다고 진단하며, DeepSeek R1/V3와 Kimi K2(카미카제3) 등이 에이전트 능력 도약의 핵심 사건이라고 설명한다. 영상 중간에는 로컬에서 100% 오프라인으로 작동하는 35B 오픈웨이트 에이전트 프레임워크(Frontier Agent, AppleDex/appadex.ai)의 스폰서 데모가 삽입되어 있다.",
+        "categories": [
+            "AI",
+            "오픈소스 LLM",
+            "에이전트",
+            "인터뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "오픈소스 모델(DeepSeek R1/V3, Kimi K2)이 프론티어 연구소 대비 3~6개월 격차로 좁혀지며 에이전트 작업(서브에이전트, 장기 작업, 루프 실행) 능력에서 도약 발생",
+            "로컬 맥북급 하드웨어에서 35B 오픈웨이트 모델로 100% 오프라인 에이전트(계획→코드작성→실행→교차검증) 구동 가능한 사례(Frontier Agent/appadex.ai) 소개",
+            "Fireworks AI는 '단일 최강 모델'이 아닌 케이스별 파인튜닝·강화학습을 통한 '특화 인텔리전스'로 비용·품질 균형을 추구하는 전략"
+        ],
+        "learning_related": [
+            "오픈소스 vs 프론티어 모델 격차를 벤치마크 기준 3~6개월로 정량화한 업계 인사이트",
+            "에이전트 프레임워크의 검증 구조(작업 그룹 → 교차검증 그룹 → 최종 검토) 패턴 참고 가능"
+        ],
+        "key_insights": [
+            "DeepSeek R1/V3가 추론 과정을 공개하며 '추론의 대중화'를 이끌었고, 이후 Kimi K2/DeepSeek V4 등이 에이전트 역량의 두 번째 도약을 만들었다",
+            "가격 경쟁 심화로 프론티어 랩들도 가격을 낮추는 추세이며, 오픈웨이트 모델의 핵심 가치는 전문화·맞춤화(파인튜닝)에 있다",
+            "로컬 실행 가능한 35B급 오픈웨이트 에이전트로 개인정보 보호를 유지하면서 리서치·데이터 검증·차트 생성 같은 실무 작업을 자동화할 수 있음을 시연"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 로컬 오프라인 에이전트(Frontier Agent, 35B 오픈웨이트)가 계획-코드작성-실행-교차검증까지 자동화하는 구조는 안티/만복 파이프라인에 참고 가능, ④공부방 — 오픈소스 LLM(DeepSeek, Kimi K2) 트렌드 및 프론티어 격차 축소 흐름은 지속 학습 대상",
+        "timestamp": "2026-09-09T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/mgPj252Dek8/hqdefault.jpg"
+    },
+    {
         "title": "주식 자동 투자 서비스 만들기 1탄 (GPT 아스트라/ 클로드 Fable 5.1) -자료공개-",
         "url": "https://www.youtube.com/watch?v=0v6qOxHeulY",
         "channel": "호두의 AI 분석실",
