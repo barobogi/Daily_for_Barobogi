@@ -1,5 +1,35 @@
 [
     {
+        "title": "I Let GPT 6 Astra Build My Product Campaign",
+        "url": "https://www.youtube.com/watch?v=jPsp_tDCtms",
+        "channel": "Cloud Codes",
+        "summary": "Cloud Codes 채널에서 Higsfield의 GPT6 Astra 에이전트를 이용해 가상 콜드브루 브랜드 'Kestrel'의 제품 이미지, 포스터 2종, 광고 영상 3버전을 제작하는 워크플로우를 시연한다. 핵심은 ChatGPT MCP 연동과 Higsfield Supercomputer 웹사이트 두 경로의 연결 방법, 그리고 Astra가 영상 생성 후 스스로 리뷰하고 프롬프트를 재작성해 재생성하는 반복 개선 프로세스이다.",
+        "categories": [
+            "AI 에이전트",
+            "콘텐츠 자동화",
+            "광고/마케팅",
+            "이미지·영상 생성 툴"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Higsfield의 GPT6 Astra 에이전트가 브리프 하나로 제품샷→포스터→영상까지 전체 캠페인을 자율 기획·생성",
+            "ChatGPT MCP 플러그인 연동과 Higsfield Supercomputer 웹 UI 두 가지 연결 경로 제공 (Ask 모드=매 단계 승인, Allow 모드=자동 진행)",
+            "에이전트에게 '생성 후 결과를 스스로 검토해 약점을 찾고 프롬프트를 재작성해 재생성하라'는 자기 개선 루프를 명시적으로 지시하는 프롬프팅 패턴이 인상적"
+        ],
+        "learning_related": [
+            "AI 영상/이미지 생성 워크플로우 설계 시 '리뷰→재작성→재생성'을 브리프 단계에서 명시적으로 요청하면 결과물 품질 관리가 가능함을 보여주는 사례",
+            "동일 제품 이미지를 캠페인 전반에 일관되게 재사용하도록 지시하는 방식(마스터 asset 고정 후 파생 생성)"
+        ],
+        "key_insights": [
+            "제품 캠페인 전체(제품샷+포스터2+영상3버전)를 단일 브리프와 자율 에이전트로 생성하는 것이 실질적으로 가능해짐",
+            "생성형 AI 워크플로우에서 '자기검토 후 재생성'을 프롬프트에 내장하면 사람의 개입 없이도 반복 개선이 이루어짐",
+            "Ask/Allow 모드처럼 크레딧 소모와 통제 수준을 사용자가 선택하게 하는 UX가 자율 에이전트 활용의 실무적 포인트"
+        ],
+        "memo": "📋 뿌리체계: ⑨창작 — AI 기반 제품 캠페인(이미지·영상·포스터) 자동 생성 워크플로우, 향후 3AI 콘텐츠 제작에 참고 가능, ⑤자동화 — 자기검토 후 재생성하는 에이전트 프롬프트 패턴은 다른 자동화 파이프라인(예: 유튜브 영상 QA 루프)에도 응용 가능",
+        "timestamp": "2026-09-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/jPsp_tDCtms/hqdefault.jpg"
+    },
+    {
         "title": "Open Source AI Is Already Dead",
         "url": "https://www.youtube.com/watch?v=MjllvHI4h-Q",
         "channel": "Cloud Codes",
