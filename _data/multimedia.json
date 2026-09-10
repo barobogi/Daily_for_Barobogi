@@ -1,5 +1,33 @@
 [
     {
+        "title": "Open Source AI Is Already Dead",
+        "url": "https://www.youtube.com/watch?v=MjllvHI4h-Q",
+        "channel": "Cloud Codes",
+        "summary": "이 영상은 '오픈소스 AI'라는 용어가 실제로는 대부분 '오픈 웨이트'에 불과하다는 점을 지적합니다. 학습 데이터와 학습 코드 없이 완성된 가중치 파일만 공개되는 경우가 많아 OSI(Open Source Initiative)의 4대 자유(사용·연구·수정·공유) 중 '연구(study)' 조건을 충족하지 못한다는 것입니다. 2026년 여름 사이 Meta의 완전 비공개 전환, Alibaba의 유료 API 전환, 중국 랩들의 라이선스 내 금액 명시, 각국 정부의 가중치 수출 규제 움직임 등 4가지 변화가 이런 흐름을 가속화하고 있다고 분석합니다.",
+        "categories": [
+            "AI",
+            "오픈소스",
+            "AI 정책/규제",
+            "산업 트렌드"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "오픈 웨이트(open weights)와 진정한 오픈소스 AI(가중치+데이터+코드)는 다르며, 대부분의 '오픈소스' 모델은 실제로는 가중치만 공개된 상태",
+            "G7 디지털장관들이 OSI와 협력해 4단계 사다리(가중치 공개 < 오픈 웨이트 < 오픈소스 AI < 오픈소스+오픈데이터) 프레임워크를 정립함",
+            "2026년 여름 Meta 무공개 전환, Alibaba 유료화, 중국 랩 라이선스 유료화, 각국 수출규제 도입 등 오픈 AI 생태계가 실질적으로 폐쇄되는 흐름"
+        ],
+        "learning_related": [
+            "모델 학습의 3요소(데이터, 학습 코드, 컴퓨팅) 중 무엇이 공개되는지에 따라 '오픈'의 실제 의미가 크게 달라짐을 이해하는 것이 AI 라이선스/저작권 판단에 중요"
+        ],
+        "key_insights": [
+            "'오픈소스 AI'라는 마케팅 용어와 실제 라이선스 내용(단순 가중치 배포) 사이 괴리가 크다 — 저작권/재사용성 판단 시 실제 공개 범위를 반드시 확인해야 함",
+            "G7+OSI가 만든 4단계 오픈니스 사다리는 향후 AI 모델 라이선스 실사(due diligence)에 참고할 만한 공신력 있는 기준이 될 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 모델 라이선스/오픈소스 정의 변화 학습 자료로 활용 가능, ③지식관리 — 향후 AI 프로젝트에서 모델 선정 시 라이선스 실사 체크리스트에 반영 가능",
+        "timestamp": "2026-09-10T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/MjllvHI4h-Q/hqdefault.jpg"
+    },
+    {
         "title": "10 Repos conserve your token usage",
         "url": "https://www.youtube.com/watch?v=Jv050l7y6ik",
         "channel": "The Next New Thing",
