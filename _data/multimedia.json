@@ -1,5 +1,35 @@
 [
     {
+        "title": "AI 증류, 쉽게 말하면 이런 학습입니다",
+        "url": "https://www.youtube.com/watch?v=uD9hd0qcG2A",
+        "channel": "로치의개발일기",
+        "summary": "AI 지식 증류(Knowledge Distillation) 개념을 쉽게 설명하는 영상으로, 성능 좋은 '선생님 모델'의 추론 과정을 거대언어모델(Teacher)에서 추출해 상대적으로 작은 '학생 모델'에게 학습시키는 방법을 소개한다. 발표자 본인도 완전한 전문가는 아니라고 밝히며 개념적 수준에서 간략히 설명한다.",
+        "categories": [
+            "AI",
+            "머신러닝",
+            "지식증류",
+            "모델경량화",
+            "교육콘텐츠"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "지식 증류(Knowledge Distillation): 큰 teacher 모델의 추론 과정을 작은 student 모델에 전이시켜 경량화하면서도 성능을 흡수시키는 기법",
+            "소형 모델 성능 향상 및 배포 비용 절감에 활용 가능한 핵심 AI 경량화 기술"
+        ],
+        "learning_related": [
+            "지식 증류는 'teacher 모델 추론 결과 → student 모델 흡수' 구조로 이해하면 쉬움",
+            "설명 자체가 비전문가 눈높이로 단순화되어 있어 입문 개념 정리용으로 적합, 심화 원리(loss function, soft label 등)는 별도 학습 필요"
+        ],
+        "key_insights": [
+            "지식 증류는 큰 모델의 '추론 과정'을 작은 모델에 전달하는 방식이라는 게 핵심",
+            "자막 자체가 구어체 요약 수준이라 심화 기술 내용(손실함수, temperature scaling 등)은 다루지 않음",
+            "AI 모델 경량화·온디바이스 배포 트렌드와 맞닿아 있는 주제"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 모델 경량화/지식증류 개념 학습 자료로 활용 가능, ⑤자동화 — 향후 로컬/경량 모델 활용 자동화 설계 시 참고 가능",
+        "timestamp": "2026-09-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/uD9hd0qcG2A/hqdefault.jpg"
+    },
+    {
         "title": "API 키가 노출되면 안 되는 이유",
         "url": "https://www.youtube.com/watch?v=OUBA14XZXwQ",
         "channel": "로치의개발일기",
