@@ -1,5 +1,32 @@
 [
     {
+        "title": "API 키가 노출되면 안 되는 이유",
+        "url": "https://www.youtube.com/watch?v=OUBA14XZXwQ",
+        "channel": "로치의개발일기",
+        "summary": "API 요청 시 API 키가 함께 전송되어 요청자를 식별하는 역할을 한다는 점을 설명하고, 개발 중 실수나 보안 미흡으로 이 API 키가 외부에 노출될 경우 발생할 수 있는 문제를 다루는 영상입니다.",
+        "categories": [
+            "보안",
+            "API키관리",
+            "개발자교육"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Anthropic(Claude), GPT 등 AI API 호출 시 API 키가 요청자 식별자로 동봉되어 전송됨을 설명",
+            "Claude Code 사용 시에도 동일한 식별자 기반 인증 구조가 적용됨을 언급"
+        ],
+        "learning_related": [
+            "API 키 유출 시 제3자가 해당 키 소유자 명의로 무단 요청 가능 — 과금/오남용 리스크 발생",
+            "보안 실수(하드코딩, git 커밋 노출 등)로 인한 키 유출 시나리오를 경고"
+        ],
+        "key_insights": [
+            "API 키는 단순 인증 수단을 넘어 '누가 요청했는지'를 식별하는 신원 토큰 역할을 함",
+            "키 유출 시 본인 계정으로 과금되거나 악용될 수 있어 코드/저장소 내 하드코딩을 피해야 함"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — API 키 보안 관리는 전역 인프라/개발 표준과 직결됨, ④공부방 — 비밀값(토큰/키) 평문 노출 금지 원칙과 동일 맥락의 보안 교육 콘텐츠",
+        "timestamp": "2026-09-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/OUBA14XZXwQ/hqdefault.jpg"
+    },
+    {
         "title": "오픈소스 생태계가 커지는 원리",
         "url": "https://www.youtube.com/watch?v=1JrH4PaFA3g",
         "channel": "로치의개발일기",
