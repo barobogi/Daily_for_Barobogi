@@ -1,5 +1,36 @@
 [
     {
+        "title": "OpenAI System Design: Why They Ran Python at 20 Million Requests/Sec",
+        "url": "https://www.youtube.com/watch?v=98LUfJSdXFc",
+        "channel": "Cloud Codes",
+        "summary": "OpenAI가 ChatGPT의 사용자 설정·대화 기록·메모리를 담당하는 온라인 스토리지 플랫폼 'Habitat'을 단일 Python 클라이언트 라이브러리에서 시작해, 연 10배씩 3년 연속 성장하며 초당 2천만 요청까지 처리하다가 결국 Rust로 재작성한 과정을 다룬다. 단일 Postgres 프라이머리에서 출발해 여러 차례 병목이 터지며 아키텍처가 진화한 실제 스케일링 스토리 영상이다.",
+        "categories": [
+            "시스템설계",
+            "인프라",
+            "OpenAI",
+            "Python/Rust",
+            "데이터베이스 스케일링"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "OpenAI가 자사 핵심 인프라(Habitat, ChatGPT 설정/기록/메모리 저장소)의 성장통과 언어 전환(Python→Rust) 배경을 공개함 — AI 서비스 트래픽 폭증 시 실제로 겪는 병목 패턴 참고 가능",
+            "ChatGPT는 출시 5일 만에 100만 가입자, 2개월 만에 1억 명을 돌파했고 이후 연 10배씩 3년 연속 성장 — AI 프로덕트의 폭발적 확산 속도를 벤치마크할 수 있는 수치"
+        ],
+        "learning_related": [
+            "단일 Postgres 프라이머리로 시작한 시스템이 스케일 임계점마다 어떻게 재설계됐는지(4단계 장애/재설계 스토리)를 다룸 — 자체 자동화/DB 설계 시 참고할 스케일링 의사결정 패턴",
+            "'제품 엔지니어가 DB 관리를 신경 쓰지 않아도 되게 라이브러리가 대신 처리한다'는 추상화 설계 철학 — Global_Define류 공용 라이브러리 설계에 참고할 만한 사례",
+            "느린 언어(Python)를 가장 트래픽이 몰리는 레이어에 쓴 이유와 이후 Rust로 교체한 이유 — 언어 선택 기준을 속도보다 개발 생산성/신뢰성 우선순위로 설명"
+        ],
+        "key_insights": [
+            "인프라 성장은 그래프가 아니라 '그 성장이 데이터베이스에 무엇을 하는가'로 봐야 한다는 프레이밍이 핵심 메시지",
+            "OpenAI는 확장성보다 먼저 '제품 엔지니어의 편의성(단순한 함수 호출 계약)'을 설계 원칙으로 삼았고, 이 라이브러리가 강제 없이 사내에 자연 확산됨 — 강제 없는 자발적 채택이 진짜 문제 해결의 신호라는 인사이트",
+            "느린 언어를 가장 뜨거운 레이어에 쓰는 것이 '맞는 선택'이었다는 역설적 결론 — 초기엔 개발 속도/안정성이 실행 속도보다 중요했다는 시사점"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 대규모 시스템 설계/DB 스케일링 학습 자료로 활용 가능, ⑥인프라 — Global_Define 같은 공용 라이브러리 설계 시 Habitat의 '단순 계약형 API' 철학 참고 가능",
+        "timestamp": "2026-09-13T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/98LUfJSdXFc/hqdefault.jpg"
+    },
+    {
         "title": "AI를 공개하면 정말 안전할까? | 모델 증류·프롬프트 보안·AI 정렬",
         "url": "https://www.youtube.com/watch?v=Scd5ZhbcyKc",
         "channel": "로치의개발일기",
