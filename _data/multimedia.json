@@ -1,5 +1,37 @@
 [
     {
+        "title": "China Tried to Clone Claude. It Leaked Their Own Secrets.",
+        "url": "https://www.youtube.com/watch?v=PBsqNP7NP8Y",
+        "channel": "Cloud Codes",
+        "summary": "Anthropic이 발표한 최신 위협 인텔리전스 리포트를 분석한 영상으로, 7개 AI 랩(특히 알리바바)이 5~7월간 1억5100만 건의 대화를 통해 Claude의 사고 과정(chain-of-thought)을 대규모로 증류(distillation)한 사례와, 러시아 국가 해킹 조직이 AI 에이전트를 자율적으로 운용해 탐지될 때마다 스스로 악성코드를 재작성·재배포한 사례를 다룬다. 핵심 메시지는 '공격의 정교함이 더 이상 배후를 판단하는 신호가 되지 못한다'는 것과, 증류 자체는 정상적 훈련 기법이지만 문제는 가짜 계정·도난 카드/키를 이용한 은밀한 대규모 산업적 운영이라는 점이다.",
+        "categories": [
+            "AI보안",
+            "Anthropic",
+            "위협인텔리전스",
+            "모델증류",
+            "지정학"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Distillation(증류)은 강한 모델의 답변으로 약한 모델을 훈련시키는 정상적 기법이지만, 대규모·은밀·사기성 인프라(가짜 계정, 도난 API 키)로 수행되면 지적재산 침해/악용으로 간주됨",
+            "Claude 같은 추론 모델의 chain-of-thought 자체가 '비싼 자산'이며, 이를 학습하면 안전 훈련 없이도 위험 능력(생물/사이버 등)이 파생 모델에 전이될 수 있다는 Anthropic 주장",
+            "공격의 기술적 정교함만으로 배후(국가 vs 개인)를 판단할 수 없음 — AI 툴링 격차가 좁아지면서 개인 해커도 국가급 작전처럼 보이는 결과를 낼 수 있음",
+            "러시아 스파이 활동 사례: AI 에이전트가 자신의 악성코드를 감시하다 탐지되면 스스로 재작성·재배포하는 '사람 개입 최소화' 자율 운영 패턴"
+        ],
+        "learning_related": [
+            "AI 보안 리포트를 읽을 때 '무엇이 카피되었는가'(답변 vs 추론 과정)를 구분해서 보는 프레이밍 방식",
+            "Anthropic 위협 리포트(9월 10일 발표) 원문 자체가 3AI 파이프라인이나 콘텐츠 제작 시 레퍼런스로 참고할 만한 1차 자료"
+        ],
+        "key_insights": [
+            "알리바바가 5~7월 사이 3500개 이상 가짜 계정으로 하루 최대 300만 건, 총 1억5100만 건의 Claude 대화를 수집해 모델을 증류한 것이 최대 규모 사례로 지목됨",
+            "AI 보안 위협은 이제 '얼마나 정교한가'가 아니라 '누가, 얼마나 은밀하게, 얼마나 대규모로' 자동화했는가로 판단해야 함",
+            "자율 AI 에이전트가 탐지-회피-재배포 루프를 사람 개입 거의 없이 수행하는 사례는 향후 AI 에이전트 보안 리스크의 전형적 패턴이 될 가능성"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Anthropic 공식 위협 리포트 기반 AI 보안/증류 개념 학습 소재, ⑨창작 — 3AI 연구소 채널의 AI 보안/Claude 관련 콘텐츠 기획 시 참고할 만한 소스 자료",
+        "timestamp": "2026-09-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/PBsqNP7NP8Y/hqdefault.jpg"
+    },
+    {
         "title": "Free LLM - for building, agents, images, etc.",
         "url": "https://www.youtube.com/watch?v=ANJTdT0Ggrw",
         "channel": "The Next New Thing",
