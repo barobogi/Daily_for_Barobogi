@@ -1,5 +1,33 @@
 [
     {
+        "title": "The easiest way to launch your own iPhone app #startup #ai #ios",
+        "url": "https://www.youtube.com/watch?v=M7cvI4155_E",
+        "channel": "The Next New Thing",
+        "summary": "새로 소개된 툴(X1)은 기획, 디자인, 개발, App Store 출시까지 아이폰 앱 제작 전 과정을 지원하는 서비스로, Lovable 같은 범용 바이브코딩 툴과 달리 오직 iOS 앱 제작에만 특화되어 있다. 특히 개발 단계와 애플 퍼블리싱 인프라 대응까지 대행해주는 점이 강조된다.",
+        "categories": [
+            "AI 코딩툴",
+            "노코드/바이브코딩",
+            "iOS 앱 개발",
+            "스타트업"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "바이브코딩 툴(Lovable 등)은 아이폰 네이티브 앱 빌드에는 한계가 있음 — 웹/웹앱 중심",
+            "특정 도메인(iOS 앱)에 특화된 AI 제작 툴이 범용 툴 대비 완성도 높은 결과물을 제공할 가능성",
+            "기획~출시(App Store 퍼블리싱 포함)까지 엔드투엔드 자동화하는 AI 서비스 사례"
+        ],
+        "learning_related": [
+            "제품 포지셔닝 전략: '하나만 잘한다(iOS 앱 전용)'는 명확한 스코프 제한이 신뢰도와 시장 적합성을 높일 수 있음"
+        ],
+        "key_insights": [
+            "바이브코딩 범용 툴과 버티컬(특화) AI 툴의 차별화 포인트는 '빌드 단계의 완성도'와 '배포 인프라 대행'",
+            "명확하게 '이것만 한다/저것은 안 한다'고 선언하는 좁은 스코프 전략이 오히려 신뢰를 얻는 경향"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 기획부터 App Store 출시까지 자동화하는 AI 툴 사례, barobogi_second_brain 등 앱 프로젝트 참고 가능, ⑨창작 — iOS 앱을 AI로 빠르게 제작/출시하는 워크플로우, 향후 앱 아이디어 실행 시 참고",
+        "timestamp": "2026-09-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/M7cvI4155_E/hqdefault.jpg"
+    },
+    {
         "title": "China Tried to Clone Claude. It Leaked Their Own Secrets.",
         "url": "https://www.youtube.com/watch?v=PBsqNP7NP8Y",
         "channel": "Cloud Codes",
