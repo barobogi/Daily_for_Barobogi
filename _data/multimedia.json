@@ -1,5 +1,36 @@
 [
     {
+        "title": "Free LLM - for building, agents, images, etc.",
+        "url": "https://www.youtube.com/watch?v=ANJTdT0Ggrw",
+        "channel": "The Next New Thing",
+        "summary": "Free LLM API라는 서비스/오픈소스 프로젝트를 소개하는 영상으로, 여러 LLM 제공업체의 무료 토큰 한도를 통합해 Claude Code, 에이전트, 이미지·영상 생성 등에 완전 무료로 API 접근을 제공한다. 동일 모델을 여러 제공업체가 제공할 때 자동 폴백/장애조치가 가능하며, Mac/Windows/Docker/모바일 앱으로 손쉽게 설치할 수 있다.",
+        "categories": [
+            "AI",
+            "LLM API",
+            "무료 도구",
+            "자동화",
+            "개발도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "여러 LLM 제공업체(예: DeepSeek V4 flash, GLM 5.3 flash 등)의 무료 토큰 쿼터를 통합 관리하고 자동 폴백 체인을 구성하는 'Free LLM API' 서비스/툴 소개",
+            "월간 토큰 쿼터가 소진되면 동일 모델을 제공하는 다른 프로바이더로 자동 전환되어 API 사용자는 차이를 체감하지 못함",
+            "GitHub 저장소 기반 오픈소스로 Mac/Windows/Docker/iOS/Android 앱 형태 설치 지원, Claude Code·에이전트·이미지/영상 생성 등 다양한 워크플로우에 적용 가능"
+        ],
+        "learning_related": [
+            "LLM 제공업체별 무료 티어를 조합해 사실상 무제한에 가까운 무료 토큰 확보하는 실전 전략",
+            "모델 신뢰도·속도·지능 기준으로 순위를 매겨 자동 라우팅하는 폴백 아키텍처 개념"
+        ],
+        "key_insights": [
+            "단일 모델/제공업체 종속을 피하고 무료 토큰이 소진되면 동일 모델의 다른 제공업체로 자동 전환하는 구조가 실무적으로 유용함",
+            "이런 무료 API 애그리게이터 도구는 '⑧API 회피 우선(비용 0원 구조)' 원칙과 직접 맞닿아 있어 검증 후 도입 가치가 있음",
+            "Zapier 스폰서 영상이라는 점에서 상업적 편향 가능성 있으므로 실제 사용 전 GitHub 저장소 신뢰도·유지보수 상태 확인 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 무료 LLM API 폴백/라우팅 구조를 3AI 파이프라인 자동화에 적용 가능한지 검토, ⑥인프라 — CLAUDE.md의 '유료 API 회피, 무료 우회 구조 최우선' 원칙과 직접 관련, 도입 시 만복 사전 검토 필요, ④공부방 — 신기술 툴(Free LLM API) 스터디 후보로 검토 가능",
+        "timestamp": "2026-09-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ANJTdT0Ggrw/hqdefault.jpg"
+    },
+    {
         "title": "Claude Design 3.0 Finally Destroyed AI Slop",
         "url": "https://www.youtube.com/watch?v=AFVHDWlz1Bs",
         "channel": "Ethan Nelson",
