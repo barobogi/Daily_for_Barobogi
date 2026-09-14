@@ -1,5 +1,35 @@
 [
     {
+        "title": "Claude Design 3.0 Finally Destroyed AI Slop",
+        "url": "https://www.youtube.com/watch?v=AFVHDWlz1Bs",
+        "channel": "Ethan Nelson",
+        "summary": "Claude Code와 Claude Design(디자인 시스템 기능)을 결합해 매번 비슷하게 나오는 'AI 슬롭' 디자인 문제를 해결하는 워크플로우를 소개하는 영상입니다. 커스텀 스킬과 플러그앤플레이 디자인 팩(zip)을 Claude Code에 업로드하고, Higsfield CLI로 고품질 이미지/영상을 생성해 디자인 시스템에 반영하는 과정을 보여줍니다.",
+        "categories": [
+            "Claude Code",
+            "디자인 시스템",
+            "AI 워크플로우",
+            "생산성 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude Desktop의 'Design' 탭에서 디자인 시스템을 생성하고, Claude Code와 연동해 커스텀 스킬 기반 디자인 팩(zip)을 업로드하는 방식",
+            "Higsfield CLI를 서드파티 도구로 연계해 이미지/영상 에셋을 생성하고 컬러 스키마·헥스코드 등 문서까지 자동 산출하는 파이프라인",
+            "반복되는 'AI 디자인 획일화(AI slop)' 문제를 스킬+프롬프트+MCP 조합으로 해결한다는 접근"
+        ],
+        "learning_related": [
+            "Claude Code에 세션을 새로 만들고 zip 파일(디자인 팩)을 업로드해 인터뷰 방식으로 요구사항을 좁혀가며 산출물을 생성하는 프롬프트 패턴",
+            "Claude Design의 'Setup design system → Create' 흐름과 GitHub/컴퓨터에서 에셋을 업로드하는 커스텀 설정 방법"
+        ],
+        "key_insights": [
+            "디자인 품질 문제는 모델 자체보다 '올바른 시스템(스킬+프롬프트+MCP)'의 부재에서 온다는 프레이밍",
+            "Claude Code(생성) → Higsfield CLI(에셋) → Claude Design(시스템 반영)으로 이어지는 3단계 외부 도구 연계 파이프라인",
+            "유료 서드파티 도구(Higsfield) 로그인이 필요해 완전 무료 구조는 아님"
+        ],
+        "memo": "📋 뿌리체계: ⑨창작 — Claude Code+Design 연동으로 디자인 시스템/에셋을 자동 생성하는 워크플로우, 3AI 콘텐츠 제작(영상 디자인 자산)에 응용 가능성, ⑤자동화 — 스킬+MCP+외부 CLI(Higsfield)를 엮은 자동 파이프라인 구조가 barobogi 자동화 설계에 참고될 수 있음",
+        "timestamp": "2026-09-14T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/AFVHDWlz1Bs/hqdefault.jpg"
+    },
+    {
         "title": "HUGE AI Slowdown! Amodei, Altman, Musk & Hassabis AGREE",
         "url": "https://www.youtube.com/watch?v=L9A81d3KNRI",
         "channel": "Cloud Codes",
