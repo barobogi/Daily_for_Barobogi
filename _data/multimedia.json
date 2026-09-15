@@ -1,5 +1,30 @@
 [
     {
+        "title": "7 Levels of AI Trading",
+        "url": "https://www.youtube.com/watch?v=6BDfAkHfxAo",
+        "channel": "Lewis Jackson",
+        "summary": "채널 Lewis Jackson이 업로드한 영상으로, 제목상 AI를 활용한 트레이딩을 난이도/발전 단계별로 7단계로 구분해 설명하는 콘텐츠로 추정됩니다. 자막과 설명이 제공되지 않아 구체적 내용은 확인 불가하며 제목 기반 추정입니다.",
+        "categories": [
+            "AI 트레이딩",
+            "주식/투자",
+            "알고리즘 트레이딩"
+        ],
+        "stock_related": [
+            "AI를 단계별로 활용한 트레이딩 전략 구성 가능성 — 초급(지표 활용)부터 고급(완전 자동화 봇)까지의 로드맵일 것으로 추정"
+        ],
+        "ai_related": [
+            "AI 자동매매 시스템의 단계적 고도화(수동 보조 → 반자동 → 완전자동) 개념 참고 가능"
+        ],
+        "learning_related": [],
+        "key_insights": [
+            "제목만으로는 구체적 인사이트 확인 불가 — 자막/설명 추가 확보 필요",
+            "조회수 0으로 신규 업로드 영상, 검증된 정보 아님에 유의"
+        ],
+        "memo": "📋 뿌리체계: ⑦재테크 — AI 기반 트레이딩 단계별 전략 참고 가능성 있으나 내용 미확인 상태",
+        "timestamp": "2026-09-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/6BDfAkHfxAo/hqdefault.jpg"
+    },
+    {
         "title": "쇼핑 숏츠 자동화? GPT-6 아스트라 × 힉스필드 실전 (자료 공개)",
         "url": "https://www.youtube.com/watch?v=dhPI9p6MrW4",
         "channel": "호두의 AI 분석실",
