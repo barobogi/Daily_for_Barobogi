@@ -1,5 +1,34 @@
 [
     {
+        "title": "Amazing: FREE AI Agent from Meta",
+        "url": "https://www.youtube.com/watch?v=pkwnJcETgfE",
+        "channel": "The Next New Thing",
+        "summary": "Meta가 '뮤즈(Muse)'라는 무료 AI 에이전트를 출시했으며, OpenClaw와 유사한 개인 비서형 UX(이름 짓기, 메인 챗)를 제공한다. 가장 강력한 차별점은 Instagram/Facebook 생태계에 직접 접근 가능하다는 점으로, 팔로워 데이터 추출, DM 발송(대리 메시지), 3D 네트워크 시각화 등을 시연했다.",
+        "categories": [
+            "AI 에이전트",
+            "Meta",
+            "소셜미디어 자동화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Meta 뮤즈는 OpenClaw와 유사한 구조(메인 챗 + 사이드 챗, 에이전트 이름 지정)를 그대로 차용한 무료 개인 비서 에이전트",
+            "타 에이전트가 접근 못하는 Instagram/Facebook 내부 데이터(팔로워, DM)에 직접 접근 가능한 것이 핵심 경쟁력 — 플랫폼 종속 데이터 독점이 에이전트 경쟁력의 핵심 변수가 됨을 시사",
+            "팔로워의 팔로워를 재귀적으로 크롤링하다 749명에서 API 제한/차단으로 중단됨 — 대형 플랫폼도 자사 에이전트에 내부 API 제한을 거는 사례",
+            "데이터를 Excel로 export하는 기능은 실용적, 3D 네트워크 시각화는 '예쁘지만 기능적이지 않음'이라는 평가"
+        ],
+        "learning_related": [
+            "OpenClaw 스타일 온보딩 UX(에이전트 명명, 대화형 초기 설정)가 업계 표준 패턴으로 확산되는 사례로 참고 가능"
+        ],
+        "key_insights": [
+            "플랫폼 자체 데이터(Instagram/Facebook)에 대한 독점적 접근권이 범용 AI 에이전트 대비 결정적 우위를 만든다",
+            "DM 대리 발송 등 소셜 자동화 기능은 편의성과 동시에 스팸/오남용 리스크를 내포",
+            "데이터 export(실용) vs 화려한 시각화(비실용) — 에이전트 기능 평가 시 '데이터 접근성'이 '표현 방식'보다 중요하다는 시사점"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Instagram/Facebook 데이터 export 및 DM 자동화는 향후 3AI SNS 운영 자동화 벤치마킹 가능, ④공부방 — OpenClaw 기반 에이전트 UX 패턴 학습 참고자료",
+        "timestamp": "2026-09-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/pkwnJcETgfE/hqdefault.jpg"
+    },
+    {
         "title": "Qwen 3.6 35B on 3GB RAM?",
         "url": "https://www.youtube.com/watch?v=x1Dm8xqNAcQ",
         "channel": "Cloud Codes",
