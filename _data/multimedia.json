@@ -1,5 +1,32 @@
 [
     {
+        "title": "Even Rust Isn't Safe......",
+        "url": "https://www.youtube.com/watch?v=T-cPi5qwfk4",
+        "channel": "Cloud Codes",
+        "summary": "이 영상은 Rust의 '안전(safe)'이 메모리 안전성만 보장할 뿐 애플리케이션 보안(권한/인가)은 보장하지 않는다는 점을 설명합니다. GitHub가 CodeQL 2.27(9월 9일)에 Rust 커맨드라인 인젝션 탐지를 추가한 사례를 통해, unsafe 블록이나 FFI 없이도 안전한 Rust 코드가 검증되지 않은 텍스트를 셸 명령으로 넘겨 커맨드 인젝션을 일으킬 수 있음을 보여줍니다.",
+        "categories": [
+            "프로그래밍",
+            "보안",
+            "Rust",
+            "정적분석"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "Rust의 borrow checker/ownership은 메모리 안전성(use-after-free, data race, dangling pointer 등)만 보장하며, 문자열이 유효한지 검증할 뿐 그 문자열을 사용할 '권한'이 있는지는 검증하지 않음",
+            "표준 라이브러리의 안전한 API(예: 프로세스 실행 함수)도 신뢰할 수 없는 입력을 셸/인터프리터에 그대로 넘기면 커맨드 인젝션으로 이어질 수 있음 — 컴파일러 안전성과 애플리케이션 보안은 별개의 문제",
+            "GitHub CodeQL 2.27(2026-09-09)에 Rust/Commandline injection 룰이 추가되어 이런 패턴을 정적 분석으로 탐지 가능"
+        ],
+        "key_insights": [
+            "메모리 안전성(Rust의 보장)과 애플리케이션 보안(입력 검증/인가)은 서로 다른 층위의 문제이며, Rust는 전자만 해결한다",
+            "unsafe 코드나 FFI가 전혀 없어도 safe Rust만으로 커맨드 인젝션 취약점이 발생할 수 있다는 점이 반직관적이고 중요한 포인트",
+            "정적 분석 도구(CodeQL)가 언어 차원의 안전성이 놓치는 보안 결함을 보완하는 역할을 한다"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Rust 메모리 안전성과 보안의 차이, 정적분석 도구 학습 포인트",
+        "timestamp": "2026-09-15T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/T-cPi5qwfk4/hqdefault.jpg"
+    },
+    {
         "title": "I Asked GPT-6 Astra to Animate My Code. It Built This.",
         "url": "https://www.youtube.com/watch?v=ejZIlgo0etQ",
         "channel": "Cloud Codes",
