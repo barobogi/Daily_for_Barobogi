@@ -1,5 +1,35 @@
 [
     {
+        "title": "This Tiny Local AI Model Has 1 Million Tokens of Context. But How?",
+        "url": "https://www.youtube.com/watch?v=UzYlemYewFU",
+        "channel": "Cloud Codes",
+        "summary": "Spark 2.5는 40억 파라미터의 소형 로컬 AI 모델이면서도 100만 토큰급 컨텍스트 윈도우를 지원하는데, 이는 36개 레이어 중 27개는 512토큰짜리 지역(local) 어텐션을, 9개는 전체 대화를 아우르는 전역(global) 어텐션을 사용하는 하이브리드 구조 덕분이다. 대부분의 레이어가 KV 캐시를 짧게 유지해 메모리 부담을 줄이면서도, 소수의 전역 레이어가 오래된 규칙과 최근 코드 간의 의존성을 연결할 수 있게 설계되었다.",
+        "categories": [
+            "LLM 아키텍처",
+            "로컬 AI 모델",
+            "코딩 어시스턴트",
+            "어텐션 메커니즘"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "소형(4B) 모델도 지역+전역 어텐션을 섞으면 100만 토큰 컨텍스트를 로컬 환경에서 실용적으로 돌릴 수 있음 — 로컬 코딩 어시스턴트 구축 시 참고할 만한 경량화 접근",
+            "KV 캐시 크기가 파라미터 수보다 실사용 메모리 부담을 좌우할 수 있다는 점 — 로컬 GPU/온디바이스 배포 설계 시 고려 요소",
+            "전역 레이어 비율(9/36)이 '멀리 떨어진 규칙-코드 의존성 추적' 성능과 메모리 절감 사이의 트레이드오프 지점"
+        ],
+        "learning_related": [
+            "Local vs Global attention layer 개념: local은 최근 N토큰(여기선 512)만 직접 참조, global은 전체 시퀀스 참조 가능",
+            "KV 캐시(Key-Value cache)는 모델이 이전 토큰들에 대해 저장해두는 '작업 메모리'로, 대화가 길어질수록 이 캐시가 파라미터 자체보다 더 큰 메모리 비용을 유발할 수 있음",
+            "3:1 비율(local 3개 + global 1개 반복)로 레이어를 배치하는 하이브리드 어텐션 설계 패턴"
+        ],
+        "key_insights": [
+            "'100만 토큰 컨텍스트'라는 스펙만으로는 실사용 비용을 알 수 없고, 어텐션 레이어 구성(local/global 비율)이 실제 메모리·성능 트레이드오프를 결정함",
+            "작은 모델(4B)이 큰 컨텍스트를 표방해도, 정확도 보장이 아니라 '연결 가능성'만 확보하는 구조적 절충안임을 이해해야 함"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 하이브리드 어텐션(local/global) 및 KV 캐시 구조 학습, 향후 로컬 AI 모델 선택/튜닝 시 참고, ⑤자동화 — 로컬 4B 모델로 대용량 컨텍스트 코딩 어시스턴트 구현 가능성, API 회피(무료 로컬 모델) 원칙과 연결될 수 있음",
+        "timestamp": "2026-09-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/UzYlemYewFU/hqdefault.jpg"
+    },
+    {
         "title": "Why is everyone using these?",
         "url": "https://www.youtube.com/watch?v=ehab5PtgRo8",
         "channel": "The Next New Thing",
