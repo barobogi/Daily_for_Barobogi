@@ -1,5 +1,36 @@
 [
     {
+        "title": "This Tool Feeds All Your Business Data to One AI Agent",
+        "url": "https://www.youtube.com/watch?v=QZXeiuLBlTk",
+        "channel": "The Next New Thing",
+        "summary": "Supernova라는 도구가 여러 비즈니스 툴(SaaS 앱들)을 통합 커넥터로 연결해 모든 데이터를 하나의 데이터 레이크로 모으고, 이를 MCP를 통해 Claude Code나 Codex 같은 AI 에이전트가 한 번에 접근할 수 있게 해준다는 내용입니다. 기존에는 AI 에이전트가 툴마다 개별적으로 쿼리해야 했지만, Supernova가 그 사이의 '접착제' 역할을 하며, 커넥터가 없는 툴은 24시간 내 만들어준다고 소개됩니다.",
+        "categories": [
+            "AI 에이전트",
+            "MCP",
+            "데이터 통합",
+            "SaaS 자동화",
+            "비즈니스 툴"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "MCP(Model Context Protocol)를 통해 여러 비즈니스 툴 데이터를 단일 데이터 레이크로 통합 후 AI 에이전트(Claude Code, Codex 등)에 제공하는 구조",
+            "AI 에이전트가 툴별로 개별 쿼리하는 대신 통합된 데이터 소스에 한 번에 접근하게 하여 효율성 향상",
+            "커넥터 미지원 툴은 24시간 내 커스텀 개발해주는 서비스 모델"
+        ],
+        "learning_related": [
+            "여러 SaaS/비즈니스 툴을 하나의 데이터 레이크로 통합하는 아키텍처 패턴",
+            "MCP를 데이터 접근 계층으로 활용하는 사례"
+        ],
+        "key_insights": [
+            "AI 에이전트의 실질적 병목은 모델 성능이 아니라 '흩어진 데이터 접근'이며, 이를 해결하는 미들웨어(데이터 통합 레이어) 툴 카테고리가 부상 중",
+            "MCP가 단순 툴 연결을 넘어 '전사 데이터 레이크 접근 프로토콜'로 활용되는 방향성을 보여줌",
+            "이런 유형의 도구가 앞으로 더 많이 등장할 것이라는 전망 — 경쟁 구도 주시 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — MCP 기반으로 여러 비즈니스 툴 데이터를 AI 에이전트에 자동 연결하는 구조, barobogi 3AI 파이프라인의 데이터 접근 자동화에 참고 가능, ⑥인프라 — 데이터 레이크 + MCP 접근 계층 아키텍처는 향후 인프라 설계 시 참고할 패턴",
+        "timestamp": "2026-09-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/QZXeiuLBlTk/hqdefault.jpg"
+    },
+    {
         "title": "This Tiny Local AI Model Has 1 Million Tokens of Context. But How?",
         "url": "https://www.youtube.com/watch?v=UzYlemYewFU",
         "channel": "Cloud Codes",
