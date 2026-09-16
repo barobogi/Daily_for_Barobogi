@@ -1,5 +1,37 @@
 [
     {
+        "title": "Why is everyone using these?",
+        "url": "https://www.youtube.com/watch?v=ehab5PtgRo8",
+        "channel": "The Next New Thing",
+        "summary": "Vercel CLI 설치 데이터 기준 GitHub에서 가장 많이 설치된 AI 에이전트 스킬(Claude Code용) 상위 10개를 소개하는 영상. 1위는 다른 스킬을 찾아주는 메타 스킬 'find skills', 2위는 작업 전 핵심 목적을 되묻는 'grill me' 스킬, 3위는 AI 특유의 크림색 배경 디자인을 탈피시켜주는 Anthropic의 'front-end design' 스킬을 다룸.",
+        "categories": [
+            "AI 에이전트",
+            "Claude Code",
+            "스킬(Skills)",
+            "개발도구",
+            "생산성"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Vercel CLI 설치 통계 기준 GitHub 최다 설치 스킬 Top 10 소개",
+            "1위 'find skills': 에이전트 내에서 필요한 스킬을 검색/추천해주는 메타 스킬(일종의 앱스토어 역할)",
+            "2위 'grill me': 작업 착수 전 목적·의도를 되묻는 질문을 던져 결과물을 더 의도적으로 만들어주는 스킬, 내부적으로 'grilling' 스킬을 호출",
+            "3위 Anthropic 공식 'front-end design' 스킬: Claude로 만들 때 흔히 나오는 AI 특유의 크림색 배경 디자인을 개선해 더 나은 UI 디자인을 생성"
+        ],
+        "learning_related": [
+            "스킬 설치 전후 비교(웹사이트 디자인 before/after) 사례로 효과를 시각적으로 확인 가능",
+            "'grill me'처럼 짧은 한 줄 스킬이 다른 스킬을 체이닝하는 구조를 학습할 수 있음"
+        ],
+        "key_insights": [
+            "AI 에이전트 스킬 생태계가 커지면서 '스킬을 찾아주는 스킬'이 가장 많이 쓰인다는 점은 스킬 탐색/큐레이션 자체가 새로운 니즈임을 보여줌",
+            "'grill me'류 스킬처럼 실행 전 목적을 명확히 하는 절차형 스킬이 개발자들 사이에서 높은 채택률을 보임",
+            "Anthropic 공식 'front-end design' 스킬은 AI 생성 UI의 상투적 스타일(크림색 배경 등) 문제를 구조적으로 해결하려는 시도"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude Code 에이전트 스킬 설치/활용은 만복·안티의 자동화 워크플로우 개선에 참고 가능, ④공부방 — 상위 설치 스킬 트렌드(find skills, grill me, front-end design)는 3AI 운영에 바로 적용 검토할 만한 학습 포인트",
+        "timestamp": "2026-09-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ehab5PtgRo8/hqdefault.jpg"
+    },
+    {
         "title": "프론트엔드 - 백엔드 API가 어떻게 생긴지 보여드립니다. | 바이브코딩 하는 분들 꼭 끝까지 보세요~",
         "url": "https://www.youtube.com/watch?v=1ddEXiF_xaw",
         "channel": "기술노트with알렉",
