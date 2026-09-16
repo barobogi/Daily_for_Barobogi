@@ -1,5 +1,33 @@
 [
     {
+        "title": "What If You Run a Database Query on a GPU?",
+        "url": "https://www.youtube.com/watch?v=GfYYyXDDRE4",
+        "channel": "Cloud Codes",
+        "summary": "Bamberg 대학 연구진이 GPU 기반 데이터베이스 쿼리 처리 성능을 실측한 논문(9월 12일 발표)을 분석한 영상으로, 128M 행 집계 쿼리에서 GPU 커널 자체는 CPU보다 3배 빠르지만 전체 파이프라인은 SSD→RAM→PCIe 전송 병목 때문에 오히려 14% 더 느렸다는 결과를 설명한다. 핵심은 계산 성능이 아니라 데이터가 디스크에서 GPU까지 도달하는 속도가 전체 처리 시간을 좌우한다는 것.",
+        "categories": [
+            "데이터베이스",
+            "GPU 컴퓨팅",
+            "하드웨어 병목",
+            "시스템 성능 분석",
+            "논문 리뷰"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "버퍼 매니저 관점에서 GPU 메모리를 SSD-RAM-GPU로 이어지는 하나의 캐시 계층(tier)으로 취급하는 설계 아이디어",
+            "파이프라인 성능은 가장 느린 단계(이 경우 NVMe SSD 처리량 ~1.8GB/s)가 전체 속도를 결정한다는 병목 이론(Amdahl's law 유사 사례)",
+            "isolated microbenchmark(인메모리 커널 속도)와 end-to-end 파이프라인 성능이 크게 다를 수 있음을 보여주는 사례 — 성능 최적화 시 측정 범위의 중요성"
+        ],
+        "key_insights": [
+            "GPU 커널 연산 자체는 CPU 대비 3배 빠르지만(71.37GB/s vs 23.98GB/s), 콜드 스타트 파이프라인 전체로 보면 GPU 경로가 14% 더 느림 — 컴퓨팅 속도가 아니라 데이터 이동이 병목",
+            "568ms 전체 실행 시간 중 GPU 커널 연산은 단 14ms(2.5%)에 불과하고 나머지 97%는 SSD→RAM→PCIe 데이터 전송에 소요됨",
+            "하드웨어 가속기 도입 전 반드시 파이프라인 전체의 병목 구간을 먼저 파악해야 한다는 일반적 시사점 — '빠른 요리사'보다 '느린 식자재 공급'이 저녁 시간을 결정한다는 비유"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — GPU/DB 시스템 성능 최적화 관련 기술 학습 자료로 활용 가능",
+        "timestamp": "2026-09-16T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/GfYYyXDDRE4/hqdefault.jpg"
+    },
+    {
         "title": "Amazing: FREE AI Agent from Meta",
         "url": "https://www.youtube.com/watch?v=pkwnJcETgfE",
         "channel": "The Next New Thing",
