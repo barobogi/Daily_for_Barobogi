@@ -1,5 +1,36 @@
 [
     {
+        "title": "I let GPT-6 Astra run my business… it’s insane",
+        "url": "https://www.youtube.com/watch?v=R--bWH0x8_c",
+        "channel": "David Ondrej",
+        "summary": "David Ondrej가 GPT-6 Astra와 browser-use 창업자(Magnus)를 초대해 AI 에이전트가 인간을 대신해 자율적으로 업무를 제안·실행하는 'agency' 개념을 소개한다. AI가 더 이상 프롬프트를 기다리지 않고 먼저 할 일을 제안하면 인간은 틴더처럼 Yes/No만 누르는 워크플로우, 100개 서브에이전트가 노트북 메모리를 고갈시켜 크래시나는 사례 등을 다룬다.",
+        "categories": [
+            "AI 에이전트",
+            "자동화",
+            "생산성",
+            "스타트업"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "GPT-6 Astra 출시와 함께 '에이전트가 소프트웨어를 대체하고, 다음은 마켓플레이스/플랫폼을 대체할 것'이라는 전망 제시",
+            "browser-use팀은 AI가 인간에게 프롬프트를 요청하는 대신, AI가 먼저 할 일(고객지원, 문서 개선, 프레임워크 통합, 모델 라우팅 수정 등)을 제안하고 인간은 승인/거절만 하는 'agency' 워크플로우로 전환",
+            "서브에이전트 100개 동시 실행 시 64GB RAM으로도 부족해 크롬/노트북이 크래시하는 실전 한계 공유 — 에이전트 오케스트레이션의 리소스 병목 사례",
+            "에이전트가 TikTok 영상 자동 생성·업로드 후 그 URL을 자사 GitHub 레포 README에 자동 반영한 사례 — 완전 자율 마케팅 파이프라인 실증"
+        ],
+        "learning_related": [
+            "AI가 능동적으로 제안하고 인간이 승인만 하는 'approve-only' 인터페이스 설계 패턴",
+            "다중 서브에이전트 오케스트레이션 시 메모리/리소스 제약을 사전에 고려해야 한다는 실무 교훈"
+        ],
+        "key_insights": [
+            "AI 워크플로우의 다음 단계는 '인간이 프롬프트'가 아니라 'AI가 제안하고 인간은 결정만 하는' 구조로 이동 중",
+            "완전 자율 에이전트 파이프라인(마케팅~레포 업데이트까지)이 이미 프로덕션에서 실증되고 있으나, 다중 에이전트 확장 시 로컬 리소스가 병목이 됨",
+            "저자는 '에이전트가 소프트웨어를 대체 → 다음은 마켓플레이스/플랫폼 대체'라는 단계적 예측을 제시"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI가 먼저 제안하고 인간은 승인만 하는 'agency' 워크플로우는 3AI 파이프라인의 AI_hub 승인 체계(만복 승인 후 실행)와 유사한 패턴으로 참고 가치 있음, ⑥인프라 — 다중 서브에이전트 실행 시 메모리 병목 사례는 안티/코니 등 다중 AI 동시 운용 시 리소스 관리 참고",
+        "timestamp": "2026-09-17T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/R--bWH0x8_c/hqdefault.jpg"
+    },
+    {
         "title": "You Built the App. Now Give People a Reason to Try It.",
         "url": "https://www.youtube.com/watch?v=lSPv-FEIGpA",
         "channel": "Cloud Codes",
