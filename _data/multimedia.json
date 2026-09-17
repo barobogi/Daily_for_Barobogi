@@ -1,5 +1,32 @@
 [
     {
+        "title": "You Can Now Buy and Sell AI Skills Like Apps",
+        "url": "https://www.youtube.com/watch?v=DgYc-pFGW1U",
+        "channel": "The Next New Thing",
+        "summary": "Expertise.ai라는 AI 스킬(예: 리서치, 게스트 섭외 등 특정 업무를 자동화하는 노하우)을 사고파는 마켓플레이스를 소개하는 영상. 현재는 사람들이 Stripe 링크, Gumroad, 이메일 zip 파일 등 파편화된 방식으로 스킬을 거래하고 있는데, 이 마켓플레이스가 그 공백을 메울 수 있다는 논의.",
+        "categories": [
+            "AI 마켓플레이스",
+            "SaaS 트렌드",
+            "AI 에이전트/스킬"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI '스킬'(특정 업무를 자동화하는 워크플로우/프롬프트 패키지)을 소프트웨어의 다음 형태로 보는 관점 — 코드가 아닌 '노하우'를 상품화",
+            "현재 스킬 거래가 Stripe 링크+Gumroad+이메일 zip 같은 파편화된 방식으로 이뤄지고 있어, 이를 표준화하는 마켓플레이스가 아직 없는 시장 공백 지적"
+        ],
+        "learning_related": [
+            "'스킬'을 만드는 데 수개월이 걸릴 만큼 특정 업무(예: 게스트 섭외 자동화)의 노하우를 다듬는 과정 자체가 가치가 있다는 시사점"
+        ],
+        "key_insights": [
+            "AI 스킬은 '소프트웨어의 미래 형태' 중 하나일 수 있으나, 아직 이를 거래할 표준 마켓플레이스가 부재한 상태",
+            "현재는 개인이 만든 특화 스킬(예: 게스트 북킹 자동화)을 판매할 창구가 Stripe/Gumroad/이메일 등으로 파편화되어 있음",
+            "이런 마켓플레이스가 성공하면 일반 소프트웨어 유통 구조와 유사한 방식으로 'AI 스킬 경제'가 형성될 가능성"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 게스트 섭외/콘텐츠 작성 등 반복 업무를 '스킬'로 패키징해 재사용·판매한다는 개념이 안티/코니의 Claude Skills 활용 및 자동화 파이프라인 고도화에 참고할 만함, ⑦재테크 — AI 스킬 마켓플레이스라는 신흥 비즈니스 모델 자체가 투자/사업 기회 관점에서 모니터링 가치 있음",
+        "timestamp": "2026-09-17T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/DgYc-pFGW1U/hqdefault.jpg"
+    },
+    {
         "title": "Can a 12GB GPU Run a Real-Time Voice Agent?",
         "url": "https://www.youtube.com/watch?v=NGkPqTys2-w",
         "channel": "Cloud Codes",
