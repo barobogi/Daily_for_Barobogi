@@ -1,5 +1,36 @@
 [
     {
+        "title": "You Built the App. Now Give People a Reason to Try It.",
+        "url": "https://www.youtube.com/watch?v=lSPv-FEIGpA",
+        "channel": "Cloud Codes",
+        "summary": "앱을 완성한 후가 아니라 출시 전에 사용자에게 '써야 할 이유'를 먼저 검증해야 한다는 주제의 영상으로, RevenueCat/Sensor Tower 데이터를 근거로 신규 구독 앱 출시량이 4년 만에 약 7배 증가했지만 시장 자체는 죽지 않았다는 점을 짚는다. 이를 검증하기 위해 가상의 앱 아이디어(Next Session)를 만들어 Higsfield의 ChatGPT 플러그인으로 프로모션 이미지·영상 콘텐츠를 실험적으로 제작하는 과정을 보여준다.",
+        "categories": [
+            "앱마케팅",
+            "AI콘텐츠생성",
+            "Higsfield",
+            "제품기획",
+            "콘텐츠실험"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Higsfield의 ChatGPT 플러그인을 이용해 프롬프트 대화만으로 프로모션 이미지·영상 콘텐츠를 생성하는 워크플로우 시연",
+            "AI 이미지/영상 생성 도구로 실제 앱 개발 전에 마케팅 콘텐츠(콘셉트 검증)를 먼저 테스트하는 접근 방식"
+        ],
+        "learning_related": [
+            "제품을 만드는 것과 사용자에게 발견되게 만드는 것은 별개의 문제이며, 후자를 출시 직전이 아니라 미리 검증해야 한다는 인사이트",
+            "RevenueCat 2026 리포트: 신규 구독 앱 출시가 2022년 1월 월 2,000개 → 2026년 1월 월 14,700개 이상으로 약 7배 증가",
+            "Sensor Tower 데이터: 2025년 전세계 앱 다운로드 및 유료 결제 지출이 소폭 성장 — '경쟁이 치열함'과 '시장이 죽음'은 다른 개념"
+        ],
+        "key_insights": [
+            "앱 출시량 급증(7배)에도 불구하고 다운로드/매출 자체는 성장 중이므로, 관건은 '차별화된 발견 전략'이지 시장 포화가 아니다",
+            "실제 작동하는 앱 없이도 문제 정의 → 콘텐츠 앵글 도출 → AI로 프로모션 이미지/영상 제작까지 저비용으로 컨셉을 먼저 검증할 수 있음",
+            "좋은 마케팅 콘텐츠는 제품명을 언급하기 전에 사용자가 자신의 상황(예: 사이드 프로젝트 재개 시 맥락 상실)을 먼저 알아보게 만드는 것"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Higsfield/ChatGPT 플러그인 기반 AI 이미지·영상 자동 생성 워크플로우, 3AI 콘텐츠 제작 파이프라인에 참고 가능, ⑨창작 — 제품 없이 콘텐츠 앵글부터 검증하는 방식은 바로보기 유튜브 채널의 쇼츠/본편 기획 단계에 적용 가능",
+        "timestamp": "2026-09-17T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/lSPv-FEIGpA/hqdefault.jpg"
+    },
+    {
         "title": "This AI Claims a 200× Speedup. Here’s the Catch.",
         "url": "https://www.youtube.com/watch?v=OOo3kfmt8I8",
         "channel": "Cloud Codes",
