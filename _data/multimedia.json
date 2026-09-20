@@ -1,5 +1,35 @@
 [
     {
+        "title": "Build Anything with Jev, Here’s How",
+        "url": "https://www.youtube.com/watch?v=f6We53TnkbU",
+        "channel": "David Ondrej",
+        "summary": "Typeface AI가 출시한 'Jef'는 텍스트를 토큰이 아닌 확률적 결정으로 변환하는 완전히 새로운 유형의 'System 1' AI 모델로, 기존 최고속 모델보다 200배 빠르고 Haiku/GPT 계열보다 400배 저렴하며 환각이 없다고 소개된다. 영상은 Jef의 작동 원리, 실사용 사례, 그리고 이를 활용해 소프트웨어 제품과 비즈니스를 만드는 방법을 다룬다.",
+        "categories": [
+            "AI 모델",
+            "생성형 AI",
+            "스타트업/비즈니스",
+            "신기술 소개"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Jef(Typeface AI)는 토큰 생성 대신 확률 기반 '결정'을 반환하는 System 1 모델 — 챗봇이 아니라 if문과 LLM 사이의 판단 엔진 개념",
+            "기존 최고속 LLM 대비 200배 빠르고 Haiku/GPT급 저가 모델 대비 400배 저렴, 환각 0% 주장",
+            "Cursor 사례처럼 새로운 AI 모델 등장 시 이를 활용한 스타트업 웨이브가 뒤따르는 패턴 — Jef 기반 소프트웨어도 유사한 기회가 될 수 있음"
+        ],
+        "learning_related": [
+            "System 1(직관/확률적 판단) vs 기존 LLM(System 2/생성형 텍스트)의 차이 이해 필요",
+            "Jef의 인터페이스는 3가지 빌딩블록으로 구성 (영상 후반부에 상세 설명, 자막 일부만 확보됨)"
+        ],
+        "key_insights": [
+            "Jef는 '챗봇'이 아니라 프로그래밍적 의사결정(예: 고객지원 티켓 분류)에 최적화된 초고속·초저가 확률 엔진",
+            "공개 영상이 2일 만에 3400만 조회수를 기록할 정도로 급부상 중이나 일반 대중 인지도는 아직 낮음 — 초기 선점 기회로 프레이밍",
+            "GPT-3 초기처럼 지금이 Jef를 먼저 이해하고 활용할 '얼리무버' 타이밍이라는 메시지"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Jef를 활용한 초고속/저비용 의사결정 파이프라인 구축 가능성 검토, ⑨창작 — Jef 기반 신규 소프트웨어/서비스 기획 아이디어로 참고 가능, ④공부방 — System 1 모델 개념 및 Jef 인터페이스 학습 필요",
+        "timestamp": "2026-09-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/f6We53TnkbU/hqdefault.jpg"
+    },
+    {
         "title": "Claude Mods, Claude code 터미널을 이렇게 바꿀 수 있습니다.",
         "url": "https://www.youtube.com/watch?v=VB7uCcNY2hM",
         "channel": "techyoo",
