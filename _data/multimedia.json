@@ -1,5 +1,34 @@
 [
     {
+        "title": "Don't Build AI Marketing Agents, Build Marketing Infrastructure - Here's How",
+        "url": "https://www.youtube.com/watch?v=CIWrHHd_CoE",
+        "channel": "Ethan Nelson",
+        "summary": "다수의 AI 마케팅 에이전트(카피용, 포스�팅용, 광고용 등)를 무작정 병렬로 돌리면 콘텐츠 양은 늘지만 '슬롭(slop)'이 되어 전환율이 오히려 떨어진다는 문제를 지적한다. 대신 비즈니스의 보이스·오퍼·과거 성과 데이터를 아는 '마케팅 인프라'를 구축해야 하며, Apify·Eden 같은 스크래핑 툴로 니치 내 상위 성과 게시물(아웃라이어)을 AI 컨텍스트로 끌어와 실제 전환을 만드는 콘텐츠를 설계하는 방법을 설명한다.",
+        "categories": [
+            "AI 마케팅",
+            "콘텐츠 자동화",
+            "소셜미디어 전략",
+            "AI 에이전트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 에이전트를 단순 병렬화(카피 에이전트, 포스팅 에이전트, 광고 에이전트)하면 콘텐츠 양은 늘지만 품질 저하(슬롭화)로 전환율이 떨어질 수 있음 — 실제 사례로 한 팀이 영상/광고 출력을 3배로 늘렸으나 타겟 오디언스에 맞지 않아 전환율 급락",
+            "Apify(apify.com)로 Instagram/Facebook/YouTube/TikTok 등 소셜 플랫폼 게시물을 스크래핑해 AI 컨텍스트로 활용 가능 — Claude Code로 특정 키워드 기반 수집",
+            "Eden이라는 신규 툴(Dan Koe 관련)은 MCP로 Claude에 연동해 여러 플랫폼의 상위 성과(아웃라이어) 게시물을 자동 수집 — Apify보다 사용은 쉽지만 비용이 더 높음"
+        ],
+        "learning_related": [
+            "AI 콘텐츠 자동화 설계 시 '양산'이 아니라 '과거 성과 분석 기반 타겟팅'을 먼저 시스템화해야 한다는 원칙 — 단순 다중 에이전트 오케스트레이션보다 데이터 파이프라인(니치 콘텐츠 수집 → 분석 → 생성)이 선행되어야 함"
+        ],
+        "key_insights": [
+            "AI 마케팅 에이전트를 늘리는 것 자체가 목표가 아니라, 비즈니스의 보이스/오퍼/과거 애널리틱스를 아는 '인프라'를 먼저 구축하는 것이 핵심",
+            "콘텐츠 양 증가가 전환율 상승과 직결되지 않으며, 오히려 타겟 오디언스 이탈로 역효과가 날 수 있음",
+            "Apify(저비용, Claude Code 연동)와 Eden(고비용, MCP 연동)이 니치 내 상위 성과 게시물 수집의 두 축"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Apify/Eden을 활용한 소셜미디어 콘텐츠 스크래핑 및 MCP 연동 자동화 파이프라인 참고 가능",
+        "timestamp": "2026-09-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/CIWrHHd_CoE/hqdefault.jpg"
+    },
+    {
         "title": "The Local Coding Breakthrough We Waited For? (Bonsai 2)",
         "url": "https://www.youtube.com/watch?v=M6nv640H1Xo",
         "channel": "Cloud Codes",
