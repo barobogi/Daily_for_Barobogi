@@ -1,5 +1,36 @@
 [
     {
+        "title": "We tested the same request on all 3",
+        "url": "https://www.youtube.com/watch?v=6IxiArssGvg",
+        "channel": "The Next New Thing",
+        "summary": "The Next New Thing 채널에서 3개의 최신 AI 에이전트(Instinct, Grok 등)에 동일한 여행 예약 요청(베어밸리 숙소+EV 충전기 조건)을 iMessage/앱으로 테스트한 비교 영상. Instinct는 텍스트로 옵션과 링크만 제공해 사용자가 직접 각 링크를 클릭해 비교해야 하는 불편함이 있었고, 가격 편향(비싼 숙소 우선 추천) 이슈도 드러남.",
+        "categories": [
+            "AI 에이전트",
+            "비교리뷰",
+            "자동화",
+            "여행플래닝"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Instinct: iMessage/WhatsApp 기반 문자로 요청하면 실행해주는 무료 에이전트 — 결과를 텍스트+링크 리스트로만 제공, 비교 UI 부재",
+            "동일 프롬프트를 여러 에이전트(Instinct, Grok 등)에 넣어 결과 품질을 비교하는 벤치마킹 방식",
+            "에이전트가 최적 옵션이 아닌 '가장 비싼' 옵션을 먼저 추천하는 편향 발견 — 사용자가 재질문(왜 비싼 것부터?)해야 교정됨",
+            "영상은 Zapier 스폰서 — AI 자동화 툴 비교 콘텐츠에 협찬 붙는 사례"
+        ],
+        "learning_related": [
+            "에이전트 응답을 텍스트 리스트+링크로만 주면 사용자가 결국 수동으로 각 옵션을 클릭 비교해야 해 '자동화의 이점'이 상쇄됨 — UX 설계 시 비교 가능한 구조화된 출력(표, 카드 등)이 중요하다는 시사점",
+            "동일 프롬프트 멀티 에이전트 비교 테스트는 에이전트 선택 기준을 만드는 유용한 방법론"
+        ],
+        "key_insights": [
+            "여러 AI 에이전트에 동일 요청을 던져 비교하면 각 에이전트의 강점/약점(가격 편향, UX 부족 등)이 뚜렷하게 드러남",
+            "에이전트가 '작업을 완료했다'는 결과만으로는 부족하며, 결과의 비교 가능성과 투명성(왜 이 옵션을 추천했는지)이 실사용성을 좌우함",
+            "무료 에이전트(Instinct)는 편의성은 있지만 최종 의사결정 지원(비교/필터링)은 아직 약함"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 멀티 에이전트(Instinct/Grok 등) 실사용 비교, 여행 예약 자동화 벤치마크로 3AI 파이프라인 설계에 참고 가능",
+        "timestamp": "2026-09-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/6IxiArssGvg/hqdefault.jpg"
+    },
+    {
         "title": "Subagents vs Agent Teams? 🧠 Hermes Bots, Goal Loops & Kanban Graphs",
         "url": "https://www.youtube.com/watch?v=GlW4N7p5KS8",
         "channel": "Wanderloots",
