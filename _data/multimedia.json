@@ -1,5 +1,30 @@
 [
     {
+        "title": "상어가 부산 공원 수로에 나타난 진짜 이유",
+        "url": "https://www.youtube.com/watch?v=hrBQEleQwpU",
+        "channel": "호두의 AI 분석실",
+        "summary": "9월 18~19일 부산 북항 친수공원 수로에 3m가 넘는 무태상어가 잇따라 목격됐다. 올해 동해 수온이 평년보다 1.1도 높아지면서 고등어 등 난류성 먹이 어종이 북상했고, 이를 쫓아온 상어가 도심 수로까지 들어온 것으로 분석된다.",
+        "categories": [
+            "해양생태",
+            "기후변화",
+            "지역뉴스",
+            "안전이슈"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "해수온 상승(+1.1도)이 어종 북상 및 상어 출몰 빈도(올해 6월까지 동해 대형상어 46마리, 전년 동기 대비 3배 이상) 증가로 이어지는 인과 흐름 — 기후변화가 연안 생태계/도심 안전 이슈로 구체화되는 사례 학습 포인트"
+        ],
+        "key_insights": [
+            "상어 출몰은 우연이 아니라 해수온 상승 → 난류성 먹이어종 북상 → 포식자 이동이라는 연쇄 반응의 결과",
+            "해경은 무리한 퇴치 대신 자연 이탈을 유도하는 방식을 택함 — 억지 개입 시 공격성 유발 우려",
+            "동해 대형상어 목격 건수가 전년 대비 3배 이상 급증해 일회성 이벤트가 아닌 추세적 변화로 해석됨"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-09-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/hrBQEleQwpU/hqdefault.jpg"
+    },
+    {
         "title": "We tested the same request on all 3",
         "url": "https://www.youtube.com/watch?v=6IxiArssGvg",
         "channel": "The Next New Thing",
