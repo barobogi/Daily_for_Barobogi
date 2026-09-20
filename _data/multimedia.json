@@ -1,5 +1,37 @@
 [
     {
+        "title": "Run Your Own AI Coder on a 6GB GPU (No Subscription)",
+        "url": "https://www.youtube.com/watch?v=RtDqkpSTK4I",
+        "channel": "Cloud Codes",
+        "summary": "6GB VRAM GPU와 16GB RAM 환경에서 로컬 AI 코딩 모델이 실제 코딩 작업(API 버그 수정, 기능 추가, 리팩토링)을 완수할 수 있는지 실험하는 영상. 모델 크기(디스크 용량)와 실제 실행 시 필요한 VRAM은 다르며, 이 차이가 6GB급 세팅이 실패하는 주된 원인이라는 점을 핵심으로 다룸.",
+        "categories": [
+            "로컬 LLM",
+            "AI 코딩 어시스턴트",
+            "GPU/VRAM 최적화",
+            "튜토리얼",
+            "오픈소스 모델"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "클라우드 구독 없이 6GB급 GPU에서 로컬 코딩 모델(4B~9B 파라미터급, 4/5bit 양자화)을 구동해 실제 API 버그 수정·기능 추가·리팩토링 3단계 과제로 검증",
+            "모델 페이지에 적힌 '크기'는 디스크 용량일 뿐 실제 구동 시 필요한 VRAM과 다르며, 이 여유 공간(leftover room) 확보 여부가 6GB 세팅 성공/실패를 가르는 핵심 변수",
+            "코딩 특화 소형 모델(4B급)이 범용 대형 모델보다 제한된 하드웨어에서 더 실용적일 수 있다는 가설을 직접 테스트"
+        ],
+        "learning_related": [
+            "4bit/5bit 양자화 빌드의 디스크 용량(예: 3GB, 2.6GB, 5.6GB)과 6GB VRAM 여유 공간의 관계를 실측",
+            "코드 에디터와 로컬 모델 서빙 앱을 연동하는 구체적 셋업 방법 소개",
+            "다운로드 전에 '실행 가능 여부'를 미리 판단할 수 있는 하나의 핵심 지표(유효 VRAM 여유분)를 제시"
+        ],
+        "key_insights": [
+            "제한된 VRAM 환경에서는 모델 파라미터 수보다 '실행 후 남는 메모리 여유'가 성공적인 로컬 코딩 AI 운용의 결정 요인",
+            "코딩 특화 소형(4B) 모델이 범용 대형 모델보다 실제 코딩 업무(버그 수정→기능 추가→리팩토링)에서 더 실용적일 가능성",
+            "벤더가 공개한 벤치마크 점수는 실제 로컬 축소 버전 성능과 무관할 수 있어 직접 검증이 필요"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 로컬 무료 모델로 코딩 어시스턴트 구동 가능성 검증, 유료 API 회피 구조 설계 원칙과 직접 연관, ⑥인프라 — 로컬 GPU(VRAM) 자원으로 AI 코딩 도구 자체 인프라 구축 가능성 참고 자료",
+        "timestamp": "2026-09-20T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/RtDqkpSTK4I/hqdefault.jpg"
+    },
+    {
         "title": "상어가 부산 공원 수로에 나타난 진짜 이유",
         "url": "https://www.youtube.com/watch?v=hrBQEleQwpU",
         "channel": "호두의 AI 분석실",
