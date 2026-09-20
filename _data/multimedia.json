@@ -1,5 +1,35 @@
 [
     {
+        "title": "Claude Mods, Claude code 터미널을 이렇게 바꿀 수 있습니다.",
+        "url": "https://www.youtube.com/watch?v=VB7uCcNY2hM",
+        "channel": "techyoo",
+        "summary": "9월 초 공개된 '클로드 모즈(Claude Mods)'는 클로드 코드의 화면과 실행 과정에 원하는 기능을 연결하는 플러그인 확장 방식으로, 함수 훅스(Function Hooks)를 통해 구현된다. 터미널 브라우저, 단축키 패널, 슬랙 연동, 컨텍스트 사용량 시각화 등 사용자가 직접 만들거나 커뮤니티가 공유한 모드를 붙여 작업 환경을 자신에게 맞게 커스터마이징할 수 있다.",
+        "categories": [
+            "Claude Code",
+            "AI 도구",
+            "개발자 생산성",
+            "플러그인/확장"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "클로드 코드에 Function Hooks 기반 플러그인(Claude Mods)을 붙여 화면·실행 과정에 커스텀 동작을 연결 가능 — 터미널 브라우저, 단축키 패널, 슬랙 패널, 컨텍스트 사용량 표시 등 실사용 사례 존재",
+            "aitmpl.com에 25개 모즈 데모가 공개되어 있고, 앤트로픽 공식 레포에 이미 3가지 기능이 공식 플러그인으로 반영됨",
+            "컨텍스트 렌즈 같은 모드로 대화 중 컨텍스트 사용량(항목별 증가치)을 실시간 확인 가능 — 자료 투입 전략(전체 삽입 vs 부분 발췌) 판단에 활용 가능"
+        ],
+        "learning_related": [
+            "Claude Code의 Function Hooks 개념과 동작 방식(도구 사용/화면 표시 시점에 커스텀 동작 연결)",
+            "aitmpl.com, 앤트로픽 공식 GitHub 레포의 mods 폴더에서 실제 설치·구현 방법 확인 가능"
+        ],
+        "key_insights": [
+            "클로드 코드가 단순 CLI 도구를 넘어 사용자별 커스텀 작업환경(브라우저, 협업툴, 모니터링 패널 통합)으로 확장되는 흐름을 보여줌",
+            "커뮤니티(X, 깃허브) 중심으로 모드가 활발히 공유되고 있고, 일부는 이미 공식 플러그인으로 흡수됨 — 향후 생태계 확장 가능성",
+            "아직 아웃풋 접기, 하이라이트/북마킹 등 확장성에는 공식적으로 제한이 걸려 있어 발전 여지가 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 클로드 코드 작업환경에 커스텀 훅/패널을 붙이는 방식은 만복의 자동화 파이프라인(터미널 UI 개선) 아이디어로 참고 가능, ④공부방 — Claude Code Function Hooks/Mods 생태계 학습 자료로 활용 가능",
+        "timestamp": "2026-09-19T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/VB7uCcNY2hM/hqdefault.jpg"
+    },
+    {
         "title": "Run Your Own AI Coder on a 6GB GPU (No Subscription)",
         "url": "https://www.youtube.com/watch?v=RtDqkpSTK4I",
         "channel": "Cloud Codes",
