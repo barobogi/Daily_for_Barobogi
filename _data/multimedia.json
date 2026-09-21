@@ -1,5 +1,36 @@
 [
     {
+        "title": "Easy step-by-step setup",
+        "url": "https://www.youtube.com/watch?v=WPUAZm5rnGc",
+        "channel": "The Next New Thing",
+        "summary": "Zapier가 소개하는 AI 음성봇(GrokBot) 데모 영상으로, 이민법 로펌(BalongLaw)이 폼 작성 후 이탈한 잠재고객에게 AI가 자동으로 전화를 걸어 자격 조건(국적, 투자금액, 사업 형태)을 파악하고 문자로 예약 링크를 보내 상담 예약까지 성사시키는 과정을 실시간으로 보여준다. 봇 도입 2주 만에 1만6천 달러 매출을 창출했다고 주장한다.",
+        "categories": [
+            "AI 자동화",
+            "세일즈봇",
+            "Zapier",
+            "콜드콜 자동화",
+            "리드 전환"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 음성봇이 이탈 리드에게 자동 발신하여 자격조건 질문(국적/투자금/사업형태)을 순차적으로 수집",
+            "예약 링크를 문자로 즉시 발송해 마찰 없이 캘린더 예약 전환까지 완결",
+            "도입 2주 만에 $16,000 매출 발생 사례 — B2B 리드 nurturing에 AI 콜봇 적용 시 ROI 근거로 활용 가능"
+        ],
+        "learning_related": [
+            "AI 콜봇 스크립트 설계 패턴: 짧은 인사→핵심 질문 2~3개→다음 액션(콜 예약) 제안→전달 방식(문자/이메일) 선택지 제공→확인 순서로 구성됨",
+            "고객이 이탈해도(폼 작성 후 이탈) 즉시 자동 후속조치(콜백)로 전환율을 살리는 구조"
+        ],
+        "key_insights": [
+            "폼 이탈 직후 AI가 즉시 전화로 재개입하는 '실시간 리드 리커버리'가 핵심 차별점",
+            "질문 흐름이 자연스럽게 다음 단계(콜 예약)로 유도하도록 설계되어 있어 실제 대본으로 참고할 가치 있음",
+            "구체적 매출 수치($16K/2주)를 제시해 마케팅 사례로서 설득력을 높임 (다만 자체 홍보 영상이라 과장 가능성 감안 필요)"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — AI 콜봇으로 리드 응대·예약 자동화하는 구조, 텔레그램 봇이나 n8n 리드 관리 자동화에 참고 가능, ⑧소통 — 고객과의 자연스러운 대화 흐름/스크립트 설계 참고자료",
+        "timestamp": "2026-09-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/WPUAZm5rnGc/hqdefault.jpg"
+    },
+    {
         "title": "10 Wild Things You Can Build With Jev",
         "url": "https://www.youtube.com/watch?v=X4Lqj54sw4I",
         "channel": "Cloud Codes",
