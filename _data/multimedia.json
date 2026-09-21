@@ -1,5 +1,35 @@
 [
     {
+        "title": "He Built an AI Tool to Help Families Facing Cancer",
+        "url": "https://www.youtube.com/watch?v=H03k_SfxySQ",
+        "channel": "The Next New Thing",
+        "summary": "Peter Yang(전 Roblox PM, 현 AI 뉴스레터 진행자)가 어머니의 암 진단을 계기로 'Cancer'라는 오픈소스 AI 스킬을 만들었다. 환자와 보호자가 진단 이후 프로세스를 더 잘 이해하고 능동적인 환자 옹호자(patient advocate)가 되도록 돕는 도구로, 환자·의료팀 정보 정리, 의학 용어 쉬운 설명, 진단 단계별 다음 행동 안내, 최근 업데이트·결정사항을 기록하는 케어 로그 기능을 제공한다.",
+        "categories": [
+            "AI 도구",
+            "헬스케어",
+            "오픈소스",
+            "환자 옹호",
+            "개인 경험 기반 프로젝트"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 스킬(에이전트형 도구)을 특정 도메인(암 환자 케어)에 특화시켜 오픈소스로 배포한 사례 — Claude 등 LLM의 'skill' 형태 활용 예시",
+            "복잡한 의료 프로세스를 환자/보호자가 이해하기 쉽게 요약·번역해주는 AI 활용 (의학 용어 plain English 설명)",
+            "개인적 필요(가족의 암 진단)에서 출발해 100K+ 조회수를 얻은 파급력 있는 AI 프로젝트로 성장한 사례"
+        ],
+        "learning_related": [
+            "AI 스킬을 특정 분야(의료 프로세스 안내, 정보 정리, 로그 관리)에 맞춰 설계하는 방식 참고 가능"
+        ],
+        "key_insights": [
+            "개인적 고충(가족의 암 진단)에서 출발한 AI 도구가 오픈소스화되어 다수에게 실질적 도움을 주는 사례",
+            "AI를 통한 '환자 옹호(patient advocacy)' 지원 — 진단 이후 프로세스 안내, 의료팀 정보 정리, 케어 로그 등 실용적 기능 조합",
+            "조회수 100K+로 확인되듯 헬스케어 관련 AI 도구에 대한 대중 수요가 큼"
+        ],
+        "memo": "📋 뿌리체계: ⑩건강 — 암 진단 프로세스·환자 옹호를 돕는 AI 도구 사례, 향후 건강 관련 AI 활용 참고, ⑤자동화 — 특정 도메인 특화 AI 스킬 설계 방식이 3AI 파이프라인의 스킬 제작에 참고될 수 있음",
+        "timestamp": "2026-09-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/H03k_SfxySQ/hqdefault.jpg"
+    },
+    {
         "title": "He Built an Agent That Calls Customers",
         "url": "https://www.youtube.com/watch?v=mny7r505ZpU",
         "channel": "The Next New Thing",
