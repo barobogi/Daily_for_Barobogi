@@ -1,5 +1,34 @@
 [
     {
+        "title": "The Fatal Flaw in Modern AI (Exposed by a 1998 Game)",
+        "url": "https://www.youtube.com/watch?v=oUanE8uBPm0",
+        "channel": "Cloud Codes",
+        "summary": "Brood War Bench라는 벤치마크는 Codex, Claude, Grok 등 최신 프론티어 AI 모델 19개 구성을 1998년 게임 스타크래프트: 브루드워에서 라운드로빈으로 맞붙게 했다. 결과는 참혹했는데, 최고 성적(Codex Astra 최고 추론 설정, 18승0패)조차 초보자 수준의 '캐논 러시' 전략 하나에 무너질 정도였고, 이는 AI가 경제 운영(느린 장기 계획)과 실시간 전투(빠른 순간 판단)라는 두 축을 동시에 다루는 데 근본적 한계가 있음을 보여준다.",
+        "categories": [
+            "AI벤치마크",
+            "StarCraft",
+            "에이전트 한계",
+            "리얼타임 의사결정"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "최신 프론티어 LLM(Codex, Claude, Grok)도 실시간 전략 게임 같은 '느린 계획 + 빠른 반응'을 동시에 요구하는 과제에서는 여전히 초보자 수준에 머무름 — 코드 생성/장기 에이전트 작업 능력과 실시간 멀티태스킹 능력은 별개 역량임을 시사",
+            "Brood War Bench처럼 실제 게임을 에이전트 전용 인터페이스로 감싸 여러 모델의 reasoning effort 설정별 성능을 라운드로빈으로 비교하는 벤치마크 설계 방식은 자체 AI 평가/워커 선정에도 참고할 만함",
+            "벤치마크 결과: Codex Astra(최고 설정) 18승0패 1위, Claude Fable 15승3패로 근접, Claude 최소모델·Grok 저효율 설정은 0승16패로 최하위 — 동일 모델 계열이라도 reasoning effort 설정에 따라 실전 성능 격차가 극단적으로 벌어짐"
+        ],
+        "learning_related": [
+            "AI 에이전트가 '경제(장기 계획)'와 '전투(실시간 반응)'처럼 서로 다른 시간 스케일의 의사결정을 동시에 잘 처리하지 못한다는 구조적 약점은 3AI 협업 파이프라인에서 장기 기획(만복)과 즉각 실행(안티) 역할을 분리한 현재 구조의 타당성을 방증하는 사례로 참고 가능"
+        ],
+        "key_insights": [
+            "프론티어 AI 모델도 벤치마크 스펙(코딩, 긴 에이전트 태스크)에서는 강하지만 실시간·다중 시간축 의사결정이 필요한 환경(RTS 게임)에서는 여전히 초보자 수준",
+            "reasoning effort(추론 강도) 설정 하나만으로 동일 모델 계열 내에서도 승률이 0%~100%까지 극단적으로 갈림 — 모델 선택 못지않게 설정값 튜닝이 실전 성능에 결정적",
+            "'느린 게임(전략/경제)'과 '빠른 게임(전투/반응)'을 분리해 생각하는 프레임은 AI뿐 아니라 인간-AI 협업 워크플로우 설계에도 적용 가능한 통찰"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — AI 모델 reasoning effort별 성능 차이, 실시간 vs 장기계획 과제 구분 개념은 향후 3AI 워커 배치·역할 설계에 참고할 학습 인사이트, ⑤자동화 — Brood War Bench의 라운드로빈 멀티모델 비교 벤치마크 설계 방식은 자체 AI 작업 배분/평가 자동화 설계 시 참고 가능",
+        "timestamp": "2026-09-21T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/oUanE8uBPm0/hqdefault.jpg"
+    },
+    {
         "title": "Best Local Coding AI for Your GPU (4GB to 512GB)",
         "url": "https://www.youtube.com/watch?v=qkRIW2ieOK8",
         "channel": "Cloud Codes",
