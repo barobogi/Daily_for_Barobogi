@@ -1,5 +1,35 @@
 [
     {
+        "title": "Better than Jev - because you can build with it",
+        "url": "https://www.youtube.com/watch?v=tsWOiibaaxA",
+        "channel": "The Next New Thing",
+        "summary": "이 영상은 Zapier가 소개하는 무료 소형 LLM이 'Jev'(젭, 아마 OpenAI Gemini/기타 어시스턴트 지칭)처럼 동작하면서도 로컬 하드웨어에 탑재 가능하고 인터넷 연결 없이 사설(private)로 작동한다는 점을 시연한다. 조명 제어, 알람/타이머 설정, 리마인더 등 다양한 tool-calling(구조화된 명령 생성) 데모를 통해 도구 정의(tool scoping)가 출력 품질을 좌우한다는 점을 강조한다.",
+        "categories": [
+            "AI",
+            "LLM",
+            "자동화",
+            "오픈소스",
+            "IoT/홈오토메이션"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "무료이면서 소형(온디바이스/하드웨어 내장 가능)인 LLM이 tool-calling(구조화된 명령 생성) 방식으로 홈오토메이션·소프트웨어 자동화를 수행",
+            "인터넷 연결 없이 로컬에서 동작 가능 → 프라이버시 확보 + API 비용 0원 구조와 부합",
+            "출력 품질은 모델 성능보다 '어떤 tool을 어떻게 scope(정의)했는지'에 크게 의존한다는 실무적 인사이트"
+        ],
+        "learning_related": [
+            "LLM이 자연어 명령을 받아 사람이 읽을 수 있는 답변이 아니라 실행 시스템이 소비할 '구조화된 tool call' 명령을 생성하는 구조 이해",
+            "프리셋(preset) 예시를 제공해 사용자가 tool-calling 시스템을 빠르게 학습하도록 돕는 UX 패턴"
+        ],
+        "key_insights": [
+            "무료·소형·오프라인 동작이 가능한 LLM이 등장하면서 온디바이스 자동화(조명·알람·리마인더 등)의 진입장벽이 낮아짐",
+            "Tool-calling 품질은 모델보다 '도구 스코프 설계'에 좌우되므로, 자동화 설계 시 사용 가능한 tool 정의를 얼마나 세밀하게 하느냐가 핵심"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 무료·로컬 LLM 기반 tool-calling으로 조명/알람/리마인더 등 홈오토메이션·소프트웨어 자동화 구현 가능, API 회피 원칙(비용 0원 구조)에 부합, ⑥인프라 — 인터넷 연결 없이 소형 하드웨어에 내장 가능한 온디바이스 LLM은 향후 로컬 인프라 구성 시 참고할 만함",
+        "timestamp": "2026-09-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/tsWOiibaaxA/hqdefault.jpg"
+    },
+    {
         "title": "Alibaba's Free Tool Catches Security Bugs Vibe Coders Miss",
         "url": "https://www.youtube.com/watch?v=ktfjaNnxPsQ",
         "channel": "The Next New Thing",
