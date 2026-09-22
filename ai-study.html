@@ -278,6 +278,37 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="3AI 협업"
+             data-id="20260923-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">3AI 협업</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">실시간 채팅 인식 안정화 — 죽은 포트와 수신자 필터가 만든 사각지대</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+3AI 실시간 채팅 감시가 죽은 포트를 보고 있었고, 필터가 만복 언급을 수신자 기준으로 걸러내고 있었다 - 로그 파일 직접 파싱 + 언급 기준 완화로 고쳤다.
+
+🗂️ 원인 3가지
+1. 죽은 포트 조회: 감시 훅이 응답 없는 8000번 포트를 조회 중이었음(실제 허브는 8765번에서만 정상).
+2. 수신자 기준 필터링: 필터가 수신자가 "만복/all"이 아니면 걸러내서, 코니-안티 대화 속 "만복 승인 대기" 같은 언급이 누락됨.
+3. 세션 종속 감시: 감시 프로세스가 세션에 종속돼 세션 종료 시 함께 끊김.
+
+🔑 핵심 기술 1 — 로그 파일 직접 파싱으로 전환
+감시 훅이 서버/포트에 의존하지 않고 messages_append_log.jsonl을 직접 읽도록 바꿔서, 매 프롬프트마다 "미확인 N건" 형태로 표시되게 함.
+
+🔑 핵심 기술 2 — 필터 조건 완화
+수신자 기준 필터를 "본문에 '만복' 언급이 있는가" 기준으로 완화, 수신자와 무관하게 통과.
+
+⚠️ 주의사항 / 함정
+"감시 중"이라는 상태는 특정 프로세스의 생존에 묶여 있다 - 세션이 끝나면 감시도 같이 끊긴다. 3번(세션 종속) 문제는 이번 수정으로 완전히 해결된 게 아니라, 상시 구동 방식 전환이 별도 후속 검토 대상으로 남아있다.
+
+💡 배운 점 & 🌱 성장 관점
+검증: 9/21 실행 결과 미확인 11건(human 4, 만복언급 6) 정상 표시 확인, 이후 세션에서 코드를 직접 열람해 변경 이력(.bak_20260921 백업 대조)으로 실물 확인까지 마쳤다. 이번 사고는 "감시 중"이라는 상태가 실제로는 특정 프로세스 생존에 묶여있다는 걸 드러냈다 - 이후 AI_hub 등 다른 감시/자동화 코드에도 "이 감시가 언제 죽는가"를 먼저 묻는 습관으로 확장할 수 있다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.09.23 · 3AI협업, 실시간채팅, 감시인프라, 세션관리</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="Web Dev"
              data-id="20260905-7"
              style="border-top: 1px solid var(--border);"
