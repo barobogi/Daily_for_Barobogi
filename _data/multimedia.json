@@ -1,5 +1,35 @@
 [
     {
+        "title": "Opus 5.5 is Here",
+        "url": "https://www.youtube.com/watch?v=VeaaXWFQG0U",
+        "channel": "David Ondrej",
+        "summary": "Anthropic이 Opus 5.5를 출시했으며 여러 벤치마크에서 이전 모델(Astra) 대비 확연히 향상된 성능을 보인다고 소개하는 영상입니다. 제작자는 벤치마크 수치만으로는 실사용 품질을 판단할 수 없다며, 실제 사용 경험(Vibe Check)과 Opus 5·Fable 5.1 대비 장황함(verbosity) 개선 여부를 검증 포인트로 언급합니다.",
+        "categories": [
+            "AI 모델 출시",
+            "Anthropic",
+            "벤치마크",
+            "브이로그"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Opus 5.5가 다수 벤치마크에서 Astra(이전 모델) 대비 우수한 성능을 기록하며 단순 점진적 개선이 아닌 유의미한 도약으로 평가됨",
+            "Anthropic의 모델 출시 속도가 빨라지고 있다는 점(프론티어 경쟁 심화)이 언급됨",
+            "Claude Code를 PWA 형태로 컴퓨터에서 구동해 모바일/이동 중에도 채팅 접근 가능 — 실사용 워크플로우 예시",
+            "벤치마크 우수성과 실제 체감 품질(Vibe Check) 사이의 괴리 가능성을 제작자가 스스로 경계함"
+        ],
+        "learning_related": [
+            "새 모델 평가 시 벤치마크 수치뿐 아니라 실사용 검증(Vibe Check), 장황함(verbosity) 같은 정성적 요소도 함께 확인하는 접근"
+        ],
+        "key_insights": [
+            "Opus 5.5는 벤치마크상 이전 세대 대비 뚜렷한 성능 향상을 보이나, 제작자는 아직 실사용 검증 전이라는 점을 강조",
+            "이전 모델(Opus 5, Fable 5.1)의 '장황함' 문제가 개선되었는지가 이번 모델의 주요 관전 포인트로 제시됨",
+            "AI 프론티어 경쟁이 가속화되며 신모델 출시 주기가 짧아지고 있다는 업계 흐름을 시사"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — 신규 Anthropic 모델(Opus 5.5) 벤치마크·특성 트렌드 파악용 참고 자료",
+        "timestamp": "2026-09-22T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/VeaaXWFQG0U/hqdefault.jpg"
+    },
+    {
         "title": "Grok 4.7 is out, here's how I use it",
         "url": "https://www.youtube.com/watch?v=_8Wod-K8bn0",
         "channel": "David Ondrej",
