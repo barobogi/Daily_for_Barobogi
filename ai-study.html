@@ -278,6 +278,38 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="App Release"
+             data-id="20260923-2"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">App Release</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">'오늘뭐하지' 프로덕션 출시 신청 완결 — 19일 폐쇄테스트에서 나온 실전 교훈</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+3AI 1호 안드로이드 앱 '오늘뭐하지'가 19일 폐쇄테스트(구글 요건 14일 초과)를 완주하고 구글 플레이 프로덕션 액세스 신청을 제출했다 - 무개인정보·순수 공공데이터 구조가 심사 준비의 핵심이었다.
+
+🗂️ 전체 구조
+- 앱: com.barobogi.todaywhattodo (버전 1.0.4)
+- 데이터 소스: TourAPI + 기상청 API만 사용, 회원가입/로그인/개인정보 수집 0건
+- 폐쇄 테스트: 비공개 테스터 29명, 2026-09-05~09-23 19일 연속(구글 14일 요건 초과)
+- 사전 검증: 18,480건(지역×조건 전수 조합) 가상 유저 카테시안 곱 스트레스 테스트 100% 통과
+
+🔑 핵심 기술 1 — 무개인정보 구조로 심사 리스크 축소
+회원가입/로그인 자체를 없애고 공공데이터만으로 앱을 구성해서, 개인정보처리방침 관련 심사 항목을 원천적으로 단순화했다.
+
+🔑 핵심 기술 2 — 전수 조합 스트레스 테스트로 사전 방어
+지역×시간대×날씨 조건의 카테시안 곱 18,480건을 미리 전수 실행해, 실사용 중 마주칠 수 있는 예외 조합을 출시 전에 이미 소진했다.
+
+⚠️ 주의사항 / 함정
+1차 초안에서 "2026-09-05~09-23"과 "18일 연속"이 서로 안 맞는 계산 오류가 있었다(해당 범위는 종료일 포함 19일) - 코니의 교차검증으로 발견해 정정했다. 날짜 범위와 "N일" 표현은 항상 종료일 포함으로 재계산해서 대조해야 한다.
+
+💡 배운 점 & 🌱 성장 관점
+Google Play Console처럼 로컬에서 검증 불가능한 외부 시스템 "제출 완료" 주장은, 스크린샷/API 응답이 없어도 바로보기님 본인의 직접 확인이 있으면 그것이 최상위 증거로 인정된다 - 외부 시스템 검증 규정의 취지(신뢰보다 실물 증거)는 유지하되, 사용자 본인 참여 확인은 그 실물 증거를 대체할 수 있다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.09.23 · 앱출시, 플레이스토어, 폐쇄테스트, 3AI협업</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="3AI 협업"
              data-id="20260923-1"
              style="border-top: 1px solid var(--border);"
