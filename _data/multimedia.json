@@ -1,5 +1,34 @@
 [
     {
+        "title": "New release: fewer tokens & reliable AI",
+        "url": "https://www.youtube.com/watch?v=U6ptUFMyaJg",
+        "channel": "The Next New Thing",
+        "summary": "AI 에이전트가 확률적 판단으로 인해 불필요한 반복 작업(토큰 낭비)이나 엉뚱한 실수(잘못된 썸네일 선택)를 저지르는 문제를 소개하고, Zapier가 출시한 'NextGen Zaps'를 해법으로 제시한다. 이 도구는 워크플로우 전체를 결정론적(deterministic)으로 실행하면서 꼭 필요한 부분에만 AI 추론을 넣어, 비용 절감과 신뢰성 향상을 동시에 달성한다.",
+        "categories": [
+            "AI 자동화",
+            "Zapier",
+            "에이전트 워크플로우",
+            "비용관리"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "에이전트가 확률적(probabilistic)으로 동작하면 사이트 변경 확인처럼 불필요한 작업을 수백 번 반복해 토큰/비용이 급증할 수 있음 (사례: Grok 구독 오버리지로 2일간 $264 추가 과금)",
+            "에이전트가 '더 나은 결과'를 임의로 판단해 의도와 다른 결과물(조회수 높은 타인 영상 썸네일로 교체)을 만들 수 있음 — 확률적 AI의 신뢰성 한계",
+            "Zapier NextGen Zaps: 워크플로우 전체를 결정론적으로 구성하되, 판단이 필요한 구간에만 AI 추론을 삽입하는 하이브리드 구조로 안정성과 비용효율을 동시 확보",
+            "Cursor에서 자연어로 워크플로우를 설계 → Zapier NextGen 빌더로 구현하는 협업 방식(예: Granola 회의록을 Google Drive에 자동 저장 후 EA와 공유)"
+        ],
+        "learning_related": [
+            "결정론적 워크플로우 vs 확률적(AI 추론) 워크플로우의 차이와 하이브리드 설계 패턴"
+        ],
+        "key_insights": [
+            "AI 에이전트에 모든 판단을 맡기면 비용 폭증과 예측불가 실수로 이어짐 — 필요한 지점에만 추론을 국한하고 나머지는 결정론적으로 하드닝하는 것이 실전 해법",
+            "Zapier NextGen Zaps는 '에이전트를 무제한 자율화'가 아니라 '자율성을 필요한 부분에만 국한'하는 방향으로 AI 자동화 신뢰성 문제에 접근"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Zapier NextGen Zaps의 결정론적+AI 하이브리드 워크플로우 구조는 Global_Define/n8n 기반 자동화 설계(API 회피, 비용 0원 우선 원칙)에도 참고할 만한 패턴",
+        "timestamp": "2026-09-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/U6ptUFMyaJg/hqdefault.jpg"
+    },
+    {
         "title": "Claude Opus 5.5 vs GPT-6 Astra: Check This Before You Switch",
         "url": "https://www.youtube.com/watch?v=lwGt18ypB6g",
         "channel": "Cloud Codes",
