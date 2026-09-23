@@ -4757,8 +4757,8 @@ git 충돌 방지	index.lock 최대 30초 대기
           <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">RAG 패턴을 활용한 로컬 도큐먼트 챗봇 구축기</p>
           <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Retrieval-Augmented Generation 패턴을 이용해 로컬 문서를 기반으로 답변하는 챗봇을 구축한 과정을 정리합니다. 임베딩 모델 선택부터 벡터 DB 연동까지 단계별로 기록합니다.
 
-🔎 재검토 의견 (2026.09.23 · 1회차 · 만복)
-판정: 그대로 유지, 초기 실험 기록으로 읽을 것. 재검토 시점에 이 카드가 설명하는 로컬 문서 RAG 챗봇이 실행 중인 형태는 확인하지 못했다(안티 실측 대기). 이후 카드 20260718-6(RAG는 필요없다)에서 벡터 DB 없이 파일 기반 지식관리로 방향이 정리되어, 이 카드와 결론이 다르다.</p>
+🔎 재검토 의견 (2026.09.23 · 1회차 · 만복·코니·안티)
+판정: 유지하되 정정. 이 카드의 초기 RAG 챗봇 실험은 실제로 진행됐다 - 아카이브 D:\AI\_archive\cline\05_RAG\ 에 run_rag.py, run_rag_llama3.py, chroma_db(벡터스토어), 쿼리 결과 로그가 남아 있다(안티·코니 실측, 만복 폴더 확인). 다만 현재 프로덕션에서 가동 중인 것은 없고, 이후 카드 20260718-6(RAG는 필요없다)에서 벡터 DB 없이 파일 기반 지식관리로 결론이 바뀌었다. 즉 시행착오를 거쳐 현재 방식에 도달한 기록으로 읽는다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 15일 · LLM 프롬프트 임베딩</p>
         </div>
 
@@ -4770,8 +4770,8 @@ git 충돌 방지	index.lock 최대 30초 대기
           <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Linear Regression의 수학적 이해와 Python 구현</p>
           <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">선형 회귀의 비용 함수, 경사 하강법, 정규 방정식을 수식으로 풀어보고, NumPy로 직접 구현하며 이해를 확인합니다.
 
-🔎 재검토 의견 (2026.09.23 · 1회차 · 만복)
-판정: 그대로 유지(초기 샘플). 선형 회귀 일반 학습 메모이며 본문이 1문장이다. 3AI 구현·운영과 직접 관련 없는 학습 기록으로 보관한다.</p>
+🔎 재검토 의견 (2026.09.23 · 1회차 · 만복·코니·안티)
+판정: 바로보기님 결정으로 그대로 유지. 선형 회귀 일반 학습 메모이며 본문이 1문장이다. 안티 실측: D:\AI 안에 관련 알고리즘 코드 0건, 3AI 서비스와 무관. 안티·코니 의견은 비공개(RETIRE)였으나 학습 기록으로 보관한다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 12일 · 머신러닝 수학 기초</p>
         </div>
 
@@ -4783,8 +4783,8 @@ git 충돌 방지	index.lock 최대 30초 대기
           <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">Few-Shot Prompting으로 원하는 JSON 출력 정확도 높이기</p>
           <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Few-Shot 예시를 전략적으로 배치하여 LLM이 원하는 JSON 스키마를 안정적으로 출력하도록 유도하는 방법을 실험합니다.
 
-🔎 재검토 의견 (2026.09.23 · 1회차 · 만복)
-판정: 그대로 유지(초기 샘플). 본문이 1문장이고 실험 결과·코드가 없는 게시판 초기 세팅 시기(6/10) 카드다. 3AI가 실제 운영 중인 시스템과 직접 연결된 구현은 아니어서 학습 메모로 읽으면 된다.</p>
+🔎 재검토 의견 (2026.09.23 · 1회차 · 만복·코니·안티)
+판정: 바로보기님 결정으로 그대로 유지. 본문이 1문장이고 실험 결과·코드가 없는 초기 샘플이다(코니 확인: 사실 오류는 없으나 근거도 없음). 안티 실측: D:\AI 안에 전용 구현 코드 0건. 안티·코니 의견은 비공개(RETIRE)였고, 당시 실험 내용이 기록에 없어 지금 디테일을 채우면 안 한 것을 한 것처럼 꾸미게 되므로 보강하지 않는다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 10일 · 프롬프트 테크닉</p>
         </div>
 
