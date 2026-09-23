@@ -1,5 +1,33 @@
 [
     {
+        "title": "Your app isn't secure... here's how to solve it",
+        "url": "https://www.youtube.com/watch?v=dePdvvaNBAA",
+        "channel": "David Ondrej",
+        "summary": "AI 코드 생성이 늘면서 소프트웨어의 심각한 보안 취약점 수가 급증하고 있다는 A16Z 그래프를 인용하며, PR 단위 보안 리뷰와 코드베이스 전체 스캔으로 취약점을 사전에 잡아주는 CodeRabbit을 소개하는 스폰서 영상이다. CodeRabbit은 취약점 발견 시 익스플로잇 가능성까지 추적하고 수정 PR을 자동 생성해준다.",
+        "categories": [
+            "보안",
+            "코드리뷰 자동화",
+            "스폰서십/광고",
+            "개발 도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 코드 생성 증가가 고위험 취약점 급증의 원인 중 하나로 지목됨 — AI로 빠르게 짠 코드일수록 보안 리뷰 자동화 필요성이 커짐"
+        ],
+        "learning_related": [
+            "CodeRabbit: PR 단위 보안 리뷰 + 예약/온디맨드 전체 코드베이스 스캔",
+            "단일 파일이 아닌 여러 파일에 걸친 취약점 경로(exploit path)까지 추적해 실제 악용 가능성 판단",
+            "취약점 발견 시 수정 제안 PR을 자동 생성 → 리뷰·머지만 하면 되는 워크플로우"
+        ],
+        "key_insights": [
+            "보안 검증을 별도 프로세스가 아니라 기존 PR/머지 워크플로우 안에 통합하는 것이 핵심 제안",
+            "AI 코딩 도구 확산으로 코드 생산 속도는 빨라졌지만 보안 리스크도 비례해 커지고 있음을 시사"
+        ],
+        "memo": "📋 뿌리체계: ⑥인프라 — 08_security_leak_scanner처럼 커밋/배포 전 보안 스캔 도구 운용 중, CodeRabbit류 PR 보안 리뷰 도구는 비교 참고용, ⑤자동화 — PR 자동 리뷰 + 자동 수정 PR 생성은 자동화 파이프라인 설계 시 참고할 패턴",
+        "timestamp": "2026-09-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/dePdvvaNBAA/hqdefault.jpg"
+    },
+    {
         "title": "This Free Tool Turns Your Browser Into a Spy Satellite",
         "url": "https://www.youtube.com/watch?v=f1-sphdBqJY",
         "channel": "The Next New Thing",
