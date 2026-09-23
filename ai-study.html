@@ -4375,7 +4375,10 @@ CLAUDE.md(전역 지시사항) + REF_continue.md + 프로젝트 목록
 💡 배운 점 / 교훈
 1. &quot;서버리스&quot;가 항상 &quot;브릿지 없음&quot;은 아님 — Firebase가 완벽한 BaaS 브릿지
 2. 컨텍스트가 곧 인격 — CLAUDE.md 주입으로 클라우드 Claude도 만복이처럼 동작
-3. Windows 한국어 환경의 인코딩 함정은 여러 레이어에 숨어있음</p>
+3. Windows 한국어 환경의 인코딩 함정은 여러 레이어에 숨어있음
+
+🔎 재검토 의견 (2026.09.24 · 3회차 · 만복)
+판정: 그대로 유지, 이력 카드로 읽을 것. 이 카드가 설명한 Firebase 릴레이 + desktop_daemon 구조는 현재 확인되지 않는다 - 프로젝트 폴더(260622_1_Remote_claude)가 없고 desktop_daemon 실행 프로세스도 없으며 D:\AI 3단계 깊이까지 desktop_daemon.py를 찾지 못했다. 지금 폰↔데스크탑 연결은 실시간 채팅 허브(8765)와 Render 동기화 데몬, Orca 모바일 세션이 대체했다. 이 카드에서 남은 재사용 가치는 '온라인이면 릴레이, 오프라인이면 직접 호출 폴백'이라는 분기 패턴이다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.06.22 · Flutter · Firebase · Claude API · Python</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
@@ -4423,7 +4426,10 @@ GitHub Actions로 14분마다 자동 ping, 상시 웜업 유지.
 💡 배운 점
 1. 같은 생태계 API(Gemini→YouTube)로 IP 차단 우회 가능
 2. FastAPI + Flutter 연동 시 camelCase/snake_case 불일치 반드시 확인
-3. 타임아웃은 클라이언트(Dio)와 서버(Gemini) 양쪽 모두 설정해야 함</p>
+3. 타임아웃은 클라이언트(Dio)와 서버(Gemini) 양쪽 모두 설정해야 함
+
+🔎 재검토 의견 (2026.09.24 · 3회차 · 만복)
+판정: KEEP + 운영 결함 발견. 이 카드의 Render 배포본(multimedia-summary.onrender.com)은 살아 있다(health 200, 첫 응답은 콜드스타트로 느림). 그러나 카드가 자랑한 콜드스타트 방지용 GitHub Actions(Render Keep-Alive, 14분마다)는 2026-09-12 이후 실행되지 않는다 - 저장소에 2026-07-14 이후 커밋이 없어 GitHub가 60일 비활동으로 워크플로우를 자동 비활성화(disabled_inactivity)했다. 같은 위험이 43번 인프라 GitHub Actions 감시 기획안에도 있다(코니 딥서치 지적과 일치). 세컨드브레인 백엔드는 이 방식 대신 로컬 render_sync_daemon 핑으로 운영 중이다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.06.21 · Flutter · Gemini · Claude · FastAPI · Render</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
@@ -4480,7 +4486,10 @@ C(SSD)가 D(HDD)보다 빠름 → 가상 메모리는 반드시 SSD에
 1. RAM 부족이 근본 원인 — 소프트웨어 최적화는 보조 수단, 근본은 RAM 증설(8→16GB)
 2. 심볼릭 링크로 경로 투명 이전 — 재설치 없이 드라이브 간 이동 가능
 3. 진단 먼저, 조치 나중 — 드라이브 타입(SSD/HDD) 확인 없이 가상 메모리 이전했으면 역효과
-4. 환경변수 = 개발 환경 설계 — 한 번 설정해두면 모든 도구가 자동으로 D 사용</p>
+4. 환경변수 = 개발 환경 설계 — 한 번 설정해두면 모든 도구가 자동으로 D 사용
+
+🔎 재검토 의견 (2026.09.24 · 3회차 · 만복)
+판정: OPERATE(유지 중) + 편입 제안. 카드의 핵심 결과가 지금도 살아 있다 - C:\hb는 D:\hb로 가는 Junction이고 파이썬 실행 경로로 매일 쓰이고 있다. 달라진 점: 이 카드 시점의 RAM 8GB는 현재 15.7GB로 증설돼 있고, 가상 메모리는 C: 12GB 설정이 유지되지만 D: 페이지파일도 약 21GB가 함께 남아 있다(카드의 'D→C 이전'과 다름). 뿌리체계 반영 제안: 이 절차(시작 프로그램 정리·D 드라이브 이전·Junction·환경변수 전역 선언)를 새 PC나 재설치 때 쓰는 환경 셋업 체크리스트로 Global_Define에 문서화하면 재사용된다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.06.21 · Windows 최적화 · 개발환경 · 심볼릭링크 · 가상메모리</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
@@ -4559,7 +4568,9 @@ YouTube URL
 ④ 앱 완성 후 포스팅 업데이트 예정
 
 🔎 재검토 의견 (2026.09.24 · 2회차 · 만복)
-판정: 그대로 유지, 이력 카드로 읽을 것. 이 카드가 설명한 Railway 배포 API(multimediasummary-production-55d7.up.railway.app)는 현재 'Application not found'(404)로 더 이상 존재하지 않고, 프로젝트 기록은 2026-06-21 이후 갱신이 없다(제목의 '진행중' 상태로 멈춤). 지금 멀티미디어 게시판 자료는 25_auto_pobbagi와 NotebookLM 경로가 대체해 계속 갱신 중이다. 이 카드에서 남은 재사용 가치는 YouTube 자막 추출이 클라우드 IP에서 차단되는 문제와 youtube_transcript_api 버전 교훈이다.</p>
+판정: 그대로 유지, 이력 카드로 읽을 것. 이 카드가 설명한 Railway 배포 API(multimediasummary-production-55d7.up.railway.app)는 현재 'Application not found'(404)로 더 이상 존재하지 않고, 프로젝트 기록은 2026-06-21 이후 갱신이 없다(제목의 '진행중' 상태로 멈춤). 지금 멀티미디어 게시판 자료는 25_auto_pobbagi와 NotebookLM 경로가 대체해 계속 갱신 중이다. 이 카드에서 남은 재사용 가치는 YouTube 자막 추출이 클라우드 IP에서 차단되는 문제와 youtube_transcript_api 버전 교훈이다.
+
+정정(2026.09.24 · 3회차): 위 판정에서 Railway 배포본이 사라졌다고 했으나, 후속 Render 배포본(multimedia-summary.onrender.com, 카드 20260621-2)은 살아 있다(health 200). 앱이 완전히 없어진 것이 아니라 배포처가 Railway에서 Render로 옮겨진 것이다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.06.20 · Claude API · FastAPI · Railway · Flutter</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Web Dev" data-id="20260620-2" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
