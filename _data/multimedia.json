@@ -1,5 +1,36 @@
 [
     {
+        "title": "MIT Just Found a Hard Limit in LLM Scaling, and Money Won't Fix It",
+        "url": "https://www.youtube.com/watch?v=p68buUb01oQ",
+        "channel": "Cloud Codes",
+        "summary": "MIT 연구팀이 2025년 5월 발표한 논문을 통해 LLM이 파라미터 수보다 훨씬 많은 개념을 표현해야 하는 '중첩(superposition)' 현상 때문에 할루시네이션이 발생하는 구조적 이유를 수학적으로 설명한다. 모델을 키우면 오차(loss)가 줄어들긴 하지만 그 개선 폭이 갈수록 줄어드는 예측 가능한 곡선을 따르며, 이는 단순히 모델 크기를 키우는 것이 할루시네이션의 근본 해법이 아님을 시사한다.",
+        "categories": [
+            "AI/LLM",
+            "머신러닝 이론",
+            "스케일링 법칙",
+            "할루시네이션"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "모델이 가진 벡터 차원(너비)보다 표현해야 할 개념(feature) 수가 훨씬 많아 여러 개념이 같은 방향을 공유하는 '중첩(superposition)'이 할루시네이션의 구조적 원인",
+            "모델 크기를 키우는 것은 loss를 줄이지만 체감수익 감소 곡선을 따름 — '더 큰 모델 = 무조건 해결'이라는 접근의 한계를 수치로 보여줌",
+            "모델 크기(scale) 외에 다른 레버(예: 폭/width 구조 개선, 아키텍처 변화)가 할루시네이션 완화에 더 효율적일 수 있음을 시사"
+        ],
+        "learning_related": [
+            "스케일링 법칙(scaling law)은 2020년부터 관찰적 경험칙이었으나, 이번 MIT 논문이 '왜' 그런 곡선이 나오는지에 대한 이론적 설명(superposition)을 제공",
+            "loss(모델 예측의 평균적 오류)와 할루시네이션은 직접적으로 동일한 개념이 아니며, 이 연구는 loss에 대한 것이지 할루시네이션 자체나 지능의 하드캡을 증명한 것은 아님",
+            "벡터 공간의 '방향(direction) 수 = 모델의 너비(width)'이며, 소형 모델은 수천 개 방향에 수만 개 이상의 개념을 욱여넣어야 하는 구조적 제약이 있음"
+        ],
+        "key_insights": [
+            "할루시네이션은 단순 버그가 아니라 제한된 벡터 공간에 과도하게 많은 개념을 압축 저장하는 '중첩' 구조에서 비롯된 근본적 노이즈 바닥(floor)",
+            "모델을 크게 만들수록 이 노이즈 바닥은 낮아지지만, 그 개선 폭은 예측 가능한 수학적 곡선을 따라 점점 작아짐 — '돈으로 해결 안 되는 한계'",
+            "따라서 순수 스케일업 외에 모델 폭 설계나 다른 아키텍처적 레버를 함께 고려하는 것이 효율적"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 스케일링/할루시네이션 이론 학습 자료로 활용 가능, ③지식관리 — AI 기술 트렌드 아카이빙 대상",
+        "timestamp": "2026-09-23T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/p68buUb01oQ/hqdefault.jpg"
+    },
+    {
         "title": "Better than Jev - because you can build with it",
         "url": "https://www.youtube.com/watch?v=tsWOiibaaxA",
         "channel": "The Next New Thing",
