@@ -4556,7 +4556,10 @@ YouTube URL
    - flutter build apk → Android 기기 설치 테스트
    - Railway API URL 연동 확인
 
-④ 앱 완성 후 포스팅 업데이트 예정</p>
+④ 앱 완성 후 포스팅 업데이트 예정
+
+🔎 재검토 의견 (2026.09.24 · 2회차 · 만복)
+판정: 그대로 유지, 이력 카드로 읽을 것. 이 카드가 설명한 Railway 배포 API(multimediasummary-production-55d7.up.railway.app)는 현재 'Application not found'(404)로 더 이상 존재하지 않고, 프로젝트 기록은 2026-06-21 이후 갱신이 없다(제목의 '진행중' 상태로 멈춤). 지금 멀티미디어 게시판 자료는 25_auto_pobbagi와 NotebookLM 경로가 대체해 계속 갱신 중이다. 이 카드에서 남은 재사용 가치는 YouTube 자막 추출이 클라우드 IP에서 차단되는 문제와 youtube_transcript_api 버전 교훈이다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.06.20 · Claude API · FastAPI · Railway · Flutter</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="Web Dev" data-id="20260620-2" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
@@ -4639,7 +4642,10 @@ const cards = [...doc.querySelectorAll('#studyList .study-card')].slice(0, 3);
 2. HTML 요소 구조가 바뀌면 그 요소를 참조하는 모든 JS 코드를 같이 확인해야 함
    (이번에 &lt;a&gt; → &lt;p&gt; 변경 후 Home 탭 선택자가 깨진 사례)
 3. CSS 트런케이션: line-clamp는 white-space와 충돌, pre-wrap이 필요한 경우 max-height+mask 사용
-4. PAT는 절대 코드/채팅에 포함 금지 — 노출 즉시 GitHub에서 Revoke 후 재발급</p>
+4. PAT는 절대 코드/채팅에 포함 금지 — 노출 즉시 GitHub에서 Revoke 후 재발급
+
+🔎 재검토 의견 (2026.09.24 · 2회차 · 만복)
+판정: KEEP(운영 중). 이 카드가 설명한 정적 사이트 구조(Logs/AI Study 탭, GitHub Pages)는 지금 이 게시판 자체로 살아 있고, 카드 수정·추가도 그대로 동작한다. 참고로 9/16과 9/22에 Jekyll 빌드 실패 메일이 있었고 9/23에 .nojekyll을 추가해 예방했다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 20일 · Web Dev, GitHub API, Static Site</p>
         </div>
 
@@ -4745,7 +4751,10 @@ git 충돌 방지	index.lock 최대 30초 대기
 등록부      → D:\AI\.cowork-projects-registry.json
 전역 설정   → D:\AI\.cowork-global.json
 워처 스크립트 → D:\AI\Global_Define\master_watch.py
-          </p>
+          
+
+🔎 재검토 의견 (2026.09.24 · 2회차 · 만복)
+판정: OPERATE(운영 중) + 정정. 이 카드의 자동 동기화(master_watch → 12초 후 git push → GitHub Pages)는 지금도 실제로 동작한다(2026-09-23 23:24·23:58 자동 동기화 커밋으로 확인). 카드와 달라진 점: ① 프로젝트 폴더명이 Diary_for_Barobogi에서 Daily_for_Barobogi로 바뀌었다 ② 부팅 시 시작은 .vbs가 아니라 만복_supervisor 작업이 master_watch를 감시·재시작한다. 운영 문제 1건을 오늘 고쳤다: 같은 파일(latest_snapshot.json)의 변경 감지가 187만 번 로그에 찍혀 global_watcher.log가 366MB까지 커졌다 → 그 파일을 무시 목록에 추가하고 로그를 20MB×3으로 순환시켰다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 20일 · Cowork-CLI-Sync, master_watch, auto-deploy, watchdog</p>
         </div>
 
