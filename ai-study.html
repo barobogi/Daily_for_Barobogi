@@ -278,6 +278,39 @@
       </div>
       <div id="studyList" style="border-color: var(--border);">
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
+             data-category="AI Pipeline"
+             data-id="20260924-1"
+             style="border-top: 1px solid var(--border);"
+             onclick="openStudyDetailModal(this)">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-[10px] font-semibold tracking-wider uppercase" style="color: var(--accent);">AI Pipeline</span>
+            <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
+          </div>
+          <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">뽀개기4번 — PLAUD 대체 1-Tap 음성 녹음: 녹음·전송·수신까지 구현, 음성→텍스트 전사는 다음 단계</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">한 줄 요약
+고가의 외산 음성 녹음기(PLAUD)를 스마트폰 앱 안의 버튼 하나(1-Tap)로 대체하려는 시도다. 앱에서 녹음하고 서버로 보내고 서버가 받아서 뽀개기 파이프라인을 깨우는 1단계까지는 구현됐고, 녹음한 말을 글자로 바꾸는 단계(STT)는 아직 연결 전이다.
+
+🎯 기획 의도
+회의나 아이디어를 바로보기님이 말로 남기면 3AI가 자동으로 정리(딥서치, 뿌리체계 편입안, 확장안, AI 학습안 4대 규격)해서 세컨드 브레인 5번째 탭에 올려주는 흐름을 만든다. 별도 하드웨어와 구독료 없이 이미 쓰는 앱 하나로 끝내는 게 목표다.
+
+🗂️ 구현된 것 (코드로 확인)
+- 앱 상단 마이크 아이콘 → "PLAUD AI 원터치 음성 녹음" 다이얼로그, MediaRecorder로 마이크 수음(MPEG-4/AAC, .m4a) 후 타이머 표시
+- 녹음 종료 시 파일을 base64로 인코딩해 서버(POST /api/v1/audio/record_ingest)로 전송
+- 서버는 수신 즉시 항목 ID(VOICE_REC_날짜시각)를 만들고 뽀개기 파이프라인을 가동
+
+⚠️ 아직 구현되지 않은 것 / 함정
+1. 음성→텍스트 전사(STT)가 연결돼 있지 않다. 서버는 audio_base64 필드를 받기만 하고 디코딩·전사를 하지 않으며, 앱은 전사문 대신 고정 문구("스마트폰 마이크 음성 수음 레코딩")를 같이 보낸다. 그래서 지금은 실제로 말한 내용이 아니라 이 고정 문구가 뽀개기 파이프라인 입력이 된다.
+2. 초기 사양에 적혔던 "AAC 32kbps 모노로 1시간 약 14MB" 압축은 코드에 설정이 없다(비트레이트·채널 지정 없음). 아직 구현 전이다.
+3. 5번째 탭 데이터는 처음에 Render 클라우드에 배포되지 않아(git 미추적) 집 밖에서는 0건이 보일 수 있었고, 2026-09-24 커밋으로 동기화했다.
+
+🚀 다음 단계
+서버에서 audio_base64를 디코딩해 STT(이미 연동한 Groq Whisper 1순위)로 전사한 텍스트를 뽀개기 파이프라인 입력으로 쓰도록 연결하고, 비트레이트/채널을 지정한다. 그 뒤 실기기에서 실제 음성으로 결과 항목이 생성되는지 확인한다.
+
+💡 배운 점 & 🌱 성장 관점
+"화면 버튼이 있고 서버가 응답한다"와 "말한 내용이 처리된다"는 다른 문장이다. 이번에도 문서 문구("STT를 거쳐 즉시 전환")가 실제 코드(전사 없음)보다 앞서 있었고, 코드를 열어본 뒤에야 격차가 드러났다. 바로보기님이 앱에서 직접 써보시며 확인하실 1단계(녹음-전송-수신) 위에 STT 한 단계를 얹으면 PLAUD 대체 목표에 실제로 도달한다 - 이미 만들어둔 Groq STT 경로를 재사용할 수 있다는 점이 이 뽀개기가 3AI 뿌리체계에 남기는 연결고리다.</p>
+          <p class="text-xs" style="color: var(--text-tertiary);">2026.09.24 · PLAUD대체, 음성녹음, STT, 세컨드브레인, 뽀개기</p>
+        </div>
+        <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
              data-category="App Release"
              data-id="20260923-2"
              style="border-top: 1px solid var(--border);"
