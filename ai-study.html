@@ -4222,7 +4222,10 @@ Remote Control은 "현재 VS Code 세션에 연결"이 아니라 "새 Claude Cod
 1. 막히면 우회하고, 우회하다 보면 더 나은 구조가 보인다.
 2. 이미 있는 것(daemon + Firebase)을 먼저 활용하는 게 최선.
 3. "상주"의 핵심은 AI가 아니라 daemon이다.
-4. 사소한 호기심 하나가 기능 하나를 만들었다.</p>
+4. 사소한 호기심 하나가 기능 하나를 만들었다.
+
+🔎 재검토 의견 (2026.09.24 · 4회차 · 만복)
+판정: KEEP + 뿌리 연결. 이 카드의 결론('채팅방 하나에 모두 상주시키면?')이 오늘의 3AI 실시간 채팅 허브(포트 8765)로 실현됐다 - 이 게시판의 출발점 카드로 읽는다. 카드가 짚은 한계(Remote Control은 새 세션이라 이전 맥락이 없다)는 지금도 그대로 나타난다: 모바일 Orca 세션(2만복)은 새 세션이라 데스크탑 만복의 맥락을 모른다. 이를 보완하려고 AGENTS.md에 '만복 세션 시작 시 채팅 공백 자동 스캔' 규정을 두었다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.06.25 · #ClaudeCode #RemoteControl #Firebase #daemon</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
@@ -4291,7 +4294,10 @@ AI 설명 요청 (공부방 explain_requests)
 1. 이론상 최고 절감(배치+캐싱)보다 실제 구조에 맞는 것을 골라야 한다.
 2. 프롬프트 캐싱은 정적/동적 부분을 반드시 분리해야 효과가 난다.
 3. 모델 선택이 가장 간단하고 즉각적인 절감 방법이다.
-   — Haiku는 구조화된 JSON 생성 같은 단순 작업엔 Sonnet과 품질 차이가 거의 없다.</p>
+   — Haiku는 구조화된 JSON 생성 같은 단순 작업엔 Sonnet과 품질 차이가 거의 없다.
+
+🔎 재검토 의견 (2026.09.24 · 4회차 · 만복)
+판정: KEEP(교훈 카드). 적용 대상으로 든 desktop_daemon 캐싱과 Haiku 전환 대상 기능은 지금 존재하지 않고, 현재 정책은 'API 회피 우선(비용 0원)'이라 이 카드의 직접 적용처는 없다. 그러나 '시스템 프롬프트에 현재 시각을 넣으면 캐시가 매번 무효화된다 - 캐시되는 블록과 매번 바뀌는 블록을 분리하라'는 교훈은 앞으로 Claude API를 쓰는 어떤 앱에도 그대로 적용된다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026-06-24 · #ClaudeAPI #프롬프트캐싱 #Haiku #비용절감</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
@@ -4344,7 +4350,10 @@ git pull 없이 push 위험 / Claude Tool Use 패턴 / 계좌 ID 참조 무결�
 💡 배운 점
 1. 공부 도구를 직접 만드는 것 자체가 최고의 학습이다.
 2. 기존 프로젝트(stock-dashboard, remote-claude)의 패턴을 재사용하니 속도가 붙는다.
-3. "즉흥 발견"을 기록할 공간이 없으면 귀한 배움이 사라진다.</p>
+3. "즉흥 발견"을 기록할 공간이 없으면 귀한 배움이 사라진다.
+
+🔎 재검토 의견 (2026.09.24 · 4회차 · 만복)
+판정: KEEP + 운영 확인 예정. 공부방 사이트(barobogi.github.io/Study_Dashboard/)는 지금도 열린다(HTTP 200). 다만 카드의 Claude 퀴즈·AI 설명 탭은 Firebase 요청을 받아 처리하던 desktop_daemon에 의존했는데 그 데몬이 지금은 없어서 두 탭은 동작하지 않을 가능성이 크다(브라우저 실사용 확인은 아직 안 함). 개념노트 자동 보충(concept_booster.py)은 master_watch가 매일 21:00에 실행하도록 등록돼 있으나, 로그가 오늘 새벽 순환돼 지난밤 실행 증거를 확인하지 못했다 → 오늘 21:00 실행 로그로 확인한다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026-06-23 · #공부방 #Firebase #ClaudeAI #Chart.js</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
