@@ -1,5 +1,37 @@
 [
     {
+        "title": "I Connected Claude Opus 5.5 to Higgsfield. It Became a Creative Studio.",
+        "url": "https://www.youtube.com/watch?v=KRW6Mgu7mEU",
+        "channel": "Cloud Codes",
+        "summary": "Claude Opus 5.5에 Higgsfield를 연결해 컴팩트 키보드 제품 이미지 생성부터 반응형 웹사이트 제작까지 이어지는 창작 워크플로우를 시연하는 영상. Claude가 지시와 웹사이트 코드를 처리하고 Higgsfield가 실제 이미지/영상 생성을 담당하는 역할 분담 구조를 보여준다.",
+        "categories": [
+            "AI 도구 연동",
+            "생성형 AI",
+            "웹 개발",
+            "제품 디자인",
+            "스폰서 영상"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Claude와 Higgsfield 연동 시 Claude는 지시 처리+코드 생성, Higgsfield는 실제 이미지/영상 생성을 담당하는 분업 구조",
+            "프롬프트를 한 번에 완성하지 않고 이미지 생성 후 세부사항(키캡 문구 등)을 점진적으로 수정하는 반복적 워크플로우가 효과적",
+            "여러 번 생성 요청 시 Claude가 비용(loop estimate) 변경을 실시간으로 알려주므로 최초 견적만 믿지 말고 현재 견적을 계속 확인해야 함",
+            "생성된 이미지의 세부 요소(작은 글자 등)는 실제 제품과 대조 검증이 필요하다고 Claude가 스스로 지적"
+        ],
+        "learning_related": [
+            "AI 이미지 생성 → 반응형 웹사이트 제작까지 하나의 대화 세션 내에서 연결하는 파이프라인 사례",
+            "제품 이미지 생성 시 카메라 앵글, 여백(헤드라인 공간) 등 구체적 스펙을 프롬프트에 명시하는 것이 후속 웹 디자인 작업의 일관성을 높임"
+        ],
+        "key_insights": [
+            "Claude(지시/코드)+Higgsfield(미디어 생성)의 역할 분리 연동 구조는 3AI 협업 체계(만복=기획, 안티=실행)와 유사한 패턴",
+            "생성형 AI 비용을 첫 견적이 아닌 매 단계 현재 견적으로 재확인해야 한다는 지적은 유료 API 사전 보고 원칙과 맥락이 닿음",
+            "AI가 생성한 세부 디테일(문구 등)은 실사용 전 사람이 직접 대조 검증해야 한다는 점은 외부 시스템 완료 증거 원칙과 유사한 교훈"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Claude+Higgsfield 연동으로 이미지 생성부터 웹사이트 코드까지 이어지는 자동화 파이프라인 참고 가능, ⑨창작 — 제품 이미지/영상 생성 및 웹사이트 제작 워크플로우, 향후 3AI 콘텐츠 제작(썸네일, 배경 이미지 등)에 응용 가능",
+        "timestamp": "2026-09-24T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/KRW6Mgu7mEU/hqdefault.jpg"
+    },
+    {
         "title": "Who’s Really Funding the Fear of AI?",
         "url": "https://www.youtube.com/watch?v=Di61maujqUA",
         "channel": "Cloud Codes",
