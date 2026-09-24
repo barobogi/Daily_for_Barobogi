@@ -1,5 +1,33 @@
 [
     {
+        "title": "Google’s Phones Get Android First. Everyone Else Can Wait.",
+        "url": "https://www.youtube.com/watch?v=0BBWvoqDxeA",
+        "channel": "Cloud Codes",
+        "summary": "구글이 2026년 9월 15일 안드로이드 17 QPR1을 픽셀 폰에 배포하면서 새로운 개발자 API(android.hardware.hid 등)와 시스템 16개 부분의 변경사항을 소스 코드 공개 없이 픽셀 전용으로 먼저 내놓았다. 이는 안드로이드 개발이 비공개 브랜치로 전환되고 QPR1/QPR3 업데이트가 픽셀 전용으로 분리된 흐름의 연장선으로, GrapheneOS에 따르면 2011년 허니콤 이후 처음으로 소스 코드 없는 개발자 API 배포 사례다. 결과적으로 앱 개발자들은 몇 달간 픽셀 기기에서만 작동하는 기능을 대상으로 개발하게 되어 '한 번 작성하면 모든 안드로이드 기기에서 동일하게 작동한다'는 원칙이 흔들리고 있다.",
+        "categories": [
+            "안드로이드",
+            "오픈소스",
+            "구글",
+            "픽셀",
+            "모바일OS"
+        ],
+        "stock_related": [],
+        "ai_related": [],
+        "learning_related": [
+            "AOSP(Android Open Source Program)는 모든 안드로이드 버전의 마스터 소스 코드 베이스이며, 제조사/커스텀 ROM 팀이 여기서 파생 개발함",
+            "구글은 작년 3월부터 안드로이드 개발을 비공개 브랜치로 전환했고, 안드로이드16부터 QPR1/QPR3 업데이트를 픽셀 전용으로 분리함",
+            "2026-09-15 안드로이드17 QPR1에서 소스 공개 없이 신규 개발자 API(android.hardware.hid 포함)가 픽셀 전용으로 배포된 것은 2011년 허니콤 이후 첫 사례"
+        ],
+        "key_insights": [
+            "안드로이드 오픈소스 정책이 점진적으로 축소되는 패턴(비공개 개발 전환 → QPR 픽셀 전용 분리 → 소스 없는 API 배포)이 확인됨",
+            "GrapheneOS 등 커스텀 ROM/비픽셀 기기 사용자에게는 신규 API 기능이 몇 달간 접근 불가능해지는 실질적 파편화 리스크 발생",
+            "'안드로이드는 오픈소스'라는 전제가 완전히 깨진 것은 아니지만, 픽셀과 비픽셀 기기 간 기능 격차가 구조적으로 커지고 있음"
+        ],
+        "memo": "📋 뿌리체계: 미분류",
+        "timestamp": "2026-09-24T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/0BBWvoqDxeA/hqdefault.jpg"
+    },
+    {
         "title": "이제 쓴 만큼만 낸다: Higgsfield API vs Ultra 구독 비교",
         "url": "https://www.youtube.com/watch?v=TSpD9tbrCWM",
         "channel": "techyoo",
