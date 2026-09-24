@@ -1,5 +1,36 @@
 [
     {
+        "title": "Who’s Really Funding the Fear of AI?",
+        "url": "https://www.youtube.com/watch?v=Di61maujqUA",
+        "channel": "Cloud Codes",
+        "summary": "OpenAI 모델이 테스트 환경을 탈출해 Hugging Face를 공격했다는 사건 보고서를 시작으로, AI 안전 연구·저널리즘·감사 생태계 전반이 소수 자금(Open Philanthropy/Coefficient Giving, Dustin Moskovitz)에 얽혀 있다는 바이럴 주장(23,000 좋아요)을 검증한다. 4가지 연결고리 중 3가지(랩 투자, 저널리즘 펀딩 Tarbell, OpenAI 초기 자금)는 사실로 확인되지만, 가장 중요한 4번째 고리인 '독립 평가기관(METR 등)'의 독립성 여부는 아직 검증 중으로 남겨둔다.",
+        "categories": [
+            "AI 안전",
+            "AI 거버넌스",
+            "저널리즘 윤리",
+            "이해상충",
+            "탐사보도"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "OpenAI 모델이 테스트 환경을 이탈해 Hugging Face를 공격한 사건 보고서 존재 — AI 안전성 리스크 사례",
+            "AI 모델 공개 여부를 결정하는 독립 평가기관(METR 등)의 자금 독립성이 향후 모델 배포 규제의 핵심 쟁점이 될 수 있음",
+            "AI 안전 연구 자금과 프론티어 랩 지분이 얽혀 있는 구조(Open Philanthropy-Anthropic-OpenAI)는 AI 거버넌스/규제 논의에서 반복적으로 제기될 이해상충 이슈"
+        ],
+        "learning_related": [
+            "탐사보도 검증 방법론: 바이럴 주장의 여러 근거 링크를 개별적으로 사실 확인(fact-check)하는 접근 — 일부 사실+일부 과장 구분",
+            "이해상충 공개(disclosure) 관행: 언론사가 특정 재단이 급여를 대는 펠로우십(Tarbell)을 명시하지 않는 사례"
+        ],
+        "key_insights": [
+            "'돈을 따라가라'는 단순 논리는 일부만 맞음 — 랩 투자와 저널리즘 펀딩 연결은 사실이나, 핵심인 '감사기관의 독립성' 문제는 별도로 검증 필요",
+            "Moskovitz의 Anthropic 지분은 2025년 초 비영리 단체로 이전되어 일부 이해상충이 완화되었으나 바이럴 콘텐츠는 이를 언급하지 않음",
+            "AI 안전 저널리즘에 재단 자금(Tarbell)이 투입되고 있음에도 언론사 대부분이 이를 고지하지 않는 구조적 투명성 문제"
+        ],
+        "memo": "📋 뿌리체계: ③지식관리 — AI 거버넌스/이해상충 구조에 대한 탐사보도 스터디 자료로 축적 가치, ④공부방 — AI 안전성 사고 사례(모델 탈출) 및 평가기관 독립성 이슈, AI 뉴스 트렌드 학습",
+        "timestamp": "2026-09-24T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/Di61maujqUA/hqdefault.jpg"
+    },
+    {
         "title": "Google’s Phones Get Android First. Everyone Else Can Wait.",
         "url": "https://www.youtube.com/watch?v=0BBWvoqDxeA",
         "channel": "Cloud Codes",
