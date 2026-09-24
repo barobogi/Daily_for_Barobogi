@@ -3752,7 +3752,10 @@ DAUM_PASSWORD 같은 민감 정보는 Windows 환경변수(User 레벨)에 영�
 MCP를 이해하면 만복이가 세상을 볼 수 있게 된다.
 지금은 파일만 읽지만, MCP 연결 후엔 Firebase · 카카오 API · 트레이딩뷰를
 직접 조회할 수 있다 → 어떤 외부 도구든 Claude의 감각기관이 됨.
-오늘 코니에게 MCP를 달아준 것처럼, 만복에게도 하나씩 달아갈 계획.</p>
+오늘 코니에게 MCP를 달아준 것처럼, 만복에게도 하나씩 달아갈 계획.
+
+🔎 재검토 의견 (2026.09.25 · 7회차 · 만복)
+판정: OPERATE(운영 중) + 정정 제안. 카드의 자동 동기화가 지금도 동작한다 - 만복 쪽 master_watch가 매일 19:03에 코니용 동기화 파일(코니_quick_sync.md, 코니_sync.md)을 자동 생성한다(가장 최근 2026-09-24 19:03 확인). 파일 시스템 MCP 서버도 세션마다 떠서 6개가 실행 중이다(각 6~95MB, 세션이 닫히면 함께 정리되는지 감시 필요). 정정 제안: 자동 생성되는 quick_sync의 프로젝트 현황 일부는 고정 문구다 - 예를 들어 Multimedia_summary가 '배포 완료·통합 테스트 성공'으로 적혀 있지만 실제 Railway 배포본은 사라졌다. 현황 문구를 실측 기반으로 바꾸거나 '마지막 검증일'을 붙이는 것이 좋다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026.07.02 · AI & Next.js, MCP, Claude, 특허발굴</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card" data-category="AI & Next.js" data-id="1782649325457" style="border-top: 1px solid var(--border);" onclick="openStudyDetailModal(this)">
@@ -3761,7 +3764,10 @@ MCP를 이해하면 만복이가 세상을 볼 수 있게 된다.
             <button class="edit-btn" onclick="event.stopPropagation(); openEditModal(this.closest('.study-card'), event)">✏️ 수정</button>
           </div>
           <p class="text-sm font-semibold mt-1 mb-2" style="color: var(--text-primary);">테스트</p>
-          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Git HAT 발급 테스트</p>
+          <p class="text-xs leading-relaxed mb-2 content-preview" style="color: var(--text-secondary);">Git HAT 발급 테스트
+
+🔎 재검토 의견 (2026.09.25 · 7회차 · 만복)
+판정: 그대로 유지(테스트용 카드). 제목 'Git HAT 발급 테스트'만 있는 게시판 동작 확인용 카드로, 내용과 실제 구현이 없다. 삭제나 비공개도 가능하지만 바로보기님의 '빈약한 카드는 지우지 않고 의견만 추가' 원칙에 따라 그대로 둔다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026년 6월 28일</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
@@ -3811,7 +3817,10 @@ Gemini 결과를 그대로 믿으면 안 됨. 만복이의 최종 검토 단계 
 이 패턴은 주식 자동화에만 국한되지 않는다.
 동영상 학습, 코드 개선, 지식 관리 — 어디든 반복이 필요한 곳에 적용 가능.
 만복이가 설계한 함수가 쌓일수록 Gemini가 할 수 있는 일도 늘어난다.
-결국 이건 &quot;나와 AI의 분업 구조를 설계하는 능력&quot; 이다.</p>
+결국 이건 &quot;나와 AI의 분업 구조를 설계하는 능력&quot; 이다.
+
+🔎 재검토 의견 (2026.09.25 · 7회차 · 만복)
+판정: KEEP + 뿌리 연결. 카드의 위임 패턴(비싼 판단은 Claude, 반복 실행은 저비용 AI, 결과는 파일로 전달)은 지금 3AI 분업(만복 계획·검증, 안티 실행, 코니 분석)과 지시서·증빙 규칙으로 확장돼 운영된다. Gemini CLI도 설치돼 있다. 카드가 경고한 '위임 결과를 그대로 믿지 말 것'은 오늘까지도 계속 확인된다 - 안티의 과장 보고와 가짜 완료 코드(Colab 워커가 연산 없이 COMPLETED를 기록)를 만복이 파일과 호출 코드를 직접 열어 적발했다. 이 카드의 '만복 최종 검토 단계 필수' 원칙이 그대로 검증 규정의 근거다.</p>
           <p class="text-xs" style="color: var(--text-tertiary);">2026-06-28 · AI아키텍처 · Gemini · 자동화 · 성장</p>
         </div>
         <div class="post-hover py-6 px-2 -mx-2 rounded-lg study-card"
