@@ -479,66 +479,17 @@
             }
         }
 
-        // Auto-poll history every 3 seconds for live stream sync
+        // Init & Host detection
+        const isStaticHost = window.location.hostname.includes("github.io") || window.location.protocol === "file:";
+        
         loadHistory();
-        setInterval(loadHistory, 3000);
+        setInterval(loadHistory, 3000); // Single 3-second auto-sync loop
 
-        // WebSocket Connection
-        let socket;
-        function connectWebSocket() {
-            const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-            socket = new WebSocket(`${protocol}//${window.location.host}/ws/human`);
-
-            socket.onopen = () => {
-                console.log("[WebSocket] Connected to 3AI Live Hub.");
-            };
-
-            socket.onmessage = (event) => {
-                const data = JSON.parse(event.data);
-                if (data.event === "new_message") {
-                    if (!renderedMsgIds.has(data.msg_id)) {
-                        renderedMsgIds.add(data.msg_id);
-                        appendMessage(data.sender, data.content, new Date().toISOString());
-                    }
-                } else if (data.event === "debate_started") {
-                    btnLaunch.disabled = true;
-                    btnLaunch.innerText = "⏳ 3AI 실시간 토론 진행 중...";
-                } else if (data.event === "debate_finished") {
-                    btnLaunch.disabled = false;
-                    btnLaunch.innerText = "🚀 3AI 실시간 토론 시작";
-                }
-            };
-
-            socket.onclose = () => {
-                console.log("[WebSocket] Reconnecting in 2s...");
-                setTimeout(connectWebSocket, 2000);
-            };
+        if (!isStaticHost) {
+            connectWebSocket();
+        } else {
+            console.log("[Chat UI] Running in static host mode (snapshot polling enabled, WebSocket skipped).");
         }
-
-        async function launchDebate() {
-            const topic = topicInput.value.trim();
-            if (!topic) return;
-
-            btnLaunch.disabled = true;
-            btnLaunch.innerText = "⏳ 3AI 실시간 토론 진행 중...";
-
-            try {
-                await fetch("/api/start_debate", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ topic: topic })
-                });
-            } catch (e) {
-                console.error("Error launching debate:", e);
-                btnLaunch.disabled = false;
-                btnLaunch.innerText = "🚀 3AI 실시간 토론 시작";
-            }
-        }
-
-        // Init
-        loadHistory();
-        connectWebSocket();
-        setInterval(loadHistory, 2000); // Auto-sync with DB every 2 seconds
     </script>
 </body>
 </html>
