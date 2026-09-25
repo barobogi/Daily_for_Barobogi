@@ -443,23 +443,45 @@
 
         const renderedMsgIds = new Set();
 
-        // Load History with Deduplication & Auto-Sync
+        // Load History with Deduplication & Auto-Sync (Backend API + GitHub Pages Static Fallback)
         async function loadHistory() {
+            let data = null;
+            // 1. Try backend API first
             try {
                 const res = await fetch("/api/history?limit=100");
-                const data = await res.json();
-                if (data.messages && data.messages.length > 0) {
-                    data.messages.forEach(m => {
-                        if (!renderedMsgIds.has(m.msg_id)) {
-                            renderedMsgIds.add(m.msg_id);
-                            appendMessage(m.sender, m.content, m.created_at);
-                        }
-                    });
+                if (res.ok) {
+                    data = await res.json();
                 }
             } catch (e) {
-                console.error("Failed to load history:", e);
+                // Ignore API error on static host
+            }
+
+            // 2. Fallback to static snapshot JSON on GitHub Pages
+            if (!data || !data.messages) {
+                try {
+                    const snapRes = await fetch("./latest_snapshot.json?t=" + Date.now());
+                    if (snapRes.ok) {
+                        data = await snapRes.json();
+                    }
+                } catch (e) {
+                    console.error("Static snapshot load failed:", e);
+                }
+            }
+
+            if (data && data.messages && data.messages.length > 0) {
+                data.messages.forEach(m => {
+                    const msgKey = m.msg_id || (m.id ? `id_${m.id}` : null);
+                    if (msgKey && !renderedMsgIds.has(msgKey)) {
+                        renderedMsgIds.add(msgKey);
+                        appendMessage(m.sender, m.content, m.created_at);
+                    }
+                });
             }
         }
+
+        // Auto-poll history every 3 seconds for live stream sync
+        loadHistory();
+        setInterval(loadHistory, 3000);
 
         // WebSocket Connection
         let socket;
