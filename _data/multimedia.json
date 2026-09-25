@@ -1,5 +1,35 @@
 [
     {
+        "title": "Google Just Gave Your Coding Agent a Real Phone.",
+        "url": "https://www.youtube.com/watch?v=PTpQSemrMtg",
+        "channel": "Cloud Codes",
+        "summary": "Google이 공개한 오픈소스 프로젝트 'Artemis'(Apache 2.0)를 소개하는 영상으로, 자연어 지시를 실제 Android 기기 조작(탭, 스크린샷, 로그 캡처)으로 변환해주는 MCP 서버를 제공한다. Claude Code, Cursor, Windsurf, Codex, Antigravity 등 AI 코딩 어시스턴트가 mobile_run_task, mobile_get_device_state 등의 도구를 통해 실제 폰/에뮬레이터를 조작하고 증거(스크린샷·로그)를 남길 수 있게 한다. 발표자는 직접 설치·실행은 하지 않았고 Google 공식 문서와 벤치마크 논문만 근거로 설명한다고 명시함.",
+        "categories": [
+            "AI 코딩 에이전트",
+            "Android 자동화",
+            "MCP",
+            "Google 오픈소스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "AI 코딩 어시스턴트가 '완료했다'고 보고해도 실제 UI 동작 검증 없이 이루어지는 문제(로그인 버튼이 키보드에 가려진 채 방치되는 사례)를 지적",
+            "Artemis MCP 서버 하나로 동일한 실물 폰을 Claude Code, Cursor, Windsurf, Codex, Antigravity 등 여러 에이전트에 연결 가능 — MCP를 'USB-C 포트'에 비유",
+            "mobile_run_task/mobile_manage_task/mobile_get_device_state/mobile_inspect_trace/mobile_diagnose 5개 도구로 자연어 지시 → 실제 기기 조작 → 증거 기반 리포트(스크린샷·화면녹화·logcat) 생성 파이프라인 구조"
+        ],
+        "learning_related": [
+            "내부적으로 ADB(exec-out screencap, shell screenrecord), Scrcpy, FFmpeg, Python(uv) 등 기존 Android 표준 도구를 조합해 구현됨",
+            "Artemis Doctor라는 자체 진단 도구로 USB 디버깅 등 설치 환경 문제를 사전 점검"
+        ],
+        "key_insights": [
+            "AI 에이전트의 '완료 보고'를 텍스트 신뢰가 아닌 스크린샷/로그 등 검증 가능한 증거로 대체하려는 시도라는 점에서, 3AI 협업 원칙의 '외부시스템 완료 주장=스크린샷/API 증거 필수' 규칙과 맥락이 정확히 일치함",
+            "MCP 표준을 통해 하나의 자동화 백엔드(실물 폰 제어)를 여러 AI 코딩 툴에 재사용 가능하게 만든 설계 패턴은 향후 자동화 인프라 설계에 참고할 만함",
+            "발표자가 직접 검증하지 않은 내용은 명확히 '검증 안 됨'으로 구분해 전달하는 태도 자체가 Hall 방지 원칙과 유사한 정보 신뢰성 기준"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — Android 기기 자동화(ADB/Scrcpy/FFmpeg 기반)가 앱 개발/QA 파이프라인에 적용 가능, ⑥인프라 — MCP 서버를 통한 AI 어시스턴트-외부 시스템 연결 구조는 barobogi_second_brain 등 자체 MCP/자동화 인프라 설계에 참고 가능, ④공부방 — Google 공식 오픈소스 릴리즈 및 MCP 표준 학습 자료로 활용 가능",
+        "timestamp": "2026-09-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/PTpQSemrMtg/hqdefault.jpg"
+    },
+    {
         "title": "Top Repos + Fame, Traffic & Agents",
         "url": "https://www.youtube.com/watch?v=hlOk-EFUITQ",
         "channel": "The Next New Thing",
