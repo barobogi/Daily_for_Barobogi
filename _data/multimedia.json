@@ -1,5 +1,32 @@
 [
     {
+        "title": "This Skill Gives Your AI Agent a Browser",
+        "url": "https://www.youtube.com/watch?v=qfRMHqh7tNI",
+        "channel": "The Next New Thing",
+        "summary": "Verscell이 만든 'Agent Browser Skill'을 소개하는 영상으로, AI 에이전트가 브라우저를 실제로 열지 않고도(headless/CLI 방식) 웹사이트의 DOM을 제어해 로그인, 스크린샷 캡처, 회원가입 테스트 등을 자동으로 수행할 수 있다는 내용. 화면에 마우스 움직임이 보이지 않지만 실제로 브라우저를 백그라운드에서 완전히 제어한다는 점이 핵심.",
+        "categories": [
+            "AI 에이전트",
+            "브라우저 자동화",
+            "개발도구"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Headless CLI 에이전트가 브라우저를 백그라운드에서 완전히 제어 — DOM 조작, 로그인, 스크린샷까지 화면 표시 없이 수행",
+            "자연어 지시만으로 'staging 환경 로그인 후 청구 페이지 스크린샷' 같은 멀티스텝 웹 작업을 자동화 가능",
+            "QA/테스트 자동화(예: 테스트 유저로 가입 후 동작 확인) 용도로 바로 적용 가능한 스킬 형태"
+        ],
+        "learning_related": [
+            "Headless 브라우저 자동화는 화면 렌더링 없이 DOM 레벨에서 직접 조작하기 때문에 기존 Selenium/Playwright 스크립팅보다 자연어 지시 기반으로 접근성이 높아짐"
+        ],
+        "key_insights": [
+            "AI 에이전트에게 '눈'이 아니라 '손'(브라우저 제어권)을 쥐어주는 방향의 스킬 — 화면을 보지 않고도 웹 작업 수행 가능",
+            "실제 서비스 배포/테스트 파이프라인에서 QA 자동화 도구로 응용 여지가 큼"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 웹 로그인/스크린샷/회원가입 테스트를 AI 에이전트가 headless로 자동 수행하는 스킬, 향후 3AI 파이프라인(업로드 전 검증, 콘솔 확인 등)에 적용 검토 가치 있음",
+        "timestamp": "2026-09-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/qfRMHqh7tNI/hqdefault.jpg"
+    },
+    {
         "title": "Google Just Gave Your Coding Agent a Real Phone.",
         "url": "https://www.youtube.com/watch?v=PTpQSemrMtg",
         "channel": "Cloud Codes",
