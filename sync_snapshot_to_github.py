@@ -51,7 +51,7 @@ def clear_stale_lock():
             return False
     return not INDEX_LOCK_FILE.exists()
 
-def sync_if_changed():
+def sync_if_changed(force: bool = False):
     if not SNAPSHOT_FILE.exists():
         print("[SnapshotSync] latest_snapshot.json does not exist yet.")
         return False
@@ -64,15 +64,19 @@ def sync_if_changed():
         except Exception:
             pass
 
-    if current_hash == last_hash:
-        print("[SnapshotSync] Snapshot unchanged. Skipping git push.")
+    # Check git status --porcelain for modified files
+    status_res = subprocess.run("git status --porcelain", cwd=str(REPO_DIR), shell=True, capture_output=True, text=True)
+    has_git_changes = bool(status_res.stdout.strip())
+
+    if not force and current_hash == last_hash and not has_git_changes:
+        print("[SnapshotSync] Snapshot & git workspace unchanged. Skipping git push.")
         return False
 
     if not clear_stale_lock():
         print("[SnapshotSync ABORT] Cannot obtain git lock.")
         return False
 
-    print(f"[SnapshotSync] Changes detected in {SNAPSHOT_FILE.name}. Committing and pushing to GitHub Pages...")
+    print(f"[SnapshotSync] Changes detected in repo / snapshot. Committing and pushing to GitHub Pages...")
     try:
         # Step 1: git add
         res1 = subprocess.run("git add chat.html latest_snapshot.json sync_snapshot_to_github.py", cwd=str(REPO_DIR), shell=True, capture_output=True, text=True)
