@@ -1,5 +1,35 @@
 [
     {
+        "title": "Top Repos + Fame, Traffic & Agents",
+        "url": "https://www.youtube.com/watch?v=hlOk-EFUITQ",
+        "channel": "The Next New Thing",
+        "summary": "GitHub 저장소 트렌드를 다루는 위클리 쇼로, 이번 주 화제작인 NewsJack(LLM 기반 PR/미디어 아웃리치 자동화 툴)과 이를 초저비용·고속 모델인 Jev와 결합해 사용하는 사례를 소개한다. Jev는 Opus 5 대비 훨씬 빠르고 거의 무료 수준의 비용으로 프로필 평가, ELO 토너먼트식 비교 평가 등 기존에는 비싸서 못했던 용도를 가능하게 만들었다는 점이 핵심 포인트.",
+        "categories": [
+            "AI모델",
+            "GitHub트렌드",
+            "자동화",
+            "PR/미디어",
+            "비용최적화"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Jev라는 소형/저비용 특화 모델이 Opus 5급 대형 모델을 대체하진 않지만, 속도와 비용 이점으로 새로운 활용처(프로필 평가, ELO 토너먼트 비교)를 열어줌",
+            "NewsJack: LLM으로 기자·언론 트렌드를 분석해 PR 타이밍과 타겟을 잡아주는 GitHub 저장소",
+            "저비용 모델 도입으로 예전엔 '너무 복잡하거나 귀찮아서' 안 만들던 자동화 도구를 만들 수 있게 됨 — 비용 장벽이 낮아지면 자동화 설계 자체가 바뀐다는 시사점"
+        ],
+        "learning_related": [
+            "ELO 시스템(토너먼트식 상대평가)을 LLM 모델 비교/랭킹에 응용하는 패턴 — 기존엔 비용 때문에 힘들었으나 저비용 모델로 실용화됨"
+        ],
+        "key_insights": [
+            "특화형 소형 모델(Jev)이 대형 모델을 대체하는 게 아니라 '비용 때문에 못하던 일'을 가능하게 하는 새로운 기회를 창출한다는 점이 이번 주 화제의 핵심",
+            "NewsJack + Jev 조합처럼, 기존 오픈소스 자동화 툴에 저비용 고속 모델을 얹으면 의사결정 속도와 비용 구조가 크게 개선됨",
+            "리드/고객/인재 평가 같은 반복적 판단 작업에 flash급 모델 대신 Jev를 붙이는 것만으로 품질과 속도가 동시에 개선된 실사용 사례 공유"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — NewsJack처럼 LLM 기반 PR/아웃리치 자동화를 3AI 파이프라인(홍보, 뿌리체계 콘텐츠 배포 등)에 참고 가능, ④공부방 — Jev/ELO 평가 방식은 저비용 모델 선택 및 평가 자동화 학습 소재로 활용 가능",
+        "timestamp": "2026-09-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/hlOk-EFUITQ/hqdefault.jpg"
+    },
+    {
         "title": "AI Knows When It’s Wrong Before You Do.",
         "url": "https://www.youtube.com/watch?v=ETa6WyMJWhE",
         "channel": "Cloud Codes",
