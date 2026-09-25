@@ -1,5 +1,32 @@
 [
     {
+        "title": "AI로 게임 만들었더니… JEV가 운전까지 합니다 🏎️ #shorts",
+        "url": "https://www.youtube.com/watch?v=L90wY9f0wfg",
+        "channel": "호두의 AI 분석실",
+        "summary": "제작자가 '오퍼스 5.5'와 '핵스필드'라는 AI 도구를 활용해 레이싱 요소가 있는 게임을 직접 제작한 과정을 소개하는 쇼츠 영상입니다. 캐릭터별 고유 기술과 보스전 등 게임 콘텐츠를 보여주며 AI를 활용한 1인 게임 개발 사례를 시연합니다.",
+        "categories": [
+            "AI 게임 개발",
+            "쇼츠",
+            "바이브 코딩",
+            "인디게임"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "'오퍼스 5.5'(Claude Opus 계열로 추정) + '핵스필드' 조합으로 레이싱 게임을 직접 제작 — AI 코딩 도구를 활용한 1인 게임 개발 사례",
+            "AI가 게임 로직/캐릭터 시스템(코너링 감속·가속, 캐릭터별 기술)까지 구현 가능함을 보여주는 실사용 예시"
+        ],
+        "learning_related": [
+            "AI 코딩 도구로 완성도 있는 미니게임(레이싱+보스전+캐릭터 시스템)을 만드는 것이 짧은 시간 내 가능해짐을 시사"
+        ],
+        "key_insights": [
+            "AI 게임 개발 콘텐츠가 쇼츠 포맷으로 소비되고 있어, 바로보기님의 3AI 파이프라인에서도 유사한 'AI로 뭔가 만들었다' 시연형 쇼츠가 벤치마킹 소재가 될 수 있음",
+            "'제부가 운전한다'는 언어유희(JEV↔제부)로 제목 후킹 — 쇼츠 제목 작성 시 참고할 만한 카피 기법"
+        ],
+        "memo": "📋 뿌리체계: ⑨창작 — AI 게임/콘텐츠 제작 사례로 3AI 랩 쇼츠 기획에 참고 가능, ⑤자동화 — AI 코딩 도구(오퍼스 계열)로 게임 로직 자동생성한 사례, 자체 자동화 파이프라인 아이디어에 참고",
+        "timestamp": "2026-09-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/L90wY9f0wfg/hqdefault.jpg"
+    },
+    {
         "title": "Same AI Model. 40% Cheaper. Here’s How.",
         "url": "https://www.youtube.com/watch?v=eFBSlgXG3U0",
         "channel": "Cloud Codes",
