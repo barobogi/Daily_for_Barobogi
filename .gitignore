@@ -14,3 +14,8 @@ logs/
 node_modules/
 .DS_Store
 Thumbs.db
+
+# 2026-09-25: 실시간 채팅 스냅샷은 공개 저장소에 올리지 않는다(내용 노출 방지)
+latest_snapshot.json
+latest_snapshot.json.tmp
+sync_snapshot_to_github.py*
