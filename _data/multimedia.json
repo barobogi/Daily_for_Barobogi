@@ -1,5 +1,35 @@
 [
     {
+        "title": "AI Knows When It’s Wrong Before You Do.",
+        "url": "https://www.youtube.com/watch?v=ETa6WyMJWhE",
+        "channel": "Cloud Codes",
+        "summary": "이 영상은 AI 모델이 추론 과정에서 스스로 정답 가능성을 예측하는 내부 신호(value neurons, dopamine neurons)를 갖고 있다는 최신 연구를 소개한다. 하나는 현재까지의 추론이 얼마나 성공적일지를 나타내는 '가치' 신호이고, 다른 하나는 직전 단계가 그 가치를 얼마나 개선했는지를 나타내는 '시간차 오차(TD error)' 신호다. 이를 활용하면 모델이 언제 추론을 계속할지, 언제 답을 재검토할지 판단하는 데 도움이 될 수 있다.",
+        "categories": [
+            "AI 연구",
+            "LLM 해석가능성",
+            "추론(Reasoning)"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "모델 내부 hidden state에서 'probe(작은 판독기)'를 훈련시켜 현재까지 추론이 정답으로 이어질 확률(value)을 추출할 수 있음",
+            "직전 추론 스텝이 성공 확률을 얼마나 바꿨는지(TD error)를 측정하면, 높은 value라도 실제로는 정체된 추론과 실질적으로 개선된 추론을 구분할 수 있음",
+            "이 두 신호를 결합하면 AI 어시스턴트가 '추론을 더 할지 vs 지금 답을 점검할지'를 판단하는 데 활용 가능 — 불필요한 추론 비용 절감 및 오답 조기 발견에 기여할 잠재력"
+        ],
+        "learning_related": [
+            "강화학습의 value function / TD error 개념을 LLM 추론 과정에 유추 적용한 사례 — 신경과학의 'dopamine' 비유를 사용했으나 실제 감정/의식을 의미하는 것은 아님",
+            "reward는 과제 체크(정답 여부)로 정의되며, 모델이 예상한 성공률과 실제 결과의 불일치가 학습 신호로 사용됨",
+            "논문은 2026-02-01 최초 게재, 2026-05-11 개정판 — 리서치 자체는 새로 나온 것이 아니라 재조명(resurfacing)된 내용"
+        ],
+        "key_insights": [
+            "정답 여부는 최종 텍스트 답변뿐 아니라 모델 내부의 은닉 상태에서도 신호를 얻을 수 있다 — 더 긴 설명이 반드시 더 정확한 것은 아님",
+            "'현재 상태가 얼마나 유망한가(value)'와 '방금 스텝이 그것을 개선했는가(TD error)'는 서로 다른 질문이며 둘 다 필요하다",
+            "이런 내부 신호를 활용하면 향후 AI가 스스로 언제 더 생각하고 언제 멈춰 검토할지 판단하는 효율적 추론 제어에 응용될 수 있음 — 아직 초기 단계의 실증(early demonstration) 수준"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 해석가능성/추론 제어 연구 학습 소재로 활용 가능, ⑤자동화 — 향후 3AI 파이프라인에서 '추론 비용 대비 신뢰도 판단' 로직 설계 시 참고할 만한 개념",
+        "timestamp": "2026-09-25T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/ETa6WyMJWhE/hqdefault.jpg"
+    },
+    {
         "title": "클로드 Opus 5.5, GPT 6 모델 등장 (점점 더 빠르게 발전하는 모델들)",
         "url": "https://www.youtube.com/watch?v=VgBzhnTqYzc",
         "channel": "로치의개발일기",
