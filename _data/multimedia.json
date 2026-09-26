@@ -1,5 +1,36 @@
 [
     {
+        "title": "9 Wild Things Built with Claude Opus 5.5",
+        "url": "https://www.youtube.com/watch?v=uOQdmFp_xkc",
+        "channel": "Cloud Codes",
+        "summary": "Claude Opus 5.5로 만든/고친 9가지 프로젝트를 소개하는 영상으로, 각 사례에 숨겨진 함정('nearly all tests passed' 같은 표현)을 짚는다. 다룬 사례는 HAProxy(C→Rust) 재작성 벤치마크와 브라우저에서 오프라인으로 동작하는 line-art 드로잉 툴(Sparkliss) 등이며, 자막이 40개 PR 스택 관련 3번째 사례에서 끊겨 있다.",
+        "categories": [
+            "AI뉴스",
+            "Claude",
+            "코드생성",
+            "벤치마크",
+            "유튜브요약"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Anthropic 자체 벤치마크: Opus 5.5가 HAProxy(C)를 Rust로 재작성, HAProxy 자체 회귀테스트 기준 Fable 5.1보다 2.5시간 빠르고 51% 저렴 — 단 '거의 전부' 통과일 뿐 어떤 테스트가 실패했는지는 공개 안 됨",
+            "Sparkliss: Claude Code로 만든 브라우저 내 사진→연속선 드로잉 툴. 최초 접속 시 ~54MB 모델 다운로드 후 완전 오프라인 동작 — AI 구독 취소해도 계속 작동하는 사례",
+            "영상 자체가 'AI 데모 과장 경계' 메시지: 커버리지/샘플사이즈/셋업 기여도 없이 발표되는 클립들에 대한 비판적 시청 필요"
+        ],
+        "learning_related": [
+            "레거시 서비스 리라이트 전에는 자체 회귀테스트 스위트 존재 여부를 먼저 확인해야 함 — 없으면 리라이트보다 테스트 작성이 선행",
+            "AI 툴 설계 시 '실행에 호스팅 AI가 필요한 부분'과 '모델이 한 번만 작성해주면 되는 부분'을 구분하는 관점"
+        ],
+        "key_insights": [
+            "'거의 모든 테스트 통과'라는 표현은 인시던트 리포트의 전형적 시작 문구이기도 하다 — 실패한 한 개가 핵심 동작일 수 있음",
+            "AI로 만든 도구가 실행 시점엔 AI 서비스 없이도 동작하도록 설계될 수 있다(Sparkliss 사례)는 점이 흥미로운 패턴",
+            "영상이 완결되지 않고 3번 사례(40개 PR 스택) 중간에서 자막이 끊김 — 전체 내용 파악을 위해 후속 자막 필요"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — Claude/Opus 5.5 실제 활용 벤치마크 사례 학습, ⑤자동화 — 레거시 코드 리라이트, 브라우저 오프라인 AI 툴 등 자동화 아이디어 참고",
+        "timestamp": "2026-09-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/uOQdmFp_xkc/hqdefault.jpg"
+    },
+    {
         "title": "This Skill Gives Your AI Agent a Browser",
         "url": "https://www.youtube.com/watch?v=qfRMHqh7tNI",
         "channel": "The Next New Thing",
