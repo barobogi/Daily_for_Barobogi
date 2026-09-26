@@ -1,5 +1,37 @@
 [
     {
+        "title": "9 things you’ll actually do with Jev",
+        "url": "https://www.youtube.com/watch?v=pxaMzr7al3I",
+        "channel": "The Next New Thing",
+        "summary": "Zapier가 후원한 이 영상은 'Jev'라는 AI 모델을 소개합니다. 이 모델은 챗봇처럼 문장을 작성하지는 못하지만 다른 모델보다 훨씬 빠르고 저렴하게 스마트한 의사결정을 내리는 데 특화되어 있으며, 대표 사례로 500개 이메일을 실시간으로 초고속 분류하는 데모를 보여줍니다. 영상 후반부에는 typesafe.ai를 통한 설치 방법, API 키 발급, Codex/Claude Code/Rock bot 등 다양한 에이전트와의 연동 방법, 그리고 웨이트리스트 상태일 때 OpenRouter로 우회 접근하는 팁을 다룹니다.",
+        "categories": [
+            "AI 모델",
+            "생산성 자동화",
+            "이메일 관리",
+            "개발 도구",
+            "API"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "Jev는 텍스트 생성이 아닌 '빠르고 저렴한 의사결정(분류)'에 특화된 경량 모델로, 대형 LLM과 역할을 분담(예: 분류는 Jev, 답장 작성은 더 똑똑한 LLM에 위임)하는 하이브리드 파이프라인 설계가 가능함",
+            "500개 이메일을 실시간으로 카테고리 분류하고 파이차트로 요약하는 데모 — 이메일 트리아지(우선순위 판단) 자동화에 바로 적용 가능",
+            "typesafe.ai에서 에이전트 프롬프트를 복사해 Codex, Claude Code, Rock bot 등 원하는 코딩 에이전트에 붙여넣는 방식으로 연동 — API 키 발급 필요",
+            "현재 대기자 명단(waitlist) 운영 중이며 열렸다 닫혔다 반복 — 접근 안 될 때는 OpenRouter를 통해 우회 이용 가능"
+        ],
+        "learning_related": [
+            "빠르고 저렴한 '의사결정 전용' 모델 + 무거운 LLM의 역할 분리 아키텍처 패턴",
+            "API 키 발급 후 별도 텍스트 파일에 보관하는 기본적인 키 관리 습관"
+        ],
+        "key_insights": [
+            "Jev는 '생성형'이 아닌 '분류/의사결정 특화형' 모델로, 속도와 비용 최적화가 핵심 강점",
+            "이메일 자동 분류처럼 반복적이고 대량인 작업에서 저비용 모델을 프론트단에 두고, 고비용 LLM은 실제 응답 생성 등 고차 작업에만 투입하는 구조가 실용적",
+            "웨이트리스트 제한이 있는 신규 모델은 OpenRouter 같은 중개 서비스로 접근성을 확보할 수 있음"
+        ],
+        "memo": "📋 뿌리체계: ⑤자동화 — 이메일 분류·트리아지 자동화 및 저비용 모델과 고비용 LLM을 조합하는 파이프라인 설계에 참고 가능, ⑥인프라 — API 키 발급/연동 방식이 본인이 이미 사용 중인 Claude Code CLI(만복) 워크플로우와 유사해 타 에이전트 도구 벤치마킹 가능",
+        "timestamp": "2026-09-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/pxaMzr7al3I/hqdefault.jpg"
+    },
+    {
         "title": "Xiaomi Shrunk 12GB of AI Memory to 2.7GB (MiMo-V3)",
         "url": "https://www.youtube.com/watch?v=eXad7m0TjVM",
         "channel": "Cloud Codes",
