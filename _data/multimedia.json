@@ -1,5 +1,36 @@
 [
     {
+        "title": "Xiaomi Shrunk 12GB of AI Memory to 2.7GB (MiMo-V3)",
+        "url": "https://www.youtube.com/watch?v=eXad7m0TjVM",
+        "channel": "Cloud Codes",
+        "summary": "Xiaomi의 신규 모델 MiMo-V3는 'hybrid sparse attention'이라는 새 아키텍처를 도입해, 100만 토큰 기준 KV 캐시 메모리를 12.09GB에서 2.69GB로 줄이고 prefill 연산량을 약 5배 절감했다. 'KV bridging'이라는 기법으로 하위 레이어에서 처리한 토큰 정보를 요약 노트 형태로 상위 full-attention 레이어에 전달해, 모든 레이어가 모든 토큰을 직접 다시 읽지 않아도 되게 만든 것이 핵심이며, 흥미롭게도 검색(retrieval) 성능은 오히려 개선됐다. 이 논문이 나오기 12일 전 DeepSeek가 V4.1 Flash에서 동일한 두 가지 핵심 기법을 선보였다는 점도 언급된다.",
+        "categories": [
+            "AI/LLM",
+            "모델 아키텍처",
+            "에이전트 효율화",
+            "테크뉴스"
+        ],
+        "stock_related": [],
+        "ai_related": [
+            "에이전트 루프(예: npm test 실행 후 방대한 로그 반환)에서 매 라운드마다 context가 누적되며 prefill 연산량·메모리·retrieval 정확도가 동시에 압박받는 구조적 문제를 지적",
+            "Xiaomi MiMo-V3의 KV bridging: 하위 레이어가 토큰을 읽고 요약 노트를 만들어 상위 full-attention 레이어로 전달, 모든 레이어가 모든 토큰의 KV 캐시를 유지하지 않아도 되게 함 → 100만 토큰 기준 메모리 12.09GB→2.69GB, prefill 연산 약 5배 절감",
+            "DeepSeek V4.1 Flash가 MiMo-V3 논문 발표 12일 전 유사한 두 가지 핵심 기법(sparse attention 계열)을 먼저 출시 — 업계 전반에서 유사 아이디어가 독립적/병행적으로 수렴하는 흐름을 시사"
+        ],
+        "learning_related": [
+            "KV 캐시 개념: 각 레이어가 모든 토큰에 대해 key(라벨)-value(내용) 카드를 저장해 재계산을 피하지만, 토큰 수에 비례해 메모리가 선형 증가",
+            "Prefill 단계: 새로 들어온 입력 전체를 모든 레이어가 읽고 KV 카드를 생성하는 과정으로, 에이전트 루프에서는 매 라운드 이 비용을 반복 지불",
+            "Sparse/hybrid attention 설계: 일부 레이어만 full attention(모든 토큰 기억), 나머지는 sliding window나 요약된 브리징 정보만 사용해 장문 컨텍스트 처리 비용을 낮추는 트렌드"
+        ],
+        "key_insights": [
+            "긴 컨텍스트를 다루는 에이전트 워크플로우의 실질적 병목은 '더 똑똑한 답변'이 아니라 매 라운드 반복되는 prefill/메모리 비용이며, 이를 구조적으로 줄이는 아키텍처 혁신(sparse attention)이 실사용 비용·속도에 직접적 영향을 줌",
+            "메모리 절감이 성능 저하 없이(오히려 retrieval 개선) 달성됐다는 점이 특히 주목할 만함 — 트레이드오프 없는 효율화 사례",
+            "Xiaomi와 DeepSeek가 거의 동시에 유사한 sparse attention 기법을 발표한 것은 업계가 '긴 컨텍스트 비용 절감'이라는 동일 문제에 수렴하고 있음을 보여줌"
+        ],
+        "memo": "📋 뿌리체계: ④공부방 — LLM 아키텍처(sparse attention, KV cache) 기술 학습 포인트, ⑤자동화 — 에이전트 루프의 context 누적/비용 문제는 3AI 협업체계의 긴 세션·툴 호출 비용 구조와 직접 연관",
+        "timestamp": "2026-09-26T00:00:00.000000",
+        "thumbnail": "https://i.ytimg.com/vi/eXad7m0TjVM/hqdefault.jpg"
+    },
+    {
         "title": "9 Wild Things Built with Claude Opus 5.5",
         "url": "https://www.youtube.com/watch?v=uOQdmFp_xkc",
         "channel": "Cloud Codes",
